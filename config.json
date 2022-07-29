@@ -1,0 +1,66 @@
+{
+  "theme": {
+    "palettes": {
+      "dark": {
+        "background": "#1F1E42",
+        "text": "#F3DDC3",
+        "accentActive": "#7187FF",
+        "accentMute": "#49445C"
+      },
+      "light": {
+        "background": "#F3DDC3",
+        "text": "#1F1E42",
+        "accentActive": "#7187FF",
+        "accentMute": "#C9B7A9"
+      }
+    },
+    "fontFamily": "monospace",
+    "codeTheme": "prism/duotone-dark"
+  },
+  "template": "default",
+  "static_assets_folder": "static-assets",
+  "navigation": {
+    "home": "main.md",
+    "fileOrdersInSidenav": [
+      "main.md",
+      "about.md"
+    ],
+    "folderOrdersInSidenav": [],
+    "external_links": [
+      {
+        "text": "Blog",
+        "url": "https://vac.dev/research",
+        "category": "Links"
+      }
+    ]
+  },
+  "ds_id": "waku",
+  "seo": {
+    "title": "title of your site",
+    "description": "description of your site",
+    "image": "your-site-preview-image.png",
+    "url": "https://yoursitedomain.org",
+    "social_media": [
+      {
+        "provider": "twitter",
+        "handler": "your_tw_handler"
+      },
+      {
+        "provider": "discord",
+        "handler": "your_dsc_handler"
+      },
+      {
+        "provider": "github",
+        "handler": "your_gh_handler"
+      },
+      {
+        "provider": "telegram",
+        "handler": "waku_org"
+      },
+      {
+        "provider": "discourse",
+        "handler": "your_disc_address"
+      }
+    ]
+  }
+}
