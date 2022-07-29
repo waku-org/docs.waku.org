@@ -1,70 +1,29 @@
-```ascii
-+--------------------------------------------------------+          +------------------------------------------------------+
-|                                                        |          |                                                      |
-|                                                        |          |                                                      |
-|                          VAC                           |          |                       CODEX                          |
-|                                                        |          |        +--------------+                              |
-|                                                        |          |        |              |                              |
-|    +----------------+          +------------------+    |          |        |              |                              |
-|    |                |          |                  |    |          |        |              |                              |
-|    |                |          |    PROTOCOL      |    |    +-----+--------+   RESEARCH   |                              |
-|    |   PRINCIPLES   +-----+----+    DEVELOPMENT   |    |    |     |        |              |                              |
-|    |                |     |    |    PROCESS       |    |    |     |        |              |            +-------------+   |
-|    |                |     |    |                  |    |    |     |        |              |            |             |   |
-|    +----------------+     |    +------------------+    |    |     |        +--------------+            |             |   |
-|                           |                            |    |     |                                    |  OPINIATED  |   |
-|                           |                            |    |     |                             +------>  PRODUCTS   |   |
-|                           |                            |    |     |                             |      |             |   |
-|                           |                            |    |     |        +--------------+     |      |             |   |
-|             +-------------v---------------+            |    |     |        |              |     |      |             |   |
-|             |                             <------------+----+     |        |              |     |      +-------------+   |
-|             |                             |            |          |        |              +-----+                        |
-|             |   AGNOSTIC SPECIFICATIONS   |            |          |        | ENGINEERING  |                              |
-|             |                             +------------+----------+-------->              |                              |
-|             |                             |            |          |        |              |                              |
-|             +-------------+---------------+            |          |        |              |                              |
-|                           |                            |          |        +--------------+                              |
-|                           |                            |          |                                                      |
-|                           |                            |          |                                                      |
-+---------------------------+----------------------------+          +------------------------------------------------------+
-|
-|
-|
-|
-v
-+----------------------------+
-|                            |
-|                            |
-|  UNOPINIONATED PROTOCOLS   |
-|                            |
-|                            |
-+----------------------------+
-```
+---
+title: Waku Guide
+---
 
-Normal textNormal textNormal textNormal textNormal textNormal textNormal textNormal textNormal textNormal textNormal textNormal textNormal textNormal text.
+# Waku Guide
 
-```paragraph
-The Pyramid of Sahure (Ancient Egyptian: Ḫꜥỉ-bꜣ Sꜣḥw-Rꜥ, lit. 'Rising of the ba of Sahure'; Arabic: هرم ساحورع, romanized: Haram Sahawrae) is a pyramid complex built in the late 26th to 25th century BC for the Egyptian pharaoh Sahure of the Fifth Dynasty.[10][a] It introduced a period of pyramid building by Sahure's successors in Abusir, on a location earlier used by Userkaf for his sun temple. The site was first thoroughly excavated by Ludwig Borchardt between March 1907 and 1908, who wrote the standard work Das Grabdenkmal des Königs Sahu-Re (English: The Funerary Monument of King Sahure) between 1910 and 1913.
-The pyramid complex's layout was adopted by succeeding kings of the Fifth and Sixth Dynasties, marking a milestone in pyramid complex construction. Compared to the preceding Fourth Dynasty, the immensity of the constructions was dramatically reduced but, in tandem, the decorative programme proliferated and temples were augmented by enlarged storeroom complexes. The complex is estimated to.
-```
+Waku is a decentralized, censorship-resistant, network and protocol family.
+It enables you to add communication features to your dApp in a decentralized manner,
+ensuring to your users that they will not be censored or de-platformed.
 
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
+Waku can be used for chat (human-to-human) purposes and for many machine-to-machine use cases.
 
-![Drag Racing](./static-assets/image-1.jpeg)
+Here you can find general, high level explanation of Waku concepts.
 
-```tsx
-    const sum = (a, b) => {
-        return a+b;
-    }
-    console.log(sum(2+2));
-```
+If you want to learn how Waku works under the hoods, check out the [10/WAKU2](https://rfc.vac.dev/spec/10/) RFC.
+
+## Implementation Documentation
+
+We are currently in the process of migrating our documentation 🏗️.
+For now, please go to the following location to learn more about the different Waku implementations:
+
+- [nwaku](https://github.com/status-im/nwaku)
+- [js-waku](https://docs.wakuconnect.dev/)
+- [go-waku](https://github.com/status-im/go-waku)
+
+## Bugs, Questions & Support
+
+To get help, join [Vac Discord](https://discord.gg/j5pGbn7MHZ)
+or the [Waku Telegram Group](https://t.me/waku_org).
