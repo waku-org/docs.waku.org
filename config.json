@@ -20,38 +20,69 @@
   "template": "default",
   "static_assets_folder": "static-assets",
   "navigation": {
-    "home": "main.md",
+    "home": "index.md",
     "fileOrdersInSidenav": [
-      "main.md",
-      "about.md"
+      "index.md"
     ],
-    "folderOrdersInSidenav": [],
+    "folderOrdersInSidenav": [
+      "docs"
+    ],
     "external_links": [
+      {
+        "text": "Waku",
+        "url": "https://waku.org/",
+        "category": "Links"
+      },
       {
         "text": "Blog",
         "url": "https://vac.dev/research",
         "category": "Links"
+      },
+      {
+        "text": "Vac",
+        "url": "https://vac.dev/",
+        "category": "Links"
+      },
+      {
+        "text": "Waku RFCs",
+        "url": "https://rfc.vac.dev/spec/10//",
+        "category": "Links"
+      },
+      {
+        "text": "Careers",
+        "url": "https://status.im/our_team/jobs.html",
+        "category": "Links"
+      },
+      {
+        "text": "Discord",
+        "url": "https://discord.gg/j5pGbn7MHZ",
+        "category": "Connect"
+      },
+      {
+        "text": "Twitter",
+        "url": "https://twitter.com/waku_org",
+        "category": "Connect"
       }
     ]
   },
   "ds_id": "waku",
   "seo": {
-    "title": "title of your site",
-    "description": "description of your site",
-    "image": "your-site-preview-image.png",
-    "url": "https://yoursitedomain.org",
+    "title": "Waku Guide",
+    "description": "Waku is the communication layer for Web3. Decentralized communication that scales. Private, secure, and it runs anywhere.",
+    "image": "waku-site-preview-image.png",
+    "url": "https://waku.guide",
     "social_media": [
       {
         "provider": "twitter",
-        "handler": "your_tw_handler"
+        "handler": "waku_org"
       },
       {
         "provider": "discord",
-        "handler": "your_dsc_handler"
+        "handler": "j5pGbn7MHZ"
       },
       {
         "provider": "github",
-        "handler": "your_gh_handler"
+        "handler": "status-im/?q=waku&type=&language=&sort="
       },
       {
         "provider": "telegram",
@@ -59,7 +90,7 @@
       },
       {
         "provider": "discourse",
-        "handler": "your_disc_address"
+        "handler": "forum.vac.dev"
       }
     ]
   }
