@@ -10,11 +10,11 @@ date: 2022-08-15
 The Waku Message format provides an easy way to sign messages using elliptic curve cryptography.
 
 It also allows the sender to encrypt messages,
-see [Encrypt Messages Using Waku Message Version 1](/docs/guides/04_encrypt_messages_version_1/) to learn how.
+see [Encrypt Messages Using Waku Message Version 1](/) to learn how.
 
 You can find more details about Waku Message Payload Signature in [26/WAKU-PAYLOAD](https://rfc.vac.dev/spec/26/).
 
-See [Cryptographic Libraries](/docs/crypto_libraries/) for more details on the cryptographic libraries used by js-waku.
+See [Cryptographic Libraries](/) for more details on the cryptographic libraries used by js-waku.
 
 ## Create new keypair
 
@@ -32,7 +32,7 @@ const publicKey = getPublicKey(privateKey);
 As per version 1's [specs](https://rfc.vac.dev/spec/26/), signatures are only included in encrypted messages.
 In the case where your app does not need encryption then you could use symmetric encryption with a trivial key.
 
-You can learn more about encryption at [Encrypt Messages Using Waku Message Version 1](/docs/guides/04_encrypt_messages_version_1/).
+You can learn more about encryption at [Encrypt Messages Using Waku Message Version 1](/).
 
 ### Using symmetric encryption
 
@@ -58,7 +58,7 @@ const symKey = hexToBuf(keccak256(Buffer.from(myAppContentTopic, "utf-8")));
 ```
 
 `symKey` can then be used to encrypt and decrypt messages on `myAppContentTopic` content topic.
-Read [How to Choose a Content Topic](/docs/guides/01_choose_content_topic/) to learn more about content topics.
+Read [How to Choose a Content Topic](/) to learn more about content topics.
 
 ### Using asymmetric encryption
 
