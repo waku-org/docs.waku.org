@@ -25,17 +25,6 @@ $ yarn build
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+For our current stage, we use Vercel for Deployment and hosting. [Vercel](https://vercel.com/about) provides us with various benefits in the areas of performance and ease of use that is great for our initial stage.
+Each project first needs to be defined & imported to Vercel (for this you can always contact Comms people).
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/concepts/deployments/environments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/concepts/git#production-branch) (usually "main" or "master") will result in a [Production Deployment](https://vercel.com/docs/concepts/deployments/environments#production).
