@@ -1,19 +1,30 @@
-## Description
+# Website
 
-Content of `https://waku.guide` website. 
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Practical notes
-- Please keep this repo clean and for markdown content ONLY
-- In case you have any issue with rendering, how website looks (design), etc, please file an issue on [logos website builder](https://github.com/acid-info/logos-site-builder/issues). And/or feel free to contact Amir.
+### Installation
 
-## Continuous Integration
+```
+$ yarn
+```
 
-- `develop` branch is pushed to [dev.waku.guide](https://dev.waku.guide) via GitHub Action.
-- `master` branch is pushed to [waku.guide](https://waku.guide) via GitHub Action.
+### Local Development
 
-## Change Process
+```
+$ yarn start
+```
 
-1. Create a new working branch from `develop`: `git checkout develop; git checkout -b my-changes`,
-2. Proceed with changes, push to `origin` and open a Pull Request against `develop`,
-3. Once approved, merge pull request, check changes on [dev.waku.guide](https://dev.waku.guide),
-4. Once ready to promote to live website, rebase master on develop: `git checkout master; git pull master; git rebase origin/develop; git push`.
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+For our current stage, we use Vercel for Deployment and hosting. [Vercel](https://vercel.com/about) provides us with various benefits in the areas of performance and ease of use that is great for our initial stage.
+Each project first needs to be defined & imported to Vercel (for this you can always contact Comms people).
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/concepts/deployments/environments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/concepts/git#production-branch) (usually "main" or "master") will result in a [Production Deployment](https://vercel.com/docs/concepts/deployments/environments#production).
