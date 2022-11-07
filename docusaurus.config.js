@@ -61,12 +61,6 @@ const config = {
       items: [
         {
           type: "doc",
-          docId: "About/1",
-          position: "left",
-          label: "About",
-        },
-        {
-          type: "doc",
           docId: "Concepts/1",
           position: "left",
           label: "Concepts",
@@ -80,16 +74,16 @@ const config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Discourse",
+              href: "https://forum.vac.dev/",
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/j5pGbn7MHZ",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/waku-org",
             },
           ],
         },
