@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Waku guides",
+  title: "Waku Guides",
   tagline: "Waku is the communication layer for Web3.",
-  url: "https://waku.guides",
+  url: "https://waku.guide/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -33,11 +33,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/waku-org/waku.guide/tree/staging/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -61,12 +62,6 @@ const config = {
       items: [
         {
           type: "doc",
-          docId: "About/1",
-          position: "left",
-          label: "About",
-        },
-        {
-          type: "doc",
           docId: "Concepts/1",
           position: "left",
           label: "Concepts",
@@ -80,16 +75,16 @@ const config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Discourse",
+              href: "https://forum.vac.dev/",
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/j5pGbn7MHZ",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/waku-org",
             },
           ],
         },
