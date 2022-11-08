@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Waku guides",
+  title: "Waku Guides",
   tagline: "Waku is the communication layer for Web3.",
-  url: "https://waku.guides",
+  url: "https://waku.guide/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
