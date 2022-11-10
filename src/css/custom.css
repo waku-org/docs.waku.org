@@ -23,7 +23,7 @@
   /*--ifm-font-size-base: 90%;*/
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #f3ddc3;
   --ifm-color-primary-dark: #ecc89e;
   --ifm-color-primary-darker: #e8be8c;
@@ -36,6 +36,6 @@
   --ifm-heading-color: #faf2e8;
 }
 
-.docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module{
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Sidebar-styles-module {
   /*border: none !important;*/
 }
