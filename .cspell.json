@@ -2,7 +2,11 @@
   "version": "0.2",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
-  "words": ["waku"],
+  "words": [
+    "linkability",
+    "Unlinkability",
+    "waku"
+  ],
   "flagWords": [],
   "ignorePaths": [
     "package.json",
@@ -12,13 +16,27 @@
     "node_modules/**"
   ],
   "patterns": [
-    { "name": "multiaddr", "pattern": "/p2p.*/" },
-    { "name": "dnsMultiaddr", "pattern": "//dns4.*/" },
-    { "name": "wss", "pattern": "/wss:.*/" },
+    {
+      "name": "multiaddr",
+      "pattern": "/p2p.*/"
+    },
+    {
+      "name": "dnsMultiaddr",
+      "pattern": "//dns4.*/"
+    },
+    {
+      "name": "wss",
+      "pattern": "/wss:.*/"
+    },
     {
       "name": "youtube-link",
       "pattern": "/< youtube.*/"
     }
   ],
-  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link"]
+  "ignoreRegExpList": [
+    "multiaddr",
+    "dnsMultiaddr",
+    "wss",
+    "youtube-link"
+  ]
 }
