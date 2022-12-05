@@ -5,7 +5,29 @@
   "words": [
     "linkability",
     "Unlinkability",
-    "waku"
+    "waku",
+    "deplatforming",
+    "gossipsub",
+    "incentivized",
+    "incentivizing",
+    "XMTP",
+    "RAILGUN",
+    "nwaku",
+    "deanonymization",
+    "ECIES",
+    "Discv5",
+    "Gossipsub",
+    "LIGHTPUSH",
+    "pubtopic1",
+    "proto",
+    "multiaddr",
+    "multiaddrs",
+    "Multiaddrs",
+    "keyturn",
+    "Comms",
+    "Protobuf",
+    "supercrypto",
+    "QUIC"
   ],
   "flagWords": [],
   "ignorePaths": [
@@ -33,10 +55,5 @@
       "pattern": "/< youtube.*/"
     }
   ],
-  "ignoreRegExpList": [
-    "multiaddr",
-    "dnsMultiaddr",
-    "wss",
-    "youtube-link"
-  ]
+  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link"]
 }
