@@ -1,31 +1,46 @@
-# Website
+- [Description](#description)
+- [How to Run Locally](#how-to-run-locally)
+- [Configuration](#configuration)
+- [Customization](#customization)
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+## Description
 
-### Installation
+This repository contains the content of your documentation website.
 
-```
+## How to Run Locally
+
+1. Clone this repository.
+2. Install the dependencies:
+```bash
 $ yarn
 ```
-
-### Local Development
-
-```
+3. Start and open the website in your browser:
+```bash
 $ yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Configuration
+Edit the `docusaurus.config.js` file in the repository's root directory, and update the value of the `businessUnit` field in presets section; below is a list of valid values:
+- Logos
+- Codex
+- Waku
 
-### Build
-
+Example:
+```js
+presets: [
+  [
+    '@acid-info/logos-docusaurus-preset',
+    {
+      businessUnit: 'Codex',
+    },
+  ],
+],
 ```
-$ yarn build
-```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This is probably enough in most cases, as the Logos plugins will fill in other configurations related to the specified business unit. If you find any error in the information coming from Logos Plugins, please head over to [Logos Docusaurus Plugins](https://github.com/acid-info/logos-docusaurus-plugins) and create an issue.
 
-### Deployment
+## Customization
 
-For our current stage, we use Vercel for Deployment and hosting. [Vercel](https://vercel.com/about) provides us with various benefits in the areas of performance and ease of use that is great for our initial stage.
-Each project first needs to be defined & imported to Vercel (for this you can always contact Comms people).
-After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/concepts/deployments/environments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/concepts/git#production-branch) (usually "main" or "master") will result in a [Production Deployment](https://vercel.com/docs/concepts/deployments/environments#production).
+You can find the instructions on adding more documentation sections, localization, and versioning on the [Docusaurus](https://docusaurus.io/docs) website.
+
+> Note that theme customization is limited; for further instructions on customizing your theme, head over to [Logos Docusaurus Theme](https://github.com/acid-info/logos-docusaurus-plugins/tree/main/packages/logos-docusaurus-theme/). 
