@@ -10,7 +10,7 @@ The protocols initially mounted are indicated as such.
 sequenceDiagram
   participant A as A relay(0)
   participant B as B relay(pubtopic1)(0)
-  participant C as C relay(pubtopic2)(0)
+  participant C as C relay(pubtopic1)(0)
   participant D as D relay(pubtopic1), store(pubtopic1), filter(0)
   participant E as E relay, store(0)
   participant F as F relay, filter(0)
