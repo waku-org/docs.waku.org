@@ -66,4 +66,4 @@ For example:
 There are also more experimental libp2p protocols such as
 [`WAKU-RLN-RELAY`](https://rfc.vac.dev/spec/17/)
 
-You can find more information on this [here](./6.md).
+You can find more information on this [here](./research-in-progress.md).
