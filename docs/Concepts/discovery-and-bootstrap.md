@@ -21,6 +21,7 @@ An application using Waku can hardcode the addresses of bootstrap nodes directly
 You can choose to use Status' deployed nodes, or run your own.
 
 :::info Developers have the choice to run their own [nwaku](https://github.com/status-im/nim-waku/) nodes. Read [Nwaku Service Node](https://github.com/status-im/nwaku/tree/master/docs/operators) to learn how to run your own node.
+::::
 
 **Pros:**
 
