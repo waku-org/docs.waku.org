@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"]
+    locales: ["en"],
   },
 
   presets: [
@@ -37,25 +37,25 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/waku-org/waku.guide/tree/staging/"
+          editUrl: "https://github.com/waku-org/waku.guide/tree/staging/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      })
-    ]
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      }),
+    ],
   ],
   themeConfig: {
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
-      respectPrefersColorScheme: true
+      respectPrefersColorScheme: true,
     },
     navbar: {
       title: "Waku",
       logo: {
         alt: "Waku Logo",
-        src: "img/logo.svg"
+        src: "img/logo.svg",
       },
 
       items: [
@@ -63,9 +63,9 @@ const config = {
           type: "doc",
           docId: "Concepts/1",
           position: "left",
-          label: "Concepts"
-        }
-      ]
+          label: "Concepts",
+        },
+      ],
     },
     footer: {
       style: "dark",
@@ -75,26 +75,30 @@ const config = {
           items: [
             {
               label: "Discourse",
-              href: "https://forum.vac.dev/"
+              href: "https://forum.vac.dev/",
             },
             {
               label: "Discord",
-              href: "https://discord.gg/j5pGbn7MHZ"
+              href: "https://discord.gg/j5pGbn7MHZ",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/waku-org"
-            }
-          ]
-        }
+              href: "https://twitter.com/waku-org",
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Status Gmbh. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} Status Gmbh. Built with Docusaurus.`,
     },
     prism: {
       theme: lightCodeTheme,
-      darkTheme: darkCodeTheme
-    }
-  }
+      darkTheme: darkCodeTheme,
+    },
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
 };
 
 module.exports = config;

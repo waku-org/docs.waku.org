@@ -1,22 +1,24 @@
 ---
-title: Waku vs libp2p - what's the difference?
+title: Content Topic and How to Choose One
 ---
 
-Since Waku v2 is built on top of libp2p, they share a lot of concepts and terminologies between them. However, there are key differences between them that are worth noting.
+A content topic is used for content based filtering and allows you to filter out the messages that your dApp processes,
+both when receiving live messages (Relay or Filter) or retrieving historical messages (Store).
 
-### Waku as a service network
+The recommended format for content topics is as follows:
 
-Waku offers incentivization mechanisms to run nodes, whereas libp2p does not.
+`/{dapp-name}/{version}/{content-topic-name}/{encoding}`
 
-Additionally, a user or a developer does not have to deploy own infra as a prerequisite to use Waku, it is a service network.
-However, it is encouraged to [run your own node](https://github.com/status-im/nwaku/tree/master/docs/operators) to support and decentralize the network.
+- `dapp-name`: The name of your dApp, it must be unique to avoid conflict with other dApps.
+- `version`: We usually start at `1`, useful when introducing breaking changes in your messages.
+- `content-topic-name`: The actual content topic name to use for filtering.
+  If your dApp uses Waku for several features,
+  you should use a content topic per feature.
+- `encoding`: The encoding format of the message, [Protobuf](https://developers.google.com/protocol-buffers) is most often used: `proto`.
 
-### Waku as a keyturn solution
+For example: Your dApp's name is SuperCrypto,
+it enables users to receive notifications and send private messages.
+You may want to use the following content topics:
 
-Waku includes a number of protocol covering the following domains like privacy preservation, censorship resistance, portability/runs anywhere.
-
-libp2p does not provide out of the box protocols to enable mostly offline/resource restricted devices, [WAKU-STORE](https://rfc.vac.dev/spec/13/)/[WAKU-LIGHTPUSH](https://rfc.vac.dev/spec/19/)/[WAKU-FILTER](https://rfc.vac.dev/spec/12/) caters to those use cases.
-
-### Economic spam protection
-
-libp2p does not have strong spam protection guarantees, [RLN (Rate Limit Nullifier)](https://rfc.vac.dev/spec/32/) is a protocol being developed by the Waku team towards this goal.
+- `/supercrypto/1/notification/proto`
+- `/supercrypto/1/private-message/proto`

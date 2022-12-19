@@ -2,7 +2,33 @@
   "version": "0.2",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
   "language": "en",
-  "words": ["waku"],
+  "words": [
+    "linkability",
+    "Unlinkability",
+    "waku",
+    "deplatforming",
+    "gossipsub",
+    "incentivized",
+    "incentivizing",
+    "XMTP",
+    "RAILGUN",
+    "nwaku",
+    "deanonymization",
+    "ECIES",
+    "Discv5",
+    "Gossipsub",
+    "LIGHTPUSH",
+    "pubtopic1",
+    "proto",
+    "multiaddr",
+    "multiaddrs",
+    "Multiaddrs",
+    "keyturn",
+    "Comms",
+    "Protobuf",
+    "supercrypto",
+    "QUIC"
+  ],
   "flagWords": [],
   "ignorePaths": [
     "package.json",
@@ -12,9 +38,18 @@
     "node_modules/**"
   ],
   "patterns": [
-    { "name": "multiaddr", "pattern": "/p2p.*/" },
-    { "name": "dnsMultiaddr", "pattern": "//dns4.*/" },
-    { "name": "wss", "pattern": "/wss:.*/" },
+    {
+      "name": "multiaddr",
+      "pattern": "/p2p.*/"
+    },
+    {
+      "name": "dnsMultiaddr",
+      "pattern": "//dns4.*/"
+    },
+    {
+      "name": "wss",
+      "pattern": "/wss:.*/"
+    },
     {
       "name": "youtube-link",
       "pattern": "/< youtube.*/"
