@@ -18,10 +18,6 @@ const config = {
     locales: ["en"],
   },
 
-  markdown: {
-    mermaid: true,
-  },
-
   presets: [
     [
       "@acid-info/logos-docusaurus-preset",
