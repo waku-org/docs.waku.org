@@ -61,7 +61,7 @@ const config = {
       items: [
         {
           type: "doc",
-          docId: "Concepts/1",
+          docId: "Concepts/different-protocols",
           position: "left",
           label: "Concepts",
         },
