@@ -40,6 +40,9 @@ const config = {
     ({}),
 
   themes: ["@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
 };
 
 module.exports = config;
