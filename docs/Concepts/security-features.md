@@ -41,7 +41,7 @@ This property indicates that no adversary can flood the system (i.e., publishing
 Spam protection is partly provided in `WAKU2-RELAY` through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) provided for by GossipSub v1.1.
 At a high level, peers utilize a scoring function to locally score the behavior of their connections and remove peers with a low score.
 
-There's also further research being done in this domain, including the designing of (RLN (Rate Limiting Nullifiers))[./7.md]
+There's also further research being done in this domain, including the designing of [RLN (Rate Limiting Nullifiers)](./research-in-progress.md)
 
 https://github.com/vacp2p/research/issues/148
 
@@ -50,7 +50,8 @@ https://github.com/vacp2p/research/issues/148
 Confidentiality can be addressed through data encryption whereas integrity and authenticity are achievable through digital signatures.
 These features are provided for in [WAKU-MESSAGE (version 1)](https://rfc.vac.dev/spec/14#version-1) and [WAKU-NOISE](https://rfc.vac.dev/spec/35/) through payload encryption as well as encrypted signatures.
 
-> `WAKU-NOISE` enables secure channel negotiation over Waku.
+:::info `WAKU-NOISE` enables secure channel negotiation over Waku.
+:::
 
 ## Security Considerations
 

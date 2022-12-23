@@ -3,7 +3,7 @@ title: History
 ---
 
 Waku v1 was a fork of Whisper with some added tweaks for efficiency.
-Waku v2 is a completely redesigned suite of protocols designed to address the goals set out [previously](./1.md).
+Waku v2 is a completely redesigned suite of protocols designed to address the goals set out [previously](./introduction.md).
 
 ### 2013
 
