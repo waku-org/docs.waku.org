@@ -1,34 +1,38 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-require('dotenv').config()
+require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Waku Guides',
-  url: 'https://waku.guide/',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  title: "Waku Guides",
+  url: "https://waku.guide/",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
+  },
+
+  markdown: {
+    mermaid: true,
   },
 
   presets: [
     [
-      '@acid-info/logos-docusaurus-preset',
+      "@acid-info/logos-docusaurus-preset",
       /** @type {import('@acid-info/logos-docusaurus-preset').PluginOptions} */
       ({
-        businessUnit: 'Waku',
+        businessUnit: "Waku",
         customSiteConfig: true,
         theme: {
-          name: 'default',
+          name: "default",
           options: {
-            customCss: [require.resolve('./src/css/custom.scss')],
+            customCss: [require.resolve("./src/css/custom.scss")],
           },
         },
       }),
@@ -38,6 +42,8 @@ const config = {
   themeConfig:
     /** @type {import('@acid-info/logos-docusaurus-preset').ThemeConfig} */
     ({}),
-}
 
-module.exports = config
+  themes: ["@docusaurus/theme-mermaid"],
+};
+
+module.exports = config;
