@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Waku guides",
   tagline: "Waku is the communication layer for Web3.",
-  url: "https://waku.guides",
+  url: "https://waku.guide/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -37,7 +37,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/waku-org/waku.guide/tree/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -80,17 +80,21 @@ const config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Discord",
+              href: "https://discord.gg/Nrac59MfSX",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "Discourse",
+              href: "https://forum.vac.dev/",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/waku_org",
             },
+            {
+              label: "Telegram",
+              href: "https://t.me/waku_org"
+            }
           ],
         },
       ],
