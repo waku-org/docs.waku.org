@@ -16,7 +16,7 @@
     "check:spell": "cspell \"**/*.{md,mdx}\""
   },
   "dependencies": {
-    "@acid-info/logos-docusaurus-preset": "^0.2.0",
+    "@acid-info/logos-docusaurus-preset": "^0.3.0",
     "@docusaurus/core": "2.2.0",
     "@docusaurus/preset-classic": "2.2.0",
     "@docusaurus/theme-mermaid": "^2.2.0",
@@ -32,8 +32,8 @@
     "@docusaurus/module-type-aliases": "2.2.0",
     "@tsconfig/docusaurus": "^1.0.5",
     "cspell": "^6.16.0",
-    "husky": "^8.0.2",
     "docusaurus-plugin-sass": "^0.2.2",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
