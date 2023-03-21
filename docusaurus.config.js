@@ -61,20 +61,20 @@ const config = {
             title: "Community",
             items: [
               {
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-                label: "Stack Overflow",
-              },
-              {
                 href: "https://forum.vac.dev/",
                 label: "Discourse",
               },
               {
-                href: "https://discord.gg/j5pGbn7MHZ",
-                label: "Twitter",
+                href: "https://discord.gg/Nrac59MfSX",
+                label: "Discord",
               },
               {
                 href: "https://twitter.com/waku_org",
                 label: "Twitter",
+              },
+              {
+                href: "https://t.me/waku_org",
+                label: "Telegram",
               },
             ],
           },
