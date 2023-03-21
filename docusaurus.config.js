@@ -49,9 +49,16 @@ const config = {
         title: "Waku",
         items: [
           {
-            label: "Docs",
-            type: "doc",
-            docId: "introduction",
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'main',
+            label: 'Overview',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'browser',
+            label: 'JavaScript (Browser)',
           },
         ],
       },
