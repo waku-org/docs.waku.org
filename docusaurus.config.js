@@ -28,8 +28,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/waku-org/waku.guide/tree/staging/",
         },
         theme: {
