@@ -33,7 +33,7 @@ const config = {
           editUrl: "https://github.com/waku-org/waku.guide/tree/staging/",
         },
         theme: {
-          name: "default",
+          name: "docusaurus-default",
           options: {
             customCss: [require.resolve("./src/css/custom.scss")],
           },
@@ -44,8 +44,54 @@ const config = {
 
   themeConfig:
     /** @type {import('@acid-info/logos-docusaurus-preset').ThemeConfig} */
-    ({}),
+    ({
+      navbar: {
+        title: "Waku",
+        items: [
+          {
+            label: "Docs",
+            type: "doc",
+            docId: "introduction",
+          },
+        ],
+      },
+      footer: {
+        links: [
+          {
+            title: "Community",
+            items: [
+              {
+                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Stack Overflow",
+              },
+              {
+                href: "https://forum.vac.dev/",
+                label: "Discourse",
+              },
+              {
+                href: "https://discord.gg/j5pGbn7MHZ",
+                label: "Twitter",
+              },
+              {
+                href: "https://twitter.com/waku_org",
+                label: "Twitter",
+              },
+            ],
+          },
+        ],
+      },
+    }),
 
+  plugins: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        indexDocs: true,
+        indexPages: true,
+      },
+    ],
+  ],
   themes: ["@docusaurus/theme-mermaid"],
   markdown: {
     mermaid: true,
