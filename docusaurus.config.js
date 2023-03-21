@@ -28,8 +28,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/waku-org/waku.guide/tree/staging/",
         },
         theme: {
@@ -49,9 +47,16 @@ const config = {
         title: "Waku",
         items: [
           {
-            label: "Docs",
-            type: "doc",
-            docId: "introduction",
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'main',
+            label: 'Overview',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'browser',
+            label: 'JavaScript (Browser)',
           },
         ],
       },
@@ -61,20 +66,20 @@ const config = {
             title: "Community",
             items: [
               {
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-                label: "Stack Overflow",
-              },
-              {
                 href: "https://forum.vac.dev/",
                 label: "Discourse",
               },
               {
-                href: "https://discord.gg/j5pGbn7MHZ",
-                label: "Twitter",
+                href: "https://discord.gg/Nrac59MfSX",
+                label: "Discord",
               },
               {
                 href: "https://twitter.com/waku_org",
                 label: "Twitter",
+              },
+              {
+                href: "https://t.me/waku_org",
+                label: "Telegram",
               },
             ],
           },
