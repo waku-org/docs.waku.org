@@ -30,7 +30,9 @@ const sidebars = {
     },
   ],
   browser: [
-      "browser/introduction"
+      "browser/introduction",
+      "browser/quick-start",
+      "browser/build-chat-app",
   ]
 };
 

@@ -1,0 +1,115 @@
+---
+title: Quick Start
+date: 2021-12-09T14:00:00+01:00
+weight: 20
+---
+
+# Quick Start
+
+In this guide, you will learn how to integrate Waku into an **existing** JavaScript project.
+If you're looking to build a Waku app from scratch, check out our [Build a Chat App](./build-chat-app) guide.
+
+## 1. Install Waku Libraries
+
+To begin, install the required Waku libraries with the following command:
+
+```shell
+npm i @waku/core @waku/create @waku/utils
+```
+
+## 2. Start a Waku Node
+
+Next, create and start a Waku Node:
+
+```js
+import {createLightNode} from "@waku/create"
+
+const waku = await createLightNode({defaultBootstrap: true})
+await waku.start()
+```
+
+:::info
+
+Setting the `defaultBootstrap` option to true allows your Waku node to connect to a set of pre-defined nodes.
+
+:::
+
+## 3. Wait for Connection to be Established
+
+Your Waku node needs to connect to a remote node in order to access the network.
+To wait for this, use the `waitForRemotePeer` function:
+
+```js
+import * as waku from "@waku/core"
+
+await waku.waitForRemotePeer(wakuNode)
+```
+
+## 4. Define a Content Topic
+
+The `contentTopic` is a metadata `string` used for categorizing messages on the Waku network.
+Depending on your use case, you can create one or more new `contentTopic`(s).
+Refer to our [How to Choose a Content Topic](/overview/concepts/content-topics) guide more details.
+
+For this guide, we'll use `/quick-start/1/message/utf8`.
+Note that our payload will be encoded using `utf-8`.
+We recommended using Protobuf for production purposes.
+
+```js
+const contentTopic = `/quick-start/1/message/utf8`
+```
+
+## 5. Create a Decoder
+
+Waku supports various encryption protocols.
+A decoder allows you to specify the content topic to use and how to decrypt messages.
+For the chosen content topic, create a plain text decoder (without encryption):
+
+```js
+const decoder = waku.createDecoder(contentTopic)
+```
+
+## 6. Listen for Incoming Messages
+
+Messages sent over the network are `Waku Message`s,
+as defined in the [14/WAKU2-MESSAGE](https://rfc.vac.dev/spec/14/#wire-format) RFC.
+
+Messages returned by the plain text decoder implement the [`DecodedMessage`](https://js.waku.org/classes/_waku_core.DecodedMessage.html) interface.
+
+For now, we will just use the `payload` field.
+It is a byte array field that can be used to encode any data.
+We will store messages as a `utf-8` string.
+
+To listen for messages using the decoder, use the following code:
+
+```js
+
+wakuNode.filter.subscribe([decoder], (message) => {
+    const str = utils.bytesToUtf8(message.payload)
+    // str is a string, render it in your app as desired
+})
+```
+
+## 7. Send Messages
+
+Finally, create a `sendMessage` function that sends messages over Waku:
+
+```js
+import * as utils from "@waku/utils"
+
+const encoder = waku.createEncoder(contentTopic)
+
+const sendMessage = async (textMsg) => {
+    await wakuNode.lightPush.push(encoder, {
+        payload: utils.utf8ToBytes(textMsg),
+    });
+};
+```
+
+Now, you can use the `sendMessage` function in your app to send messages.
+
+## Conclusion
+
+Congratulations! You've successfully added decentralized communication features to your app.
+
+Continue learning by exploring how to [build a chat app](./build-chat-app) from scratch using Waku.
