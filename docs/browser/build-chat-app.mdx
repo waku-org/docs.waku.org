@@ -94,7 +94,7 @@ const textInput = document.getElementById("textInput")
 Create and start a Waku Node:
 
 ```js
-import {createLightNode} from "https://unpkg.com/@waku/create@0.0.9/bundle/index.js"
+import {createLightNode} from "https://unpkg.com/@waku/create@0.0.12/bundle/index.js"
 
 const wakuNode = await createLightNode({defaultBootstrap: true})
 await wakuNode.start()
@@ -112,7 +112,7 @@ Your Waku node needs to connect to a remote node in order to access the network.
 To wait for this, use the `waitForRemotePeer` function:
 
 ```js
-import * as waku from "https://unpkg.com/@waku/core@0.0.13/bundle/index.js"
+import * as waku from "https://unpkg.com/@waku/core@0.0.16/bundle/index.js"
 
 await waku.waitForRemotePeer(wakuNode)
 ```
@@ -140,7 +140,7 @@ const updateMessages = (msgs, div) => {
     div.innerHTML = "<ul>"
     msgs.forEach((msg) => (div.innerHTML += `<li>${msg}</li>`))
     div.innerHTML += "</ul>"
-};
+}
 
 const messages = []
 ```
@@ -169,7 +169,7 @@ We will store messages as a `utf-8` string.
 Listen to messages using the decoder and add them to the `messages` div upon reception:
 
 ```ts
-import * as utils from "https://unpkg.com/@waku/utils@0.0.3/bundle/index.js"
+import * as utils from "https://unpkg.com/@waku/utils@0.0.4/bundle/bytes.js"
 
 wakuNode.filter.subscribe([decoder], (message) => {
     const str = utils.bytesToUtf8(message.payload)
@@ -186,15 +186,15 @@ Users will be able to enter the message using the `textInput` div.
 Once done, we can enable the `send` button.
 
 ```ts
-const encoder = waku.createEncoder(contentTopic)
+const encoder = waku.createEncoder({contentTopic})
 
 sendButton.onclick = async () => {
-    const text = textInput.value;
+    const text = textInput.value
 
-    await wakuNode.lightPush.push(encoder, {
+    await wakuNode.lightPush.send(encoder, {
         payload: utils.utf8ToBytes(text),
     });
-    textInput.value = null;
+    textInput.value = null
 };
 sendButton.disabled = false
 ```
@@ -236,9 +236,9 @@ Congratulations on building your first Waku chat app. You can find the complete 
 ```
 
 ```js title=index.js
-import {createLightNode} from "https://unpkg.com/@waku/create@0.0.6/bundle/index.js"
-import * as waku from "https://unpkg.com/@waku/core@0.0.10/bundle/index.js"
-import * as utils from "https://unpkg.com/@waku/byte-utils@0.0.2/bundle/index.js"
+import {createLightNode} from "https://unpkg.com/@waku/create@0.0.12/bundle/index.js"
+import * as waku from "https://unpkg.com/@waku/core@0.0.16/bundle/index.js"
+import * as utils from "https://unpkg.com/@waku/utils@0.0.4/bundle/bytes.js"
 
 const sendButton = document.getElementById("send")
 const messagesDiv = document.getElementById("messages")
@@ -250,31 +250,33 @@ await wakuNode.start()
 await waku.waitForRemotePeer(wakuNode)
 
 const contentTopic = `/chat-app-guide/1/message/utf8`
-const decoder = waku.createDecoder(contentTopic)
 
 const updateMessages = (msgs, div) => {
     div.innerHTML = "<ul>"
-    msgs.forEach((msg) => (div.innerHTML += "<li>" + msg + "</li>"))
+    msgs.forEach((msg) => (div.innerHTML += `<li>${msg}</li>`))
     div.innerHTML += "</ul>"
-};
+}
 
 const messages = []
 
+const decoder = waku.createDecoder(contentTopic)
+
 wakuNode.filter.subscribe([decoder], (message) => {
+    console.log("message received", message)
     const str = utils.bytesToUtf8(message.payload)
     messages.push(str)
     updateMessages(messages, messagesDiv);
 })
 
-const encoder = waku.createEncoder(contentTopic)
+const encoder = waku.createEncoder({contentTopic})
 
 sendButton.onclick = async () => {
-    const text = textInput.value;
+    const text = textInput.value
 
-    await wakuNode.lightPush.push(encoder, {
+    await wakuNode.lightPush.send(encoder, {
         payload: utils.utf8ToBytes(text),
-    });
-    textInput.value = null;
-};
+    })
+    textInput.value = null
+}
 sendButton.disabled = false
 ```
