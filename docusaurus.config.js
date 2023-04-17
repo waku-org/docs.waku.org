@@ -39,12 +39,19 @@ const config = {
       }),
     ],
   ],
-
+  staticDirectories: ["static"],
   themeConfig:
     /** @type {import('@acid-info/logos-docusaurus-preset').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: false,
+      },
       navbar: {
         title: "Waku",
+        logo: {
+          srcDark: "logo_white.svg",
+        },
         items: [
           {
             type: 'docSidebar',
