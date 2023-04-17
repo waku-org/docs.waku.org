@@ -67,6 +67,14 @@ const config = {
           },
         ],
       },
+        announcementBar: {
+        id: "support_us",
+        content:
+          "Waku is not production ready yet. Join our <a href='https://discord.gg/Nrac59MfSX'>discord community</a> to stay updated.",
+        backgroundColor: "#EBEDF0",
+        textColor: "#1B1B1D",
+        isCloseable: true,
+      },
       footer: {
         links: [
           {
