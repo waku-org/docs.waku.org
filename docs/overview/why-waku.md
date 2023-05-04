@@ -18,12 +18,12 @@ Waku is intended to empower individuals by returning control of communication to
 
 - It can run on various platforms, including mobile devices, cloud environments, web browsers, native desktop apps, or even dappnodes!
 
-## Whisper vs. Waku
+## Whisper vs. Waku: Why Waku Wins
 
 | | Whisper | Waku |
 | - | - | - |
 | **Scalability** | Whisper doesn't scale very well, specifically when it comes to bandwidth usage on mobile devices. | Uses sharding to partition the network into separate gossipsub networks, while maintaining a shared discovery network for peer location. |
-| **Spam Resistance** | Proof of work requires too much battery and compute power making it a poor mechanism for heterogeneous nodes. | Uses innovative p2p economic spam protection mechanism RLN Relay |
-| **Incentivization Infrastructure** | There is no incentive to run a Whisper node | Research in progress to design incentivization for node operators. |
-| **Formal Specification/Documentation** | Lack of formal and unambiguous specification | The specs and docs are open-source and licensed under CC0, making them freely available for anyone to read, modify and improve without restrictions. |
-| **Portability** | Runs over devp2p which limits where Whisper can run and how | Waku is built using libp2p, making it easy to run Waku anywhere. |
+| **Spam Resistance** | Proof of work requires too much battery and compute power making it a poor mechanism for heterogeneous nodes. | Uses innovative p2p economic spam protection mechanism RLN Relay. |
+| **Incentivization Infrastructure** | There is no incentive to run a Whisper node. | Research in progress to design incentivization for node operators. |
+| **Formal Specification/Documentation** | Lack of formal and unambiguous specification. | The specs and docs are open-source and licensed under CC0, making them freely available for anyone to read, modify and improve without restrictions. |
+| **Portability** | Runs over devp2p which limits where Whisper can run and how. | Waku is built using libp2p, making it easy to run Waku anywhere. |

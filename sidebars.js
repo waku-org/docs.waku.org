@@ -7,6 +7,7 @@ const sidebars = {
     "overview/what-is-waku",
     "overview/history",
     "overview/why-waku",
+    "overview/use-cases",
     "overview/who-is-using-waku",
     "overview/implementations",
     {
