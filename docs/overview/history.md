@@ -1,28 +1,44 @@
 ---
-title: History
+title: History of Waku
 ---
 
-Waku v1 was a fork of Whisper with some added tweaks for efficiency.
-Waku v2 is a completely redesigned suite of protocols designed to address the goals set out [previously](./introduction.md).
+Waku v1 was a fork of Whisper with some added tweaks for efficiency. Waku v2 is a completely redesigned suite of protocols designed to address the goals set out [previously](/#motivation-and-goals).
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'HISTORY'}} }%%
+gitGraph
+    commit id:"2013"
+    commit id:"2015" tag:"R&D"
+    commit id:"2018" tag:"R&D" type: HIGHLIGHT
+    branch v1
+    checkout v1
+    commit id:"2020" tag:"release"
+    checkout HISTORY
+    merge v1
+    branch v2
+    checkout v2
+    commit id:"2021" tag:"release"
+    checkout HISTORY
+    merge v2
+    commit id:"🔥"
+```
 
 ### 2013
 
-Ethereum White Paper was introduced with the Holy Trinity,
-consisting of Ethereum for consensus, Swarm for decentralized storage, and Whisper for p2p messaging.
+The introduction of the Ethereum White Paper marked the unveiling of the Holy Trinity, which comprises Ethereum for consensus, Swarm for decentralized storage, and Whisper for peer-to-peer messaging.
 
 ### 2015-2018
 
-R&D of Whisper was slow to follow progress of the Ethereum EVM and Swarm without a dedicated team building out the protocol.
+The development of the Whisper protocol lagged behind the advancements made by the Ethereum EVM and Swarm, primarily because there was no dedicated team working on building the protocol.
 
 ### 2018
 
-With little progress made on Whisper and significant scalability concerns growing,
-Vac was formed to conduct R&D on more scalable p2p messaging.
+Due to the lack of progress made on Whisper and growing concerns around scalability, Vac was established to focus on researching and developing more scalable peer-to-peer messaging solutions.
 
 ### 2020
 
-Waku v1 was introduced as the messaging protocol in Status, replacing Whisper.
+Status introduced Waku v1 as its messaging protocol, which replaced Whisper.
 
 ### 2021
 
-Waku v2 replaces Waku v1.
+Waku v2 supersedes Waku v1.

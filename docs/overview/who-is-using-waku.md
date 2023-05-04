@@ -1,5 +1,5 @@
 ---
-title: Who is using Waku?
+title: Who is Using Waku?
 ---
 
 ### Status
@@ -8,8 +8,8 @@ title: Who is using Waku?
 
 ### XMTP
 
-[XMTP](https://xmtp.org/) is using Waku v2 for their open protocol and network for secure web3 messaging.
+[XMTP](https://xmtp.org/) is using Waku v2 for their open protocol and network for secure Web3 messaging.
 
 ### RAILGUN
 
-[RAILGUN](https://railgun.org/) is a privacy system for Ethereum that shields your assets in your own smart contract wallet. RAILGUN uses Waku when offering the ETH gas payments to other users, privately signaling fees and offers for gas payment relayers to keep the privacy & anonymity of your stablecoin & token transactions.
+[RAILGUN](https://railgun.org/) is a privacy-focused system for Ethereum that secures your assets in a smart contract wallet while using Waku to offer private ETH gas payments to other users, ensuring anonymity and privacy for your stablecoin and token transactions.

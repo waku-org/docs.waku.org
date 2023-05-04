@@ -2,31 +2,28 @@
 title: Why Waku?
 ---
 
-Communication today is rife with third party interference.
-From censorship and deplatforming, to rent seeking intermediaries, to the misuse of data in the surveillance economy.
+Communication in the present day is heavily influenced by third-party intervention, ranging from censorship and de-platforming to intermediaries that seek to profit from rent and the misuse of data in the surveillance economy.
 
-Waku is designed to place control of communication back into the hands of the individual.
+Waku is intended to empower individuals by returning control of communication to them. It is the go-to standard for Web3 communication, offering a **scalable decentralized communication** solution.
 
-It is the communication layer for Web3 -- **decentralized communication that scales**.
+- Waku improves upon Whisper's capabilities by overcoming limitations and addressing functional gaps.
 
-- Waku fills the void left by Whisper.
+- It provides a public infrastructure for the Ethereum and multi-chain ecosystem, serving as a common good.
 
-- We are building Waku as a public good for the Ethereum and multi-chain ecosystem.
+- It is not confined to a particular blockchain.
 
-- It is not tied to a specific chain.
+- It is modular, adaptable, and can cater to various use cases.
 
-- It is modular and adaptive, enabling various use cases.
+- It allows developers to decentralize communication in their dApps or move actions off-chain while maintaining decentralization.
 
-- It enables developers to decentralize communication in their dApps or move actions off-chain without compromising decentralization.
+- It can run on various platforms, including mobile devices, cloud environments, web browsers, native desktop apps, or even dappnodes!
 
-- It aims to run anywhere, in the cloud and browser alike.
+## Whisper vs. Waku
 
-Private. Secure. Runs anywhere.
-
-|                                        | Whisper                                                                                                       |                                 Waku                                  |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------: |
-| **Scalability**                        | Whisper doesn't scale very well, specifically when it comes to bandwidth usage on mobile devices.             |                  Uses gossipsub and content topics.                   |
-| **Spam Resistance**                    | Proof of work requires too much battery and compute power making it a poor mechanism for heterogeneous nodes. |   Uses innovative p2p economic spam protection mechanism RLN Relay    |
-| **No incentivized infrastructure**     | There is no incentive to run a Whisper node                                                                   |  Research in progress to design incentivization for node operators.   |
-| **Formal Specification/Documentation** | Lack of formal and unambiguous specification                                                                  | Open source specs & docs and available for anyone to read or improve. |
-| **Portability**                        | Runs over devp2p which limits where Whisper can run and how                                                   |   Waku is built using libp2p, making it easy to run Waku anywhere.    |
+| | Whisper | Waku |
+| - | - | - |
+| **Scalability** | Whisper doesn't scale very well, specifically when it comes to bandwidth usage on mobile devices. | Uses sharding to partition the network into separate gossipsub networks, while maintaining a shared discovery network for peer location. |
+| **Spam Resistance** | Proof of work requires too much battery and compute power making it a poor mechanism for heterogeneous nodes. | Uses innovative p2p economic spam protection mechanism RLN Relay |
+| **Incentivization Infrastructure** | There is no incentive to run a Whisper node | Research in progress to design incentivization for node operators. |
+| **Formal Specification/Documentation** | Lack of formal and unambiguous specification | The specs and docs are open-source and licensed under CC0, making them freely available for anyone to read, modify and improve without restrictions. |
+| **Portability** | Runs over devp2p which limits where Whisper can run and how | Waku is built using libp2p, making it easy to run Waku anywhere. |

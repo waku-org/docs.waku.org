@@ -4,13 +4,11 @@
 
 const sidebars = {
   main: [
-    "overview/introduction",
+    "overview/what-is-waku",
     "overview/history",
-    "overview/motivation-and-goals",
     "overview/why-waku",
     "overview/who-is-using-waku",
     "overview/implementations",
-    "overview/how-does-it-work",
     {
       type: "category",
       label: "Concepts",

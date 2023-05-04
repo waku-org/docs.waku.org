@@ -4,7 +4,7 @@ require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Waku Guides",
+  title: "Waku Documentation Portal",
   url: "https://waku.guide/",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -43,10 +43,6 @@ const config = {
   themeConfig:
     /** @type {import('@acid-info/logos-docusaurus-preset').ThemeConfig} */
     ({
-      colorMode: {
-        defaultMode: "light",
-        disableSwitch: false,
-      },
       navbar: {
         title: "Waku",
         logo: {
@@ -67,7 +63,7 @@ const config = {
           },
         ],
       },
-        announcementBar: {
+      announcementBar: {
         content:
           "Waku is not production ready yet. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated.",
         backgroundColor: "#EBEDF0",
@@ -133,7 +129,7 @@ const config = {
           },
         ],
       },
-        colorMode: {
+      colorMode: {
         defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: false,
