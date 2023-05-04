@@ -1,46 +1,71 @@
-- [Description](#description)
-- [How to Run Locally](#how-to-run-locally)
-- [Configuration](#configuration)
-- [Customization](#customization)
+# Waku Documentation Portal
 
-## Description
+[![Waku Documentation Portal](https://img.shields.io/badge/dev-waku.guide-black)](https://dev.waku.guide/)
 
-This repository contains the content of your documentation website.
+The Waku Documentation Portal can be accessed at [dev.waku.guide](https://dev.waku.guide) and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## How to Run Locally
+## Prerequisites
 
-1. Clone this repository.
-2. Install the dependencies:
+- [Node.js](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/en/)
+
+## Installation
+
+Clone this repository:
+
 ```bash
-$ yarn
+git clone https://github.com/waku-org/waku.guide
 ```
-3. Start and open the website in your browser:
+
+Install the dependencies:
+
 ```bash
-$ yarn start
+yarn
+
+# or
+
+yarn install
+```
+
+## Running Locally
+
+```bash
+yarn start
 ```
 
 ## Configuration
-Edit the `docusaurus.config.js` file in the repository's root directory, and update the value of the `businessUnit` field in presets section; below is a list of valid values:
+
+Edit the `docusaurus.config.js` file located in the repository's root directory, and update the `businessUnit` field within the presets section. Here is a list of valid values for this field:
+
 - Logos
 - Codex
 - Waku
 
 Example:
+
 ```js
 presets: [
   [
     '@acid-info/logos-docusaurus-preset',
     {
-      businessUnit: 'Codex',
+      businessUnit: 'Waku',
     },
   ],
 ],
 ```
 
-This is probably enough in most cases, as the Logos plugins will fill in other configurations related to the specified business unit. If you find any error in the information coming from Logos Plugins, please head over to [Logos Docusaurus Plugins](https://github.com/acid-info/logos-docusaurus-plugins) and create an issue.
+This should suffice since Logos plugins will handle other configurations linked to the designated business unit. However, if you encounter any inaccuracies in the data provided by Logos Plugins, please visit the [Logos Docusaurus Plugins](https://github.com/acid-info/logos-docusaurus-plugins) page and submit an issue.
 
 ## Customization
 
 You can find the instructions on adding more documentation sections, localization, and versioning on the [Docusaurus](https://docusaurus.io/docs) website.
 
-> Note that theme customization is limited; for further instructions on customizing your theme, head over to [Logos Docusaurus Theme](https://github.com/acid-info/logos-docusaurus-plugins/tree/main/packages/logos-docusaurus-theme/). 
+> Note that theme customization is limited; for further instructions on customizing your theme, head over to [Logos Docusaurus Theme](https://github.com/acid-info/logos-docusaurus-plugins/tree/main/packages/logos-docusaurus-theme/).
+
+## Troubleshooting
+
+Docusaurus depends heavily on caching to enhance site performance. If you make changes that do not appear in the portal, try clearing the cache by running:
+
+```bash
+yarn clear
+```
