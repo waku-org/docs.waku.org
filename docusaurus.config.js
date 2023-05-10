@@ -53,7 +53,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'main',
-            label: 'Overview',
+            label: 'Getting Started',
           },
           {
             type: 'docSidebar',
@@ -65,7 +65,7 @@ const config = {
       },
       announcementBar: {
         content:
-          "Waku is not production ready yet. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated.",
+          "While Waku still has progress to make, apps like <a href='/overview/who-is-using-waku'>XMTP and Railgun</a> have already implemented it in production. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
         backgroundColor: "#EBEDF0",
         textColor: "#1B1B1D",
         isCloseable: true,

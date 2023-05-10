@@ -11,13 +11,13 @@ Waku is intended to empower individuals by returning control of communication to
 - It is not confined to a particular blockchain.
 - It is modular, adaptable, and can cater to various use cases.
 - It allows developers to decentralize communication in their dApps or move actions off-chain while maintaining decentralization.
-- It can run on various platforms, including mobile devices, cloud environments, web browsers, native desktop apps, or even dapp nodes!
+- It can run on various platforms, including mobile devices, cloud environments, web browsers, native desktop apps, or even a [Dappnode](https://dappnode.com/)!
 
-## Whisper vs. Waku: Why Waku Wins
+## Whisper vs. Waku: Why Waku is Necessary
 
 | | Whisper | Waku |
 | - | - | - |
-| **Scalability** | Whisper doesn't scale very well, specifically when it comes to bandwidth usage on mobile devices. | Uses sharding to partition the network into separate gossipsub networks, while maintaining a shared discovery network for peer location. |
+| **Scalability** | Whisper doesn't scale very well, specifically when it comes to bandwidth usage on mobile devices. | Uses gossipsub and content topics. |
 | **Spam Resistance** | Proof of work requires too much battery and compute power making it a poor mechanism for heterogeneous nodes. | Uses innovative p2p economic spam protection mechanism RLN Relay. |
 | **Incentivization Infrastructure** | There is no incentive to run a Whisper node. | Research in progress to design incentivization for node operators. |
 | **Formal Specification/Documentation** | Lack of formal and unambiguous specification. | The specs and docs are open-source and licensed under CC0, making them freely available for anyone to read, modify and improve without restrictions. |

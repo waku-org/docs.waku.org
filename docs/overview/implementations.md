@@ -18,4 +18,8 @@ The Golang implementation of the Waku protocol designed for native integration i
 
 ### [@waku/react-native](https://github.com/waku-org/waku-react-native)
 
-Use [go-waku](https://github.com/waku-org/go-waku) for mobile to integrate Waku into your React Native application.
+The React Native wrapper of the Waku protocol uses bindings provided by [go-waku](https://github.com/waku-org/go-waku) and is designed for native mobile integration.
+
+### [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings)
+
+The Rust wrapper of the Waku protocol uses bindings provided by [go-waku](https://github.com/waku-org/go-waku) and is designed for Rust applications.

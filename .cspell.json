@@ -27,7 +27,10 @@
     "Comms",
     "Protobuf",
     "supercrypto",
-    "QUIC"
+    "QUIC",
+    "Dappnode",
+    "gameplay",
+    "Smol"
   ],
   "flagWords": [],
   "ignorePaths": [

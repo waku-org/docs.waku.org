@@ -3,7 +3,7 @@ title: What is Waku?
 slug: /
 ---
 
-Waku is a family of peer-to-peer protocols that provide **secure and private communication** in a decentralized environment. It is designed to operate in **resource-limited environments**, making it suitable for various decentralized applications (dApps).
+Waku is a family of peer-to-peer protocols that offer **secure and private communication** in a decentralized environment, making it suitable for various decentralized applications (dApps). It is designed to operate in **resource-limited environments** but can also be used as a node or desktop application.
 
 Waku protocols ensure that users communication remains **censorship-resistant and privacy-preserving**, giving them complete control over their data. By incorporating Waku into your dApp, you can add decentralized communication features to your application **without compromising security or privacy**.
 
@@ -13,7 +13,7 @@ The Waku family of protocols is designed for diverse applications due to their p
 
 ### Generalized Messaging
 
-Many applications require some form of messaging protocol to facilitate communication between different subsystems or nodes. Waku is flexible and can be used for human-to-human and machine-to-machine messaging scenarios.
+Waku aims to solve the problem of ephemeral messaging between subsystems and nodes through a flexible, secure, and private protocol. It supports human-to-human and machine-to-machine messaging scenarios but is not designed for data storage.
 
 ### Peer-to-Peer
 
@@ -42,6 +42,8 @@ Waku nodes are adaptive and can be customized based on the application's require
 - Low privacy/low resource usage vs. high privacy/increased latency + bandwidth usage.
 - Providing resources to the network vs. consuming resources.
 - Stronger guarantees for spam protection vs. economic registration cost.
+
+These options are part of the [anonymity trilemma](https://eprint.iacr.org/2017/954.pdf), which Waku addresses through its adjustable protocol.
 
 ## How Does Waku Work?
 
