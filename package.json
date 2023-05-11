@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "@acid-info/logos-docusaurus-preset": "^0.3.0",
-    "@docusaurus/core": "2.2.0",
-    "@docusaurus/preset-classic": "2.2.0",
-    "@docusaurus/theme-mermaid": "^2.2.0",
+    "@docusaurus/core": "^2.4.0",
+    "@docusaurus/preset-classic": "^2.4.0",
+    "@docusaurus/theme-mermaid": "^2.4.0",
     "@mdx-js/react": "^1.6.22",
     "add": "^2.0.6",
     "dotenv": "^16.0.3",
@@ -29,7 +29,7 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.2.0",
+    "@docusaurus/module-type-aliases": "^2.4.0",
     "@tsconfig/docusaurus": "^1.0.5",
     "cspell": "^6.16.0",
     "docusaurus-plugin-sass": "^0.2.2",

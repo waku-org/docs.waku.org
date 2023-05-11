@@ -4,7 +4,7 @@ require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Waku Guides",
+  title: "Waku Documentation Portal",
   url: "https://waku.guide/",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -28,7 +28,7 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/waku-org/waku.guide/tree/staging/",
+          editUrl: "https://github.com/waku-org/waku.guide/tree/develop/",
         },
         theme: {
           name: "docusaurus-default",
@@ -43,10 +43,6 @@ const config = {
   themeConfig:
     /** @type {import('@acid-info/logos-docusaurus-preset').ThemeConfig} */
     ({
-      colorMode: {
-        defaultMode: "light",
-        disableSwitch: false,
-      },
       navbar: {
         title: "Waku",
         logo: {
@@ -57,7 +53,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'main',
-            label: 'Overview',
+            label: 'Getting Started',
           },
           {
             type: 'docSidebar',
@@ -67,16 +63,28 @@ const config = {
           },
         ],
       },
-        announcementBar: {
-        id: "support_us",
+      announcementBar: {
         content:
-          "Waku is not production ready yet. Join our <a href='https://discord.gg/Nrac59MfSX'>discord community</a> to stay updated.",
+          "While Waku still has progress to make, apps like <a href='/overview/who-is-using-waku'>XMTP and Railgun</a> have already implemented it in production. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
         backgroundColor: "#EBEDF0",
         textColor: "#1B1B1D",
         isCloseable: true,
       },
       footer: {
         links: [
+          {
+            title: "Legal",
+            items: [
+              {
+                href: "https://waku.org/terms-of-use",
+                label: "Terms of Use",
+              },
+              {
+                href: "https://waku.org/privacy-policy",
+                label: "Privacy Policy",
+              },
+            ],
+          },
           {
             title: "Community",
             items: [
@@ -96,11 +104,32 @@ const config = {
                 href: "https://t.me/waku_org",
                 label: "Telegram",
               },
-            ],
+              ],
+          },
+          {
+            title: "Resources",
+            items: [
+              {
+                href: "https://github.com/waku-org",
+                label: "GitHub",
+              },
+              {
+                href: "https://vac.dev/research",
+                label: "Blog",
+              },
+              {
+                href: "https://vac.dev/",
+                label: "Vac",
+              },
+              {
+                href: "https://rfc.vac.dev/",
+                label: "Vac RFCs",
+              },
+              ],
           },
         ],
       },
-        colorMode: {
+      colorMode: {
         defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: false,
