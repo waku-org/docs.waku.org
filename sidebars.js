@@ -12,13 +12,12 @@ const sidebars = {
     "overview/implementations",
     {
       type: "category",
-      label: "Concepts",
+      label: "Waku Concepts",
       collapsed: false,
       collapsible: true,
       items: [
-        "overview/concepts/different-protocols",
-        "overview/concepts/protocols-explained",
-        "overview/concepts/protocols-overview-by-example",
+        "overview/concepts/network-interaction-domains",
+        "overview/concepts/protocols",
         "overview/concepts/discovery-and-bootstrap",
         "overview/concepts/transports-in-waku",
         "overview/concepts/content-topics",

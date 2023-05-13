@@ -65,7 +65,7 @@ const config = {
       },
       announcementBar: {
         content:
-          "While Waku still has progress to make, apps like <a href='/overview/who-is-using-waku'>XMTP and Railgun</a> have already implemented it in production. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
+          "While Waku is still in development and needs to prepare for extensive adoption, it is already being used by <a href='/overview/who-is-using-waku'>XMTP and Railgun</a>. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
         backgroundColor: "#EBEDF0",
         textColor: "#1B1B1D",
         isCloseable: true,

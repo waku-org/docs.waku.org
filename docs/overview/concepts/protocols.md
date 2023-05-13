@@ -1,6 +1,8 @@
 ---
-title: Protocols Explained
+title: Waku Protocols
 ---
+
+Waku is modular: several protocols are available and applications can decide on how they want to turn the dials on the [Anonymity Trilemma](https://freedom.cs.purdue.edu/projects/trilemma.html). Here are the different types of protocols Waku offers:
 
 Currently, the main Waku protocols are:
 

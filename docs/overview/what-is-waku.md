@@ -17,11 +17,11 @@ Waku aims to solve the problem of ephemeral messaging between subsystems and nod
 
 ### Peer-to-Peer
 
-Waku is suitable for applications that require a peer-to-peer approach, as it offers the following advantages:
+Waku is suitable for applications that require a peer-to-peer approach, offering the following advantages:
 
 - Censorship resistance with no single point of failure.
 - Adaptive and scalable network.
-- Shared infrastructure/service network.
+- Shared infrastructure, leveraging the capabilities of Waku as a service network.
 
 ### Platform Agnostic
 
