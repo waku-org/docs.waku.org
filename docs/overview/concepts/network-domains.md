@@ -47,7 +47,7 @@ D ->> E: HistoryResponse(msg1, ...) (6)
 
 The Publish/Subscribe topic `pubtopic1` serves as a means of routing messages (the network employs a default pub-sub topic) and indicates that it is subscribed to messages on that topic for a relay. In the context of Waku Store, Node D is responsible for persisting these messages.
 
-1. Node A creates a WakuMessage `msg1` with a ContentTopic `contentTopic1`.
+1. Node A creates a WakuMessage `msg1` with a [ContentTopic](/overview/concepts/content-topics) `contentTopic1`.
 2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and ContentTopic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.
 3. Node A publishes `msg1` on `pubtopic1`. The message is sent from Node A to Node B and then forwarded to Node D.
 4. Node D, upon receiving `msg1`, stores the message in its store for possible later retrieval by other nodes.

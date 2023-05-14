@@ -1,24 +1,21 @@
 ---
-title: Content Topic and How to Choose One
+title: Content Topics
 ---
 
-A content topic is used for content based filtering and allows you to filter out the messages that your dApp processes,
-both when receiving live messages (Relay or Filter) or retrieving historical messages (Store).
+Content topics optimize node bandwidth usage by filtering messages based on specific topics of interest. They enable dApps to selectively process incoming live messages (`Relay` or `Filter`) and retrieve historical messages (`Store`) that match their filtering criteria. For more information, please refer to the [23/WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification.
 
-The recommended format for content topics is as follows:
+## Content Topic Format
 
-`/{dapp-name}/{version}/{content-topic-name}/{encoding}`
+Here is the recommended format for content topics:
 
-- `dapp-name`: The name of your dApp, it must be unique to avoid conflict with other dApps.
-- `version`: We usually start at `1`, useful when introducing breaking changes in your messages.
-- `content-topic-name`: The actual content topic name to use for filtering.
-  If your dApp uses Waku for several features,
-  you should use a content topic per feature.
-- `encoding`: The encoding format of the message, [Protobuf](https://developers.google.com/protocol-buffers) is most often used: `proto`.
+`/{application-name}/{version}/{content-topic-name}/{encoding}`
 
-For example: Your dApp's name is SuperCrypto,
-it enables users to receive notifications and send private messages.
-You may want to use the following content topics:
+- `application-name`: This is the unique name of your decentralized application (dApp) to prevent conflicts with other dApps.
+- `version`: Typically starting at 1, this field helps track breaking changes in your messages.
+- `content-topic-name`: The specific name of the content topic used for filtering. If your dApp utilizes Waku for multiple features, it is advisable to have a separate content topic for each feature.
+- `encoding`: The message encoding format, with [Protobuf](https://developers.google.com/protocol-buffers) (`proto`) being the commonly used choice.
+
+For instance, if your dApp is called `SuperCrypto` and it allows users to receive notifications and send private messages, you can consider utilizing the following content topics:
 
 - `/supercrypto/1/notification/proto`
 - `/supercrypto/1/private-message/proto`
