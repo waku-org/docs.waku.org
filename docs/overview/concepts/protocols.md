@@ -1,71 +1,43 @@
 ---
-title: Waku Protocols
+title: Protocols in Waku
 ---
 
-Waku is modular: several protocols are available and applications can decide on how they want to turn the dials on the [Anonymity Trilemma](https://freedom.cs.purdue.edu/projects/trilemma.html). Here are the different types of protocols Waku offers:
-
-Currently, the main Waku protocols are:
+Waku takes a modular approach, providing a range of protocols that enable applications to control the trade-offs involved in the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf). This flexibility empowers applications to make informed choices regarding the desired balance between anonymity, scalability, and reliability. Here are the main protocols provided by Waku:
 
 ### [Waku Relay](https://rfc.vac.dev/spec/11/)
 
-`WAKU2-RELAY` specifies a Publish/Subscribe approach to peer-to-peer messaging with a strong focus on privacy, censorship-resistance, security and scalability.
-Its current implementation is a minor extension of the libp2p GossipSub protocol and prescribes gossip-based dissemination.
-
-An extension of this is `WAKU-RLN-RELAY`, a privacy-preserving economic spam protection mechanism.
+`WAKU2-RELAY` is a privacy-focused peer-to-peer messaging protocol that extends the `libp2p GossipSub` protocol. It utilizes a Publish/Subscribe approach to enable secure communication channels, encryption, and protection against censorship. With a strong emphasis on privacy, `Waku Relay` ensures scalability, allowing many peers and messages to coexist within the network.
 
 ### [Waku Filter](https://rfc.vac.dev/spec/12/)
 
-`WAKU2-FILTER` is a protocol that enables subscribing to messages that a peer receives.
-It enables a node to access the relay network without the connectivity and bandwidth requirements of relay nodes, but it comes with privacy drawbacks.
-Light nodes subscribe to service nodes and only receive the messages they desire.
-
-It makes receiving messages more bandwidth preserving.
+`WAKU2-FILTER` is a protocol enabling peers to subscribe to specific messages from other peers. It is designed for devices with limited bandwidth, serving as a lighter alternative to [Waku Relay](#waku-relay). Unlike relay nodes, `Waku Filter` allows light nodes to subscribe to service nodes and receive only the messages they are interested in. This optimizes bandwidth consumption but may involve privacy compromises. Nonetheless, `Waku Filter` efficiently delivers desired messages within bandwidth constraints.
 
 ### [Waku Store](https://rfc.vac.dev/spec/13/)
 
-DApps running on a phone or in a browser are often offline:
-The browser could be closed or mobile app in the background.
+`WAKU2-STORE` is a protocol that allows the querying of messages received through the relay protocol and stored by nodes. It supports retrieving historical messages with pagination. Unlike [Waku Relay](#waku-relay), which doesn't save messages for offline users, `Waku Store` peers retain relayed messages for later retrieval.
 
-[Waku Relay](https://rfc.vac.dev/spec/11/) is a gossip protocol.
-As a user, it means that your peers forward you messages they just received.
-If you cannot be reached by your peers, then messages are not relayed;
-relay peers do **not** save messages for later.
-
-However, [Waku Store](https://rfc.vac.dev/spec/13/) peers do save messages they relay,
-allowing you to retrieve them at a later time.
-The Waku Store protocol is best-effort and does not guarantee data availability.
-Waku Relay or Waku Filter should still be preferred when online;
-Waku Store can be used after resuming connectivity:
-For example, when the dApp starts.
+:::info
+Data availability is not guaranteed with `Waku Store`. [Waku Relay](#waku-relay) or [Waku Filter](#waku-filter) are preferred for online usage, while `Waku Store` is suitable for retrieving messages after reconnecting to the network, like when a dApp starts.
+:::
 
 ### [Waku Light Push](https://rfc.vac.dev/spec/19/)
 
-Waku Light Push enables a client to receive a confirmation when sending a message.
+`WAKU2-LIGHTPUSH` is a [Request/Reply](/overview/concepts/network-interaction-domains#requestreply-domain) protocol for Waku's light nodes with limited bandwidth and short connection windows. It enables clients to receive a confirmation when sending messages, indicating that at least one node has received them. However, using `Waku Light Push` compromises privacy as the remote peer becomes aware of the message originator.
 
-The Waku Relay protocol sends messages to connected peers but does not provide any information on whether said peers have received messages.
-This can be an issue when facing potential connectivity issues.
-For example, when the connection drops easily, or it is connected to a small number of relay peers.
-
-Waku Light Push allows a client to get a response from a remote peer when sending a message.
-Note this only guarantees that the remote peer has received the message,
-it cannot guarantee propagation to the network.
-
-It also means weaker privacy properties as the remote peer knows the client is the originator of the message.
-Whereas with Waku Relay, a remote peer would not know whether the client created or forwarded the message.
-
-You can find Waku Light Push's specifications on [Vac RFC](https://rfc.vac.dev/spec/19/).
-
-`WAKU2-LIGHTPUSH` is a request/response protocol for this.
+:::info
+Please note that `Waku Light Push` confirms receipt by the remote peer but doesn't guarantee network-wide propagation.
+:::
 
 ## Additional Protocols
 
-This is in addition to protocols that specify messages, payloads, and recommended usages.
-For example:
+### [Waku Message](https://rfc.vac.dev/spec/14)
 
-- [14/WAKU2-MESSAGE](https://rfc.vac.dev/spec/14) and [26/WAKU2-PAYLOAD](https://rfc.vac.dev/spec/26) for message payloads
-- [23/WAKU2-TOPICS](https://rfc.vac.dev/spec/23) and [27/WAKU2-PEERS](https://rfc.vac.dev/spec/27) for recommendations around usage
+`WAKU2-MESSAGE` is a communication protocol that facilitates the exchange of messages between peers in the network. It includes the data payload (actual message content being transmitted) and attributes (metadata associated with the message).
 
-There are also more experimental libp2p protocols such as
-[`WAKU-RLN-RELAY`](https://rfc.vac.dev/spec/17/)
+### [Waku Payload](https://rfc.vac.dev/spec/26)
 
-You can find more information on this [here](./research-in-progress.md).
+`WAKU2-PAYLOAD` provides guidelines for implementing secure and private communication in the Waku network. It covers encryption, decryption, and signing methods for message payloads, focusing on confidentiality, authenticity, integrity, and unlinkability.
+
+### [Waku RLN Relay](https://rfc.vac.dev/spec/17/)
+
+The `WAKU2-RLN-RELAY` protocol extends the [Waku Relay](#waku-relay) protocol by adding spam protection using [Rate Limiting Nullifiers (RLN)](https://rfc.vac.dev/spec/32/). It enforces a global messaging rate for all peers to prevent spam in the Waku network. Spammers face financial penalties and removal from the system. This protocol provides efficient and economic spam prevention suitable for resource-constrained environments.

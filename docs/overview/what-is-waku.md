@@ -43,7 +43,7 @@ Waku nodes are adaptive and can be customized based on the application's require
 - Providing resources to the network vs. consuming resources.
 - Stronger guarantees for spam protection vs. economic registration cost.
 
-These options are part of the [anonymity trilemma](https://eprint.iacr.org/2017/954.pdf), which Waku addresses through its adjustable protocol.
+These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf), which Waku addresses through its adjustable protocol.
 
 ## How Does Waku Work?
 

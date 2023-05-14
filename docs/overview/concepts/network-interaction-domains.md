@@ -12,13 +12,13 @@ Node discovery in Waku facilitates locating other nodes within the network. As a
 
 Gossipsub derives its name from the practice within pub-sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
 
-Waku employs gossiping through [`WAKU-RELAY`](https://rfc.vac.dev/spec/11/) to distribute messages across the network. Additionally, Waku introduces [`WAKU-RLN-RELAY`](https://rfc.vac.dev/spec/17/), an experimental mechanism that combines privacy preservation and economic spam protection.
+Waku employs gossiping through [`WAKU-RELAY`](/overview/concepts/protocols#waku-relay) to distribute messages across the network. Additionally, Waku introduces [`WAKU-RLN-RELAY`](/overview/concepts/protocols#waku-rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
 
 ## Request/Reply Domain
 
 Waku provides a set of Request/Reply protocols to optimize its performance in resource-restricted environments like low bandwidth or offline scenarios.
 
-These protocols serve multiple purposes. [`WAKU-STORE`](https://rfc.vac.dev/spec/13/) enables the retrieval of historical messages, [`WAKU-FILTER`](https://rfc.vac.dev/spec/12/) efficiently retrieves a subset of messages to conserve bandwidth, and [`WAKU-LIGHTPUSH`](https://rfc.vac.dev/spec/19/) facilitates message publication for nodes with limited bandwidth and short connection windows.
+These protocols serve multiple purposes. [`WAKU-STORE`](/overview/concepts/protocols#waku-store) enables the retrieval of historical messages, [`WAKU-FILTER`](/overview/concepts/protocols#waku-filter) efficiently retrieves a subset of messages to conserve bandwidth, and [`WAKU-LIGHTPUSH`](/overview/concepts/protocols#waku-light-push) facilitates message publication for nodes with limited bandwidth and short connection windows.
 
 ## Overview of Protocol Interaction
 
@@ -45,7 +45,7 @@ E ->> D: HistoryQuery(pubtopic1, contentTopic1) (6)
 D ->> E: HistoryResponse(msg1, ...) (6)
 ```
 
-The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default pub-sub topic) and indicates that it is subscribed to messages on that topic for a relay. In the context of Waku Store, Node D is responsible for persisting these messages.
+The Publish/Subscribe topic `pubtopic1` serves as a means of routing messages (the network employs a default pub-sub topic) and indicates that it is subscribed to messages on that topic for a relay. In the context of Waku Store, Node D is responsible for persisting these messages.
 
 1. Node A creates a WakuMessage `msg1` with a ContentTopic `contentTopic1`.
 2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and ContentTopic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.
