@@ -10,7 +10,7 @@ Node discovery in Waku facilitates locating other nodes within the network. As a
 
 ## Gossip Domain
 
-Gossipsub derives its name from the practice within pub-sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
+Gossipsub derives its name from the practice within Pub/Sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
 
 Waku employs gossiping through [`WAKU-RELAY`](/overview/concepts/protocols#waku-relay) to distribute messages across the network. Additionally, Waku introduces [`WAKU-RLN-RELAY`](/overview/concepts/protocols#waku-rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
 
@@ -45,7 +45,7 @@ E ->> D: HistoryQuery(pubtopic1, contentTopic1) (6)
 D ->> E: HistoryResponse(msg1, ...) (6)
 ```
 
-The Publish/Subscribe topic `pubtopic1` serves as a means of routing messages (the network employs a default pub-sub topic) and indicates that it is subscribed to messages on that topic for a relay. In the context of Waku Store, Node D is responsible for persisting these messages.
+The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default pubsub topic) and indicates that it is subscribed to messages on that topic for a relay. In the context of Waku Store, Node D is responsible for persisting these messages.
 
 1. Node A creates a WakuMessage `msg1` with a [ContentTopic](/overview/concepts/content-topics) `contentTopic1`.
 2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and ContentTopic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.

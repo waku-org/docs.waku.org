@@ -19,8 +19,8 @@ const sidebars = {
         "overview/concepts/protocols",
         "overview/concepts/network-domains",
         "overview/concepts/node-discovery",
-        "overview/concepts/transports",
         "overview/concepts/content-topics",
+        "overview/concepts/transports",
       ],
     },
     {

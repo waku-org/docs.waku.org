@@ -47,7 +47,7 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ## How Does Waku Work?
 
-The Waku Relay protocol is the foundation of the Waku Network, which employs a `pubsub` architecture built on the `libp2p gossipsub` protocol. In addition to this, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
+The Waku Relay protocol is the foundation of the Waku Network, which employs a Pub/Sub architecture built on the `libp2p gossipsub` protocol. In addition to this, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
 1. Facilitating the retrieval of historical messages for primarily offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.

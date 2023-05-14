@@ -2,7 +2,7 @@
 title: Content Topics
 ---
 
-Content topics optimize node bandwidth usage by filtering messages based on specific topics of interest. They enable dApps to selectively process incoming live messages (`Relay` or `Filter`) and retrieve historical messages (`Store`) that match their filtering criteria. For more information, please refer to the [23/WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification.
+Content topics optimize node bandwidth usage by filtering messages based on specific topics of interest. They enable dApps to selectively process incoming live messages ([Relay](/overview/concepts/protocols#waku-relay) or [Filter](/overview/concepts/protocols#waku-filter)) and retrieve historical messages ([Store](/overview/concepts/protocols#waku-store)) that match their filtering criteria. For more information, please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification.
 
 ## Content Topic Format
 
@@ -13,7 +13,7 @@ Here is the recommended format for content topics:
 - `application-name`: This is the unique name of your decentralized application (dApp) to prevent conflicts with other dApps.
 - `version`: Typically starting at 1, this field helps track breaking changes in your messages.
 - `content-topic-name`: The specific name of the content topic used for filtering. If your dApp utilizes Waku for multiple features, it is advisable to have a separate content topic for each feature.
-- `encoding`: The message encoding format, with [Protobuf](https://developers.google.com/protocol-buffers) (`proto`) being the commonly used choice.
+- `encoding`: The message serialization/encoding format, with [Protobuf](https://protobuf.dev/) (`proto`) being the commonly used choice.
 
 For instance, if your dApp is called `SuperCrypto` and it allows users to receive notifications and send private messages, you can consider utilizing the following content topics:
 
