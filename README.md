@@ -33,6 +33,12 @@ yarn install
 yarn start
 ```
 
+Check for spelling errors before deploying:
+
+```bash
+npm run check:spell
+```
+
 ## Configuration
 
 Edit the `docusaurus.config.js` file located in the repository's root directory, and update the `businessUnit` field within the presets section. Here is a list of valid values for this field:

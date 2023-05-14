@@ -16,9 +16,9 @@ const sidebars = {
       collapsed: false,
       collapsible: true,
       items: [
-        "overview/concepts/network-interaction-domains",
         "overview/concepts/protocols",
-        "overview/concepts/discovery-and-bootstrap",
+        "overview/concepts/network-domains",
+        "overview/concepts/node-discovery",
         "overview/concepts/transports-in-waku",
         "overview/concepts/content-topics",
         "overview/concepts/security-features",
