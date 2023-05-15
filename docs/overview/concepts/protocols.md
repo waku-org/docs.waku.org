@@ -22,7 +22,7 @@ Data availability is not guaranteed with `Waku Store`. [Waku Relay](#waku-relay)
 
 ### [Waku Light Push](https://rfc.vac.dev/spec/19/)
 
-`WAKU2-LIGHTPUSH` is a [Request/Reply](/overview/concepts/network-interaction-domains#requestreply-domain) protocol for Waku's light nodes with limited bandwidth and short connection windows. It enables clients to receive a confirmation when sending messages, indicating that at least one node has received them. However, using `Waku Light Push` compromises privacy as the remote peer becomes aware of the message originator.
+`WAKU2-LIGHTPUSH` is a [Request/Reply](/overview/concepts/network-domains#requestreply-domain) protocol for Waku's light nodes with limited bandwidth and short connection windows. It enables clients to receive a confirmation when sending messages, indicating that at least one node has received them. However, using `Waku Light Push` compromises privacy as the remote peer becomes aware of the message originator.
 
 :::info
 Please note that `Waku Light Push` confirms receipt by the remote peer but doesn't guarantee network-wide propagation.
