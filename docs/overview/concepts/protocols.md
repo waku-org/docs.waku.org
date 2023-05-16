@@ -2,7 +2,7 @@
 title: Protocols in Waku
 ---
 
-Waku takes a modular approach, providing a range of protocols that enable applications to control the trade-offs involved in the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf). This flexibility empowers applications to make informed choices regarding the desired balance between anonymity, scalability, and reliability. Here are the main protocols provided by Waku:
+Waku takes a modular approach, providing a range of protocols that enable applications to control the trade-offs involved in the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf). This flexibility empowers applications to make informed choices regarding the desired balance between anonymity, scalability, and latency. Here are the main protocols provided by Waku:
 
 ### [Waku Relay](https://rfc.vac.dev/spec/11/)
 
@@ -32,7 +32,7 @@ Please note that `Waku Light Push` confirms receipt by the remote peer but doesn
 
 ### [Waku Message](https://rfc.vac.dev/spec/14)
 
-`WAKU2-MESSAGE` is a communication protocol that facilitates the exchange of messages between peers in the network. It includes the data payload (actual message content being transmitted) and attributes (metadata associated with the message).
+`WAKU2-MESSAGE` specifies the message structure used in the Waku network. It defines metadata fields, such as content topics and timestamps, that other Waku protocols can use.
 
 ### [Waku Payload](https://rfc.vac.dev/spec/26)
 

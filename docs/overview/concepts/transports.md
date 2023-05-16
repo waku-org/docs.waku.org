@@ -2,9 +2,9 @@
 title: Transports in Waku
 ---
 
-Transports facilitate the movement of data packets over a network as they define the rules and protocols for establishing connections between members. They provide the necessary mechanisms and protocols to ensure the efficient transmission, routing, and delivery of these packets across the network.
+Transports help move data packets across a network by establishing connections between members. They define the rules and protocols to ensure efficient network transmission, routing, and data delivery.
 
-Waku is a transport-agnostic framework that allows developers to choose and support multiple protocols according to their specific requirements. For Waku nodes, the following transports are recommended:
+Waku is a transport-agnostic framework that allows developers to choose and support multiple protocols according to their requirements. For Waku nodes, the following transports are recommended:
 
 - **TCP:** By default, Waku nodes utilize TCP for communication. Service nodes should employ TCP for listening to and connecting with other nodes.
 - **Secure WebSocket:** In browser environments, secure WebSocket is used. Service nodes are encouraged to set up SSL certificates to enable incoming connections from browsers and serve them securely.
