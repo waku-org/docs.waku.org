@@ -2,7 +2,7 @@
 title: Node Discovery Mechanisms
 ---
 
-When initializing a Waku node, it must connect with other nodes to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate other nodes where no connections are present. This process is known as bootstrapping.
+When initializing a Waku node, it must connect with other nodes to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate and connect with other nodes. This process is known as bootstrapping.
 
 After establishing a connection, the node must actively seek out additional peers to have:
 
@@ -23,7 +23,7 @@ Waku applications have the flexibility to embed bootstrap node addresses directl
 
 - Vulnerable to censorship: Node IPs can be blocked or restricted.
 - Limited scalability: The number of nodes is fixed and cannot easily be expanded.
-- Maintenance challenges: Updating the node list requires modifying the code, which can be cumbersome and less maintainable.
+- Maintenance challenges: Updating the node list requires modifying the code, which can be cumbersome and involves releasing and deploying.
 
 ## [DNS Discovery](https://rfc.vac.dev/spec/31/)
 
@@ -40,7 +40,7 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 #### Cons
 
 - Vulnerable to censorship: Domain names can be blocked or restricted.
-- Limited scalability: The number of nodes is fixed, and operators need to provide their `ENR` to the domain owner for listing.
+- Limited scalability: The listed nodes are at risk of being overwhelmed by receiving all queries. Also, operators must provide their `ENR` to the domain owner for listing.
 
 ## [Discv5](https://rfc.vac.dev/spec/33/)
 
@@ -53,16 +53,12 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 
 #### Cons
 
-- Demands high resource allocation.
-- Nodes hindered by restrictive NAT setups are unable to run this protocol.
+- Requires lots of connections and involves frequent churn.
+- Relies on User Datagram Protocol (UDP), which is not supported in web browsers.
 
 ## [Peer Exchange](https://rfc.vac.dev/spec/34/)
 
-The primary objective of this protocol is to facilitate peer connectivity for resource-restricted devices. The peer exchange protocol enables lightweight nodes to request peers from other nodes within the network. Light nodes can bootstrap and expand their mesh independently without relying on [Discv5](#discv5) or bootstrap nodes.
-
-:::info
-This protocol is intended for situations where the use of `Discv5` is not feasible.
-:::
+The primary objective of this protocol is to facilitate peer connectivity for resource-restricted devices. The peer exchange protocol enables lightweight nodes to request peers from other nodes within the network. Light nodes can bootstrap and expand their mesh independently without relying on [Discv5](#discv5).
 
 #### Pros
 
