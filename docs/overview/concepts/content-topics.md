@@ -2,7 +2,9 @@
 title: Content Topics
 ---
 
-Content topics optimize node bandwidth usage by filtering messages based on specific topics of interest. They enable dApps to selectively process incoming live messages ([Relay](/overview/concepts/protocols#waku-relay) or [Filter](/overview/concepts/protocols#waku-filter)) and retrieve historical messages ([Store](/overview/concepts/protocols#waku-store)) that match their filtering criteria. For more information, please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification.
+`Content Topics` in Waku are the foundation for content addressing, similar to [Content-Addressable Storage](https://en.wikipedia.org/wiki/Content-addressable_storage). They facilitate protocol-level features like processing incoming live messages selectively ([Relay](/overview/concepts/protocols#waku-relay) or [Filter](/overview/concepts/protocols#waku-filter)) and retrieving historical messages ([Store](/overview/concepts/protocols#waku-store)) that meet specific filtering criteria.
+
+Unlike encrypted data, `Content Topics` are metadata strings set by developers on outgoing messages. Please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
 
 ## Content Topic Format
 
