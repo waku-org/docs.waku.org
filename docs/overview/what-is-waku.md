@@ -54,5 +54,6 @@ The Waku Relay protocol is the foundation of the Waku Network, which employs a P
 3. Preserve bandwidth usage for resource-limited environments.
 4. Implementing economic spam protection (rate limits) while ensuring privacy.
 5. Developing methods to protect against mass deanonymization (currently being researched).
+6. Designing strategies to scale [Waku Relay/GossipSub](/overview/concepts/protocols#waku-relay) securely.
 
 If you want to learn more about how Waku operates, the [10/WAKU2](https://rfc.vac.dev/spec/10/) RFC provides an in-depth look under the hood.
