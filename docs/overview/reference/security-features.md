@@ -2,44 +2,31 @@
 title: Security Features
 ---
 
-Each protocol layer of Waku provides a distinct service and is associated with a separate set of security features and concerns. Therefore, the overall security of Waku depends on how the different layers are utilized.
+Waku's protocol layers offer different services and security considerations, shaping the overall security of Waku. We document the security models in the [RFCs of the protocols](https://rfc.vac.dev/), aiming to provide transparent and open-source references. This empowers Waku users to understand each protocol's security guarantees and limitations.
 
-The security models are detailed in the RFC of the protocols. We strive to provide well documented and [open source RFCs](https://rfc.vac.dev/) so that Waku users know what security guarantees are and aren't provided by each protocol.
+Some of the Waku's security features include the following:
 
-Some of the security features of Waku are:
+## [Pseudonymity](https://rfc.vac.dev/spec/10/#pseudonymity)
 
-## Pseudonymity
+Waku ensures pseudonymity across its protocol layers, using libp2p `PeerID` as identifiers instead of disclosing true identities. However, it's important to note that pseudonymity doesn't provide complete anonymity. Actions performed under the same pseudonym (`PeerID`) can be linked, leading to the potential re-identification of the actual actor.
 
-Waku by default guarantees pseudonymity for all of the protocol layers since parties do not have to disclose their true identity
-and instead they utilize libp2p `PeerID` as their identifiers. While pseudonymity is an appealing security feature, it does not guarantee full anonymity since the actions taken under the same pseudonym i.e., `PeerID`, can be linked together and potentially result in the re-identification of the true actor.
+## [Anonymity/Unlinkability](https://rfc.vac.dev/spec/10/#anonymity--unlinkability)
 
-## Anonymity/Unlinkability
+Anonymity means an adversary cannot connect an actor to their actions or data. To achieve anonymity, avoiding linking activities with actors or their Personally Identifiable Information (PII) is crucial. In Waku, the following anonymity features are provided:
 
-At a high level, anonymity is the inability of an adversary in linking an actor to its data/performed action (the actor and action are context-dependent). To be precise about linkability, we use the term Personally Identifiable Information (PII) to refer to any piece of data that could potentially be used to uniquely identify a party.
+- [Publisher-Message Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis): Ensures that the publisher of messages in the `Waku Relay` protocol cannot be linked to their published messages.
+- [Subscriber-Topic Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis): Ensures that the subscriber of topics in the `Waku Relay` protocol cannot be linked to the topics they have subscribed to.
 
-For example, the signature verification key, and the hash of one's static IP address are unique for each user and hence count as PII. Notice that users' actions can be traced through their PIIs (e.g., signatures) and hence result in their re-identification risk. As such, we seek anonymity by avoiding linkability between actions and the actors / actors' PII. Concerning anonymity, Waku provides the following features:
+## [Spam Protection](https://rfc.vac.dev/spec/10/#spam-protection)
 
-### Publisher-Message Unlinkability
+The spam protection feature in `WAKU RELAY` ensures that no adversary can flood the system with many messages, intentionally or not, regardless of the content's validity or usefulness. This protection is achieved through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) of `GossipSub v1.1`. Peers assign scores to their connections based on their behavior and remove peers with low scores.
 
-This feature signifies the unlinkability of a publisher to its published messages in the `WAKU-RELAY` protocol.
+Ongoing research is being conducted, including developing [Rate Limiting Nullifiers (RLN)](overview/concepts/protocols#waku-rln-relay), which can be explored further at: <https://github.com/vacp2p/research/issues/148>.
 
-### Subscriber-Topic Unlinkability
+## [Data Confidentiality, Integrity, and Authenticity](https://rfc.vac.dev/spec/10/#data-confidentiality-integrity-and-authenticity)
 
-This feature stands for the unlinkability of the subscriber to its subscribed topics in the `WAKU-RELAY` protocol. The [Subscriber-Topic Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis) is achieved through the utilization of a single PubSub topic. As such, subscribers are not re-identifiable from their subscribed topic IDs as the entire network is linked to the same topic ID. This level of unlinkability / anonymity is known as [k-anonymity](https://www.privitar.com/blog/k-anonymity-an-introduction/) where k is proportional to the system size (number of subscribers). Note that there is no hard limit on the number of the pubsub topics, however, the use of one topic is recommended for the sake of anonymity.
+Confidentiality in Waku is ensured through data encryption, while integrity and authenticity are achieved through digital signatures. These security measures are available in [Waku Message (version 1)](https://rfc.vac.dev/spec/14#version-1)) and [Waku Noise](https://rfc.vac.dev/spec/35/) protocols, which offer payload encryption and encrypted signatures. [Waku Noise](https://rfc.vac.dev/spec/35/) also facilitates secure channel negotiation within the Waku network.
 
-## Spam Protection
+## [Security Considerations](https://rfc.vac.dev/spec/10/#security-considerations)
 
-This property indicates that no adversary can flood the system (i.e., publishing a large number of messages in a short amount of time), either accidentally or deliberately, with any kind of message i.e. even if the message content is valid or useful.
-
-Spam protection is partly provided in `WAKU2-RELAY` through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) provided for by GossipSub v1.1. At a high level, peers utilize a scoring function to locally score the behavior of their connections and remove peers with a low score.
-
-There's also further research being done in this domain, including the designing of [RLN (Rate Limiting Nullifiers)](https://rfc.vac.dev/spec/32/): <https://github.com/vacp2p/research/issues/148>.
-
-## Data Confidentiality, Integrity, and Authenticity
-
-Confidentiality can be addressed through data encryption whereas integrity and authenticity are achievable through digital signatures.
-These features are provided for in [WAKU-MESSAGE (version 1)](https://rfc.vac.dev/spec/14#version-1) and [WAKU-NOISE](https://rfc.vac.dev/spec/35/) through payload encryption as well as encrypted signatures. `WAKU-NOISE` enables secure channel negotiation over Waku.
-
-## Security Considerations
-
-The anonymity/unlinkability is not guaranteed in the protocols like `WAKU2-STORE` and `WAKU2-FILTER` where peers need to have direct connections to benefit from the designated service. This is because during the direct connections peers utilize `PeerID` to identify each other, therefore the service obtained in the protocol is linkable to the beneficiary's `PeerID` (which counts as PII). For `WAKU2-STORE`, the queried node would be able to link the querying node's `PeerID` to its queried topics. Likewise, in the `WAKU2-FILTER`, a full node can link the light node's `PeerID` to its content filter.
+In protocols like `Waku Store` and `Waku Filter`, where direct connections are required for the designated service, anonymity or unlinkability is not guaranteed. This is because peers use their `PeerID` to identify each other during direct connections, making the service obtained in these protocols linkable to the beneficiary's `PeerID`, considered Personally Identifiable Information (PII). In `Waku Store`, the queried node can link the querying node's `PeerID` to the topics being queried. Similarly, in `Waku Filter`, a full node can link the `PeerID` of a light node to its content filter.
