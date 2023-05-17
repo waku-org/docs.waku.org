@@ -2,9 +2,7 @@
 title: Waku Use Cases
 ---
 
-Waku is a decentralized communication network that supports person-to-person and machine-to-machine communication, enabling secure and private operation without a central authority.
-
-The following is a list of some of the use cases that have been considered and their current status.
+Waku is a decentralized communication network, facilitating secure and private person-to-person and machine-to-machine communication without a central authority. It supports various use cases, including but not limited to:
 
 ### Chat Messenger
 
@@ -16,7 +14,7 @@ Waku can be used as the communication layer when building a private, decentraliz
 
 ### Polls
 
-With Waku, you can create, answer, and view censorship-resistant polls.
+With Waku, you can create, answer, and view censorship-resistant polls, fostering a democratic and transparent voting environment immune to manipulation and censorship.
 
 #### Demos
 
@@ -32,7 +30,7 @@ Waku can be used to take NFT bids and offers off-chain, enabling gas savings. Ad
 
 ### State Channels
 
-Waku can enable two parties to set up and maintain a state channel.
+Waku can enable two parties to establish and sustain a state channel effortlessly, facilitating message exchange and seamless updates to their shared agreement without direct blockchain involvement.
 
 ### Voting and Proposals
 
@@ -65,7 +63,7 @@ dApp operators can use communication between a user's wallet and their dApp to n
 
 ### Layer 2 Coordination (Open Market, Spam Protected Mempool)
 
-Waku can broadcast and aggregate layer 2 transactions, potentially enhancing privacy, anonymity, and resilience.
+Waku can broadcast and aggregate Layer 2 transactions to enhance privacy, anonymity, and resilience. Aggregating transactions reduces network load and improves scalability, ensuring a more robust Layer 2 ecosystem.
 
 ### Generalized Marketplace
 

@@ -30,7 +30,8 @@
     "QUIC",
     "Dappnode",
     "gameplay",
-    "Smol"
+    "Smol",
+    "Datagram"
   ],
   "flagWords": [],
   "ignorePaths": [
