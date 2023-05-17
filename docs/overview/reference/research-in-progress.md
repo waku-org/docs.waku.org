@@ -6,7 +6,7 @@ The following features are currently experimental and under research and initial
 
 ## Economic Spam Resistance
 
-We aim to enable an incentivized spam protection technique to enhance `WAKU-RELAY` by using rate limiting nullifiers. More details on this can be found in [WAKU2-RLN-RELAY](https://rfc.vac.dev/spec/17). In this advanced method, peers are limited to a certain rate of messaging per epoch and an immediate financial penalty is enforced for spammers who break this rate.
+We aim to enable an incentivized spam protection technique to enhance `Waku Relay` by using rate limiting nullifiers. More details on this can be found in [WAKU2-RLN-RELAY](https://rfc.vac.dev/spec/17). In this advanced method, peers are limited to a certain rate of messaging per epoch and an immediate financial penalty is enforced for spammers who break this rate.
 
 We have prepared a PoC implementation of this method in JS: <https://examples.waku.org/rln-js/>
 
@@ -14,7 +14,7 @@ We have prepared a PoC implementation of this method in JS: <https://examples.wa
 
 Denial of service signifies the case where an adversarial node exhausts another node's service capacity (e.g., by making a large number of requests) and makes it unavailable to the rest of the system. RnD on DoS attack mitigation can tracked from here: <https://github.com/vacp2p/research/issues/148>.
 
-In a nutshell, peers have to pay for the service they obtain from each other. In addition to incentivizing the service provider, accounting also makes DoS attacks costly for malicious peers. The accounting model can be used in `WAKU2-STORE` and `WAKU2-FILTER` to protect against DoS attacks.
+In a nutshell, peers have to pay for the service they obtain from each other. In addition to incentivizing the service provider, accounting also makes DoS attacks costly for malicious peers. The accounting model can be used in `Waku Store` and `Waku Filter` to protect against DoS attacks.
 
 Additionally, along with RLN, this gives node operators who provide a useful service to the network an incentive to perform that service. Read more here: <https://vac.dev/building-privacy-protecting-infrastructure>
 

@@ -2,9 +2,7 @@
 title: Content Topics
 ---
 
-`Content Topics` in Waku are the foundation for content addressing, similar to [Content-Addressable Storage](https://en.wikipedia.org/wiki/Content-addressable_storage). They facilitate protocol-level features like processing incoming live messages selectively ([Relay](/overview/concepts/protocols#waku-relay) or [Filter](/overview/concepts/protocols#waku-filter)) and retrieving historical messages ([Store](/overview/concepts/protocols#waku-store)) that meet specific filtering criteria.
-
-Unlike encrypted data, `Content Topics` are metadata strings set by developers on outgoing messages. Please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
+`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/overview/concepts/protocols#waku-relay) or [Filter](/overview/concepts/protocols#waku-filter)) and retrieving historical messages ([Store](/overview/concepts/protocols#waku-store)) that meet specific filtering criteria. Please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
 
 ## Content Topic Format
 

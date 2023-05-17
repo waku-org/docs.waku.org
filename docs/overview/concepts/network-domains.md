@@ -12,13 +12,13 @@ Node discovery in Waku facilitates locating other nodes within the network. As a
 
 Gossipsub derives its name from the practice within Pub/Sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
 
-Waku employs gossiping through [`WAKU-RELAY`](/overview/concepts/protocols#waku-relay) to distribute messages across the network. Additionally, Waku introduces [`WAKU-RLN-RELAY`](/overview/concepts/protocols#waku-rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
+Waku employs gossiping through [`Waku Relay`](/overview/concepts/protocols#waku-relay) to distribute messages across the network. Additionally, Waku introduces [`Waku RLN Relay`](/overview/concepts/protocols#waku-rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
 
 ## Request/Reply Domain
 
 Waku provides a set of Request/Reply protocols to optimize its performance in resource-restricted environments like low bandwidth or offline scenarios.
 
-These protocols serve multiple purposes. [`WAKU-STORE`](/overview/concepts/protocols#waku-store) enables the retrieval of historical messages, [`WAKU-FILTER`](/overview/concepts/protocols#waku-filter) efficiently retrieves a subset of messages to conserve bandwidth, and [`WAKU-LIGHTPUSH`](/overview/concepts/protocols#waku-light-push) facilitates message publication for nodes with limited bandwidth and short connection windows.
+These protocols serve multiple purposes. [`Waku Store`](/overview/concepts/protocols#waku-store) enables the retrieval of historical messages, [`Waku Filter`](/overview/concepts/protocols#waku-filter) efficiently retrieves a subset of messages to conserve bandwidth, and [`Waku Light Push`](/overview/concepts/protocols#waku-light-push) facilitates message publication for nodes with limited bandwidth and short connection windows.
 
 ## Overview of Protocol Interaction
 

@@ -19,7 +19,7 @@ Anonymity means an adversary cannot connect an actor to their actions or data. T
 
 ## [Spam Protection](https://rfc.vac.dev/spec/10/#spam-protection)
 
-The spam protection feature in `WAKU RELAY` ensures that no adversary can flood the system with many messages, intentionally or not, regardless of the content's validity or usefulness. This protection is achieved through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) of `GossipSub v1.1`. Peers assign scores to their connections based on their behavior and remove peers with low scores.
+The spam protection feature in `Waku Relay` ensures that no adversary can flood the system with many messages, intentionally or not, regardless of the content's validity or usefulness. This protection is achieved through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) of `GossipSub v1.1`. Peers assign scores to their connections based on their behavior and remove peers with low scores.
 
 Ongoing research is being conducted, including developing [Rate Limiting Nullifiers (RLN)](overview/concepts/protocols#waku-rln-relay), which can be explored further at: <https://github.com/vacp2p/research/issues/148>.
 

@@ -1,5 +1,5 @@
 ---
-title: Waku vs libp2p - What's the difference?
+title: Waku vs. libp2p - What's the Difference?
 ---
 
 Since Waku is built on top of libp2p, they share a lot of concepts and terminologies between them. However, there are key differences between them that are worth noting.
@@ -14,7 +14,7 @@ However, you are encouraged to [run your node](https://github.com/waku-org/nwaku
 
 Waku includes various protocols covering the following domains: privacy preservation, censorship resistance, and platform agnosticism, allowing it to run on any platform or environment.
 
-libp2p does not provide out-of-the-box protocols to enable mostly offline/resource-restricted devices, [WAKU-STORE](/overview/concepts/protocols#waku-store)/[WAKU-LIGHTPUSH](/overview/concepts/protocols#waku-light-push)/[WAKU-FILTER](/overview/concepts/protocols#waku-filter) caters to those use cases.
+libp2p does not provide out-of-the-box protocols to enable mostly offline/resource-restricted devices, [Waku Store](/overview/concepts/protocols#waku-store)/[Waku Light Push](/overview/concepts/protocols#waku-light-push)/[Waku Filter](/overview/concepts/protocols#waku-filter) caters to those use cases.
 
 ## Economic Spam Protection
 
