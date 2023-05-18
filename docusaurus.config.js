@@ -55,12 +55,6 @@ const config = {
             sidebarId: 'main',
             label: 'Getting Started',
           },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'browser',
-            label: 'JavaScript (Browser)',
-          },
         ],
       },
       announcementBar: {
