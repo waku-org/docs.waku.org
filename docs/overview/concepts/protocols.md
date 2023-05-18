@@ -6,7 +6,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ### [Waku Relay](https://rfc.vac.dev/spec/11/)
 
-`Waku Relay` is a privacy-focused peer-to-peer messaging protocol that extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). It utilizes a Pub/Sub approach to enable secure communication channels, encryption, and protection against censorship. With a strong emphasis on privacy, `Waku Relay` ensures scalability, allowing many peers and messages to coexist within the network.
+`Waku Relay` is a privacy-focused peer-to-peer messaging protocol that extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). It utilizes a Pub/Sub architecture to enable secure communication channels, encryption, and protection against censorship. With a strong emphasis on privacy, `Waku Relay` ensures scalability, allowing many peers and messages to coexist within the network.
 
 ### [Waku Filter](https://rfc.vac.dev/spec/12/)
 
