@@ -2,7 +2,7 @@
 title: Waku Implementations
 ---
 
-Waku has been implemented in multiple programming languages to address various use cases. The Waku development team builds and maintains each implementation, ensuring that updates are provided automatically.
+Waku has been implemented in multiple programming languages to address various use cases. The Waku team builds and maintains each implementation, ensuring that updates are provided automatically.
 
 ### [nwaku](https://github.com/waku-org/nwaku)
 

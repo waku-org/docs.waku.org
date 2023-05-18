@@ -13,7 +13,7 @@ Waku is intended to empower individuals by returning control of communication to
 - It allows developers to decentralize communication in their dApps or move actions off-chain while maintaining decentralization.
 - It can run on various platforms, including mobile devices, cloud environments, web browsers, native desktop apps, or even a [Dappnode](https://dappnode.com/)!
 
-## Whisper vs. Waku: Why Waku is Necessary
+## Why Waku is Necessary
 
 | | Whisper | Waku |
 | - | - | - |

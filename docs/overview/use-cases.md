@@ -4,7 +4,7 @@ title: Waku Use Cases
 
 Waku is a decentralized communication network, facilitating secure and private person-to-person and machine-to-machine communication without a central authority. It supports various use cases, including but not limited to:
 
-### Chat Messenger
+### Chat Messengers
 
 Waku can be used as the communication layer when building a private, decentralized, and censorship-resistant messenger.
 
@@ -20,7 +20,7 @@ With Waku, you can create, answer, and view censorship-resistant polls, fosterin
 
 * [Waku Connect Poll SDK](https://github.com/status-im/wakuconnect-vote-poll-sdk)
 
-### NFT Marketplace
+### NFT Marketplaces
 
 Waku can be used to take NFT bids and offers off-chain, enabling gas savings. Additionally, it allows for adding a social media layer, enabling NFT owners to like, comment, and perform other social actions.
 
@@ -65,7 +65,7 @@ dApp operators can use communication between a user's wallet and their dApp to n
 
 Waku can broadcast and aggregate Layer 2 transactions to enhance privacy, anonymity, and resilience. Aggregating transactions reduces network load and improves scalability, ensuring a more robust Layer 2 ecosystem.
 
-### Generalized Marketplace
+### Generalized Marketplaces
 
 Waku can enable users to offer, bid, accept, and trade goods and services, making it possible to create ride-sharing or trading apps.
 
@@ -73,6 +73,6 @@ Waku can enable users to offer, bid, accept, and trade goods and services, makin
 
 * [Waku-Uber](https://github.com/TheBojda/waku-uber)
 
-### Social Media Platform
+### Social Media Platforms
 
 While chat messengers are a type of social media that can be decentralized and made censorship-resistant through Waku, other forms of social media, such as news feeds, blog posts, and audio or video sharing, can also benefit from using Waku.
