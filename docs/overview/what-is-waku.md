@@ -33,7 +33,7 @@ Waku can cater to applications that require privacy guarantees, such as:
 
 - Pseudonymity and not being tied to any Personally Identifiable Information (PII).
 - Metadata protection in transit.
-- Various forms of [unlinkability](overview/reference/security-features#anonymityunlinkability).
+- Various forms of [unlinkability](/overview/reference/security-features#anonymityunlinkability).
 
 ### Modular Design
 
@@ -47,7 +47,7 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ## How Does Waku Work?
 
-The [Waku Relay](overview/concepts/protocols#waku-relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
+The [Waku Relay](/overview/concepts/protocols#waku-relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
 1. Facilitating the retrieval of historical messages for primarily offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
