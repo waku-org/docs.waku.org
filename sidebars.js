@@ -8,7 +8,6 @@ const sidebars = {
 		"overview/why-waku",
 		"overview/use-cases",
 		"overview/clients",
-		"overview/who-is-using-waku",
 		{
 			type: "category",
 			label: "Waku Concepts",

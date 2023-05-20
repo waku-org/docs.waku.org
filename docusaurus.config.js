@@ -47,8 +47,9 @@ const config = {
 		navbar: {
 			title: "Waku",
 			logo: {
-				srcDark: "logo_white.svg"
+				srcDark: "img/logo_white.svg"
 			},
+			hideOnScroll: true,
 			items: [
 				{
 					type: "docSidebar",
@@ -84,7 +85,7 @@ const config = {
 			]
 		},
 		announcementBar: {
-			content: "While Waku is still in development and needs to prepare for extensive adoption, it is already being used by <a href='/overview/who-is-using-waku'>Status, XMTP, and Railgun</a>. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
+			content: "While Waku is still in development and needs to prepare for extensive adoption, it is already <a href='/powered-by-waku'>powering various applications</a>. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
 			backgroundColor: "#EBEDF0",
 			textColor: "#1B1B1D",
 			isCloseable: true
@@ -106,10 +107,11 @@ const config = {
 				},
 				{
 					title: "Community",
-					items: [{
-						href: "https://forum.vac.dev/",
-						label: "Discourse"
-					},
+					items: [
+						{
+							href: "https://forum.vac.dev/",
+							label: "Discourse"
+						},
 						{
 							href: "https://discord.gg/Nrac59MfSX",
 							label: "Discord"
@@ -126,10 +128,11 @@ const config = {
 				},
 				{
 					title: "Resources",
-					items: [{
-						href: "https://github.com/waku-org",
-						label: "GitHub"
-					},
+					items: [
+						{
+							href: "https://github.com/waku-org",
+							label: "GitHub"
+						},
 						{
 							href: "https://vac.dev/research",
 							label: "Blog"
@@ -142,13 +145,17 @@ const config = {
 				},
 				{
 					title: "Legal",
-					items: [{
-						href: "https://waku.org/terms-of-use",
-						label: "Terms of Use"
-					},
+					items: [
+						{
+							href: "https://waku.org/terms-of-use",
+							label: "Terms of Use"
+						},
 						{
 							href: "https://waku.org/privacy-policy",
 							label: "Privacy Policy"
+						},
+						{
+							html: "<link rel='stylesheet' href='custom.css' />"
 						}
 					]
 				}
