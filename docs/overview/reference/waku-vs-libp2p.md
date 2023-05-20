@@ -6,9 +6,7 @@ Since Waku is built on top of libp2p, they share a lot of concepts and terminolo
 
 ## Waku as a Service Network
 
-Waku intends to incentivize mechanisms to run nodes, but it's not part of libp2p's scope. Additionally, users or developers do not have to deploy their infra as a prerequisite to use Waku. It is a service network.
-
-However, you are encouraged to [run your node](https://github.com/waku-org/nwaku/tree/master/docs/operators) to support and decentralize the network.
+Waku intends to incentivize mechanisms to run nodes, but it's not part of libp2p's scope. Additionally, users or developers do not have to deploy their infra as a prerequisite to use Waku. It is a service network. However, you are encouraged to [run your node](https://github.com/waku-org/nwaku/tree/master/docs/operators) to support and decentralize the network.
 
 ## Waku as a Keyturn Solution
 

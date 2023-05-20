@@ -20,7 +20,6 @@ const config = {
 	presets: [
 		[
 			"@acid-info/logos-docusaurus-preset",
-			/** @type {import("@acid-info/logos-docusaurus-preset").PluginOptions} */
 			({
 				businessUnit: "Waku",
 				customSiteConfig: true,
@@ -53,20 +52,34 @@ const config = {
 			items: [
 				{
 					type: "docSidebar",
-					position: "left",
+					position: "right",
 					sidebarId: "main",
 					label: "Getting Started"
 				},
 				{
 					type: "dropdown",
 					label: "Waku Clients",
-					position: "left",
+					position: "right",
 					items: [
 						{
-							label: "JS-Waku",
+							label: "Overview",
+							to: "/overview/clients"
+						},
+						{
+							label: "JS Waku",
 							to: "/clients/js-waku"
 						}
 					]
+				},
+				{
+					to: "/powered-by-waku",
+					label: "Powered by Waku",
+					position: "right"
+				},
+				{
+					to: "/community",
+					label: "Community",
+					position: "right"
 				}
 			]
 		},
@@ -77,10 +90,20 @@ const config = {
 			isCloseable: true
 		},
 		footer: {
-			links: [{
-				title: "Waku Clients",
-				items: []
-			},
+			links: [
+				{
+					title: "Waku Clients",
+					items: [
+						{
+							to: "/overview/clients",
+							label: "Overview"
+						},
+						{
+							to: "/clients/js-waku",
+							label: "JS Waku"
+						}
+					]
+				},
 				{
 					title: "Community",
 					items: [{

@@ -8,7 +8,7 @@ Waku has been implemented in multiple programming languages to address various u
 
 The Nim implementation of the Waku protocol is the reference implementation recommended for deploying a node in the cloud or at home.
 
-### [js-waku](https://github.com/waku-org/js-waku/)
+### [js-waku](/clients/js-waku)
 
 The JavaScript/TypeScript implementation of the Waku protocol designed for use in browser environments.
 

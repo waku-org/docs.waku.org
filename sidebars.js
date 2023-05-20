@@ -3,12 +3,12 @@
 /** @type {import("@docusaurus/plugin-content-docs").SidebarsConfig} */
 const sidebars = {
 	main: [
-		"overview/what-is-waku",
+		"overview/index",
 		"overview/history",
 		"overview/why-waku",
 		"overview/use-cases",
-		"overview/who-is-using-waku",
 		"overview/clients",
+		"overview/who-is-using-waku",
 		{
 			type: "category",
 			label: "Waku Concepts",
@@ -35,7 +35,7 @@ const sidebars = {
 		}
 	],
 	js: [
-		"clients/js-waku/introduction"
+		"clients/js-waku/index"
 	]
 };
 

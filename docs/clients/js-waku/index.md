@@ -1,5 +1,6 @@
 ---
 title: Introduction
+slug: /clients/js-waku
 ---
 
 # JS-Waku Documentation
