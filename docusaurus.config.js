@@ -56,6 +56,17 @@ const config = {
 					position: "left",
 					sidebarId: "main",
 					label: "Getting Started"
+				},
+				{
+					type: "dropdown",
+					label: "Waku Clients",
+					position: "left",
+					items: [
+						{
+							label: "JS-Waku",
+							to: "/clients/js-waku"
+						}
+					]
 				}
 			]
 		},

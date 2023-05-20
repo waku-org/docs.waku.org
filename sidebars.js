@@ -8,7 +8,7 @@ const sidebars = {
 		"overview/why-waku",
 		"overview/use-cases",
 		"overview/who-is-using-waku",
-		"overview/implementations",
+		"overview/clients",
 		{
 			type: "category",
 			label: "Waku Concepts",
@@ -35,9 +35,7 @@ const sidebars = {
 		}
 	],
 	js: [
-		"browser/introduction",
-		"browser/quick-start",
-		"browser/build-chat-app"
+		"clients/js-waku/introduction"
 	]
 };
 
