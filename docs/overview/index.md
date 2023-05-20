@@ -3,6 +3,10 @@ title: What is Waku?
 slug: /
 ---
 
+:::caution
+While Waku comes with risks and limitations, as it is still in development and preparing for extensive adoption, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). Join our [Discord Community](https://discord.gg/Nrac59MfSX) to stay updated on our progress.
+:::
+
 Waku is a family of peer-to-peer protocols that offer secure and private communication in a decentralized environment, making it suitable for various decentralized applications (dApps). It is designed to operate in resource-limited environments but can also be used as a node or desktop application.
 
 Waku protocols ensure that users communication remains censorship-resistant and privacy-preserving, giving them complete control over their data. By incorporating Waku into your dApp, you can add decentralized communication features to your application without compromising security or privacy.

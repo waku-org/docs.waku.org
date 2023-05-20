@@ -84,12 +84,6 @@ const config = {
 				}
 			]
 		},
-		announcementBar: {
-			content: "While Waku is still in development and needs to prepare for extensive adoption, it is already <a href='/powered-by-waku'>powering various applications</a>. Join our <a href='https://discord.gg/Nrac59MfSX'>Discord Community</a> to stay updated on our progress.",
-			backgroundColor: "#EBEDF0",
-			textColor: "#1B1B1D",
-			isCloseable: true
-		},
 		footer: {
 			links: [
 				{
