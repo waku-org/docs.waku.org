@@ -6,35 +6,35 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Relay](https://rfc.vac.dev/spec/11/)
 
-`Relay` is a privacy-focused peer-to-peer messaging protocol that extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). It utilizes a Pub/Sub architecture to enable secure communication channels, encryption, and protection against censorship. With a strong emphasis on privacy, `Relay` ensures scalability, allowing many peers and messages to coexist within the network.
+The `Relay` protocol employs a Pub/Sub architecture to facilitate message routing among nodes. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship.
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
-`Filter` is a protocol enabling peers to subscribe to specific messages from other peers. It is designed for devices with limited bandwidth, serving as a lighter alternative to `Relay`. Unlike relay nodes, `Filter` allows light nodes to subscribe to service nodes and receive only the messages they are interested in. This optimizes bandwidth consumption but may involve privacy compromises. Nonetheless, `Filter` efficiently delivers desired messages within bandwidth constraints.
+The `Filter` protocol allows nodes to selectively subscribe to specific messages transmitted by other nodes. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
 
 ## [Store](https://rfc.vac.dev/spec/13/)
 
-`Store` is a protocol that allows the querying of messages received through the relay protocol and stored by nodes. It supports retrieving historical messages with pagination. Unlike `Relay`, which doesn't save messages for offline users, `Store` peers retain relayed messages for later retrieval.
+The `Store` protocol is responsible for storing messages relayed on the network, making it possible to query and retrieve them later. This functionality benefits offline nodes by enabling them to retrieve missed messages upon reconnection.
 
 :::info
-Data availability is not guaranteed with `Store`. `Relay` or `Filter` are preferred for online usage, while `Store` is suitable for retrieving messages after reconnecting to the network, like when a dApp starts.
+Using `Relay` and `Filter` protocols is recommended when a node is online, as `Store` does not guarantee data availability. The `Store` protocol is suitable for retrieving messages when connecting to the network, like when a dApp starts.
 :::
 
 ## [Light Push](https://rfc.vac.dev/spec/19/)
 
-`Light Push` is a [Request/Reply](/overview/concepts/network-domains#requestreply-domain) protocol for Waku's light nodes with limited bandwidth and short connection windows. It enables clients to receive a confirmation when sending messages, indicating that at least one node has received them. However, using `Light Push` compromises privacy as the remote peer becomes aware of the message originator.
+`Light Push` is a [Request/Reply](/overview/concepts/network-domains#requestreply-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgment when sending messages, indicating that at least one peer has received them.
 
 :::info
-Please note that `Light Push` confirms receipt by the remote peer but doesn't guarantee network-wide propagation.
+While the `Light Push` protocol acknowledges the receipt by the remote peer, it does not guarantee network-wide propagation.
 :::
 
 ## [Message](https://rfc.vac.dev/spec/14)
 
-`Message` specifies the message structure used in the Waku network. It defines metadata fields, such as content topics and timestamps, that other Waku protocols can use.
+`Message` specifies the message structure used in the Waku network. It defines metadata fields, such as content topics and timestamps, that other protocols can use.
 
 ## [Payload](https://rfc.vac.dev/spec/26)
 
-`Payload` provides guidelines for implementing secure and private communication in the Waku network. It covers encryption, decryption, and signing methods for message payloads, focusing on confidentiality, authenticity, integrity, and unlinkability.
+`Payload` provides guidelines for implementing secure and private communication in the network. It covers encryption, decryption, and signing methods for message payloads, focusing on confidentiality, authenticity, integrity, and unlinkability.
 
 ## [RLN Relay](https://rfc.vac.dev/spec/17/)
 
