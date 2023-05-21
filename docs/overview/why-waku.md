@@ -1,6 +1,5 @@
 ---
 title: Why Waku?
-hide_table_of_contents: true
 ---
 
 Communication in the present day is heavily influenced by third-party intervention, ranging from censorship and deplatforming to intermediaries that seek to profit from rent and the misuse of data in the surveillance economy.

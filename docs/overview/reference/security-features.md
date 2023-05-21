@@ -14,14 +14,14 @@ Waku ensures pseudonymity across its protocol layers, using libp2p `PeerID` as i
 
 Anonymity means an adversary cannot connect an actor to their actions or data. To achieve anonymity, avoiding linking activities with actors or their Personally Identifiable Information (PII) is crucial. In Waku, the following anonymity features are provided:
 
-- [Publisher-Message Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis): Ensures that the publisher of messages in the `Waku Relay` protocol cannot be linked to their published messages.
-- [Subscriber-Topic Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis): Ensures that the subscriber of topics in the `Waku Relay` protocol cannot be linked to the topics they have subscribed to.
+- [Publisher-Message Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis): Ensures that the publisher of messages in the `Relay` protocol cannot be linked to their published messages.
+- [Subscriber-Topic Unlinkability](https://rfc.vac.dev/spec/11/#security-analysis): Ensures that the subscriber of topics in the `Relay` protocol cannot be linked to the topics they have subscribed to.
 
 ## [Spam Protection](https://rfc.vac.dev/spec/10/#spam-protection)
 
-The spam protection feature in `Waku Relay` ensures that no adversary can flood the system with many messages, intentionally or not, regardless of the content's validity or usefulness. This protection is achieved through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) of `GossipSub v1.1`. Peers assign scores to their connections based on their behavior and remove peers with low scores.
+The spam protection feature in `Relay` ensures that no adversary can flood the system with many messages, intentionally or not, regardless of the content's validity or usefulness. This protection is achieved through the [scoring mechanism](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#spam-protection-measures) of `GossipSub v1.1`. Peers assign scores to their connections based on their behavior and remove peers with low scores.
 
-Ongoing research is being conducted, including developing [Rate Limiting Nullifiers (RLN)](/overview/concepts/protocols#waku-rln-relay), which can be explored further at: <https://github.com/vacp2p/research/issues/148>.
+Ongoing research is being conducted, including developing [Rate Limiting Nullifiers (RLN)](/overview/concepts/protocols#rln-relay), which can be explored further at: <https://github.com/vacp2p/research/issues/148>.
 
 ## [Data Confidentiality, Integrity, and Authenticity](https://rfc.vac.dev/spec/10/#data-confidentiality-integrity-and-authenticity)
 
@@ -29,4 +29,4 @@ Confidentiality in Waku is ensured through data encryption, while integrity and 
 
 ## [Security Considerations](https://rfc.vac.dev/spec/10/#security-considerations)
 
-In protocols like `Waku Store` and `Waku Filter`, where direct connections are required for the designated service, anonymity or unlinkability is not guaranteed. This is because peers use their `PeerID` to identify each other during direct connections, making the service obtained in these protocols linkable to the beneficiary's `PeerID`, considered Personally Identifiable Information (PII). In `Waku Store`, the queried node can link the querying node's `PeerID` to the topics being queried. Similarly, in `Waku Filter`, a full node can link the `PeerID` of a light node to its content filter.
+In protocols like `Store` and `Filter`, where direct connections are required for the designated service, anonymity or unlinkability is not guaranteed. This is because peers use their `PeerID` to identify each other during direct connections, making the service obtained in these protocols linkable to the beneficiary's `PeerID`, considered Personally Identifiable Information (PII). In `Store`, the queried node can link the querying node's `PeerID` to the topics being queried. Similarly, in `Filter`, a full node can link the `PeerID` of a light node to its content filter.

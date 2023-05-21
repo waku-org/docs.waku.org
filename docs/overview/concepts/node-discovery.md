@@ -6,9 +6,9 @@ When initializing a Waku node, it must connect with other nodes to enable messag
 
 After establishing a connection, the node must actively seek out additional peers to have:
 
-- Sufficient peers in the [Waku Relay](/overview/concepts/protocols#waku-relay) mesh: The goal is to have at least 6 peers in the mesh. This ensures a robust network where messages can be efficiently relayed.
+- Sufficient peers in the [Relay](/overview/concepts/protocols#relay) mesh: The goal is to have at least 6 peers in the mesh. This ensures a robust network where messages can be efficiently relayed.
 - Reserve peers for backup: It is essential to have a surplus of peers available as reserves. These reserves are backups when the current peers become overloaded or experience unexpected disconnections.
-- Peers with specific Waku capabilities: The node seeks out peers with specific Waku capabilities, such as [Store](/overview/concepts/protocols#waku-store), [Light Push](/overview/concepts/protocols#waku-light-push), or [Filter](/overview/concepts/protocols#waku-filter). This allows for targeted interactions and enhanced functionality based on the desired capabilities.
+- Peers with specific capabilities: The node seeks out peers with specific capabilities, such as [Store](/overview/concepts/protocols#store), [Light Push](/overview/concepts/protocols#light-push), or [Filter](/overview/concepts/protocols#filter). This allows for targeted interactions and enhanced functionality based on the desired capabilities.
 
 ## Predefined Nodes
 
@@ -58,7 +58,7 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 
 ## [Peer Exchange](https://rfc.vac.dev/spec/34/)
 
-The primary objective of this protocol is to facilitate peer connectivity for resource-restricted devices. The peer exchange protocol enables lightweight nodes to request peers from other nodes within the network. Light nodes can bootstrap and expand their mesh independently without relying on [Discv5](#discv5).
+The primary objective of this protocol is to facilitate peer connectivity for resource-restricted devices. The peer exchange protocol enables lightweight nodes to request peers from other nodes within the network. Light nodes can bootstrap and expand their mesh independently without relying on `Discv5`.
 
 #### Pros
 

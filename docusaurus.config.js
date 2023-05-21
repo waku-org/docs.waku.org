@@ -59,7 +59,7 @@ const config = {
 				},
 				{
 					type: "dropdown",
-					label: "Waku Clients",
+					label: "Clients",
 					position: "right",
 					items: [
 						{
@@ -81,7 +81,13 @@ const config = {
 					to: "/community",
 					label: "Community",
 					position: "right"
-				}
+				},
+				{
+					href: "https://github.com/waku-org",
+					position: "right",
+					className: "header-github-link",
+					title: "Waku GitHub repository"
+				},
 			]
 		},
 		footer: {
@@ -149,7 +155,7 @@ const config = {
 							label: "Privacy Policy"
 						},
 						{
-							html: "<link rel='stylesheet' href='custom.css' />"
+							html: "<link rel='stylesheet' href='/custom.css' />"
 						}
 					]
 				}

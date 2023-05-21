@@ -51,13 +51,13 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ## How Does Waku Work?
 
-The [Waku Relay](/overview/concepts/protocols#waku-relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
+The [Relay](/overview/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
 1. Facilitating the retrieval of historical messages for primarily offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
 3. Preserving bandwidth usage for resource-limited environments.
 4. Implementing economic spam protection (rate limits) while ensuring privacy.
 5. Developing methods to protect against mass deanonymization (currently being researched).
-6. Designing strategies to scale `Waku Relay/GossipSub` securely.
+6. Designing strategies to scale `Relay/GossipSub` securely.
 
 If you want to learn more about how Waku operates, the [WAKU2 RFC](https://rfc.vac.dev/spec/10/) provides an in-depth look under the hood.
