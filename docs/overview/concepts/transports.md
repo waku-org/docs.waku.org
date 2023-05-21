@@ -1,5 +1,5 @@
 ---
-title: Transports in Waku
+title: Transports
 ---
 
 Transports help move data packets across a network by establishing connections between members. They define the rules and protocols to ensure efficient network transmission, routing, and data delivery.

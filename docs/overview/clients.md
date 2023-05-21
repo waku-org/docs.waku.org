@@ -1,5 +1,5 @@
 ---
-title: Waku Clients
+title: Clients
 ---
 
 Waku has been implemented in multiple programming languages to address various use cases. The Waku team builds and maintains each client, ensuring that updates are provided automatically.

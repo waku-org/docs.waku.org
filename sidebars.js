@@ -10,7 +10,7 @@ const sidebars = {
 		"overview/clients",
 		{
 			type: "category",
-			label: "Waku Concepts",
+			label: "Concepts",
 			collapsed: false,
 			collapsible: true,
 			items: [

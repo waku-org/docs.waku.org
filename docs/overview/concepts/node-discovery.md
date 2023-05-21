@@ -10,9 +10,9 @@ After establishing a connection, the node must actively seek out additional peer
 - Reserve peers for backup: It is essential to have a surplus of peers available as reserves. These reserves are backups when the current peers become overloaded or experience unexpected disconnections.
 - Peers with specific Waku capabilities: The node seeks out peers with specific Waku capabilities, such as [Store](/overview/concepts/protocols#waku-store), [Light Push](/overview/concepts/protocols#waku-light-push), or [Filter](/overview/concepts/protocols#waku-filter). This allows for targeted interactions and enhanced functionality based on the desired capabilities.
 
-## Predefined Bootstrap Nodes
+## Predefined Nodes
 
-Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [pre-deployed nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [set up their nodes](https://github.com/waku-org/nwaku/tree/master/docs/operators) per their preference.
+Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [set up their nodes](https://github.com/waku-org/nwaku/tree/master/docs/operators) per their preference.
 
 #### Pros
 

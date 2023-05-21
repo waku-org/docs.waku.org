@@ -1,5 +1,5 @@
 ---
-title: Waku Use Cases
+title: Use Cases
 ---
 
 Waku is a decentralized communication network, facilitating secure and private person-to-person and machine-to-machine communication without a central authority. It supports various use cases, including but not limited to:
