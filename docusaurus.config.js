@@ -78,9 +78,23 @@ const config = {
 					position: "right"
 				},
 				{
-					to: "/community",
+					type: "dropdown",
 					label: "Community",
-					position: "right"
+					position: "right",
+					items: [
+						{
+							label: "Join Our Community",
+							to: "/community"
+						},
+						{
+							label: "Contribute to Waku",
+							to: "/contribute"
+						},
+						{
+							label: "Open Bounties",
+							href: "https://bounties.gitcoin.co/status-im/bounties"
+						}
+					]
 				},
 				{
 					href: "https://github.com/waku-org",

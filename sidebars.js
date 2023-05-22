@@ -38,7 +38,8 @@ const sidebars = {
 	],
 	community: [
 		"powered-by-waku",
-		"community"
+		"community",
+		"contribute"
 	]
 };
 

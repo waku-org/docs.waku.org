@@ -12,7 +12,7 @@ Once a connection is established, the node must actively seek out additional pee
 
 ## Predefined Nodes
 
-Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [set up their nodes](https://github.com/waku-org/nwaku/tree/master/docs/operators) per their preference.
+Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [set up their nodes](https://github.com/waku-org/nwaku/blob/master/docs/operators/quickstart.md) per their preference.
 
 #### Pros
 
