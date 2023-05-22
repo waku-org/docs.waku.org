@@ -6,15 +6,15 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Relay](https://rfc.vac.dev/spec/11/)
 
-The `Relay` protocol employs a Pub/Sub architecture to facilitate message routing among nodes. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship.
+The `Relay` protocol employs a Pub/Sub architecture to facilitate message routing among peers. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship.
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
-The `Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other nodes. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
+The `Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other peers. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
 
 ## [Store](https://rfc.vac.dev/spec/13/)
 
-The `Store` protocol is responsible for storing messages relayed on the network, making it possible to query and retrieve them later. This functionality benefits offline nodes by enabling them to retrieve missed messages upon reconnection.
+The `Store` protocol is responsible for storing messages relayed on the network, making it possible to query and retrieve them later. This functionality benefits offline peers by enabling them to retrieve missed messages upon reconnection.
 
 :::info
 Using `Relay` and `Filter` protocols is recommended when a node is online, as `Store` does not guarantee data availability. The `Store` protocol is suitable for retrieving messages when connecting to the network, like when a dApp starts.

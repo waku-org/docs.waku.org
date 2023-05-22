@@ -1,6 +1,6 @@
 .powered-by-card-container {
 	display: grid;
-	gap: 2em;
+	gap: 1rem;
 	justify-content: center;
 }
 
@@ -10,15 +10,9 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
 	.powered-by-card-container {
 		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-@media (min-width: 1024px) {
-	.powered-by-card-container {
-		grid-template-columns: repeat(3, 1fr);
 	}
 }
 

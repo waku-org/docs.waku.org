@@ -6,7 +6,7 @@ const PoweredByCard = ({ appLink, logoSrc, logoAlt, children }) => (
 			width: "100%",
 			border: "1px solid #666",
 			borderRadius: "8px",
-			padding: "1.5em"
+			padding: "1.5rem"
 		}}
 	>
 		<div style={{
@@ -14,7 +14,7 @@ const PoweredByCard = ({ appLink, logoSrc, logoAlt, children }) => (
 			flexDirection: "column",
 			alignItems: "center",
 			backgroundColor: "#fff",
-			marginBottom: "1em"
+			marginBottom: "1rem"
 		}}>
 			<img
 				src={logoSrc}
@@ -30,7 +30,7 @@ const PoweredByCard = ({ appLink, logoSrc, logoAlt, children }) => (
 			<button
 				style={{
 					width: "100%",
-					padding: "1em",
+					padding: "1rem",
 					borderRadius: "8px",
 					backgroundColor: "#e6f6ff",
 					border: "1px solid #666",

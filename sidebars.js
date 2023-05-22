@@ -37,6 +37,7 @@ const sidebars = {
 		"clients/js-waku/index"
 	],
 	community: [
+		"powered-by-waku",
 		"community"
 	]
 };
