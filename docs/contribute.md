@@ -6,7 +6,7 @@ Get involved in Waku's open-source initiatives to improve the protocol, implemen
 
 ## Run a Node
 
-The Waku network is permissionless and decentralized, consisting of nodes. It is open for anyone to run their node, use the network, and contribute to its support. Please visit the [running a nwaku node](https://github.com/waku-org/nwaku/blob/master/docs/operators/quickstart.md) guide to learn more.
+The Waku network is permissionless and decentralized, consisting of nodes. It is open for anyone to run their node, use the network, and contribute to its support. Please visit the [nwaku guide for operators](https://github.com/waku-org/nwaku/tree/master/docs/operators) to learn more.
 
 ## Build a Waku Application
 
@@ -32,4 +32,4 @@ Community pull requests (PRs) are highly encouraged, but we recommend beginning 
 
 ## Contribute to Waku Research
 
-[Vac](https://vac.dev/)  drives Waku research, advancing through ongoing R&D. Vac is dedicated to developing modular p2p protocols for private, secure, and censorship-resistant communication. Explore Vac's open problems at <https://vac.dev/open-problems>.
+[Vac](https://vac.dev/) drives Waku research, advancing through ongoing R&D. Vac is dedicated to developing modular p2p protocols for private, secure, and censorship-resistant communication. Explore Vac's open problems at <https://vac.dev/open-problems>.

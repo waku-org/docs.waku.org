@@ -33,7 +33,7 @@ The development of the Whisper protocol lagged behind the advancements made by t
 
 ### 2018
 
-Due to the lack of progress made on Whisper and growing concerns around scalability, Vac was established to focus on researching and developing more scalable peer-to-peer messaging solutions.
+Due to the lack of progress made on Whisper and growing concerns around scalability, [Vac](https://vac.dev/) was established to focus on researching and developing more scalable peer-to-peer messaging solutions.
 
 ### 2020
 

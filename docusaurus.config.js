@@ -91,7 +91,7 @@ const config = {
 							to: "/contribute"
 						},
 						{
-							label: "Open Bounties",
+							label: "Gitcoin Bounties",
 							href: "https://bounties.gitcoin.co/status-im/bounties"
 						}
 					]

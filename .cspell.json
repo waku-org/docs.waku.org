@@ -31,7 +31,9 @@
     "Dappnode",
     "gameplay",
     "Smol",
-    "Datagram"
+    "Datagram",
+    "Graphcast",
+    "permissionless"
   ],
   "flagWords": [],
   "ignorePaths": [

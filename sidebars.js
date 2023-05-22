@@ -39,7 +39,12 @@ const sidebars = {
 	community: [
 		"powered-by-waku",
 		"community",
-		"contribute"
+		"contribute",
+		{
+			type: "link",
+			label: "Gitcoin Bounties",
+			href: "https://bounties.gitcoin.co/status-im/bounties"
+		}
 	]
 };
 
