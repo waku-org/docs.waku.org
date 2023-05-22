@@ -1,10 +1,10 @@
 ---
-title: Node Discovery Mechanisms
+title: Peer Discovery
 ---
 
-When initializing a Waku node, it must connect with other nodes to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate and connect with other nodes. This process is known as bootstrapping.
+When initializing a Waku node, it must connect with other peers to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate and connect with other peers. This process is known as bootstrapping.
 
-After establishing a connection, the node must actively seek out additional peers to have:
+Once a connection is established, the node must actively seek out additional peers to have:
 
 - Sufficient peers in the [Relay](/overview/concepts/protocols#relay) mesh: The goal is to have at least 6 peers in the mesh. This ensures a robust network where messages can be efficiently relayed.
 - Reserve peers for backup: It is essential to have a surplus of peers available as reserves. These reserves are backups when the current peers become overloaded or experience unexpected disconnections.

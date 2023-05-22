@@ -93,7 +93,7 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "Waku Clients",
+					title: "Clients",
 					items: [
 						{
 							to: "/overview/clients",

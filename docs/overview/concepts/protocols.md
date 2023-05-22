@@ -10,7 +10,7 @@ The `Relay` protocol employs a Pub/Sub architecture to facilitate message routin
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
-The `Filter` protocol allows nodes to selectively subscribe to specific messages transmitted by other nodes. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
+The `Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other nodes. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
 
 ## [Store](https://rfc.vac.dev/spec/13/)
 

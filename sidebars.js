@@ -16,7 +16,7 @@ const sidebars = {
 			items: [
 				"overview/concepts/protocols",
 				"overview/concepts/network-domains",
-				"overview/concepts/node-discovery",
+				"overview/concepts/peer-discovery",
 				"overview/concepts/content-topics",
 				"overview/concepts/transports"
 			]
@@ -35,6 +35,9 @@ const sidebars = {
 	],
 	js: [
 		"clients/js-waku/index"
+	],
+	community: [
+		"community"
 	]
 };
 
