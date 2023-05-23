@@ -7,7 +7,11 @@ const sidebars = {
 		"overview/history",
 		"overview/why-waku",
 		"overview/use-cases",
-		"overview/clients",
+		{
+			type: "link",
+			label: "Waku SDKs",
+			href: "/sdk/overview"
+		},
 		{
 			type: "category",
 			label: "Concepts",
@@ -33,18 +37,13 @@ const sidebars = {
 			]
 		}
 	],
-	js: [
-		"clients/js-waku/index"
+	sdk: [
+		"sdk/index"
 	],
 	community: [
 		"powered-by-waku",
 		"community",
-		"contribute",
-		{
-			type: "link",
-			label: "Gitcoin Bounties",
-			href: "https://bounties.gitcoin.co/status-im/bounties"
-		}
+		"contribute"
 	]
 };
 

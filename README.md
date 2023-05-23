@@ -20,7 +20,7 @@ git clone https://github.com/waku-org/waku.guide
 Install the dependencies:
 
 ```bash
-yarn
+npm install
 
 # or
 
@@ -30,6 +30,10 @@ yarn install
 ## Running Locally
 
 ```bash
+npm start
+
+# or
+
 yarn start
 ```
 
@@ -37,6 +41,22 @@ Check for spelling errors before deploying:
 
 ```bash
 npm run check:spell
+
+# or
+
+yarn check:spell
+```
+
+Create a production build locally to check for errors:
+
+```bash
+npm run build
+npm run serve
+
+# or
+
+yarn build
+yarn serve
 ```
 
 ## Configuration
@@ -73,5 +93,9 @@ You can find the instructions on adding more documentation sections, localizatio
 Docusaurus depends heavily on caching to enhance site performance. If you make changes that do not appear in the portal, try clearing the cache by running:
 
 ```bash
+npm run clear
+
+# or
+
 yarn clear
 ```

@@ -59,16 +59,12 @@ const config = {
 				},
 				{
 					type: "dropdown",
-					label: "Clients",
+					label: "Waku SDKs",
 					position: "right",
 					items: [
 						{
 							label: "Overview",
-							to: "/overview/clients"
-						},
-						{
-							label: "JS Waku",
-							to: "/clients/js-waku"
+							to: "/sdk/overview"
 						}
 					]
 				},
@@ -89,10 +85,6 @@ const config = {
 						{
 							label: "Contribute to Waku",
 							to: "/contribute"
-						},
-						{
-							label: "Gitcoin Bounties",
-							href: "https://bounties.gitcoin.co/status-im/bounties"
 						}
 					]
 				},
@@ -107,15 +99,11 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "Clients",
+					title: "SDKs",
 					items: [
 						{
-							to: "/overview/clients",
+							to: "/sdk/overview",
 							label: "Overview"
-						},
-						{
-							to: "/clients/js-waku",
-							label: "JS Waku"
 						}
 					]
 				},
