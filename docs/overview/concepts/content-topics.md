@@ -19,3 +19,7 @@ For instance, if your dApp is called `SuperCrypto` and it allows users to receiv
 
 - `/supercrypto/1/notification/proto`
 - `/supercrypto/1/private-message/proto`
+
+:::info
+While you can choose any encoding format for your `Content Topic`, we highly recommend using [Protobuf](https://protobuf.dev/) (`proto`) because of its efficiency. Choosing a lightweight format ensures optimal performance of your dApp.
+:::
