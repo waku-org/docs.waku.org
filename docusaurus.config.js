@@ -85,6 +85,10 @@ const config = {
 						{
 							label: "Contribute to Waku",
 							to: "/contribute"
+						},
+						{
+							label: "Watch Our Presentations",
+							to: "/presentations"
 						}
 					]
 				},

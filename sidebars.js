@@ -13,6 +13,11 @@ const sidebars = {
 			href: "/sdk/overview"
 		},
 		{
+			type: "link",
+			label: "Presentations",
+			href: "/presentations"
+		},
+		{
 			type: "category",
 			label: "Concepts",
 			collapsed: false,
@@ -43,7 +48,8 @@ const sidebars = {
 	community: [
 		"powered-by-waku",
 		"community",
-		"contribute"
+		"contribute",
+		"presentations"
 	]
 };
 

@@ -26,7 +26,7 @@ The Waku network is permissionless and decentralized, consisting of nodes. It is
 
 | API Protocol | Description | Documentation |
 | - | - | - |
-| JSON-RPC | `JSON-RPC API` provided by nodes for seamless interaction with Waku | |
+| JSON-RPC | `JSON-RPC` API provided by nodes for seamless integration with Waku | |
 
 ## Mobile Integrations
 

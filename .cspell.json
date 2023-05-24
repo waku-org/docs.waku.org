@@ -33,7 +33,12 @@
     "Smol",
     "Datagram",
     "Graphcast",
-    "permissionless"
+    "permissionless",
+    "Royer",
+    "Secureum",
+    "Oskar",
+    "Thorén",
+    "autoplay"
   ],
   "flagWords": [],
   "ignorePaths": [
