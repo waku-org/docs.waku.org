@@ -6,7 +6,7 @@ The following features are currently experimental and under research and initial
 
 ## Economic Spam Resistance
 
-We aim to enable an incentivized spam protection technique to enhance `Relay` by using rate limiting nullifiers. More details on this can be found in [WAKU2-RLN-RELAY](https://rfc.vac.dev/spec/17). In this advanced method, peers are limited to a certain rate of messaging per epoch and an immediate financial penalty is enforced for spammers who break this rate.
+We aim to enable an incentivized spam protection technique to enhance `Relay` by using [Rate Limiting Nullifiers (RLN)](https://rfc.vac.dev/spec/32/). In this advanced method, peers are limited to a certain messaging rate per epoch, and an immediate financial penalty is enforced for spammers who break this rate. You can find more details [in this blog post](https://vac.dev/rln-relay).
 
 We have prepared a PoC implementation of this method in JS: <https://examples.waku.org/rln-js/>
 

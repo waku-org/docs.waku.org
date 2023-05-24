@@ -99,7 +99,7 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "SDKs",
+					title: "Waku SDKs",
 					items: [
 						{
 							to: "/sdk/overview",
@@ -112,7 +112,7 @@ const config = {
 					items: [
 						{
 							href: "https://forum.vac.dev/",
-							label: "Discourse"
+							label: "Forum"
 						},
 						{
 							href: "https://discord.gg/Nrac59MfSX",

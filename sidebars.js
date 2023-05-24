@@ -19,8 +19,8 @@ const sidebars = {
 			collapsible: true,
 			items: [
 				"overview/concepts/protocols",
-				"overview/concepts/network-domains",
 				"overview/concepts/peer-discovery",
+				"overview/concepts/network-domains",
 				"overview/concepts/content-topics",
 				"overview/concepts/transports"
 			]

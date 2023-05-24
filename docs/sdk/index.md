@@ -1,40 +1,44 @@
 ---
-title: Overview
+title: Getting Started With Waku
 slug: /sdk/overview
 ---
 
-# Waku SDKs
-
 :::caution
-While Waku comes with risks and limitations, as it is still in development and preparing for extensive adoption, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). Join our [community](/community) to stay updated on our progress.
+Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
 :::
 
-Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available integration options and contribute by running a Waku node.
+Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available integration options and contribute by operating a node.
 
-## Running a Waku Node
+## Operating a Waku Node
 
-The Waku network is permissionless and decentralized, consisting of nodes. It is open for anyone to run their node, use the network, and contribute to its support. Please visit the [nwaku guide for operators](https://github.com/waku-org/nwaku/tree/master/docs/operators) to learn more.
+The Waku network is permissionless and decentralized, consisting of nodes. It is open for anyone to operate a node, use the network, and contribute to its support. Please visit the [nwaku guide for operators](https://github.com/waku-org/nwaku/tree/master/docs/operators) to learn more.
 
-## Library Integration
+## SDK Integrations
 
 | SDK | Description | Documentation |
 | - | - | - |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK recommended for deploying a node in the cloud or at home | |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK recommended for operating a node and interacting with Waku | |
 | [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
-| [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for native integration in Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, Kotlin, and NodeJS | |
-| [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using bindings provided by `go-waku` and is designed for Rust applications | |
-| [waku-ui](https://github.com/waku-org/waku-ui) | React components and UI adapters designed for seamless integration with `js-waku` | |
+| [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration in Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
+| [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | |
 
 ## API Integration
 
 | API Protocol | Description | Documentation |
 | - | - | - |
-| JSON-RPC | `JSON-RPC API` provided by Waku nodes for seamless access and interaction with the Waku network | |
+| JSON-RPC | `JSON-RPC API` provided by nodes for seamless interaction with Waku | |
 
-## Mobile Integration
+## Mobile Integrations
 
 | Language | Description | Documentation |
 | - | - | - |
-| React Native | React Native wrapper using bindings provided by `go-waku` and is designed for mobile integration. | |
-| Swift (iOS) | Swift applications can seamlessly integrate Waku with the C bindings provided by `go-waku`. | |
-| Kotlin (Android) | Kotlin applications can seamlessly integrate Waku with the C bindings provided by `go-waku`. | |
+| React Native | React Native wrapper using `go-waku` bindings designed for native mobile integration | |
+| Swift (iOS) | Swift applications can use `go-waku` bindings to seamlessly integrate Waku | |
+| Kotlin (Android) | Kotlin applications can use `go-waku` bindings to seamlessly integrate Waku | |
+
+## Other Integrations
+
+| SDK | Description | Documentation |
+| - | - | - |
+| [waku-ui](https://github.com/waku-org/waku-ui) | React components and UI adapters designed for seamless integration with `js-waku` | |
+| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next Waku project from various example templates | |

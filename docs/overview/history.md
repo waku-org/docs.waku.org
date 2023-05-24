@@ -1,8 +1,8 @@
 ---
-title: The Story of Waku
+title: History of Waku
 ---
 
-Waku v1 was a fork of Whisper with some added tweaks for efficiency. Waku v2 is a completely redesigned suite of protocols designed to address the goals set out [previously](/#motivation-and-goals).
+`Waku v1` was a fork of Whisper with some added tweaks for efficiency. `Waku v2` introduces a fully revamped suite of protocols designed to address the goals set out [previously](/#motivation-and-goals).
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'HISTORY'}} }%%
@@ -25,7 +25,11 @@ gitGraph
 
 ### 2013
 
-The introduction of the Ethereum White Paper marked the unveiling of the Holy Trinity, which comprises Ethereum for consensus, Swarm for decentralized storage, and Whisper for peer-to-peer messaging.
+The Ethereum White Paper was published, unveiling the holy trinity of Web3, comprising:
+
+- Ethereum for consensus.
+- Swarm for decentralized storage.
+- Whisper for peer-to-peer messaging.
 
 ### 2015-2018
 
@@ -37,8 +41,17 @@ Due to the lack of progress made on Whisper and growing concerns around scalabil
 
 ### 2020
 
-Status introduced Waku v1 as its messaging protocol, which replaced Whisper.
+`Waku v1` replaces Whisper as the messaging protocol in Status, resulting in the following:
+
+- Enhanced performance.
+- Better scalability.
+- Ability to work in resource-limited environments.
+- And many more.
 
 ### 2021
 
-Waku v2 supersedes Waku v1.
+`Waku v2` releases with a fully revamped suite of protocols that not only supersedes but also surpasses the performance of `Waku v1`.
+
+### Present Day
+
+Waku has continued to evolve and enhance itself, solidifying its position as the standard for Web3 communication.

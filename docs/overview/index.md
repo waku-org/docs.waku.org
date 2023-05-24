@@ -4,10 +4,10 @@ slug: /
 ---
 
 :::caution
-While Waku comes with risks and limitations, as it is still in development and preparing for extensive adoption, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). Join our [community](/community) to stay updated on our progress.
+Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
 :::
 
-Waku is a family of peer-to-peer protocols that offer secure and private communication in a decentralized environment, making it suitable for various decentralized applications (dApps). It is designed to operate in resource-limited environments but can also be used as a node or desktop application.
+Waku, the standard of Web3 communication, is a family of protocols that offer secure, private, and peer-to-peer communication in a decentralized environment. It is designed to operate in resource-limited environments but can also be used as a node or desktop application.
 
 Waku protocols ensure that users communication remains censorship-resistant and privacy-preserving, giving them complete control over their data. By incorporating Waku into your dApp, you can add decentralized communication features to your application without compromising security or privacy.
 
