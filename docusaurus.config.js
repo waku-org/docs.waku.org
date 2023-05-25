@@ -59,12 +59,12 @@ const config = {
 				},
 				{
 					type: "dropdown",
-					label: "Waku SDKs",
+					label: "Platforms",
 					position: "right",
 					items: [
 						{
 							label: "Overview",
-							to: "/sdk/overview"
+							to: "/platform/overview"
 						}
 					]
 				},
@@ -103,10 +103,10 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "Waku SDKs",
+					title: "Platforms",
 					items: [
 						{
-							to: "/sdk/overview",
+							to: "/platform/overview",
 							label: "Overview"
 						}
 					]

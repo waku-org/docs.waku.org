@@ -8,11 +8,11 @@ Get involved in Waku's open-source initiatives to improve the protocol, SDKs, de
 
 By integrating Waku into your application, you can contribute by:
 
-- [Operating a node](https://github.com/waku-org/nwaku/tree/master/docs/operators) within your application.
+- [Running a node](https://github.com/waku-org/nwaku/tree/master/docs/operators) within your application.
 - Reporting bugs and suggesting missing features to the development team.
 - Inspiring other developers to explore and utilize Waku for [various use cases](/overview/use-cases).
 
-Begin your journey by exploring [Waku's integration options](/sdk/overview) and start building today!
+Begin your journey by exploring the [Waku platforms](/platform/overview) and start building today!
 
 ## Report a Bug
 

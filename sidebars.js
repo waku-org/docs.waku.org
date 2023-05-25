@@ -9,8 +9,8 @@ const sidebars = {
 		"overview/use-cases",
 		{
 			type: "link",
-			label: "Waku SDKs",
-			href: "/sdk/overview"
+			label: "Platforms",
+			href: "/platform/overview"
 		},
 		{
 			type: "link",
@@ -42,8 +42,8 @@ const sidebars = {
 			]
 		}
 	],
-	sdk: [
-		"sdk/index"
+	platform: [
+		"platform/index"
 	],
 	community: [
 		"powered-by-waku",

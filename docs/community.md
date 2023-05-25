@@ -4,7 +4,7 @@ title: Join Our Community
 
 Welcome to the Waku Community! Whether you're interested in building with Waku, contributing to the network, expanding your knowledge, or staying up-to-date with our progress, we have something for everyone.
 
-## [Forum](https://forum.vac.dev/)
+## [Vac Forum](https://forum.vac.dev/)
 
 Have you got questions, or are you eager to discuss Waku? Head to the [Vac Forum](https://forum.vac.dev/) and join the conversation!
 
