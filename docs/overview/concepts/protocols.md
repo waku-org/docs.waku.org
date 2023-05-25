@@ -10,7 +10,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [RLN Relay](https://rfc.vac.dev/spec/17/)
 
-`RLN Relay` protocol extends the `Relay` protocol by using [Rate Limiting Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam prevention. It caps the bandwidth usage for all peers on the network, effectively preventing spam, and imposes financial penalties and network removal for spammers. You can find more details [in this blog post](https://vac.dev/rln-relay).
+`RLN Relay` protocol extends the `Relay` protocol by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam prevention. It caps the bandwidth usage for all peers on the network, effectively preventing spam, and imposes financial penalties and network removal for spammers. You can find more details [in this blog post](https://vac.dev/rln-relay).
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 

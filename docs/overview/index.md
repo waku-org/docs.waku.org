@@ -29,7 +29,7 @@ Waku is suitable for applications that require a peer-to-peer approach, offering
 
 ### Platform Agnostic
 
-Waku can run on any platform or environment, even in restricted settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are primarily offline.
+Waku can run on any platform or environment, even settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are primarily offline.
 
 ### Privacy-Preserving
 

@@ -58,7 +58,7 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 
 ## [Peer Exchange](https://rfc.vac.dev/spec/34/)
 
-The primary objective of this protocol is to facilitate peer connectivity for resource-restricted devices. The peer exchange protocol enables lightweight nodes to request peers from other nodes within the network. Light nodes can bootstrap and expand their mesh independently without relying on `Discv5`.
+The primary objective of this protocol is to facilitate peer connectivity for resource-limited devices. The peer exchange protocol enables lightweight nodes to request peers from other nodes within the network. Light nodes can bootstrap and expand their mesh independently without relying on `Discv5`.
 
 #### Pros
 

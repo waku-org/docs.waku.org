@@ -12,8 +12,8 @@ Waku intends to incentivize mechanisms to run nodes, but it's not part of libp2p
 
 Waku includes various protocols covering the following domains: privacy preservation, censorship resistance, and platform agnosticism, allowing it to run on any platform or environment.
 
-libp2p does not provide out-of-the-box protocols to enable mostly offline/resource-restricted devices, [Store](/overview/concepts/protocols#store)/[Light Push](/overview/concepts/protocols#light-push)/[Filter](/overview/concepts/protocols#filter) caters to those use cases.
+libp2p does not provide out-of-the-box protocols to enable mostly offline/resource-limited devices, [Store](/overview/concepts/protocols#store)/[Light Push](/overview/concepts/protocols#light-push)/[Filter](/overview/concepts/protocols#filter) caters to those use cases.
 
 ## Economic Spam Protection
 
-libp2p does not have strong spam protection guarantees, [RLN (Rate Limit Nullifier)](/overview/concepts/protocols#rln-relay) is a protocol being developed by the Waku team towards this goal.
+libp2p does not have strong spam protection guarantees, [RLN Relay](/overview/concepts/protocols#rln-relay) is a protocol being developed by the Waku team towards this goal.

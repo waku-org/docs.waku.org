@@ -4,7 +4,7 @@ require("dotenv").config();
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
-	title: "Waku Documentation Portal",
+	title: "Waku Docs Portal",
 	url: "https://waku.guide/",
 	baseUrl: "/",
 	onBrokenLinks: "throw",

@@ -36,6 +36,7 @@ const sidebars = {
 			collapsed: false,
 			collapsible: true,
 			items: [
+				"overview/reference/glossary",
 				"overview/reference/security-features",
 				"overview/reference/research-in-progress",
 				"overview/reference/waku-vs-libp2p"
