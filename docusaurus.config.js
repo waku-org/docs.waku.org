@@ -59,12 +59,12 @@ const config = {
 				},
 				{
 					type: "dropdown",
-					label: "Platforms",
+					label: "Guides",
 					position: "right",
 					items: [
 						{
-							label: "Overview",
-							to: "/platform/overview"
+							label: "SDKs and Nodes",
+							to: "/guides/sdks-and-nodes"
 						}
 					]
 				},
@@ -103,11 +103,11 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "Platforms",
+					title: "Guides",
 					items: [
 						{
-							to: "/platform/overview",
-							label: "Overview"
+							to: "/guides/sdks-and-nodes",
+							label: "SDKs and Nodes"
 						}
 					]
 				},
@@ -115,11 +115,7 @@ const config = {
 					title: "Community",
 					items: [
 						{
-							href: "https://forum.vac.dev/",
-							label: "Forum"
-						},
-						{
-							href: "https://discord.gg/Nrac59MfSX",
+							href: "https://discord.waku.org/",
 							label: "Discord"
 						},
 						{
@@ -129,6 +125,10 @@ const config = {
 						{
 							href: "https://t.me/waku_org",
 							label: "Telegram"
+						},
+						{
+							href: "https://forum.vac.dev/",
+							label: "Vac Forum"
 						}
 					]
 				},

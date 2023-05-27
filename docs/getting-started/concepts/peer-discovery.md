@@ -6,13 +6,13 @@ When initializing a Waku node, it must connect with other peers to enable messag
 
 Once a connection is established, the node must actively seek out additional peers to have:
 
-- Sufficient peers in the [Relay](/overview/concepts/protocols#relay) mesh: The goal is to have at least 6 peers in the mesh. This ensures a robust network where messages can be efficiently relayed.
+- Sufficient peers in the [Relay](/getting-started/concepts/protocols#relay) mesh: The goal is to have at least 6 peers in the mesh. This ensures a robust network where messages can be efficiently relayed.
 - Reserve peers for backup: It is essential to have a surplus of peers available as reserves. These reserves are backups when the current peers become overloaded or experience unexpected disconnections.
-- Peers with specific capabilities: The node seeks out peers with specific capabilities, such as [Store](/overview/concepts/protocols#store), [Light Push](/overview/concepts/protocols#light-push), or [Filter](/overview/concepts/protocols#filter). This allows for targeted interactions and enhanced functionality based on the desired capabilities.
+- Peers with specific capabilities: The node seeks out peers with specific capabilities, such as [Store](/getting-started/concepts/protocols#store), [Light Push](/getting-started/concepts/protocols#light-push), or [Filter](/getting-started/concepts/protocols#filter). This allows for targeted interactions and enhanced functionality based on the desired capabilities.
 
 ## Predefined Nodes
 
-Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [operate a node](https://github.com/waku-org/nwaku/tree/master/docs/operators) per their preference.
+Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [operate a node](/guides/sdks-and-nodes#operate-a-waku-node) per their preference.
 
 #### Pros
 

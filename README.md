@@ -20,6 +20,10 @@ git clone https://github.com/waku-org/waku.guide
 Install the dependencies:
 
 ```bash
+yarn
+
+# or
+
 yarn install
 ```
 

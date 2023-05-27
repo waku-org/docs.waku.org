@@ -3,18 +3,18 @@
 /** @type {import("@docusaurus/plugin-content-docs").SidebarsConfig} */
 const sidebars = {
 	main: [
-		"overview/index",
-		"overview/history",
-		"overview/why-waku",
-		"overview/use-cases",
+		"getting-started/index",
+		"getting-started/history",
+		"getting-started/why-waku",
+		"getting-started/use-cases",
 		{
 			type: "link",
-			label: "Platforms",
-			href: "/platform/overview"
+			label: "SDKs and Nodes",
+			href: "/guides/sdks-and-nodes"
 		},
 		{
 			type: "link",
-			label: "Presentations",
+			label: "Video Presentations",
 			href: "/presentations"
 		},
 		{
@@ -23,11 +23,11 @@ const sidebars = {
 			collapsed: false,
 			collapsible: true,
 			items: [
-				"overview/concepts/protocols",
-				"overview/concepts/peer-discovery",
-				"overview/concepts/network-domains",
-				"overview/concepts/content-topics",
-				"overview/concepts/transports"
+				"getting-started/concepts/protocols",
+				"getting-started/concepts/peer-discovery",
+				"getting-started/concepts/network-domains",
+				"getting-started/concepts/content-topics",
+				"getting-started/concepts/transports"
 			]
 		},
 		{
@@ -36,15 +36,15 @@ const sidebars = {
 			collapsed: false,
 			collapsible: true,
 			items: [
-				"overview/reference/glossary",
-				"overview/reference/security-features",
-				"overview/reference/research-in-progress",
-				"overview/reference/waku-vs-libp2p"
+				"getting-started/reference/glossary",
+				"getting-started/reference/security-features",
+				"getting-started/reference/research-in-progress",
+				"getting-started/reference/waku-vs-libp2p"
 			]
 		}
 	],
-	platform: [
-		"platform/index"
+	guides: [
+		"guides/sdks-and-nodes"
 	],
 	community: [
 		"powered-by-waku",

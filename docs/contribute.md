@@ -2,17 +2,17 @@
 title: Contribute to Waku
 ---
 
-Get involved in Waku's open-source initiatives to improve the protocol, SDKs, developer tools, and documentation.
+Get involved in Waku's open-source initiatives to improve the protocols, SDKs, developer tools and examples, and documentation.
 
 ## Build a Waku Application
 
 By integrating Waku into your application, you can contribute by:
 
-- [Running a node](https://github.com/waku-org/nwaku/tree/master/docs/operators) within your application.
+- [Operating a node](/guides/sdks-and-nodes#operate-a-waku-node) within your application.
 - Reporting bugs and suggesting missing features to the development team.
-- Inspiring other developers to explore and utilize Waku for [various use cases](/overview/use-cases).
+- Inspiring other developers to explore and utilize Waku for [various use cases](/getting-started/use-cases).
 
-Begin your journey by exploring the [Waku platforms](/platform/overview) and start building today!
+Begin your journey by visiting the [SDKs and Nodes](/guides/sdks-and-nodes) guide and start building today!
 
 ## Report a Bug
 
@@ -24,7 +24,7 @@ To request a new feature, create an issue in the appropriate [GitHub repository]
 
 ## Make Pull Requests
 
-Community pull requests (PRs) are highly encouraged, but we recommend beginning with a feature request or posting on the [Vac Forum](https://forum.vac.dev/) to gauge interest and gather feedback before proceeding with a PR.
+Community pull requests (PRs) are highly encouraged, but we recommend beginning with a feature request or posting on the [Waku Discord](https://discord.waku.org/) to gauge interest and gather feedback before proceeding with a PR.
 
 ## Contribute to Waku Research
 

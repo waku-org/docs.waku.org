@@ -11,7 +11,7 @@ Waku is intended to empower individuals by returning control of communication to
 - It is not confined to a particular blockchain.
 - It is modular, adaptable, and can cater to various use cases.
 - It allows developers to decentralize communication in their dApps or move actions off-chain while maintaining decentralization.
-- It can run on various platforms, including mobile devices, cloud environments, web browsers, native desktop apps, or even a [Dappnode](https://dappnode.com/)!
+- It can run on various platforms, including mobile devices, cloud environments, web browsers, desktop apps, or even a [Dappnode](https://dappnode.com/)!
 
 ## Why Waku is Necessary
 

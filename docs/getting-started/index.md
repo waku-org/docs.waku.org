@@ -9,7 +9,7 @@ Waku has risks and limitations as it is still developing and preparing for exten
 
 Waku, the standard of Web3 communication, is a family of protocols that offer secure, private, and peer-to-peer communication in a decentralized environment. It is designed to operate in resource-limited environments but can also be used as a node or desktop application.
 
-Waku protocols ensure that users communication remains censorship-resistant and privacy-preserving, giving them complete control over their data. By incorporating Waku into your dApp, you can add decentralized communication features to your application without compromising security or privacy.
+Waku protocols ensure that users communication remains censorship-resistant and privacy-preserving, giving them complete control over their data. By integrating Waku into your dApp, you can add decentralized communication features to your application without compromising security or privacy.
 
 ## Motivation and Goals
 
@@ -37,7 +37,7 @@ Waku can cater to applications that require privacy guarantees, such as:
 
 - Pseudonymity and not being tied to any Personally Identifiable Information (PII).
 - Metadata protection in transit.
-- Various forms of [unlinkability](/overview/reference/security-features#anonymityunlinkability).
+- Various forms of [unlinkability](/getting-started/reference/security-features#anonymityunlinkability).
 
 ### Modular Design
 
@@ -51,7 +51,7 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ## How Does Waku Work?
 
-The [Relay](/overview/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
+The [Relay](/getting-started/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
 1. Facilitating the retrieval of historical messages for primarily offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
