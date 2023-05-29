@@ -24,4 +24,4 @@ Community pull requests (PRs) are highly encouraged, but we recommend [suggestin
 
 ## Contribute to Waku Research
 
-[Vac](https://vac.dev/) drives Waku research, advancing through ongoing R&D. Vac is dedicated to developing modular p2p protocols for private, secure, and censorship-resistant communication. Explore Vac's open problems at <https://vac.dev/open-problems>.
+Waku Research is an innovative R&D project dedicated to developing modular peer-to-peer protocols for communication that prioritize privacy, security, and censorship resistance. Explore Waku's ongoing challenges and experimental code at <https://github.com/waku-org/research>.

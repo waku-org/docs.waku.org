@@ -18,4 +18,4 @@ In a nutshell, peers have to pay for the service they obtain from each other. In
 
 Additionally, along with RLN, this gives node operators who provide a useful service to the network an incentive to perform that service. Read more here: <https://vac.dev/building-privacy-protecting-infrastructure>
 
-You can also read more about the current open problems the Vac/Waku team is working on here: <https://vac.dev/open-problems>
+You can also read more about the ongoing challenges the Waku team is working on here: <https://github.com/waku-org/research>
