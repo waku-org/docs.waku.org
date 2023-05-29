@@ -13,7 +13,7 @@ Here is the recommended format for content topics:
 - `application-name`: This is the unique name of your decentralized application (dApp) to prevent conflicts with other dApps.
 - `version`: Typically starting at 1, this field helps track breaking changes in your messages.
 - `content-topic-name`: The specific name of the content topic used for filtering. If your dApp utilizes Waku for multiple features, it is advisable to have a separate content topic for each feature.
-- `encoding`: The message serialization/encoding format, with [Protocol Buffers](https://protobuf.dev/) (`proto`) being the commonly used choice.
+- `encoding`: The message serialization/encoding format, with [Protocol Buffers](https://protobuf.dev/) (`proto`) being the recommended choice.
 
 For instance, if your dApp is called `SuperCrypto` and it allows users to receive notifications and send private messages, you can consider utilizing the following content topics:
 

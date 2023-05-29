@@ -12,7 +12,7 @@ We have prepared a PoC implementation of this method in JS: <https://examples.wa
 
 ## Prevention of Denial of Service (DoS) and Node Incentivization
 
-Denial of service signifies the case where an adversarial peer exhausts another peer's service capacity (e.g., by making a large number of requests) and makes it unavailable to the rest of the system. RnD on DoS attack mitigation can tracked from here: <https://github.com/vacp2p/research/issues/148>.
+Denial of service signifies the case where an adversarial peer exhausts another node's service capacity (e.g., by making a large number of requests) and makes it unavailable to the rest of the system. RnD on DoS attack mitigation can tracked from here: <https://github.com/vacp2p/research/issues/148>.
 
 In a nutshell, peers have to pay for the service they obtain from each other. In addition to incentivizing the service provider, accounting also makes DoS attacks costly for malicious peers. The accounting model can be used in `Store` and `Filter` to protect against DoS attacks.
 

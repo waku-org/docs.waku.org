@@ -6,7 +6,7 @@ Waku is a unified and cohesive entity that offers a rich ecosystem with three di
 
 ## Discovery Domain
 
-Peer discovery in Waku facilitates locating other peers within the network. As a modular protocol, Waku incorporates various discovery mechanisms, such as [Discv5](/getting-started/concepts/peer-discovery#discv5) and [Peer Exchange](/getting-started/concepts/peer-discovery#peer-exchange). These mechanisms allow developers to choose the most suitable option(s) for their specific use cases and user environments, including mobile phones, desktop browsers, servers, and more.
+Peer discovery in Waku facilitates locating other nodes within the network. As a modular protocol, Waku incorporates various discovery mechanisms, such as [Discv5](/getting-started/concepts/peer-discovery#discv5) and [Peer Exchange](/getting-started/concepts/peer-discovery#peer-exchange). These mechanisms allow developers to choose the most suitable option(s) for their specific use cases and user environments, including mobile phones, desktop browsers, servers, and more.
 
 ## Gossip Domain
 

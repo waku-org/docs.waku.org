@@ -24,9 +24,9 @@ const sidebars = {
 			collapsible: true,
 			items: [
 				"getting-started/concepts/protocols",
-				"getting-started/concepts/peer-discovery",
-				"getting-started/concepts/network-domains",
 				"getting-started/concepts/content-topics",
+				"getting-started/concepts/network-domains",
+				"getting-started/concepts/peer-discovery",
 				"getting-started/concepts/transports"
 			]
 		},

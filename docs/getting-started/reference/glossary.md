@@ -44,7 +44,7 @@ A light node is a [resource-limited](#resource-limited) device or client that se
 
 ### Light Push
 
-Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the network and receive acknowledgments confirming that a [peer](#peer) has received them.
+Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the [Relay](#relay) network and receive acknowledgments confirming that a [peer](#peer) has received them.
 
 ### Node
 
