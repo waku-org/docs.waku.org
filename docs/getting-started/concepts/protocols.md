@@ -14,7 +14,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
-`Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other peers. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
+`Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other peers using [content topics](/getting-started/concepts/content-topics). It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
 
 ## [Store](https://rfc.vac.dev/spec/13/)
 

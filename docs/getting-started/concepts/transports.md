@@ -2,7 +2,7 @@
 title: Transports
 ---
 
-Transports help move data packets across a network by establishing connections between members. They define the rules and protocols to ensure efficient network transmission, routing, and data delivery.
+Transports help move data packets across a network by establishing connections between peers. They define the rules and protocols to ensure efficient network transmission, routing, and data delivery.
 
 Waku is a transport-agnostic framework that allows developers to choose and support multiple protocols according to their requirements. For Waku nodes, the following transports are recommended:
 

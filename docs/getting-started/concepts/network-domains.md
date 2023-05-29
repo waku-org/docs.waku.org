@@ -48,10 +48,10 @@ E ->> D: HistoryQuery(pubtopic1, contentTopic1) (6)
 D ->> E: HistoryResponse(msg1, ...) (6)
 ```
 
-The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default pubsub topic) and indicates that it is subscribed to messages on that topic for a relay. Node D serves as a `Store` and is responsible for persisting messages.
+The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default Pub/Sub topic) and indicates that it is subscribed to messages on that topic for a relay. Node D serves as a `Store` and is responsible for persisting messages.
 
-1. Node A creates a WakuMessage `msg1` with a [ContentTopic](/getting-started/concepts/content-topics) `contentTopic1`.
-2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and ContentTopic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.
+1. Node A creates a WakuMessage `msg1` with [Content Topic](/getting-started/concepts/content-topics) `contentTopic1`.
+2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and Content Topic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.
 3. Node A publishes `msg1` on `pubtopic1`. The message is sent from Node A to Node B and then forwarded to Node D.
 4. Node D, upon receiving `msg1` both stores the message for future retrieval by other nodes and forwards it to Node C.
 5. Node D also pushes `msg1` to Node F, informing it about the arrival of a new message.
