@@ -8,7 +8,7 @@ Definitions and usage of the terminology used in the Waku ecosystem.
 
 ### Bootstrapping
 
-Bootstrapping is the process where a Waku node [discovers](#peer-discovery) and connects with other [peers](#peer) in the network.
+Bootstrapping is the initial [peer discovery](#peer-discovery) process where new [nodes](#node) on the network locate and establish connections with one another.
 
 ### Content Topic
 
@@ -64,7 +64,7 @@ A peer refers to other [nodes](#node) and participants of the [Waku network](#wa
 
 ### Peer Discovery
 
-Peer discovery (also known as [bootstrapping](#bootstrapping)) is the process where a [node](#node) locates and connects with other [peers](#peer) to establish communication and exchange information.
+Peer discovery is the process where a [node](#node) locates and connects with [peers](#peer) to establish communication and exchange information.
 
 ### Peer Exchange
 

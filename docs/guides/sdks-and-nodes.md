@@ -19,7 +19,7 @@ Waku is implemented in multiple SDKs, allowing it to easily integrate with diffe
 | SDK | Description | Documentation |
 | - | - | - |
 | [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK for running a standalone node and access the Waku network | |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK for running a standalone node and accessing the Waku network | |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | |
 
@@ -37,6 +37,6 @@ Waku provides integrations tailored for mobile applications, enabling Waku to op
 
 | Implementation | Description | Documentation |
 | - | - | - |
-| [waku-ui](https://github.com/waku-org/waku-ui) | React components and UI adapters designed for seamless integration with `js-waku` | |
-| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next Waku project from various example templates | |
+| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
+| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | |
 | JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to access the Waku network | |
