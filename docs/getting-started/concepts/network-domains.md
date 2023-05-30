@@ -14,7 +14,7 @@ Gossipsub derives its name from the practice within Pub/Sub networks where peers
 
 Waku employs gossiping through [Relay](/getting-started/concepts/protocols#relay) to distribute messages across the network. Additionally, Waku introduces [RLN Relay](/getting-started/concepts/protocols#rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
 
-## Request/Reply Domain
+## Request/Response Domain
 
 Waku provides a set of protocols to optimize its performance in resource-limited environments like low bandwidth or offline scenarios for multiple purposes.
 

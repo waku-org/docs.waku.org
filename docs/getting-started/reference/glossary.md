@@ -84,7 +84,7 @@ A Pub/Sub topic serves as a routing mechanism for messages, with the default top
 
 ### Rate Limit Nullifiers
 
-Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that provide an anonymous rate-limited messaging framework, preserving message owner anonymity while preventing spam or DDoS attacks.
+Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that provide an anonymous rate-limited messaging framework, preserving message owner anonymity while preventing spam or DoS attacks.
 
 ### Relay
 

@@ -30,7 +30,7 @@ Using `Relay` and `Filter` protocols is recommended when a node is online, as `S
 
 ## [Light Push](https://rfc.vac.dev/spec/19/)
 
-`Light Push` is a [Request/Reply](/getting-started/concepts/network-domains#requestreply-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgment when sending messages, indicating that at least one peer has received them. Subsequently, the remote peer forwards these messages to the `Relay` network.
+`Light Push` is a [Request/Response](/getting-started/concepts/network-domains#requestresponse-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgment when sending messages, indicating that at least one peer has received them. Subsequently, the remote peer forwards these messages to the `Relay` network.
 
 :::info
 While the `Light Push` protocol acknowledges the receipt by the remote peer, it does not guarantee network-wide propagation.

@@ -49,6 +49,16 @@ Waku nodes are adaptive and can be customized based on the application's require
 
 These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf), which Waku addresses through its adjustable protocol.
 
+
+### Service Network
+
+Waku provides developers with a convenient solution for building decentralized communication systems, eliminating the need to start from scratch or depend on centralized systems. Node operators can offer several services, such as:
+
+- Storing messages for offline devices.
+- Enabling bandwidth-saving access to the [Relay](/getting-started/concepts/protocols#relay) network through [Light Push](/getting-started/concepts/protocols#light-push) and [Filter](/getting-started/concepts/protocols#filter) protocols.
+- Implementing spam prevention and DoS mitigation features.
+- Providing a resilient and shared [Relay](/getting-started/concepts/protocols#relay) infrastructure that applications can leverage to enhance reliability and efficiency.
+
 ## How Does Waku Work?
 
 The [Relay](/getting-started/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
