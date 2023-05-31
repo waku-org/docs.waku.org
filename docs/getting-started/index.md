@@ -29,7 +29,7 @@ Waku is suitable for applications that require a peer-to-peer approach, offering
 
 ### Platform Agnostic
 
-Waku can run on any platform or environment, even settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are primarily offline.
+Waku can run on any platform or environment, even settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are mostly offline.
 
 ### Privacy-Preserving
 
@@ -63,7 +63,7 @@ Waku provides developers with a convenient solution for building decentralized c
 
 The [Relay](/getting-started/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
-1. Facilitating the retrieval of historical messages for primarily offline devices.
+1. Facilitating the retrieval of historical messages for mostly offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
 3. Preserving bandwidth usage for resource-limited environments.
 4. Implementing economic spam protection (rate limits) while ensuring privacy.

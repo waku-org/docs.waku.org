@@ -10,13 +10,13 @@ Peer discovery in Waku facilitates locating other nodes within the network. As a
 
 ## Gossip Domain
 
-Gossipsub derives its name from the practice within Pub/Sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
+GossipSub derives its name from the practice within Pub/Sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
 
 Waku employs gossiping through [Relay](/getting-started/concepts/protocols#relay) to distribute messages across the network. Additionally, Waku introduces [RLN Relay](/getting-started/concepts/protocols#rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
 
 ## Request/Response Domain
 
-Waku provides a set of protocols to optimize its performance in resource-limited environments like low bandwidth or offline scenarios for multiple purposes.
+Waku provides a set of protocols to optimize its performance in resource-limited environments like low bandwidth or mostly offline scenarios for multiple purposes.
 
 - [Store](/getting-started/concepts/protocols#store) enables the retrieval of historical messages.
 - [Filter](/getting-started/concepts/protocols#filter) efficiently retrieves a subset of messages to conserve bandwidth.
