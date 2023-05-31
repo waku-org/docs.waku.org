@@ -46,6 +46,10 @@ A light node is a [resource-limited](#resource-limited) device or client that le
 
 Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the [Relay](#relay) network and receive acknowledgments confirming that a [peer](#peer) has received them.
 
+### Mostly Offline
+
+Mostly offline devices refer to clients who spend most of their time offline or disconnected from the network but occasionally connect for certain reasons. Examples include browsers and mobile phones.
+
 ### Node
 
 A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku network](#waku) to enable secure and private peer-to-peer Web3 communication.
@@ -116,7 +120,7 @@ Waku Message defines the structure of messages in the [Waku network](#waku), inc
 
 ### [Waku Message Payload Encryption](https://rfc.vac.dev/spec/26/)
 
-Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the network. It covers encryption, decryption, and signing methods for message payloads, focusing on confidentiality, authenticity, integrity, and unlinkability.
+Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku network](#waku). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
 
 ### [Waku Noise](https://rfc.vac.dev/spec/35/)
 
