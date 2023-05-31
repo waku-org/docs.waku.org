@@ -1,8 +1,8 @@
-# Waku Documentation Portal
+# Waku Docs Portal
 
-[![Waku Documentation Portal](https://img.shields.io/badge/waku.guide-black)](https://waku.guide/)
+[![Waku Docs Portal](https://img.shields.io/badge/waku.guide-black)](https://waku.guide/)
 
-The Waku Documentation Portal can be accessed at [waku.guide](https://waku.guide) and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+The Waku Docs Portal can be accessed at [waku.guide](https://waku.guide) and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Prerequisites
 
@@ -36,7 +36,17 @@ yarn start
 Check for spelling errors before deploying:
 
 ```bash
-npm run check:spell
+yarn check:spell
+```
+
+Create a production build locally to check for errors:
+
+```bash
+yarn build
+
+# test the build
+
+yarn serve
 ```
 
 ## Configuration

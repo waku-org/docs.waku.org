@@ -1,5 +1,6 @@
 ---
 title: Introduction
+slug: /clients/js-waku
 ---
 
 # JS-Waku Documentation
@@ -16,8 +17,8 @@ If you wish to use Waku with a NodeJS application, you can either:
 
 :::
 
-To get started, the [Quick Start](./quick-start) guide offers a simple way to integrate Waku into your web app.
-For a more comprehensive tutorial, follow the [Build a Chat App](./build-chat-app) guide,
+To get started, the [Quick Start](/) guide offers a simple way to integrate Waku into your web app.
+For a more comprehensive tutorial, follow the [Build a Chat App](/) guide,
 which demonstrates how to create a chat app from scratch.
 
 Explore the [js-waku-examples repository](https://github.com/waku-org/js-waku-examples) to find various working Proof-of-Concepts that showcase how to use JS-Waku effectively.

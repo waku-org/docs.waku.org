@@ -3,9 +3,13 @@ title: What is Waku?
 slug: /
 ---
 
-Waku is a family of peer-to-peer protocols that offer secure and private communication in a decentralized environment, making it suitable for various decentralized applications (dApps). It is designed to operate in resource-limited environments but can also be used as a node or desktop application.
+:::caution
+Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
+:::
 
-Waku protocols ensure that users communication remains censorship-resistant and privacy-preserving, giving them complete control over their data. By incorporating Waku into your dApp, you can add decentralized communication features to your application without compromising security or privacy.
+Waku, the standard of Web3 communication, is a family of protocols that offer secure, private, and peer-to-peer communication in a decentralized environment. It is designed to operate in resource-limited environments but can also be used as a node or desktop application.
+
+Waku protocols ensure that users communication remains censorship-resistant and privacy-preserving, giving them complete control over their data. By integrating Waku into your dApp, you can add decentralized communication features to your application without compromising security or privacy.
 
 ## Motivation and Goals
 
@@ -25,7 +29,7 @@ Waku is suitable for applications that require a peer-to-peer approach, offering
 
 ### Platform Agnostic
 
-Waku can run on any platform or environment, even in restricted settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are primarily offline.
+Waku can run on any platform or environment, even settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are primarily offline.
 
 ### Privacy-Preserving
 
@@ -33,7 +37,7 @@ Waku can cater to applications that require privacy guarantees, such as:
 
 - Pseudonymity and not being tied to any Personally Identifiable Information (PII).
 - Metadata protection in transit.
-- Various forms of [unlinkability](overview/reference/security-features#anonymityunlinkability).
+- Various forms of [unlinkability](/getting-started/reference/security-features#anonymityunlinkability).
 
 ### Modular Design
 
@@ -47,13 +51,13 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ## How Does Waku Work?
 
-The [Waku Relay](overview/concepts/protocols#waku-relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
+The [Relay](/getting-started/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
 1. Facilitating the retrieval of historical messages for primarily offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
 3. Preserving bandwidth usage for resource-limited environments.
 4. Implementing economic spam protection (rate limits) while ensuring privacy.
 5. Developing methods to protect against mass deanonymization (currently being researched).
-6. Designing strategies to scale `Waku Relay/GossipSub` securely.
+6. Designing strategies to scale `Relay/GossipSub` securely.
 
 If you want to learn more about how Waku operates, the [WAKU2 RFC](https://rfc.vac.dev/spec/10/) provides an in-depth look under the hood.

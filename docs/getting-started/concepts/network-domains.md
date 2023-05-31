@@ -1,24 +1,26 @@
 ---
-title: Network Interaction Domains
+title: Network Domains
 ---
 
 Waku is a unified and cohesive entity that offers a rich ecosystem with three distinct network interaction domains. These domains serve specialized purposes and contribute to the robust functionality of Waku, forming its foundation.
 
 ## Discovery Domain
 
-Node discovery in Waku facilitates locating other nodes within the network. As a modular protocol, Waku incorporates various discovery mechanisms, such as [`Discv5`](/overview/concepts/node-discovery#discv5) and [`Peer Exchange`](/overview/concepts/node-discovery#peer-exchange). These mechanisms allow developers to choose the most suitable option(s) for their specific use cases and user environments, including mobile phones, desktop browsers, servers, and more.
+Peer discovery in Waku facilitates locating other peers within the network. As a modular protocol, Waku incorporates various discovery mechanisms, such as [Discv5](/getting-started/concepts/peer-discovery#discv5) and [Peer Exchange](/getting-started/concepts/peer-discovery#peer-exchange). These mechanisms allow developers to choose the most suitable option(s) for their specific use cases and user environments, including mobile phones, desktop browsers, servers, and more.
 
 ## Gossip Domain
 
 Gossipsub derives its name from the practice within Pub/Sub networks where peers gossip about the messages they have encountered, thus establishing a message delivery network.
 
-Waku employs gossiping through [`Waku Relay`](/overview/concepts/protocols#waku-relay) to distribute messages across the network. Additionally, Waku introduces [`Waku RLN Relay`](/overview/concepts/protocols#waku-rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
+Waku employs gossiping through [Relay](/getting-started/concepts/protocols#relay) to distribute messages across the network. Additionally, Waku introduces [RLN Relay](/getting-started/concepts/protocols#rln-relay), an experimental mechanism that combines privacy preservation and economic spam protection.
 
 ## Request/Reply Domain
 
-Waku provides a set of Request/Reply protocols to optimize its performance in resource-restricted environments like low bandwidth or offline scenarios.
+Waku provides a set of protocols to optimize its performance in resource-limited environments like low bandwidth or offline scenarios for multiple purposes.
 
-These protocols serve multiple purposes. [`Waku Store`](/overview/concepts/protocols#waku-store) enables the retrieval of historical messages, [`Waku Filter`](/overview/concepts/protocols#waku-filter) efficiently retrieves a subset of messages to conserve bandwidth, and [`Waku Light Push`](/overview/concepts/protocols#waku-light-push) facilitates message publication for nodes with limited bandwidth and short connection windows.
+- [Store](/getting-started/concepts/protocols#store) enables the retrieval of historical messages.
+- [Filter](/getting-started/concepts/protocols#filter) efficiently retrieves a subset of messages to conserve bandwidth.
+- [Light Push](/getting-started/concepts/protocols#light-push) facilitates message publication for nodes with limited bandwidth and short connection windows.
 
 ## Overview of Protocol Interaction
 
@@ -46,9 +48,9 @@ E ->> D: HistoryQuery(pubtopic1, contentTopic1) (6)
 D ->> E: HistoryResponse(msg1, ...) (6)
 ```
 
-The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default pubsub topic) and indicates that it is subscribed to messages on that topic for a relay. In the context of Waku Store, Node D is responsible for persisting these messages.
+The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default pubsub topic) and indicates that it is subscribed to messages on that topic for a relay. Node D serves as a `Store` and is responsible for persisting messages.
 
-1. Node A creates a WakuMessage `msg1` with a [ContentTopic](/overview/concepts/content-topics) `contentTopic1`.
+1. Node A creates a WakuMessage `msg1` with a [ContentTopic](/getting-started/concepts/content-topics) `contentTopic1`.
 2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and ContentTopic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.
 3. Node A publishes `msg1` on `pubtopic1`. The message is sent from Node A to Node B and then forwarded to Node D.
 4. Node D, upon receiving `msg1` both stores the message for future retrieval by other nodes and forwards it to Node C.
