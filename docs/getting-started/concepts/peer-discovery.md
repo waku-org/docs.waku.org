@@ -12,7 +12,7 @@ Once a connection is established, the node must actively seek out additional pee
 
 ## Predefined Nodes
 
-Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to utilize either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [operate a node](/guides/sdks-and-nodes#operate-a-waku-node) per their preference.
+Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to use either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [operate a node](/guides/sdks-and-nodes#operate-a-waku-node) per their preference.
 
 #### Pros
 
@@ -27,7 +27,7 @@ Waku applications have the flexibility to embed bootstrap node addresses directl
 
 ## [DNS Discovery](https://rfc.vac.dev/spec/31/)
 
-Built upon the foundation of [EIP-1459: Node Discovery via DNS](https://eips.ethereum.org/EIPS/eip-1459), DNS Discovery allows for registering an `ENR` tree in the `TXT` field of a domain name. This innovative approach enables the storage of essential node connection details, including IP, port, and multiaddr, utilizing the standardized [ENR format](https://rfc.vac.dev/spec/31/).
+Built upon the foundation of [EIP-1459: Node Discovery via DNS](https://eips.ethereum.org/EIPS/eip-1459), DNS Discovery allows for registering an `ENR` tree in the `TXT` field of a domain name. This innovative approach enables the storage of essential node connection details, including IP, port, and multiaddr, using the standardized [ENR format](https://rfc.vac.dev/spec/31/).
 
 This bootstrapping method allows anyone to register and publish a domain name for the network, fostering increased decentralization.
 
@@ -44,7 +44,7 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 
 ## [Discv5](https://rfc.vac.dev/spec/33/)
 
-`Discv5` is a decentralized and efficient peer discovery method for the Waku network. It utilizes a [Distributed Hash Table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table) for storing `ENR` records, providing resistance to censorship. `Discv5` offers a global view of participating nodes, enabling random sampling for load distribution. It uses bootstrap nodes as an entry point to the network, providing randomized sets of nodes for mesh expansion. This enhances resilience, load balancing, and security in the Waku network.
+`Discv5` is a decentralized and efficient peer discovery method for the Waku network. It uses a [Distributed Hash Table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table) for storing `ENR` records, providing resistance to censorship. `Discv5` offers a global view of participating nodes, enabling random sampling for load distribution. It uses bootstrap nodes as an entry point to the network, providing randomized sets of nodes for mesh expansion. This enhances resilience, load balancing, and security in the Waku network.
 
 #### Pros
 

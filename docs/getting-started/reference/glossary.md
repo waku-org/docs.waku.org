@@ -80,7 +80,7 @@ Publish/Subscribe (Pub/Sub) is a messaging pattern where publishers distribute m
 
 ### Pub/Sub Topic
 
-A Pub/Sub topic serves as a routing mechanism for messages, with the default topic indicating a subscription to receive messages on that topic for relay purposes.
+A Pub/Sub topic is a routing mechanism for messages, indicating a subscription to receive messages on that topic for relay purposes.
 
 ### Rate Limit Nullifiers
 
