@@ -48,7 +48,12 @@ const sidebars = {
 		"powered-by-waku",
 		"community",
 		"contribute",
-		"presentations"
+		"presentations",
+		{
+			type: "link",
+			label: "Bug Bounties",
+			href: "https://hackenproof.com/status-dot-im/waku"
+		}
 	]
 };
 
