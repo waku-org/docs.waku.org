@@ -6,11 +6,11 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Relay](https://rfc.vac.dev/spec/11/)
 
-`Relay` protocol employs a Pub/Sub architecture to facilitate message routing among peers. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship.
+`Relay` protocol employs a Pub/Sub architecture to facilitate message routing among peers. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship. It also scales the Waku Network to accommodate many nodes efficiently.
 
 ## [RLN Relay](https://rfc.vac.dev/spec/17/)
 
-`RLN Relay` protocol extends the `Relay` protocol by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam prevention. It caps the bandwidth usage for all peers on the network, effectively preventing spam, and imposes financial penalties and network removal for spammers. You can find more details in the [RLN Relay blog post](https://vac.dev/rln-relay).
+`RLN Relay` protocol extends the `Relay` protocol by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam prevention. It enforces a rate limit on messages over time for all peers on the network, economically preventing spam, and imposes financial penalties and network removal for spammers. You can find more details in the [RLN Relay blog post](https://vac.dev/rln-relay).
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
@@ -38,7 +38,7 @@ While the `Light Push` protocol acknowledges the receipt by the remote peer, it 
 
 ## [Waku Message](https://rfc.vac.dev/spec/14)
 
-`Waku Message` specifies the message structure used in the Waku network. It defines the attributes and metadata fields that accompany a message, including the following:
+`Waku Message` specifies the message structure used in the Waku Network. It defines the attributes and metadata fields that accompany a message, including the following:
 
 - `content_topic` attribute for [content-based filtering](/overview/concepts/content-topics).
 - `payload` attribute containing the message data payload to be sent.

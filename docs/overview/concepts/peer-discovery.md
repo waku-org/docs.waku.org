@@ -2,7 +2,7 @@
 title: Peer Discovery
 ---
 
-When initializing a Waku node, it must connect with other peers to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate and connect with other peers. This process is known as bootstrapping.
+When initializing a Waku node, it must connect with other peers to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate other peers in the network. This process is known as bootstrapping.
 
 Once a connection is established, the node must actively seek out additional peers to have:
 
@@ -44,7 +44,7 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 
 ## [Discv5](https://rfc.vac.dev/spec/33/)
 
-`Discv5` is a decentralized and efficient peer discovery method for the Waku network. It uses a [Distributed Hash Table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table) for storing `ENR` records, providing resistance to censorship. `Discv5` offers a global view of participating nodes, enabling random sampling for load distribution. It uses bootstrap nodes as an entry point to the network, providing randomized sets of nodes for mesh expansion. This enhances resilience, load balancing, and security in the Waku network.
+`Discv5` is a decentralized and efficient peer discovery method for the Waku Network. It uses a [Distributed Hash Table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table) for storing `ENR` records, providing resistance to censorship. `Discv5` offers a global view of participating nodes, enabling random sampling for load distribution. It uses bootstrap nodes as an entry point to the network, providing randomized sets of nodes for mesh expansion. This enhances resilience, load balancing, and security in the Waku Network.
 
 #### Pros
 

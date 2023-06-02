@@ -8,7 +8,7 @@ Definitions and usage of the terminology used in the Waku ecosystem.
 
 ### Bootstrapping
 
-Bootstrapping is the initial entry point of a [node](#node) to the [Waku network](#waku). Once connected, other [peer discovery](#peer-discovery) methods can be employed to establish connections with fellow peers.
+Bootstrapping is the initial entry point of a [node](#node) to the [Waku Network](#waku). Once connected, other [peer discovery](#peer-discovery) methods can be employed to establish connections with fellow peers.
 
 ### [Content Topic](/overview/concepts/content-topics)
 
@@ -48,11 +48,11 @@ Light push is a protocol enabling [light nodes](#light-node) to send [messages](
 
 ### Mostly Offline
 
-Mostly offline devices refer to clients who spend most of their time offline or disconnected from the network but occasionally connect for certain reasons. Examples include browsers and mobile phones.
+Mostly offline devices refer to clients who spend most of their time offline or disconnected from the internet and only occasionally to the internet and [Waku Network](#waku). Examples include browsers and mobile phones.
 
 ### Node
 
-A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku network](#waku) to enable secure and private peer-to-peer Web3 communication.
+A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku Network](#waku) to enable secure and private peer-to-peer Web3 communication.
 
 ### Payload
 
@@ -60,11 +60,11 @@ The payload field in a [Waku Message](#waku-message) contains the application da
 
 ### Peer
 
-A peer refers to other [nodes](#node) and participants of the [Waku network](#waku) with whom communication and interaction are possible.
+A peer refers to other [nodes](#node) and participants of the [Waku Network](#waku) with whom communication and interaction are possible.
 
 ### [Peer Discovery](/overview/concepts/peer-discovery)
 
-Peer discovery is the process where a [node](#node) locates and connects with [peers](#peer) to establish communication and exchange information.
+Peer discovery is when a [node](#node) locates and gets information about other [peers](#peer) in the [Waku Network](#waku).
 
 ### [Peer Exchange](/overview/concepts/peer-discovery#peer-exchange)
 
@@ -72,7 +72,7 @@ Peer exchange is a [peer discovery](#peer-discovery) mechanism that enables [lig
 
 ### [Protocol](/overview/concepts/protocols)
 
-A protocol is a set of rules that enables [nodes](#node) within the [Waku network](#waku) to perform various functionalities such as message sending, relaying, filtering, storing, retrieving, and more.
+A protocol is a set of rules that enables [nodes](#node) within the [Waku Network](#waku) to perform various functionalities such as message sending, relaying, filtering, storing, retrieving, and more.
 
 ### Pub/Sub
 
@@ -84,11 +84,11 @@ A Pub/Sub topic is a string that serves as an identifier for the topic of intere
 
 ### [Rate Limit Nullifiers](https://rfc.vac.dev/spec/32/)
 
-Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that provide an anonymous rate-limited messaging framework, preserving message owner anonymity while preventing spam or DoS attacks.
+Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that enables rate limiting functionality while preserving the users's anonymity.
 
 ### [Relay](/overview/concepts/protocols#relay)
 
-Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship-resistant [message](#waku-message) dissemination among [peers](#peer) while preserving privacy.
+Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship-resistant [message](#waku-message) dissemination among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku) to accommodate many nodes efficiently.
 
 ### Resource-Limited
 
@@ -96,7 +96,7 @@ Resource-limited refers to environments or devices restricting available resourc
 
 ### [RLN Relay](/overview/concepts/protocols#rln-relay)
 
-RLN Relay is an extension of the [Relay protocol](#relay) that uses [Rate Limit Nullifiers (RLN)](#rate-limit-nullifiers) to prevent spam economically by enforcing bandwidth caps, imposing penalties, and facilitating network removal for spammers.
+RLN Relay is an extension of the [Relay protocol](#relay) that uses [Rate Limit Nullifiers (RLN)](#rate-limit-nullifiers) to prevent spam economically by enforcing a rate limit on messages over time, imposing penalties, and facilitating network removal for spammers.
 
 ### [SDK](/guides/sdks-and-nodes)
 
@@ -112,15 +112,15 @@ A transport is a network mechanism that establishes connections between [peers](
 
 ### Waku
 
-Waku is a family of private, secure, decentralized, and peer-to-peer Web3 communication [protocols](#protocol) designed to operate in [resource-limited](#resource-limited) environments and suitable for [node](#node) or desktop application use. Additionally, these protocols collectively form the Waku network.
+Waku is a family of private, secure, decentralized, and peer-to-peer Web3 communication [protocols](#protocol) designed to operate in [resource-limited](#resource-limited) environments and suitable for [node](#node) or desktop application use. Additionally, these protocols collectively form the Waku Network.
 
 ### [Waku Message](/overview/concepts/protocols#waku-message)
 
-Waku Message defines the structure of messages in the [Waku network](#waku), including the [content topic](#content-topic), [payload](#payload), and metadata for application-specific processing.
+Waku Message defines the structure of messages in the [Waku Network](#waku), including the [content topic](#content-topic), [payload](#payload), and metadata for application-specific processing.
 
 ### [Waku Message Payload Encryption](https://rfc.vac.dev/spec/26/)
 
-Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku network](#waku). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
+Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku Network](#waku). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
 
 ### [Waku Noise](https://rfc.vac.dev/spec/35/)
 

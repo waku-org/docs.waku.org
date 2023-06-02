@@ -25,7 +25,7 @@ Ongoing research is being conducted, including developing [Rate Limit Nullifiers
 
 ## [Data Confidentiality, Integrity, and Authenticity](https://rfc.vac.dev/spec/10/#data-confidentiality-integrity-and-authenticity)
 
-Confidentiality in Waku is ensured through data encryption, while integrity and authenticity are achieved through digital signatures. These security measures are available in [Waku Message (version 1)](https://rfc.vac.dev/spec/14#version-1) and [Noise](https://rfc.vac.dev/spec/35/) protocols, which offer payload encryption and encrypted signatures. [Noise](https://rfc.vac.dev/spec/35/) protocols also facilitate secure channel negotiation within the Waku network.
+Confidentiality in Waku is ensured through data encryption, while integrity and authenticity are achieved through digital signatures. These security measures are available in [Waku Message (version 1)](https://rfc.vac.dev/spec/14#version-1) and [Noise](https://rfc.vac.dev/spec/35/) protocols, which offer payload encryption and encrypted signatures. [Noise](https://rfc.vac.dev/spec/35/) protocols also facilitate secure channel negotiation within the Waku Network.
 
 ## [Security Considerations](https://rfc.vac.dev/spec/10/#security-considerations)
 

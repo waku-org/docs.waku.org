@@ -52,7 +52,7 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ### Service Network
 
-Waku provides developers with a convenient solution for building decentralized communication systems, eliminating the need to start from scratch or depend on centralized systems. Node operators can offer several services, such as:
+Waku provides developers with a convenient solution for building decentralized communication systems, eliminating the need to build a peer-to-peer network from scratch. Node operators can offer several services, such as:
 
 - Storing messages for offline devices.
 - Enabling bandwidth-saving access to the [Relay](/overview/concepts/protocols#relay) network through [Light Push](/overview/concepts/protocols#light-push) and [Filter](/overview/concepts/protocols#filter) protocols.
@@ -61,7 +61,7 @@ Waku provides developers with a convenient solution for building decentralized c
 
 ## How Does Waku Work?
 
-The [Relay](/overview/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
+The [Relay](/overview/concepts/protocols#relay) protocol is the foundation of the Waku Network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
 1. Facilitating the retrieval of historical messages for mostly offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
