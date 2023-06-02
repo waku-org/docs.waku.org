@@ -14,7 +14,11 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
-`Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other peers. It is designed to be a lightweight alternative to the `Relay` protocol, particularly tailored for devices with limited bandwidth.
+`Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other peers using [content topics](/getting-started/concepts/content-topics). It is designed to be a lightweight alternative for accessing the `Relay` network, particularly tailored for devices with limited bandwidth.
+
+:::info
+`Filter` protocol helps optimize bandwidth usage, but it has fewer privacy guarantees as it must disclose the content topic to its peers to retrieve messages.
+:::
 
 ## [Store](https://rfc.vac.dev/spec/13/)
 
@@ -26,7 +30,7 @@ Using `Relay` and `Filter` protocols is recommended when a node is online, as `S
 
 ## [Light Push](https://rfc.vac.dev/spec/19/)
 
-`Light Push` is a [Request/Reply](/getting-started/concepts/network-domains#requestreply-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgment when sending messages, indicating that at least one peer has received them.
+`Light Push` is a [Request/Response](/getting-started/concepts/network-domains#requestresponse-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgment when sending messages, indicating that at least one peer has received them. Subsequently, the remote peer forwards these messages to the `Relay` network.
 
 :::info
 While the `Light Push` protocol acknowledges the receipt by the remote peer, it does not guarantee network-wide propagation.

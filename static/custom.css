@@ -39,3 +39,13 @@ html[data-theme='dark'] .header-github-link:before {
 	width: 640px;
 	height: 360px;
 }
+
+.external-link {
+	margin-top: 0.25rem;
+}
+
+.external-link svg {
+	width: 13.5px;
+	height: 13.5px;
+	margin-left: 0.3rem;
+}

@@ -8,14 +8,12 @@ const sidebars = {
 		"getting-started/why-waku",
 		"getting-started/use-cases",
 		{
-			type: "link",
-			label: "SDKs and Nodes",
-			href: "/guides/sdks-and-nodes"
+			type: "html",
+			value: "<a href='/guides/sdks-and-nodes' target='_blank' rel='noopener noreferrer' class='menu__link external-link'>SDKs and Nodes <svg width='13.5' height='13.5' viewBox='0 0 24 24'><path fill='currentColor' d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z'></path></svg></a>"
 		},
 		{
-			type: "link",
-			label: "Video Presentations",
-			href: "/presentations"
+			type: "html",
+			value: "<a href='/presentations' target='_blank' rel='noopener noreferrer' class='menu__link external-link'>Presentations <svg width='13.5' height='13.5' viewBox='0 0 24 24'><path fill='currentColor' d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z'></path></svg></a>"
 		},
 		{
 			type: "category",
@@ -24,9 +22,9 @@ const sidebars = {
 			collapsible: true,
 			items: [
 				"getting-started/concepts/protocols",
-				"getting-started/concepts/peer-discovery",
-				"getting-started/concepts/network-domains",
 				"getting-started/concepts/content-topics",
+				"getting-started/concepts/network-domains",
+				"getting-started/concepts/peer-discovery",
 				"getting-started/concepts/transports"
 			]
 		},

@@ -10,7 +10,7 @@ Ready to integrate Waku into your application for private, secure, censorship-fr
 
 ## Operate a Waku Node
 
-The Waku network is permissionless and decentralized, consisting of nodes. It is open for anyone to run a node, use the network, and contribute to its support. Please visit the [nwaku guide](https://github.com/waku-org/nwaku/tree/master/docs/operators) or [go-waku guide](https://github.com/waku-org/go-waku/tree/master/docs/operators) for operators to learn more.
+The Waku network is permissionless and decentralized, consisting of nodes. It is open for anyone to run a node, use the network, and contribute to its support. Please visit the [nwaku guide](https://github.com/waku-org/nwaku/tree/master/docs/operators) (recommended) or [go-waku guide](https://github.com/waku-org/go-waku/tree/master/docs/operators) for operators to learn more.
 
 ## Integrate Using SDKs
 
@@ -19,10 +19,9 @@ Waku is implemented in multiple SDKs, allowing it to easily integrate with diffe
 | SDK | Description | Documentation |
 | - | - | - |
 | [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK recommended for operating a node and interacting with Waku | |
-| [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration in Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK for running a standalone node and accessing the Waku network | |
+| [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | |
-| [waku-ui](https://github.com/waku-org/waku-ui) | React components and UI adapters designed for seamless integration with `js-waku` | |
 
 ## Run on Mobile Devices
 
@@ -36,7 +35,8 @@ Waku provides integrations tailored for mobile applications, enabling Waku to op
 
 ## More Integrations
 
-| Platform | Description | Documentation |
+| Implementation | Description | Documentation |
 | - | - | - |
-| JSON-RPC API | `JSON-RPC` API interface provided by nodes for seamless integration with Waku | |
-| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next Waku project from various example templates | |
+| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
+| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | |
+| JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to access the Waku network | |

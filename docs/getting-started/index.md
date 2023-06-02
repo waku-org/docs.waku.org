@@ -29,7 +29,7 @@ Waku is suitable for applications that require a peer-to-peer approach, offering
 
 ### Platform Agnostic
 
-Waku can run on any platform or environment, even settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are primarily offline.
+Waku can run on any platform or environment, even settings with limited resources like bandwidth, CPU, memory, disk, battery, etc. It can also function when the nodes are not publicly connected or are mostly offline.
 
 ### Privacy-Preserving
 
@@ -49,11 +49,21 @@ Waku nodes are adaptive and can be customized based on the application's require
 
 These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf), which Waku addresses through its adjustable protocol.
 
+
+### Service Network
+
+Waku provides developers with a convenient solution for building decentralized communication systems, eliminating the need to start from scratch or depend on centralized systems. Node operators can offer several services, such as:
+
+- Storing messages for offline devices.
+- Enabling bandwidth-saving access to the [Relay](/getting-started/concepts/protocols#relay) network through [Light Push](/getting-started/concepts/protocols#light-push) and [Filter](/getting-started/concepts/protocols#filter) protocols.
+- Implementing spam prevention and DoS mitigation features.
+- Providing a resilient and shared [Relay](/getting-started/concepts/protocols#relay) infrastructure that applications can leverage to enhance reliability and efficiency.
+
 ## How Does Waku Work?
 
 The [Relay](/getting-started/concepts/protocols#relay) protocol is the foundation of the Waku network, which employs a Pub/Sub architecture built on the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md). Additionally, various other Waku protocols have been created to facilitate specific functionalities, including but not limited to:
 
-1. Facilitating the retrieval of historical messages for primarily offline devices.
+1. Facilitating the retrieval of historical messages for mostly offline devices.
 2. Providing solutions for encrypted communication, such as symmetric encryption, ECIES/asymmetric encryption, and noise handshake-based key turns.
 3. Preserving bandwidth usage for resource-limited environments.
 4. Implementing economic spam protection (rate limits) while ensuring privacy.

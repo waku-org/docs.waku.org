@@ -18,4 +18,4 @@ Join the [Waku Telegram Group](https://t.me/waku_org) now and become part of the
 
 ## [Vac Forum](https://forum.vac.dev/)
 
-Have you got questions, or are you eager to discuss Waku? Head to the [Vac Forum](https://forum.vac.dev/) and join the conversation!
+Are you seeking answers or looking forward to engaging in in-depth discussions about Waku? Join the conversation on the [Vac Forum](https://forum.vac.dev/), where you can participate in research-related and other insightful talks.
