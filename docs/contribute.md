@@ -22,6 +22,10 @@ To suggest a new feature, create an issue in the appropriate [GitHub repository]
 
 Community pull requests (PRs) are highly encouraged, but we recommend [suggesting a feature](#suggest-a-feature) first to gauge interest and gather feedback before proceeding with a PR.
 
+## Submit Security Bug Reports
+
+To improve Waku's security, we invite researchers to collaborate in identifying and resolving potential vulnerabilities. To participate, submit your reports at: <https://hackenproof.com/status-dot-im/waku>. Please review our bug bounty program's details to get started.
+
 ## Contribute to Waku Research
 
 Waku Research is an innovative R&D project dedicated to developing modular peer-to-peer protocols for communication that prioritize privacy, security, and censorship resistance. Explore Waku's ongoing challenges and experimental code at <https://github.com/waku-org/research>.

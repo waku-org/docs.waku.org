@@ -91,7 +91,7 @@ const config = {
 							to: "/presentations"
 						},
 						{
-							label: "Bug Bounties",
+							label: "Bug Bounty Program",
 							href: "https://hackenproof.com/status-dot-im/waku"
 						}
 					]

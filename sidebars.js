@@ -51,7 +51,7 @@ const sidebars = {
 		"presentations",
 		{
 			type: "link",
-			label: "Bug Bounties",
+			label: "Bug Bounty Program",
 			href: "https://hackenproof.com/status-dot-im/waku"
 		}
 	]
