@@ -55,11 +55,11 @@ const config = {
 					type: "docSidebar",
 					position: "right",
 					sidebarId: "main",
-					label: "Getting Started"
+					label: "About Waku"
 				},
 				{
 					type: "dropdown",
-					label: "Guides",
+					label: "Getting Started",
 					position: "right",
 					items: [
 						{
@@ -103,7 +103,7 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "Guides",
+					title: "Getting Started",
 					items: [
 						{
 							to: "/guides/sdks-and-nodes",

@@ -6,7 +6,7 @@ Get involved in Waku's open-source initiatives to improve the protocols, SDKs, d
 
 - [Operating a node](/guides/sdks-and-nodes#operate-a-waku-node) within your application.
 - [Reporting bugs](#report-a-bug) and [suggesting missing features](#suggest-a-feature) to the development team.
-- Inspiring other developers to explore and use Waku for [various use cases](/getting-started/use-cases).
+- Inspiring other developers to explore and use Waku for [various use cases](/overview/use-cases).
 
 Begin your journey by visiting the [SDKs and Nodes](/guides/sdks-and-nodes) guide and start building on Waku today!
 

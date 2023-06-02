@@ -2,7 +2,7 @@
 title: Content Topics
 ---
 
-`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/getting-started/concepts/protocols#relay) or [Filter](/getting-started/concepts/protocols#filter)) and retrieving historical messages ([Store](/getting-started/concepts/protocols#store)) that meet specific filtering criteria. Please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
+`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/overview/concepts/protocols#relay) or [Filter](/overview/concepts/protocols#filter)) and retrieving historical messages ([Store](/overview/concepts/protocols#store)) that meet specific filtering criteria. Please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
 
 ## Content Topic Format
 
@@ -34,4 +34,4 @@ Waku is developing privacy-preserving features like [Anonymous Filter Subscripti
 
 You can preserve the anonymity of individual identities by increasing [k-anonymity](https://www.privitar.com/blog/k-anonymity-an-introduction/), where k is proportional to the network size (number of subscribers). This involves using a single content topic across the entire application or specific features such as notifications or private messages, allowing multiple users to share it.
 
-However, maintaining functionality with a single content topic can introduce complexity. We recommend switching functionality using the Protocol Buffer message format or the [Waku Message](/getting-started/concepts/protocols#waku-message) `meta` attribute. By doing so, applications can retain a high granularity and functionality while using a single content topic, preserving user privacy.
+However, maintaining functionality with a single content topic can introduce complexity. We recommend switching functionality using the Protocol Buffer message format or the [Waku Message](/overview/concepts/protocols#waku-message) `meta` attribute. By doing so, applications can retain a high granularity and functionality while using a single content topic, preserving user privacy.
