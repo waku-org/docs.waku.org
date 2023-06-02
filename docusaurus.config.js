@@ -29,7 +29,7 @@ const config = {
 					editUrl: "https://github.com/waku-org/waku.guide/tree/develop/"
 				},
 				theme: {
-					name: "docusaurus-default",
+					name: "default",
 					options: {
 						customCss: [require.resolve("./src/css/custom.scss")]
 					}
@@ -45,15 +45,14 @@ const config = {
 			}
 		},
 		navbar: {
-			title: "Waku",
-			logo: {
-				srcDark: "img/logo_white.svg"
-			},
 			hideOnScroll: true,
 			items: [
 				{
+					type: 'search'
+				},
+				{
 					type: "docSidebar",
-					position: "right",
+					position: "left",
 					sidebarId: "main",
 					label: "About Waku"
 				},
@@ -75,7 +74,7 @@ const config = {
 				{
 					to: "/powered-by-waku",
 					label: "Powered by Waku",
-					position: "right"
+					position: "left"
 				},
 				{
 					type: "dropdown",
@@ -179,22 +178,12 @@ const config = {
 				}
 			]
 		},
-		colorMode: {
-			defaultMode: "light",
-			disableSwitch: false,
-			respectPrefersColorScheme: false
-		}
+		// colorMode: {
+		// 	defaultMode: "dark",
+		// 	disableSwitch: false,
+		// 	respectPrefersColorScheme: false
+		// }
 	}),
-	plugins: [
-		[
-			"@easyops-cn/docusaurus-search-local",
-			{
-				hashed: true,
-				indexDocs: true,
-				indexPages: true
-			}
-		]
-	],
 	themes: ["@docusaurus/theme-mermaid"],
 	markdown: {
 		mermaid: true
