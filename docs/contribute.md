@@ -24,7 +24,7 @@ Community pull requests (PRs) are highly encouraged, but we recommend [suggestin
 
 ## Submit Security Bug Reports
 
-To improve Waku's security, we invite researchers to collaborate in identifying and resolving potential vulnerabilities. To participate, submit your reports at: <https://hackenproof.com/status-dot-im/waku>. Please review our bug bounty program's details to get started.
+To improve Waku's security, we invite researchers to collaborate in identifying and resolving potential vulnerabilities. To participate, please review our bug bounty program's details and submit your reports at: <https://hackenproof.com/status-dot-im/waku>.
 
 ## Contribute to Waku Research
 
