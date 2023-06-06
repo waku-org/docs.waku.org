@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@acid-info/logos-docusaurus-preset@^1.0.0-alpha.22":
-  version "1.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/@acid-info/logos-docusaurus-preset/-/logos-docusaurus-preset-1.0.0-alpha.22.tgz#cb775d3e9a76901d8f2fbdae4a62d80be101191a"
-  integrity sha512-hjYWnuY2nExJBsZdfs8ZJxp565t8nSJk6qHDvGR2hw2RBKBfsswb3JjOIPlMybDaR+BjNZExYVbU9DlzqM3/IQ==
+"@acid-info/logos-docusaurus-preset@^1.0.0-alpha.23":
+  version "1.0.0-alpha.23"
+  resolved "https://registry.yarnpkg.com/@acid-info/logos-docusaurus-preset/-/logos-docusaurus-preset-1.0.0-alpha.23.tgz#b50884030bf052162058bd412f254d2bea17d279"
+  integrity sha512-MSJxxwPQdJ216bdMBua0oWuNPpPRPV+hTLgJkVNA3U86Z8RRldQEi22H+G/9FnzoCJ99yiXbN36opPltY5ixVQ==
   dependencies:
     "@acid-info/logos-docusaurus-search-local" "^1.0.0-alpha.19"
     "@acid-info/logos-docusaurus-theme" "^1.0.0-alpha.22"
