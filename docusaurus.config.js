@@ -59,7 +59,7 @@ const config = {
 				},
 				{
 					type: "dropdown",
-					label: "Getting Started",
+					label: "Guides",
 					position: "right",
 					items: [
 						{
@@ -107,7 +107,7 @@ const config = {
 		footer: {
 			links: [
 				{
-					title: "Getting Started",
+					title: "Guides",
 					items: [
 						{
 							to: "/guides/sdks-and-nodes",
