@@ -55,7 +55,7 @@ const config = {
 					type: "docSidebar",
 					position: "right",
 					sidebarId: "main",
-					label: "Getting Started"
+					label: "About Waku"
 				},
 				{
 					type: "dropdown",
@@ -89,6 +89,10 @@ const config = {
 						{
 							label: "Watch Our Presentations",
 							to: "/presentations"
+						},
+						{
+							label: "Bug Bounty Program",
+							href: "https://hackenproof.com/status-dot-im/waku"
 						}
 					]
 				},
