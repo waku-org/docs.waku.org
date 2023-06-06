@@ -4,37 +4,41 @@ title: Powered by Waku
 
 Leap into the future with Waku! Revolutionize communication, collaboration, and connectivity. Join us and create something extraordinary!
 
-```mdx-code-block
-import PoweredByCard from "@site/src/components/PoweredByCard";
+import { PoweredBy } from "@site/src/components/mdx";
 
-<div className="powered-by-card-container">
-	<PoweredByCard
-		appLink="https://status.im"
-		logoSrc="/img/status-logo.svg"
-		appName="Status"
-		>
-		Status is a secure messaging app, crypto wallet, and Web3 browser built with state-of-the-art technology.
-	</PoweredByCard>
-	<PoweredByCard
-		appLink="https://xmtp.org"
-		logoSrc="/img/xmtp-logo.svg"
-		appName="XMTP"
-		>
-		XMTP uses the Waku Network to enable secure Web3 messaging in their open protocol and network.
-	</PoweredByCard>
-	<PoweredByCard
-		appLink="https://railgun.org/"
-		logoSrc="/img/railgun-logo.png"
-		appName="RAILGUN"
-		>
-		RAILGUN uses Waku to offer private gas payments to users, ensuring anonymity and privacy for their transactions.
-	</PoweredByCard>
-	<PoweredByCard
-		appLink="https://thegraph.com/"
-		logoSrc="/img/the-graph-logo.svg"
-		appName="The Graph"
-		>
-		Waku powers the Graphcast SDK, enabling the development of gossip-powered applications within The Graph ecosystem.
-	</PoweredByCard>
-</div>
-```
+<PoweredBy
+  items={[
+    {
+      name: "Status",
+      description:
+        "Status is a secure messaging app, crypto wallet, and Web3 browser built with state-of-the-art technology.",
+      logoSrc: "/img/status-mark-black.svg",
+      logoSrcDark: "/img/status-mark-white.svg",
+      link: "https://status.im",
+    },
+    {
+      name: "XMTP",
+      description:
+        "XMTP uses the Waku network to enable secure Web3 messaging in their open protocol and network.",
+      logoSrc: "/img/xmtp-mark-black.svg",
+      logoSrcDark: "/img/xmtp-mark-white.svg",
+      link: "https://xmtp.org",
+    },
+    {
+      name: "RAILGUN",
+      description:
+        "RAILGUN uses Waku to offer private gas payments to users, ensuring anonymity and privacy for their transactions.",
+      logoSrc: "/img/railgun-mark-black.svg",
+      logoSrcDark: "/img/railgun-mark-white.svg",
+      link: "https://railgun.org",
+    },
+    {
+      name: "The Graph",
+      description:
+        "Waku powers the Graphcast SDK, enabling the development of gossip-powered applications within The Graph ecosystem.",
+      logoSrc: "/img/the-graph-mark-black.svg",
+      logoSrcDark: "/img/the-graph-mark-white.svg",
+      link: "https://thegraph.com/",
+    },
+  ]}
+/>
