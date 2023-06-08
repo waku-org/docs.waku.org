@@ -1,5 +1,5 @@
 ---
-title: SDKs and Nodes
+title: Nodes and SDKs
 ---
 
 :::caution
@@ -10,7 +10,12 @@ Ready to integrate Waku into your application for private, secure, censorship-fr
 
 ## Operate a Waku Node
 
-The Waku Network is permissionless and decentralized, consisting of nodes. It is open for anyone to run a node, use the network, and contribute to its support. Please visit the [nwaku guide](https://github.com/waku-org/nwaku/tree/master/docs/operators) (recommended) or [go-waku guide](https://github.com/waku-org/go-waku/tree/master/docs/operators) for operators to learn more.
+The Waku Network is a decentralized, permissionless system where anyone can run nodes, use the network, and contribute to its support.
+
+| Client | Description | Documentation |
+| - | - | - |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run Nwaku Node](/guides/run-nwaku-node) |
+| [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | [Run Go-Waku Node](https://github.com/waku-org/go-waku/tree/master/docs/operators) |
 
 ## Integrate Using SDKs
 
@@ -19,7 +24,7 @@ Waku is implemented in multiple SDKs, allowing it to easily integrate with diffe
 | SDK | Description | Documentation |
 | - | - | - |
 | [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK for running a standalone node and accessing the Waku Network | |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim SDK designed for integration with native Nim applications | |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | |
 

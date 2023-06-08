@@ -63,8 +63,12 @@ const config = {
 					position: "right",
 					items: [
 						{
-							label: "SDKs and Nodes",
-							to: "/guides/sdks-and-nodes"
+							label: "Nodes and SDKs",
+							to: "/guides/nodes-and-sdks"
+						},
+						{
+							label: "Run Nwaku Node",
+							to: "guides/run-nwaku-node"
 						}
 					]
 				},
@@ -110,8 +114,12 @@ const config = {
 					title: "Guides",
 					items: [
 						{
-							to: "/guides/sdks-and-nodes",
-							label: "SDKs and Nodes"
+							to: "/guides/nodes-and-sdks",
+							label: "Nodes and SDKs"
+						},
+						{
+							label: "Run Nwaku Node",
+							to: "guides/run-nwaku-node"
 						}
 					]
 				},
