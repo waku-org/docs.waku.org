@@ -26,7 +26,9 @@ const config = {
 				docs: {
 					routeBasePath: "/",
 					sidebarPath: require.resolve("./sidebars.js"),
-					editUrl: "https://github.com/waku-org/waku.guide/tree/develop/"
+					editUrl: "https://github.com/waku-org/waku.guide/tree/develop/",
+					showLastUpdateAuthor: true,
+          			showLastUpdateTime: true,
 				},
 				theme: {
 					name: "default",
