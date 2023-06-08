@@ -8,12 +8,14 @@ const sidebars = {
 		"getting-started/why-waku",
 		"getting-started/use-cases",
 		{
-			type: "html",
-			value: "<a href='/guides/sdks-and-nodes' target='_blank' rel='noopener noreferrer' class='menu__link external-link'>SDKs and Nodes <svg width='13.5' height='13.5' viewBox='0 0 24 24'><path fill='currentColor' d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z'></path></svg></a>"
+			type: 'html',
+			value:
+			  '<a href="/guides/sdks-and-nodes" target="_blank" rel="noopener noreferrer" class="menu__link external-link">SDKs and Nodes<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
 		},
 		{
-			type: "html",
-			value: "<a href='/presentations' target='_blank' rel='noopener noreferrer' class='menu__link external-link'>Presentations <svg width='13.5' height='13.5' viewBox='0 0 24 24'><path fill='currentColor' d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z'></path></svg></a>"
+			type: 'html',
+			value:
+			  '<a href="/presentations" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Presentations<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
 		},
 		{
 			type: "category",
