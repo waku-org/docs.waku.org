@@ -170,9 +170,6 @@ const config = {
 						{
 							href: "https://waku.org/privacy-policy",
 							label: "Privacy Policy"
-						},
-						{
-							html: "<link rel='stylesheet' href='/custom.css' />"
 						}
 					]
 				}
