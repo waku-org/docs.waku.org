@@ -24,7 +24,7 @@ Waku provides a set of protocols to optimize its performance in resource-limited
 
 ## Overview of Protocol Interaction
 
-Here's a diagram illustrating the interaction between different protocols within the Waku Network.
+Here is a diagram illustrating the interaction between different protocols within the Waku Network.
 
 ```mermaid
 sequenceDiagram

@@ -14,7 +14,7 @@ Waku can be used as the communication layer when building a private, decentraliz
 
 ### Polls
 
-With Waku, you can create, answer, and view censorship-resistant polls, fostering a democratic and transparent voting environment immune to manipulation and censorship.
+With Waku, you can create, answer, and view censorship-resistant polls, promoting a democratic and transparent voting environment immune to manipulation and censorship.
 
 #### Demos
 

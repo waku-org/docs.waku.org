@@ -8,7 +8,7 @@ Some of the Waku's security features include the following:
 
 ## [Pseudonymity](https://rfc.vac.dev/spec/10/#pseudonymity)
 
-Waku ensures pseudonymity across its protocol layers, using libp2p `PeerID` as identifiers instead of disclosing true identities. However, it's important to note that pseudonymity doesn't provide complete anonymity. Actions performed under the same pseudonym (`PeerID`) can be linked, leading to the potential re-identification of the actual actor.
+Waku ensures pseudonymity across its protocol layers, using libp2p `PeerID` as identifiers instead of disclosing true identities. However, it is important to note that pseudonymity does not provide complete anonymity. Actions performed under the same pseudonym (`PeerID`) can be linked, leading to the potential re-identification of the actual actor.
 
 ## [Anonymity/Unlinkability](https://rfc.vac.dev/spec/10/#anonymity--unlinkability)
 

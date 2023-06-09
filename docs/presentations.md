@@ -2,7 +2,7 @@
 title: Watch Our Presentations
 ---
 
-## Using ZKP for Better p2p Messaging With Waku
+## Using ZKP for Better p2p Messaging with Waku
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/eJwX1JpcKQk" title="Using ZKP for better p2p messaging with Waku by Oskar Thorén" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
