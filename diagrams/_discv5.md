@@ -1,4 +1,3 @@
-
 ```mermaid
 sequenceDiagram
     Alice->>DNS Server: (1) Execute DNS Discovery
