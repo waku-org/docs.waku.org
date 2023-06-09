@@ -38,6 +38,7 @@
     "Secureum",
     "Oskar",
     "Thorén",
+    "wakunode",
     "autoplay"
   ],
   "flagWords": [],
@@ -64,7 +65,11 @@
     {
       "name": "youtube-link",
       "pattern": "/< youtube.*/"
+    },
+    {
+      "name": "enrUri",
+      "pattern": "/enr:-.*/"
     }
   ],
-  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link"]
+  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link", "enrUri"]
 }

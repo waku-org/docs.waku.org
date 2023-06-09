@@ -12,7 +12,7 @@ Once a connection is established, the node must actively seek out additional pee
 
 ## Predefined Nodes
 
-Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to use either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [operate a node](/guides/nodes-and-sdks#operate-a-waku-node) per their preference.
+Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can opt to use either the [predefined nodes by Status](https://github.com/waku-org/js-waku/blob/master/packages/core/src/lib/predefined_bootstrap_nodes.ts#L45) or [run a node](/guides/nodes-and-sdks#run-a-waku-node) per their preference.
 
 #### Pros
 
@@ -29,7 +29,7 @@ Waku applications have the flexibility to embed bootstrap node addresses directl
 
 Built upon the foundation of [EIP-1459: Node Discovery via DNS](https://eips.ethereum.org/EIPS/eip-1459), DNS Discovery allows the retrieval of an `ENR` tree from the `TXT` field of a domain name. This innovative approach enables the storage of essential node connection details, including IP, port, and multiaddr, using the standardized [ENR format](https://rfc.vac.dev/spec/31/).
 
-This bootstrapping method allows anyone to register and publish a domain name for the network, fostering increased decentralization.
+This bootstrapping method allows anyone to register and publish a domain name for the network, promoting increased decentralization.
 
 #### Pros
 

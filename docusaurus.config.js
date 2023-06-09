@@ -67,7 +67,7 @@ const config = {
 							to: "/guides/nodes-and-sdks"
 						},
 						{
-							label: "Run Nwaku Node",
+							label: "Run a Nwaku Node",
 							to: "guides/run-nwaku-node"
 						}
 					]
@@ -118,7 +118,7 @@ const config = {
 							label: "Nodes and SDKs"
 						},
 						{
-							label: "Run Nwaku Node",
+							label: "Run a Nwaku Node",
 							to: "guides/run-nwaku-node"
 						}
 					]

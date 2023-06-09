@@ -41,7 +41,7 @@ Waku can cater to applications that require privacy guarantees, such as:
 
 ### Modular Design
 
-Waku nodes are adaptive and can be customized based on the application's requirements and environment. Users can adjust several parameters, including:
+Waku nodes are adaptive and can be customized based on the application's requirements and environment. Users can adjust multiple parameters, including:
 
 - Low privacy/low resource usage vs. high privacy/increased latency + bandwidth usage.
 - Providing resources to the network vs. consuming resources.
@@ -52,7 +52,7 @@ These options are part of the [Anonymity Trilemma](https://eprint.iacr.org/2017/
 
 ### Service Network
 
-Waku provides developers with a convenient solution for building decentralized communication systems, eliminating the need to build a peer-to-peer network from scratch. Node operators can offer several services, such as:
+Waku provides developers with a convenient solution for building decentralized communication systems, eliminating the need to build a peer-to-peer network from scratch. Node operators can offer multiple services, such as:
 
 - Storing messages for offline devices.
 - Enabling bandwidth-saving access to the [Relay](/overview/concepts/protocols#relay) network through [Light Push](/overview/concepts/protocols#light-push) and [Filter](/overview/concepts/protocols#filter) protocols.
@@ -70,4 +70,4 @@ The [Relay](/overview/concepts/protocols#relay) protocol is the foundation of th
 5. Developing methods to protect against mass deanonymization (currently being researched).
 6. Designing strategies to scale `Relay/GossipSub` securely.
 
-If you want to learn more about how Waku operates, the [WAKU2 RFC](https://rfc.vac.dev/spec/10/) provides an in-depth look under the hood.
+If you want to learn more about how Waku works, the [WAKU2 RFC](https://rfc.vac.dev/spec/10/) provides an in-depth look under the hood.

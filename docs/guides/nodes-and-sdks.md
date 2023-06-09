@@ -8,20 +8,20 @@ Waku has risks and limitations as it is still developing and preparing for exten
 
 Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by operating a node.
 
-## Operate a Waku Node
+## Run a Waku Node
 
 The Waku Network is a decentralized, permissionless system where anyone can run nodes, use the network, and contribute to its support.
 
-| Client | Description | Documentation |
+| | Description | Documentation |
 | - | - | - |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run Nwaku Node](/guides/run-nwaku-node) |
-| [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | [Run Go-Waku Node](https://github.com/waku-org/go-waku/tree/master/docs/operators) |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/run-nwaku-node) |
+| [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | [Run a Go-Waku Node](https://github.com/waku-org/go-waku/tree/master/docs/operators) |
 
 ## Integrate Using SDKs
 
-Waku is implemented in multiple SDKs, allowing it to easily integrate with different languages and address various use cases.
+Waku is implemented in multiple SDKs, allowing it to integrate with different languages and address various use cases efficiently.
 
-| SDK | Description | Documentation |
+| | Description | Documentation |
 | - | - | - |
 | [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
 | [nwaku](https://github.com/waku-org/nwaku) | Nim SDK designed for integration with native Nim applications | |
@@ -30,9 +30,9 @@ Waku is implemented in multiple SDKs, allowing it to easily integrate with diffe
 
 ## Run on Mobile Devices
 
-Waku provides integrations tailored for mobile applications, enabling Waku to operate efficiently on mobile devices.
+Waku provides integrations tailored for mobile applications, enabling Waku to run efficiently on mobile devices.
 
-| Language | Description | Documentation |
+| | Description | Documentation |
 | - | - | - |
 | [React Native](https://github.com/waku-org/waku-react-native) | React Native wrapper using `go-waku` bindings designed for native mobile integration | |
 | Swift (iOS) | `go-waku` bindings for Swift applications to seamlessly integrate Waku | |
@@ -40,7 +40,7 @@ Waku provides integrations tailored for mobile applications, enabling Waku to op
 
 ## More Integrations
 
-| Implementation | Description | Documentation |
+| | Description | Documentation |
 | - | - | - |
 | [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | |
