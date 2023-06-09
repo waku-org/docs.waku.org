@@ -15,6 +15,7 @@
     "nwaku",
     "deanonymization",
     "ECIES",
+    "enrtree",
     "Discv5",
     "Gossipsub",
     "LIGHTPUSH",
