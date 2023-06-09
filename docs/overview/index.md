@@ -41,7 +41,7 @@ Waku can cater to applications that require privacy guarantees, such as:
 
 ### Modular Design
 
-Waku nodes are adaptive and can be customized based on the application's requirements and environment. Users can adjust multiple parameters, including:
+Waku nodes are adaptive and can be customized based on the application's requirements and environment. Users can adjust multiple parameters, such as:
 
 - Low privacy/low resource usage vs. high privacy/increased latency + bandwidth usage.
 - Providing resources to the network vs. consuming resources.
