@@ -44,4 +44,4 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | - | - | - |
 | [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | |
-| JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to access the Waku Network | |
+| JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | |

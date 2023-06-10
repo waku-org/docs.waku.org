@@ -39,6 +39,7 @@ By default, a `nwaku` node is configured to do the following:
 - Generate a new private key and libp2p identity.
 - Listen for incoming libp2p connections on the default TCP port (`60000`).
 - Subscribe to the default Pub/Sub topic (`/waku/2/default-waku/proto`).
+- Start the `JSON-RPC` HTTP server on the default port (`8545`).
 - Enable the `Relay` protocol for relaying messages.
 - Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not persist any message itself.
 
@@ -82,3 +83,7 @@ You will get a response similar to:
 	}
 }
 ```
+
+:::info
+The `listenAddresses` field stores the transport addresses for accepting connections, while the `enrUri` field stores the `ENR` URI for peer discovery.
+:::

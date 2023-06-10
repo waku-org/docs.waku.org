@@ -1,5 +1,3 @@
-
-
 ```mermaid
 sequenceDiagram
     Waku Node->>DNS Server: (1) Lookup TXT example.com

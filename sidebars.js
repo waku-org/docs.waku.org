@@ -28,7 +28,20 @@ const sidebars = {
 						"overview/concepts/protocols",
 						"overview/concepts/content-topics",
 						"overview/concepts/network-domains",
-						"overview/concepts/peer-discovery",
+						{
+							type: "category",
+							label: "Peer Discovery",
+							link: {
+								type: "doc",
+								id: "overview/concepts/peer-discovery"
+							},
+							items: [
+								"overview/concepts/peer-discovery/predefined-nodes",
+								"overview/concepts/peer-discovery/dns-discovery",
+								"overview/concepts/peer-discovery/discv5",
+								"overview/concepts/peer-discovery/peer-exchange"
+							]
+						},
 						"overview/concepts/transports"
 					]
 				},
