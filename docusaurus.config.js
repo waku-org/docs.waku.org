@@ -25,6 +25,7 @@ const config = {
         customSiteConfig: true,
         docs: {
           routeBasePath: "/",
+          path: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/waku-org/waku.guide/tree/develop/",
           showLastUpdateAuthor: false,
@@ -154,12 +155,8 @@ const config = {
           title: "Legal",
           items: [
             {
-              href: "https://waku.org/terms-of-use",
-              label: "Terms of Use",
-            },
-            {
-              href: "https://waku.org/privacy-policy",
-              label: "Privacy Policy",
+              href: "/terms",
+              label: "Terms & conditions",
             },
           ],
         },
