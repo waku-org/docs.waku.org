@@ -20,7 +20,7 @@ This bootstrapping method allows anyone to register and publish a domain name fo
 ## Overview
 
 ```mdx-code-block
-import DNSDiscovery from "@site/diagrams/_dns_discovery.md";
+import DNSDiscovery from "@site/diagrams/_dns-discovery.md";
 
 <DNSDiscovery />
 ```

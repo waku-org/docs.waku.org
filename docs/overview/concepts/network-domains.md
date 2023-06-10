@@ -27,7 +27,7 @@ Waku provides a set of protocols to optimize its performance in resource-limited
 Here is a diagram illustrating the interaction between different protocols within the Waku Network.
 
 ```mdx-code-block
-import ProtocolInteraction from "@site/diagrams/_protocol_interaction.md";
+import ProtocolInteraction from "@site/diagrams/_protocol-interaction.md";
 
 <ProtocolInteraction />
 ```

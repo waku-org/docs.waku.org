@@ -1,23 +1,23 @@
 ```mermaid
 sequenceDiagram
-participant A as A relay
-participant B as B relay(pubtopic1)
-participant C as C relay(pubtopic1)
-participant D as D relay(pubtopic1), store(pubtopic1), filter
-participant E as E relay, store
-participant F as F filter
+	participant A as A relay
+	participant B as B relay(pubtopic1)
+	participant C as C relay(pubtopic1)
+	participant D as D relay(pubtopic1), store(pubtopic1), filter
+	participant E as E relay, store
+	participant F as F filter
 
-A ->> A: msg1=WakuMessage(contentTopic1, data) (1)
-F ->> D: FilterRequest(pubtopic1, contentTopic1) (2)
-D ->> D: Subscribe F to filter (2)
-A ->> B: Publish msg1 on pubtopic1 (3)
-B ->> D: relay msg1 on pubtopic1 (3)
-D ->> D: store: saves msg1 (4)
-D ->> C: relay msg1 on pubtopic1 (4)
-D ->> F: MessagePush(msg1) (5)
-E ->> E: E comes online (6)
-E ->> D: HistoryQuery(pubtopic1, contentTopic1) (6)
-D ->> E: HistoryResponse(msg1, ...) (6)
+	A ->> A: msg1=WakuMessage(contentTopic1, data) (1)
+	F ->> D: FilterRequest(pubtopic1, contentTopic1) (2)
+	D ->> D: Subscribe F to filter (2)
+	A ->> B: Publish msg1 on pubtopic1 (3)
+	B ->> D: relay msg1 on pubtopic1 (3)
+	D ->> D: store: saves msg1 (4)
+	D ->> C: relay msg1 on pubtopic1 (4)
+	D ->> F: MessagePush(msg1) (5)
+	E ->> E: E comes online (6)
+	E ->> D: HistoryQuery(pubtopic1, contentTopic1) (6)
+	D ->> E: HistoryResponse(msg1, ...) (6)
 ```
 
 The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default Pub/Sub topic) and indicates that it is subscribed to messages on that topic for a relay. Node D serves as a `Store` and is responsible for persisting messages.

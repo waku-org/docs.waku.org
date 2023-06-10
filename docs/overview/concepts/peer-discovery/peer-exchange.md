@@ -17,7 +17,7 @@ The primary objective of this protocol is to facilitate peer connectivity for re
 ## Overview
 
 ```mdx-code-block
-import PeerExchange from "@site/diagrams/_peer_exchange.md";
+import PeerExchange from "@site/diagrams/_peer-exchange.md";
 
 <PeerExchange />
 ```
