@@ -57,7 +57,7 @@ const config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "main",
-          label: "Getting Started",
+          label: "About Waku",
         },
         {
           type: "dropdown",
@@ -65,8 +65,12 @@ const config = {
           position: "right",
           items: [
             {
-              label: "SDKs and Nodes",
-              to: "/guides/sdks-and-nodes",
+              label: "Nodes and SDKs",
+              to: "/guides/nodes-and-sdks",
+            },
+            {
+              label: "Run a Nwaku Node",
+              to: "/guides/run-nwaku-node",
             },
           ],
         },
@@ -92,6 +96,10 @@ const config = {
               label: "Watch Our Presentations",
               to: "/presentations",
             },
+            {
+              label: "Bug Bounty Program",
+              to: "https://hackenproof.com/status-dot-im/waku",
+            },
           ],
         },
         {
@@ -108,8 +116,12 @@ const config = {
           title: "Guides",
           items: [
             {
-              to: "/guides/sdks-and-nodes",
-              label: "SDKs and Nodes",
+              to: "/guides/nodes-and-sdks",
+              label: "Nodes and SDKs",
+            },
+            {
+              to: "/guides/run-nwaku-node",
+              label: "Run a Nwaku Node",
             },
           ],
         },
@@ -156,17 +168,12 @@ const config = {
           items: [
             {
               href: "/terms",
-              label: "Terms & conditions",
+              label: "Terms & Conditions",
             },
           ],
         },
       ],
     },
-    // colorMode: {
-    // 	defaultMode: "dark",
-    // 	disableSwitch: false,
-    // 	respectPrefersColorScheme: false
-    // }
   },
   themes: ["@docusaurus/theme-mermaid"],
   markdown: {

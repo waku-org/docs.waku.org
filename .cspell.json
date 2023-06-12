@@ -15,6 +15,7 @@
     "nwaku",
     "deanonymization",
     "ECIES",
+    "enrtree",
     "Discv5",
     "Gossipsub",
     "LIGHTPUSH",
@@ -38,7 +39,9 @@
     "Secureum",
     "Oskar",
     "Thorén",
-    "autoplay"
+    "wakunode",
+    "autoplay",
+    "classwide"
   ],
   "flagWords": [],
   "ignorePaths": [
@@ -64,7 +67,11 @@
     {
       "name": "youtube-link",
       "pattern": "/< youtube.*/"
+    },
+    {
+      "name": "enrUri",
+      "pattern": "/enr:-.*/"
     }
   ],
-  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link"]
+  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link", "enrUri"]
 }

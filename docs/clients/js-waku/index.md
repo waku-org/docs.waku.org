@@ -30,7 +30,7 @@ You can also interact with these examples live:
 an economic spam protection protocol that rate limit using zero-knowledge for privacy preserving purposes.
 
 To gain a deeper understanding of Waku, visit the [overview documentation](/).
-If you're interested in learning how Waku works under the hood, check out the specs at [rfc.vac.dev](https://rfc.vac.dev/).
+If you are interested in learning how Waku works under the hood, check out the specs at [rfc.vac.dev](https://rfc.vac.dev/).
 
 ## Bugs, Questions & Support
 
