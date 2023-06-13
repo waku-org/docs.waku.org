@@ -13,8 +13,8 @@ pipeline {
   environment {
     GIT_COMMITTER_NAME = 'status-im-auto'
     GIT_COMMITTER_EMAIL = 'auto@status.im'
-    PROD_SITE = 'waku.guide'
-    DEV_SITE  = 'dev.waku.guide'
+    PROD_SITE = 'docs.waku.org'
+    DEV_SITE  = 'dev.docs.waku.org'
     DEV_HOST  = 'jenkins@node-01.do-ams3.sites.misc.statusim.net'
     SCP_OPTS  = 'StrictHostKeyChecking=no'
   }
