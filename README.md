@@ -1,8 +1,8 @@
-# Waku Docs Portal
+# Waku Documentation Portal
 
-[![Waku Docs Portal](https://img.shields.io/badge/waku.guide-black)](https://waku.guide/)
+[![Waku Documentation Portal](https://img.shields.io/badge/docs.waku.org-black)](https://docs.waku.org/)
 
-The Waku Docs Portal can be accessed at [waku.guide](https://waku.guide) and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+The Waku Documentation Portal can be accessed at <https://docs.waku.org/> and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ The Waku Docs Portal can be accessed at [waku.guide](https://waku.guide) and was
 Clone this repository:
 
 ```bash
-git clone https://github.com/waku-org/waku.guide
+git clone https://github.com/waku-org/docs.waku.org
 ```
 
 Install the dependencies:

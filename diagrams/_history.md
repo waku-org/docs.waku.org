@@ -1,5 +1,5 @@
 ```mermaid
-%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'HISTORY'}} }%%
+%%{init: { 'gitGraph': {'showBranches': true, 'showCommitLabel': true, 'mainBranchName': 'HISTORY'}} }%%
 gitGraph
 	commit id:"2013"
     commit id:"2015" tag:"R&D"
