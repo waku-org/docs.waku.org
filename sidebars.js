@@ -53,7 +53,17 @@ const sidebars = {
 	],
 	guides: [
 		"guides/nodes-and-sdks",
-		"guides/run-nwaku-node",
+		{
+			type: "category",
+			label: "Run a Nwaku Node",
+			link: {
+				type: "doc",
+				id: "guides/run-nwaku-node",
+			},
+			items: [
+				"guides/nwaku/build-from-source",
+			]
+		},
 	],
 	community: [
 		"powered-by-waku",

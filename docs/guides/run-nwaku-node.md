@@ -8,11 +8,11 @@ This guide provides detailed steps to build, configure, and connect a `nwaku` no
 
 ## Build the Node
 
-Before running a Nwaku node, it is necessary to build it. Nwaku provides multiple options for building a node:
+Before running a nwaku node, it is necessary to build it. Nwaku provides multiple options for building a node:
 
 | | Description | Documentation |
 | - | - | - |
-| Source Code | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/build.md) |
+| Source Code | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-from-source) |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
 | Nightly Release | Try out the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
 | Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](https://github.com/waku-org/nwaku/blob/master/docs/operators/docker-quickstart.md) |
