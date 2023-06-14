@@ -15,7 +15,7 @@ Before running a nwaku node, it is necessary to build it. Nwaku provides multipl
 | Source Code | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-from-source) |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
 | Nightly Release | Try out the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
-| Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](https://github.com/waku-org/nwaku/blob/master/docs/operators/docker-quickstart.md) |
+| Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](/guides/nwaku/run-docker) |
 | DigitalOcean Droplet | Build and run a `nwaku` node on a DigitalOcean Droplet | [Run Nwaku on DigitalOcean Droplet](https://github.com/waku-org/nwaku/blob/master/docs/operators/droplet-quickstart.md) |
 
 :::info
@@ -43,7 +43,7 @@ By default, a `nwaku` node is configured to do the following:
 - Enable the `Relay` protocol for relaying messages.
 - Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
 
-:::info
+:::tip
 For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Configuration Methods](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure.md) guide.
 :::
 
@@ -57,7 +57,7 @@ To join the Waku Network, nodes must connect with peers. Nwaku provides multiple
 | DNS Discovery | Enable `nwaku` to locate peers to connect to using the `DNS Discovery` mechanism | [Configure DNS Discovery](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure-dns-disc.md) |
 | Discv5 | Enable `nwaku` to locate peers to connect to using the `Discv5` mechanism | [Configure Discv5](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/connect.md#option-3-discover-peers-using-waku-discovery-v5) |
 
-:::info
+:::tip
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
 :::
 

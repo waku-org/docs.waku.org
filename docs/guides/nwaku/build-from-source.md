@@ -2,7 +2,7 @@
 title: Build Nwaku from Source
 ---
 
-Nwaku offers the option of building a node from the source when you want to access the latest development version or a specific commit of nwaku. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
+This guide provides detailed steps to build a nwaku node from the source to access the latest development version or a specific commit of nwaku. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
 
 :::info
 Nwaku can be built and run on Linux and macOS, while Windows support is currently experimental.
@@ -15,6 +15,8 @@ Nwaku can be built and run on Linux and macOS, while Windows support is currentl
 - [Nim](https://nim-lang.org/) installed on your system
 
 ## Install Dependencies
+
+To clone and build nwaku, you will need the standard developer tools, including a C compiler, Make, Bash, and Git.
 
 #### Linux
 
@@ -44,7 +46,7 @@ dnf install @development-tools
 
 ```bash
 # using your favorite AUR helper
-yourAURhelper -S base-devel
+[AUR HELPER] -S base-devel
 ```
 
 </TabItem>
@@ -66,7 +68,8 @@ Get the source code from the GitHub repository. The default branch is `master`, 
 git clone https://github.com/waku-org/nwaku
 cd nwaku
 ```
-:::info
+
+:::tip
 You can use `git tag -l` to check specific version tags.
 :::
 
@@ -78,7 +81,7 @@ To build the nwaku binary, run the following:
 make wakunode2
 ```
 
-The first `make` invocation updates all Git submodules. After each `git pull`, run `make update` to keep the submodules updated in the future.
+The first `make` invocation updates to all Git submodules. After each `git pull`, run `make update` to keep the submodules updated in the future.
 
 ```bash
 make update wakunode2
@@ -95,7 +98,7 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 To learn more about running nwaku, please refer to:
 
 - [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
-- [Run Nwaku in Docker Container](https://github.com/waku-org/nwaku/blob/master/docs/operators/docker-quickstart.md)
+- [Run Nwaku in Docker Container](/guides/nwaku/run-docker)
 - [Run Nwaku on DigitalOcean Droplet](https://github.com/waku-org/nwaku/blob/master/docs/operators/droplet-quickstart.md)
 
 ## Run Test Suite
