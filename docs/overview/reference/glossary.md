@@ -18,11 +18,11 @@ A content topic is a string attached to [messages](#waku-message) to enable [pro
 
 Dappnode is an open-source platform that simplifies the hosting and management of decentralized applications and blockchain nodes, including [Waku](#waku).
 
-### [Discv5](/overview/concepts/peer-discovery/discv5)
+### [Discv5](/overview/concepts/discv5)
 
 Discv5 is a [peer discovery](#peer-discovery) mechanism using a Distributed Hash Table (DHT) to store [ENR](#enr) records, providing censorship resistance, load distribution, and enhanced network resilience.
 
-### [DNS Discovery](/overview/concepts/peer-discovery/dns-discovery)
+### [DNS Discovery](/overview/concepts/dns-discovery)
 
 DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the retrieval of an [ENR](#enr) tree from the TXT field of a domain name, enabling the storage of [node](#node) connection details and promoting decentralization.
 
@@ -37,6 +37,10 @@ Filter is a [protocol](#protocol) that enables [light nodes](#light-node) to sel
 ### [GossipSub](/overview/concepts/network-domains#gossip-domain)
 
 GossipSub is a [protocol](#protocol) for efficient and scalable information dissemination in decentralized networks commonly used in blockchain systems.
+
+### [Libp2p](https://libp2p.io/)
+
+Libp2p is a modular network stack and protocol suite that allows developers to build decentralized, peer-to-peer applications across various network protocols.
 
 ### Light Node
 
@@ -66,9 +70,13 @@ A peer refers to other [nodes](#node) and participants of the [Waku Network](#wa
 
 Peer discovery is when a [node](#node) locates and gets information about other [peers](#peer) in the [Waku Network](#waku).
 
-### [Peer Exchange](/overview/concepts/peer-discovery/peer-exchange)
+### [Peer Exchange](/overview/concepts/peer-exchange)
 
 Peer exchange is a [peer discovery](#peer-discovery) mechanism that enables [light nodes](#light-node) to request and receive peers from other nodes in the network, allowing them to bootstrap and expand their connections without depending on [Discv5](#discv5).
+
+### Peer ID
+
+`PeerID` is the unique identifier of a [node](#node) in the [Waku Network](#waku) generated from the cryptographic hash of the node's public key.
 
 ### [Protocol](/overview/concepts/protocols)
 

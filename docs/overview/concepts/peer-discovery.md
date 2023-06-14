@@ -12,7 +12,7 @@ Once a connection is established, the node must actively seek out additional pee
 
 Waku supports multiple peer discovery mechanisms, such as:
 
-- [Configuring Predefined Nodes](/overview/concepts/peer-discovery/predefined-nodes)
-- [Peer Discovery via DNS](/overview/concepts/peer-discovery/dns-discovery)
-- [Discv5 Ambient Peer Discovery](/overview/concepts/peer-discovery/discv5)
-- [Peer Exchange](/overview/concepts/peer-discovery/peer-exchange)
+- [Configuring Predefined Nodes](/overview/concepts/predefined-nodes)
+- [Peer Discovery via DNS](/overview/concepts/dns-discovery)
+- [Discv5 Ambient Peer Discovery](/overview/concepts/discv5)
+- [Peer Exchange](/overview/concepts/peer-exchange)

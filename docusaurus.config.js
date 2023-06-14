@@ -4,8 +4,8 @@ require("dotenv").config();
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
-  title: "Waku Docs Portal",
-  url: "https://waku.guide/",
+  title: "Waku Documentation",
+  url: "https://docs.waku.org/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -27,9 +27,9 @@ const config = {
           routeBasePath: "/",
           path: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/waku-org/waku.guide/tree/develop/",
-          showLastUpdateAuthor: false,
+          editUrl: "https://github.com/waku-org/docs.waku.org/tree/develop/",
           showLastUpdateTime: true,
+          breadcrumbs: false,
         },
         theme: {
           name: "default",
