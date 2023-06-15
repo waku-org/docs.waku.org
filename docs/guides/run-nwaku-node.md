@@ -20,10 +20,10 @@ Before running a `nwaku` node, it is necessary to build it. Nwaku provides multi
 | Build Source | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-from-source) |
 | Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](/guides/nwaku/run-docker) |
 | Docker Compose | Build and run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
-| DigitalOcean Droplet | Build and run a `nwaku` node on a DigitalOcean Droplet | [Run Nwaku on DigitalOcean Droplet](https://github.com/waku-org/nwaku/blob/master/docs/operators/droplet-quickstart.md) |
 
 :::tip
-If you want to try the latest `nwaku` updates without compiling the binaries, [download the nightly release](https://github.com/waku-org/nwaku/releases/tag/nightly).
+- If you want to try the latest `nwaku` updates without compiling the binaries, [download the nightly release](https://github.com/waku-org/nwaku/releases/tag/nightly).
+- You can run `nwaku` binaries and Docker images on cloud service providers like [Google Cloud](https://cloud.google.com/), [Microsoft Azure](https://azure.microsoft.com/), [Amazon Web Services](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
 :::
 
 ## Run the Node

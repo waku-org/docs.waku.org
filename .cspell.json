@@ -44,7 +44,8 @@
     "classwide",
     "devel",
     "statusteam",
-    "myaddr"
+    "myaddr",
+    "extip"
   ],
   "flagWords": [],
   "ignorePaths": [

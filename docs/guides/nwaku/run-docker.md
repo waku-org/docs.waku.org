@@ -30,11 +30,11 @@ You can also build the Docker image locally using:
 git clone --recurse-submodules https://github.com/waku-org/nwaku
 cd nwaku
 
-# Build image using make
-make docker-image
-
 # Build image using docker build
 docker build -t statusteam/nim-waku:latest .
+
+# Build image using make
+make docker-image
 ```
 
 ## Run Docker Container
@@ -49,12 +49,22 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 - `IMAGE` is the image and tag you pulled from the registry or built locally
 - `ARG...` is the list of `nwaku` arguments for your [chosen nwaku configuration](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure.md)
 
-:::tip
-We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (libp2p listening ports, discovery, HTTP server).
-:::
-
-To run `nwaku` in a Docker container using the [default configuration](/guides/run-nwaku-node#run-the-node), use:
+To run `nwaku` in a Docker container using the most typical configuration, use:
 
 ```bash
-docker run -i -t -p 60000:60000 -p 8545:8545 statusteam/nim-waku
+docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku \
+  --dns-discovery:true \
+  --dns-discovery-url:enrtree://AOGECG2SPND25EEFMAJ5WF3KSGJNSGV356DSTL2YVLLZWIV6SAYBM@prod.waku.nodes.status.im \
+  --discv5-discovery \
+  --nat:extip:[YOUR PUBLIC IP] # or, if you are behind a nat: --nat=any
 ```
+
+:::tip
+To find your public IP, use:
+
+```bash
+dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+```
+
+We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (libp2p listening ports, discovery, HTTP server).
+:::
