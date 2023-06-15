@@ -2,7 +2,7 @@
 title: Node Configuration
 ---
 
-Nwaku can be configured using a combination of the following methods:
+Waku nodes can be configured using a combination of the following methods:
 
 1. Command line options and flags
 2. Environment variables (recommended)

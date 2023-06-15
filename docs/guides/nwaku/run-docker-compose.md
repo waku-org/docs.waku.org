@@ -2,7 +2,9 @@
 title: Run Nwaku with Docker Compose
 ---
 
-`nwaku-compose` is a ready-to-use `docker-compose` setup that runs a nwaku node and monitors it with already configured [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) instances. This guide provides detailed steps to build, run, and monitor a `nwaku` node with [nwaku-compose](https://github.com/alrevuelta/nwaku-compose).
+`nwaku-compose` is a ready-to-use `docker-compose` setup that runs a nwaku node and monitors it with already configured [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) instances.
+
+This guide provides detailed steps to build, configure, run, and monitor a `nwaku` node with [nwaku-compose](https://github.com/alrevuelta/nwaku-compose).
 
 ## Prerequisites
 
@@ -23,7 +25,7 @@ Modify the `docker-compose.yml` file to customize your node's configuration, inc
 
 ## Run Docker Compose
 
-To export your public IP (`MY_EXT_IP`) and run `nwaku-compose`, use:
+Export your public IP (`MY_EXT_IP`) and run `nwaku-compose`:
 
 ```bash
 export MY_EXT_IP=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')

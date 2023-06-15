@@ -2,13 +2,11 @@
 title: Build Nwaku from Source
 ---
 
-This guide provides detailed steps to build a `nwaku` node from the source to access the latest development version or a specific commit of nwaku. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
+This guide provides detailed steps to build a `nwaku` node from the source to access the latest development version or a specific commit or tag of `nwaku`. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
 
-## Prerequisites
-
-- 2GB of RAM
-- [Git](https://git-scm.com/) or [GitHub Desktop](https://desktop.github.com/)
-- [Nim](https://nim-lang.org/install.html) installed on your system
+:::info
+A minimum of 2GB of RAM is required to build `nwaku`. The build process will only succeed on systems that meet this requirement.
+:::
 
 ## Install Dependencies
 
@@ -71,7 +69,7 @@ You can use `git tag -l` to check specific version tags.
 
 ## Build the Binary
 
-To build the `nwaku` binary, use:
+Build the `nwaku` binary:
 
 ```bash
 make wakunode2
@@ -103,7 +101,7 @@ To learn more about running nwaku, please refer to:
 
 ## Run Test Suite
 
-To run the tests for both `Waku v1` and `Waku v2`, use:
+Run the tests for both `Waku v1` and `Waku v2`:
 
 ```bash
 make test

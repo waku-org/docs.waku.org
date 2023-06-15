@@ -17,13 +17,13 @@ sudo sh get-docker.sh
 
 The Nwaku Docker images are available on the Docker Hub public registry under the [statusteam/nim-waku](https://hub.docker.com/r/statusteam/nim-waku) repository. Please visit [statusteam/nim-waku/tags](https://hub.docker.com/r/statusteam/nim-waku/tags) for images of specific releases.
 
-To pull the latest image, use:
+Pull the latest docker image:
 
 ```bash
 docker pull statusteam/nim-waku
 ```
 
-You can also build the Docker image locally using:
+You can also build the Docker image locally:
 
 ```bash
 # Clone the repository
@@ -39,7 +39,7 @@ make docker-image
 
 ## Run Docker Container
 
-To run `nwaku` in a new Docker container, use:
+Run `nwaku` in a new Docker container:
 
 ```bash
 docker run [OPTIONS] [IMAGE] [ARG...]
@@ -49,7 +49,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 - `IMAGE` is the image and tag you pulled from the registry or built locally
 - `ARG...` is the list of `nwaku` arguments for your [chosen node configuration](/guides/nwaku/configuration)
 
-To run `nwaku` in a Docker container using the most typical configuration, use:
+Run `nwaku` using the most typical configuration:
 
 ```bash
 docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku \

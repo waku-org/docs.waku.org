@@ -4,7 +4,7 @@ title: Run a Nwaku Node
 
 Nwaku (formerly `nim-waku`) is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
 
-This guide provides detailed steps to build, configure, and connect a `nwaku` node to the Waku Network. It also covers using existing tools to monitor and maintain the node.
+This guide provides detailed steps to build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
 :::info
 Nwaku can be built and run on Linux and macOS, while Windows support is currently experimental.
@@ -108,5 +108,59 @@ curl --location --request GET 'http://localhost:8545' \
 </Tabs>
 
 :::info
-The `listenAddresses` field stores the transport addresses for accepting connections, while the `enrUri` field stores the `ENR` URI for peer discovery.
+The `listenAddresses` field stores the node's listening address(es), while the `enrUri` field stores the discoverable `ENR` URI for peer discovery.
 :::
+
+## Find the Node Addresses
+
+You can find the addresses of a running node through its logs or by calling the `get_waku_v2_debug_v1_info` method of the [JSON RPC API](https://rfc.vac.dev/spec/16/).
+
+:::tip
+When starting the node, `nwaku` will display all the public listening and discovery addresses at the `INFO` log level.
+:::
+
+### Listening Address(es)
+
+Look for the log entry that begins with `Listening on`, for example:
+
+```txt title="Nwaku Log Output"
+INF 2023-06-15 16:09:54.448+01:00 Listening on                               topics="waku node" tid=1623445 file=waku_node.nim:922 full=[/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn][/ip4/0.0.0.0/tcp/8000/ws/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn]
+```
+
+```bash
+# Listening TCP transport address
+/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
+
+# Listening websocket address
+/ip4/0.0.0.0/tcp/8000/ws/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
+```
+
+### Discoverable ENR Address(es)
+
+A `nwaku` node can encode it's addressing information in an [Ethereum Node Record (ENR)](https://eips.ethereum.org/EIPS/eip-778) following the [WAKU2-ENR](https://rfc.vac.dev/spec/31/) specification, primarily for peer discovery.
+
+#### ENR for DNS discovery
+
+Look for the log entry that begins with `DNS: discoverable ENR`, for example:
+
+```txt title="Nwaku Log Output"
+INF 2023-06-15 16:09:54.448+01:00 DNS: discoverable ENR                      topics="waku node" tid=1623445 file=waku_node.nim:923 enr=enr:-Iu4QBKYj8Ovxwz4fIalxZ_1a8dOCU2WC-1LQrcBCCb4Np93f9-UuSZXn3vagJL1S3k3hwRYfOp3JSbW7_VqwtqMIeMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQOrmyV59dAzY4ZKrvrj32VOoZbLby8dCKFnXnqhIdQ0NYN0Y3CC6mCFd2FrdTIB
+```
+
+```bash
+# ENR the node addresses are encoded in
+enr:-Iu4QBKYj8Ovxwz4fIalxZ_1a8dOCU2WC-1LQrcBCCb4Np93f9-UuSZXn3vagJL1S3k3hwRYfOp3JSbW7_VqwtqMIeMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQOrmyV59dAzY4ZKrvrj32VOoZbLby8dCKFnXnqhIdQ0NYN0Y3CC6mCFd2FrdTIB
+```
+
+#### ENR for Discv5
+
+Look for the log entry that begins with `Discv5: discoverable ENR`, for example:
+
+```txt title="Nwaku Log Output"
+INF 2023-06-15 16:09:54.448+01:00 Discv5: discoverable ENR                   topics="waku node" tid=1623445 file=waku_node.nim:924 enr=enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7EU9iIBcPMVeKlCQBgmlkgnY0iXNlY3AyNTZrMaEDdBHK1Gx6y_zv5DVw5Qb3DtSOMmVHTZO1WSORrF2loL2DdWRwgiMohXdha3UyAw
+```
+
+```bash
+# ENR the node addresses are encoded in
+enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7EU9iIBcPMVeKlCQBgmlkgnY0iXNlY3AyNTZrMaEDdBHK1Gx6y_zv5DVw5Qb3DtSOMmVHTZO1WSORrF2loL2DdWRwgiMohXdha3UyAw
+```
