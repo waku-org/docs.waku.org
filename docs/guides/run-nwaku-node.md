@@ -17,7 +17,7 @@ Before running a `nwaku` node, it is necessary to build it. Nwaku provides multi
 | | Description | Documentation |
 | - | - | - |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
-| Build Source | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-from-source) |
+| Build Source | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-source) |
 | Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](/guides/nwaku/run-docker) |
 | Docker Compose | Build and run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 
@@ -48,7 +48,7 @@ By default, a `nwaku` node is configured to do the following:
 - Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
 
 :::tip
-For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Configuration Methods](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure.md) guide.
+For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration](/guides/nwaku/configuration) guide.
 :::
 
 ## Connect the Node

@@ -47,7 +47,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 
 - `OPTIONS` are your selected [Docker options](https://docs.docker.com/engine/reference/commandline/run/#options)
 - `IMAGE` is the image and tag you pulled from the registry or built locally
-- `ARG...` is the list of `nwaku` arguments for your [chosen nwaku configuration](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure.md)
+- `ARG...` is the list of `nwaku` arguments for your [chosen node configuration](/guides/nwaku/configuration)
 
 To run `nwaku` in a Docker container using the most typical configuration, use:
 
