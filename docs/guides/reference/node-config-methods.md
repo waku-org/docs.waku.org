@@ -1,5 +1,5 @@
 ---
-title: Node Configuration
+title: Node Configuration Methods
 ---
 
 Waku nodes can be configured using a combination of the following methods:
@@ -15,7 +15,7 @@ Note the precedence order: Each configuration method overrides the one below it 
 
 ## Command Line Options
 
-Node configuration is primarily done using command line options, which override other methods. Specify configuration options by providing them in this format after the binary name:
+Node configuration is primarily done using command line options, which override other methods. Specify [configuration options](/guides/reference/node-config-options) by providing them in this format after the binary name:
 
 ```bash
 wakunode2 --tcp-port=65000
@@ -29,9 +29,9 @@ docker run statusteam/nim-waku --tcp-port=65000
 
 ## Environment Variables
 
-Nodes can be configured using environment variables by prefixing the variable name with `WAKUNODE2_` and using the command line option in [SCREAMING_SNAKE_CASE](https://en.wiktionary.org/wiki/screaming_snake_case) format.
+Nodes can be configured using environment variables by prefixing the variable name with `WAKUNODE2_` and using the configuration option in [SCREAMING_SNAKE_CASE](https://en.wiktionary.org/wiki/screaming_snake_case) format.
 
-To set the `--tcp-port` configuration, the `wakunode2` binary should be called in this format:
+To set the `tcp-port` configuration, the `wakunode2` binary should be called in this format:
 
 ```bash
 WAKUNODE2_TCP_PORT=65000 wakunode2
@@ -56,7 +56,7 @@ log-level = "DEBUG"
 tcp-port = 65000
 ```
 
-The `--config-file` command line option lets you specify the configuration file path:
+The `config-file` [configuration option](/guides/reference/node-config-options) lets you specify the configuration file path:
 
 ```bash
 wakunode2 --config-file=[TOML CONFIGURATION FILE]
@@ -78,7 +78,7 @@ This is the third configuration method in order of precedence. [Command line opt
 
 ## Configuration Default Values
 
-The default configuration is used if no other options are specified. To see the default values of all configuration options, run `wakunode2 --help`:
+The default configuration is used if no other options are specified. To see the default values of all [configuration options](/guides/reference/node-config-options), run `wakunode2 --help`:
 
 ```bash
 $ wakunode2 --help
@@ -89,8 +89,6 @@ wakunode2 [OPTIONS]...
 The following options are available:
 
  --config-file             Loads configuration from a TOML file (cmd-line parameters take precedence).
- --log-level               Sets the log level for process. Supported levels: TRACE, DEBUG, INFO, NOTICE,
-                               WARN, ERROR or FATAL [=logging.LogLevel.INFO].
  --tcp-port                TCP listening port. [=60000].
 
 <...>

@@ -98,6 +98,7 @@ To learn more about running nwaku, please refer to:
 - [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
 - [Run Nwaku in Docker Container](/guides/nwaku/run-docker)
 - [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose)
+- [Node Configuration Methods](/guides/reference/node-config-methods)
 
 ## Run Test Suite
 

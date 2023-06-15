@@ -48,7 +48,7 @@ By default, a `nwaku` node is configured to do the following:
 - Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
 
 :::tip
-For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration](/guides/nwaku/configuration) guide.
+For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
 :::
 
 ## Connect the Node
@@ -131,7 +131,7 @@ INF 2023-06-15 16:09:54.448+01:00 Listening on                               top
 # Listening TCP transport address
 /ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
 
-# Listening websocket address
+# Listening WebSocket address
 /ip4/0.0.0.0/tcp/8000/ws/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
 ```
 

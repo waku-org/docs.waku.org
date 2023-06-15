@@ -64,7 +64,14 @@ const sidebars = {
 				"guides/nwaku/build-source",
 				"guides/nwaku/run-docker",
 				"guides/nwaku/run-docker-compose",
-				"guides/nwaku/configuration",
+			]
+		},
+		{
+			type: "category",
+			label: "Reference",
+			items: [
+				"guides/reference/node-config-methods",
+				"guides/reference/node-config-options",
 			]
 		},
 	],
