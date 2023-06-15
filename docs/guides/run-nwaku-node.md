@@ -6,20 +6,24 @@ Nwaku (formerly `nim-waku`) is a lightweight and robust Nim client for running a
 
 This guide provides detailed steps to build, configure, and connect a `nwaku` node to the Waku Network. It also covers using existing tools to monitor and maintain the node.
 
+:::info
+Nwaku can be built and run on Linux and macOS, while Windows support is currently experimental.
+:::
+
 ## Build the Node
 
-Before running a nwaku node, it is necessary to build it. Nwaku provides multiple options for building a node:
+Before running a `nwaku` node, it is necessary to build it. Nwaku provides multiple options for building a node:
 
 | | Description | Documentation |
 | - | - | - |
-| Source Code | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-from-source) |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
-| Nightly Release | Try out the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
+| Build Source | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-from-source) |
 | Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](/guides/nwaku/run-docker) |
+| Docker Compose | Build and run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 | DigitalOcean Droplet | Build and run a `nwaku` node on a DigitalOcean Droplet | [Run Nwaku on DigitalOcean Droplet](https://github.com/waku-org/nwaku/blob/master/docs/operators/droplet-quickstart.md) |
 
-:::info
-Nwaku can be built and run on Linux and macOS, while Windows support is currently experimental.
+:::tip
+If you want to try the latest `nwaku` updates without compiling the binaries, [download the nightly release](https://github.com/waku-org/nwaku/releases/tag/nightly).
 :::
 
 ## Run the Node

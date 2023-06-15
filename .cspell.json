@@ -43,7 +43,8 @@
     "autoplay",
     "classwide",
     "devel",
-    "statusteam"
+    "statusteam",
+    "myaddr"
   ],
   "flagWords": [],
   "ignorePaths": [

@@ -63,6 +63,7 @@ const sidebars = {
 			items: [
 				"guides/nwaku/build-from-source",
 				"guides/nwaku/run-docker",
+				"guides/nwaku/run-docker-compose",
 			]
 		},
 	],
