@@ -93,3 +93,7 @@ The following options are available:
 
 <...>
 ```
+
+:::tip
+To explore the available node configuration options, please refer to the [Node Configuration Options](/guides/reference/node-config-options) guide.
+:::

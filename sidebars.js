@@ -31,7 +31,7 @@ const sidebars = {
 						id: "overview/concepts/peer-discovery",
 					},
 					items: [
-						"overview/concepts/predefined-nodes",
+						"overview/concepts/static-peers",
 						"overview/concepts/dns-discovery",
 						"overview/concepts/discv5",
 						"overview/concepts/peer-exchange",
@@ -64,6 +64,7 @@ const sidebars = {
 				"guides/nwaku/build-source",
 				"guides/nwaku/run-docker",
 				"guides/nwaku/run-docker-compose",
+				"guides/nwaku/configure-discovery",
 			]
 		},
 		{

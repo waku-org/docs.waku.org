@@ -17,12 +17,12 @@ def parse_table_heading(line: str) -> Tuple[str, bool]:
     word_replace_re = re.compile('|'.join([
         r'(Configuration)', r'(And)', r'(Lightpush)',
         r'(Json-Rpc)', r'(Rest Http)', r'(Dns)',
-        r'(V5)', r'(Websocket)'
+        r'(Discovery V5)', r'(Websocket)'
     ]))
     word_replace_dict = {
         'Configuration': 'Config', 'And': 'and', 'Lightpush': 'Light Push',
         'Json-Rpc': 'JSON-RPC', 'Rest Http': 'REST HTTP', 'Dns': 'DNS',
-        'V5': 'v5', 'Websocket': 'WebSocket'
+        'Discovery V5': 'Discv5', 'Websocket': 'WebSocket'
     }
     table_heading = word_replace_re.sub(lambda match: word_replace_dict[match.group(0)], table_heading)
     return '## ' + table_heading, True

@@ -45,7 +45,9 @@
     "devel",
     "statusteam",
     "myaddr",
-    "extip"
+    "extip",
+    "staticnode",
+    "permissioned"
   ],
   "flagWords": [],
   "ignorePaths": [

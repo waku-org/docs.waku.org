@@ -2,7 +2,7 @@
 title: Node Configuration Options
 ---
 
-Here are the node configuration options and their descriptions:
+Here are the available node configuration options, along with their default values and descriptions:
 
 ## Application-Level Config
 
@@ -131,7 +131,7 @@ Here are the node configuration options and their descriptions:
 | `dns-discovery-url` |  | URL for DNS node list in format 'enrtree://<key\>@<fqdn\>' |
 | `dns-discovery-name-server` | `@[1.1.1.1, 1.0.0.1]` | DNS name server IPs to query. Argument may be repeated |
 
-## Discovery v5 Config
+## Discv5 Config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -159,3 +159,7 @@ Here are the node configuration options and their descriptions:
 | `websocket-secure-support` | `false` | Enable secure websocket:  true\|false |
 | `websocket-secure-key-path` |  | Secure websocket key path:   '/path/to/key.txt' |
 | `websocket-secure-cert-path` |  | Secure websocket Certificate path:   '/path/to/cert.txt' |
+
+:::tip
+To configure your node using the provided configuration options, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
+:::

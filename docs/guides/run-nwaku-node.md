@@ -57,9 +57,9 @@ To join the Waku Network, nodes must connect with peers. Nwaku provides multiple
 
 | | Description | Documentation |
 | - | - | - |
-| Predefined Nodes | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Predefined Nodes](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/connect.md#option-1-configure-peers-statically) |
-| DNS Discovery | Enable `nwaku` to locate peers to connect to using the `DNS Discovery` mechanism | [Configure DNS Discovery](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure-dns-disc.md) |
-| Discv5 | Enable `nwaku` to locate peers to connect to using the `Discv5` mechanism | [Configure Discv5](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/connect.md#option-3-discover-peers-using-waku-discovery-v5) |
+| Static Peers | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers) |
+| DNS Discovery | Enable `nwaku` to locate peers to connect to using the `DNS Discovery` mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
+| Discv5 | Enable `nwaku` to locate peers to connect to using the `Discv5` mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
 
 :::tip
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
