@@ -18,7 +18,7 @@ Before running a `nwaku` node, it is necessary to build it. Nwaku provides multi
 | - | - | - |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
 | Build Source | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-source) |
-| Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](/guides/nwaku/run-docker) |
+| Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker) |
 | Docker Compose | Build and run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 
 :::tip
@@ -28,7 +28,7 @@ Before running a `nwaku` node, it is necessary to build it. Nwaku provides multi
 
 ## Run the Node
 
-Once you have built the `nwaku` node, run it using the default configuration:
+Once you have built the `nwaku` node, run it using the [default configuration](/guides/reference/node-config-methods#default-configuration-values):
 
 ```bash
 # Run with default configuration
@@ -37,15 +37,6 @@ Once you have built the `nwaku` node, run it using the default configuration:
 # See available command line options
 ./build/wakunode2 --help
 ```
-
-By default, a `nwaku` node is configured to do the following:
-
-- Generate a new private key and `PeerID`.
-- Listen for incoming libp2p connections on the default TCP port (`60000`).
-- Subscribe to the default Pub/Sub topic (`/waku/2/default-waku/proto`).
-- Start the `JSON-RPC` HTTP server on the default port (`8545`).
-- Enable the `Relay` protocol for relaying messages.
-- Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
 
 :::tip
 For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
@@ -58,8 +49,8 @@ To join the Waku Network, nodes must connect with peers. Nwaku provides multiple
 | | Description | Documentation |
 | - | - | - |
 | Static Peers | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers) |
-| DNS Discovery | Enable `nwaku` to locate peers to connect to using the `DNS Discovery` mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
-| Discv5 | Enable `nwaku` to locate peers to connect to using the `Discv5` mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
+| DNS Discovery | Enable `nwaku` to locate peers to connect to using the [DNS Discovery](/overview/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
+| Discv5 | Enable `nwaku` to locate peers to connect to using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
 
 :::tip
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
@@ -137,7 +128,7 @@ INF 2023-06-15 16:09:54.448+01:00 Listening on                               top
 
 ### Discoverable ENR Address(es)
 
-A `nwaku` node can encode it's addressing information in an [Ethereum Node Record (ENR)](https://eips.ethereum.org/EIPS/eip-778) following the [WAKU2-ENR](https://rfc.vac.dev/spec/31/) specification, primarily for peer discovery.
+A `nwaku` node can encode its addressing information in an [Ethereum Node Record (ENR)](https://eips.ethereum.org/EIPS/eip-778) following the [WAKU2-ENR](https://rfc.vac.dev/spec/31/) specification, primarily for peer discovery.
 
 #### ENR for DNS discovery
 

@@ -1,5 +1,5 @@
 ---
-title: Run Nwaku in Docker Container
+title: Run Nwaku in a Docker Container
 ---
 
 This guide provides detailed steps to build and run a `nwaku` node in a Docker container. If you prefer a pre-configured setup that includes a monitoring dashboard, see the [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) guide.
@@ -32,6 +32,8 @@ cd nwaku
 
 # Build image using docker build
 docker build -t statusteam/nim-waku:latest .
+
+# or
 
 # Build image using make
 make docker-image

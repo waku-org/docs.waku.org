@@ -5,7 +5,7 @@ title: Build Nwaku from Source
 This guide provides detailed steps to build a `nwaku` node from the source to access the latest development version or a specific commit or tag of `nwaku`. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
 
 :::info
-A minimum of 2GB of RAM is required to build `nwaku`. The build process will only succeed on systems that meet this requirement.
+A minimum of 2GB of RAM is required to build `nwaku`.
 :::
 
 ## Install Dependencies
@@ -96,7 +96,7 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 To learn more about running nwaku, please refer to:
 
 - [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
-- [Run Nwaku in Docker Container](/guides/nwaku/run-docker)
+- [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)
 - [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose)
 - [Node Configuration Methods](/guides/reference/node-config-methods)
 

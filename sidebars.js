@@ -18,11 +18,11 @@ const sidebars = {
 		{
 			type: "category",
 			label: "Concepts",
-			collapsed: false,
 			items: [
 				"overview/concepts/protocols",
 				"overview/concepts/content-topics",
 				"overview/concepts/network-domains",
+				"overview/concepts/transports",
 				{
 					type: "category",
 					label: "Peer Discovery",
@@ -37,7 +37,6 @@ const sidebars = {
 						"overview/concepts/peer-exchange",
 					]
 				},
-				"overview/concepts/transports",
 			]
 		},
 		{
