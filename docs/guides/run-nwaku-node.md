@@ -4,31 +4,37 @@ title: Run a Nwaku Node
 
 Nwaku (formerly `nim-waku`) is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
 
-This guide provides detailed steps to build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
+This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
-:::info
-Nwaku can be built and run on Linux and macOS, while Windows support is currently experimental.
-:::
+## Get the Node Binary
 
-## Build the Node
+To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for acquiring the node binary:
 
-Before running a `nwaku` node, it is necessary to build it. Nwaku provides multiple options for building a node:
+#### Download the Binary
 
 | | Description | Documentation |
 | - | - | - |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
-| Build Source | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](/guides/nwaku/build-source) |
-| Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker) |
-| Docker Compose | Build and run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+| Nightly Release | Try the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
+
+#### Build the Binary
+
+You can build the node binary directly from the [nwaku source code](https://github.com/waku-org/nwaku). To learn more, please refer to the [Build Nwaku from Source](/guides/nwaku/build-source) guide.
+
+#### Run the Binary in Docker
+
+| | Description | Documentation |
+| - | - | - |
+| Docker Container | Run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker) |
+| Docker Compose | Run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 
 :::tip
-- If you want to try the latest `nwaku` updates without compiling the binaries, [download the nightly release](https://github.com/waku-org/nwaku/releases/tag/nightly).
-- You can run `nwaku` binaries and Docker images on cloud service providers like [Google Cloud](https://cloud.google.com/), [Microsoft Azure](https://azure.microsoft.com/), [Amazon Web Services](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
+You can run the `nwaku` binaries and Docker images on cloud service providers like [Google Cloud](https://cloud.google.com/), [Microsoft Azure](https://azure.microsoft.com/), [Amazon Web Services](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
 :::
 
 ## Run the Node
 
-Once you have built the `nwaku` node, run it using the [default configuration](/guides/reference/node-config-methods#default-configuration-values):
+Once you have gotten the `nwaku` binary, run it using the [default configuration](/guides/reference/node-config-methods#default-configuration-values):
 
 ```bash
 # Run with default configuration
@@ -110,7 +116,7 @@ You can find the addresses of a running node through its logs or by calling the 
 When starting the node, `nwaku` will display all the public listening and discovery addresses at the `INFO` log level.
 :::
 
-### Listening Address(es)
+### Listening Addresses
 
 Look for the log entry that begins with `Listening on`, for example:
 
@@ -126,7 +132,7 @@ INF 2023-06-15 16:09:54.448+01:00 Listening on                               top
 /ip4/0.0.0.0/tcp/8000/ws/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
 ```
 
-### Discoverable ENR Address(es)
+### Discoverable ENR Addresses
 
 A `nwaku` node can encode its addressing information in an [Ethereum Node Record (ENR)](https://eips.ethereum.org/EIPS/eip-778) following the [WAKU2-ENR](https://rfc.vac.dev/spec/31/) specification, primarily for peer discovery.
 

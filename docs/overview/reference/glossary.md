@@ -58,6 +58,10 @@ Mostly offline devices refer to clients who spend most of their time offline or 
 
 A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku Network](#waku) to enable secure and private peer-to-peer Web3 communication.
 
+### Node Key
+
+A node key is a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (64 char hex string) private key for generating a Waku node public [listening](#transport) and [discovery](#peer-discovery) address.
+
 ### Payload
 
 The payload field in a [Waku Message](#waku-message) contains the application data, serving as the business logic message transmitted between clients over Waku. Applications can encrypt the payload or employ encryption methods specified in [Waku Message Payload Encryption](#waku-message-payload-encryption).

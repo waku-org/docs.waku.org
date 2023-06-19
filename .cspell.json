@@ -47,7 +47,8 @@
     "myaddr",
     "extip",
     "staticnode",
-    "permissioned"
+    "permissioned",
+    "Secp"
   ],
   "flagWords": [],
   "ignorePaths": [

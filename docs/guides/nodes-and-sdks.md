@@ -6,7 +6,7 @@ title: Nodes and SDKs
 Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
 :::
 
-Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by operating a node.
+Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by running a node.
 
 ## Run a Waku Node
 

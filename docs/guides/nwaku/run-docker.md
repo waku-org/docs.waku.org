@@ -68,5 +68,5 @@ To find your public IP, use:
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 ```
 
-We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (libp2p listening ports, discovery, HTTP server).
+We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (listening and discovery ports, API servers).
 :::

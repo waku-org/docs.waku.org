@@ -38,7 +38,7 @@ Here are the available node configuration options, along with their default valu
 | Name | Default Value | Description |
 | - | - | - |
 | `dns-addrs` | `true` | Enable resolution of `dnsaddr`, `dns4` or `dns6` multiaddrs |
-| `dns-addrs-name-server` | `@[1.1.1.1, 1.0.0.1]` | DNS name server IPs to query for DNS multiaddrs resolution. Argument may be repeated |
+| `dns-addrs-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query for DNS multiaddrs resolution. Argument may be repeated |
 | `dns4-domain-name` |  | The domain name resolving to the node's public IPv4 address |
 
 ## Relay Config
@@ -64,7 +64,7 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-tree-path` |  | Path to the RLN merkle tree sled db (https://github.com/spacejam/sled) |
 | `staticnode` |  | Peer multiaddr to directly connect with. Argument may be repeated |
 | `keep-alive` | `false` | Enable keep-alive for idle connections: true\|false |
-| `topic` | `@[/waku/2/default-waku/proto]` | Default topic to subscribe to. Argument may be repeated |
+| `topic` | `["/waku/2/default-waku/proto"]` | Default topic to subscribe to. Argument may be repeated |
 
 ## Store and Message Store Config
 
@@ -129,7 +129,7 @@ Here are the available node configuration options, along with their default valu
 | - | - | - |
 | `dns-discovery` | `false` | Enable discovering nodes via DNS |
 | `dns-discovery-url` |  | URL for DNS node list in format 'enrtree://<key\>@<fqdn\>' |
-| `dns-discovery-name-server` | `@[1.1.1.1, 1.0.0.1]` | DNS name server IPs to query. Argument may be repeated |
+| `dns-discovery-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query. Argument may be repeated |
 
 ## Discv5 Config
 

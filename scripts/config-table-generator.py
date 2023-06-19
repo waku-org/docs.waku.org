@@ -63,7 +63,9 @@ def extract_config(config_path: str) -> str:
         if line.startswith("defaultValue:"):
             default_value = re.split("defaultValue: ", line)[1].strip()
             if '""' not in default_value:
-                default_value = f"`{remove_extra_char(default_value, ',')}`".replace('"', "")
+                default_value = f"`{remove_extra_char(default_value, ',')}`".replace("@", "")
+                if "[" not in default_value:
+                    default_value = default_value.replace('"', "")
                 if "ValidIpAddress.init" in default_value:
                     default_value = default_value.replace("ValidIpAddress.init(", "").replace(")", "")
                 row["default"] = default_value

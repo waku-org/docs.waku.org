@@ -5,12 +5,13 @@ title: Build Nwaku from Source
 This guide provides detailed steps to build a `nwaku` node from the source to access the latest development version or a specific commit or tag of `nwaku`. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
 
 :::info
-A minimum of 2GB of RAM is required to build `nwaku`.
+- A minimum of 2GB of RAM is required to build `nwaku`.
+- Nwaku is available for Linux and macOS, with experimental Windows support.
 :::
 
 ## Install Dependencies
 
-To clone and build nwaku, you will need the standard developer tools, including a C compiler, Make, Bash, and Git.
+To build nwaku, you will need the standard developer tools, including a C compiler, Make, Bash, and Git.
 
 #### Linux
 
