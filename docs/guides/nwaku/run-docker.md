@@ -6,12 +6,7 @@ This guide provides detailed steps to build and run a `nwaku` node in a Docker c
 
 ## Prerequisites
 
-Ensure [Docker](https://www.docker.com/) is installed on your system using the appropriate instructions provided in the [Docker documentation](https://docs.docker.com/engine/install/). For example, you can use Docker's convenience script for installation:
-
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-```
+Ensure [Docker](https://www.docker.com/) is installed on your system using the appropriate instructions provided in the [Docker documentation](https://docs.docker.com/engine/install/).
 
 ## Get Docker Image
 
@@ -30,12 +25,7 @@ You can also build the Docker image locally:
 git clone --recurse-submodules https://github.com/waku-org/nwaku
 cd nwaku
 
-# Build image using docker build
-docker build -t statusteam/nim-waku:latest .
-
-# or
-
-# Build image using make
+# Build docker image
 make docker-image
 ```
 

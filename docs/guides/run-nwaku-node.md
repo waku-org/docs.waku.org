@@ -2,11 +2,11 @@
 title: Run a Nwaku Node
 ---
 
-Nwaku (formerly `nim-waku`) is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
+Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
 
 This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
-## Get the Node Binary
+## Get the Binary
 
 To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for acquiring the node binary:
 
@@ -48,15 +48,15 @@ Once you have gotten the `nwaku` binary, run it using the [default configuration
 For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
 :::
 
-## Connect the Node
+## Bootstrap the Node
 
-To join the Waku Network, nodes must connect with peers. Nwaku provides multiple [peer discovery](/overview/concepts/peer-discovery) mechanisms for locating other peers:
+To join the Waku Network, nodes must [bootstrap](/overview/reference/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/overview/concepts/peer-discovery) mechanisms:
 
 | | Description | Documentation |
 | - | - | - |
 | Static Peers | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers) |
-| DNS Discovery | Enable `nwaku` to locate peers to connect to using the [DNS Discovery](/overview/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
-| Discv5 | Enable `nwaku` to locate peers to connect to using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
+| DNS Discovery | Enable `nwaku` to bootstrap nodes using the [DNS Discovery](/overview/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
+| Discv5 | Enable `nwaku` to discover peers using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
 
 :::tip
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.

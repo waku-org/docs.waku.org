@@ -97,6 +97,10 @@ const config = {
               to: "/presentations",
             },
             {
+              label: "Waku Bounties",
+              to: "https://github.com/waku-org/bounties",
+            },
+            {
               label: "Bug Bounty Program",
               to: "https://hackenproof.com/status-dot-im/waku",
             },
@@ -175,7 +179,6 @@ const config = {
       ],
     },
   },
-  themes: ["@docusaurus/theme-mermaid"],
   markdown: {
     mermaid: true,
   },

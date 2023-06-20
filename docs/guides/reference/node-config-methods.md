@@ -5,7 +5,7 @@ title: Node Configuration Methods
 Waku nodes can be configured using a combination of the following methods:
 
 1. Command line options and flags
-2. Environment variables (recommended)
+2. Environment variables
 3. TOML configuration files (currently the only supported format)
 4. Default values
 

@@ -2,7 +2,7 @@
 title: Build Nwaku from Source
 ---
 
-This guide provides detailed steps to build a `nwaku` node from the source to access the latest development version or a specific commit or tag of `nwaku`. If you prefer a more stable version, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
+This guide provides detailed steps to build a `nwaku` node from the source code to access the latest development version or a specific commit or release of `nwaku`. For your convenience, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
 
 :::info
 - A minimum of 2GB of RAM is required to build `nwaku`.
@@ -11,11 +11,7 @@ This guide provides detailed steps to build a `nwaku` node from the source to ac
 
 ## Install Dependencies
 
-To build nwaku, you will need the standard developer tools, including a C compiler, Make, Bash, and Git.
-
-#### Linux
-
-To install the dependencies on common Linux distributions, use:
+To build `nwaku`, you need the standard developer tools, including a C compiler, Make, Bash, and Git.
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -33,7 +29,7 @@ sudo apt-get install build-essential git
 <TabItem value="fedora" label="Fedora">
 
 ```bash
-dnf install @development-tools
+sudo dnf install @development-tools
 ```
 
 </TabItem>
@@ -45,15 +41,14 @@ dnf install @development-tools
 ```
 
 </TabItem>
-</Tabs>
-
-#### macOS
-
-If you use [Homebrew](https://brew.sh/) to manage packages, use:
+<TabItem value="mac" label="MacOS (Homebrew)">
 
 ```bash
 brew install cmake
 ```
+
+</TabItem>
+</Tabs>
 
 ## Clone the Repository
 
@@ -79,7 +74,7 @@ make wakunode2
 The first `make` invocation updates to all Git submodules. After each `git pull`, run `make update` to keep the submodules updated in the future.
 
 ```bash
-make update wakunode2
+make update
 ```
 
 ## Run the Binary
