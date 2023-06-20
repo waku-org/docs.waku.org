@@ -20,7 +20,7 @@ For instance, if your dApp is called `SuperCrypto` and it allows users to receiv
 - `/supercrypto/1/notification/proto`
 - `/supercrypto/1/private-message/proto`
 
-:::info
+:::tip
 While you can choose any encoding format for your `Content Topic`, we highly recommend using Protocol Buffers (`proto`) because of its efficiency. Choosing a lightweight format ensures optimal performance of your dApp.
 :::
 

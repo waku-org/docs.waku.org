@@ -41,7 +41,14 @@
     "Thorén",
     "wakunode",
     "autoplay",
-    "classwide"
+    "classwide",
+    "devel",
+    "statusteam",
+    "myaddr",
+    "extip",
+    "staticnode",
+    "permissioned",
+    "Secp"
   ],
   "flagWords": [],
   "ignorePaths": [
@@ -49,7 +56,8 @@
     "package-lock.json",
     "yarn.lock",
     "tsconfig.json",
-    "node_modules/**"
+    "node_modules/**",
+    "docs/guides/reference/node-config-options.md"
   ],
   "patterns": [
     {

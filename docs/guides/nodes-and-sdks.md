@@ -6,7 +6,7 @@ title: Nodes and SDKs
 Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
 :::
 
-Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by operating a node.
+Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by running a node.
 
 ## Run a Waku Node
 
@@ -42,6 +42,7 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 
 | | Description | Documentation |
 | - | - | - |
+| JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | |
 | [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | |
-| JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | |
+| [nwaku-compose](https://github.com/alrevuelta/nwaku-compose) | Pre-configured `docker-compose` setup for running and monitoring a `nwaku` node using Prometheus and Grafana. | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |

@@ -8,7 +8,7 @@ Definitions and usage of the terminology used in the Waku ecosystem.
 
 ### Bootstrapping
 
-Bootstrapping is the initial entry point of a [node](#node) to the [Waku Network](#waku). Once connected, other [peer discovery](#peer-discovery) methods can be employed to establish connections with fellow peers.
+Bootstrapping is the initial entry point of a [node](#node) to the [Waku Network](#waku). Once connected, other [peer discovery](#peer-discovery) methods can be employed to locate other [peers](#peer) in the network.
 
 ### [Content Topic](/overview/concepts/content-topics)
 
@@ -57,6 +57,10 @@ Mostly offline devices refer to clients who spend most of their time offline or 
 ### Node
 
 A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku Network](#waku) to enable secure and private peer-to-peer Web3 communication.
+
+### Node Key
+
+A node key is a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (64 char hex string) private key for generating the [PeerID](#peer-id), [listening](#transport) addresses, and [discovery](#peer-discovery) addresses of a Waku node.
 
 ### Payload
 

@@ -2,29 +2,39 @@
 title: Run a Nwaku Node
 ---
 
-Nwaku (formerly `nim-waku`) is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
+Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
 
-This guide provides detailed steps to build, configure, and connect a `nwaku` node to the Waku Network. It also covers using existing tools to monitor and maintain the node.
+This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
-## Build the Node
+## Get the Binary
 
-Before running a Nwaku node, it is necessary to build it. Nwaku provides multiple options for building a node:
+To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for acquiring the node binary:
+
+#### Download the Binary
 
 | | Description | Documentation |
 | - | - | - |
-| Source Code | Build a `nwaku` node directly from the source code | [Build Nwaku from Source](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/build.md) |
 | Precompiled Binary | Download a precompiled binary of the `nwaku` node | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags) |
-| Nightly Release | Try out the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
-| Docker Container | Build and run a `nwaku` node in a Docker Container | [Run Nwaku in Docker Container](https://github.com/waku-org/nwaku/blob/master/docs/operators/docker-quickstart.md) |
-| DigitalOcean Droplet | Build and run a `nwaku` node on a DigitalOcean Droplet | [Run Nwaku on DigitalOcean Droplet](https://github.com/waku-org/nwaku/blob/master/docs/operators/droplet-quickstart.md) |
+| Nightly Release | Try the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
 
-:::info
-Nwaku can be built and run on Linux and macOS, while Windows support is currently experimental.
+#### Build the Binary
+
+You can build the node binary directly from the [nwaku source code](https://github.com/waku-org/nwaku). To learn more, please refer to the [Build Nwaku from Source](/guides/nwaku/build-source) guide.
+
+#### Run the Binary in Docker
+
+| | Description | Documentation |
+| - | - | - |
+| Docker Container | Run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker) |
+| Docker Compose | Run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+
+:::tip
+You can run the `nwaku` binaries and Docker images on cloud service providers like [Google Cloud](https://cloud.google.com/), [Microsoft Azure](https://azure.microsoft.com/), [Amazon Web Services](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
 :::
 
 ## Run the Node
 
-Once you have built the `nwaku` node, run it using the default configuration:
+Once you have gotten the `nwaku` binary, run it using the [default configuration](/guides/reference/node-config-methods#default-configuration-values):
 
 ```bash
 # Run with default configuration
@@ -34,30 +44,21 @@ Once you have built the `nwaku` node, run it using the default configuration:
 ./build/wakunode2 --help
 ```
 
-By default, a `nwaku` node is configured to do the following:
-
-- Generate a new private key and `PeerID`.
-- Listen for incoming libp2p connections on the default TCP port (`60000`).
-- Subscribe to the default Pub/Sub topic (`/waku/2/default-waku/proto`).
-- Start the `JSON-RPC` HTTP server on the default port (`8545`).
-- Enable the `Relay` protocol for relaying messages.
-- Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
-
-:::info
-For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Configuration Methods](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure.md) guide.
+:::tip
+For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
 :::
 
-## Connect the Node
+## Bootstrap the Node
 
-To join the Waku Network, nodes must connect with peers. Nwaku provides multiple [peer discovery](/overview/concepts/peer-discovery) mechanisms for locating other peers:
+To join the Waku Network, nodes must [bootstrap](/overview/reference/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/overview/concepts/peer-discovery) mechanisms:
 
 | | Description | Documentation |
 | - | - | - |
-| Predefined Nodes | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Predefined Nodes](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/connect.md#option-1-configure-peers-statically) |
-| DNS Discovery | Enable `nwaku` to locate peers to connect to using the `DNS Discovery` mechanism | [Configure DNS Discovery](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/configure-dns-disc.md) |
-| Discv5 | Enable `nwaku` to locate peers to connect to using the `Discv5` mechanism | [Configure Discv5](https://github.com/waku-org/nwaku/blob/master/docs/operators/how-to/connect.md#option-3-discover-peers-using-waku-discovery-v5) |
+| Static Peers | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers) |
+| DNS Discovery | Enable `nwaku` to bootstrap nodes using the [DNS Discovery](/overview/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
+| Discv5 | Enable `nwaku` to discover peers using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
 
-:::info
+:::tip
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
 :::
 
@@ -104,5 +105,59 @@ curl --location --request GET 'http://localhost:8545' \
 </Tabs>
 
 :::info
-The `listenAddresses` field stores the transport addresses for accepting connections, while the `enrUri` field stores the `ENR` URI for peer discovery.
+The `listenAddresses` field stores the node's listening address(es), while the `enrUri` field stores the discoverable `ENR` URI for peer discovery.
 :::
+
+## Find the Node Addresses
+
+You can find the addresses of a running node through its logs or by calling the `get_waku_v2_debug_v1_info` method of the [JSON RPC API](https://rfc.vac.dev/spec/16/).
+
+:::tip
+When starting the node, `nwaku` will display all the public listening and discovery addresses at the `INFO` log level.
+:::
+
+### Listening Addresses
+
+Look for the log entry that begins with `Listening on`, for example:
+
+```txt title="Nwaku Log Output"
+INF 2023-06-15 16:09:54.448+01:00 Listening on                               topics="waku node" tid=1623445 file=waku_node.nim:922 full=[/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn][/ip4/0.0.0.0/tcp/8000/ws/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn]
+```
+
+```bash
+# Listening TCP transport address
+/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
+
+# Listening WebSocket address
+/ip4/0.0.0.0/tcp/8000/ws/p2p/16Uiu2HAmQCsH9V81xoqTwGuT3qwkZWbwY1TtTQwpr3DjHU2TSwMn
+```
+
+### Discoverable ENR Addresses
+
+A `nwaku` node can encode its addressing information in an [Ethereum Node Record (ENR)](https://eips.ethereum.org/EIPS/eip-778) following the [WAKU2-ENR](https://rfc.vac.dev/spec/31/) specification, primarily for peer discovery.
+
+#### ENR for DNS discovery
+
+Look for the log entry that begins with `DNS: discoverable ENR`, for example:
+
+```txt title="Nwaku Log Output"
+INF 2023-06-15 16:09:54.448+01:00 DNS: discoverable ENR                      topics="waku node" tid=1623445 file=waku_node.nim:923 enr=enr:-Iu4QBKYj8Ovxwz4fIalxZ_1a8dOCU2WC-1LQrcBCCb4Np93f9-UuSZXn3vagJL1S3k3hwRYfOp3JSbW7_VqwtqMIeMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQOrmyV59dAzY4ZKrvrj32VOoZbLby8dCKFnXnqhIdQ0NYN0Y3CC6mCFd2FrdTIB
+```
+
+```bash
+# ENR the node addresses are encoded in
+enr:-Iu4QBKYj8Ovxwz4fIalxZ_1a8dOCU2WC-1LQrcBCCb4Np93f9-UuSZXn3vagJL1S3k3hwRYfOp3JSbW7_VqwtqMIeMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQOrmyV59dAzY4ZKrvrj32VOoZbLby8dCKFnXnqhIdQ0NYN0Y3CC6mCFd2FrdTIB
+```
+
+#### ENR for Discv5
+
+Look for the log entry that begins with `Discv5: discoverable ENR`, for example:
+
+```txt title="Nwaku Log Output"
+INF 2023-06-15 16:09:54.448+01:00 Discv5: discoverable ENR                   topics="waku node" tid=1623445 file=waku_node.nim:924 enr=enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7EU9iIBcPMVeKlCQBgmlkgnY0iXNlY3AyNTZrMaEDdBHK1Gx6y_zv5DVw5Qb3DtSOMmVHTZO1WSORrF2loL2DdWRwgiMohXdha3UyAw
+```
+
+```bash
+# ENR the node addresses are encoded in
+enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7EU9iIBcPMVeKlCQBgmlkgnY0iXNlY3AyNTZrMaEDdBHK1Gx6y_zv5DVw5Qb3DtSOMmVHTZO1WSORrF2loL2DdWRwgiMohXdha3UyAw
+```

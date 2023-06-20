@@ -15,7 +15,7 @@ Waku protocols ensure that users communication remains censorship-resistant and 
 
 The Waku family of protocols is designed for diverse applications due to their properties, such as:
 
-### Generalized Messaging
+### Generalized
 
 Waku aims to solve the problem of ephemeral messaging between subsystems and nodes through a flexible, secure, and private protocol. It supports human-to-human and machine-to-machine messaging scenarios but is not designed for data storage.
 

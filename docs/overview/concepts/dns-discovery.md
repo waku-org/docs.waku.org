@@ -6,13 +6,13 @@ Built upon the foundation of [EIP-1459: Node Discovery via DNS](https://eips.eth
 
 This bootstrapping method allows anyone to register and publish a domain name for the network, promoting increased decentralization.
 
-## Pros
+#### Pros
 
 - Low latency, low resource requirements.
 - Easy bootstrap list updates by modifying the domain name, eliminating the need for code changes.
 - Ability to reference a larger list of nodes by including other domain names in the code or ENR tree.
 
-## Cons
+#### Cons
 
 - Vulnerable to censorship: Domain names can be blocked or restricted.
 - Limited scalability: The listed nodes are at risk of being overwhelmed by receiving all queries. Also, operators must provide their `ENR` to the domain owner for listing.
