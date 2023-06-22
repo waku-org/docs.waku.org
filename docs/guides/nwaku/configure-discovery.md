@@ -41,14 +41,18 @@ To enable [DNS Discovery](/overview/concepts/dns-discovery) in a `nwaku` node, u
   --dns-discovery-name-server:[DNS NAME SERVER IP]
 ```
 
-For instance, consider a `nwaku` node that enables `DNS Discovery`, connects to a DNS node list, and queries the IPs `1.1.1.1` and `1.0.0.1`:
+:::info
+If you omit the `dns-discovery-name-server` option, `nwaku` will attempt to use the CloudFlare servers `1.1.1.1` and `1.0.0.1`.
+:::
+
+For instance, consider a `nwaku` node that enables `DNS Discovery`, connects to a DNS node list, and queries the IPs `8.8.8.8` and `8.8.4.4`:
 
 ```bash
 ./build/wakunode2 \
   --dns-discovery:true \
   --dns-discovery-url:enrtree://AOGECG2SPND25EEFMAJ5WF3KSGJNSGV356DSTL2YVLLZWIV6SAYBM@test.waku.nodes.status.im \
-  --dns-discovery-name-server:1.1.1.1 \
-  --dns-discovery-name-server:1.0.0.1
+  --dns-discovery-name-server:8.8.8.8 \
+  --dns-discovery-name-server:8.8.4.4
 ```
 
 ## Configure Discv5

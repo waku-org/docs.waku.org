@@ -105,7 +105,7 @@ curl --location --request GET 'http://localhost:8545' \
 </Tabs>
 
 :::info
-The `listenAddresses` field stores the node's listening address(es), while the `enrUri` field stores the discoverable `ENR` URI for peer discovery.
+The `listenAddresses` field stores the node's listening addresses, while the `enrUri` field stores the discoverable `ENR` URI for peer discovery.
 :::
 
 ## Find the Node Addresses

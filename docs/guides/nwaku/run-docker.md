@@ -51,12 +51,12 @@ docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku \
   --nat:extip:[YOUR PUBLIC IP] # or, if you are behind a nat: --nat=any
 ```
 
-:::tip
 To find your public IP, use:
 
 ```bash
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 ```
 
+:::tip
 We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (listening and discovery ports, API servers).
 :::

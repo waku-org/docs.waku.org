@@ -38,7 +38,7 @@ While the `Light Push` protocol acknowledges the receipt by the remote peer, it 
 
 ## [Waku Message](https://rfc.vac.dev/spec/14)
 
-`Waku Message` specifies the message structure used in the Waku Network. It defines the attributes and metadata fields that accompany a message, including the following:
+`Waku Message` specifies the structure and format of messages in the Waku Network. It includes the following attributes:
 
 - `content_topic` attribute for [content-based filtering](/overview/concepts/content-topics).
 - `payload` attribute containing the message data payload to be sent.
