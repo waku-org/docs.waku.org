@@ -72,6 +72,10 @@ const config = {
               label: "Run a Nwaku Node",
               to: "/guides/run-nwaku-node",
             },
+            {
+              label: "JavaScript Waku SDK",
+              to: "/guides/js-waku/",
+            },
           ],
         },
         {
@@ -126,6 +130,10 @@ const config = {
             {
               to: "/guides/run-nwaku-node",
               label: "Run a Nwaku Node",
+            },
+            {
+              to: "/guides/js-waku/",
+              label: "JavaScript Waku SDK",
             },
           ],
         },

@@ -68,6 +68,15 @@ const sidebars = {
 		},
 		{
 			type: "category",
+			label: "JavaScript Waku SDK",
+			link: {
+				type: "doc",
+				id: "guides/js-waku/index",
+			},
+			items: []
+		},
+		{
+			type: "category",
 			label: "Reference",
 			items: [
 				"guides/reference/node-config-methods",

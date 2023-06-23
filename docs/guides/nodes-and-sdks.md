@@ -23,7 +23,7 @@ Waku is implemented in multiple SDKs, allowing it to integrate with different la
 
 | | Description | Documentation |
 | - | - | - |
-| [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
+| [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | [JavaScript Waku SDK](/guides/js-waku/) |
 | [nwaku](https://github.com/waku-org/nwaku) | Nim SDK designed for integration with native Nim applications | |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | |
