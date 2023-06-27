@@ -73,7 +73,9 @@ const sidebars = {
 				type: "doc",
 				id: "guides/js-waku/index",
 			},
-			items: []
+			items: [
+				"guides/js-waku/quick-start"
+			]
 		},
 		{
 			type: "category",
