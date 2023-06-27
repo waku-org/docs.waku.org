@@ -4,7 +4,7 @@ title: Content Topics
 
 `Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/overview/concepts/protocols#relay) or [Filter](/overview/concepts/protocols#filter)) and retrieving historical messages ([Store](/overview/concepts/protocols#store)) that meet specific filtering criteria. Please refer to the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
 
-## Content Topic Format
+## Naming Format
 
 Here is the recommended format for content topics:
 

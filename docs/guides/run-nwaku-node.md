@@ -6,7 +6,7 @@ Nwaku is a lightweight and robust Nim client for running a Waku node, equipped w
 
 This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
-## Get the Binary
+## Get the Node Binary
 
 To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for acquiring the node binary:
 
@@ -21,7 +21,7 @@ To run a node, you must have the `nwaku` binary. Nwaku provides multiple options
 
 You can build the node binary directly from the [nwaku source code](https://github.com/waku-org/nwaku). To learn more, please refer to the [Build Nwaku from Source](/guides/nwaku/build-source) guide.
 
-#### Run the Binary in Docker
+#### Run Nwaku in Docker
 
 | | Description | Documentation |
 | - | - | - |

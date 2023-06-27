@@ -69,7 +69,7 @@ To enable [Discv5](/overview/concepts/discv5) in a `nwaku` node, use the followi
   --discv5-bootstrap-node:[DISCV5 ENR BOOTSTRAP ENTRY 2]
 ```
 
-For instance, consider a `nwaku` node that enables `Discv5` and bootstraps it's routing table using a static `ENR`:
+For instance, consider a `nwaku` node that enables `Discv5` and bootstraps its routing table using a static `ENR`:
 
 ```bash
 ./build/wakunode2 \
