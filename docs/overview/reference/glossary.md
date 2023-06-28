@@ -28,7 +28,7 @@ DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the r
 
 ### [ENR](https://rfc.vac.dev/spec/31/)
 
-Ethereum Node Record (ENR) is a specification used to represent and identify [nodes](#node), facilitating [discovery](#peer-discovery) and communication within the network. Besides connection details, `Waku ENR` also includes node configuration information like enabled protocol and shards.
+Ethereum Node Record (ENR) is a specification used to represent and identify [nodes](#node), facilitating [discovery](#peer-discovery) and communication within the network. Besides connection details, `ENR` also includes node configuration information like enabled protocol and shards.
 
 ### [Filter](/overview/concepts/protocols#filter)
 

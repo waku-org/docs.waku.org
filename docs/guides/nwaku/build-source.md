@@ -98,7 +98,7 @@ To learn more about running nwaku, please refer to:
 
 ## Run Test Suite
 
-Run the tests for both `Waku v1` and `Waku v2`:
+Run the tests for Waku:
 
 ```bash
 make test

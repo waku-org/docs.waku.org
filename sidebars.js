@@ -42,6 +42,7 @@ const sidebars = {
 		{
 			type: "category",
 			label: "Reference",
+			collapsed: false,
 			items: [
 				"overview/reference/glossary",
 				"overview/reference/security-features",
@@ -69,6 +70,7 @@ const sidebars = {
 		{
 			type: "category",
 			label: "Reference",
+			collapsed: false,
 			items: [
 				"guides/reference/node-config-methods",
 				"guides/reference/node-config-options",

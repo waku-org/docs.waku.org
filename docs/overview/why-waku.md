@@ -2,16 +2,16 @@
 title: Why Waku?
 ---
 
-Communication in the present day is heavily influenced by third-party intervention, ranging from censorship and deplatforming to intermediaries that seek to profit from rent and the misuse of data in the surveillance economy.
+Present-day communication is predominantly centralized, enabling significant third-party intervention, with profit motives overshadowing principles and downplaying censorship and privacy concerns. This shift leads to the exploitation and unauthorized use of user data in the surveillance economy, where data ownership is no longer in the hands of individuals.
 
-Waku is intended to empower individuals by returning control of communication to them. It is the go-to standard for Web3 communication, offering a scalable decentralized communication solution.
+Waku empowers individuals by restoring control of communication and data to them. Waku stands as the standard for Web3 communication, providing a scalable and decentralized solution.
 
 - Waku improves upon Whisper's capabilities by overcoming limitations and addressing functional gaps.
-- It provides a public infrastructure for the Ethereum and multi-chain ecosystem, serving as a common good.
-- It is not confined to a particular blockchain.
-- It is modular, adaptable, and can cater to various use cases.
-- It allows developers to decentralize communication in their dApps or move actions off-chain while maintaining decentralization.
-- It can run on various platforms, including mobile devices, cloud environments, web browsers, desktop apps, or even a [Dappnode](https://dappnode.com/)!
+- Provides a public infrastructure for the Ethereum and multi-chain ecosystem, serving as a common good.
+- Waku is not confined to a particular blockchain.
+- Modular, adaptable, configurable, and can cater to various use cases.
+- Enables developers to decentralize communication in their dApps or move actions off-chain while maintaining decentralization.
+- Designed to run on various platforms, including mobile devices, cloud environments, web browsers, desktop apps, or even a [Dappnode](https://dappnode.com/)!
 
 ## Why Waku is Necessary
 
