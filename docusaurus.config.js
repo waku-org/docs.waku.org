@@ -41,6 +41,15 @@ const config = {
     ],
   ],
   staticDirectories: ["static"],
+  plugins: [
+    [
+      "@acid-info/docusaurus-fathom",
+      {
+        siteId: "FUTMI",
+        scriptUrl: "https://fathom.status.im/tracker.js",
+      },
+    ],
+  ],
   themeConfig: {
     docs: {
       sidebar: {
