@@ -46,9 +46,9 @@ Check out the quick start guide and comprehensive tutorials to learn how to buil
 
 You can explore [examples.waku.org](https://examples.waku.org) to find working proofs-of-concept that showcase how to use `js-waku` effectively. You can also interact with these examples live:
 
-- [web-chat](https://examples.waku.org/web-chat): A simple public chat.
+- [web-chat](https://examples.waku.org/web-chat): A simple public chat application.
 - [eth-pm](https://examples.waku.org/eth-pm): End-to-end encrypted private messages.
-- [rln-js](https://examples.waku.org/rln-js): Demonstration of [RLN](https://rfc.vac.dev/spec/32/), an economic spam protection protocol that rate limit using zero-knowledge for privacy preserving purposes.
+- [rln-js](https://examples.waku.org/rln-js): Demonstration of [RLN](https://rfc.vac.dev/spec/32/), an economic spam protection protocol that enables rate limiting using zero-knowledge for privacy preserving purposes.
 
 :::tip
 To further explore the `js-waku` SDK API, visit the TypeDoc documentation at <https://js.waku.org/>.

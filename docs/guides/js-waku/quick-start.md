@@ -11,9 +11,13 @@ To interact with the Waku Network, create a light node using the `createLightNod
 ```js
 import { createLightNode } from "@waku/sdk";
 
-// create a light node
+// Create a light node
 const node = await createLightNode({ defaultBootstrap: true });
 ```
+
+:::info
+Setting the `defaultBootstrap` option to `true` allows your node to connect to a set of pre-defined nodes.
+:::
 
 ## Connect to Remote Peers
 
@@ -22,41 +26,44 @@ To ensure the node has connected to peers on the Waku Network, use the `waitForR
 ```js
 import { waitForRemotePeer } from "@waku/sdk";
 
-// start the node
+// Start the node
 await node.start();
 
-// wait for a successful peer connection
-await waitForRemotePeer(node, ["filter", "lightpush"]);
+// Wait for a successful peer connection
+await waitForRemotePeer(node);
 ```
 
-:::info
-To specify the [protocols](/overview/concepts/protocols) enabled by the remote peers, provide an array of `protocol identifiers` using the `protocols` option.
-:::
+The `protocols` option allows you to specify the [protocols](/overview/concepts/protocols) that the remote peers should have enabled:
+
+```js
+// Wait for peer connections with specific protocols
+await waitForRemotePeer(node, ["filter", "lightpush"]);
+```
 
 ## Choose a Content Topic
 
 Before building your application, you must [choose a content topic](/overview/concepts/content-topics) for outgoing messages. Content topics are used for categorizing messages on the Waku Network.
 
 ```js
-// choose a content topic
+// Choose a content topic
 const contentTopic = "/quick-start/1/message/proto";
 ```
 
-Next, create an `encoder` and `decoder` using the `createEncoder()` and `createDecoder()` functions to convert your messages to and from the [Waku Message](/overview/concepts/protocols#waku-message) format:
+Next, create an `encoder` and `decoder` to encrypt and decrypt your messages using any [encryption protocol](https://rfc.vac.dev/spec/26/) supported by Waku. To create an `encoder` and `decoder` without encryption, use:
 
 ```js
 import { createEncoder, createDecoder } from "@waku/sdk";
 
-// create a message encoder
+// Create a message encoder
 const encoder = createEncoder(contentTopic);
 
-// create a message decoder
+// Create a message decoder
 const decoder = createDecoder(contentTopic);
 ```
 
 ## Define a Message Structure
 
-We recommend using [Protocol Buffers](https://protobuf.dev/) (`Protobuf`) to encode your messages because it is lightweight and efficient. To get started, install the `protobufjs` package using your preferred package manager:
+You need to define a message We recommend using [Protocol Buffers](https://protobuf.dev/) (`Protobuf`) to encode your messages because it is lightweight and efficient. To get started, install the `protobufjs` package using your preferred package manager:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -86,9 +93,12 @@ You can also use the `protobufjs` package via a CDN without installing it on you
 import "https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js";
 ```
 
-Next, construct the application message structure using [Protobuf's valid message fields](https://github.com/protobufjs/protobuf.js#usage):
+Next, create the application message structure using [Protobuf's valid message fields](https://github.com/protobufjs/protobuf.js#usage):
 
 ```js
+import protobuf from "protobufjs";
+
+// Create the message structure using Protobuf
 const ChatMessage = new protobuf.Type("ChatMessage")
 	.add(new protobuf.Field("timestamp", 1, "uint64"))
     .add(new protobuf.Field("sender", 2, "string"))
@@ -97,20 +107,20 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 
 ## Send Messages with Light Push
 
-To send messages to the Waku Network, create a new message object and use the `lightPush.push()` function:
+To send messages to the Waku Network using the `Light Push` protocol, create a new message object and use the `lightPush.push()` function:
 
 ```js
-// create a new message object
+// Create a new message object
 const protoMessage = ChatMessage.create({
     timestamp: Date.now(),
     sender: "Alice",
     message: "Hello, World!",
 });
 
-// serialize the message using Protobuf
+// Serialize the message using Protobuf
 const serializedMessage = ChatMessage.encode(protoMessage).finish();
 
-// send the message using Light Push
+// Send the message using Light Push
 await node.lightPush.push(encoder, {
     payload: serializedMessage,
 });
@@ -121,9 +131,14 @@ await node.lightPush.push(encoder, {
 To receive messages that have a specific content topic, use the `filter.subscribe()` function to actively listen for incoming messages:
 
 ```js
-// subscribe to a content topic and display new messages
+// Subscribe to a content topic and display new messages
 await node.filter.subscribe([decoder], (wakuMessage) => {
     const messageObj = ChatMessage.decode(wakuMessage.payload);
+    // Render the Protobuf-formatted messageObj as desired in your application
     console.log(messageObj);
 });
 ```
+
+:::tip Congratulations!
+You have successfully added decentralized communication features to your application using `js-waku`.
+:::
