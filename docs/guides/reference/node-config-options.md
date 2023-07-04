@@ -16,7 +16,7 @@ Here are the available node configuration options, along with their default valu
 | Name | Default Value | Description |
 | - | - | - |
 | `log-level` | `logging.LogLevel.INFO` | Sets the log level for process. Supported levels: TRACE, DEBUG, INFO, NOTICE, WARN, ERROR or FATAL |
-| `log-format` | `logging.LogFormat.TEXT` | Specifies what kind of logs should be written to stdout. Suported formats: TEXT, JSON |
+| `log-format` | `logging.LogFormat.TEXT` | Specifies what kind of logs should be written to stdout. Supported formats: TEXT, JSON |
 
 ## General Node Config
 
@@ -48,7 +48,7 @@ Here are the available node configuration options, along with their default valu
 | `relay` | `true` | Enable relay protocol: true\|false |
 | `relay-peer-exchange` | `false` | Enable gossipsub peer exchange in relay protocol: true\|false |
 | `rln-relay` | `false` | Enable spam protection through rln-relay: true\|false |
-| `rln-relay-cred-path` |  | The path for peristing rln-relay credential |
+| `rln-relay-cred-path` |  | The path for persisting rln-relay credential |
 | `rln-relay-membership-index` | `0` | The index of credentials to use |
 | `rln-relay-membership-group-index` | `0` | The index of credentials to use, within a specific rln membership set |
 | `rln-relay-pubsub-topic` | `/waku/2/default-waku/proto` | The pubsub topic for which rln-relay gets enabled |
@@ -73,7 +73,7 @@ Here are the available node configuration options, along with their default valu
 | `store` | `false` | Enable/disable waku store protocol |
 | `storenode` |  | Peer multiaddress to query for storage |
 | `store-message-retention-policy` | time:172800 | Message store retention policy. Time retention policy: 'time:<seconds\>'. Capacity retention policy: 'capacity:<count\>'. Set to 'none' to disable |
-| `store-message-db-url` | `sqlite://store.sqlite3` | The database connection URL for peristent storage |
+| `store-message-db-url` | `sqlite://store.sqlite3` | The database connection URL for persistent storage |
 | `store-message-db-vacuum` | `false` | Enable database vacuuming at start. Only supported by SQLite database engine |
 | `store-message-db-migration` | `true` | Enable database migration at start |
 | `store-resume-peer` |  | Peer multiaddress to resume the message store at boot |
