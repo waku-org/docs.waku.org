@@ -48,7 +48,9 @@
     "extip",
     "staticnode",
     "permissioned",
-    "Secp"
+    "Secp",
+    "libpq",
+    "dylib"
   ],
   "flagWords": [],
   "ignorePaths": [

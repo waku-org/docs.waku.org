@@ -142,7 +142,7 @@ const config = {
           title: "Community",
           items: [
             {
-              href: "https://discord.waku.org/",
+              href: "https://discord.waku.org",
               label: "Discord",
             },
             {
@@ -154,7 +154,7 @@ const config = {
               label: "Telegram",
             },
             {
-              href: "https://forum.vac.dev/",
+              href: "https://forum.vac.dev",
               label: "Vac Forum",
             },
           ],
@@ -171,7 +171,7 @@ const config = {
               label: "Blog",
             },
             {
-              href: "https://rfc.vac.dev/",
+              href: "https://rfc.vac.dev",
               label: "Vac RFCs",
             },
           ],
