@@ -63,7 +63,13 @@ const decoder = createDecoder(contentTopic);
 
 ## Define a Message Structure
 
-You need to define a message We recommend using [Protocol Buffers](https://protobuf.dev/) (`Protobuf`) to encode your messages because it is lightweight and efficient. To get started, install the `protobufjs` package using your preferred package manager:
+You need to define a message structure for the following reasons:
+
+1. **Consistency:** Ensures uniform message format for easy parsing and processing.
+2. **Interoperability:** Facilitates effective communication between different parts of your application.
+3. **Compatibility:** Allows smooth communication between older and newer app versions.
+
+We recommend using [Protocol Buffers](https://protobuf.dev/) (`Protobuf`) to encode your messages because it is lightweight and efficient. To get started, install the `protobufjs` package using your preferred package manager:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -93,7 +99,7 @@ You can also use the `protobufjs` package via a CDN without installing it on you
 import "https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js";
 ```
 
-Next, create the application message structure using [Protobuf's valid message fields](https://github.com/protobufjs/protobuf.js#usage):
+Next, create the message structure using [Protobuf's valid message](https://github.com/protobufjs/protobuf.js#usage) fields:
 
 ```js
 import protobuf from "protobufjs";
