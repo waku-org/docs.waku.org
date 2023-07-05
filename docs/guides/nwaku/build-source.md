@@ -11,7 +11,7 @@ This guide provides detailed steps to build a `nwaku` node from the source code 
 
 ## Prerequisites
 
-To build `nwaku`, you need the standard developer tools, including a C compiler, Make, Bash, and Git.
+To build `nwaku`, you need the standard developer tools, including a C compiler, Make, Bash, Git, and PostgreSQL client library.
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -22,14 +22,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="debian" label="Debian and Ubuntu">
 
 ```bash
-sudo apt-get install build-essential git
+sudo apt-get install build-essential git libpq5
 ```
 
 </TabItem>
 <TabItem value="fedora" label="Fedora">
 
 ```bash
-sudo dnf install @development-tools
+sudo dnf install @development-tools git libpq-devel
 ```
 
 </TabItem>
@@ -37,14 +37,17 @@ sudo dnf install @development-tools
 
 ```bash
 # Using your favorite AUR helper
-[AUR HELPER] -S base-devel
+sudo [AUR HELPER] -S base-devel git postgresql-libs
 ```
 
 </TabItem>
 <TabItem value="mac" label="MacOS (Homebrew)">
 
 ```bash
-brew install cmake
+brew install cmake git postgresql@15
+# Create a symbolic link to libpq.5.dylib in /usr/local/lib/
+sudo mkdir -p /usr/local/lib/
+sudo ln -s /opt/homebrew/opt/postgresql@15/lib/libpq.5.dylib /usr/local/lib/libpq.dylib
 ```
 
 </TabItem>
@@ -98,7 +101,7 @@ To learn more about running nwaku, please refer to:
 
 ## Run Test Suite
 
-Run the tests for both `Waku v1` and `Waku v2`:
+Run the tests for Waku:
 
 ```bash
 make test

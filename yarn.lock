@@ -2,10 +2,27 @@
 # yarn lockfile v1
 
 
-"@acid-info/docusaurus-og@^1.0.0-alpha.48":
-  version "1.0.0-alpha.48"
-  resolved "https://registry.yarnpkg.com/@acid-info/docusaurus-og/-/docusaurus-og-1.0.0-alpha.48.tgz#e7adec4062096170a0c9447a863491379859e6ef"
-  integrity sha512-8S+cvy8H6DF5iR5Fm+J9g8PuYN432WXq2s3AXV9J+RFxN36Ej3xg1JxskWxu1P29dfoKqA0GxJ2kwPXi+KPSwg==
+"@acid-info/docusaurus-fathom@^1.0.0-alpha.61":
+  version "1.0.0-alpha.61"
+  resolved "https://registry.yarnpkg.com/@acid-info/docusaurus-fathom/-/docusaurus-fathom-1.0.0-alpha.61.tgz#9f644f0bc2073bd33802dda8fbfc1b3136557a9f"
+  integrity sha512-lrt4ei3WWe/yRzrKsGzZzX2zHb72hBFj2fJcw9+x3JgGMUhg1tiPwg7snpbL4A3kiIq+WvZ8O+EXHz/hA67m2A==
+  dependencies:
+    "@docusaurus/core" "^2.4.1"
+    "@docusaurus/module-type-aliases" "^2.4.1"
+    "@docusaurus/types" "^2.4.1"
+    "@docusaurus/utils" "^2.4.1"
+    "@docusaurus/utils-common" "^2.4.1"
+    "@docusaurus/utils-validation" "^2.4.1"
+    lodash "^4.17.21"
+    node-html-parser "^6.1.5"
+    object-hash "^3.0.0"
+    satori "^0.10.1"
+    sharp "^0.32.1"
+
+"@acid-info/docusaurus-og@^1.0.0-alpha.54":
+  version "1.0.0-alpha.54"
+  resolved "https://registry.yarnpkg.com/@acid-info/docusaurus-og/-/docusaurus-og-1.0.0-alpha.54.tgz#38ab4e17c12beb350d31c6d6955e6636e2c110b3"
+  integrity sha512-5hhytFikdPVuOZqOX5I4f0YwUIhEHqOIPXcc4+Z9BF2KS7a8paGnIIja+bJZBD0mcT5SW/C+CRRxLappx3PPqQ==
   dependencies:
     "@docusaurus/core" "^2.4.1"
     "@docusaurus/module-type-aliases" "^2.4.1"
@@ -16,14 +33,14 @@
     "@easyops-cn/docusaurus-search-local" "^0.33.6"
     lodash "^4.17.21"
 
-"@acid-info/logos-docusaurus-preset@^1.0.0-alpha.51":
-  version "1.0.0-alpha.51"
-  resolved "https://registry.yarnpkg.com/@acid-info/logos-docusaurus-preset/-/logos-docusaurus-preset-1.0.0-alpha.51.tgz#9a7a569eca6a065ab3c271bf7eff092be13f4cd7"
-  integrity sha512-fwySpcnWxljU5qbR/5HqrEqqlbwHOUALsn7Gh/A2xxQI69i1ItrhMVQP8sVdLElPz/RuNIcc6QEItcR5euiMWg==
+"@acid-info/logos-docusaurus-preset@^1.0.0-alpha.60":
+  version "1.0.0-alpha.60"
+  resolved "https://registry.yarnpkg.com/@acid-info/logos-docusaurus-preset/-/logos-docusaurus-preset-1.0.0-alpha.60.tgz#94b620c72143084a727f0973dac1afbd8ea097bc"
+  integrity sha512-hG5N0C/vwAKmjnP77Xu/C/pvPbSCSCjFats0uIjG7vvasZMbVjUhuTBqVSpmYrOvqMZy92pZ8iPEfQ6vwIwdDQ==
   dependencies:
-    "@acid-info/docusaurus-og" "^1.0.0-alpha.48"
+    "@acid-info/docusaurus-og" "^1.0.0-alpha.54"
     "@acid-info/logos-docusaurus-search-local" "^1.0.0-alpha.47"
-    "@acid-info/logos-docusaurus-theme" "^1.0.0-alpha.51"
+    "@acid-info/logos-docusaurus-theme" "^1.0.0-alpha.60"
     "@docusaurus/core" "^2.4.1"
     "@docusaurus/module-type-aliases" "^2.4.1"
     "@docusaurus/preset-classic" "^2.4.1"
@@ -53,12 +70,12 @@
     satori "^0.10.1"
     sharp "^0.32.1"
 
-"@acid-info/logos-docusaurus-theme@^1.0.0-alpha.51":
-  version "1.0.0-alpha.51"
-  resolved "https://registry.yarnpkg.com/@acid-info/logos-docusaurus-theme/-/logos-docusaurus-theme-1.0.0-alpha.51.tgz#3d4bfed9cdee75effc21d023fb3ff2a542c0052d"
-  integrity sha512-N+sYA++Ao9BwZQ1+meRYXs7TSqHFoTfAu5+GwD4xl9Vc8C5o2RWGDkWiQCNysyAlObXsIB5RdBD+aj2DrsXZ9w==
+"@acid-info/logos-docusaurus-theme@^1.0.0-alpha.60":
+  version "1.0.0-alpha.60"
+  resolved "https://registry.yarnpkg.com/@acid-info/logos-docusaurus-theme/-/logos-docusaurus-theme-1.0.0-alpha.60.tgz#244cb46ef6b35a5bbf13a8df34dc4cf5cb416479"
+  integrity sha512-rsSZXiig5L0hA8Uu4ZplVN5f3uV/uJZfuOELKUYcPA2le3e862UNfwrTfX/trc1Tn5xGkCV7DyPF8iVQH8BLvQ==
   dependencies:
-    "@acid-info/docusaurus-og" "^1.0.0-alpha.48"
+    "@acid-info/docusaurus-og" "^1.0.0-alpha.54"
     "@acid-info/lsd-react" "^0.1.0-alpha.15"
     "@docusaurus/core" "^2.4.1"
     "@docusaurus/mdx-loader" "^2.4.1"
@@ -80,6 +97,8 @@
     "@react-three/drei" "8.20.2"
     "@react-three/fiber" "6.2.3"
     "@tryghost/content-api" "^1.11.4"
+    axios "^1.4.0"
+    boolean "^3.2.0"
     clsx "^1.2.1"
     copy-text-to-clipboard "^3.0.1"
     copy-to-clipboard "^3.3.2"
@@ -87,6 +106,7 @@
     docusaurus-plugin-sass "^0.2.3"
     dotenv "^16.0.3"
     lodash "^4.17.21"
+    object-hash "^3.0.0"
     prism-react-renderer "^1.3.5"
     react "^17.0.2"
     react-dom "^17.0.2"
@@ -3639,6 +3659,15 @@ axios@^0.27.0:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
+axios@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
+  integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 babel-loader@^8.2.5:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.3.0.tgz#124936e841ba4fe8176786d6ff28add1f134d6a8"
@@ -3792,6 +3821,11 @@ boolbase@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
+
+boolean@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/boolean/-/boolean-3.2.0.tgz#9e5294af4e98314494cbb17979fa54ca159f116b"
+  integrity sha512-d0II/GO9uf9lfUHH2BQsjxzRJZBdsjgsBiW4BvhWk/3qoKwQFjIDVN19PfX8F2D/r9PCMTtLWjYVCFrpeYUzsw==
 
 boxen@^5.0.0:
   version "5.1.2"
@@ -5774,7 +5808,7 @@ flux@^4.0.1:
     fbemitter "^3.0.0"
     fbjs "^3.0.1"
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.7, follow-redirects@^1.14.9:
+follow-redirects@^1.0.0, follow-redirects@^1.14.7, follow-redirects@^1.14.9, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -8239,6 +8273,11 @@ proxy-addr@~2.0.7:
   dependencies:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
+
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
 pump@^3.0.0:
   version "3.0.0"

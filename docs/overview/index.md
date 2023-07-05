@@ -1,5 +1,5 @@
 ---
-title: What is Waku?
+title: Introduction to Waku
 slug: /
 ---
 
