@@ -2,19 +2,17 @@
 title: Send and Receive Messages Using Light Push and Filter
 ---
 
-This guide provides quick steps to create a light node, send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter).
+This guide provides detailed steps to create a light node, send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter).
 
 ## Create a Waku Node
 
-To interact with the Waku Network, create a light node using the `createLightNode()` function:
+Use the `createLightNode()` function to create a light node and interact with the Waku Network:
 
 ```js
 import { createLightNode } from "@waku/sdk";
 
-// Create a light node
+// Create and start a light node
 const node = await createLightNode({ defaultBootstrap: true });
-
-// Start the node
 await node.start();
 ```
 
@@ -35,7 +33,7 @@ Before building your application, you must [choose a content topic](/overview/co
 
 ```js
 // Choose a content topic
-const contentTopic = "/quick-start/1/message/proto";
+const contentTopic = "/light-guide/1/message/proto";
 ```
 
 Next, create an `encoder` and `decoder` to encrypt and decrypt your messages using any [encryption protocol](https://rfc.vac.dev/spec/26/) supported by Waku. To create an `encoder` and `decoder` without encryption, use:
@@ -102,7 +100,7 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 
 ## Send Messages Using Light Push
 
-To send messages to the Waku Network using the `Light Push` protocol, create a new message object and use the `lightPush.push()` function:
+To send messages over the Waku Network using the `Light Push` protocol, create a new message object and use the `lightPush.push()` function:
 
 ```js
 // Create a new message object
@@ -123,7 +121,7 @@ await node.lightPush.push(encoder, {
 
 ## Receive Messages Using Filter
 
-To receive messages that have a specific content topic, use the `filter.subscribe()` function to actively listen for incoming messages:
+Use the `filter.subscribe()` function to listen for incoming messages that have a specific content topic:
 
 ```js
 // Subscribe to a content topic and display new messages
@@ -147,17 +145,15 @@ import {
 } from "@waku/sdk";
 import protobuf from "protobufjs";
 
-// Create a light node
+// Create and start a light node
 const node = await createLightNode({ defaultBootstrap: true });
-
-// Start the node
 await node.start();
 
 // Wait for a successful peer connection
 await waitForRemotePeer(node, ["lightpush", "filter"]);
 
 // Choose a content topic
-const contentTopic = "/quick-start/1/message/proto";
+const contentTopic = "/light-guide/1/message/proto";
 
 // Create a message encoder
 const encoder = createEncoder(contentTopic);

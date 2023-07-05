@@ -39,15 +39,7 @@ yarn create @waku/app [PROJECT DIRECTORY]
 
 Next, select a template to initialize your app from:
 
-```shell
-npx @waku/create-app my-app       
-? Select template … 
-❯ light-chat
-  eth-pm
-  light-js
-
-  <...>
-```
+![waku create app demo](/img/waku-create-app-demo.gif)
 
 :::tip
 If you have previously installed `@waku/create-app` globally, we recommend uninstalling the package to ensure that `npx` always uses the latest version.
