@@ -42,12 +42,9 @@ Check out the quick start guide and comprehensive tutorials to learn how to buil
 
 | Guide | Description |
 | - | - |
-| [Quick Start](/guides/js-waku/quick-start) | Quickly familiarize yourself with `js-waku` by learning to send and receive messages using the `Filter` and `Light Push` protocols |
-| [Bootstrap DApps with @waku/create-app](/guides/js-waku/waku-create-app) | Learn how to use the [@waku/create-app](https://github.com/waku-org/js-waku-examples/tree/master/create-waku-app) package to bootstrap your next `js-waku` project from various example templates |
-
-:::tip
-You can explore [examples.waku.org](https://examples.waku.org) to find working proofs-of-concept that showcase how to use `js-waku` effectively. To further explore the `js-waku` SDK API, visit the TypeDoc documentation at <https://js.waku.org/>.
-:::
+| [Quick Start](/guides/js-waku/quick-start) | Quickly familiarize yourself with `js-waku` by learning ... |
+| [Send and Receive Messages with Light Push and Filter](/guides/js-waku/lightpush-filter) | Learn how to send and receive messages on light nodes using the `Light Push` and `Filter` protocols |
+| [Bootstrap DApps with @waku/create-app](/guides/js-waku/waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `js-waku` project from various example templates |
 
 ## Get Help and Report Issues
 
