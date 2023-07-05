@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap DApps with @waku/create-app"
+title: "Bootstrap DApps Using @waku/create-app"
 ---
 
 This guide provides detailed steps to bootstrap your next `js-waku` project from [various example templates](https://github.com/waku-org/js-waku-examples/tree/master/examples) using the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package.

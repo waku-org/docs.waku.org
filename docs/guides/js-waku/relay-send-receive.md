@@ -1,30 +1,30 @@
 ---
-title: Send and Receive Messages Using Light Push and Filter
+title: Send and Receive Messages Using Relay
 ---
 
-This guide provides detailed steps to create a light node, send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter).
+This guide provides detailed steps to set up a Waku node for sending and receiving messages using the [Relay protocol](/overview/concepts/protocols#relay).
 
 ## Create a Waku Node
 
-Set up a Waku node by creating a light node, connecting to network peers, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
+Set up a Waku node by creating a relay node, connecting to network peers, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
 
 ```js
 import {
-    createLightNode,
-    waitForRemotePeer,
-    createEncoder,
-    createDecoder
+	createRelayNode,
+	waitForRemotePeer,
+	createEncoder,
+	createDecoder
 } from "@waku/sdk";
 
-// Create and start a light node
-const node = await createLightNode({ defaultBootstrap: true });
+// Create and start a relay node
+const node = await createRelayNode({ defaultBootstrap: true });
 await node.start();
 
 // Wait for a successful peer connection
-await waitForRemotePeer(node, ["lightpush", "filter"]);
+await waitForRemotePeer(node);
 
 // Choose a content topic
-const contentTopic = "/light-guide/1/message/proto";
+const contentTopic = "/relay-guide/1/message/proto";
 
 // Create a message encoder
 const encoder = createEncoder(contentTopic);
@@ -51,9 +51,9 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for steps on adding the `protobufjs` package to your project using a package manager or CDN.
 :::
 
-## Send Messages Using Light Push
+## Send Messages Using Relay
 
-To send messages over the Waku Network using the `Light Push` protocol, create a new message object and use the `lightPush.push()` function:
+To send messages using the `Relay` protocol, create a new message object and use the `relay.send()` function:
 
 ```js
 // Create a new message object
@@ -66,27 +66,27 @@ const protoMessage = ChatMessage.create({
 // Serialize the message using Protobuf
 const serializedMessage = ChatMessage.encode(protoMessage).finish();
 
-// Send the message using Light Push
-await node.lightPush.push(encoder, {
+// Send the message using Relay
+await node.relay.send(encoder, {
     payload: serializedMessage,
 });
 ```
 
-## Receive Messages Using Filter
+## Receive Messages Using Relay
 
-Use the `filter.subscribe()` function to listen for incoming messages on a specific content topic:
+Use the `relay.subscribe()` function to listen for incoming messages on a specific content topic:
 
 ```js
 // Subscribe to content topics and display new messages
-await node.filter.subscribe([decoder], (wakuMessage) => {
+await node.relay.subscribe([decoder], (wakuMessage) => {
 	// Check if there is a payload on the message
 	if (!wakuMessage.payload) return;
 	// Render the Protobuf-formatted messageObj as desired in your application
-    const messageObj = ChatMessage.decode(wakuMessage.payload);
-    console.log(messageObj);
+	const messageObj = ChatMessage.decode(wakuMessage.payload);
+	console.log(messageObj);
 });
 ```
 
 :::tip Congratulations!
-You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols.
+You have successfully sent and received messages over the Waku Network using the `Relay` protocol.
 :::
