@@ -57,6 +57,7 @@ To join the Waku Network, nodes must [bootstrap](/overview/reference/glossary#bo
 | Static Peers | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers) |
 | DNS Discovery | Enable `nwaku` to bootstrap nodes using the [DNS Discovery](/overview/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
 | Discv5 | Enable `nwaku` to discover peers using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
+| Peer Exchange | Enable [Peer Exchange](/overview/concepts/peer-exchange) protocol for light nodes to request peers from your `nwaku` node | [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange) |
 
 :::tip
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
@@ -112,7 +113,7 @@ The `listenAddresses` field stores the node's listening addresses, while the `en
 
 You can find the addresses of a running node through its logs or by calling the `get_waku_v2_debug_v1_info` method of the [JSON RPC API](https://rfc.vac.dev/spec/16/).
 
-:::tip
+:::info
 When starting the node, `nwaku` will display all the public listening and discovery addresses at the `INFO` log level.
 :::
 
