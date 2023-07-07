@@ -100,7 +100,7 @@ Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that 
 
 ### [Relay](/overview/concepts/protocols#relay)
 
-Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship-resistant [message](#waku-message) dissemination among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku) to accommodate many nodes efficiently.
+Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship-resistant [message](#waku-message) sending and receiving among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku) to accommodate many nodes efficiently.
 
 ### Resource-Limited
 

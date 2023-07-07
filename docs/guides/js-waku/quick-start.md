@@ -2,9 +2,9 @@
 title: Quick Start
 ---
 
-This guide provides quick steps to set up a Waku node and send messages using the [Relay protocol](/overview/concepts/protocols#relay). Please refer to the [installation guide](/guides/js-waku/#installation) for steps on adding `js-waku` to your project using a package manager or CDN.
+This guide provides quick steps to start using the `js-waku` SDK by setting up a Waku node and sending messages using the [Relay protocol](/overview/concepts/protocols#relay). Please refer to the [installation guide](/guides/js-waku/#installation) for steps on adding `js-waku` to your project.
 
-## Create a Waku Node
+## Create a Relay Node
 
 Use the `createRelayNode()` function to create a relay node and interact with the Waku Network:
 
@@ -12,7 +12,7 @@ Use the `createRelayNode()` function to create a relay node and interact with th
 import { createRelayNode } from "@waku/sdk";
 
 // Create and start a relay node
-const waku = await createRelayNode({ defaultBootstrap: true });
+const node = await createRelayNode({ defaultBootstrap: true });
 await node.start(); // Use the stop() function to stop a running node
 ```
 
@@ -34,8 +34,15 @@ await waitForRemotePeer(node);
 The `protocols` option allows you to specify the [protocols](https://js.waku.org/enums/_waku_sdk.Protocols.html) that the remote peers should have enabled:
 
 ```js
+import { waitForRemotePeer, Protocols } from "@waku/sdk";
+
 // Wait for peer connections with specific protocols
-await waitForRemotePeer(node, ["relay", "store", "filter", "lightpush"]);
+await waitForRemotePeer(node, [
+	Protocols.Relay,
+	Protocols.Store,
+	Protocols.LightPush,
+	Protocols.Filter,
+]);
 ```
 
 ## Choose a Content Topic
@@ -46,7 +53,7 @@ await waitForRemotePeer(node, ["relay", "store", "filter", "lightpush"]);
 import { createEncoder } from "@waku/sdk";
 
 // Choose a content topic
-const contentTopic = "/quick-start/1/message/utf8";
+const contentTopic = "/quick-start/1/message/proto";
 
 // Create a message encoder
 const encoder = createEncoder(contentTopic);
@@ -130,5 +137,5 @@ await node.relay.send(encoder, {
 ```
 
 :::tip Congratulations!
-You have successfully added decentralized communication features to your application using `js-waku`. For a more comprehensive tutorial, refer to the [Send and Receive Messages Using Relay](/guides/js-waku/relay-send-receive) guide.
+You have successfully added decentralized communication features to your application using `js-waku`.
 :::

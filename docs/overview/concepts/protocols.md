@@ -6,7 +6,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Relay](https://rfc.vac.dev/spec/11/)
 
-`Relay` protocol employs a Pub/Sub architecture to facilitate message routing among peers. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship. It also scales the Waku Network to accommodate many nodes efficiently.
+`Relay` protocol employs a Pub/Sub architecture to facilitate the sending and receiving of messages among peers. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship. It also scales the Waku Network to accommodate many nodes efficiently.
 
 ## [RLN Relay](https://rfc.vac.dev/spec/17/)
 
@@ -14,7 +14,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
-`Filter` protocol allows light nodes to selectively subscribe to specific messages transmitted by other peers using [content topics](/overview/concepts/content-topics). It is designed to be a lightweight alternative for accessing the `Relay` network, particularly tailored for devices with limited bandwidth.
+`Filter` protocol allows light nodes to selectively subscribe to specific messages relayed by other peers using [content topics](/overview/concepts/content-topics). It is designed to be a lightweight alternative for accessing the `Relay` network, particularly tailored for devices with limited bandwidth.
 
 :::info
 `Filter` protocol helps optimize bandwidth usage, but it has fewer privacy guarantees as it must disclose the content topic to its peers to retrieve messages.

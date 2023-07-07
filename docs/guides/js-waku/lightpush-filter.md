@@ -6,12 +6,13 @@ This guide provides detailed steps to create a light node, send messages using t
 
 ## Create a Waku Node
 
-Set up a Waku node by creating a light node, connecting to network peers, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
+Set up a Waku node by creating a light node, connecting to network peers with `Light Push` and `Filter` enabled, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
 
 ```js
 import {
     createLightNode,
     waitForRemotePeer,
+    Protocols,
     createEncoder,
     createDecoder
 } from "@waku/sdk";
@@ -21,7 +22,10 @@ const node = await createLightNode({ defaultBootstrap: true });
 await node.start();
 
 // Wait for a successful peer connection
-await waitForRemotePeer(node, ["lightpush", "filter"]);
+await waitForRemotePeer(node, [
+	Protocols.LightPush,
+	Protocols.Filter,
+]);
 
 // Choose a content topic
 const contentTopic = "/light-guide/1/message/proto";
