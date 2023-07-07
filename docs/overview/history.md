@@ -41,4 +41,4 @@ Due to the lack of progress made on Whisper and growing concerns around scalabil
 
 ### Present Day
 
-Waku has continued to evolve and enhance itself, solidifying its position as the standard for Web3 communication.
+Waku has continued to evolve and enhance itself, enabling privacy-focused and uncompromised Web3 communication at scale.
