@@ -31,7 +31,7 @@ import { waitForRemotePeer } from "@waku/sdk";
 await waitForRemotePeer(node);
 ```
 
-The `protocols` option allows you to specify the [protocols](/overview/concepts/protocols) that the remote peers should have enabled:
+The `protocols` option allows you to specify the [protocols](https://js.waku.org/enums/_waku_sdk.Protocols.html) that the remote peers should have enabled:
 
 ```js
 // Wait for peer connections with specific protocols
@@ -87,7 +87,13 @@ yarn add protobufjs
 You can also use the `protobufjs` package via a CDN without installing it on your system:
 
 ```js
+// Import the CDN
 import "https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js";
+```
+
+```html
+<!-- Or include the protobufjs script -->
+<script src="https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js"></script>
 ```
 
 Next, create the message structure using [Protobuf's valid message](https://github.com/protobufjs/protobuf.js#usage) fields:

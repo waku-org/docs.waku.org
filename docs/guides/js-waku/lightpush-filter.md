@@ -26,10 +26,8 @@ await waitForRemotePeer(node, ["lightpush", "filter"]);
 // Choose a content topic
 const contentTopic = "/light-guide/1/message/proto";
 
-// Create a message encoder
+// Create a message encoder and decoder
 const encoder = createEncoder(contentTopic);
-
-// Create a message decoder
 const decoder = createDecoder(contentTopic);
 ```
 

@@ -78,6 +78,7 @@ const sidebars = {
 				"guides/js-waku/quick-start",
 				"guides/js-waku/relay-send-receive",
 				"guides/js-waku/lightpush-filter",
+				"guides/js-waku/store-retrieve-messages",
 				"guides/js-waku/waku-create-app",
 				{
 					type: 'html',

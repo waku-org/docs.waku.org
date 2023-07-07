@@ -17,7 +17,10 @@ import {
 } from "@waku/sdk";
 
 // Create and start a relay node
-const node = await createRelayNode({ defaultBootstrap: true });
+const node = await createRelayNode({
+	defaultBootstrap: true, // bootstraps using pre-defined nodes
+	emitSelf: true, // emits sent message events to itself
+});
 await node.start();
 
 // Wait for a successful peer connection
@@ -26,12 +29,14 @@ await waitForRemotePeer(node);
 // Choose a content topic
 const contentTopic = "/relay-guide/1/message/proto";
 
-// Create a message encoder
+// Create a message encoder and decoder
 const encoder = createEncoder(contentTopic);
-
-// Create a message decoder
 const decoder = createDecoder(contentTopic);
 ```
+
+:::info
+The `emitSelf` option emits sent message events to itself and invokes the node's subscribers.
+:::
 
 ## Create a Message Structure
 
