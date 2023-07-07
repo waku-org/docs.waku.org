@@ -50,7 +50,8 @@
     "permissioned",
     "Secp",
     "libpq",
-    "dylib"
+    "dylib",
+    "uncompromised",
   ],
   "flagWords": [],
   "ignorePaths": [
