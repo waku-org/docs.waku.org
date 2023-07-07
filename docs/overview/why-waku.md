@@ -4,7 +4,7 @@ title: Why Waku?
 
 Present-day communication is predominantly centralized, enabling significant third-party intervention, with profit motives overshadowing principles and downplaying censorship and privacy concerns. This shift leads to the exploitation and unauthorized use of user data in the surveillance economy, where data ownership is no longer in the hands of individuals.
 
-Waku empowers individuals by restoring control of communication and data to them. Waku stands as the standard for Web3 communication, providing a scalable and decentralized solution.
+Waku transforms how individuals communicate and manage data by offering a scalable, decentralized solution that grants ultimate control.
 
 - Waku improves upon Whisper's capabilities by overcoming limitations and addressing functional gaps.
 - Provides a public infrastructure for the Ethereum and multi-chain ecosystem, serving as a common good.

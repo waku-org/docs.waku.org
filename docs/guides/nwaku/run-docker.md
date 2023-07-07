@@ -45,10 +45,10 @@ Run `nwaku` using the most typical configuration:
 
 ```bash
 docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku \
-  --dns-discovery:true \
-  --dns-discovery-url:enrtree://AOGECG2SPND25EEFMAJ5WF3KSGJNSGV356DSTL2YVLLZWIV6SAYBM@prod.waku.nodes.status.im \
-  --discv5-discovery \
-  --nat:extip:[YOUR PUBLIC IP] # or, if you are behind a nat: --nat=any
+  --dns-discovery=true \
+  --dns-discovery-url=enrtree://AOGECG2SPND25EEFMAJ5WF3KSGJNSGV356DSTL2YVLLZWIV6SAYBM@prod.waku.nodes.status.im \
+  --discv5-discovery=true \
+  --nat=extip:[YOUR PUBLIC IP] # or, if you are behind a nat: --nat=any
 ```
 
 To find your public IP, use:
