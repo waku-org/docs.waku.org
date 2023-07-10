@@ -2,7 +2,7 @@
 title: Retrieve Messages Using Store
 ---
 
-This guide provides detailed steps to create a light node and retrieve historical messages using the [Store protocol](/overview/concepts/protocols#store).
+This guide provides detailed steps to create a light node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
 
 ## Create a Light Node
 
@@ -43,18 +43,47 @@ const decoder = createDecoder(contentTopic);
 
 ## Retrieve Messages
 
-### queryOrderedCallback
+`js-waku` provides the `queryOrderedCallback()` and `queryGenerator()` functions to query `Store` nodes and retrieve historical or missed messages.
 
-### queryGenerator
+### `queryOrderedCallback`
 
-## Filter Messages
+The `store.queryOrderedCallback()` function provides a straightforward method for querying `Store` nodes and processing messages in chronological order using a callback function. It accepts these parameters:
 
-### pageDirection
+- `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/spec/26/) methods.
+- `callback`: The callback function for processing the retrieved messages.
+- `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
 
-### pageSize
+```js
+// Create the callback function
+const callback = (wakuMessage) => {
+    console.log(wakuMessage.payload);
+};
 
-### timeFilter
+// Set the query options
+const queryOptions = {
+	pageSize: 5,
+};
+
+// Query the Store node
+await node.store.queryOrderedCallback(
+	[decoder],
+	callback,
+	queryOptions,
+);
+```
+
+### `queryGenerator`
+
+## Store Query Options
+
+### `pageDirection`
+
+### `pageSize`
+
+### `timeFilter`
+
+### `peerId`
 
 :::tip Congratulations!
-You have successfully retrieved historical messages on a light node using the `Store` protocol.
+You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol.
 :::

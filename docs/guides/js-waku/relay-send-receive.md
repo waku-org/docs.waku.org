@@ -53,7 +53,7 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 ```
 
 :::info
-Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for steps on adding the `protobufjs` package to your project using a package manager or CDN.
+Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for steps on adding the `protobufjs` package to your project.
 :::
 
 ## Send Messages Using Relay
