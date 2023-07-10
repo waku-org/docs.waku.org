@@ -47,7 +47,7 @@ const decoder = createDecoder(contentTopic);
 
 ### `queryOrderedCallback`
 
-The `store.queryOrderedCallback()` function provides a straightforward method for querying `Store` nodes and processing messages in chronological order using a callback function. It accepts these parameters:
+The `store.queryOrderedCallback()` function provides a straightforward method for querying `Store` nodes and processing messages in chronological order through a callback function. It accepts these parameters:
 
 - `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/spec/26/) methods.
 - `callback`: The callback function for processing the retrieved messages.
@@ -56,6 +56,7 @@ The `store.queryOrderedCallback()` function provides a straightforward method fo
 ```js
 // Create the callback function
 const callback = (wakuMessage) => {
+	// Render the payload/message in your application
     console.log(wakuMessage.payload);
 };
 
@@ -73,6 +74,30 @@ await node.store.queryOrderedCallback(
 ```
 
 ### `queryGenerator`
+
+The `store.queryGenerator()` function provides more control and flexibility over processing messages retrieved from `Store` nodes through [Async Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator). It accepts these parameters:
+
+- `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/spec/26/) methods.
+- `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
+
+```js
+// Set the query options
+const queryOptions = {
+	pageSize: 5,
+};
+
+// Create the store query
+const query = node.store.queryGenerator(
+	[decoder],
+	queryOptions,
+);
+
+// Process the messages
+for await (const wakuMessage of query) {
+	// Render the payload/message in your application
+    console.log(wakuMessage.payload);
+}
+```
 
 ## Store Query Options
 

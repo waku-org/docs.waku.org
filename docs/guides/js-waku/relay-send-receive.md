@@ -86,7 +86,7 @@ Use the `relay.subscribe()` function to listen for incoming messages on a specif
 await node.relay.subscribe([decoder], (wakuMessage) => {
 	// Check if there is a payload on the message
 	if (!wakuMessage.payload) return;
-	// Render the Protobuf-formatted messageObj as desired in your application
+	// Render the messageObj as desired in your application
 	const messageObj = ChatMessage.decode(wakuMessage.payload);
 	console.log(messageObj);
 });
