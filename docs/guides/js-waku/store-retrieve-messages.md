@@ -43,7 +43,7 @@ const decoder = createDecoder(contentTopic);
 
 ## Retrieve Messages
 
-`js-waku` provides the `queryOrderedCallback()` and `queryGenerator()` functions to query `Store` nodes and retrieve historical or missed messages.
+`js-waku` provides the `queryOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to handle them sequentially, processing each page when received.
 
 ### `queryOrderedCallback`
 
@@ -128,7 +128,7 @@ The `pageDirection` option does not affect the ordering of messages within the p
 
 ### `pageSize`
 
-The `pageSize` option specifies the number of messages to be returned per page. For instance, consider a query that retrieves `20` messages per page:
+The `pageSize` option specifies the number of messages to be returned per page. For example, consider a query that retrieves `20` messages per page:
 
 ```js
 const queryOptions = {
@@ -138,7 +138,7 @@ const queryOptions = {
 
 ### `timeFilter`
 
-The `timeFilter` option specifies a time frame to retrieve messages from. For instance, consider a query that retrieves messages from the previous week:
+The `timeFilter` option specifies a time frame to retrieve messages from. For example, consider a query that retrieves messages from the previous week:
 
 ```js
 // Get the time frame
@@ -156,7 +156,50 @@ const queryOptions = {
 ```
 
 :::info
-If you omit the `timeFilter` option, the query will retrieve messages from the history's start or end, depending on the [pageDirection](#pagedirection).
+If you omit the `timeFilter` option, the query will start from the beginning or end of the history, depending on the [page direction](#pagedirection).
+:::
+
+### `cursor`
+
+The `cursor` option specifies the starting index for retrieving messages. For example, consider a query that retrieves the first `10` messages and then continues with the next `10` messages:
+
+```js
+import { waku } from "@waku/sdk";
+
+// Create the callback function
+const messages = [];
+const callback = (wakuMessage) => {
+    messages.push(wakuMessage);
+	console.log(wakuMessage.payload);
+};
+
+// Retrieve the first 10 messages
+await node.store.queryOrderedCallback(
+    [decoder],
+    callback,
+    {
+		pageSize: 10,
+	},
+);
+
+// Create the cursor
+const lastMessage = messages[messages.length - 1];
+const cursor = await waku.createCursor(lastMessage);
+
+// Retrieve the next 10 messages
+// The message at the cursor index is excluded from the result
+await node.store.queryOrderedCallback(
+    [decoder],
+    callback,
+    {
+		pageSize: 10,
+		cursor: cursor,
+	},
+);
+```
+
+:::info
+If you omit the `cursor` option, the query will start from the beginning or end of the history, depending on the [page direction](#pagedirection).
 :::
 
 ### `peerId`

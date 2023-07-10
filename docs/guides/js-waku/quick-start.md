@@ -17,7 +17,7 @@ await node.start(); // Use the stop() function to stop a running node
 ```
 
 :::info
-The `defaultBootstrap` option bootstraps your node using pre-defined Waku nodes.
+The `defaultBootstrap` option bootstraps your node using [pre-defined Waku nodes](/overview/concepts/static-peers).
 :::
 
 ## Connect to Remote Peers

@@ -18,7 +18,7 @@ You can provide static peers to a `nwaku` node during startup using the `staticn
   --staticnode=[PEER MULTIADDR 2]
 ```
 
-For instance, consider a `nwaku` node that connects to two static peers on the same local host (IP: `0.0.0.0`) using TCP ports `60002` and `60003`:
+For example, consider a `nwaku` node that connects to two static peers on the same local host (IP: `0.0.0.0`) using TCP ports `60002` and `60003`:
 
 ```bash
 ./build/wakunode2 \
@@ -45,7 +45,7 @@ To enable [DNS Discovery](/overview/concepts/dns-discovery) in a `nwaku` node, u
 If you omit the `dns-discovery-name-server` option, `nwaku` will attempt to use the CloudFlare servers `1.1.1.1` and `1.0.0.1`.
 :::
 
-For instance, consider a `nwaku` node that enables `DNS Discovery`, connects to a DNS node list, and queries the IPs `8.8.8.8` and `8.8.4.4`:
+For example, consider a `nwaku` node that enables `DNS Discovery`, connects to a DNS node list, and queries the IPs `8.8.8.8` and `8.8.4.4`:
 
 ```bash
 ./build/wakunode2 \
@@ -69,7 +69,7 @@ To enable [Discv5](/overview/concepts/discv5) in a `nwaku` node, use the followi
   --discv5-bootstrap-node=[DISCV5 ENR BOOTSTRAP ENTRY 2]
 ```
 
-For instance, consider a `nwaku` node that enables `Discv5` and bootstraps its routing table using a static `ENR`:
+For example, consider a `nwaku` node that enables `Discv5` and bootstraps its routing table using a static `ENR`:
 
 ```bash
 ./build/wakunode2 \
@@ -94,7 +94,7 @@ To enable [Peer Exchange](/overview/concepts/peer-exchange) in a `nwaku` node, u
   --peer-exchange-node=[PEER MULTIADDR WITH EXCHANGE ENABLED]
 ```
 
-For instance, consider two `nwaku` nodes configured as a `server` (peer exchange responder node) and `client` (node using peer exchange) on the same local host (IP: `0.0.0.0`):
+For example, consider two `nwaku` nodes configured as a `server` (peer exchange responder node) and `client` (node using peer exchange) on the same local host (IP: `0.0.0.0`):
 
 ```bash title="Server: Nwaku Node with Peer Exchange Enabled"
 ./build/wakunode2 --peer-exchange=true
