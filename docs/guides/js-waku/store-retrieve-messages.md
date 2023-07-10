@@ -103,11 +103,71 @@ for await (const wakuMessage of query) {
 
 ### `pageDirection`
 
+The `pageDirection` option specifies the direction in which pages are retrieved:
+
+- `BACKWARD` (default): Most recent page first.
+- `FORWARD`: Oldest page first.
+
+```js
+import { PageDirection } from "@waku/sdk";
+
+// Retrieve recent messages first
+const queryOptions = {
+	pageDirection: PageDirection.BACKWARD,
+};
+
+// Retrieve oldest messages first
+const queryOptions = {
+	pageDirection: PageDirection.FORWARD,
+};
+```
+
+:::info
+The `pageDirection` option does not affect the ordering of messages within the page, as the oldest message always returns first.
+:::
+
 ### `pageSize`
+
+The `pageSize` option specifies the number of messages to be returned per page. For instance, consider a query that retrieves `20` messages per page:
+
+```js
+const queryOptions = {
+	pageSize: 20,
+};
+```
 
 ### `timeFilter`
 
+The `timeFilter` option specifies a time frame to retrieve messages from. For instance, consider a query that retrieves messages from the previous week:
+
+```js
+// Get the time frame
+const endTime = new Date();
+const startTime = new Date();
+startTime.setDate(endTime.getDate() - 7);
+
+// Retrieve a week of messages
+const queryOptions = {
+	timeFilter: {
+		startTime,
+		endTime,
+	},
+};
+```
+
+:::info
+If you omit the `timeFilter` option, the query will retrieve messages from the history's start or end, depending on the [pageDirection](#pagedirection).
+:::
+
 ### `peerId`
+
+The `peerId` option specifies the peer to query. If omitted, a pseudo-random peer is selected from the connected `Store` peers.
+
+```js
+const queryOptions = {
+	peerId: "[WAKU STORE PEER ID]",
+};
+```
 
 :::tip Congratulations!
 You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol.

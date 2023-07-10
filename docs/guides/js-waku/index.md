@@ -45,6 +45,7 @@ Check out the [quick start](/guides/js-waku/quick-start) guide and comprehensive
 | [Quick Start](/guides/js-waku/quick-start) | Quickly familiarize yourself with `js-waku` by setting up a Waku node and sending messages using the [Relay](/overview/concepts/protocols#relay) protocol |
 | [Send and Receive Messages Using Relay](/guides/js-waku/relay-send-receive) | Learn how to set up a Waku node for sending and receiving messages using the [Relay](/overview/concepts/protocols#relay) protocol |
 | [Send and Receive Messages Using Light Push and Filter](/guides/js-waku/lightpush-filter) | Learn how to send and receive messages on light nodes using the [Light Push](/overview/concepts/protocols#light-push) and [Filter](/overview/concepts/protocols#filter) protocols |
+| [Retrieve Messages Using Store](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store](/overview/concepts/protocols#store) protocol. |
 | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `js-waku` project from various example templates |
 
 ## Get Help and Report Issues

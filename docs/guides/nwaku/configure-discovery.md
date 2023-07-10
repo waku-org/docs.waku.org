@@ -4,7 +4,7 @@ title: Configure Peer Discovery
 
 This guide provides detailed steps to configure a `nwaku` node to discover and connect with peers in the Waku Network.
 
-:::tip
+:::info
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
 :::
 
