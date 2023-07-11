@@ -83,13 +83,16 @@ Use the `relay.subscribe()` function to listen for incoming messages on a specif
 
 ```js
 // Subscribe to content topics and display new messages
-await node.relay.subscribe([decoder], (wakuMessage) => {
+const unsubscribe = await node.relay.subscribe([decoder], (wakuMessage) => {
 	// Check if there is a payload on the message
 	if (!wakuMessage.payload) return;
 	// Render the messageObj as desired in your application
 	const messageObj = ChatMessage.decode(wakuMessage.payload);
 	console.log(messageObj);
 });
+
+// Use the unsubscribe() function to stop receiving messages
+// await unsubscribe();
 ```
 
 :::tip Congratulations!

@@ -13,7 +13,10 @@ import { createRelayNode } from "@waku/sdk";
 
 // Create and start a relay node
 const node = await createRelayNode({ defaultBootstrap: true });
-await node.start(); // Use the stop() function to stop a running node
+await node.start();
+
+// Use the stop() function to stop a running node
+// await node.stop();
 ```
 
 :::info
