@@ -34,7 +34,7 @@ import { waitForRemotePeer } from "@waku/sdk";
 await waitForRemotePeer(node);
 ```
 
-The `protocols` option allows you to specify the [protocols](https://js.waku.org/enums/_waku_sdk.Protocols.html) that the remote peers should have enabled:
+The `protocols` option allows you to specify the [protocols](/overview/concepts/protocols) that the remote peers should have enabled:
 
 ```js
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
@@ -59,7 +59,7 @@ import { createEncoder } from "@waku/sdk";
 const contentTopic = "/quick-start/1/message/proto";
 
 // Create a message encoder
-const encoder = createEncoder(contentTopic);
+const encoder = createEncoder({ contentTopic });
 ```
 
 ## Create a Message Structure

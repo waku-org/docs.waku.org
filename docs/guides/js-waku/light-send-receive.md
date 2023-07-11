@@ -31,7 +31,7 @@ await waitForRemotePeer(node, [
 const contentTopic = "/light-guide/1/message/proto";
 
 // Create a message encoder and decoder
-const encoder = createEncoder(contentTopic);
+const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
 
@@ -55,7 +55,7 @@ Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a
 
 ## Send Messages Using Light Push
 
-To send messages over the Waku Network using the `Light Push` protocol, create a new message object and use the `lightPush.push()` function:
+To send messages over the Waku Network using the `Light Push` protocol, create a new message object and use the `lightPush.send()` function:
 
 ```js
 // Create a new message object
@@ -69,7 +69,7 @@ const protoMessage = ChatMessage.create({
 const serializedMessage = ChatMessage.encode(protoMessage).finish();
 
 // Send the message using Light Push
-await node.lightPush.push(encoder, {
+await node.lightPush.send(encoder, {
     payload: serializedMessage,
 });
 ```

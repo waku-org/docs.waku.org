@@ -30,7 +30,7 @@ await waitForRemotePeer(node);
 const contentTopic = "/relay-guide/1/message/proto";
 
 // Create a message encoder and decoder
-const encoder = createEncoder(contentTopic);
+const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
 
