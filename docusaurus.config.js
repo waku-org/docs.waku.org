@@ -69,6 +69,16 @@ const config = {
           label: "About Waku",
         },
         {
+          to: "/powered-by-waku",
+          label: "Powered by Waku",
+          position: "left",
+        },
+        {
+          to: "/presentations",
+          label: "Presentations",
+          position: "left",
+        },
+        {
           type: "dropdown",
           label: "Guides",
           position: "right",
@@ -88,11 +98,6 @@ const config = {
           ],
         },
         {
-          to: "/powered-by-waku",
-          label: "Powered by Waku",
-          position: "left",
-        },
-        {
           type: "dropdown",
           label: "Community",
           position: "right",
@@ -104,10 +109,6 @@ const config = {
             {
               label: "Contribute to Waku",
               to: "/contribute",
-            },
-            {
-              label: "Watch Our Presentations",
-              to: "/presentations",
             },
             {
               label: "Waku Bounties",

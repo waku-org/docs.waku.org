@@ -11,7 +11,7 @@ This guide provides detailed steps to build a `nwaku` node from the source code 
 
 ## Prerequisites
 
-To build `nwaku`, you need the standard developer tools, including a C compiler, Make, Bash, Git, and PostgreSQL client library.
+To build `nwaku`, you need the standard developer tools, including a C compiler, GNU Make, Bash, Git, and PostgreSQL client library.
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
