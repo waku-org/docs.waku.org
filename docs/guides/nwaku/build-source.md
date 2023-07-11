@@ -9,7 +9,7 @@ This guide provides detailed steps to build a `nwaku` node from the source code 
 - Nwaku is available for Linux and macOS, with experimental Windows support.
 :::
 
-## Install Dependencies
+## Prerequisites
 
 To build `nwaku`, you need the standard developer tools, including a C compiler, Make, Bash, Git, and PostgreSQL client library.
 

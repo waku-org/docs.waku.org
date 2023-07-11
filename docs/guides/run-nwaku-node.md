@@ -59,7 +59,7 @@ To join the Waku Network, nodes must [bootstrap](/overview/reference/glossary#bo
 | Discv5 | Enable `nwaku` to discover peers using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
 | Peer Exchange | Enable [Peer Exchange](/overview/concepts/peer-exchange) protocol for light nodes to request peers from your `nwaku` node | [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange) |
 
-:::tip
+:::info
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
 :::
 

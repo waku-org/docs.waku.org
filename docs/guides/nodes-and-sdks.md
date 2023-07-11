@@ -23,7 +23,7 @@ Waku is implemented in multiple SDKs, allowing it to integrate with different la
 
 | | Description | Documentation |
 | - | - | - |
-| [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | |
+| [js-waku](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | [JavaScript Waku SDK](/guides/js-waku/) |
 | [nwaku](https://github.com/waku-org/nwaku) | Nim SDK designed for integration with native Nim applications | |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | |
@@ -44,5 +44,5 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | - | - | - |
 | JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | |
 | [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
-| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | |
-| [nwaku-compose](https://github.com/alrevuelta/nwaku-compose) | Pre-configured Docker Compose setup for running and monitoring a `nwaku` node using Prometheus and Grafana. | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+| [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/waku-create-app) |
+| [nwaku-compose](https://github.com/alrevuelta/nwaku-compose) | Pre-configured Docker Compose setup for running and monitoring a `nwaku` node using Prometheus and Grafana | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |

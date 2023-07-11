@@ -2,7 +2,7 @@
 title: Run Nwaku with Docker Compose
 ---
 
-`nwaku-compose` is a ready-to-use `docker-compose` setup that runs a nwaku node and monitors it with already configured [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) instances.
+`nwaku-compose` is a ready-to-use Docker Compose setup that runs a nwaku node and monitors it with already configured [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) instances.
 
 This guide provides detailed steps to build, configure, run, and monitor a `nwaku` node with [nwaku-compose](https://github.com/alrevuelta/nwaku-compose).
 
