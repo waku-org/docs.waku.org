@@ -2,6 +2,10 @@
 title: Watch Our Presentations
 ---
 
+## Hashing it Out: Decentralized Messaging
+
+<iframe class="yt-video" src="https://www.youtube.com/embed/vmx_oOb2On0" title="Hashing it Out: Decentralized Messaging by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Using ZKP for Better p2p Messaging with Waku
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/eJwX1JpcKQk" title="Using ZKP for better p2p messaging with Waku by Oskar Thorén" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
