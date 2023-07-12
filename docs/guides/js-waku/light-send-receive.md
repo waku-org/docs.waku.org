@@ -4,7 +4,7 @@ title: Send and Receive Messages Using Light Push and Filter
 
 This guide provides detailed steps to create a light node, send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter).
 
-## Create a Waku Node
+## Create a Light Node
 
 Set up a Waku node by creating a light node, connecting to network peers with `Light Push` and `Filter` enabled, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
 
@@ -93,5 +93,5 @@ const unsubscribe = await node.filter.subscribe([decoder], (wakuMessage) => {
 ```
 
 :::tip Congratulations!
-You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols.
+You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols. For a working demo, check out the [light-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-js) and [light-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-chat) examples.
 :::

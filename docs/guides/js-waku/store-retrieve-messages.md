@@ -215,5 +215,5 @@ const queryOptions = {
 ```
 
 :::tip Congratulations!
-You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol.
+You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol. For a working demo, check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples.
 :::

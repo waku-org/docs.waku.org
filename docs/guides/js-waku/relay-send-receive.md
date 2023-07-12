@@ -4,7 +4,7 @@ title: Send and Receive Messages Using Relay
 
 This guide provides detailed steps to set up a Waku node for sending and receiving messages using the [Relay protocol](/overview/concepts/protocols#relay).
 
-## Create a Waku Node
+## Create a Relay Node
 
 Set up a Waku node by creating a relay node, connecting to network peers, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
 
@@ -96,5 +96,5 @@ const unsubscribe = await node.relay.subscribe([decoder], (wakuMessage) => {
 ```
 
 :::tip Congratulations!
-You have successfully sent and received messages over the Waku Network using the `Relay` protocol.
+You have successfully sent and received messages over the Waku Network using the `Relay` protocol. For a working demo, check out the [relay-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/relay-js), [relay-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/relay-reactjs-chat), and [relay-angular-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/relay-angular-chat) examples.
 :::

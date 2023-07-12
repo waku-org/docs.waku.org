@@ -43,6 +43,6 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | | Description | Documentation |
 | - | - | - |
 | JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | |
-| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `js-waku` | |
+| [@waku/react](https://www.npmjs.com/package/@waku/react) | ReactJS components and UI adapters designed for seamless integration with `js-waku` | [Build ReactJS DApps Using @waku/react](/guides/js-waku/build-waku-react) |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `js-waku` project from various example templates | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/waku-create-app) |
 | [nwaku-compose](https://github.com/alrevuelta/nwaku-compose) | Pre-configured Docker Compose setup for running and monitoring a `nwaku` node using Prometheus and Grafana | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |

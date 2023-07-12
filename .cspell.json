@@ -52,6 +52,7 @@
     "libpq",
     "dylib",
     "uncompromised",
+    "reactjs",
   ],
   "flagWords": [],
   "ignorePaths": [
