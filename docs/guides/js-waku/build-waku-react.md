@@ -43,24 +43,114 @@ Next, install the `@waku/react` package using your preferred package manager:
 <TabItem value="npm" label="npm">
 
 ```shell
-npm install @waku/react
+npm install @waku/react @waku/sdk
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @waku/react
+yarn add @waku/react @waku/sdk
 ```
 
 </TabItem>
 </Tabs>
 
-## Create a Waku Node
+## Create a Relay Node
+
+Use the `useCreateRelayNode()` function to create a relay node helper hook:
+
+```js title="App.js" showLineNumbers
+import { useCreateRelayNode } from "@waku/react";
+
+function App() {
+	// Create and start a relay node
+	const { node, error, isLoading } = useCreateRelayNode({
+		options: { defaultBootstrap: true }
+	});
+}
+```
+
+## Create a Light Node
+
+Use the `useCreateLightNode()` function to create a light node helper hook and specify the [protocols](/overview/concepts/protocols) for remote peers:
+
+```js title="App.js" showLineNumbers
+import { useCreateLightNode } from "@waku/react";
+import { Protocols } from "@waku/interfaces";
+
+function App() {
+	// Create and start a light node and wait for remote peers
+	const { node, error, isLoading } = useCreateLightNode({
+		options: { defaultBootstrap: true },
+		protocols: [Protocols.LightPush, Protocols.Filter],
+	});
+}
+```
 
 ## Create an Encoder and Decoder
 
+Use the `useCreateContentPair()` function to create a message `encoder` and `decoder` pair:
+
+```js title="App.js" showLineNumbers
+import { useCreateContentPair } from "@waku/react";
+
+function App() {
+	// Choose a content topic
+	const contentTopic = "/waku-react-guide/1/message/utf8";
+	const ephemeral = false;
+
+	// Create a message encoder and decoder pair
+	const { encoder, decoder } = useCreateContentPair(contentTopic, ephemeral);
+}
+```
+
 ## Send Messages Using Light Push
+
+Use the `useLightPush()` function to bind `Light Push` methods to a node and `encoder`:
+
+```js title="App.js" showLineNumbers
+import {
+	useCreateLightNode,
+	useCreateContentPair,
+	useLightPush
+} from "@waku/react";
+import { Protocols } from "@waku/interfaces";
+import { utf8ToBytes } from "@waku/sdk";
+
+function App() {
+	// Create and start a light node and wait for remote peers
+	const { node, error, isLoading } = useCreateLightNode({
+		options: { defaultBootstrap: true },
+		protocols: [Protocols.LightPush, Protocols.Filter],
+	});
+
+	// Choose a content topic and create an encoder
+	const contentTopic = "/waku-react-guide/1/message/utf8";
+	const { encoder  } = useCreateContentPair(contentTopic);
+
+	// Wait for the node to finish loading before sending messages
+	// (isLoading === false)
+
+  	// Bind push function to a node and encoder
+  	const { push } = useLightPush({ node, encoder });
+
+	// Send the message using Light Push
+	const sendMessage = async (text: string) => {
+		if (!push || !text) {
+      		return;
+    	}
+		const payload = utf8ToBytes(text);
+		await push({ payload });
+    }
+	sendMessage("Hello, World!");
+  };
+}
+```
+
+:::info
+Wait for the node to finish loading before sending messages (`isLoading` === `false`).
+:::
 
 ## Receive Messages Using Filter
 

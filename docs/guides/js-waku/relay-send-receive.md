@@ -79,17 +79,20 @@ await node.relay.send(encoder, {
 
 ## Receive Messages Using Relay
 
-Use the `relay.subscribe()` function to listen for incoming messages on a specific content topic:
+To receive messages using the `Relay` protocol, create a callback function to process the messages and use the `relay.subscribe()` function:
 
 ```js
+// Create the callback function
+const callback = (wakuMessage) => {
+    // Check if there is a payload on the message
+    if (!wakuMessage.payload) return;
+    // Render the messageObj as desired in your application
+    const messageObj = ChatMessage.decode(wakuMessage.payload);
+    console.log(messageObj);
+};
+
 // Subscribe to content topics and display new messages
-const unsubscribe = await node.relay.subscribe([decoder], (wakuMessage) => {
-	// Check if there is a payload on the message
-	if (!wakuMessage.payload) return;
-	// Render the messageObj as desired in your application
-	const messageObj = ChatMessage.decode(wakuMessage.payload);
-	console.log(messageObj);
-});
+const unsubscribe = await node.relay.subscribe([decoder], callback);
 
 // Use the unsubscribe() function to stop receiving messages
 // await unsubscribe();
