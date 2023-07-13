@@ -35,7 +35,7 @@ const decoder = createDecoder(contentTopic);
 ```
 
 :::info
-The `emitSelf` option emits sent message events to itself and invokes the node's subscribers.
+When the `emitSelf` flag is set to `true`, the node will emit sent message events to itself and invoke its subscribers.
 :::
 
 ## Create a Message Structure

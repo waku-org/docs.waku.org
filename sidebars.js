@@ -98,9 +98,9 @@ const sidebars = {
 		},
 	],
 	community: [
-		"powered-by-waku",
 		"community",
 		"contribute",
+		"powered-by-waku",
 		"presentations",
 		{
 			type: 'html',

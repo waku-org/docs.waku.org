@@ -20,7 +20,7 @@ await node.start();
 ```
 
 :::info
-The `defaultBootstrap` option bootstraps your node using [pre-defined Waku nodes](/overview/concepts/static-peers). The node does not connect to any remote peer or bootstrap node if omitted.
+When the `defaultBootstrap` flag is set to `true`, your node will be bootstrapped using [pre-defined Waku nodes](/overview/concepts/static-peers). The node does not connect to any remote peer or bootstrap node if omitted.
 :::
 
 ## Connect to Remote Peers
@@ -59,8 +59,15 @@ import { createEncoder } from "@waku/sdk";
 const contentTopic = "/quick-start/1/message/proto";
 
 // Create a message encoder without encryption
-const encoder = createEncoder({ contentTopic });
+const encoder = createEncoder({
+	contentTopic: contentTopic, // message content topic
+	ephemeral: false, // allows messages to be stored
+});
 ```
+
+:::info
+When the `ephemeral` flag is set to `true`, your messages will not be stored by `Store` nodes.
+:::
 
 ## Create a Message Structure
 
@@ -140,5 +147,5 @@ await node.relay.send(encoder, {
 ```
 
 :::tip Congratulations!
-You have successfully added decentralized communication features to your project using `js-waku`. Wrap these functions in JavaScript, ReactJS, or any other framework to run your application smoothly.
+You have successfully added decentralized communication features to your project using `js-waku`. You can wrap these functions in JavaScript, React, or any other framework to run your application smoothly.
 :::
