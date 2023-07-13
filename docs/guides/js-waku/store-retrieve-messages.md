@@ -206,7 +206,7 @@ If you omit the `cursor` option, the query will start from the beginning or end 
 
 ### `peerId`
 
-The `peerId` option specifies the peer to query. If omitted, a pseudo-random peer is selected from the connected `Store` peers.
+The `peerId` option specifies the peer to query. A pseudo-random peer is selected from the connected `Store` peers if omitted.
 
 ```js
 const queryOptions = {
@@ -215,5 +215,5 @@ const queryOptions = {
 ```
 
 :::tip Congratulations!
-You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol. For a working demo, check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples.
+You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol. Check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.
 :::

@@ -147,5 +147,5 @@ await node.relay.send(encoder, {
 ```
 
 :::tip Congratulations!
-You have successfully added decentralized communication features to your project using `js-waku`. You can wrap these functions in JavaScript, React, or any other framework to run your application smoothly.
+You have successfully added decentralized communication features to your project using `js-waku`. To run your application smoothly, you can wrap these functions in JavaScript, React, or any other framework.
 :::

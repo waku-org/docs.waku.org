@@ -50,7 +50,7 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 ```
 
 :::info
-Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for steps on adding the `protobufjs` package to your project.
+Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for adding the `protobufjs` package to your project.
 :::
 
 ## Send Messages Using Light Push
@@ -96,5 +96,5 @@ const unsubscribe = await node.filter.subscribe([decoder], callback);
 ```
 
 :::tip Congratulations!
-You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols. For a working demo, check out the [light-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-js) and [light-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-chat) examples.
+You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols. Check out the [light-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-js) and [light-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-chat) examples for working demos.
 :::
