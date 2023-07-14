@@ -6,7 +6,7 @@ This guide provides detailed steps to set up a Waku node for sending and receivi
 
 ## Create a Relay Node
 
-Set up a Waku node by creating a relay node, connecting to network peers, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
+Set up a Waku node by creating a Relay Node, connecting to network peers, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
 
 ```js
 import {
@@ -16,7 +16,7 @@ import {
 	createDecoder
 } from "@waku/sdk";
 
-// Create and start a relay node
+// Create and start a Relay Node
 const node = await createRelayNode({
 	defaultBootstrap: true, // bootstraps using pre-defined nodes
 	emitSelf: true, // emits sent message events to itself

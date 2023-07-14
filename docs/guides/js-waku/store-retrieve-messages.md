@@ -2,23 +2,23 @@
 title: Retrieve Messages Using Store
 ---
 
-This guide provides detailed steps to create a light node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
+This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
 
 ## Create a Light Node
 
-Use the `createLightNode()` function to create a light node and interact with the Waku Network:
+Use the `createLightNode()` function to create a Light Node and interact with the Waku Network:
 
 ```js
 import { createLightNode } from "@waku/sdk";
 
-// Create and start a light node
+// Create and start a Light Node
 const node = await createLightNode({ defaultBootstrap: true });
 await node.start();
 ```
 
 ## Connect to Store Peers
 
-Use the `waitForRemotePeer()` function to wait for the node to connect with store peers:
+Use the `waitForRemotePeer()` function to wait for the node to connect with Store peers:
 
 ```js
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
@@ -65,7 +65,7 @@ const queryOptions = {
 	pageSize: 5,
 };
 
-// Query the Store node
+// Query the Store peer
 await node.store.queryOrderedCallback(
 	[decoder],
 	callback,
@@ -215,5 +215,5 @@ const queryOptions = {
 ```
 
 :::tip Congratulations!
-You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol. Check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.
+You have successfully retrieved and filtered historical messages on a Light Node using the `Store` protocol. Check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.
 :::

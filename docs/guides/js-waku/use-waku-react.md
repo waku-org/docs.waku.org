@@ -2,29 +2,22 @@
 title: "Build React DApps Using @waku/react"
 ---
 
-The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `js-waku` into React projects effortlessly. This guide provides detailed steps for using `@waku/react` in your project.
+The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `js-waku` into React applications effortlessly. This guide provides detailed steps for using `@waku/react` in your project.
 
 ## Install the Dependencies
 
-First, set up a project using any [production-grade React framework](https://react.dev/learn/start-a-new-react-project) or use an existing React project. For this guide, we will create a boilerplate using [Create React App (CRA)](https://create-react-app.dev/docs/getting-started):
+First, set up a project using any [production-grade React framework](https://react.dev/learn/start-a-new-react-project) or use an existing React application. For this guide, we will create a boilerplate using [Create React App (CRA)](https://create-react-app.dev/docs/getting-started):
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-<Tabs>
-<TabItem value="npx" label="npx">
-
-```shell
-npx create-react-app [PROJECT DIRECTORY]
-```
-
-</TabItem>
+<Tabs groupId="package-manager">
 <TabItem value="npm" label="npm">
 
 ```shell
-npm init react-app [PROJECT DIRECTORY]
+npx create-react-app [PROJECT DIRECTORY]
 ```
 
 </TabItem>
@@ -39,7 +32,7 @@ yarn create react-app [PROJECT DIRECTORY]
 
 Next, install the `@waku/react` package using your preferred package manager:
 
-<Tabs>
+<Tabs groupId="package-manager">
 <TabItem value="npm" label="npm">
 
 ```shell
@@ -58,36 +51,46 @@ yarn add @waku/react @waku/sdk
 
 ## Create a Relay Node
 
-Use the `useCreateRelayNode()` hook to create a relay node:
+Use the `useCreateRelayNode()` hook to create a Relay Node:
 
 ```js title="App.js"
 import { useCreateRelayNode } from "@waku/react";
 
 function App() {
-	// Create and start a relay node
+	// Create and start a Relay Node
 	const { node, error, isLoading } = useCreateRelayNode({
 		options: {
 			defaultBootstrap: true,
 			emitSelf: true,
 		}
 	});
+
+	// "node" is the created Relay Node
+	// "error" captures any error that occurs during node creation
+    // "isLoading" indicates whether the node is still being created
+    // Use these to handle states and render the UI in your application
 }
 ```
 
 ## Create a Light Node
 
-Use the `useCreateLightNode()` hook to create a light node and specify the [protocols](/overview/concepts/protocols) for remote peers:
+Use the `useCreateLightNode()` hook to create a Light Node and specify the [protocols](/overview/concepts/protocols) for remote peers:
 
 ```js title="App.js"
 import { useCreateLightNode } from "@waku/react";
 import { Protocols } from "@waku/interfaces";
 
 function App() {
-	// Create and start a light node and wait for remote peers
+	// Create and start a Light Node and wait for remote peers
 	const { node, error, isLoading } = useCreateLightNode({
 		options: { defaultBootstrap: true },
 		protocols: [Protocols.LightPush, Protocols.Filter],
 	});
+
+	// "node" is the created Light Node
+	// "error" captures any error that occurs during node creation
+    // "isLoading" indicates whether the node is still being created
+    // Use these to handle states and render the UI in your application
 }
 ```
 
@@ -105,6 +108,10 @@ function App() {
 
 	// Create a message encoder and decoder pair
 	const { encoder, decoder } = useCreateContentPair(contentTopic, ephemeral);
+
+	// "encoder" is the message encoder
+	// "decoder" is the message decoder
+	// Use these to handle the messages in your application
 }
 ```
 
@@ -122,7 +129,7 @@ import { Protocols } from "@waku/interfaces";
 import { utf8ToBytes } from "@waku/sdk";
 
 function App() {
-	// Create and start a light node and wait for remote peers
+	// Create and start a Light Node and wait for remote peers
 	const { node, error, isLoading } = useCreateLightNode({
 		options: { defaultBootstrap: true },
 		protocols: [Protocols.LightPush, Protocols.Filter],
@@ -168,7 +175,7 @@ import {
 import { Protocols } from "@waku/interfaces";
 
 function App() {
-	// Create and start a light node and wait for remote peers
+	// Create and start a Light Node and wait for remote peers
   	const { node } = useCreateLightNode({
   		options: { defaultBootstrap: true },
   		protocols: [Protocols.LightPush, Protocols.Filter],
@@ -181,6 +188,11 @@ function App() {
   	// Receive messages from Filter subscription
   	const { error, messages, isLoading } = useFilterMessages({ node, decoder });
   	console.log(messages);
+
+    // "error" captures any error that occurs while receiving messages
+	// "messages" contains a list of messages the subscription received
+    // "isLoading" indicates whether the node is still subscribing to Filter
+    // Use these to handle states and render the UI in your application
 }
 ```
 
@@ -197,7 +209,7 @@ import {
 import { Protocols, PageDirection } from "@waku/interfaces";
 
 function App() {
-	// Create and start a light node and wait for remote peers
+	// Create and start a Light Node and wait for remote peers
 	const { node } = useCreateLightNode({
 		options: { defaultBootstrap: true },
 		protocols: [Protocols.LightPush, Protocols.Filter],
@@ -213,9 +225,14 @@ function App() {
     	pageSize: 20,
   	};
 
-	// Query the Store node
+	// Query the Store peer
 	const { error, messages, isLoading } = useStoreMessages({ node, decoder, options });
 	console.log(messages);
+
+	// "error" captures any error that occurs during message retrieval
+	// "messages" contains a list of messages retrieved from the Store peer
+    // "isLoading" indicates whether the node is still retrieving messages
+    // Use these to handle states and render the UI in your application
 }
 ```
 
@@ -229,13 +246,13 @@ The `@waku/react` package provides a collection of [context providers](https://r
 
 ### `RelayNodeProvider`
 
-The `RelayNodeProvider` context provider passes configuration options for creating a relay node:
+The `RelayNodeProvider` context provider passes configuration options for creating a Relay Node:
 
 ```js title="index.js"
 import { RelayNodeProvider } from "@waku/react";
 import { Protocols } from "@waku/interfaces";
 
-// Set the relay node options
+// Set the Relay Node options
 const NODE_OPTIONS = {
 	defaultBootstrap: true,
 	emitSelf: true,
@@ -247,7 +264,7 @@ const PROTOCOLS = [Protocols.Relay];
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		// Use the relay node context provider
+		// Use the Relay Node context provider
 		<RelayNodeProvider options={NODE_OPTIONS} protocols={PROTOCOLS}>
 			<App />
 		</RelayNodeProvider>
@@ -259,20 +276,21 @@ root.render(
 import { useWaku } from "@waku/react";
 
 function App() {
-    // Create and start a relay node
+    // Create and start a Relay Node
     const { node, error, isLoading } = useWaku();
+	// Use these to handle states and render the UI in your application
 }
 ```
 
 ### `LightNodeProvider`
 
-The `LightNodeProvider` context provider passes configuration options for creating a light node:
+The `LightNodeProvider` context provider passes configuration options for creating a Light Node:
 
 ```js title="index.js"
 import { LightNodeProvider } from "@waku/react";
 import { Protocols } from "@waku/interfaces";
 
-// Set the light node options
+// Set the Light Node options
 const NODE_OPTIONS = { defaultBootstrap: true };
 
 // Set the remote peer connections to wait for
@@ -284,7 +302,7 @@ const PROTOCOLS = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		// Use the light node context provider
+		// Use the Light Node context provider
 		<LightNodeProvider options={NODE_OPTIONS} protocols={PROTOCOLS}>
 			<App />
 		</LightNodeProvider>
@@ -296,8 +314,9 @@ root.render(
 import { useWaku } from "@waku/react";
 
 function App() {
-    // Create and start a light node
+    // Create and start a Light Node
     const { node, error, isLoading } = useWaku();
+	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -329,9 +348,10 @@ import { useContentPair } from "@waku/react";
 function App() {
     // Create a message encoder and decoder pair
 	const { encoder, decoder } = useContentPair();
+	// Use these to handle the messages in your application
 }
 ```
 
 :::tip
-You have successfully integrated `js-waku` into a React project using the `@waku/react` package. Check out the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo.
+You have successfully integrated `js-waku` into a React application using the `@waku/react` package. Check out the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo.
 :::

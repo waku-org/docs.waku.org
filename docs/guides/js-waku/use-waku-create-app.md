@@ -14,17 +14,10 @@ import TabItem from '@theme/TabItem';
 ```
 
 <Tabs>
-<TabItem value="npx" label="npx">
-
-```shell
-npx @waku/create-app [PROJECT DIRECTORY]
-```
-
-</TabItem>
 <TabItem value="npm" label="npm">
 
 ```shell
-npm init @waku/app [PROJECT DIRECTORY]
+npx @waku/create-app [PROJECT DIRECTORY]
 ```
 
 </TabItem>

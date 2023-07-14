@@ -6,12 +6,12 @@ This guide provides quick steps to start using the `js-waku` SDK by setting up a
 
 ## Create a Relay Node
 
-Use the `createRelayNode()` function to create a relay node and interact with the Waku Network:
+Use the `createRelayNode()` function to create a Relay Node and interact with the Waku Network:
 
 ```js
 import { createRelayNode } from "@waku/sdk";
 
-// Create and start a relay node
+// Create and start a Relay Node
 const node = await createRelayNode({ defaultBootstrap: true });
 await node.start();
 
@@ -61,7 +61,7 @@ const contentTopic = "/quick-start/1/message/proto";
 // Create a message encoder without encryption
 const encoder = createEncoder({
 	contentTopic: contentTopic, // message content topic
-	ephemeral: false, // allows messages to be stored
+	ephemeral: false, // allows messages to be stored or not
 });
 ```
 
