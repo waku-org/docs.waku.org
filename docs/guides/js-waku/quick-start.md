@@ -132,9 +132,9 @@ To send messages using the `Relay` protocol, create a new message object and use
 ```js
 // Create a new message object
 const protoMessage = ChatMessage.create({
-    timestamp: Date.now(),
-    sender: "Alice",
-    message: "Hello, World!",
+	timestamp: Date.now(),
+	sender: "Alice",
+	message: "Hello, World!",
 });
 
 // Serialize the message using Protobuf
@@ -142,7 +142,7 @@ const serializedMessage = ChatMessage.encode(protoMessage).finish();
 
 // Send the message using Relay
 await node.relay.send(encoder, {
-    payload: serializedMessage,
+	payload: serializedMessage,
 });
 ```
 

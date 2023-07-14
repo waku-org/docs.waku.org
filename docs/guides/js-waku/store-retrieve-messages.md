@@ -57,7 +57,7 @@ The `store.queryOrderedCallback()` function provides a straightforward method fo
 // Create the callback function
 const callback = (wakuMessage) => {
 	// Render the message/payload in your application
-    console.log(wakuMessage);
+	console.log(wakuMessage);
 };
 
 // Set the query options
@@ -95,9 +95,9 @@ const storeQuery = node.store.queryGenerator(
 // Process the messages
 for await (const messagesPromises of storeQuery) {
 	// Fulfill all the messages promises
-    const messages = await Promise.all(messagesPromises);
-    // Render the message/payload in your application
-    console.log(messages);
+	const messages = await Promise.all(messagesPromises);
+	// Render the message/payload in your application
+	console.log(messages);
 }
 ```
 
@@ -171,14 +171,14 @@ import { waku } from "@waku/sdk";
 // Create the callback function
 const messages = [];
 const callback = (wakuMessage) => {
-    messages.push(wakuMessage);
+	messages.push(wakuMessage);
 };
 
 // Retrieve the first 10 messages
 await node.store.queryOrderedCallback(
-    [decoder],
-    callback,
-    {
+	[decoder],
+	callback,
+	{
 		pageSize: 10,
 	},
 );
@@ -190,9 +190,9 @@ const cursor = await waku.createCursor(lastMessage);
 // Retrieve the next 10 messages
 // The message at the cursor index is excluded from the result
 await node.store.queryOrderedCallback(
-    [decoder],
-    callback,
-    {
+	[decoder],
+	callback,
+	{
 		pageSize: 10,
 		cursor: cursor,
 	},

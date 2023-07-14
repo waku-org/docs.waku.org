@@ -14,7 +14,7 @@ import {
     waitForRemotePeer,
     Protocols,
     createEncoder,
-    createDecoder
+    createDecoder,
 } from "@waku/sdk";
 
 // Create and start a light node
@@ -23,8 +23,8 @@ await node.start();
 
 // Wait for a successful peer connection
 await waitForRemotePeer(node, [
-	Protocols.LightPush,
-	Protocols.Filter,
+    Protocols.LightPush,
+    Protocols.Filter,
 ]);
 
 // Choose a content topic
@@ -44,9 +44,9 @@ import protobuf from "protobufjs";
 
 // Create a message structure using Protobuf
 const ChatMessage = new protobuf.Type("ChatMessage")
-	.add(new protobuf.Field("timestamp", 1, "uint64"))
-	.add(new protobuf.Field("sender", 2, "string"))
-	.add(new protobuf.Field("message", 3, "string"));
+    .add(new protobuf.Field("timestamp", 1, "uint64"))
+    .add(new protobuf.Field("sender", 2, "string"))
+    .add(new protobuf.Field("message", 3, "string"));
 ```
 
 :::info

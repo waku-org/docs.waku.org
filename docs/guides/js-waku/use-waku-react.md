@@ -67,8 +67,8 @@ function App() {
 
 	// "node" is the created Relay Node
 	// "error" captures any error that occurs during node creation
-    // "isLoading" indicates whether the node is still being created
-    // Use these to handle states and render the UI in your application
+	// "isLoading" indicates whether the node is still being created
+	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -89,8 +89,8 @@ function App() {
 
 	// "node" is the created Light Node
 	// "error" captures any error that occurs during node creation
-    // "isLoading" indicates whether the node is still being created
-    // Use these to handle states and render the UI in your application
+	// "isLoading" indicates whether the node is still being created
+	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -142,19 +142,18 @@ function App() {
 	// Wait for the node to finish loading before sending messages
 	// (isLoading === false)
 
-  	// Bind push method to a node and encoder
-  	const { push } = useLightPush({ node, encoder });
+	// Bind push method to a node and encoder
+	const { push } = useLightPush({ node, encoder });
 
 	// Send the message using Light Push
-	const sendMessage = async (text: string) => {
+	const sendMessage = async (text) => {
 		if (!push || !text) {
-      		return;
-    	}
+			return;
+		}
 		const payload = utf8ToBytes(text);
 		await push({ payload });
-    }
+	};
 	sendMessage("Hello, World!");
-  };
 }
 ```
 
@@ -176,23 +175,23 @@ import { Protocols } from "@waku/interfaces";
 
 function App() {
 	// Create and start a Light Node and wait for remote peers
-  	const { node } = useCreateLightNode({
-  		options: { defaultBootstrap: true },
-  		protocols: [Protocols.LightPush, Protocols.Filter],
-  	});
+	const { node } = useCreateLightNode({
+		options: { defaultBootstrap: true },
+		protocols: [Protocols.LightPush, Protocols.Filter],
+	});
 
-  	// Choose a content topic and create a decoder
-  	const contentTopic = "/waku-react-guide/1/message/utf8";
-  	const { decoder } = useCreateContentPair(contentTopic);
+	// Choose a content topic and create a decoder
+	const contentTopic = "/waku-react-guide/1/message/utf8";
+	const { decoder } = useCreateContentPair(contentTopic);
 
-  	// Receive messages from Filter subscription
-  	const { error, messages, isLoading } = useFilterMessages({ node, decoder });
-  	console.log(messages);
+	// Receive messages from Filter subscription
+	const { error, messages, isLoading } = useFilterMessages({ node, decoder });
+	console.log(messages);
 
-    // "error" captures any error that occurs while receiving messages
+	// "error" captures any error that occurs while receiving messages
 	// "messages" contains a list of messages the subscription received
-    // "isLoading" indicates whether the node is still subscribing to Filter
-    // Use these to handle states and render the UI in your application
+	// "isLoading" indicates whether the node is still subscribing to Filter
+	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -215,15 +214,15 @@ function App() {
 		protocols: [Protocols.LightPush, Protocols.Filter],
 	});
 
-  	// Choose a content topic and create a decoder
-  	const contentTopic = "/waku-react-guide/1/message/utf8";
-  	const { decoder } = useCreateContentPair(contentTopic);
+	// Choose a content topic and create a decoder
+	const contentTopic = "/waku-react-guide/1/message/utf8";
+	const { decoder } = useCreateContentPair(contentTopic);
 
-  	// Set the query options
-  	const options = {
+	// Set the query options
+	const options = {
 		pageDirection: PageDirection.BACKWARD,
-    	pageSize: 20,
-  	};
+		pageSize: 20,
+	};
 
 	// Query the Store peer
 	const { error, messages, isLoading } = useStoreMessages({ node, decoder, options });
@@ -231,8 +230,8 @@ function App() {
 
 	// "error" captures any error that occurs during message retrieval
 	// "messages" contains a list of messages retrieved from the Store peer
-    // "isLoading" indicates whether the node is still retrieving messages
-    // Use these to handle states and render the UI in your application
+	// "isLoading" indicates whether the node is still retrieving messages
+	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -276,8 +275,8 @@ root.render(
 import { useWaku } from "@waku/react";
 
 function App() {
-    // Create and start a Relay Node
-    const { node, error, isLoading } = useWaku();
+	// Create and start a Relay Node
+	const { node, error, isLoading } = useWaku();
 	// Use these to handle states and render the UI in your application
 }
 ```
@@ -314,8 +313,8 @@ root.render(
 import { useWaku } from "@waku/react";
 
 function App() {
-    // Create and start a Light Node
-    const { node, error, isLoading } = useWaku();
+	// Create and start a Light Node
+	const { node, error, isLoading } = useWaku();
 	// Use these to handle states and render the UI in your application
 }
 ```
@@ -346,7 +345,7 @@ root.render(
 import { useContentPair } from "@waku/react";
 
 function App() {
-    // Create a message encoder and decoder pair
+	// Create a message encoder and decoder pair
 	const { encoder, decoder } = useContentPair();
 	// Use these to handle the messages in your application
 }

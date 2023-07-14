@@ -10,10 +10,10 @@ Set up a Waku node by creating a Relay Node, connecting to network peers, choosi
 
 ```js
 import {
-	createRelayNode,
-	waitForRemotePeer,
-	createEncoder,
-	createDecoder
+    createRelayNode,
+    waitForRemotePeer,
+    createEncoder,
+    createDecoder,
 } from "@waku/sdk";
 
 // Create and start a Relay Node
@@ -47,9 +47,9 @@ import protobuf from "protobufjs";
 
 // Create a message structure using Protobuf
 const ChatMessage = new protobuf.Type("ChatMessage")
-	.add(new protobuf.Field("timestamp", 1, "uint64"))
-	.add(new protobuf.Field("sender", 2, "string"))
-	.add(new protobuf.Field("message", 3, "string"));
+    .add(new protobuf.Field("timestamp", 1, "uint64"))
+    .add(new protobuf.Field("sender", 2, "string"))
+    .add(new protobuf.Field("message", 3, "string"));
 ```
 
 :::info
