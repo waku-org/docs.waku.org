@@ -6,12 +6,12 @@ This guide provides quick steps to start using the `js-waku` SDK by setting up a
 
 ## Create a Relay Node
 
-Use the `createRelayNode()` function to create a relay node and interact with the Waku Network:
+Use the `createRelayNode()` function to create a Relay Node and interact with the Waku Network:
 
 ```js
 import { createRelayNode } from "@waku/sdk";
 
-// Create and start a relay node
+// Create and start a Relay Node
 const node = await createRelayNode({ defaultBootstrap: true });
 await node.start();
 
@@ -20,7 +20,7 @@ await node.start();
 ```
 
 :::info
-The `defaultBootstrap` option bootstraps your node using [pre-defined Waku nodes](/overview/concepts/static-peers).
+When the `defaultBootstrap` flag is set to `true`, your node will be bootstrapped using [pre-defined Waku nodes](/overview/concepts/static-peers). The node does not connect to any remote peer or bootstrap node if omitted.
 :::
 
 ## Connect to Remote Peers
@@ -58,9 +58,16 @@ import { createEncoder } from "@waku/sdk";
 // Choose a content topic
 const contentTopic = "/quick-start/1/message/proto";
 
-// Create a message encoder
-const encoder = createEncoder({ contentTopic });
+// Create a message encoder without encryption
+const encoder = createEncoder({
+	contentTopic: contentTopic, // message content topic
+	ephemeral: false, // allows messages to be stored or not
+});
 ```
+
+:::info
+When the `ephemeral` flag is set to `true`, your messages will not be stored by `Store` nodes.
+:::
 
 ## Create a Message Structure
 
@@ -125,9 +132,9 @@ To send messages using the `Relay` protocol, create a new message object and use
 ```js
 // Create a new message object
 const protoMessage = ChatMessage.create({
-    timestamp: Date.now(),
-    sender: "Alice",
-    message: "Hello, World!",
+	timestamp: Date.now(),
+	sender: "Alice",
+	message: "Hello, World!",
 });
 
 // Serialize the message using Protobuf
@@ -135,10 +142,10 @@ const serializedMessage = ChatMessage.encode(protoMessage).finish();
 
 // Send the message using Relay
 await node.relay.send(encoder, {
-    payload: serializedMessage,
+	payload: serializedMessage,
 });
 ```
 
 :::tip Congratulations!
-You have successfully added decentralized communication features to your application using `js-waku`.
+You have successfully added decentralized communication features to your project using `js-waku`. To run your application smoothly, you can wrap these functions in JavaScript, React, or any other framework.
 :::

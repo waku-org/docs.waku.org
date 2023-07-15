@@ -14,17 +14,10 @@ import TabItem from '@theme/TabItem';
 ```
 
 <Tabs>
-<TabItem value="npx" label="npx">
-
-```shell
-npx @waku/create-app [PROJECT DIRECTORY]
-```
-
-</TabItem>
 <TabItem value="npm" label="npm">
 
 ```shell
-npm init @waku/app [PROJECT DIRECTORY]
+npx @waku/create-app [PROJECT DIRECTORY]
 ```
 
 </TabItem>
@@ -53,4 +46,4 @@ We welcome and appreciate the contributions of templates for the `@waku/create-a
 2. Place the template in the `examples` folder in the [js-waku-examples](https://github.com/waku-org/js-waku-examples) repository's root.
 3. Commit your changes with a detailed message and push them to your forked repository.
 4. Finally, submit a pull request to the [js-waku-examples](https://github.com/waku-org/js-waku-examples) repository.
-5. Our team will carefully review your submission and merge it upon approval.
+5. Our team will carefully review and merge your submission upon approval.

@@ -6,11 +6,9 @@
     "linkability",
     "Unlinkability",
     "waku",
-    "deplatforming",
     "gossipsub",
     "incentivized",
     "incentivizing",
-    "XMTP",
     "RAILGUN",
     "nwaku",
     "deanonymization",
@@ -23,9 +21,7 @@
     "proto",
     "multiaddr",
     "multiaddrs",
-    "Multiaddrs",
     "keyturn",
-    "Comms",
     "Protobuf",
     "supercrypto",
     "QUIC",
@@ -47,11 +43,11 @@
     "myaddr",
     "extip",
     "staticnode",
-    "permissioned",
     "Secp",
     "libpq",
     "dylib",
     "uncompromised",
+    "reactjs",
   ],
   "flagWords": [],
   "ignorePaths": [
@@ -76,7 +72,7 @@
       "pattern": "/wss:.*/"
     },
     {
-      "name": "youtube-link",
+      "name": "youtube",
       "pattern": "/< youtube.*/"
     },
     {
@@ -84,5 +80,5 @@
       "pattern": "/enr:-.*/"
     }
   ],
-  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube-link", "enrUri"]
+  "ignoreRegExpList": ["multiaddr", "dnsMultiaddr", "wss", "youtube", "enrUri"]
 }

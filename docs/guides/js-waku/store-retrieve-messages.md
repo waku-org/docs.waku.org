@@ -2,23 +2,23 @@
 title: Retrieve Messages Using Store
 ---
 
-This guide provides detailed steps to create a light node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
+This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
 
 ## Create a Light Node
 
-Use the `createLightNode()` function to create a light node and interact with the Waku Network:
+Use the `createLightNode()` function to create a Light Node and interact with the Waku Network:
 
 ```js
 import { createLightNode } from "@waku/sdk";
 
-// Create and start a light node
+// Create and start a Light Node
 const node = await createLightNode({ defaultBootstrap: true });
 await node.start();
 ```
 
 ## Connect to Store Peers
 
-Use the `waitForRemotePeer()` function to wait for the node to connect with store peers:
+Use the `waitForRemotePeer()` function to wait for the node to connect with Store peers:
 
 ```js
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
@@ -57,7 +57,7 @@ The `store.queryOrderedCallback()` function provides a straightforward method fo
 // Create the callback function
 const callback = (wakuMessage) => {
 	// Render the message/payload in your application
-    console.log(wakuMessage);
+	console.log(wakuMessage);
 };
 
 // Set the query options
@@ -65,7 +65,7 @@ const queryOptions = {
 	pageSize: 5,
 };
 
-// Query the Store node
+// Query the Store peer
 await node.store.queryOrderedCallback(
 	[decoder],
 	callback,
@@ -95,9 +95,9 @@ const storeQuery = node.store.queryGenerator(
 // Process the messages
 for await (const messagesPromises of storeQuery) {
 	// Fulfill all the messages promises
-    const messages = await Promise.all(messagesPromises);
-    // Render the message/payload in your application
-    console.log(messages);
+	const messages = await Promise.all(messagesPromises);
+	// Render the message/payload in your application
+	console.log(messages);
 }
 ```
 
@@ -171,14 +171,14 @@ import { waku } from "@waku/sdk";
 // Create the callback function
 const messages = [];
 const callback = (wakuMessage) => {
-    messages.push(wakuMessage);
+	messages.push(wakuMessage);
 };
 
 // Retrieve the first 10 messages
 await node.store.queryOrderedCallback(
-    [decoder],
-    callback,
-    {
+	[decoder],
+	callback,
+	{
 		pageSize: 10,
 	},
 );
@@ -190,9 +190,9 @@ const cursor = await waku.createCursor(lastMessage);
 // Retrieve the next 10 messages
 // The message at the cursor index is excluded from the result
 await node.store.queryOrderedCallback(
-    [decoder],
-    callback,
-    {
+	[decoder],
+	callback,
+	{
 		pageSize: 10,
 		cursor: cursor,
 	},
@@ -206,7 +206,7 @@ If you omit the `cursor` option, the query will start from the beginning or end 
 
 ### `peerId`
 
-The `peerId` option specifies the peer to query. If omitted, a pseudo-random peer is selected from the connected `Store` peers.
+The `peerId` option specifies the peer to query. A pseudo-random peer is selected from the connected `Store` peers if omitted.
 
 ```js
 const queryOptions = {
@@ -215,5 +215,5 @@ const queryOptions = {
 ```
 
 :::tip Congratulations!
-You have successfully retrieved and filtered historical messages on a light node using the `Store` protocol.
+You have successfully retrieved and filtered historical messages on a Light Node using the `Store` protocol. Check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.
 :::
