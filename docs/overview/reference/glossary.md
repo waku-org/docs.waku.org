@@ -52,7 +52,7 @@ Light push is a protocol enabling [light nodes](#light-node) to send [messages](
 
 ### Mostly Offline
 
-Mostly offline devices refer to clients who spend most of their time offline or disconnected from the internet and only occasionally to the internet and [Waku Network](#waku). Examples include browsers and mobile phones.
+Mostly offline devices are clients who spend most of their time offline or disconnected from the internet and only occasionally to the internet and [Waku Network](#waku). Examples include browsers and mobile phones.
 
 ### Node
 

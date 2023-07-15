@@ -50,7 +50,7 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 ```
 
 :::info
-Please refer to the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for adding the `protobufjs` package to your project.
+Check out the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for adding the `protobufjs` package to your project.
 :::
 
 ## Send Messages Using Light Push

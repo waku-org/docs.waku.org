@@ -48,6 +48,8 @@
     "dylib",
     "uncompromised",
     "reactjs",
+    "XMTP",
+    "permissioned",
   ],
   "flagWords": [],
   "ignorePaths": [

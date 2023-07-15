@@ -92,7 +92,7 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 ./build/wakunode2 --help
 ```
 
-To learn more about running nwaku, please refer to:
+To learn more about running nwaku, check out these guides:
 
 - [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
 - [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)

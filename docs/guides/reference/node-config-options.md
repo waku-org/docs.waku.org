@@ -161,5 +161,5 @@ Here are the available node configuration options, along with their default valu
 | `websocket-secure-cert-path` |  | Secure websocket Certificate path:   '/path/to/cert.txt' |
 
 :::tip
-To configure your node using the provided configuration options, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
+To configure your node using the provided configuration options, check out the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
 :::
