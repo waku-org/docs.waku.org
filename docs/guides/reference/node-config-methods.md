@@ -10,7 +10,7 @@ Waku nodes can be configured using a combination of the following methods:
 4. Default values
 
 :::info
-Note the precedence order: Each configuration method overrides the one below it (e.g., command line options override environment variables and configuration files).
+Take note of the precedence order: Each configuration method overrides the one below it (e.g., command line options override environment variables and configuration files).
 :::
 
 ## Command Line Options
@@ -96,5 +96,5 @@ To see the default values of all [configuration options](/guides/reference/node-
 ```
 
 :::tip
-To explore the available node configuration options, please refer to the [Node Configuration Options](/guides/reference/node-config-options) guide.
+To explore the available node configuration options, check out the [Node Configuration Options](/guides/reference/node-config-options) guide.
 :::

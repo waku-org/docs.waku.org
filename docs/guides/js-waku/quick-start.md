@@ -2,7 +2,7 @@
 title: Quick Start
 ---
 
-This guide provides quick steps to start using the `js-waku` SDK by setting up a Waku node and sending messages using the [Relay protocol](/overview/concepts/protocols#relay). Please refer to the [installation guide](/guides/js-waku/#installation) for steps on adding `js-waku` to your project.
+This guide provides quick steps to start using the `js-waku` SDK by setting up a Waku node and sending messages using the [Relay protocol](/overview/concepts/protocols#relay). Check out the [installation guide](/guides/js-waku/#installation) for steps on adding `js-waku` to your project.
 
 ## Create a Relay Node
 

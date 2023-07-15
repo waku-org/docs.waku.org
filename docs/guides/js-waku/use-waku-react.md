@@ -68,7 +68,6 @@ function App() {
 	// "node" is the created Relay Node
 	// "error" captures any error that occurs during node creation
 	// "isLoading" indicates whether the node is still being created
-	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -90,7 +89,6 @@ function App() {
 	// "node" is the created Light Node
 	// "error" captures any error that occurs during node creation
 	// "isLoading" indicates whether the node is still being created
-	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -111,7 +109,6 @@ function App() {
 
 	// "encoder" is the message encoder
 	// "decoder" is the message decoder
-	// Use these to handle the messages in your application
 }
 ```
 
@@ -191,7 +188,6 @@ function App() {
 	// "error" captures any error that occurs while receiving messages
 	// "messages" contains a list of messages the subscription received
 	// "isLoading" indicates whether the node is still subscribing to Filter
-	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -231,12 +227,11 @@ function App() {
 	// "error" captures any error that occurs during message retrieval
 	// "messages" contains a list of messages retrieved from the Store peer
 	// "isLoading" indicates whether the node is still retrieving messages
-	// Use these to handle states and render the UI in your application
 }
 ```
 
 :::info
-To explore the available query options, please refer to the [Store Query Options](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
+To explore the available query options, check out the [Store Query Options](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
 :::
 
 ## Using @waku/react Providers
@@ -277,7 +272,6 @@ import { useWaku } from "@waku/react";
 function App() {
 	// Create and start a Relay Node
 	const { node, error, isLoading } = useWaku();
-	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -315,7 +309,6 @@ import { useWaku } from "@waku/react";
 function App() {
 	// Create and start a Light Node
 	const { node, error, isLoading } = useWaku();
-	// Use these to handle states and render the UI in your application
 }
 ```
 
@@ -347,7 +340,6 @@ import { useContentPair } from "@waku/react";
 function App() {
 	// Create a message encoder and decoder pair
 	const { encoder, decoder } = useContentPair();
-	// Use these to handle the messages in your application
 }
 ```
 

@@ -19,7 +19,7 @@ To run a node, you must have the `nwaku` binary. Nwaku provides multiple options
 
 #### Build the Binary
 
-You can build the node binary directly from the [nwaku source code](https://github.com/waku-org/nwaku). To learn more, please refer to the [Build Nwaku from Source](/guides/nwaku/build-source) guide.
+You can build the node binary directly from the [nwaku source code](https://github.com/waku-org/nwaku). Check out the [Build Nwaku from Source](/guides/nwaku/build-source) guide to learn more.
 
 #### Run Nwaku in Docker
 
@@ -45,7 +45,7 @@ Once you have gotten the `nwaku` binary, run it using the [default configuration
 ```
 
 :::tip
-For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, please refer to the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
+For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, check out the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
 :::
 
 ## Bootstrap the Node
