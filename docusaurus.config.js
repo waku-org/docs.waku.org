@@ -69,13 +69,13 @@ const config = {
           label: "About Waku",
         },
         {
-          to: "/powered-by-waku",
-          label: "Powered by Waku",
+          to: "/presentations",
+          label: "Presentations",
           position: "left",
         },
         {
-          to: "/presentations",
-          label: "Presentations",
+          to: "/powered-by-waku",
+          label: "Powered by Waku",
           position: "left",
         },
         {

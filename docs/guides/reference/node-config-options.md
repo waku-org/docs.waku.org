@@ -30,6 +30,7 @@ Here are the available node configuration options, along with their default valu
 | `nat` | any | Specify method to use for determining public address. Must be one of: any, none, upnp, pmp, extip:<IP\> |
 | `ext-multiaddr` |  | External multiaddresses to advertise to the network. Argument may be repeated |
 | `max-connections` | `50` | Maximum allowed number of libp2p connections |
+| `max-relay-peers` |  | Maximum allowed number of relay peers |
 | `peer-store-capacity` |  | Maximum stored peers in the peerstore |
 | `peer-persistence` | `false` | Enable peer persistence |
 
@@ -62,6 +63,7 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-eth-contract-address` |  | Address of membership contract on an Ethereum testnet |
 | `rln-relay-cred-password` |  | Password for encrypting RLN credentials |
 | `rln-relay-tree-path` |  | Path to the RLN merkle tree sled db (https://github.com/spacejam/sled) |
+| `rln-relay-bandwidth-threshold` | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen |
 | `staticnode` |  | Peer multiaddr to directly connect with. Argument may be repeated |
 | `keep-alive` | `false` | Enable keep-alive for idle connections: true\|false |
 | `topic` | `["/waku/2/default-waku/proto"]` | Default topic to subscribe to. Argument may be repeated |

@@ -78,6 +78,6 @@ def extract_config(config_path: str) -> str:
 
 
 if __name__ == "__main__":
-    config_path = "https://raw.githubusercontent.com/waku-org/nwaku/master/apps/wakunode2/config.nim"
+    config_path = "https://raw.githubusercontent.com/waku-org/nwaku/master/apps/wakunode2/external_config.nim"
     table_data = extract_config(config_path)
     print(table_data)

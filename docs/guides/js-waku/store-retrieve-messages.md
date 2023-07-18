@@ -61,9 +61,7 @@ const callback = (wakuMessage) => {
 };
 
 // Set the query options
-const queryOptions = {
-	pageSize: 5,
-};
+const queryOptions = {};
 
 // Query the Store peer
 await node.store.queryOrderedCallback(
@@ -82,9 +80,7 @@ The `store.queryGenerator()` function provides more control and flexibility over
 
 ```js
 // Set the query options
-const queryOptions = {
-	pageSize: 5,
-};
+const queryOptions = {};
 
 // Create the store query
 const storeQuery = node.store.queryGenerator(
@@ -128,16 +124,6 @@ const queryOptions = {
 The `pageDirection` option does not affect the ordering of messages within the page, as the oldest message always returns first.
 :::
 
-### `pageSize`
-
-The `pageSize` option specifies the number of messages to be returned per page. For example, consider a query that retrieves `20` messages per page:
-
-```js
-const queryOptions = {
-	pageSize: 20,
-};
-```
-
 ### `timeFilter`
 
 The `timeFilter` option specifies a time frame to retrieve messages from. For example, consider a query that retrieves messages from the previous week:
@@ -163,7 +149,7 @@ If you omit the `timeFilter` option, the query will start from the beginning or 
 
 ### `cursor`
 
-The `cursor` option specifies the starting index for retrieving messages. For example, consider a query that retrieves the first `10` messages and then continues with the next `10` messages:
+The `cursor` option specifies the starting index for retrieving messages. For example, consider a query that retrieves the first page messages and then continues with the next page:
 
 ```js
 import { waku } from "@waku/sdk";
@@ -174,26 +160,22 @@ const callback = (wakuMessage) => {
 	messages.push(wakuMessage);
 };
 
-// Retrieve the first 10 messages
+// Retrieve the first page of messages
 await node.store.queryOrderedCallback(
 	[decoder],
 	callback,
-	{
-		pageSize: 10,
-	},
 );
 
 // Create the cursor
 const lastMessage = messages[messages.length - 1];
 const cursor = await waku.createCursor(lastMessage);
 
-// Retrieve the next 10 messages
+// Retrieve the next page of messages
 // The message at the cursor index is excluded from the result
 await node.store.queryOrderedCallback(
 	[decoder],
 	callback,
 	{
-		pageSize: 10,
 		cursor: cursor,
 	},
 );

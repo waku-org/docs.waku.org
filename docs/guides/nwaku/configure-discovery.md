@@ -86,7 +86,7 @@ When Discv5 is enabled and used with [DNS Discovery](#configure-dns-discovery), 
 To enable [Peer Exchange](/overview/concepts/peer-exchange) in a `nwaku` node, use the following configuration options:
 
 - `peer-exchange`: Enables `Peer Exchange` on the node as a responder (disabled by default).
-- `peer-exchange-node` (optional): ENR for bootstrap node that has the peer exchange protocol enabled.
+- `peer-exchange-node` (optional): Multiaddr for bootstrap node that has the peer exchange protocol enabled.
 
 ```bash
 ./build/wakunode2 \
