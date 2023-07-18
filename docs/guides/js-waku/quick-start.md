@@ -2,17 +2,17 @@
 title: Quick Start
 ---
 
-This guide provides quick steps to start using the `js-waku` SDK by setting up a Waku node and sending messages using the [Relay protocol](/overview/concepts/protocols#relay). Check out the [installation guide](/guides/js-waku/#installation) for steps on adding `js-waku` to your project.
+This guide provides quick steps to start using the `js-waku` SDK by setting up a Waku node and sending messages using the [Light Push protocol](/overview/concepts/protocols#light-push). Check out the [installation guide](/guides/js-waku/#installation) for steps on adding `js-waku` to your project.
 
-## Create a Relay Node
+## Create a Light Node
 
-Use the `createRelayNode()` function to create a Relay Node and interact with the Waku Network:
+Use the `createLightNode()` function to create a `Light Node` and interact with the Waku Network:
 
 ```js
-import { createRelayNode } from "@waku/sdk";
+import { createLightNode } from "@waku/sdk";
 
-// Create and start a Relay Node
-const node = await createRelayNode({ defaultBootstrap: true });
+// Create and start a Light Node
+const node = await createLightNode({ defaultBootstrap: true });
 await node.start();
 
 // Use the stop() function to stop a running node
@@ -125,9 +125,9 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 	.add(new protobuf.Field("message", 3, "string"));
 ```
 
-## Send Messages Using Relay
+## Send Messages Using Light Push
 
-To send messages using the `Relay` protocol, create a new message object and use the `relay.send()` function:
+To send messages using the `Light Push` protocol, create a new message object and use the `lightPush.send()` function:
 
 ```js
 // Create a new message object
@@ -140,8 +140,8 @@ const protoMessage = ChatMessage.create({
 // Serialize the message using Protobuf
 const serializedMessage = ChatMessage.encode(protoMessage).finish();
 
-// Send the message using Relay
-await node.relay.send(encoder, {
+// Send the message using Light Push
+await node.lightPush.send(encoder, {
 	payload: serializedMessage,
 });
 ```

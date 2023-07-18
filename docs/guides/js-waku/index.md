@@ -42,8 +42,7 @@ Check out the quick start guide and comprehensive tutorials to learn how to buil
 
 | Guide | Description |
 | - | - |
-| [Quick Start](/guides/js-waku/quick-start) | Quickly familiarize yourself with `js-waku` by setting up a Waku node and sending messages using the [Relay](/overview/concepts/protocols#relay) protocol |
-| [Send and Receive Messages Using Relay](/guides/js-waku/relay-send-receive) | Learn how to set up a Waku node for sending and receiving messages using the [Relay](/overview/concepts/protocols#relay) protocol |
+| [Quick Start](/guides/js-waku/quick-start) | Quickly familiarize yourself with `js-waku` by setting up a Waku node and sending messages using the [Light Push](/overview/concepts/protocols#light-push) protocol |
 | [Send and Receive Messages Using Light Push and Filter](/guides/js-waku/light-send-receive) | Learn how to send and receive messages on light nodes using the [Light Push](/overview/concepts/protocols#light-push) and [Filter](/overview/concepts/protocols#filter) protocols |
 | [Retrieve Messages Using Store](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store](/overview/concepts/protocols#store) protocol |
 | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `js-waku` into a React application |

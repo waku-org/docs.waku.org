@@ -61,9 +61,7 @@ const callback = (wakuMessage) => {
 };
 
 // Set the query options
-const queryOptions = {
-
-};
+const queryOptions = {};
 
 // Query the Store peer
 await node.store.queryOrderedCallback(
@@ -82,9 +80,7 @@ The `store.queryGenerator()` function provides more control and flexibility over
 
 ```js
 // Set the query options
-const queryOptions = {
-
-};
+const queryOptions = {};
 
 // Create the store query
 const storeQuery = node.store.queryGenerator(
