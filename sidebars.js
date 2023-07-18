@@ -83,7 +83,7 @@ const sidebars = {
 				},
 				{
 					type: 'html',
-					value: '<a href="https://js.waku.org" target="_blank" rel="noopener noreferrer" class="menu__link external-link">API Documentation<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
+					value: '<a href="https://js.waku.org" target="_blank" rel="noopener noreferrer" class="menu__link external-link">API Reference<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
 				},
 			]
 		},
@@ -100,8 +100,8 @@ const sidebars = {
 	community: [
 		"community",
 		"contribute",
-		"powered-by-waku",
 		"presentations",
+		"powered-by-waku",
 		{
 			type: 'html',
 			value: '<a href="https://github.com/waku-org/bounties" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Waku Bounties<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',

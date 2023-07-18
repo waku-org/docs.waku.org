@@ -51,7 +51,7 @@ yarn add @waku/react @waku/sdk
 
 ## Create a Relay Node
 
-Use the `useCreateRelayNode()` hook to create a Relay Node:
+Use the `useCreateRelayNode()` hook to create a [Relay Node](/guides/js-waku/relay-send-receive):
 
 ```js title="App.js"
 import { useCreateRelayNode } from "@waku/react";
@@ -73,7 +73,7 @@ function App() {
 
 ## Create a Light Node
 
-Use the `useCreateLightNode()` hook to create a Light Node and specify the [protocols](/overview/concepts/protocols) for remote peers:
+Use the `useCreateLightNode()` hook to create a [Light Node](/guides/js-waku/light-send-receive) and specify the [protocols](/overview/concepts/protocols) for remote peers:
 
 ```js title="App.js"
 import { useCreateLightNode } from "@waku/react";
@@ -114,7 +114,7 @@ function App() {
 
 ## Send Messages Using Light Push
 
-Use the `useLightPush()` hook to bind `Light Push` methods to a node and `encoder`:
+Use the `useLightPush()` hook to bind [Light Push methods](/guides/js-waku/light-send-receive/#send-messages-using-light-push) to a node and `encoder`:
 
 ```js title="App.js"
 import {
@@ -160,7 +160,7 @@ Wait for the node to finish loading before sending messages (`isLoading` === `fa
 
 ## Receive Messages Using Filter
 
-Use the `useFilterMessages()` hook to receive messages from a `Filter` subscription:
+Use the `useFilterMessages()` hook to receive messages from a [Filter subscription](/guides/js-waku/light-send-receive/#receive-messages-using-filter):
 
 ```js title="App.js"
 import {
@@ -193,7 +193,7 @@ function App() {
 
 ## Retrieve Messages Using Store
 
-Use the `useStoreMessages()` hook to retrieve messages from the `Store` protocol:
+Use the `useStoreMessages()` hook to retrieve messages from the [Store protocol](/guides/js-waku/store-retrieve-messages):
 
 ```js title="App.js"
 import {
@@ -240,7 +240,7 @@ The `@waku/react` package provides a collection of [context providers](https://r
 
 ### `RelayNodeProvider`
 
-The `RelayNodeProvider` context provider passes configuration options for creating a Relay Node:
+The `RelayNodeProvider` context provider passes configuration options for creating a `Relay Node`:
 
 ```js title="index.js"
 import { RelayNodeProvider } from "@waku/react";
@@ -277,7 +277,7 @@ function App() {
 
 ### `LightNodeProvider`
 
-The `LightNodeProvider` context provider passes configuration options for creating a Light Node:
+The `LightNodeProvider` context provider passes configuration options for creating a `Light Node`:
 
 ```js title="index.js"
 import { LightNodeProvider } from "@waku/react";
