@@ -36,14 +36,14 @@ Next, install the `@waku/react` package using your preferred package manager:
 <TabItem value="npm" label="npm">
 
 ```shell
-npm install @waku/react @waku/sdk
+npm install @waku/react
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @waku/react @waku/sdk
+yarn add @waku/react
 ```
 
 </TabItem>
@@ -73,17 +73,15 @@ function App() {
 
 ## Create a Light Node
 
-Use the `useCreateLightNode()` hook to create a [Light Node](/guides/js-waku/light-send-receive) and specify the [protocols](/overview/concepts/protocols) for remote peers:
+Use the `useCreateLightNode()` hook to create a [Light Node](/guides/js-waku/light-send-receive):
 
 ```js title="App.js"
 import { useCreateLightNode } from "@waku/react";
-import { Protocols } from "@waku/interfaces";
 
 function App() {
 	// Create and start a Light Node and wait for remote peers
 	const { node, error, isLoading } = useCreateLightNode({
 		options: { defaultBootstrap: true },
-		protocols: [Protocols.LightPush, Protocols.Filter],
 	});
 
 	// "node" is the created Light Node
@@ -122,14 +120,12 @@ import {
 	useCreateContentPair,
 	useLightPush,
 } from "@waku/react";
-import { Protocols } from "@waku/interfaces";
 import { utf8ToBytes } from "@waku/sdk";
 
 function App() {
 	// Create and start a Light Node and wait for remote peers
 	const { node, error, isLoading } = useCreateLightNode({
 		options: { defaultBootstrap: true },
-		protocols: [Protocols.LightPush, Protocols.Filter],
 	});
 
 	// Choose a content topic and create an encoder
@@ -160,7 +156,7 @@ Wait for the node to finish loading before sending messages (`isLoading` === `fa
 
 ## Receive Messages Using Filter
 
-Use the `useFilterMessages()` hook to receive messages from a [Filter subscription](/guides/js-waku/light-send-receive/#receive-messages-using-filter):
+Use the `useFilterMessages()` hook to receive messages from a [Filter subscription](/guides/js-waku/light-send-receive/#receive-messages-using-filter) and keep it updated:
 
 ```js title="App.js"
 import {
@@ -168,13 +164,11 @@ import {
 	useCreateContentPair,
 	useFilterMessages,
 } from "@waku/react";
-import { Protocols } from "@waku/interfaces";
 
 function App() {
 	// Create and start a Light Node and wait for remote peers
 	const { node } = useCreateLightNode({
 		options: { defaultBootstrap: true },
-		protocols: [Protocols.LightPush, Protocols.Filter],
 	});
 
 	// Choose a content topic and create a decoder
@@ -201,13 +195,12 @@ import {
 	useCreateContentPair,
 	useStoreMessages,
 } from "@waku/react";
-import { Protocols, PageDirection } from "@waku/interfaces";
+import { PageDirection } from "@waku/interfaces";
 
 function App() {
 	// Create and start a Light Node and wait for remote peers
 	const { node } = useCreateLightNode({
 		options: { defaultBootstrap: true },
-		protocols: [Protocols.LightPush, Protocols.Filter],
 	});
 
 	// Choose a content topic and create a decoder
@@ -216,8 +209,7 @@ function App() {
 
 	// Set the query options
 	const options = {
-		pageDirection: PageDirection.BACKWARD,
-		pageSize: 20,
+		pageDirection: PageDirection.FORWARD,
 	};
 
 	// Query the Store peer
@@ -244,7 +236,6 @@ The `RelayNodeProvider` context provider passes configuration options for creati
 
 ```js title="index.js"
 import { RelayNodeProvider } from "@waku/react";
-import { Protocols } from "@waku/interfaces";
 
 // Set the Relay Node options
 const NODE_OPTIONS = {
@@ -252,14 +243,11 @@ const NODE_OPTIONS = {
 	emitSelf: true,
 };
 
-// Set the remote peer connections to wait for
-const PROTOCOLS = [Protocols.Relay];
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		// Use the Relay Node context provider
-		<RelayNodeProvider options={NODE_OPTIONS} protocols={PROTOCOLS}>
+		<RelayNodeProvider options={NODE_OPTIONS}>
 			<App />
 		</RelayNodeProvider>
 	</React.StrictMode>
@@ -281,22 +269,15 @@ The `LightNodeProvider` context provider passes configuration options for creati
 
 ```js title="index.js"
 import { LightNodeProvider } from "@waku/react";
-import { Protocols } from "@waku/interfaces";
 
 // Set the Light Node options
 const NODE_OPTIONS = { defaultBootstrap: true };
-
-// Set the remote peer connections to wait for
-const PROTOCOLS = [
-	Protocols.LightPush,
-	Protocols.Filter,
-];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		// Use the Light Node context provider
-		<LightNodeProvider options={NODE_OPTIONS} protocols={PROTOCOLS}>
+		<LightNodeProvider options={NODE_OPTIONS}>
 			<App />
 		</LightNodeProvider>
 	</React.StrictMode>
