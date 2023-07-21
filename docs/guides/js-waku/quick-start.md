@@ -20,7 +20,7 @@ await node.start();
 ```
 
 :::info
-When the `defaultBootstrap` flag is set to `true`, your node will be bootstrapped using [pre-defined Waku nodes](/overview/concepts/static-peers). The node does not connect to any remote peer or bootstrap node if omitted.
+When the `defaultBootstrap` flag is set to `true`, your node will be bootstrapped using [DNS Discovery](/overview/concepts/dns-discovery). The node does not connect to any remote peer or bootstrap node if omitted.
 :::
 
 ## Connect to Remote Peers
@@ -50,7 +50,7 @@ await waitForRemotePeer(node, [
 
 ## Choose a Content Topic
 
-[Choose a content topic](/overview/concepts/content-topics) for your application and create an `encoder` for [message encryption](https://rfc.vac.dev/spec/26/):
+[Choose a content topic](/overview/concepts/content-topics) for your application and create a message `encoder`:
 
 ```js
 import { createEncoder } from "@waku/sdk";
@@ -59,15 +59,17 @@ import { createEncoder } from "@waku/sdk";
 const contentTopic = "/quick-start/1/message/proto";
 
 // Create a message encoder without encryption
-const encoder = createEncoder({
-	contentTopic: contentTopic, // message content topic
-	ephemeral: false, // allows messages to be stored or not
-});
+const encoder = createEncoder({ contentTopic: contentTopic });
 ```
 
-:::info
-When the `ephemeral` flag is set to `true`, your messages will not be stored by `Store` nodes.
-:::
+The `ephemeral` option allows you to specify whether your messages should be persisted by `Store` peers:
+
+```js
+const encoder = createEncoder({
+	contentTopic: contentTopic, // message content topic
+	ephemeral: true, // allows messages to be stored or not
+});
+```
 
 ## Create a Message Structure
 

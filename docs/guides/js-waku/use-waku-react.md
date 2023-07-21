@@ -209,11 +209,8 @@ function App() {
 	const contentTopic = "/waku-react-guide/1/message/utf8";
 	const decoder = createDecoder(contentTopic);
 
-	// Set the query options
-	const options = {};
-
 	// Query the Store peer
-	const { error, messages, isLoading } = useStoreMessages({ node, decoder, options });
+	const { error, messages, isLoading } = useStoreMessages({ node, decoder });
 
 	// "error" captures any error that occurs during message retrieval
 	// "messages" contains a list of messages retrieved from the Store peer
