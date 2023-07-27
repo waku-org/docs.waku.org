@@ -2,6 +2,14 @@
 title: Watch Our Presentations
 ---
 
+## Waku Workshop: Running Your Own Waku Node
+
+<iframe class="yt-video" src="https://www.youtube.com/embed/_qjKiy_epSE" title="Waku Workshop: Running Your Own Waku Node by Václav Pavlín" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Waku Workshop: Getting Started with Waku
+
+<iframe class="yt-video" src="https://www.youtube.com/embed/dMxs5GcbgG4" title="Waku Workshop: Getting Started with Waku by Alvaro Revuelta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Hashing it Out: Decentralized Messaging
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/vmx_oOb2On0" title="Hashing it Out: Decentralized Messaging by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -20,7 +28,7 @@ title: Watch Our Presentations
 
 ## Secureum TrustX - Waku: Enabling a New Dimension for dApps
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/GXU5Fd6gMVw" title="Secureum TrustX - Waku: Enabling a New Dimension for dApps by Corey Petty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/GXU5Fd6gMVw?start=21700" title="Secureum TrustX - Waku: Enabling a New Dimension for dApps by Corey Petty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Waku: Enabling a New Dimension for dApps
 
