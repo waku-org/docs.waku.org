@@ -2,11 +2,11 @@
 title: "Bootstrap DApps Using @waku/create-app"
 ---
 
-This guide provides detailed steps to bootstrap your next `js-waku` project from [various example templates](https://github.com/waku-org/js-waku-examples/tree/master/examples) using the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package.
+This guide provides detailed steps to bootstrap your next `@waku/sdk` project from [various example templates](https://github.com/waku-org/js-waku-examples/tree/master/examples) using the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package.
 
 ## Usage
 
-Initialize a new `js-waku` template using any of the following methods:
+Initialize a new `@waku/sdk` template using any of the following methods:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -47,3 +47,5 @@ We welcome and appreciate the contributions of templates for the `@waku/create-a
 3. Commit your changes with a detailed message and push them to your forked repository.
 4. Finally, submit a pull request to the [js-waku-examples](https://github.com/waku-org/js-waku-examples) repository.
 5. Our team will carefully review and merge your submission upon approval.
+
+Waku also provides bounties to encourage community members to contribute to the network and earn rewards. To participate in the bounty program, head to <https://github.com/waku-org/bounties>.

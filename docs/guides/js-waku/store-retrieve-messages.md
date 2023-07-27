@@ -29,7 +29,7 @@ await waitForRemotePeer(node, [Protocols.Store]);
 
 ## Choose a Content Topic
 
-[Choose a content topic](/overview/concepts/content-topics) for filtering the messages to retrieve and create a `decoder` for [message decryption](https://rfc.vac.dev/spec/26/):
+[Choose a content topic](/overview/concepts/content-topics) for filtering the messages to retrieve and create a message `decoder`:
 
 ```js
 import { createDecoder } from "@waku/sdk";
@@ -43,7 +43,7 @@ const decoder = createDecoder(contentTopic);
 
 ## Retrieve Messages
 
-`js-waku` provides the `queryOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to handle them sequentially, processing each page when received.
+`@waku/sdk` provides the `queryOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to process each page sequentially.
 
 ### `queryOrderedCallback`
 
@@ -60,16 +60,16 @@ const callback = (wakuMessage) => {
 	console.log(wakuMessage);
 };
 
-// Set the query options
-const queryOptions = {};
-
 // Query the Store peer
 await node.store.queryOrderedCallback(
 	[decoder],
 	callback,
-	queryOptions,
 );
 ```
+
+:::info
+The `queryOrderedCallback()` function always returns the most recent messages in a page first.
+:::
 
 ### `queryGenerator`
 
@@ -79,23 +79,25 @@ The `store.queryGenerator()` function provides more control and flexibility over
 - `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
 
 ```js
-// Set the query options
-const queryOptions = {};
-
 // Create the store query
-const storeQuery = node.store.queryGenerator(
-	[decoder],
-	queryOptions,
-);
+const storeQuery = node.store.queryGenerator([decoder]);
 
 // Process the messages
 for await (const messagesPromises of storeQuery) {
-	// Fulfill all the messages promises
-	const messages = await Promise.all(messagesPromises);
-	// Render the message/payload in your application
-	console.log(messages);
+	// Fulfill the messages promises
+	const messages = await Promise.all(messagesPromises
+		.map(async (p) => {
+			const msg = await p;
+			// Render the message/payload in your application
+			console.log(msg);
+		})
+	);
 }
 ```
+
+:::info
+The `queryGenerator()` function always returns the oldest messages in a page first.
+:::
 
 ## Store Query Options
 
@@ -118,34 +120,11 @@ const queryOptions = {
 const queryOptions = {
 	pageDirection: PageDirection.FORWARD,
 };
+
+// Query the Store peer with options
+await node.store.queryOrderedCallback([decoder], callback, options);
+const storeQuery = node.store.queryGenerator([decoder, options]);
 ```
-
-:::info
-The `pageDirection` option does not affect the ordering of messages within the page, as the oldest message always returns first.
-:::
-
-### `timeFilter`
-
-The `timeFilter` option specifies a time frame to retrieve messages from. For example, consider a query that retrieves messages from the previous week:
-
-```js
-// Get the time frame
-const endTime = new Date();
-const startTime = new Date();
-startTime.setDate(endTime.getDate() - 7);
-
-// Retrieve a week of messages
-const queryOptions = {
-	timeFilter: {
-		startTime,
-		endTime,
-	},
-};
-```
-
-:::info
-If you omit the `timeFilter` option, the query will start from the beginning or end of the history, depending on the [page direction](#pagedirection).
-:::
 
 ### `cursor`
 
@@ -158,9 +137,13 @@ import { waku } from "@waku/sdk";
 const messages = [];
 const callback = (wakuMessage) => {
 	messages.push(wakuMessage);
+	// Return "true" to stop retrieving pages
+	// Here, it retrieves only the first page
+	return true;
 };
 
 // Retrieve the first page of messages
+// This retrieves all the messages if "return true" is not present
 await node.store.queryOrderedCallback(
 	[decoder],
 	callback,
@@ -186,15 +169,32 @@ console.log(messages);
 If you omit the `cursor` option, the query will start from the beginning or end of the history, depending on the [page direction](#pagedirection).
 :::
 
-### `peerId`
+### `timeFilter`
 
-The `peerId` option specifies the peer to query. A pseudo-random peer is selected from the connected `Store` peers if omitted.
+The `timeFilter` option specifies a time frame to retrieve messages from. For example, consider a query that retrieves messages from the previous week:
 
 ```js
+// Get the time frame
+const endTime = new Date();
+const startTime = new Date();
+startTime.setDate(endTime.getDate() - 7);
+
+// Retrieve a week of messages
 const queryOptions = {
-	peerId: "[WAKU STORE PEER ID]",
+	timeFilter: {
+		startTime,
+		endTime,
+	},
 };
+
+// Query the Store peer with options
+await node.store.queryOrderedCallback([decoder], callback, options);
+const storeQuery = node.store.queryGenerator([decoder, options]);
 ```
+
+:::info
+The `timeFilter` option significantly reduces message retrieval performance. To optimize it, consider resuming message retrieval using a [cursor](#cursor) that starts from the last seen message.
+:::
 
 :::tip Congratulations!
 You have successfully retrieved and filtered historical messages on a Light Node using the `Store` protocol. Check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.

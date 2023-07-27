@@ -2,30 +2,56 @@
 title: Send and Receive Messages Using Light Push and Filter
 ---
 
-This guide provides detailed steps to create a light node, send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter).
+This guide provides detailed steps to start using the `@waku/sdk` package by setting up a Light Node to send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter). Check out the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
 
 ## Create a Light Node
 
-Set up a Waku node by creating a light node, connecting to network peers with `Light Push` and `Filter` enabled, choosing a [content topic](/overview/concepts/content-topics), and creating an `encoder` and `decoder` for [message encryption](https://rfc.vac.dev/spec/26/):
+Use the `createLightNode()` function to create a `Light Node` and interact with the Waku Network:
 
 ```js
-import {
-    createLightNode,
-    waitForRemotePeer,
-    Protocols,
-    createEncoder,
-    createDecoder,
-} from "@waku/sdk";
+import { createLightNode } from "@waku/sdk";
 
-// Create and start a light node
+// Create and start a Light Node
 const node = await createLightNode({ defaultBootstrap: true });
 await node.start();
 
+// Use the stop() function to stop a running node
+// await node.stop();
+```
+
+:::info
+When the `defaultBootstrap` flag is set to `true`, your node will be bootstrapped using [DNS Discovery](/overview/concepts/dns-discovery). The node does not connect to any remote peer or bootstrap node if omitted.
+:::
+
+## Connect to Remote Peers
+
+Use the `waitForRemotePeer()` function to wait for the node to connect with peers on the Waku Network:
+
+```js
+import { waitForRemotePeer } from "@waku/sdk";
+
 // Wait for a successful peer connection
+await waitForRemotePeer(node);
+```
+
+The `protocols` option allows you to specify the [protocols](/overview/concepts/protocols) that the remote peers should have enabled:
+
+```js
+import { waitForRemotePeer, Protocols } from "@waku/sdk";
+
+// Wait for peer connections with specific protocols
 await waitForRemotePeer(node, [
-    Protocols.LightPush,
-    Protocols.Filter,
+	Protocols.LightPush,
+	Protocols.Filter,
 ]);
+```
+
+## Choose a Content Topic
+
+[Choose a content topic](/overview/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
+
+```js
+import { createEncoder, createDecoder } from "@waku/sdk";
 
 // Choose a content topic
 const contentTopic = "/light-guide/1/message/proto";
@@ -34,6 +60,19 @@ const contentTopic = "/light-guide/1/message/proto";
 const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
+
+The `ephemeral` option allows you to specify whether your messages should be persisted by [Store peers](/guides/js-waku/store-retrieve-messages):
+
+```js
+const encoder = createEncoder({
+	contentTopic: contentTopic, // message content topic
+	ephemeral: true, // allows messages to be stored or not
+});
+```
+
+:::info
+In this example, users send and receive messages on a shared content topic. However, real applications may have users broadcasting messages while others listen or only have 1:1 exchanges. Waku supports all these use cases.
+:::
 
 ## Create a Message Structure
 
@@ -50,7 +89,7 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 ```
 
 :::info
-Check out the [Protobuf installation](/guides/js-waku/quick-start#create-a-message-structure) guide for adding the `protobufjs` package to your project.
+Check out the [Protobuf installation](/guides/js-waku/#message-structure) guide for adding the `protobufjs` package to your project.
 :::
 
 ## Send Messages Using Light Push
@@ -76,7 +115,7 @@ await node.lightPush.send(encoder, {
 
 ## Receive Messages Using Filter
 
-To receive messages using the `Filter` protocol, create a callback function to process the messages and use the `filter.subscribe()` function:
+To receive messages using the `Filter` protocol, create a callback function for message processing, then use the `filter.subscribe()` function to subscribe to a `content topic`:
 
 ```js
 // Create the callback function
