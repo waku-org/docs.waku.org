@@ -71,7 +71,6 @@ const sidebars = {
 				id: "guides/js-waku/index",
 			},
 			items: [
-				"guides/js-waku/quick-start",
 				"guides/js-waku/light-send-receive",
 				"guides/js-waku/store-retrieve-messages",
 				"guides/js-waku/use-waku-react",

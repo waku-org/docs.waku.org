@@ -2,7 +2,7 @@
 title: "Build React DApps Using @waku/react"
 ---
 
-The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `js-waku` into React applications effortlessly. This guide provides detailed steps for using `@waku/react` in your project.
+The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `@waku/sdk` into React applications effortlessly. This guide provides detailed steps for using `@waku/react` in your project.
 
 ## Install the Dependencies
 
@@ -36,14 +36,14 @@ Next, install the `@waku/react` package using your preferred package manager:
 <TabItem value="npm" label="npm">
 
 ```shell
-npm install @waku/react
+npm install @waku/react @waku/sdk
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @waku/react
+yarn add @waku/react @waku/sdk
 ```
 
 </TabItem>
@@ -120,9 +120,6 @@ function App() {
 	const contentTopic = "/waku-react-guide/1/message/utf8";
 	const encoder = createEncoder({ contentTopic });
 
-	// Wait for the node to finish loading before sending messages
-	// (isLoading === false)
-
 	// Bind push method to a node and encoder
 	const { push } = useLightPush({ node, encoder });
 
@@ -134,13 +131,13 @@ function App() {
 		const payload = utf8ToBytes(text);
 		await push({ payload });
 	};
-	sendMessage("Hello, World!");
+
+	// Wait for the node to finish loading before sending messages
+	if (!isLoading) {
+		sendMessage("Hello, World!");
+	}
 }
 ```
-
-:::info
-Wait for the node to finish loading before sending messages (`isLoading` === `false`).
-:::
 
 ## Receive Messages Using Filter
 
@@ -174,10 +171,11 @@ function App() {
 	// "isLoading" indicates whether the node is still subscribing to Filter
 
 	// Wait for the messages to finish loading before processing them
-	// (isLoading === false)
-	messages.forEach((message) => {
-    	console.log(bytesToUtf8(message.payload));
-	});
+	if (!isLoading) {
+		messages.forEach((message) => {
+			console.log(bytesToUtf8(message.payload));
+		});
+	}
 }
 ```
 
@@ -217,10 +215,11 @@ function App() {
 	// "isLoading" indicates whether the node is still retrieving messages
 
 	// Wait for the messages to finish retrieving before processing them
-	// (isLoading === false)
-	messages.forEach((message) => {
-    	console.log(bytesToUtf8(message.payload));
-	});
+	if (!isLoading) {
+		messages.forEach((message) => {
+			console.log(bytesToUtf8(message.payload));
+		});
+	}
 }
 ```
 
@@ -229,5 +228,5 @@ To explore the available query options, check out the [Store Query Options](/gui
 :::
 
 :::tip
-You have successfully integrated `js-waku` into a React application using the `@waku/react` package. Check out the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo.
+You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Check out the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo.
 :::

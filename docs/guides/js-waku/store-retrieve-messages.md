@@ -43,7 +43,7 @@ const decoder = createDecoder(contentTopic);
 
 ## Retrieve Messages
 
-`js-waku` provides the `queryOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to process each page sequentially.
+`@waku/sdk` provides the `queryOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to process each page sequentially.
 
 ### `queryOrderedCallback`
 
