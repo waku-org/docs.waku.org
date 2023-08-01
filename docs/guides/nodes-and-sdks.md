@@ -10,7 +10,7 @@ Ready to integrate Waku into your application for private, secure, censorship-fr
 
 ## Run a Waku Node
 
-The Waku Network is a decentralized, permissionless system where anyone can run nodes, use the network, and contribute to its support.
+The Waku Network is a decentralised, permissionless system where anyone can run nodes, use the network, and contribute to its support.
 
 | | Description | Documentation |
 | - | - | - |

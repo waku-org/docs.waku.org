@@ -12,10 +12,10 @@ import History from "@site/diagrams/_history.md";
 
 ### 2013
 
-The Ethereum White Paper was published, unveiling the holy trinity of Web3, comprising:
+The Ethereum White Paper was published, unveiling the holy trinity of web3, comprising:
 
 - Ethereum for consensus.
-- Swarm for decentralized storage.
+- Swarm for decentralised storage.
 - Whisper for peer-to-peer messaging.
 
 ### 2015-2018
@@ -24,7 +24,7 @@ The development of the Whisper protocol lagged behind the advancements made by t
 
 ### 2018
 
-Due to the lack of progress made on Whisper and growing concerns around scalability, [Vac](https://vac.dev/) was established to focus on researching and developing more scalable peer-to-peer messaging solutions.
+Owing to the lack of progress made on Whisper and growing concerns around scalability, [Vac](https://vac.dev/) was established to focus on researching and developing more scalable peer-to-peer messaging solutions.
 
 ### 2020
 
@@ -32,7 +32,7 @@ Due to the lack of progress made on Whisper and growing concerns around scalabil
 
 - Enhanced performance.
 - Better scalability.
-- Ability to work in resource-limited environments.
+- Capability to work in resource-limited environments.
 - And many more.
 
 ### 2021
@@ -41,4 +41,4 @@ Due to the lack of progress made on Whisper and growing concerns around scalabil
 
 ### Present Day
 
-Waku has continued to evolve and enhance itself, enabling privacy-focused and uncompromised Web3 communication at scale.
+Waku has continued to evolve and enhance itself, enabling privacy-focused and uncompromised web3 communication at scale.

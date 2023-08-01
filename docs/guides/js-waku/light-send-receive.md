@@ -2,7 +2,7 @@
 title: Send and Receive Messages Using Light Push and Filter
 ---
 
-This guide provides detailed steps to start using the `@waku/sdk` package by setting up a Light Node to send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter). Check out the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
+This guide provides detailed steps to start using the `@waku/sdk` package by setting up a Light Node to send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter). Have a look at the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
 
 ## Create a Light Node
 
@@ -89,7 +89,7 @@ const ChatMessage = new protobuf.Type("ChatMessage")
 ```
 
 :::info
-Check out the [Protobuf installation](/guides/js-waku/#message-structure) guide for adding the `protobufjs` package to your project.
+Have a look at the [Protobuf installation](/guides/js-waku/#message-structure) guide for adding the `protobufjs` package to your project.
 :::
 
 ## Send Messages Using Light Push
@@ -104,12 +104,12 @@ const protoMessage = ChatMessage.create({
     message: "Hello, World!",
 });
 
-// Serialize the message using Protobuf
-const serializedMessage = ChatMessage.encode(protoMessage).finish();
+// Serialise the message using Protobuf
+const serialisedMessage = ChatMessage.encode(protoMessage).finish();
 
 // Send the message using Light Push
 await node.lightPush.send(encoder, {
-    payload: serializedMessage,
+    payload: serialisedMessage,
 });
 ```
 
@@ -135,5 +135,5 @@ const unsubscribe = await node.filter.subscribe([decoder], callback);
 ```
 
 :::tip Congratulations!
-You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols. Check out the [light-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-js) and [light-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-chat) examples for working demos.
+You have successfully sent and received messages over the Waku Network using the `Light Push` and `Filter` protocols. Have a look at the [light-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-js) and [light-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/light-chat) examples for working demos.
 :::

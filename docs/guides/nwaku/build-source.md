@@ -2,7 +2,7 @@
 title: Build Nwaku from Source
 ---
 
-This guide provides detailed steps to build a `nwaku` node from the source code to access the latest development version or a specific commit or release of `nwaku`. For your convenience, [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
+This guide provides detailed steps to build a `nwaku` node from the source code to access the latest development version or a specific commit or release of `nwaku`. For your convenience, you may want to [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
 
 :::info
 - A minimum of 2GB of RAM is required to build `nwaku`.
@@ -36,7 +36,7 @@ sudo dnf install @development-tools git libpq-devel
 <TabItem value="arch" label="Arch Linux">
 
 ```bash
-# Using your favorite AUR helper
+# Using your favoured AUR helper
 sudo [AUR HELPER] -S base-devel git postgresql-libs
 ```
 
@@ -92,7 +92,7 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 ./build/wakunode2 --help
 ```
 
-To learn more about running nwaku, check out these guides:
+To learn more about running nwaku, have a look at these guides:
 
 - [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
 - [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)

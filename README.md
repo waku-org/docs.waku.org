@@ -72,11 +72,11 @@ presets: [
 
 This should suffice since Logos plugins will handle other configurations linked to the designated business unit. However, if you encounter any inaccuracies in the data provided by Logos Plugins, please visit the [Logos Docusaurus Plugins](https://github.com/acid-info/logos-docusaurus-plugins) page and submit an issue.
 
-## Customization
+## Customisation
 
-You can find the instructions on adding more documentation sections, localization, and versioning on the [Docusaurus](https://docusaurus.io/docs) website.
+You can find the instructions on adding more documentation sections, localisation, and versioning on the [Docusaurus](https://docusaurus.io/docs) website.
 
-> Note that theme customization is limited; for further instructions on customizing your theme, head over to [Logos Docusaurus Theme](https://github.com/acid-info/logos-docusaurus-plugins/tree/main/packages/logos-docusaurus-theme/).
+> Note that theme customisation is limited; for further instructions on customizing your theme, head over to [Logos Docusaurus Theme](https://github.com/acid-info/logos-docusaurus-plugins/tree/main/packages/logos-docusaurus-theme/).
 
 ## Troubleshooting
 

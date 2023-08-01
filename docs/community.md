@@ -2,7 +2,7 @@
 title: Join Our Community
 ---
 
-Welcome to the Waku Community! Whether you are interested in building with Waku, contributing to the network, expanding your knowledge, or staying up-to-date with our progress, we have something for everyone.
+Welcome to the Waku Community! Whether you are interested in building with Waku, contributing to the network, expanding your knowledge, or staying abreast of our progress, we have something for everyone.
 
 ## [Discord](https://discord.waku.org/)
 
@@ -10,7 +10,7 @@ Connect with like-minded individuals in the Waku ecosystem! Introduce yourself, 
 
 ## [Twitter](https://twitter.com/waku_org)
 
-Stay informed and updated with the latest news and insights from Waku. [Follow us on Twitter](https://twitter.com/waku_org) now for all the exciting updates!
+Stay informed and updated with the latest news and insights from Waku. [Follow us on Twitter](https://twitter.com/waku_org) now for all the thrilling updates!
 
 ## [Telegram](https://t.me/waku_org)
 

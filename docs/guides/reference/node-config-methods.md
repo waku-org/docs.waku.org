@@ -96,5 +96,5 @@ To see the default values of all [configuration options](/guides/reference/node-
 ```
 
 :::tip
-To explore the available node configuration options, check out the [Node Configuration Options](/guides/reference/node-config-options) guide.
+To explore the available node configuration options, have a look at the [Node Configuration Options](/guides/reference/node-config-options) guide.
 :::

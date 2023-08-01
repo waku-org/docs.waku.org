@@ -77,7 +77,7 @@ import "https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js";
 
 ## Getting Started
 
-Check out the quick start guide and comprehensive tutorials to learn how to build applications using `@waku/sdk`:
+Have a look at the quick start guide and comprehensive tutorials to learn how to build applications using `@waku/sdk`:
 
 | Guide | Description |
 | - | - |

@@ -10,9 +10,9 @@ title: Watch Our Presentations
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/dMxs5GcbgG4" title="Waku Workshop: Getting Started with Waku by Alvaro Revuelta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Hashing it Out: Decentralized Messaging
+## Hashing it Out: Decentralised Messaging
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/vmx_oOb2On0" title="Hashing it Out: Decentralized Messaging by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/vmx_oOb2On0" title="Hashing it Out: Decentralised Messaging by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Using ZKP for Better p2p Messaging with Waku
 
@@ -26,26 +26,26 @@ title: Watch Our Presentations
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/CW1DYJifdhs" title="Building Privacy-Protecting Infrastructure by Oskar Thorén" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Secureum TrustX - Waku: Enabling a New Dimension for dApps
+## Secureum TrustX - Waku: Enabling a New Dimension for DApps
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/GXU5Fd6gMVw?start=21700" title="Secureum TrustX - Waku: Enabling a New Dimension for dApps by Corey Petty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/GXU5Fd6gMVw?start=21700" title="Secureum TrustX - Waku: Enabling a New Dimension for DApps by Corey Petty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Waku: Enabling a New Dimension for dApps
+## Waku: Enabling a New Dimension for DApps
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/OdXtMD-hgdg" title="Waku: enabling a new dimension for dApps by Corey Petty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/OdXtMD-hgdg" title="Waku: enabling a new dimension for DApps by Corey Petty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## The Next Level of Decentralization Messaging in Web3
+## The Next Level of Decentralisation Messaging in Web3
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/1QjxqrLO8WA" title="The Next Level of Decentralization Messaging in Web3 by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/1QjxqrLO8WA" title="The Next Level of Decentralisation Messaging in Web3 by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Build with Waku &amp; DappConnect
 
 <iframe class="yt-video" src="https://www.youtube.com/embed/ooRyn4aXsrM" title="EthOnline Status Bounty - Build with Waku &amp; DappConnect by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## DappConnect: Enabling Decentralized Communications Using Waku
+## DappConnect: Enabling Decentralised Communications Using Waku
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/rQOp3qoDF0g" title="DappConnect: Enabling decentralized communications using Waku by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/rQOp3qoDF0g" title="DappConnect: Enabling decentralised communications using Waku by Franck Royer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## DappConnect: Decentralized Communication Using Waku
+## DappConnect: Decentralised Communication Using Waku
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/CBknF-6Z-Ds" title="DappConnect: Decentralized communication using Waku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/CBknF-6Z-Ds" title="DappConnect: Decentralised communication using Waku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -10,14 +10,14 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 ## [RLN Relay](https://rfc.vac.dev/spec/17/)
 
-`RLN Relay` protocol extends the `Relay` protocol by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam prevention. It enforces a rate limit on messages over time for all peers in the network, economically preventing spam, and imposes financial penalties and network removal for spammers. You can find more details in the [RLN Relay blog post](https://vac.dev/rln-relay).
+`RLN Relay` protocol extends the `Relay` protocol by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam-prevention. It enforces a rate limit on messages over time for all peers in the network, economically preventing spam, and imposes financial penalties and network removal for spammers. You can find more details in the [RLN Relay blog post](https://vac.dev/rln-relay).
 
 ## [Filter](https://rfc.vac.dev/spec/12/)
 
 `Filter` protocol allows light nodes to selectively subscribe to specific messages relayed by other peers using [content topics](/overview/concepts/content-topics). It is designed to be a lightweight alternative for accessing the `Relay` network, particularly tailored for devices with limited bandwidth.
 
 :::info
-`Filter` protocol helps optimize bandwidth usage, but it has fewer privacy guarantees as it must disclose the content topic to its peers to retrieve messages.
+`Filter` protocol helps optimise bandwidth usage, but it has fewer privacy guarantees as it must disclose the content topic to its peers to retrieve messages.
 :::
 
 ## [Store](https://rfc.vac.dev/spec/13/)
@@ -25,12 +25,12 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 `Store` protocol is responsible for storing messages relayed in the network, making it possible to query and retrieve them later. This functionality benefits offline peers by enabling them to retrieve missed messages upon reconnection.
 
 :::info
-Using `Relay` and `Filter` protocols is recommended when a node is online, as `Store` does not guarantee data availability. The `Store` protocol is suitable for retrieving messages when connecting to the network, like when a dApp starts.
+Using `Relay` and `Filter` protocols is recommended when a node is online, as `Store` does not guarantee data availability. The `Store` protocol is suitable for retrieving messages when connecting to the network, like when a DApp starts.
 :::
 
 ## [Light Push](https://rfc.vac.dev/spec/19/)
 
-`Light Push` is a [Request/Response](/overview/concepts/network-domains#requestresponse-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgment when sending messages, indicating that at least one peer has received them. Subsequently, the remote peer forwards these messages to the `Relay` network.
+`Light Push` is a [Request/Response](/overview/concepts/network-domains#requestresponse-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgement when sending messages, indicating that at least one peer has received them. Subsequently, the remote peer forwards these messages to the `Relay` network.
 
 :::info
 While the `Light Push` protocol acknowledges the receipt by the remote peer, it does not guarantee network-wide propagation.
