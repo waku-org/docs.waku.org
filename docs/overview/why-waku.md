@@ -20,5 +20,5 @@ Waku transforms how individuals communicate and manage data by offering a scalab
 | **Scalability** | Whisper does not scale very well, specifically when it comes to bandwidth usage on mobile devices. | Uses GossipSub and Content Topics. |
 | **Spam Resistance** | Proof of work requires too much battery and compute power making it a poor mechanism for heterogeneous nodes. | Uses innovative p2p economic spam protection mechanism RLN Relay. |
 | **Incentivisation Infrastructure** | There is no incentive to run a Whisper node. | Research in progress to design incentivisation for node operators. |
-| **Formal Specification/Documentation** | Lack of formal and unambiguous specification. | The specs and docs are open-source and licensed under CC0, making them freely available for anyone to read, modify and improve without restrictions. |
+| **Formal Specification/Documentation** | Lack of formal and unambiguous specification. | The specs and docs are open-source and licenced under CC0, making them freely available for anyone to read, modify and improve without restrictions. |
 | **Portability** | Runs over devp2p which limits where Whisper can run and how. | Waku is built using libp2p, making it easy to run Waku anywhere. |
