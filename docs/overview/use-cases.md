@@ -2,11 +2,11 @@
 title: Use Cases
 ---
 
-Waku is a decentralized communication network, facilitating secure and private person-to-person and machine-to-machine communication without a central authority. It supports various use cases, including but not limited to:
+Waku is a decentralised communication network, facilitating secure and private person-to-person and machine-to-machine communication without a central authority. It supports various use cases, including but not limited to:
 
 ### Chat Messengers
 
-Waku can be used as the communication layer when building a private, decentralized, and censorship-resistant messenger.
+Waku can be used as the communication layer when building a private, decentralised, and censorship resistant messenger.
 
 #### Demos
 
@@ -14,7 +14,7 @@ Waku can be used as the communication layer when building a private, decentraliz
 
 ### Polls
 
-With Waku, you can create, answer, and view censorship-resistant polls, promoting a democratic and transparent voting environment immune to manipulation and censorship.
+With Waku, you can create, answer, and view censorship resistant polls, promoting a democratic and transparent voting environment immune to manipulation and censorship.
 
 #### Demos
 
@@ -42,19 +42,19 @@ To save on gas fees, votes for proposals submitted on the blockchain can be exch
 
 ### Signature Exchange for Multi-Signature Wallets
 
-Waku can enable multiple owners of a given multi-signature wallet to exchange signatures in a decentralized, private, and censorship-resistant manner, allowing for the approval of transactions.
+Waku can enable multiple owners of a given multi-signature wallet to exchange signatures in a decentralised, private, and censorship resistant manner, allowing for the approval of transactions.
 
 ### Game Mechanics Communication
 
-Waku can be used as the communication layer for a peer-to-peer, decentralized game, eliminating the need for a centralized infrastructure for gameplay communications.
+Waku can be used as the communication layer for a peer-to-peer, decentralised game, eliminating the need for a centralised infrastructure for gameplay communications.
 
 #### Demos
 
 * [Super Card Game](https://github.com/fjij/ethonline-2021)
 
-### dApp to Wallet Communication
+### DApp to Wallet Communication
 
-dApp operators can use communication between a user's wallet and their dApp to notify users (e.g., governance token holders can be notified to vote on a proposal) or to request transaction signatures from the wallet.
+DApp operators can use communication between a user's wallet and their DApp to notify users (e.g., governance token holders can be notified to vote on a proposal) or to request transaction signatures from the wallet.
 
 #### Demos
 
@@ -65,7 +65,7 @@ dApp operators can use communication between a user's wallet and their dApp to n
 
 Waku can broadcast and aggregate Layer 2 transactions to enhance privacy, anonymity, and resilience. Aggregating transactions reduces network load and improves scalability, ensuring a more robust Layer 2 ecosystem.
 
-### Generalized Marketplaces
+### Generalised Marketplaces
 
 Waku can enable users to offer, bid, accept, and trade goods and services, making it possible to create ride-sharing or trading apps.
 
@@ -75,4 +75,4 @@ Waku can enable users to offer, bid, accept, and trade goods and services, makin
 
 ### Social Media Platforms
 
-While chat messengers are a type of social media that can be decentralized and made censorship-resistant through Waku, other forms of social media, such as news feeds, blog posts, and audio or video sharing, can also benefit from using Waku.
+While chat messengers are a type of social media that can be decentralised and made censorship resistant through Waku, other forms of social media, such as news feeds, blog posts, and audio or video sharing, can also benefit from using Waku.

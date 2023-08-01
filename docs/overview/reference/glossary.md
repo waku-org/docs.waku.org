@@ -16,7 +16,7 @@ A content topic is a string attached to [messages](#waku-message) to enable [pro
 
 ### [Dappnode](https://dappnode.com/)
 
-Dappnode is an open-source platform that simplifies the hosting and management of decentralized applications and blockchain nodes, including [Waku](#waku).
+Dappnode is an open-source platform that simplifies the hosting and management of decentralised applications and blockchain nodes, including [Waku](#waku).
 
 ### [Discv5](/overview/concepts/discv5)
 
@@ -24,7 +24,7 @@ Discv5 is a [peer discovery](#peer-discovery) mechanism using a Distributed Hash
 
 ### [DNS Discovery](/overview/concepts/dns-discovery)
 
-DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the retrieval of an [ENR](#enr) tree from the TXT field of a domain name, enabling the storage of [node](#node) connection details and promoting decentralization.
+DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the retrieval of an [ENR](#enr) tree from the TXT field of a domain name, enabling the storage of [node](#node) connection details and promoting decentralisation.
 
 ### [ENR](https://rfc.vac.dev/spec/31/)
 
@@ -36,11 +36,11 @@ Filter is a [protocol](#protocol) that enables [light nodes](#light-node) to sel
 
 ### [GossipSub](/overview/concepts/network-domains#gossip-domain)
 
-GossipSub is a [protocol](#protocol) for efficient and scalable information dissemination in decentralized networks commonly used in blockchain systems.
+GossipSub is a [protocol](#protocol) for efficient and scalable information dissemination in decentralised networks commonly used in blockchain systems.
 
 ### [Libp2p](https://libp2p.io/)
 
-Libp2p is a modular network stack and protocol suite that allows developers to build decentralized, peer-to-peer applications across various network protocols.
+Libp2p is a modular network stack and protocol suite that allows developers to build decentralised, peer-to-peer applications across various network protocols.
 
 ### Light Node
 
@@ -48,7 +48,7 @@ A light node is a [resource-limited](#resource-limited) device or client that le
 
 ### [Light Push](/overview/concepts/protocols#light-push)
 
-Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the [Relay](#relay) network and receive acknowledgments confirming that a [peer](#peer) has received them.
+Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the [Relay](#relay) network and receive acknowledgements confirming that a [peer](#peer) has received them.
 
 ### Mostly Offline
 
@@ -56,7 +56,7 @@ Mostly offline devices are clients who spend most of their time offline or disco
 
 ### Node
 
-A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku Network](#waku) to enable secure and private peer-to-peer Web3 communication.
+A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku Network](#waku) to enable secure and private peer-to-peer web3 communication.
 
 ### Node Key
 
@@ -100,7 +100,7 @@ Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that 
 
 ### [Relay](/overview/concepts/protocols#relay)
 
-Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship-resistant [message](#waku-message) sending and receiving among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku) to accommodate many nodes efficiently.
+Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship resistant [message](#waku-message) sending and receiving among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku) to accommodate many nodes efficiently.
 
 ### Resource-Limited
 
@@ -124,7 +124,7 @@ A transport is a network mechanism that establishes connections between [peers](
 
 ### Waku
 
-Waku is a family of private, secure, decentralized, and peer-to-peer Web3 communication [protocols](#protocol) designed to operate in [resource-limited](#resource-limited) environments and suitable for [node](#node) or desktop application use. Additionally, these protocols collectively form the Waku Network.
+Waku is a family of private, secure, decentralised, and peer-to-peer web3 communication [protocols](#protocol) designed to operate in [resource-limited](#resource-limited) environments and suitable for [node](#node) or desktop application use. Additionally, these protocols collectively form the Waku Network.
 
 ### [Waku Message](/overview/concepts/protocols#waku-message)
 

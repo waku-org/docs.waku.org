@@ -2,7 +2,7 @@
 title: Network Domains
 ---
 
-Waku is a unified and cohesive entity that offers a rich ecosystem with three distinct network interaction domains. These domains serve specialized purposes and contribute to the robust functionality of Waku, forming its foundation.
+Waku is a unified and cohesive entity that offers a rich ecosystem with three distinct network interaction domains. These domains serve specialised purposes and contribute to the robust functionality of Waku, forming its foundation.
 
 ## Discovery Domain
 
@@ -16,7 +16,7 @@ Waku employs gossiping through [Relay](/overview/concepts/protocols#relay) to di
 
 ## Request/Response Domain
 
-Waku provides a set of protocols to optimize its performance in resource-limited environments like low bandwidth or mostly offline scenarios for multiple purposes.
+Waku provides a set of protocols to optimise its performance in resource-limited environments like low bandwidth or mostly offline scenarios for multiple purposes.
 
 - [Store](/overview/concepts/protocols#store) enables the retrieval of historical messages.
 - [Filter](/overview/concepts/protocols#filter) efficiently retrieves a subset of messages to conserve bandwidth.

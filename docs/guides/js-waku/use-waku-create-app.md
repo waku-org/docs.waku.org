@@ -6,7 +6,7 @@ This guide provides detailed steps to bootstrap your next `@waku/sdk` project fr
 
 ## Usage
 
-Initialize a new `@waku/sdk` template using any of the following methods:
+Initialise a new `@waku/sdk` template using any of the following methods:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -30,7 +30,7 @@ yarn create @waku/app [PROJECT DIRECTORY]
 </TabItem>
 </Tabs>
 
-Next, select a template to initialize your app from:
+Next, select a template to initialise your app from:
 
 ![waku create app demo](/img/waku-create-app-demo.gif)
 

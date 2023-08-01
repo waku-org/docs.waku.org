@@ -224,9 +224,9 @@ function App() {
 ```
 
 :::info
-To explore the available query options, check out the [Store Query Options](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
+To explore the available query options, have a look at the [Store Query Options](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
 :::
 
 :::tip
-You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Check out the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo.
+You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Have a look at the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo.
 :::

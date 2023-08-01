@@ -84,7 +84,7 @@ const storeQuery = node.store.queryGenerator([decoder]);
 
 // Process the messages
 for await (const messagesPromises of storeQuery) {
-	// Fulfill the messages promises
+	// Fulfil the messages promises
 	const messages = await Promise.all(messagesPromises
 		.map(async (p) => {
 			const msg = await p;
@@ -193,9 +193,9 @@ const storeQuery = node.store.queryGenerator([decoder, options]);
 ```
 
 :::info
-The `timeFilter` option significantly reduces message retrieval performance. To optimize it, consider resuming message retrieval using a [cursor](#cursor) that starts from the last seen message.
+The `timeFilter` option significantly reduces message retrieval performance. To optimise it, consider resuming message retrieval using a [cursor](#cursor) that starts from the last seen message.
 :::
 
 :::tip Congratulations!
-You have successfully retrieved and filtered historical messages on a Light Node using the `Store` protocol. Check out the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.
+You have successfully retrieved and filtered historical messages on a Light Node using the `Store` protocol. Have a look at the [store-js](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-js) and [store-reactjs-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/store-reactjs-chat) examples for working demos.
 :::

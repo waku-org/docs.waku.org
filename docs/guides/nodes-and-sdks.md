@@ -10,7 +10,7 @@ Ready to integrate Waku into your application for private, secure, censorship-fr
 
 ## Run a Waku Node
 
-The Waku Network is a decentralized, permissionless system where anyone can run nodes, use the network, and contribute to its support.
+The Waku Network is a decentralised, permissionless system where anyone can run nodes, use the network, and contribute to its support.
 
 | | Description | Documentation |
 | - | - | - |
@@ -43,6 +43,6 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | | Description | Documentation |
 | - | - | - |
 | JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | COMING SOON |
-| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `@waku/sdk` | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) |
+| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `@waku/sdk` | COMING SOON |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `@waku/sdk` project from various example templates | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) |
 | [nwaku-compose](https://github.com/alrevuelta/nwaku-compose) | Pre-configured Docker Compose setup for running and monitoring a `nwaku` node using Prometheus and Grafana | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |

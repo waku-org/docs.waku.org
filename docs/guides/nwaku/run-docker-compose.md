@@ -21,7 +21,7 @@ cd nwaku-compose
 
 ## Configure the Setup
 
-Modify the `docker-compose.yml` file to customize your node's configuration, including the [Docker image](https://hub.docker.com/r/statusteam/nim-waku/tags) and [nwaku arguments](/guides/reference/node-config-options).
+Modify the `docker-compose.yml` file to customise your node's configuration, including the [Docker image](https://hub.docker.com/r/statusteam/nim-waku/tags) and [nwaku arguments](/guides/reference/node-config-options).
 
 ## Run Docker Compose
 
