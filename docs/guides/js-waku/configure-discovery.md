@@ -5,7 +5,7 @@ title: Bootstrap Nodes and Discover Peers
 This guide provides detailed steps to bootstrap your your node using [Static Peers](/overview/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/overview/concepts/dns-discovery).
 
 :::tip
-Until [node incentivisation](/overview/reference/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peer](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peer) configuration to connect to both the Waku Network and your node.
+Until [node incentivisation](/overview/reference/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
 ## Default Bootstrap Method
@@ -148,9 +148,9 @@ const node = await createLightNode({
 });
 ```
 
-## Configure DNS Discovery and Static Peer
+## Configure DNS Discovery and Static Peers
 
-You can also bootstrap your node using `DNS Discovery` and `static peers` simultaneously:
+You can also bootstrap your node using [DNS Discovery](/overview/concepts/dns-discovery) and [Static Peers](/overview/concepts/static-peers) simultaneously:
 
 ```js
 import { createLightNode } from "@waku/sdk";
@@ -185,5 +185,5 @@ const node = await createLightNode({
 ```
 
 :::info
-If you do not set up a bootstrap node or discovery mechanism, the node will not connect to any remote peer.
+If you do not set up a bootstrap node or discovery mechanism, your node will not connect to any remote peer.
 :::
