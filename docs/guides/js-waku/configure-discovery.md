@@ -4,8 +4,8 @@ title: Bootstrap Nodes and Discover Peers
 
 This guide provides detailed steps to bootstrap your your node using [Static Peers](/overview/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/overview/concepts/dns-discovery).
 
-:::info
-If you do not set up a bootstrap node or discovery mechanism, the node will not connect to any remote peer.
+:::tip
+Until node incentivisation is in place, you should operate extra nodes alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peer] configuration to connect to both the Waku Network and your node.
 :::
 
 ## Default Bootstrap Method
@@ -108,7 +108,7 @@ import { createLightNode } from "@waku/sdk";
 import { wakuDnsDiscovery } from "@waku/dns-discovery";
 
 // Define DNS node list
-const enrTree = "[DNS NODE LIST]";
+const enrTree = "enrtree://[PUBLIC KEY]@[DOMAIN NAME]";
 
 // Define node requirements
 const NODE_REQUIREMENTS = {
@@ -148,6 +148,8 @@ const node = await createLightNode({
 });
 ```
 
+## Configure DNS Discovery and Static Peer
+
 You can also bootstrap your node using `DNS Discovery` and `static peers` simultaneously:
 
 ```js
@@ -181,3 +183,7 @@ const node = await createLightNode({
 	},
 });
 ```
+
+:::info
+If you do not set up a bootstrap node or discovery mechanism, the node will not connect to any remote peer.
+:::

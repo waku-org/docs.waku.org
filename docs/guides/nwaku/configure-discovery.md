@@ -37,7 +37,7 @@ To enable [DNS Discovery](/overview/concepts/dns-discovery) in a `nwaku` node, u
 ```bash
 ./build/wakunode2 \
   --dns-discovery=true \
-  --dns-discovery-url=[DNS NODE LIST] \
+  --dns-discovery-url=enrtree://[PUBLIC KEY]@[DOMAIN NAME] \
   --dns-discovery-name-server=[DNS NAME SERVER IP]
 ```
 
