@@ -13,7 +13,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-<Tabs>
+<Tabs groupId="package-manager">
 <TabItem value="npm" label="npm">
 
 ```shell
@@ -46,7 +46,7 @@ We recommend creating a message structure for your application using [Protocol B
 
 To get started, install the `protobufjs` package using your preferred package manager:
 
-<Tabs>
+<Tabs groupId="package-manager">
 <TabItem value="npm" label="npm">
 
 ```shell
@@ -82,8 +82,9 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 | Guide | Description |
 | - | - |
 | [Send and Receive Messages Using Light Push and Filter](/guides/js-waku/light-send-receive) | Learn how to send and receive messages on light nodes using the [Light Push](/overview/concepts/protocols#light-push) and [Filter](/overview/concepts/protocols#filter) protocols |
-| [Retrieve Messages Using Store](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store](/overview/concepts/protocols#store) protocol |
+| [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store protocol](/overview/concepts/protocols#store) |
 | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `@waku/sdk` project from various example templates |
+| [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) | Learn how to bootstrap your node using [Static Peers](/overview/concepts/static-peers) and discover peers using [DNS Discovery](/overview/concepts/dns-discovery) |
 
 <!-- | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `@waku/sdk` into a React application | -->
 

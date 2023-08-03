@@ -20,7 +20,7 @@ await node.start();
 ```
 
 :::info
-When the `defaultBootstrap` flag is set to `true`, your node will be bootstrapped using [DNS Discovery](/overview/concepts/dns-discovery). The node does not connect to any remote peer or bootstrap node if omitted.
+When the `defaultBootstrap` option is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
 ## Connect to Remote Peers

@@ -10,7 +10,7 @@ You can configure a `nwaku` node to use multiple peer discovery mechanisms simul
 
 ## Configure Static Peers
 
-You can provide static peers to a `nwaku` node during startup using the `staticnode` configuration option. To connect to multiple peers on startup, repeat the `staticnode` option:
+You can provide [static peers](/overview/concepts/static-peers) to a `nwaku` node during startup using the `staticnode` configuration option. To connect to multiple peers on startup, repeat the `staticnode` option:
 
 ```bash
 ./build/wakunode2 \
@@ -37,7 +37,7 @@ To enable [DNS Discovery](/overview/concepts/dns-discovery) in a `nwaku` node, u
 ```bash
 ./build/wakunode2 \
   --dns-discovery=true \
-  --dns-discovery-url=[DNS NODE LIST] \
+  --dns-discovery-url=enrtree://[PUBLIC KEY]@[DOMAIN NAME] \
   --dns-discovery-name-server=[DNS NAME SERVER IP]
 ```
 
