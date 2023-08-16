@@ -87,6 +87,10 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 | [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) | Learn how to bootstrap your node using [Static Peers](/overview/concepts/static-peers) and discover peers using [DNS Discovery](/overview/concepts/dns-discovery) |
 | [How to Debug Your Waku DApp and WebSocket](/guides/js-waku/debug-waku-dapp) | Learn how to troubleshoot your Waku DApp using debug logs and check WebSocket connections in `nwaku` |
 
+:::tip
+Until [node incentivisation](/overview/reference/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
+:::
+
 <!-- | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `@waku/sdk` into a React application | -->
 
 ## Get Help and Report Issues

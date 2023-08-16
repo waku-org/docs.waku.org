@@ -5,7 +5,7 @@ title: Bootstrap Nodes and Discover Peers
 This guide provides detailed steps to bootstrap your your node using [Static Peers](/overview/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/overview/concepts/dns-discovery).
 
 :::tip
-Until [node incentivisation](/overview/reference/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
+Until [node incentivisation](/overview/reference/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
 ## Default Bootstrap Method
@@ -61,13 +61,13 @@ const node = await createLightNode({
 });
 ```
 
-For example, consider a node that connects to two static peers on the same local host (IP: `0.0.0.0`) using TCP ports `60002` and `60003`:
+For example, consider a node that connects to two static peers on the same local host (IP: `0.0.0.0`) using TCP ports `60002` and `60003` with WebSocket enabled:
 
 ```js
 // Define the list of static peers to bootstrap
 const peers = [
-	"/ip4/0.0.0.0/tcp/60002/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
-	"/ip4/0.0.0.0/tcp/60003/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
+	"/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
+	"/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
 ];
 
 // Bootstrap node using the static peers
@@ -79,6 +79,10 @@ const node = await createLightNode({
 	},
 });
 ```
+
+:::tip
+For local development using a `nwaku` node, use a `ws` address instead of `wss`. Remember that this setup is functional only when your web server is running locally.
+:::
 
 ## Configure DNS Discovery
 
@@ -159,8 +163,8 @@ import { enrTree, wakuDnsDiscovery } from "@waku/dns-discovery";
 
 // Define the list of static peers to bootstrap
 const peers = [
-	"/ip4/0.0.0.0/tcp/60002/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
-	"/ip4/0.0.0.0/tcp/60003/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
+	"/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
+	"/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
 ];
 
 // Define node requirements
