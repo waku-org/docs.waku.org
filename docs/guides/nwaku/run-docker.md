@@ -12,12 +12,6 @@ Ensure [Docker](https://www.docker.com/) is installed on your system using the a
 
 The Nwaku Docker images are available on the Docker Hub public registry under the [statusteam/nim-waku](https://hub.docker.com/r/statusteam/nim-waku) repository. Please visit [statusteam/nim-waku/tags](https://hub.docker.com/r/statusteam/nim-waku/tags) for images of specific releases.
 
-Pull the latest docker image:
-
-```bash
-docker pull statusteam/nim-waku
-```
-
 You can also build the Docker image locally:
 
 ```bash
@@ -44,7 +38,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 Run `nwaku` using the most typical configuration:
 
 ```bash
-docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku \
+docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku:v0.19.0 \
   --dns-discovery=true \
   --dns-discovery-url=enrtree://AOGECG2SPND25EEFMAJ5WF3KSGJNSGV356DSTL2YVLLZWIV6SAYBM@prod.waku.nodes.status.im \
   --discv5-discovery=true \
