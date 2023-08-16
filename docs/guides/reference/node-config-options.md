@@ -66,7 +66,9 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-bandwidth-threshold` | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen |
 | `staticnode` |  | Peer multiaddr to directly connect with. Argument may be repeated |
 | `keep-alive` | `false` | Enable keep-alive for idle connections: true\|false |
-| `topic` | `["/waku/2/default-waku/proto"]` | Default topic to subscribe to. Argument may be repeated |
+| `topic` | `["/waku/2/default-waku/proto"]` | Default topic to subscribe to. Argument may be repeated. Deprecated! Please use `pubsub-topic` and/or `content-topic` instead |
+| `pubsub-topic` |  | Default pubsub topic to subscribe to. Argument may be repeated |
+| `content-topic` |  | Default content topic to subscribe to. Argument may be repeated |
 
 ## Store and Message Store Config
 
