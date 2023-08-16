@@ -85,6 +85,7 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 | [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store protocol](/overview/concepts/protocols#store) |
 | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `@waku/sdk` project from various example templates |
 | [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) | Learn how to bootstrap your node using [Static Peers](/overview/concepts/static-peers) and discover peers using [DNS Discovery](/overview/concepts/dns-discovery) |
+| [How to Debug Your Waku DApp and WebSocket](/guides/js-waku/debug-waku-dapp) | Learn how to troubleshoot your Waku DApp using debug logs and check WebSocket connections in `nwaku` |
 
 <!-- | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `@waku/sdk` into a React application | -->
 
