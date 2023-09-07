@@ -16,19 +16,17 @@ While the `@waku/sdk` package is primarily designed for browser environments, yo
 
 ### Codebase Complexity
 
-Balancing browser and NodeJS compatibility while maintaining simplicity adds complexity. A potential fix is making a NodeJS package that wraps `@waku/sdk` for smoother NodeJS development.
+`@waku/sdk` aims to provide optimal default for the browser, striking a balance between browser and NodeJS compatibility while ensuring simplicity will add complexity.
 
-### Browser-Specific Logic
+### Browser-Specific Protocols
 
-Certain features in `@waku/sdk` are tailored for browsers and might not translate seamlessly to NodeJS. For example, [Relay protocol](/overview/concepts/protocols#relay) in browsers requires unique [transport methods](/overview/concepts/transports) such as `WebTransport` or `WebRTC`, which might not align with NodeJS networking capabilities.
-
-### Peer Management
+Certain features in `@waku/sdk` are tailored for browsers and might not translate seamlessly to NodeJS. For example, only `WebSocket` is supported in the browser, whereas a NodeJS application can benefit from using [transport methods](/overview/concepts/transports) like `TCP`.
 
 `@waku/sdk` default peer management caters to the browser's ephemeral nature, which is different for NodeJS. This is why [DNS Discovery](/overview/concepts/dns-discovery) and [Peer Exchange](/overview/concepts/peer-exchange) are the default discovery mechanisms for the browser but not for NodeJS and desktop applications.
 
 ## Recommendations
 
-Considering these limitations, consider your use case before opting for `@waku/sdk` in NodeJS. For a more optimised solution, we recommend [running nwaku in a Docker container](/guides/nwaku/run-docker) and consuming its [JSON RPC API](https://rfc.vac.dev/spec/16/).
+Before using `@waku/sdk` in a NodeJS environment, take into account these limitations. For a more optimised solution, we recommend [running nwaku in a Docker container](/guides/nwaku/run-docker) and consuming its [JSON RPC API](https://rfc.vac.dev/spec/16/).
 
 ## Future Developments
 

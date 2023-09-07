@@ -32,8 +32,9 @@ export DEBUG=*
 
 To view debug logs in your browser's console, modify the local storage and add the `debug` key. Here are guides for various modern browsers:
 
-- [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/local_storage_session_storage/index.html)
 - [Google Chrome](https://developer.chrome.com/docs/devtools/storage/localstorage/)
+- [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/local_storage_session_storage/index.html)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 | KEY | VALUE | DESCRIPTION |
 | - | - | - |
@@ -47,13 +48,9 @@ To view debug logs in your browser's console, modify the local storage and add t
 
 It's important to note that browsers impose certain limitations on WebSocket usage:
 
-- **Secure Context Requirement**: Insecure subroutines are prohibited in secure contexts. This means that on an `https://` webpage, only `wss` connections are permitted, while `ws` connections are not allowed.
+- **Secure Context Requirement**: Insecure subroutines are prohibited in secure contexts. On an `https://` webpage, only `wss` connections are permitted, while `ws` connections are not allowed. This restriction does not apply if the webpage is served locally, like on `localhost` or `127.0.0.1`.
 - **Certificate Validation**: Certificate validation rules are consistent for `https` and `wss` connections. Certificates must not be expired, issued by a recognized Certificate Authority (CA), and match the domain name, among other criteria.
 - **User Feedback on Errors**: Web browsers do not display errors related to subroutines to the user. If a WebSocket connection encounters an issue, users won't be alerted directly; you'll need to check the browser's console for error details.
-
-:::info
-The mentioned restrictions are not applicable if the webpage is served locally, like on `localhost` or `127.0.0.1`.
-:::
 
 If you encounter difficulties when connecting to a remote node using `wss`, follow these steps:
 

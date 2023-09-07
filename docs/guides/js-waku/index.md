@@ -43,6 +43,7 @@ We recommend creating a message structure for your application using [Protocol B
 1. **Consistency:** Ensures uniform message format for easy parsing and processing.
 2. **Interoperability:** Facilitates effective communication between different parts of your application.
 3. **Compatibility:** Allows smooth communication between older and newer app versions.
+4. **Payload Size:** Minimizes payload overhead, especially for byte arrays, unlike JSON which adds significant overhead.
 
 To get started, install the `protobufjs` package using your preferred package manager:
 
