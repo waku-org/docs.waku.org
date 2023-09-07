@@ -43,11 +43,11 @@ const decoder = createDecoder(contentTopic);
 
 ## Retrieve Messages
 
-`@waku/sdk` provides the `queryOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to process each page sequentially.
+`@waku/sdk` provides the `queryWithOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to process each page sequentially.
 
-### `queryOrderedCallback`
+### `queryWithOrderedCallback`
 
-The `store.queryOrderedCallback()` function provides a straightforward method for querying `Store` nodes and processing messages in chronological order through a callback function. It accepts these parameters:
+The `store.queryWithOrderedCallback()` function provides a straightforward method for querying `Store` nodes and processing messages in chronological order through a callback function. It accepts these parameters:
 
 - `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/spec/26/) methods.
 - `callback`: The callback function for processing the retrieved messages.
@@ -61,14 +61,14 @@ const callback = (wakuMessage) => {
 };
 
 // Query the Store peer
-await node.store.queryOrderedCallback(
+await node.store.queryWithOrderedCallback(
 	[decoder],
 	callback,
 );
 ```
 
 :::info
-The `queryOrderedCallback()` function always returns the most recent messages in a page first.
+The `queryWithOrderedCallback()` function always returns the most recent messages in a page first.
 :::
 
 ### `queryGenerator`
@@ -122,7 +122,7 @@ const queryOptions = {
 };
 
 // Query the Store peer with options
-await node.store.queryOrderedCallback([decoder], callback, options);
+await node.store.queryWithOrderedCallback([decoder], callback, options);
 const storeQuery = node.store.queryGenerator([decoder, options]);
 ```
 
@@ -144,7 +144,7 @@ const callback = (wakuMessage) => {
 
 // Retrieve the first page of messages
 // This retrieves all the messages if "return true" is not present
-await node.store.queryOrderedCallback(
+await node.store.queryWithOrderedCallback(
 	[decoder],
 	callback,
 );
@@ -155,7 +155,7 @@ const cursor = await waku.createCursor(lastMessage);
 
 // Retrieve the next page of messages
 // The message at the cursor index is excluded from the result
-await node.store.queryOrderedCallback(
+await node.store.queryWithOrderedCallback(
 	[decoder],
 	callback,
 	{
@@ -188,7 +188,7 @@ const queryOptions = {
 };
 
 // Query the Store peer with options
-await node.store.queryOrderedCallback([decoder], callback, options);
+await node.store.queryWithOrderedCallback([decoder], callback, options);
 const storeQuery = node.store.queryGenerator([decoder, options]);
 ```
 
