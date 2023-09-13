@@ -58,6 +58,8 @@
     "keyturn",
     "websocat",
     "nwakunode",
+    "tlsv",
+    "rustup",
   ],
   "flagWords": [],
   "ignorePaths": [
