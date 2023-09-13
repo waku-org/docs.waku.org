@@ -11,7 +11,7 @@ This guide provides detailed steps to build a `nwaku` node from the source code 
 
 ## Prerequisites
 
-To build `nwaku`, you need the standard developer tools, including a C compiler, GNU Make, Bash, Git, and PostgreSQL client library.
+To build `nwaku`, you need the standard developer tools, including a C compiler, GNU Make, Bash, Git, Rustup and PostgreSQL client library.
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import TabItem from '@theme/TabItem';
 
 ```bash
 sudo apt-get install build-essential git libpq5
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 </TabItem>
@@ -30,6 +31,7 @@ sudo apt-get install build-essential git libpq5
 
 ```bash
 sudo dnf install @development-tools git libpq-devel
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 </TabItem>
@@ -38,13 +40,14 @@ sudo dnf install @development-tools git libpq-devel
 ```bash
 # Using your favoured AUR helper
 sudo [AUR HELPER] -S base-devel git postgresql-libs
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 </TabItem>
 <TabItem value="mac" label="MacOS (Homebrew)">
 
 ```bash
-brew install cmake git postgresql@15
+brew install cmake git postgresql@15 rustup-init
 # Create a symbolic link to libpq.5.dylib in /usr/local/lib/
 sudo mkdir -p /usr/local/lib/
 sudo ln -s /opt/homebrew/opt/postgresql@15/lib/libpq.5.dylib /usr/local/lib/libpq.dylib
