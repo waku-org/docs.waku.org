@@ -60,6 +60,7 @@
     "nwakunode",
     "tlsv",
     "rustup",
+    "storenode",
   ],
   "flagWords": [],
   "ignorePaths": [
