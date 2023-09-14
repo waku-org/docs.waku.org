@@ -40,3 +40,7 @@ Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring?orgId=1> to view your 
 :::tip
 To access Grafana from outside your machine, remove `127.0.0.1` and open the port. Consider setting up a password for Grafana to ensure security.
 :::
+
+:::tip Congratulations!
+You have successfully started a `nwaku` node using Docker Compose. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+:::

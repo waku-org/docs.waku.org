@@ -45,7 +45,7 @@ Once you have gotten the `nwaku` binary, run it using the [default configuration
 ```
 
 :::tip
-For more advanced configurations like enabling other protocols or maintaining a consistent `PeerID`, have a look at the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
+To learn how to customise the configuration of a `nwaku` node, have a look at the [Node Configuration Methods](/guides/reference/node-config-methods) and [Node Configuration Options](/guides/reference/node-config-options) guides.
 :::
 
 ## Bootstrap the Node
@@ -162,3 +162,7 @@ INF 2023-06-15 16:09:54.448+01:00 Discv5: discoverable ENR                   top
 # ENR the node addresses are encoded in
 enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7EU9iIBcPMVeKlCQBgmlkgnY0iXNlY3AyNTZrMaEDdBHK1Gx6y_zv5DVw5Qb3DtSOMmVHTZO1WSORrF2loL2DdWRwgiMohXdha3UyAw
 ```
+
+:::tip Congratulations!
+You have successfully started, configured, and connected a `nwaku` node to the Waku Network. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+:::

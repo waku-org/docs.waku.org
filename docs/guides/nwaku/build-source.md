@@ -11,7 +11,7 @@ This guide provides detailed steps to build a `nwaku` node from the source code 
 
 ## Prerequisites
 
-To build `nwaku`, you need the standard developer tools, including a C compiler, GNU Make, Bash, Git, Rustup and PostgreSQL client library.
+To build `nwaku`, you need the standard developer tools, including a C compiler, GNU Make, Bash, Git, Rustup, and PostgreSQL client library.
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -109,3 +109,7 @@ Run the tests for Waku:
 ```bash
 make test
 ```
+
+:::tip Congratulations!
+You have successfully built the `nwaku` binary from the source code. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+:::

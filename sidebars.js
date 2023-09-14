@@ -61,6 +61,7 @@ const sidebars = {
 				"guides/nwaku/run-docker",
 				"guides/nwaku/run-docker-compose",
 				"guides/nwaku/configure-discovery",
+				"guides/nwaku/configure-nwaku"
 			]
 		},
 		{
