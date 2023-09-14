@@ -83,7 +83,8 @@ Nodes generate [new random key pairs](/overview/reference/glossary#node-key) at 
 This option takes a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) private key (64-char hex string). On Linux, you can use the OpenSSL `rand` command for a pseudo-random 32-byte hex string:
 
 ```bash
-$ openssl rand -hex 32
+openssl rand -hex 32
+
 # 286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
 ```
 
@@ -106,3 +107,52 @@ You can use the output `286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456f
 ```bash
 ./build/wakunode2 --nodekey=286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
 ```
+
+## Configure WebSocket Transport
+
+WebSocket is the only [transport method](/overview/concepts/transports) browser nodes support using [@waku/sdk](/guides/js-waku/). To enable WebSocket in `nwaku` to serve browser peers, use the following configuration options:
+
+- `websocket-support`: Enables WebSocket (`ws`) on the node (disabled by default).
+- `websocket-port` (optional): WebSocket listening port. If you omit this option, it will default to `8000`.
+- `websocket-secure-support`: Enables Secure WebSocket (`wss`) on the node (disabled by default).
+- `websocket-secure-key-path`: Secure WebSocket key path.
+- `websocket-secure-cert-path`: Secure WebSocket Certificate path.
+
+```bash
+./build/wakunode2 \
+  --websocket-support=true \
+  --websocket-port=[WEBSOCKET LISTENING PORT] \
+  --websocket-secure-support=true \
+  --websocket-secure-key-path=[SECURE WEBSOCKET KEY PATH] \
+  --websocket-secure-cert-path=[SECURE WEBSOCKET CERTIFICATE PATH]
+```
+
+:::info
+Take a look at the [Find the Node Addresses](/guides/run-nwaku-node#find-the-node-addresses) guide for steps on locating your WebSocket listening address.
+:::
+
+For example, consider a `nwaku` node that enabled WebSocket for local development on port `8001`:
+
+```bash
+./build/wakunode2 \
+  --websocket-support=true \
+  --websocket-port=8001
+```
+
+Consider a `nwaku` node that enabled Secure WebSocket using its key and certificate (`privkey.pem` and `fullchain.pem`) on port `8002`:
+
+```bash
+./build/wakunode2 \
+  --websocket-secure-support=true \
+  --websocket-secure-key-path=privkey.pem \
+  --websocket-secure-cert-path=fullchain.pem \
+  --websocket-port=8002
+```
+
+:::tip
+You can use [Let's Encrypt](https://letsencrypt.org/) or [Certbot](https://certbot.eff.org/) to generate a valid certificate for your `nwaku` node:
+
+```bash
+sudo letsencrypt -d <your.domain.name>
+```
+:::

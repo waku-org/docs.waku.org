@@ -65,6 +65,10 @@
     "ecparam",
     "genkey",
     "outform",
+    "privkey",
+    "fullchain",
+    "certbot",
+    "letsencrypt",
   ],
   "flagWords": [],
   "ignorePaths": [
