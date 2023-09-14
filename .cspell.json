@@ -61,6 +61,10 @@
     "tlsv",
     "rustup",
     "storenode",
+    "nodekey",
+    "ecparam",
+    "genkey",
+    "outform",
   ],
   "flagWords": [],
   "ignorePaths": [

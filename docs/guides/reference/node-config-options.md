@@ -23,7 +23,7 @@ Here are the available node configuration options, along with their default valu
 | Name | Default Value | Description |
 | - | - | - |
 | `agent-string` | `nwaku` | Node agent string which is used as identifier in network |
-| `nodekey` |  | P2P node private key as 64 char hex string |
+| `nodekey` |  | P2P node private key as 64-char hex string |
 | `listen-address` | `defaultListenAddress()` | Listening address for LibP2P (and Discovery v5, if enabled) traffic |
 | `tcp-port` | `60000` | TCP listening port |
 | `ports-shift` | `0` | Add a shift to all port numbers |

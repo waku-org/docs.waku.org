@@ -21,10 +21,10 @@ You can set up an IPv4 DNS domain name that resolves to the public IPv4 address 
 ./build/wakunode2 --dns4-domain-name=[DOMAIN NAME]
 ```
 
-For example, consider the domain name `node.example.com`, which resolves to a `nwaku` node:
+For example, consider the domain name `nwakunode.com`, which resolves to a `nwaku` node:
 
 ```bash
-./build/wakunode2 --dns4-domain-name=node.example.com
+./build/wakunode2 --dns4-domain-name=nwakunode.com
 ```
 
 Nodes with a domain name and secure WebSocket configured will generate a discoverable ENR with `/wss` multiaddr and `/dns4` domain name, essential for verifying domain certificates when connecting securely.
@@ -70,4 +70,39 @@ For example, consider a `nwaku` node that does not persist messages but can quer
 
 ```bash
 ./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
+```
+
+## Generate and Configure a Node Key
+
+Nodes generate [new random key pairs](/overview/reference/glossary#node-key) at each boot, leading to different `multiaddrs`. To maintain consistency, you can use a pre-generated private key with the `nodekey` option:
+
+```bash
+./build/wakunode2 --nodekey=[NODE PRIVATE KEY]
+```
+
+This option takes a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) private key (64-char hex string). On Linux, you can use the OpenSSL `rand` command for a pseudo-random 32-byte hex string:
+
+```bash
+$ openssl rand -hex 32
+# 286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
+```
+
+On Linux, you can create a reusable key file using OpenSSL. To get the 32-byte private key in hex format, use the `ecparam` command and some standard utilities:
+
+```bash
+# Generate key file
+openssl ecparam -genkey -name secp256k1 -out my_private_key.pem
+
+# Extract 32-byte private key
+openssl ec -in my_private_key.pem -outform DER | tail -c +8 | head -c 32| xxd -p -c 32
+
+# read EC key
+# writing EC key
+# 286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
+```
+
+You can use the output `286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8` as a `Node Key` for `nwaku`:
+
+```bash
+./build/wakunode2 --nodekey=286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
 ```
