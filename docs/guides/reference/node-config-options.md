@@ -50,15 +50,10 @@ Here are the available node configuration options, along with their default valu
 | `relay-peer-exchange` | `false` | Enable gossipsub peer exchange in relay protocol: true\|false |
 | `rln-relay` | `false` | Enable spam protection through rln-relay: true\|false |
 | `rln-relay-cred-path` |  | The path for persisting rln-relay credential |
-| `rln-relay-membership-index` | `0` | The index of credentials to use |
-| `rln-relay-membership-group-index` | `0` | The index of credentials to use, within a specific rln membership set |
-| `rln-relay-pubsub-topic` | `/waku/2/default-waku/proto` | The pubsub topic for which rln-relay gets enabled |
-| `rln-relay-content-topic` | `/toy-chat/3/mingde/proto` | The content topic for which rln-relay gets enabled |
+| `rln-relay-membership-index` |  | The index of the onchain commitment to use |
 | `rln-relay-dynamic` | `false` | Enable  waku-rln-relay with on-chain dynamic group management: true\|false |
 | `rln-relay-id-key` |  | Rln relay identity secret key as a Hex string |
 | `rln-relay-id-commitment-key` |  | Rln relay identity commitment key as a Hex string |
-| `rln-relay-eth-account-address` |  | Account address for the Ethereum testnet Sepolia |
-| `rln-relay-eth-account-private-key` |  | Account private key for the Ethereum testnet Sepolia |
 | `rln-relay-eth-client-address` | `ws://localhost:8540/` | WebSocket address of an Ethereum testnet client e.g., ws://localhost:8540/ |
 | `rln-relay-eth-contract-address` |  | Address of membership contract on an Ethereum testnet |
 | `rln-relay-cred-password` |  | Password for encrypting RLN credentials |
@@ -80,7 +75,6 @@ Here are the available node configuration options, along with their default valu
 | `store-message-db-url` | `sqlite://store.sqlite3` | The database connection URL for persistent storage |
 | `store-message-db-vacuum` | `false` | Enable database vacuuming at start. Only supported by SQLite database engine |
 | `store-message-db-migration` | `true` | Enable database migration at start |
-| `store-resume-peer` |  | Peer multiaddress to resume the message store at boot |
 
 ## Filter Config
 
