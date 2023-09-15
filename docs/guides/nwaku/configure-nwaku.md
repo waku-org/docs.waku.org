@@ -35,9 +35,9 @@ This example describes configuring a domain name that resolves to your node's IP
 
 ## Configure Store Protocol and Message Store
 
-To enable `nwaku` to be a [store service node](/overview/concepts/protocols#store), use the following configuration options:
+To enable the [Store protocol](/overview/concepts/protocols#store) in `nwaku`, use the following configuration options:
 
-- `store`: Enables `Waku Store` protocol on the node (disabled by default).
+- `store`: Enables the `Store` protocol on the node (disabled by default).
 - `store-message-retention-policy`: Retention policy of the store node (how long messages will be persisted). Two different retention policies are supported:
 	- Time retention policy: `time:<duration-in-seconds>` (e.g., `time:14400`)
 	- Capacity retention policy: `capacity:<messages-count>` (e.g, `capacity:25000`)
@@ -60,7 +60,7 @@ For example, consider a `nwaku` node that is configured to be a `Store` protocol
   --store-message-db-url=sqlite://store.sqlite3
 ```
 
-You can configure `nwaku` as a `Waku Store` client using the `storenode` option. This allows the node to query peers for historical messages but not store any message itself.
+You can configure `nwaku` as a `Store client` using the `storenode` option. This allows the node to query peers for historical messages but not store any message itself.
 
 ```bash
 ./build/wakunode2 --storenode=[STORE PEER MULTIADDR]
@@ -195,4 +195,24 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
   --rest-admin=true \
   --rest-private=true \
   --rest-relay-cache-capacity=100
+```
+
+## Configure Light Push Protocol
+
+To enable the [Light Push protocol](/overview/concepts/protocols#light-push) in `nwaku`, use the `lightpush` configuration option:
+
+```bash
+./build/wakunode2 --lightpush=true
+```
+
+You can configure `nwaku` as a `Light Push client` using the `lightpushnode` option. This allows the node to request lightpush of published messages from peers.
+
+```bash
+./build/wakunode2 --lightpushnode=[LIGHT PUSH PEER MULTIADDR]
+```
+
+For example, consider a `nwaku` node that requests lightpush of published messages from peers:
+
+```bash
+./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```

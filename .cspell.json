@@ -69,6 +69,7 @@
     "fullchain",
     "certbot",
     "letsencrypt",
+    "lightpushnode",
   ],
   "flagWords": [],
   "ignorePaths": [
