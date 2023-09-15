@@ -128,10 +128,10 @@ WebSocket is the only [transport method](/overview/concepts/transports) browser 
 ```
 
 :::info
-Take a look at the [Find the Node Addresses](/guides/run-nwaku-node#find-the-node-addresses) guide for steps on locating your WebSocket listening address.
+Secure WebSocket (`wss`) is not required for local development, as the [secure context restriction](/guides/js-waku/debug-waku-dapp#checking-websocket-setup) does not apply when your website is served locally, like on `localhost` or `127.0.0.1`.
 :::
 
-For example, consider a `nwaku` node that enabled WebSocket for local development on port `8001`:
+For example, consider a `nwaku` node that enabled WebSocket for local testing on port `8001`:
 
 ```bash
 ./build/wakunode2 \
@@ -156,3 +156,43 @@ You can use [Let's Encrypt](https://letsencrypt.org/) or [Certbot](https://certb
 sudo letsencrypt -d <your.domain.name>
 ```
 :::
+
+## Configure REST API Server
+
+Nwaku provides a REST API to interact with the node and Waku Network. To enable the REST API, use the following configuration options:
+
+- `rest`: Enables the REST API server on the node (disabled by default).
+- `rest-address` (optional): Listening address of the REST API server. If you omit this option, it will default to `127.0.0.1`.
+- `rest-port` (optional): Listening port of the REST API server. If you omit this option, it will default to `8645`.
+- `rest-relay-cache-capacity`	(optional): Capacity of the Relay REST API message cache.	If you omit this option, it will default to `30`.
+- `rest-admin` (optional): Enables access to REST admin API (disabled by default).
+- `rest-private` (optional): Enables access to REST private API (disabled by default).
+
+```bash
+./build/wakunode2 \
+  --rest=true \
+  --rest-address=[REST SERVER LISTENING ADDRESS] \
+  --rest-port=[REST SERVER LISTENING PORT] \
+  --rest-relay-cache-capacity=[MESSAGE CACHE CAPACITY] \
+  --rest-admin=[true|false] \
+  --rest-private=[true|false]
+```
+
+For example, consider a `nwaku` node that enabled the REST API server on port `9000`:
+
+```bash
+./build/wakunode2 \
+  --rest=true \
+  --rest-port=9000 \
+  --rest-address=127.0.0.1
+```
+
+Consider a `nwaku` node that enabled the REST `admin` and `private` API with a message cache capacity of `100`:
+
+```bash
+./build/wakunode2 \
+  --rest=true \
+  --rest-admin=true \
+  --rest-private=true \
+  --rest-relay-cache-capacity=100
+```
