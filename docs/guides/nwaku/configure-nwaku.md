@@ -51,12 +51,12 @@ To enable the [Store protocol](/overview/concepts/protocols#store) in `nwaku`, u
   --store-message-db-url=[DATABASE CONNECTION URL]
 ```
 
-For example, consider a `nwaku` node that is configured to be a `Store` protocol and retain messages received in the last `15,000` seconds:
+For example, consider a `nwaku` node that is configured to be a `Store` protocol and retain messages received in the last `21600` seconds (6 hours):
 
 ```bash
 ./build/wakunode2 \
   --store=true \
-  --store-message-retention-policy=time:15000 \
+  --store-message-retention-policy=time:21600 \
   --store-message-db-url=sqlite://store.sqlite3
 ```
 
@@ -196,6 +196,34 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
   --rest-private=true \
   --rest-relay-cache-capacity=100
 ```
+
+## Configure Filter Protocol
+
+To enable the [Filter protocol](/overview/concepts/protocols#filter) in `nwaku`, use the `filter` configuration option:
+
+```bash
+./build/wakunode2 --filter=true
+```
+
+You can configure `nwaku` as a `Filter client` using the `filternode` and `filter-timeout` options. This allows the node to request content filtering of messages from peers.
+
+```bash
+./build/wakunode2 \
+  --filternode=[FILTER PEER MULTIADDR] \
+  --filter-timeout=[FILTER PEER TIMEOUT]
+```
+
+For example, consider a `nwaku` node that requests content filtering of messages from peers with a timeout of `21600` seconds (6 hours):
+
+```bash
+./build/wakunode2 \
+  --filternode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD \
+  --filter-timeout=21600
+```
+
+:::info
+If you omit the `filter-timeout` option, it will default to `14400` seconds (4 hours).
+:::
 
 ## Configure Light Push Protocol
 
