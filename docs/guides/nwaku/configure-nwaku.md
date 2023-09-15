@@ -27,7 +27,7 @@ For example, consider the domain name `nwakunode.com`, which resolves to a `nwak
 ./build/wakunode2 --dns4-domain-name=nwakunode.com
 ```
 
-Nodes with a domain name and secure WebSocket configured will generate a discoverable ENR with `/wss` multiaddr and `/dns4` domain name, essential for verifying domain certificates when connecting securely.
+Browser nodes can only connect to nodes with a domain name and secure WebSocket (`wss`) configured. These nodes will generate a discoverable ENR with `/wss` as the multiaddr and `/dns4` as the domain name. This configuration is essential for verifying domain certificates when establishing a secure connection.
 
 :::info
 This example describes configuring a domain name that resolves to your node's IP address and is unrelated to [DNS Discovery](/overview/concepts/dns-discovery).
@@ -35,14 +35,14 @@ This example describes configuring a domain name that resolves to your node's IP
 
 ## Configure Store Protocol and Message Store
 
-To enable the [Store protocol](/overview/concepts/protocols#store) in `nwaku`, use the following configuration options:
+To enable message caching and serve them to network peers, enable the [Store protocol](/overview/concepts/protocols#store) using the following configuration options:
 
-- `store`: Enables the `Store` protocol on the node (disabled by default).
+- `store`: Enables storing messages to serve them to peers (disabled by default).
 - `store-message-retention-policy`: Retention policy of the store node (how long messages will be persisted). Two different retention policies are supported:
 	- Time retention policy: `time:<duration-in-seconds>` (e.g., `time:14400`)
 	- Capacity retention policy: `capacity:<messages-count>` (e.g, `capacity:25000`)
-	- Set this option to an empty string to disable the retention policy.
-- `store-message-db-url`: Database connection URL for persisting messages in the [SQLAlchemy database URL format](https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls). Setting this option to an empty string will instruct the node to use the fallback in-memory message store.
+	- Set this option to an empty string to disable the retention policy. If you omit this option, it will default to `time:172800` (48 hours).
+- `store-message-db-url`: Database connection URL for persisting messages in the [SQLAlchemy database URL format](https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls). Setting this option to an empty string will instruct the node to use the fallback in-memory message store. If you omit this option, it will default to `sqlite://store.sqlite3`.
 
 ```bash
 ./build/wakunode2 \
@@ -127,11 +127,7 @@ WebSocket is the only [transport method](/overview/concepts/transports) browser 
   --websocket-secure-cert-path=[SECURE WEBSOCKET CERTIFICATE PATH]
 ```
 
-:::info
-Secure WebSocket (`wss`) is not required for local development, as the [secure context restriction](/guides/js-waku/debug-waku-dapp#checking-websocket-setup) does not apply when your website is served locally, like on `localhost` or `127.0.0.1`.
-:::
-
-For example, consider a `nwaku` node that enabled WebSocket for local testing on port `8001`:
+For example, consider a `nwaku` node that enabled WebSocket (unencrypted) for local testing on port `8001`:
 
 ```bash
 ./build/wakunode2 \
@@ -139,7 +135,7 @@ For example, consider a `nwaku` node that enabled WebSocket for local testing on
   --websocket-port=8001
 ```
 
-Consider a `nwaku` node that enabled Secure WebSocket using its key and certificate (`privkey.pem` and `fullchain.pem`) on port `8002`:
+Consider a `nwaku` node that enabled Secure WebSocket (encrypted) using its key and certificate (`privkey.pem` and `fullchain.pem`) on port `8002`:
 
 ```bash
 ./build/wakunode2 \
@@ -199,7 +195,7 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
 
 ## Configure Filter Protocol
 
-To enable the [Filter protocol](/overview/concepts/protocols#filter) in `nwaku`, use the `filter` configuration option:
+To enable `nwaku` to serve light clients, enable the [Filter protocol](/overview/concepts/protocols#filter) using the following configuration options:
 
 ```bash
 ./build/wakunode2 --filter=true
@@ -227,7 +223,7 @@ If you omit the `filter-timeout` option, it will default to `14400` seconds (4 h
 
 ## Configure Light Push Protocol
 
-To enable the [Light Push protocol](/overview/concepts/protocols#light-push) in `nwaku`, use the `lightpush` configuration option:
+To enable `nwaku` to serve light clients, enable the [Light Push protocol](/overview/concepts/protocols#light-push) using the following configuration options:
 
 ```bash
 ./build/wakunode2 --lightpush=true
