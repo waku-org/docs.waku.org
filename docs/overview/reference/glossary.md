@@ -60,7 +60,7 @@ A node is a device or client that implements Waku [protocols](#protocol) and lev
 
 ### Node Key
 
-A node key is a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (64 char hex string) private key for generating the [PeerID](#peer-id), [listening](#transport) addresses, and [discovery](#peer-discovery) addresses of a Waku node.
+A node key is a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (64-char hex string) private key for generating the [PeerID](#peer-id), [listening](#transport) addresses, and [discovery](#peer-discovery) addresses of a Waku node.
 
 ### Payload
 

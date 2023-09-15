@@ -66,7 +66,7 @@ The `ephemeral` option allows you to specify whether your messages should be per
 ```js
 const encoder = createEncoder({
 	contentTopic: contentTopic, // message content topic
-	ephemeral: true, // allows messages to be stored or not
+	ephemeral: true, // allows messages to be persisted or not
 });
 ```
 

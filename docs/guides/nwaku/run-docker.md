@@ -38,7 +38,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 Run `nwaku` using the most typical configuration:
 
 ```bash
-docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku:v0.19.0 \
+docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku:v0.20.0 \
   --dns-discovery=true \
   --dns-discovery-url=enrtree://AOGECG2SPND25EEFMAJ5WF3KSGJNSGV356DSTL2YVLLZWIV6SAYBM@prod.waku.nodes.status.im \
   --discv5-discovery=true \
@@ -53,4 +53,8 @@ dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 
 :::tip
 We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (listening and discovery ports, API servers).
+:::
+
+:::tip Congratulations!
+You have successfully built and started a `nwaku` node in a Docker container. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::
