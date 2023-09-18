@@ -42,7 +42,7 @@ The Website and its contents are made available under free and open source licen
 
 To the extent the Website provides any links to a third party website, then their terms and conditions, including privacy policies, govern your use of those third party websites. We have no control over such third party websites and will not be liable for your use of or activities on any third party websites accessed through the Website. If you access such third party websites through the Website, it is at your own risk and you are solely responsible for your activities on such third party websites.
 
-The Website may embed videos from Youtube, a service provided by Google LLC, using Youtube’s privacy-enhanced mode. When you interact with such videos, Youtube may place cookies on your personal device. The cookies do not directly identify individual users and YouTube will not store information to personalise your experience unless you are logged in to a Google account. We do not have any control over these cookies set by Youtube and it is recommended that you review YouTube’s embedding videos information page.
+The Website may embed videos from YouTube, a service provided by Google LLC, using YouTube’s privacy-enhanced mode. When you interact with such videos, YouTube may place cookies on your personal device. The cookies do not directly identify individual users and YouTube will not store information to personalise your experience unless you are logged in to a Google account. We do not have any control over these cookies set by YouTube and it is recommended that you review YouTube’s embedding videos information page.
 
 ### Limitation of liability
 
