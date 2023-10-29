@@ -38,10 +38,11 @@ This example describes configuring a domain name that resolves to your node's IP
 To enable message caching and serve them to network peers, enable the [Store protocol](/overview/concepts/protocols#store) using the following configuration options:
 
 - `store`: Enables storing messages to serve them to peers (disabled by default).
-- `store-message-retention-policy`: Retention policy of the store node (how long messages will be persisted). Two different retention policies are supported:
+- `store-message-retention-policy`: Retention policy of the store node (how long messages will be persisted). Three different retention policies are supported:
 	- Time retention policy: `time:<duration-in-seconds>` (e.g., `time:14400`)
 	- Capacity retention policy: `capacity:<messages-count>` (e.g, `capacity:25000`)
-	- Set this option to an empty string to disable the retention policy. If you omit this option, it will default to `time:172800` (48 hours).
+  - Size retention policy: `size:<storage-in-MB/GB>` (e.g, `size:512MB` or `size:10GB`)
+	- Set this option to `none` to disable the retention policy. If you omit this option, it will default to `time:172800` (48 hours).
 - `store-message-db-url`: Database connection URL for persisting messages in the [SQLAlchemy database URL format](https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls). Setting this option to an empty string will instruct the node to use the fallback in-memory message store. If you omit this option, it will default to `sqlite://store.sqlite3`.
 
 ```bash
