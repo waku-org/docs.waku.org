@@ -127,11 +127,17 @@ const callback = (wakuMessage) => {
     console.log(messageObj);
 };
 
-// Subscribe to content topics and display new messages
-const unsubscribe = await node.filter.subscribe([decoder], callback);
+// Create a filter subscription
+const subscription = await node.filter.createSubscription();
 
-// Use the unsubscribe() function to stop receiving messages
-// await unsubscribe();
+// Subscribe to content topics and process new messages
+await subscription.subscribe([decoder], callback);
+```
+
+You can use the `subscription.unsubscribe()` function to stop receiving messages from a content topic:
+
+```js
+await subscription.unsubscribe([contentTopic]);
 ```
 
 :::tip Congratulations!
