@@ -6,6 +6,10 @@ Nwaku is a lightweight and robust Nim client for running a Waku node, equipped w
 
 This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
+:::info
+We recommend running a `nwaku` node with at least 2GB of RAM, especially if you have `WSS` enabled. If running just a `Relay` node, 0.5GB of RAM is sufficient.
+:::
+
 ## Get the Node Binary
 
 To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for acquiring the node binary:

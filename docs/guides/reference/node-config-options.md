@@ -22,6 +22,7 @@ Here are the available node configuration options, along with their default valu
 
 | Name | Default Value | Description |
 | - | - | - |
+| `cluster-id` | `0` | Cluster id that the node is running in. Node in a different cluster id is disconnected |
 | `agent-string` | `nwaku` | Node agent string which is used as identifier in network |
 | `nodekey` |  | P2P node private key as 64-char hex string |
 | `listen-address` | `defaultListenAddress()` | Listening address for LibP2P (and Discovery v5, if enabled) traffic |
@@ -29,6 +30,7 @@ Here are the available node configuration options, along with their default valu
 | `ports-shift` | `0` | Add a shift to all port numbers |
 | `nat` | any | Specify method to use for determining public address. Must be one of: any, none, upnp, pmp, extip:<IP\> |
 | `ext-multiaddr` |  | External multiaddresses to advertise to the network. Argument may be repeated |
+| `ext-multiaddr-only` | `false` | Only announce external multiaddresses |
 | `max-connections` | `50` | Maximum allowed number of libp2p connections |
 | `max-relay-peers` |  | Maximum allowed number of relay peers |
 | `peer-store-capacity` |  | Maximum stored peers in the peerstore |
@@ -71,7 +73,7 @@ Here are the available node configuration options, along with their default valu
 | - | - | - |
 | `store` | `false` | Enable/disable waku store protocol |
 | `storenode` |  | Peer multiaddress to query for storage |
-| `store-message-retention-policy` | time:172800 | Message store retention policy. Time retention policy: 'time:<seconds\>'. Capacity retention policy: 'capacity:<count\>'. Set to 'none' to disable |
+| `store-message-retention-policy` | `time:172800` | Message store retention policy. Time retention policy: `time:<seconds>`. Capacity retention policy: `capacity:<count>`. Size retention policy: `size:<xMB/xGB>`. Set to `none` to disable |
 | `store-message-db-url` | `sqlite://store.sqlite3` | The database connection URL for persistent storage |
 | `store-message-db-vacuum` | `false` | Enable database vacuuming at start. Only supported by SQLite database engine |
 | `store-message-db-migration` | `true` | Enable database migration at start |
