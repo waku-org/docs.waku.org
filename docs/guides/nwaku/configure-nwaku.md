@@ -196,7 +196,7 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
 
 ## Configure Filter Protocol
 
-To enable `nwaku` to serve light clients, enable the [Filter protocol](/overview/concepts/protocols#filter) using the following configuration options:
+To enable `nwaku` to serve light clients, enable the [Filter protocol](/overview/concepts/protocols#filter) using `filter` option:
 
 ```bash
 ./build/wakunode2 --filter=true
@@ -224,7 +224,7 @@ If you omit the `filter-timeout` option, it will default to `14400` seconds (4 h
 
 ## Configure Light Push Protocol
 
-To enable `nwaku` to serve light clients, enable the [Light Push protocol](/overview/concepts/protocols#light-push) using the following configuration options:
+To enable `nwaku` to serve light clients, enable the [Light Push protocol](/overview/concepts/protocols#light-push) using the `lightpush` option:
 
 ```bash
 ./build/wakunode2 --lightpush=true
@@ -241,3 +241,17 @@ For example, consider a `nwaku` node that requests lightpush of published messag
 ```bash
 ./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```
+
+## Run a Node Behind a Reverse Proxy
+
+When using a reverse proxy server for SSL/TLS encryption, you only want to announce the proxy server's IP or domain. Nwaku provides the `ext-multiaddr-only` and `ext-multiaddr` options for specifying published multiaddr:
+
+```bash
+./build/wakunode2 \
+  --ext-multiaddr-only=true \
+  --ext-multiaddr=[MULTIADDR TO PUBLISH]
+```
+
+:::info
+The `ext-multiaddr-only` option takes precedence over the `nat` and `dns4-domain-name` options, using the values provided by the `ext-multiaddr` option instead.
+:::
