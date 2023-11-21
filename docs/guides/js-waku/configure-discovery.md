@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 ```
 
 <Tabs groupId="package-manager">
-<TabItem value="npm" label="npm">
+<TabItem value="npm" label="NPM">
 
 ```shell
 npm install @libp2p/bootstrap
@@ -89,7 +89,7 @@ For local development using a `nwaku` node, use a `ws` address instead of `wss`.
 To bootstrap a node using [DNS Discovery](/overview/concepts/dns-discovery), first install the `@waku/dns-discovery` package:
 
 <Tabs groupId="package-manager">
-<TabItem value="npm" label="npm">
+<TabItem value="npm" label="NPM">
 
 ```shell
 npm install @waku/dns-discovery

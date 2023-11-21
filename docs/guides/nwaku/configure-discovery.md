@@ -50,7 +50,7 @@ For example, consider a `nwaku` node that enables `DNS Discovery`, connects to a
 ```bash
 ./build/wakunode2 \
   --dns-discovery=true \
-  --dns-discovery-url=enrtree://AO47IDOLBKH72HIZZOXQP6NMRESAN7CHYWIBNXDXWRJRZWLODKII6@test.wakuv2.nodes.status.im \
+  --dns-discovery-url=enrtree://ANEDLO25QVUGJOUTQFRYKWX6P4Z4GKVESBMHML7DZ6YK4LGS5FC5O@prod.wakuv2.nodes.status.im \
   --dns-discovery-name-server=8.8.8.8 \
   --dns-discovery-name-server=8.8.4.4
 ```
