@@ -6,7 +6,7 @@ The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides co
 
 ## Install the Dependencies
 
-First, set up a project using any [production-grade React framework](https://react.dev/learn/start-a-new-react-project) or use an existing React application. For this guide, we will create a boilerplate using [ViteJS](https://vitejs.dev/guide/):
+First, set up a project using any [production-grade React framework](https://react.dev/learn/start-a-new-react-project) or an existing React application. For this guide, we will create a boilerplate using [ViteJS](https://vitejs.dev/guide/):
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -30,7 +30,7 @@ yarn create vite [PROJECT DIRECTORY] --template react
 </TabItem>
 </Tabs>
 
-Next, install the required libraries for integrating Waku using your preferred package manager:
+Next, install the required libraries for integrating `@waku/sdk` using your preferred package manager:
 
 <Tabs groupId="package-manager">
 <TabItem value="npm" label="NPM">
@@ -97,22 +97,22 @@ import './App.css'
 
 function App() {
 	const [inputMessage, setInputMessage] = useState("");
-  	const [messages, setMessages] = useState([]);
+	const [messages, setMessages] = useState([]);
 
 	// Update the inputMessage state as the user input changes
 	const handleInputChange = (e) => {
 		setInputMessage(e.target.value);
 	};
 
-    // Create and start a Light Node
-    const { node: node } = useWaku();
+	// Create and start a Light Node
+	const { node: node } = useWaku();
 
 	// Create a message encoder and decoder
 	const contentTopic = "/waku-react-guide/1/chat/proto";
 	const encoder = createEncoder({ contentTopic });
 	const decoder = createDecoder(contentTopic);
 
-  	// Create a message structure using Protobuf
+	// Create a message structure using Protobuf
 	const ChatMessage = new protobuf.Type("ChatMessage")
 		.add(new protobuf.Field("timestamp", 1, "uint64"))
 		.add(new protobuf.Field("message", 2, "string"));
@@ -123,28 +123,28 @@ function App() {
 	return (
 		<>
 			<div className="chat-interface">
-        		<h1>Waku React Demo</h1>
-		        <div className="chat-body">
-		            {messages.map((message, index) => (
-		              <div key={index} className="chat-message">
-		                <span>{new Date(message.timestamp).toUTCString()}</span>
-		                <div className="message-text">{message.message}</div>
-		              </div>
-		            ))}
-		        </div>
-		        <div className="chat-footer">
-		            <input
-		              type="text"
-		              id="message-input"
-		              value={inputMessage}
-		              onChange={handleInputChange}
-		              placeholder="Type your message..."
-		            />
-		            <button className="send-button" onClick={sendMessage}>Send</button>
-		        </div>
-      		</div>
-    	</>
-  	)
+				<h1>Waku React Demo</h1>
+				<div className="chat-body">
+					{messages.map((message, index) => (
+						<div key={index} className="chat-message">
+							<span>{new Date(message.timestamp).toUTCString()}</span>
+							<div className="message-text">{message.message}</div>
+						</div>
+					))}
+				</div>
+				<div className="chat-footer">
+					<input
+						type="text"
+						id="message-input"
+						value={inputMessage}
+						onChange={handleInputChange}
+						placeholder="Type your message..."
+					/>
+					<button className="send-button" onClick={sendMessage}>Send</button>
+				</div>
+			</div>
+		</>
+	)
 }
 
 export default App
@@ -158,46 +158,46 @@ Next, modify the `App.css` file with the following code block:
 
 ```css title="src/App.css"
 #root {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .chat-interface {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    border: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	border: 1px solid #ccc;
 }
 
 .chat-body {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 10px;
+	flex-grow: 1;
+	overflow-y: auto;
+	padding: 10px;
 }
 
 .message-text {
-    background-color: #f1f1f1;
-    color: #000;
-    padding: 10px;
-    margin-bottom: 10px;
+	background-color: #f1f1f1;
+	color: #000;
+	padding: 10px;
+	margin-bottom: 10px;
 }
 
 .chat-footer {
-    display: flex;
-    padding: 10px;
-    background-color: #f1f1f1;
-    align-items: center;
+	display: flex;
+	padding: 10px;
+	background-color: #f1f1f1;
+	align-items: center;
 }
 
 #message-input {
-    flex-grow: 1;
-    border-radius: 4px;
-    padding: 10px;
-    margin-right: 10px;
+	flex-grow: 1;
+	border-radius: 4px;
+	padding: 10px;
+	margin-right: 10px;
 }
 
 .send-button {
-    background-color: #007bff;
-    border-radius: 4px;
+	background-color: #007bff;
+	border-radius: 4px;
 }
 ```
 
@@ -223,18 +223,18 @@ function App() {
 			message: inputMessage
 		});
 
-    	// Serialise the message and push to the network
+		// Serialise the message and push to the network
 		const payload = ChatMessage.encode(protoMessage).finish();
-    	const { recipients, errors } = await push({ payload, timestamp });
+		const { recipients, errors } = await push({ payload, timestamp });
 
 		// Check for errors
 		if (errors.length === 0) {
-      		setInputMessage("");
-      		console.log("MESSAGE PUSHED");
-    	} else {
-      		console.log(errors);
-    	}
-  	};
+			setInputMessage("");
+			console.log("MESSAGE PUSHED");
+		} else {
+			console.log(errors);
+		}
+	};
 }
 ```
 
@@ -249,13 +249,13 @@ function App() {
 	// Receive messages from Filter subscription
 	const { messages: filterMessages } = useFilterMessages({ node, decoder });
 
- 	// Render the list of messages
-  	useEffect(() => {
+	// Render the list of messages
+	useEffect(() => {
 		setMessages(filterMessages.map((wakuMessage) => {
-      		if (!wakuMessage.payload) return;
-      		return ChatMessage.decode(wakuMessage.payload);
-    	}));
-  	}, [filterMessages]);
+			if (!wakuMessage.payload) return;
+			return ChatMessage.decode(wakuMessage.payload);
+		}));
+	}, [filterMessages]);
 }
 ```
 
