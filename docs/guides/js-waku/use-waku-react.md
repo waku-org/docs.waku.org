@@ -105,7 +105,7 @@ function App() {
 	};
 
 	// Create and start a Light Node
-	const { node: node } = useWaku();
+	const { node, error, isLoading } = useWaku();
 
 	// Create a message encoder and decoder
 	const contentTopic = "/waku-react-guide/1/chat/proto";
@@ -203,7 +203,7 @@ Next, modify the `App.css` file with the following code block:
 
 ## Send Messages Using Light Push
 
-To send messages in our application, we need to modify the `sendMessage()` function to serialize user input into our Protobuf structure and push it to the network using the `useLightPush()` function:
+To send messages in our application, we need to modify the `sendMessage()` function to serialize user input into our Protobuf structure and [push it to the network](/guides/js-waku/light-send-receive#send-messages-using-light-push) using the `useLightPush()` function:
 
 ```js title="src/App.jsx"
 import { useLightPush } from "@waku/react";
@@ -242,7 +242,7 @@ function App() {
 
 To display messages in our application, we need to use the `useFilterMessages()` function to create a [Filter subscription](/guides/js-waku/light-send-receive/#receive-messages-using-filter), receive incoming messages, and render them in our interface:
 
-```js
+```js title="src/App.jsx"
 import { useFilterMessages } from "@waku/react";
 
 function App() {
@@ -259,8 +259,33 @@ function App() {
 }
 ```
 
+## Retrieve Messages Using Store
+
+To display messages from the past, we need to retrieve them from the [Store protocol](/guides/js-waku/store-retrieve-messages) using the `useStoreMessages()` function when our application initialises and then render them alongside newly received messages:
+
+```js title="src/App.jsx"
+import { useFilterMessages, useStoreMessages } from "@waku/react";
+
+function App() {
+	// Query Store peers for past messages
+	const { messages: storeMessages } = useStoreMessages({ node, decoder });
+
+	// Receive messages from Filter subscription
+	const { messages: filterMessages } = useFilterMessages({ node, decoder });
+
+	// Render both past and new messages
+	useEffect(() => {
+		const allMessages = storeMessages.concat(filterMessages);
+		setMessages(allMessages.map((wakuMessage) => {
+			if (!wakuMessage.payload) return;
+			return ChatMessage.decode(wakuMessage.payload);
+		}));
+	}, [filterMessages, storeMessages]);
+}
+```
+
 :::info
-To explore the available query options, have a look at the [Store Query Options](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
+To explore the available Store query options, have a look at the [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
 :::
 
 :::tip

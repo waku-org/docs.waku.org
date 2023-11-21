@@ -71,6 +71,7 @@
     "letsencrypt",
     "lightpushnode",
     "filternode",
+    "concat",
   ],
   "flagWords": [],
   "ignorePaths": [
