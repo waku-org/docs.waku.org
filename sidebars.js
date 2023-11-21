@@ -4,6 +4,7 @@
 const sidebars = {
 	main: [
 		"overview/index",
+		"overview/waku-network",
 		"overview/history",
 		"overview/why-waku",
 		"overview/use-cases",

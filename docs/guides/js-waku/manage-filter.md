@@ -2,7 +2,7 @@
 title: Manage Your Filter Subscriptions
 ---
 
-This guide provides detailed steps to manage [Filter](/overview/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Filter guide](/guides/js-waku/light-send-receive) for receiving messages with the `Light Push and Filter protocol`.
+This guide provides detailed steps to manage [Filter](/overview/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Filter guide](/guides/js-waku/light-send-receive) for receiving messages with the `Light Push` and `Filter` protocol.
 
 ## Overview
 

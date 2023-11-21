@@ -72,6 +72,8 @@
     "lightpushnode",
     "filternode",
     "instanceof",
+    "sepolia",
+    "faucet",
   ],
   "flagWords": [],
   "ignorePaths": [
