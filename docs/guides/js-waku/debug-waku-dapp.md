@@ -1,5 +1,5 @@
 ---
-title: How to Debug Your Waku DApp and WebSocket
+title: Debug Your Waku DApp and WebSocket
 ---
 
 This guide provides detailed steps to enable and use debug logs to troubleshoot your Waku DApp, whether in a NodeJS or browser environment and check your WebSocket connections in [nwaku](/guides/run-nwaku-node).

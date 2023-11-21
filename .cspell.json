@@ -71,6 +71,7 @@
     "letsencrypt",
     "lightpushnode",
     "filternode",
+    "instanceof",
   ],
   "flagWords": [],
   "ignorePaths": [

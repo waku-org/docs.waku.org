@@ -2,7 +2,7 @@
 title: Send and Receive Messages Using Light Push and Filter
 ---
 
-This guide provides detailed steps to start using the `@waku/sdk` package by setting up a Light Node to send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter). Have a look at the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
+This guide provides detailed steps to start using the `@waku/sdk` package by setting up a [Light Node](/overview/reference/glossary#light-node) to send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter). Have a look at the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
 
 ## Create a Light Node
 
