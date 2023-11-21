@@ -56,8 +56,10 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-dynamic` | `false` | Enable  waku-rln-relay with on-chain dynamic group management: true\|false |
 | `rln-relay-id-key` |  | Rln relay identity secret key as a Hex string |
 | `rln-relay-id-commitment-key` |  | Rln relay identity commitment key as a Hex string |
-| `rln-relay-eth-client-address` | `ws://localhost:8540/` | WebSocket address of an Ethereum testnet client e.g., ws://localhost:8540/ |
+| `rln-relay-eth-client-address` | `ws://localhost:8540/` | WebSocket address of an Ethereum testnet client e.g., `ws://localhost:8540/` |
 | `rln-relay-eth-contract-address` |  | Address of membership contract on an Ethereum testnet |
+| `rln-relay-eth-private-key` |  | Private key for broadcasting transactions |
+| `execute` | `false` | Runs the registration function on-chain. By default, a dry-run will occur |
 | `rln-relay-cred-password` |  | Password for encrypting RLN credentials |
 | `rln-relay-tree-path` |  | Path to the RLN merkle tree sled db (https://github.com/spacejam/sled) |
 | `rln-relay-bandwidth-threshold` | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen |
