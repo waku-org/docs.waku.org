@@ -71,25 +71,28 @@ Your `nwaku` node provides a [REST API](https://waku-org.github.io/waku-rest-api
 
 ```shell
 # Get nwaku version
-curl http://127.0.0.1:8645/debug/v1/version
+curl --location 'http://127.0.0.1:8645/debug/v1/version'
 
 # Get nwaku info
-curl http://127.0.0.1:8645/debug/v1/info
+curl --location 'http://127.0.0.1:8645/debug/v1/info'
 ```
 
 Send a message to a `contentTopic`, which all subscribers will receive. Please note that the payload is encoded in `base64`.
 
 ```shell
-curl -X POST "http://127.0.0.1:8645/relay/v1/auto/messages" \
-	-H "content-type: application/json" \
-	-d '{"payload":"'$(echo -n "Hello Waku Network - from Anonymous User" | base64)'","contentTopic":"/my-app/2/chatroom-1/proto"}'
+curl --location 'http://127.0.0.1:8645/relay/v1/auto/messages' \
+--header 'Content-Type: application/json' \
+--data '{
+    "payload": "'$(echo -n "Hello Waku Network - from Anonymous User" | base64)'",
+    "contentTopic": "/my-app/2/chatroom-1/proto"
+}'
 ```
 
 Retrieve messages sent to a `contentTopic`. Please note that this query can be made to any `Store` node within the network:
 
 ```shell
-curl -X GET "http://127.0.0.1:8645/store/v1/messages?contentTopics=%2Fmy-app%2F2%2Fchatroom-1%2Fproto&pageSize=50&ascending=true" \
-	-H "accept: application/json"
+curl --location 'http://127.0.0.1:8645/store/v1/messages?contentTopics=%2Fmy-app%2F2%2Fchatroom-1%2Fproto&pageSize=50&ascending=true' \
+--header 'Accept: application/json'
 ```
 
 :::tip Congratulations!

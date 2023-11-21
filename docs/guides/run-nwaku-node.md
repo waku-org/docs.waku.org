@@ -69,7 +69,7 @@ You can configure a `nwaku` node to use multiple peer discovery mechanisms simul
 
 ## Interact with the Node
 
-You can interact with a running  `nwaku` node through the [JSON RPC API](https://rfc.vac.dev/spec/16/), such as querying the node information using the `get_waku_v2_debug_v1_info` method:
+You can interact with a running  `nwaku` node through the [REST API](https://waku-org.github.io/waku-rest-api/), such as querying the node information using the [Get node info](https://waku-org.github.io/waku-rest-api/#get-/debug/v1/info) endpoint:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -80,14 +80,8 @@ import TabItem from '@theme/TabItem';
 <TabItem value="request" label="Request">
 
 ```bash
-curl --location --request GET 'http://localhost:8545' \
---header 'Content-Type: application/json' \
---data '{
-	"jsonrpc": "2.0",
-	"id": "id",
-	"method": "get_waku_v2_debug_v1_info",
-	"params": []
-}'
+curl --location 'http://127.0.0.1:8645/debug/v1/info' \
+--header 'Accept: application/json'
 ```
 
 </TabItem>
@@ -95,14 +89,10 @@ curl --location --request GET 'http://localhost:8545' \
 
 ```json
 {
-	"jsonrpc": "2.0",
-	"id": "id",
-	"result": {
-		"listenAddresses": [
-			"/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmUbPquFQqje3jiqoB5YoiUbBya59NB4qqEzeiTNGHeA6w"
-		],
-		"enrUri": "enr:-Iu4QCQZXZDb_JsYmLoYor0F5E_95HbIywgO_wgx2rIdDbmCJZkTzmlCr0wmMzV47lgik_tVwww5mIng90Ris83TisMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQPszztG-Ev52ZB7tk0jF8s6Md4KvyY_rhzNZokaaB_ABIN0Y3CC6mCFd2FrdTIB"
-	}
+	"listenAddresses": [
+    	"/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmUbPquFQqje3jiqoB5YoiUbBya59NB4qqEzeiTNGHeA6w"
+  	],
+  	"enrUri": "enr:-Iu4QCQZXZDb_JsYmLoYor0F5E_95HbIywgO_wgx2rIdDbmCJZkTzmlCr0wmMzV47lgik_tVwww5mIng90Ris83TisMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQPszztG-Ev52ZB7tk0jF8s6Md4KvyY_rhzNZokaaB_ABIN0Y3CC6mCFd2FrdTIB"
 }
 ```
 
@@ -115,7 +105,7 @@ The `listenAddresses` field stores the node's listening addresses, while the `en
 
 ## Find the Node Addresses
 
-You can find the addresses of a running node through its logs or by calling the `get_waku_v2_debug_v1_info` method of the [JSON RPC API](https://rfc.vac.dev/spec/16/).
+You can find the addresses of a running node through its logs or by calling the [Get node info](https://waku-org.github.io/waku-rest-api/#get-/debug/v1/info) endpoint of the [REST API](https://waku-org.github.io/waku-rest-api/).
 
 :::info
 When starting the node, `nwaku` will display all the public listening and discovery addresses at the `INFO` log level.

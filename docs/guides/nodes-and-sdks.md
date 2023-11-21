@@ -42,7 +42,7 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 
 | | Description | Documentation |
 | - | - | - |
-| JSON-RPC API | `JSON-RPC` API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | COMING SOON |
+| [REST API](https://waku-org.github.io/waku-rest-api/) | REST API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | [Waku Node REST API Spec](https://waku-org.github.io/waku-rest-api/) |
 | [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `@waku/sdk` | COMING SOON |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `@waku/sdk` project from various example templates | [Bootstrap DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) |
 | [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running and monitoring a `nwaku` node using Prometheus and Grafana | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
