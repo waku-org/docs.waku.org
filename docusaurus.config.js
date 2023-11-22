@@ -196,6 +196,11 @@ const config = {
         },
       ],
     },
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
   },
   markdown: {
     mermaid: true,

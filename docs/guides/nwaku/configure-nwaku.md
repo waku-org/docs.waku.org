@@ -242,7 +242,7 @@ For example, consider a `nwaku` node that requests lightpush of published messag
 ./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```
 
-## Run a Node Behind a Reverse Proxy
+## Run Nwaku Behind a Reverse Proxy
 
 When using a reverse proxy server for SSL/TLS encryption, you only want to announce the proxy server's IP or domain. Nwaku provides the `ext-multiaddr-only` and `ext-multiaddr` options for specifying published multiaddr:
 
