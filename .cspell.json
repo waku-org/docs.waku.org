@@ -74,6 +74,7 @@
     "instanceof",
     "sepolia",
     "faucet",
+    "concat",
   ],
   "flagWords": [],
   "ignorePaths": [

@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap DApps Using @waku/create-app"
+title: "Scaffold DApps Using @waku/create-app"
 ---
 
 This guide provides detailed steps to bootstrap your next `@waku/sdk` project from [various example templates](https://github.com/waku-org/js-waku-examples/tree/master/examples) using the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package.
@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 ```
 
 <Tabs>
-<TabItem value="npm" label="npm">
+<TabItem value="npm" label="NPM">
 
 ```shell
 npx @waku/create-app [PROJECT DIRECTORY]

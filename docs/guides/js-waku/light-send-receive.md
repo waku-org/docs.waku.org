@@ -6,7 +6,7 @@ This guide provides detailed steps to start using the `@waku/sdk` package by set
 
 ## Create a Light Node
 
-Use the `createLightNode()` function to create a `Light Node` and interact with the Waku Network:
+Use the `createLightNode()` function to create a [Light Node](/overview/reference/glossary#light-node) and interact with the Waku Network:
 
 ```js
 import { createLightNode } from "@waku/sdk";
@@ -61,12 +61,12 @@ const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
 
-The `ephemeral` option allows you to specify whether your messages should be persisted by [Store peers](/guides/js-waku/store-retrieve-messages):
+The `ephemeral` option allows you to specify whether messages should not be stored by [Store peers](/guides/js-waku/store-retrieve-messages):
 
 ```js
 const encoder = createEncoder({
 	contentTopic: contentTopic, // message content topic
-	ephemeral: true, // allows messages to be persisted or not
+	ephemeral: true, // allows messages not be stored on the network
 });
 ```
 
