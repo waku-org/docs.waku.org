@@ -13,7 +13,7 @@ You can configure a `nwaku` node to use multiple peer discovery mechanisms simul
 
 You can provide [static peers](/learn/concepts/static-peers) to a `nwaku` node during startup using the `staticnode` configuration option. To connect to multiple peers on startup, repeat the `staticnode` option:
 
-```bash
+```shell
 ./build/wakunode2 \
   --staticnode=[PEER MULTIADDR 1] \
   --staticnode=[PEER MULTIADDR 2]
@@ -21,7 +21,7 @@ You can provide [static peers](/learn/concepts/static-peers) to a `nwaku` node d
 
 For example, consider a `nwaku` node that connects to two static peers on the same local host (IP: `0.0.0.0`) using TCP ports `60002` and `60003`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --staticnode=/ip4/0.0.0.0/tcp/60002/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H \
   --staticnode=/ip4/0.0.0.0/tcp/60003/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ
@@ -35,7 +35,7 @@ To enable [DNS Discovery](/learn/concepts/dns-discovery) in a `nwaku` node, use 
 - `dns-discovery-url`: URL for DNS node list in the format `enrtree://<key>@<fqdn>` where `<fqdn>` is the fully qualified domain name and `<key>` is the base32 encoding of the compressed 32-byte public key that signed the list at that location.
 - `dns-discovery-name-server` (optional): DNS name server IPs to query. You can repeat this option to provide multiple DNS name servers.
 
-```bash
+```shell
 ./build/wakunode2 \
   --dns-discovery=true \
   --dns-discovery-url=enrtree://[PUBLIC KEY]@[DOMAIN NAME] \
@@ -48,7 +48,7 @@ If you omit the `dns-discovery-name-server` option, `nwaku` will attempt to use 
 
 For example, consider a `nwaku` node that enables `DNS Discovery`, connects to a DNS node list, and queries the IPs `8.8.8.8` and `8.8.4.4`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --dns-discovery=true \
   --dns-discovery-url=enrtree://ANEDLO25QVUGJOUTQFRYKWX6P4Z4GKVESBMHML7DZ6YK4LGS5FC5O@prod.wakuv2.nodes.status.im \
@@ -63,7 +63,7 @@ To enable [Discv5](/learn/concepts/discv5) in a `nwaku` node, use the following 
 - `discv5-discovery`: Enables `Discv5` on the node (disabled by default).
 - `discv5-bootstrap-node`: ENR for `Discv5` routing table bootstrap node. You can repeat this option to provide multiple bootstrap entries.
 
-```bash
+```shell
 ./build/wakunode2 \
   --discv5-discovery=true \
   --discv5-bootstrap-node=[DISCV5 ENR BOOTSTRAP ENTRY 1] \
@@ -72,7 +72,7 @@ To enable [Discv5](/learn/concepts/discv5) in a `nwaku` node, use the following 
 
 For example, consider a `nwaku` node that enables `Discv5` and bootstraps its routing table using a static `ENR`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --discv5-discovery=true \
   --discv5-bootstrap-node=enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7EU9iIBcPMVeKlCQBgmlkgnY0iXNlY3AyNTZrMaEDdBHK1Gx6y_zv5DVw5Qb3DtSOMmVHTZO1WSORrF2loL2DdWRwgiMohXdha3UyAw
@@ -89,7 +89,7 @@ To enable [Peer Exchange](/learn/concepts/peer-exchange) in a `nwaku` node, use 
 - `peer-exchange`: Enables `Peer Exchange` on the node as a responder (disabled by default).
 - `peer-exchange-node` (optional): Multiaddr for bootstrap node with the peer exchange protocol enabled.
 
-```bash
+```shell
 ./build/wakunode2 \
   --peer-exchange=true \
   --peer-exchange-node=[PEER MULTIADDR WITH EXCHANGE ENABLED]
@@ -97,11 +97,11 @@ To enable [Peer Exchange](/learn/concepts/peer-exchange) in a `nwaku` node, use 
 
 For example, consider two `nwaku` nodes configured as a `server` (peer exchange responder node) and `client` (node using peer exchange) on the same local host (IP: `0.0.0.0`):
 
-```bash title="Server: Nwaku Node with Peer Exchange Enabled"
+```shell title="Server: Nwaku Node with Peer Exchange Enabled"
 ./build/wakunode2 --peer-exchange=true
 ```
 
-```bash title="Client: Nwaku Node Bootstrapping with Peer Exchange"
+```shell title="Client: Nwaku Node Bootstrapping with Peer Exchange"
 ./build/wakunode2 \
   --tcp-port=30305 \
   --ports-shift=1 \

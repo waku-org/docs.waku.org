@@ -18,13 +18,13 @@ Take note of the precedence order: Each configuration method overrides the one b
 
 Node configuration is primarily done using command line options, which override other methods. Specify [configuration options](/guides/nwaku/config-options) by providing them in this format after the binary name:
 
-```bash
+```shell
 ./build/wakunode2 --tcp-port=65000
 ```
 
 When running your node with Docker, provide the command line options after the image name in this format:
 
-```bash
+```shell
 docker run statusteam/nim-waku --tcp-port=65000
 ```
 
@@ -34,13 +34,13 @@ Nodes can be configured using environment variables by prefixing the variable na
 
 To set the `tcp-port` configuration, the `wakunode2` binary should be called in this format:
 
-```bash
+```shell
 WAKUNODE2_TCP_PORT=65000 ./build/wakunode2
 ```
 
 When running your node with Docker, start the node using the `-e` command option:
 
-```bash
+```shell
 docker run -e "WAKUNODE2_TCP_PORT=65000" statusteam/nim-waku
 ```
 
@@ -61,13 +61,13 @@ metrics-logging = false
 
 The `config-file` [configuration option](/guides/nwaku/config-options) lets you specify the configuration file path:
 
-```bash
+```shell
 ./build/wakunode2 --config-file=[TOML CONFIGURATION FILE]
 ```
 
 You can also specify the configuration file via environment variables:
 
-```bash
+```shell
 # Using environment variables
 WAKUNODE2_CONFIG_FILE=[TOML CONFIGURATION FILE] ./build/wakunode2
 
@@ -92,7 +92,7 @@ The default configuration is used when no other options are specified. By defaul
 
 To see the default values of all [configuration options](/guides/nwaku/config-options), run `wakunode2 --help`:
 
-```bash
+```shell
 ./build/wakunode2 --help
 ```
 

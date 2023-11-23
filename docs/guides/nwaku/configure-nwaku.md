@@ -18,13 +18,13 @@ To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) 
 
 You can set up an IPv4 DNS domain name that resolves to the public IPv4 address of a node using the `dns4-domain-name` option. This allows the node's publicly announced multiaddrs to use the `/dns4` scheme.
 
-```bash
+```shell
 ./build/wakunode2 --dns4-domain-name=[DOMAIN NAME]
 ```
 
 For example, consider the domain name `nwakunode.com`, which resolves to a `nwaku` node:
 
-```bash
+```shell
 ./build/wakunode2 --dns4-domain-name=nwakunode.com
 ```
 
@@ -46,7 +46,7 @@ To enable message caching and serve them to network peers, enable the [Store pro
 	- Set this option to `none` to disable the retention policy. If you omit this option, it will default to `time:172800` (48 hours).
 - `store-message-db-url`: Database connection URL for persisting messages in the [SQLAlchemy database URL format](https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls). Setting this option to an empty string will instruct the node to use the fallback in-memory message store. If you omit this option, it will default to `sqlite://store.sqlite3`.
 
-```bash
+```shell
 ./build/wakunode2 \
   --store=true \
   --store-message-retention-policy=[MESSAGE RETENTION POLICY] \
@@ -55,7 +55,7 @@ To enable message caching and serve them to network peers, enable the [Store pro
 
 For example, consider a `nwaku` node that is configured to be a `Store` protocol and retain messages received in the last `21600` seconds (6 hours):
 
-```bash
+```shell
 ./build/wakunode2 \
   --store=true \
   --store-message-retention-policy=time:21600 \
@@ -64,13 +64,13 @@ For example, consider a `nwaku` node that is configured to be a `Store` protocol
 
 You can configure `nwaku` as a `Store client` using the `storenode` option. This allows the node to query peers for historical messages but not store any message itself.
 
-```bash
+```shell
 ./build/wakunode2 --storenode=[STORE PEER MULTIADDR]
 ```
 
 For example, consider a `nwaku` node that does not persist messages but can query peers for historical messages:
 
-```bash
+```shell
 ./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```
 
@@ -78,13 +78,13 @@ For example, consider a `nwaku` node that does not persist messages but can quer
 
 Nodes generate [new random key pairs](/learn/glossary#node-key) at each boot, leading to different `multiaddrs`. To maintain consistency, you can use a pre-generated private key with the `nodekey` option:
 
-```bash
+```shell
 ./build/wakunode2 --nodekey=[NODE PRIVATE KEY]
 ```
 
 This option takes a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) private key (64-char hex string). On Linux, you can use the OpenSSL `rand` command for a pseudo-random 32-byte hex string:
 
-```bash
+```shell
 openssl rand -hex 32
 
 # 286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
@@ -92,7 +92,7 @@ openssl rand -hex 32
 
 On Linux, you can create a reusable key file using OpenSSL. To get the 32-byte private key in hex format, use the `ecparam` command and some standard utilities:
 
-```bash
+```shell
 # Generate key file
 openssl ecparam -genkey -name secp256k1 -out my_private_key.pem
 
@@ -106,7 +106,7 @@ openssl ec -in my_private_key.pem -outform DER | tail -c +8 | head -c 32| xxd -p
 
 You can use the output `286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8` as a `Node Key` for `nwaku`:
 
-```bash
+```shell
 ./build/wakunode2 --nodekey=286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
 ```
 
@@ -120,7 +120,7 @@ WebSocket is the only [transport method](/learn/concepts/transports) browser nod
 - `websocket-secure-key-path`: Secure WebSocket key path.
 - `websocket-secure-cert-path`: Secure WebSocket Certificate path.
 
-```bash
+```shell
 ./build/wakunode2 \
   --websocket-support=true \
   --websocket-port=[WEBSOCKET LISTENING PORT] \
@@ -131,7 +131,7 @@ WebSocket is the only [transport method](/learn/concepts/transports) browser nod
 
 For example, consider a `nwaku` node that enabled WebSocket (unencrypted) for local testing on port `8001`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --websocket-support=true \
   --websocket-port=8001
@@ -139,7 +139,7 @@ For example, consider a `nwaku` node that enabled WebSocket (unencrypted) for lo
 
 Consider a `nwaku` node that enabled Secure WebSocket (encrypted) using its key and certificate (`privkey.pem` and `fullchain.pem`) on port `8002`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --websocket-secure-support=true \
   --websocket-secure-key-path=privkey.pem \
@@ -150,7 +150,7 @@ Consider a `nwaku` node that enabled Secure WebSocket (encrypted) using its key 
 :::tip
 You can use [Let's Encrypt](https://letsencrypt.org/) or [Certbot](https://certbot.eff.org/) to generate a valid certificate for your `nwaku` node:
 
-```bash
+```shell
 sudo letsencrypt -d <your.domain.name>
 ```
 :::
@@ -166,7 +166,7 @@ Nwaku provides a REST API to interact with the node and Waku Network. To enable 
 - `rest-admin` (optional): Enables access to REST admin API (disabled by default).
 - `rest-private` (optional): Enables access to REST private API (disabled by default).
 
-```bash
+```shell
 ./build/wakunode2 \
   --rest=true \
   --rest-address=[REST SERVER LISTENING ADDRESS] \
@@ -178,7 +178,7 @@ Nwaku provides a REST API to interact with the node and Waku Network. To enable 
 
 For example, consider a `nwaku` node that enabled the REST API server on port `9000`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --rest=true \
   --rest-port=9000 \
@@ -187,7 +187,7 @@ For example, consider a `nwaku` node that enabled the REST API server on port `9
 
 Consider a `nwaku` node that enabled the REST `admin` and `private` API with a message cache capacity of `100`:
 
-```bash
+```shell
 ./build/wakunode2 \
   --rest=true \
   --rest-admin=true \
@@ -199,13 +199,13 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
 
 To enable `nwaku` to serve light clients, enable the [Filter protocol](/learn/concepts/protocols#filter) using `filter` option:
 
-```bash
+```shell
 ./build/wakunode2 --filter=true
 ```
 
 You can configure `nwaku` as a `Filter client` using the `filternode` and `filter-timeout` options. This allows the node to request content filtering of messages from peers.
 
-```bash
+```shell
 ./build/wakunode2 \
   --filternode=[FILTER PEER MULTIADDR] \
   --filter-timeout=[FILTER PEER TIMEOUT]
@@ -213,7 +213,7 @@ You can configure `nwaku` as a `Filter client` using the `filternode` and `filte
 
 For example, consider a `nwaku` node that requests content filtering of messages from peers with a timeout of `21600` seconds (6 hours):
 
-```bash
+```shell
 ./build/wakunode2 \
   --filternode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD \
   --filter-timeout=21600
@@ -227,19 +227,19 @@ If you omit the `filter-timeout` option, it will default to `14400` seconds (4 h
 
 To enable `nwaku` to serve light clients, enable the [Light Push protocol](/learn/concepts/protocols#light-push) using the `lightpush` option:
 
-```bash
+```shell
 ./build/wakunode2 --lightpush=true
 ```
 
 You can configure `nwaku` as a `Light Push client` using the `lightpushnode` option. This allows the node to request lightpush of published messages from peers.
 
-```bash
+```shell
 ./build/wakunode2 --lightpushnode=[LIGHT PUSH PEER MULTIADDR]
 ```
 
 For example, consider a `nwaku` node that requests lightpush of published messages from peers:
 
-```bash
+```shell
 ./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```
 
@@ -247,7 +247,7 @@ For example, consider a `nwaku` node that requests lightpush of published messag
 
 When using a reverse proxy server for SSL/TLS encryption, you only want to announce the proxy server's IP or domain. Nwaku provides the `ext-multiaddr-only` and `ext-multiaddr` options for specifying published multiaddr:
 
-```bash
+```shell
 ./build/wakunode2 \
   --ext-multiaddr-only=true \
   --ext-multiaddr=[MULTIADDR TO PUBLISH]

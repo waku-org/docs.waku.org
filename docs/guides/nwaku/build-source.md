@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="debian" label="Debian and Ubuntu">
 
-```bash
+```shell
 sudo apt-get install build-essential git libpq5
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -30,7 +30,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </TabItem>
 <TabItem value="fedora" label="Fedora">
 
-```bash
+```shell
 sudo dnf install @development-tools git libpq-devel
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -38,7 +38,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </TabItem>
 <TabItem value="arch" label="Arch Linux">
 
-```bash
+```shell
 # Using your favoured AUR helper
 sudo [AUR HELPER] -S base-devel git postgresql-libs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -47,7 +47,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </TabItem>
 <TabItem value="mac" label="MacOS (Homebrew)">
 
-```bash
+```shell
 brew install cmake git postgresql@15 rustup-init
 # Create a symbolic link to libpq.5.dylib in /usr/local/lib/
 sudo mkdir -p /usr/local/lib/
@@ -61,7 +61,7 @@ sudo ln -s /opt/homebrew/opt/postgresql@15/lib/libpq.5.dylib /usr/local/lib/libp
 
 Get the source code from the GitHub repository. The default branch is `master`, the release candidate for major updates.
 
-```bash
+```shell
 git clone https://github.com/waku-org/nwaku
 cd nwaku
 ```
@@ -74,13 +74,13 @@ You can use `git tag -l` to check specific version tags.
 
 Build the `nwaku` binary:
 
-```bash
+```shell
 make wakunode2
 ```
 
 The first `make` invocation updates to all Git submodules. After each `git pull`, run `make update` to keep the submodules updated in the future.
 
-```bash
+```shell
 make update
 ```
 
@@ -88,7 +88,7 @@ make update
 
 Nwaku will create the `wakunode2` binary in the `./build/` directory.
 
-```bash
+```shell
 # Run with default configuration
 ./build/wakunode2
 
@@ -107,7 +107,7 @@ To learn more about running nwaku, have a look at these guides:
 
 Run the tests for Waku:
 
-```bash
+```shell
 make test
 ```
 

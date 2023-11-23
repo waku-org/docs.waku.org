@@ -21,7 +21,7 @@ This guide provides detailed steps to configure, run, monitor, and interact with
 
 ## Clone the repository
 
-```bash
+```shell
 git clone https://github.com/waku-org/nwaku-compose
 cd nwaku-compose
 ```
@@ -52,7 +52,7 @@ If you only want to relay traffic without sending messages to the network, you d
 
 Start all processes: `nwaku` node, database and Grafana for metrics. Your RLN membership is loaded into nwaku under the hood:
 
-```bash
+```shell
 docker-compose up -d
 ```
 

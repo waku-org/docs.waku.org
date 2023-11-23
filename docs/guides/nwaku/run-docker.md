@@ -15,7 +15,7 @@ The Nwaku Docker images are available on the Docker Hub public registry under th
 
 You can also build the Docker image locally:
 
-```bash
+```shell
 # Clone the repository
 git clone --recurse-submodules https://github.com/waku-org/nwaku
 cd nwaku
@@ -28,7 +28,7 @@ make docker-image
 
 Run `nwaku` in a new Docker container:
 
-```bash
+```shell
 docker run [OPTIONS] [IMAGE] [ARG...]
 ```
 
@@ -38,7 +38,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 
 Run `nwaku` using the most typical configuration:
 
-```bash
+```shell
 docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku:v0.20.0 \
   --dns-discovery=true \
   --dns-discovery-url=enrtree://ANEDLO25QVUGJOUTQFRYKWX6P4Z4GKVESBMHML7DZ6YK4LGS5FC5O@prod.wakuv2.nodes.status.im \
@@ -49,7 +49,7 @@ docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku:v0.20.0 \
 
 To find your public IP, use:
 
-```bash
+```shell
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 ```
 
