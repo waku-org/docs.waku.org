@@ -12,7 +12,7 @@ def parse_table_heading(line: str) -> Tuple[str, bool]:
     table_heading = re.split('##', line)[1].strip()
     if 'config' not in table_heading or 'Application-level' in table_heading:
         return None, False
-    table_heading = table_heading.title()
+    table_heading = table_heading.capitalize()
 
     word_replace_re = re.compile('|'.join([
         r'(Configuration)', r'(And)', r'(Lightpush)',
@@ -25,7 +25,7 @@ def parse_table_heading(line: str) -> Tuple[str, bool]:
         'Discovery V5': 'Discv5', 'Websocket': 'WebSocket'
     }
     table_heading = word_replace_re.sub(lambda match: word_replace_dict[match.group(0)], table_heading)
-    return '## ' + table_heading, True
+    return '## ' + table_heading, Trues
 
 def fetch_config_file(config_path: str) -> str:
     config_file = requests.get(config_path)
@@ -37,7 +37,7 @@ def fetch_config_file(config_path: str) -> str:
 def extract_config(config_path: str) -> str:
     config_data = fetch_config_file(config_path)
 
-    config_table = "## Application-Level Config\n\n| Name | Default Value | Description |\n| - | - | - |\n"
+    config_table = "## Application-level config\n\n| Name | Default Value | Description |\n| - | - | - |\n"
     row = {"name": None, "default": "", "description": None}
     for line in config_data:
         line = line.strip()
