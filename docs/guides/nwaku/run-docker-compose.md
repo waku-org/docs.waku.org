@@ -1,5 +1,6 @@
 ---
 title: Run Nwaku with Docker Compose
+hide_table_of_contents: true
 ---
 
 `nwaku-compose` is a ready-to-use Docker Compose setup that runs the following:
@@ -27,7 +28,7 @@ cd nwaku-compose
 
 ## Configure the Setup
 
-Modify the `run_node.sh` file to customise your [node's configuration](/guides/reference/node-config-options) and `docker-compose.yml` to specify particular [Docker image](https://hub.docker.com/r/statusteam/nim-waku/tags) tag. Next, export your Ethereum Sepolia configuration and membership password:
+Modify the `run_node.sh` file to customise your [node's configuration](/guides/nwaku/config-options) and `docker-compose.yml` to specify particular [Docker image](https://hub.docker.com/r/statusteam/nim-waku/tags) tag. Next, export your Ethereum Sepolia configuration and membership password:
 
 ```shell
 export ETH_CLIENT_ADDRESS=wss://sepolia.infura.io/ws/v3/[INFURA API KEY]
@@ -96,5 +97,5 @@ curl --location 'http://127.0.0.1:8645/store/v1/messages?contentTopics=%2Fmy-app
 ```
 
 :::tip Congratulations!
-You have successfully started a `nwaku` node with `RLN` enabled using Docker Compose. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) and [Advanced Configuration](https://github.com/waku-org/nwaku-compose/blob/master/ADVANCED.md) guides to learn how to configure `nwaku` for different use cases.
+You have successfully started a `nwaku` node with `RLN` enabled using Docker Compose. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) and [Advanced Configuration](https://github.com/waku-org/nwaku-compose/blob/master/ADVANCED.md) guides to learn how to configure `nwaku` for different use cases.
 :::

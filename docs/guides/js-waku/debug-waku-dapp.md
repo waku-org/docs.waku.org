@@ -1,8 +1,9 @@
 ---
 title: Debug Your Waku DApp and WebSocket
+hide_table_of_contents: true
 ---
 
-This guide provides detailed steps to enable and use debug logs to troubleshoot your Waku DApp, whether in a NodeJS or browser environment and check your WebSocket connections in [nwaku](/guides/run-nwaku-node).
+This guide provides detailed steps to enable and use debug logs to troubleshoot your Waku DApp, whether in a NodeJS or browser environment and check your WebSocket connections in [nwaku](/guides/nwaku/run-node).
 
 ## Enabling Debug Logs
 
@@ -44,7 +45,7 @@ To view debug logs in your browser's console, modify the local storage and add t
 
 ## Checking WebSocket Setup
 
-[Nwaku](/guides/run-nwaku-node) provides native support for WebSocket (`ws`) and WebSocket Secure (`wss`) protocols. These are the only [transports](/learn/concepts/transports) supported for connecting to the Waku Network via browsers.
+[Nwaku](/guides/nwaku/run-node) provides native support for WebSocket (`ws`) and WebSocket Secure (`wss`) protocols. These are the only [transports](/learn/concepts/transports) supported for connecting to the Waku Network via browsers.
 
 It's important to note that browsers impose certain limitations on WebSocket usage:
 

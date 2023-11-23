@@ -83,7 +83,7 @@
     "yarn.lock",
     "tsconfig.json",
     "node_modules/**",
-    "docs/guides/reference/node-config-options.md"
+    "docs/guides/nwaku/config-options.md"
   ],
   "patterns": [
     {

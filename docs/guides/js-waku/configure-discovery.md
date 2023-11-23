@@ -1,11 +1,12 @@
 ---
 title: Bootstrap Nodes and Discover Peers
+hide_table_of_contents: true
 ---
 
 This guide provides detailed steps to bootstrap your your node using [Static Peers](/learn/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/learn/concepts/dns-discovery).
 
 :::tip
-Until [node incentivisation](/learn/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
+Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
 ## Default Bootstrap Method

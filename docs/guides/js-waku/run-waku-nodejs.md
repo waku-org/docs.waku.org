@@ -1,5 +1,6 @@
 ---
 title: "Run @waku/sdk in a NodeJS Application"
+hide_table_of_contents: true
 ---
 
 While the `@waku/sdk` package is primarily designed for browser environments, you can use it in a NodeJS application. However, there are certain limitations and considerations to keep in mind. This guide provides a comprehensive overview of using `@waku/sdk` in NodeJS.
@@ -12,7 +13,7 @@ While the `@waku/sdk` package is primarily designed for browser environments, yo
 
 ### Protocol Implementation
 
-`@waku/sdk` focuses on the client side of the [Request/Response protocol](/learn/concepts/network-domains#requestresponse-domain). We'll have to replicate all the functionalities added to [nwaku](/guides/run-nwaku-node) to implement extra features.
+`@waku/sdk` focuses on the client side of the [Request/Response protocol](/learn/concepts/network-domains#requestresponse-domain). We'll have to replicate all the functionalities added to [nwaku](/guides/nwaku/run-node) to implement extra features.
 
 ### Codebase Complexity
 
@@ -30,4 +31,4 @@ Before using `@waku/sdk` in a NodeJS environment, take into account these limita
 
 ## Future Developments
 
-There are plans to release a NodeJS package based on [nwaku](/guides/run-nwaku-node) to streamline the process of using Waku Network features in NodeJS applications. You can track the progress and updates here: <https://github.com/waku-org/nwaku/issues/1332>.
+There are plans to release a NodeJS package based on [nwaku](/guides/nwaku/run-node) to streamline the process of using Waku Network features in NodeJS applications. You can track the progress and updates here: <https://github.com/waku-org/nwaku/issues/1332>.

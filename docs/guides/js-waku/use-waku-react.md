@@ -1,5 +1,6 @@
 ---
 title: "Build React DApps Using @waku/react"
+hide_table_of_contents: true
 ---
 
 The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `@waku/sdk` into React applications effortlessly. This guide provides detailed steps for using `@waku/react` in your project.

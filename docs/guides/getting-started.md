@@ -1,9 +1,11 @@
 ---
-title: Nodes and SDKs
+title: Getting Started
+hide_table_of_contents: true
+slug: /
 ---
 
 :::caution
-Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
+Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by powering various applications. [Join our community](https://waku.org/community/) to stay updated on our progress.
 :::
 
 Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by running a node.
@@ -14,7 +16,7 @@ The Waku Network is a decentralised, permissionless system where anyone can run 
 
 | | Description | Documentation |
 | - | - | - |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/run-nwaku-node) |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/nwaku/run-node) |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | COMING SOON |
 
 ## Integrate Using SDKs

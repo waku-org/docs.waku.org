@@ -1,5 +1,6 @@
 ---
 title: Build Nwaku from Source
+hide_table_of_contents: true
 ---
 
 This guide provides detailed steps to build a `nwaku` node from the source code to access the latest development version or a specific commit or release of `nwaku`. For your convenience, you may want to [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
@@ -97,10 +98,10 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 
 To learn more about running nwaku, have a look at these guides:
 
-- [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
+- [Run a Nwaku Node](/guides/nwaku/run-node#run-the-node)
 - [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)
 - [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose)
-- [Node Configuration Methods](/guides/reference/node-config-methods)
+- [Node Configuration Methods](/guides/nwaku/config-methods)
 
 ## Run Test Suite
 
@@ -111,5 +112,5 @@ make test
 ```
 
 :::tip Congratulations!
-You have successfully built the `nwaku` binary from the source code. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+You have successfully built the `nwaku` binary from the source code. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::

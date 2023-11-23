@@ -3,7 +3,7 @@ title: Static Peers
 hide_table_of_contents: true
 ---
 
-Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can either use static peers operated by Status or [run a node](/guides/nodes-and-sdks#run-a-waku-node).
+Waku applications have the flexibility to embed bootstrap node addresses directly into their codebase. Developers can either use static peers operated by Status or [run a node](/#run-a-waku-node).
 
 #### Pros
 

@@ -1,5 +1,6 @@
 ---
 title: JavaScript Waku SDK
+hide_table_of_contents: true
 ---
 
 The [JavaScript Waku SDK](https://github.com/waku-org/js-waku) (`@waku/sdk`) provides a TypeScript implementation of the [Waku protocol](/) designed for web browser environments. Developers can seamlessly integrate Waku functionalities into web applications, enabling efficient communication and collaboration among users using the `@waku/sdk` package.
@@ -88,11 +89,11 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 | [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `@waku/sdk` project from various example templates |
 | [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) | Learn how to bootstrap your node using [Static Peers](/learn/concepts/static-peers) and discover peers using [DNS Discovery](/learn/concepts/dns-discovery) |
 | [Run @waku/sdk in a NodeJS Application](/guides/js-waku/run-waku-nodejs) | Learn our suggested approach for using the `@waku/sdk` package within a NodeJS application |
-| [Debug Your Waku DApp and WebSocket](/guides/js-waku/debug-waku-dapp) | Learn how to troubleshoot your Waku DApp using debug logs and check [WebSocket](/learn/concepts/transports) connections in [nwaku](/guides/run-nwaku-node) |
+| [Debug Your Waku DApp and WebSocket](/guides/js-waku/debug-waku-dapp) | Learn how to troubleshoot your Waku DApp using debug logs and check [WebSocket](/learn/concepts/transports) connections in [nwaku](/guides/nwaku/run-node) |
 | [Manage Your Filter Subscriptions](/guides/js-waku/manage-filter) | Learn how to manage [filter subscriptions](/learn/concepts/protocols#filter) and handle node disconnections in your application |
 
 :::tip
-Until [node incentivisation](/learn/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
+Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
 ## Get Help and Report Issues

@@ -93,11 +93,11 @@ const config = {
           title: "Guides",
           items: [
             {
-              to: "/guides/nodes-and-sdks",
-              label: "Nodes and SDKs",
+              to: "/",
+              label: "Getting Started",
             },
             {
-              to: "/guides/run-nwaku-node",
+              to: "/guides/nwaku/run-node",
               label: "Run a Nwaku Node",
             },
             {

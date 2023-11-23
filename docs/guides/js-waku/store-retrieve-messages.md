@@ -1,5 +1,6 @@
 ---
 title: Retrieve Messages Using Store Protocol
+hide_table_of_contents: true
 ---
 
 This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/learn/concepts/protocols#store).

@@ -111,7 +111,7 @@ Resource-limited refers to environments or devices restricting available resourc
 
 RLN Relay is an extension of the [Relay protocol](#relay) that uses [Rate Limit Nullifiers (RLN)](#rate-limit-nullifiers) to prevent spam economically by enforcing a rate limit on messages over time, imposing penalties, and facilitating network removal for spammers.
 
-### [SDK](/guides/nodes-and-sdks)
+### [SDK](/)
 
 SDKs are tools, libraries, and resources to integrate Waku's private, secure, and censorship-free communication features into various applications.
 

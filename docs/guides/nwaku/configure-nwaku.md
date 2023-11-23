@@ -1,5 +1,6 @@
 ---
-title: Nwaku Configuration Examples
+title: Node Configuration Examples
+hide_table_of_contents: true
 ---
 
 This guide provides detailed steps to configure a `nwaku` node for different use cases.

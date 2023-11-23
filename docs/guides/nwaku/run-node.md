@@ -1,5 +1,6 @@
 ---
 title: Run a Nwaku Node
+hide_table_of_contents: true
 ---
 
 Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/learn/concepts/protocols) they want to support based on their needs, motivations, and available resources.
@@ -38,7 +39,7 @@ You can run the `nwaku` binaries and Docker images on cloud service providers li
 
 ## Run the Node
 
-Once you have gotten the `nwaku` binary, run it using the [default configuration](/guides/reference/node-config-methods#default-configuration-values):
+Once you have gotten the `nwaku` binary, run it using the [default configuration](/guides/nwaku/config-methods#default-configuration-values):
 
 ```bash
 # Run with default configuration
@@ -49,7 +50,7 @@ Once you have gotten the `nwaku` binary, run it using the [default configuration
 ```
 
 :::tip
-To learn how to customise the configuration of a `nwaku` node, have a look at the [Node Configuration Methods](/guides/reference/node-config-methods) and [Node Configuration Options](/guides/reference/node-config-options) guides.
+To learn how to customise the configuration of a `nwaku` node, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) and [Node Configuration Options](/guides/nwaku/config-options) guides.
 :::
 
 ## Bootstrap the Node
@@ -158,5 +159,5 @@ enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7
 ```
 
 :::tip Congratulations!
-You have successfully started, configured, and connected a `nwaku` node to the Waku Network. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+You have successfully started, configured, and connected a `nwaku` node to the Waku Network. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::
