@@ -2,11 +2,11 @@
 title: Send and Receive Messages Using Light Push and Filter
 ---
 
-This guide provides detailed steps to start using the `@waku/sdk` package by setting up a [Light Node](/overview/reference/glossary#light-node) to send messages using the [Light Push protocol](/overview/concepts/protocols#light-push), and receive messages using the [Filter protocol](/overview/concepts/protocols#filter). Have a look at the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
+This guide provides detailed steps to start using the `@waku/sdk` package by setting up a [Light Node](/learn/glossary#light-node) to send messages using the [Light Push protocol](/learn/concepts/protocols#light-push), and receive messages using the [Filter protocol](/learn/concepts/protocols#filter). Have a look at the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
 
 ## Create a Light Node
 
-Use the `createLightNode()` function to create a [Light Node](/overview/reference/glossary#light-node) and interact with the Waku Network:
+Use the `createLightNode()` function to create a [Light Node](/learn/glossary#light-node) and interact with the Waku Network:
 
 ```js
 import { createLightNode } from "@waku/sdk";
@@ -34,7 +34,7 @@ import { waitForRemotePeer } from "@waku/sdk";
 await waitForRemotePeer(node);
 ```
 
-The `protocols` option allows you to specify the [protocols](/overview/concepts/protocols) that the remote peers should have enabled:
+The `protocols` option allows you to specify the [protocols](/learn/concepts/protocols) that the remote peers should have enabled:
 
 ```js
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
@@ -48,7 +48,7 @@ await waitForRemotePeer(node, [
 
 ## Choose a Content Topic
 
-[Choose a content topic](/overview/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
+[Choose a content topic](/learn/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
 
 ```js
 import { createEncoder, createDecoder } from "@waku/sdk";

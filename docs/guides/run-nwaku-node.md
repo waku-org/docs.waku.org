@@ -2,7 +2,7 @@
 title: Run a Nwaku Node
 ---
 
-Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/overview/concepts/protocols) they want to support based on their needs, motivations, and available resources.
+Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/learn/concepts/protocols) they want to support based on their needs, motivations, and available resources.
 
 This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
 
@@ -54,14 +54,14 @@ To learn how to customise the configuration of a `nwaku` node, have a look at th
 
 ## Bootstrap the Node
 
-To join the Waku Network, nodes must [bootstrap](/overview/reference/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/overview/concepts/peer-discovery) mechanisms:
+To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/learn/concepts/peer-discovery) mechanisms:
 
 | | Description | Documentation |
 | - | - | - |
 | Static Peers | Configure the bootstrap nodes that `nwaku` should establish connections upon startup | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers) |
-| DNS Discovery | Enable `nwaku` to bootstrap nodes using the [DNS Discovery](/overview/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
-| Discv5 | Enable `nwaku` to discover peers using the [Discv5](/overview/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
-| Peer Exchange | Enable [Peer Exchange](/overview/concepts/peer-exchange) protocol for light nodes to request peers from your `nwaku` node | [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange) |
+| DNS Discovery | Enable `nwaku` to bootstrap nodes using the [DNS Discovery](/learn/concepts/dns-discovery) mechanism | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
+| Discv5 | Enable `nwaku` to discover peers using the [Discv5](/learn/concepts/discv5) mechanism | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5) |
+| Peer Exchange | Enable [Peer Exchange](/learn/concepts/peer-exchange) protocol for light nodes to request peers from your `nwaku` node | [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange) |
 
 :::info
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.

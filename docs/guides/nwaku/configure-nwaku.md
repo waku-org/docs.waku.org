@@ -6,7 +6,7 @@ This guide provides detailed steps to configure a `nwaku` node for different use
 
 ## Connect to Other Peers
 
-To join the Waku Network, nodes must [bootstrap](/overview/reference/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/overview/concepts/peer-discovery) mechanisms:
+To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/learn/concepts/peer-discovery) mechanisms:
 
 - [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers)
 - [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery)
@@ -30,12 +30,12 @@ For example, consider the domain name `nwakunode.com`, which resolves to a `nwak
 Browser nodes can only connect to nodes with a domain name and secure WebSocket (`wss`) configured. These nodes will generate a discoverable ENR with `/wss` as the multiaddr and `/dns4` as the domain name. This configuration is essential for verifying domain certificates when establishing a secure connection.
 
 :::info
-This example describes configuring a domain name that resolves to your node's IP address and is unrelated to [DNS Discovery](/overview/concepts/dns-discovery).
+This example describes configuring a domain name that resolves to your node's IP address and is unrelated to [DNS Discovery](/learn/concepts/dns-discovery).
 :::
 
 ## Configure Store Protocol and Message Store
 
-To enable message caching and serve them to network peers, enable the [Store protocol](/overview/concepts/protocols#store) using the following configuration options:
+To enable message caching and serve them to network peers, enable the [Store protocol](/learn/concepts/protocols#store) using the following configuration options:
 
 - `store`: Enables storing messages to serve them to peers (disabled by default).
 - `store-message-retention-policy`: Retention policy of the store node (how long messages will be persisted). Three different retention policies are supported:
@@ -75,7 +75,7 @@ For example, consider a `nwaku` node that does not persist messages but can quer
 
 ## Generate and Configure a Node Key
 
-Nodes generate [new random key pairs](/overview/reference/glossary#node-key) at each boot, leading to different `multiaddrs`. To maintain consistency, you can use a pre-generated private key with the `nodekey` option:
+Nodes generate [new random key pairs](/learn/glossary#node-key) at each boot, leading to different `multiaddrs`. To maintain consistency, you can use a pre-generated private key with the `nodekey` option:
 
 ```bash
 ./build/wakunode2 --nodekey=[NODE PRIVATE KEY]
@@ -111,7 +111,7 @@ You can use the output `286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456f
 
 ## Configure WebSocket Transport
 
-WebSocket is the only [transport method](/overview/concepts/transports) browser nodes support using [@waku/sdk](/guides/js-waku/). To enable WebSocket in `nwaku` to serve browser peers, use the following configuration options:
+WebSocket is the only [transport method](/learn/concepts/transports) browser nodes support using [@waku/sdk](/guides/js-waku/). To enable WebSocket in `nwaku` to serve browser peers, use the following configuration options:
 
 - `websocket-support`: Enables WebSocket (`ws`) on the node (disabled by default).
 - `websocket-port` (optional): WebSocket listening port. If you omit this option, it will default to `8000`.
@@ -196,7 +196,7 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
 
 ## Configure Filter Protocol
 
-To enable `nwaku` to serve light clients, enable the [Filter protocol](/overview/concepts/protocols#filter) using `filter` option:
+To enable `nwaku` to serve light clients, enable the [Filter protocol](/learn/concepts/protocols#filter) using `filter` option:
 
 ```bash
 ./build/wakunode2 --filter=true
@@ -224,7 +224,7 @@ If you omit the `filter-timeout` option, it will default to `14400` seconds (4 h
 
 ## Configure Light Push Protocol
 
-To enable `nwaku` to serve light clients, enable the [Light Push protocol](/overview/concepts/protocols#light-push) using the `lightpush` option:
+To enable `nwaku` to serve light clients, enable the [Light Push protocol](/learn/concepts/protocols#light-push) using the `lightpush` option:
 
 ```bash
 ./build/wakunode2 --lightpush=true

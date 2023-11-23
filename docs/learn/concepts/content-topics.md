@@ -1,8 +1,9 @@
 ---
 title: Content Topics
+hide_table_of_contents: true
 ---
 
-`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/overview/concepts/protocols#relay) or [Filter](/overview/concepts/protocols#filter)) and retrieving historical messages ([Store](/overview/concepts/protocols#store)) that meet specific filtering criteria. Have a look at the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
+`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/learn/concepts/protocols#relay) or [Filter](/learn/concepts/protocols#filter)) and retrieving historical messages ([Store](/learn/concepts/protocols#store)) that meet specific filtering criteria. Have a look at the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
 
 ## Naming Format
 

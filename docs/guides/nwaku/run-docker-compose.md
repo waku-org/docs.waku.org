@@ -4,7 +4,7 @@ title: Run Nwaku with Docker Compose
 
 `nwaku-compose` is a ready-to-use Docker Compose setup that runs the following:
 
-- `nwaku` node running [Relay](/overview/concepts/protocols#relay) and [Store](/overview/concepts/protocols#store) protocols with [RLN](/overview/concepts/protocols#rln-relay) enabled.
+- `nwaku` node running [Relay](/learn/concepts/protocols#relay) and [Store](/learn/concepts/protocols#store) protocols with [RLN](/learn/concepts/protocols#rln-relay) enabled.
 - Simple frontend to interact with your node and the network to send and receive messages.
 - [Grafana](https://grafana.com/) metrics dashboard for advanced users or node operators.
 

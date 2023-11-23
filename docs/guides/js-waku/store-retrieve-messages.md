@@ -2,7 +2,7 @@
 title: Retrieve Messages Using Store Protocol
 ---
 
-This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
+This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/learn/concepts/protocols#store).
 
 ## Create a Light Node
 
@@ -29,7 +29,7 @@ await waitForRemotePeer(node, [Protocols.Store]);
 
 ## Choose a Content Topic
 
-[Choose a content topic](/overview/concepts/content-topics) for filtering the messages to retrieve and create a message `decoder`:
+[Choose a content topic](/learn/concepts/content-topics) for filtering the messages to retrieve and create a message `decoder`:
 
 ```js
 import { createDecoder } from "@waku/sdk";

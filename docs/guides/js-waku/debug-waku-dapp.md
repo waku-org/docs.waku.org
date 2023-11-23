@@ -44,7 +44,7 @@ To view debug logs in your browser's console, modify the local storage and add t
 
 ## Checking WebSocket Setup
 
-[Nwaku](/guides/run-nwaku-node) provides native support for WebSocket (`ws`) and WebSocket Secure (`wss`) protocols. These are the only [transports](/overview/concepts/transports) supported for connecting to the Waku Network via browsers.
+[Nwaku](/guides/run-nwaku-node) provides native support for WebSocket (`ws`) and WebSocket Secure (`wss`) protocols. These are the only [transports](/learn/concepts/transports) supported for connecting to the Waku Network via browsers.
 
 It's important to note that browsers impose certain limitations on WebSocket usage:
 

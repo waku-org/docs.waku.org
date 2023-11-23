@@ -2,7 +2,7 @@
 title: Manage Your Filter Subscriptions
 ---
 
-This guide provides detailed steps to manage [Filter](/overview/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Filter guide](/guides/js-waku/light-send-receive) for receiving messages with the `Light Push` and `Filter` protocol.
+This guide provides detailed steps to manage [Filter](/learn/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Filter guide](/guides/js-waku/light-send-receive) for receiving messages with the `Light Push` and `Filter` protocol.
 
 ## Overview
 
@@ -50,6 +50,10 @@ const pingAndReinitiateSubscription = async () => {
 // Periodically ping the subscription
 await pingAndReinitiateSubscription();
 ```
+
+:::info
+Pings will fail when there are temporary network degradations or reachability issues. This does not mean that the underlying connection has been closed.
+:::
 
 :::success Congratulations!
 You have successfully managed your `Filter` subscriptions to handle node disconnections in your application.

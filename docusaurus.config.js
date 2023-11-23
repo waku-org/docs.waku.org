@@ -65,60 +65,19 @@ const config = {
         {
           type: "docSidebar",
           position: "left",
-          sidebarId: "main",
-          label: "About Waku",
-        },
-        {
-          to: "/presentations",
-          label: "Presentations",
-          position: "left",
-        },
-        {
-          to: "/powered-by-waku",
-          label: "Powered by Waku",
-          position: "left",
-        },
-        {
-          type: "dropdown",
+          sidebarId: "guides",
           label: "Guides",
-          position: "right",
-          items: [
-            {
-              label: "Nodes and SDKs",
-              to: "/guides/nodes-and-sdks",
-            },
-            {
-              label: "Run a Nwaku Node",
-              to: "/guides/run-nwaku-node",
-            },
-            {
-              label: "JavaScript Waku SDK",
-              to: "/guides/js-waku/",
-            },
-          ],
         },
         {
-          type: "dropdown",
-          label: "Community",
-          position: "right",
-          items: [
-            {
-              label: "Join Our Community",
-              to: "/community",
-            },
-            {
-              label: "Contribute to Waku",
-              to: "/contribute",
-            },
-            {
-              label: "Waku Bounties",
-              to: "https://github.com/waku-org/bounties",
-            },
-            {
-              label: "Bug Bounty Program",
-              to: "https://hackenproof.com/status-dot-im/waku",
-            },
-          ],
+          type: "docSidebar",
+          position: "left",
+          sidebarId: "learn",
+          label: "Learn",
+        },
+        {
+          href: "https://discord.waku.org",
+          position: "left",
+          label: "Discord",
         },
         {
           href: "https://github.com/waku-org",
@@ -151,20 +110,24 @@ const config = {
           title: "Community",
           items: [
             {
-              href: "https://discord.waku.org",
+              href: "https://discord.waku.org/",
               label: "Discord",
             },
             {
-              href: "https://twitter.com/waku_org",
-              label: "Twitter",
+              href: "https://twitter.com/waku_org/",
+              label: "X",
             },
             {
-              href: "https://t.me/waku_org",
+              href: "https://t.me/waku_org/",
               label: "Telegram",
             },
             {
-              href: "https://forum.vac.dev",
+              href: "https://forum.vac.dev/",
               label: "Vac Forum",
+            },
+            {
+              href: "https://github.com/waku-org/bounties/",
+              label: "Bounties",
             },
           ],
         },
@@ -172,15 +135,15 @@ const config = {
           title: "Resources",
           items: [
             {
-              href: "https://github.com/waku-org",
+              href: "https://github.com/waku-org/",
               label: "GitHub",
             },
             {
-              href: "https://vac.dev/research",
+              href: "https://blog.waku.org/",
               label: "Blog",
             },
             {
-              href: "https://rfc.vac.dev",
+              href: "https://rfc.vac.dev/",
               label: "Vac RFCs",
             },
           ],

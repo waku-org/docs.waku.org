@@ -12,7 +12,7 @@ While the `@waku/sdk` package is primarily designed for browser environments, yo
 
 ### Protocol Implementation
 
-`@waku/sdk` focuses on the client side of the [Request/Response protocol](/overview/concepts/network-domains#requestresponse-domain). We'll have to replicate all the functionalities added to [nwaku](/guides/run-nwaku-node) to implement extra features.
+`@waku/sdk` focuses on the client side of the [Request/Response protocol](/learn/concepts/network-domains#requestresponse-domain). We'll have to replicate all the functionalities added to [nwaku](/guides/run-nwaku-node) to implement extra features.
 
 ### Codebase Complexity
 
@@ -20,9 +20,9 @@ While the `@waku/sdk` package is primarily designed for browser environments, yo
 
 ### Browser-Specific Protocols
 
-Certain features in `@waku/sdk` are tailored for browsers and might not translate seamlessly to NodeJS. For example, only `WebSocket` is supported in the browser, whereas a NodeJS application can benefit from using [transport methods](/overview/concepts/transports) like `TCP`.
+Certain features in `@waku/sdk` are tailored for browsers and might not translate seamlessly to NodeJS. For example, only `WebSocket` is supported in the browser, whereas a NodeJS application can benefit from using [transport methods](/learn/concepts/transports) like `TCP`.
 
-`@waku/sdk` default peer management caters to the browser's ephemeral nature, which is different for NodeJS. This is why [DNS Discovery](/overview/concepts/dns-discovery) and [Peer Exchange](/overview/concepts/peer-exchange) are the default discovery mechanisms for the browser but not for NodeJS and desktop applications.
+`@waku/sdk` default peer management caters to the browser's ephemeral nature, which is different for NodeJS. This is why [DNS Discovery](/learn/concepts/dns-discovery) and [Peer Exchange](/learn/concepts/peer-exchange) are the default discovery mechanisms for the browser but not for NodeJS and desktop applications.
 
 ## Recommendations
 

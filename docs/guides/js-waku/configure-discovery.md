@@ -2,15 +2,15 @@
 title: Bootstrap Nodes and Discover Peers
 ---
 
-This guide provides detailed steps to bootstrap your your node using [Static Peers](/overview/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/overview/concepts/dns-discovery).
+This guide provides detailed steps to bootstrap your your node using [Static Peers](/learn/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/learn/concepts/dns-discovery).
 
 :::tip
-Until [node incentivisation](/overview/reference/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
+Until [node incentivisation](/learn/research-in-progress#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/guides/nodes-and-sdks#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
 ## Default Bootstrap Method
 
-The `@waku/sdk` package provides a built-in bootstrapping method that uses [DNS Discovery](/overview/concepts/dns-discovery) to locate peers from the `waku v2.prod` `ENR` tree.
+The `@waku/sdk` package provides a built-in bootstrapping method that uses [DNS Discovery](/learn/concepts/dns-discovery) to locate peers from the `waku v2.prod` `ENR` tree.
 
 ```js
 import { createLightNode } from "@waku/sdk";
@@ -21,7 +21,7 @@ const node = await createLightNode({ defaultBootstrap: true });
 
 ## Configure Static Peers
 
-To bootstrap a node using [static peers](/overview/concepts/static-peers), first install the `@libp2p/bootstrap` package:
+To bootstrap a node using [static peers](/learn/concepts/static-peers), first install the `@libp2p/bootstrap` package:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -86,7 +86,7 @@ For local development using a `nwaku` node, use a `ws` address instead of `wss`.
 
 ## Configure DNS Discovery
 
-To bootstrap a node using [DNS Discovery](/overview/concepts/dns-discovery), first install the `@waku/dns-discovery` package:
+To bootstrap a node using [DNS Discovery](/learn/concepts/dns-discovery), first install the `@waku/dns-discovery` package:
 
 <Tabs groupId="package-manager">
 <TabItem value="npm" label="NPM">
@@ -154,7 +154,7 @@ const node = await createLightNode({
 
 ## Configure DNS Discovery and Static Peers
 
-You can also bootstrap your node using [DNS Discovery](/overview/concepts/dns-discovery) and [Static Peers](/overview/concepts/static-peers) simultaneously:
+You can also bootstrap your node using [DNS Discovery](/learn/concepts/dns-discovery) and [Static Peers](/learn/concepts/static-peers) simultaneously:
 
 ```js
 import { createLightNode } from "@waku/sdk";

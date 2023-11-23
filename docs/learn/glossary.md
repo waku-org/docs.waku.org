@@ -1,5 +1,6 @@
 ---
 title: Glossary
+hide_table_of_contents: true
 ---
 
 # Waku Docs Glossary
@@ -10,7 +11,7 @@ Definitions and usage of the terminology used in the Waku ecosystem.
 
 Bootstrapping is the initial entry point of a [node](#node) to the [Waku Network](#waku-network). Once connected, other [peer discovery](#peer-discovery) methods can be employed to locate other [peers](#peer) in the network.
 
-### [Content Topic](/overview/concepts/content-topics)
+### [Content Topic](/learn/concepts/content-topics)
 
 A content topic is a string attached to [messages](#waku-message) to enable [protocol-level](#protocol) features like selective message processing and retrieval based on specific criteria.
 
@@ -18,11 +19,11 @@ A content topic is a string attached to [messages](#waku-message) to enable [pro
 
 Dappnode is an open-source platform that simplifies the hosting and management of decentralised applications and blockchain nodes, including [Waku](#waku).
 
-### [Discv5](/overview/concepts/discv5)
+### [Discv5](/learn/concepts/discv5)
 
 Discv5 is a [peer discovery](#peer-discovery) mechanism using a Distributed Hash Table (DHT) to store [ENR](#enr) records, providing censorship resistance, load distribution, and enhanced network resilience.
 
-### [DNS Discovery](/overview/concepts/dns-discovery)
+### [DNS Discovery](/learn/concepts/dns-discovery)
 
 DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the retrieval of an [ENR](#enr) tree from the TXT field of a domain name, enabling the storage of [node](#node) connection details and promoting decentralisation.
 
@@ -30,11 +31,11 @@ DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the r
 
 Ethereum Node Record (ENR) is a specification used to represent and identify [nodes](#node), facilitating [discovery](#peer-discovery) and communication within the network. Besides connection details, `ENR` also includes node configuration information like enabled protocol and shards.
 
-### [Filter](/overview/concepts/protocols#filter)
+### [Filter](/learn/concepts/protocols#filter)
 
 Filter is a [protocol](#protocol) that enables [light nodes](#light-node) to selectively subscribe to specific [messages](#waku-message) transmitted by [peers](#peer) using [content topics](#content-topic). It is designed to be a lightweight alternative for accessing the [Relay](#relay) network.
 
-### [GossipSub](/overview/concepts/network-domains#gossip-domain)
+### [GossipSub](/learn/concepts/network-domains#gossip-domain)
 
 GossipSub is a [protocol](#protocol) for efficient and scalable information dissemination in decentralised networks commonly used in blockchain systems.
 
@@ -46,7 +47,7 @@ Libp2p is a modular network stack and protocol suite that allows developers to b
 
 A light node is a [resource-limited](#resource-limited) device or client that leverages service nodes to access the [Relay](#relay) network.
 
-### [Light Push](/overview/concepts/protocols#light-push)
+### [Light Push](/learn/concepts/protocols#light-push)
 
 Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the [Relay](#relay) network and receive acknowledgements confirming that a [peer](#peer) has received them.
 
@@ -70,11 +71,11 @@ The payload field in a [Waku Message](#waku-message) contains the application da
 
 A peer refers to other [nodes](#node) and participants of the [Waku Network](#waku-network) with whom communication and interaction are possible.
 
-### [Peer Discovery](/overview/concepts/peer-discovery)
+### [Peer Discovery](/learn/concepts/peer-discovery)
 
 Peer discovery is when a [node](#node) locates and gets information about other [peers](#peer) in the [Waku Network](#waku-network).
 
-### [Peer Exchange](/overview/concepts/peer-exchange)
+### [Peer Exchange](/learn/concepts/peer-exchange)
 
 Peer exchange is a [peer discovery](#peer-discovery) mechanism that enables [light nodes](#light-node) to request and receive peers from other nodes in the network, allowing them to bootstrap and expand their connections without depending on [Discv5](#discv5).
 
@@ -82,7 +83,7 @@ Peer exchange is a [peer discovery](#peer-discovery) mechanism that enables [lig
 
 `PeerID` is the unique identifier of a [node](#node) in the [Waku Network](#waku-network) generated from the cryptographic hash of the node's public key.
 
-### [Protocol](/overview/concepts/protocols)
+### [Protocol](/learn/concepts/protocols)
 
 A protocol is a set of rules that enables [nodes](#node) within the [Waku Network](#waku-network) to perform various functionalities such as message sending, relaying, filtering, storing, retrieving, and more.
 
@@ -98,7 +99,7 @@ A Pub/Sub topic is a string that serves as an identifier for the topic of intere
 
 Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that enables rate limiting functionality while preserving the users's anonymity.
 
-### [Relay](/overview/concepts/protocols#relay)
+### [Relay](/learn/concepts/protocols#relay)
 
 Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship resistant [message](#waku-message) sending and receiving among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku-network) to accommodate many nodes efficiently.
 
@@ -106,7 +107,7 @@ Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsu
 
 Resource-limited refers to environments or devices restricting available resources, including bandwidth, CPU, memory, disk, and battery power.
 
-### [RLN Relay](/overview/concepts/protocols#rln-relay)
+### [RLN Relay](/learn/concepts/protocols#rln-relay)
 
 RLN Relay is an extension of the [Relay protocol](#relay) that uses [Rate Limit Nullifiers (RLN)](#rate-limit-nullifiers) to prevent spam economically by enforcing a rate limit on messages over time, imposing penalties, and facilitating network removal for spammers.
 
@@ -114,11 +115,11 @@ RLN Relay is an extension of the [Relay protocol](#relay) that uses [Rate Limit 
 
 SDKs are tools, libraries, and resources to integrate Waku's private, secure, and censorship-free communication features into various applications.
 
-### [Store](/overview/concepts/protocols#store)
+### [Store](/learn/concepts/protocols#store)
 
 Store is a [protocol](#protocol) that enables the storage of relayed [messages](#waku-message) in the network, allowing offline peers to retrieve missed messages upon reconnecting to the network.
 
-### [Transport](/overview/concepts/transports)
+### [Transport](/learn/concepts/transports)
 
 A transport is a network mechanism that establishes connections between [peers](#peer) and enables efficient transmission, routing, and delivery of data packets.
 
@@ -126,7 +127,7 @@ A transport is a network mechanism that establishes connections between [peers](
 
 Waku is a family of private, secure, decentralised, and peer-to-peer web3 communication [protocols](#protocol) designed to operate in [resource-limited](#resource-limited) environments and suitable for [node](#node) or desktop application use. Additionally, these protocols collectively form the [Waku Network](#waku-network).
 
-### [Waku Message](/overview/concepts/protocols#waku-message)
+### [Waku Message](/learn/concepts/protocols#waku-message)
 
 Waku Message defines the structure of messages in the [Waku Network](#waku-network), including the [content topic](#content-topic), [payload](#payload), and metadata for application-specific processing.
 
@@ -134,7 +135,7 @@ Waku Message defines the structure of messages in the [Waku Network](#waku-netwo
 
 Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku Network](#waku-network). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
 
-### [Waku Network](/overview/waku-network)
+### [Waku Network](/learn/waku-network)
 
 The Waku Network is an open-access, scalable peer-to-peer messaging network emphasizing privacy protection and accessibility to [resource limited](#resource-limited) devices.
 

@@ -1,5 +1,6 @@
 ---
-title: Research in Progress
+title: Research
+hide_table_of_contents: true
 ---
 
 The following features are currently experimental and under research and initial implementation:

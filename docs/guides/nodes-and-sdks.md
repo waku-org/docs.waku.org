@@ -34,7 +34,6 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 
 | | Description | Documentation |
 | - | - | - |
-| [React Native](https://github.com/waku-org/waku-react-native) | React Native wrapper using `go-waku` bindings designed for native mobile integration | COMING SOON |
 | Swift (iOS) | `go-waku` bindings for Swift applications to seamlessly integrate Waku | COMING SOON |
 | Kotlin (Android) | `go-waku` bindings for Kotlin applications to seamlessly integrate Waku | COMING SOON |
 

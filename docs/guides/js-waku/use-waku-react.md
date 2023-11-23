@@ -69,7 +69,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ```
 
-Next, create and start a [Light Node](/overview/reference/glossary#light-node) using the `useWaku()` function within the `App.jsx` file:
+Next, create and start a [Light Node](/learn/glossary#light-node) using the `useWaku()` function within the `App.jsx` file:
 
 ```js title="src/App.jsx"
 import { useWaku } from "@waku/react";

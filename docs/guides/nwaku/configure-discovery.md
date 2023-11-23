@@ -10,7 +10,7 @@ You can configure a `nwaku` node to use multiple peer discovery mechanisms simul
 
 ## Configure Static Peers
 
-You can provide [static peers](/overview/concepts/static-peers) to a `nwaku` node during startup using the `staticnode` configuration option. To connect to multiple peers on startup, repeat the `staticnode` option:
+You can provide [static peers](/learn/concepts/static-peers) to a `nwaku` node during startup using the `staticnode` configuration option. To connect to multiple peers on startup, repeat the `staticnode` option:
 
 ```bash
 ./build/wakunode2 \
@@ -28,7 +28,7 @@ For example, consider a `nwaku` node that connects to two static peers on the sa
 
 ## Configure DNS Discovery
 
-To enable [DNS Discovery](/overview/concepts/dns-discovery) in a `nwaku` node, use the following configuration options:
+To enable [DNS Discovery](/learn/concepts/dns-discovery) in a `nwaku` node, use the following configuration options:
 
 - `dns-discovery`: Enables `DNS Discovery` on the node (disabled by default).
 - `dns-discovery-url`: URL for DNS node list in the format `enrtree://<key>@<fqdn>` where `<fqdn>` is the fully qualified domain name and `<key>` is the base32 encoding of the compressed 32-byte public key that signed the list at that location.
@@ -57,7 +57,7 @@ For example, consider a `nwaku` node that enables `DNS Discovery`, connects to a
 
 ## Configure Discv5
 
-To enable [Discv5](/overview/concepts/discv5) in a `nwaku` node, use the following configuration options:
+To enable [Discv5](/learn/concepts/discv5) in a `nwaku` node, use the following configuration options:
 
 - `discv5-discovery`: Enables `Discv5` on the node (disabled by default).
 - `discv5-bootstrap-node`: ENR for `Discv5` routing table bootstrap node. You can repeat this option to provide multiple bootstrap entries.
@@ -83,7 +83,7 @@ When Discv5 is enabled and used with [DNS Discovery](#configure-dns-discovery), 
 
 ## Configure Peer Exchange
 
-To enable [Peer Exchange](/overview/concepts/peer-exchange) in a `nwaku` node, use the following configuration options:
+To enable [Peer Exchange](/learn/concepts/peer-exchange) in a `nwaku` node, use the following configuration options:
 
 - `peer-exchange`: Enables `Peer Exchange` on the node as a responder (disabled by default).
 - `peer-exchange-node` (optional): Multiaddr for bootstrap node with the peer exchange protocol enabled.

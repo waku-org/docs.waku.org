@@ -1,5 +1,6 @@
 ---
 title: Transports
+hide_table_of_contents: true
 ---
 
 Transports help move data packets across a network by establishing connections between peers. They define the rules and protocols to ensure efficient network transmission, routing, and data delivery.
