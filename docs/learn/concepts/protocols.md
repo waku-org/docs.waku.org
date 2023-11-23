@@ -9,7 +9,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 
 `Relay` protocol employs a Pub/Sub architecture to facilitate the sending and receiving of messages among peers. It extends the [libp2p GossipSub protocol](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md) to create a privacy-focused peer-to-peer messaging protocol that enables secure communication channels, encryption, and protection against censorship. It also scales the Waku Network to accommodate many nodes efficiently.
 
-## [RLN Relay](https://rfc.vac.dev/spec/17/)
+## [RLN relay](https://rfc.vac.dev/spec/17/)
 
 `RLN Relay` protocol extends the `Relay` protocol by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/) to provide efficient and economic spam-prevention. It enforces a rate limit on messages over time for all peers in the network, economically preventing spam, and imposes financial penalties and network removal for spammers. You can find more details in the [RLN Relay blog post](https://vac.dev/rln-relay).
 
@@ -29,7 +29,7 @@ Waku takes a modular approach, providing a range of protocols that enable applic
 Using `Relay` and `Filter` protocols is recommended when a node is online, as `Store` does not guarantee data availability. The `Store` protocol is suitable for retrieving messages when connecting to the network, like when a DApp starts.
 :::
 
-## [Light Push](https://rfc.vac.dev/spec/19/)
+## [Light push](https://rfc.vac.dev/spec/19/)
 
 `Light Push` is a [Request/Response](/learn/concepts/network-domains#requestresponse-domain) protocol for nodes with limited bandwidth and short connection windows. It allows a client to receive an acknowledgement when sending messages, indicating that at least one peer has received them. Subsequently, the remote peer forwards these messages to the `Relay` network.
 
@@ -37,7 +37,7 @@ Using `Relay` and `Filter` protocols is recommended when a node is online, as `S
 While the `Light Push` protocol acknowledges the receipt by the remote peer, it does not guarantee network-wide propagation.
 :::
 
-## [Waku Message](https://rfc.vac.dev/spec/14)
+## [Waku message](https://rfc.vac.dev/spec/14)
 
 `Waku Message` specifies the structure and format of messages in the Waku Network. It includes the following attributes:
 

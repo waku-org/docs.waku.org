@@ -153,7 +153,7 @@ const config = {
           items: [
             {
               href: "/terms",
-              label: "Terms & Conditions",
+              label: "Terms of Use",
             },
           ],
         },

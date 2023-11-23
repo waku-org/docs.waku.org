@@ -9,7 +9,7 @@ This guide provides detailed steps to configure a `nwaku` node to discover and c
 You can configure a `nwaku` node to use multiple peer discovery mechanisms simultaneously.
 :::
 
-## Configure Static Peers
+## Configure static peers
 
 You can provide [static peers](/learn/concepts/static-peers) to a `nwaku` node during startup using the `staticnode` configuration option. To connect to multiple peers on startup, repeat the `staticnode` option:
 
@@ -27,7 +27,7 @@ For example, consider a `nwaku` node that connects to two static peers on the sa
   --staticnode=/ip4/0.0.0.0/tcp/60003/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ
 ```
 
-## Configure DNS Discovery
+## Configure DNS discovery
 
 To enable [DNS Discovery](/learn/concepts/dns-discovery) in a `nwaku` node, use the following configuration options:
 
@@ -82,7 +82,7 @@ For example, consider a `nwaku` node that enables `Discv5` and bootstraps its ro
 When Discv5 is enabled and used with [DNS Discovery](#configure-dns-discovery), the `nwaku` node will attempt to bootstrap the Discv5 routing table by extracting `ENRs` from peers discovered through DNS.
 :::
 
-## Configure Peer Exchange
+## Configure peer exchange
 
 To enable [Peer Exchange](/learn/concepts/peer-exchange) in a `nwaku` node, use the following configuration options:
 

@@ -15,7 +15,7 @@ import FilterPingFlow from "@site/diagrams/_filter-ping-flow.md";
 <FilterPingFlow />
 ```
 
-## Pinging Filter Subscriptions
+## Pinging filter subscriptions
 
 The `@waku/sdk` package provides a `Filter.ping()` function to ping subscriptions and check for an active connection. To begin, create a `Filter` subscription:
 

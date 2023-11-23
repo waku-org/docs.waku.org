@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 `Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/learn/concepts/protocols#relay) or [Filter](/learn/concepts/protocols#filter)) and retrieving historical messages ([Store](/learn/concepts/protocols#store)) that meet specific filtering criteria. Have a look at the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
 
-## Naming Format
+## Naming format
 
 Here is the recommended format for content topics:
 
@@ -25,7 +25,7 @@ For example, if your DApp is called `SuperCrypto` and it allows users to receive
 While you can choose any encoding format for your `Content Topic`, we highly recommend using Protocol Buffers (`proto`) because of its efficiency. Choosing a lightweight format ensures optimal performance of your DApp.
 :::
 
-## Naming Considerations
+## Naming considerations
 
 When choosing a content topic, it is crucial to consider privacy implications. The `Filter`, `Store`, and `Light Push` protocols disclose content topics to peers, enabling said peer to link IP and content topic interests. `Relay` provides recipient anonymity thanks to `GossipSub`, but this may be lost if the content topic reveals information about the user.
 

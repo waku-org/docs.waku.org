@@ -11,7 +11,7 @@ Definitions and usage of the terminology used in the Waku ecosystem.
 
 Bootstrapping is the initial entry point of a [node](#node) to the [Waku Network](#waku-network). Once connected, other [peer discovery](#peer-discovery) methods can be employed to locate other [peers](#peer) in the network.
 
-### [Content Topic](/learn/concepts/content-topics)
+### [Content topic](/learn/concepts/content-topics)
 
 A content topic is a string attached to [messages](#waku-message) to enable [protocol-level](#protocol) features like selective message processing and retrieval based on specific criteria.
 
@@ -23,7 +23,7 @@ Dappnode is an open-source platform that simplifies the hosting and management o
 
 Discv5 is a [peer discovery](#peer-discovery) mechanism using a Distributed Hash Table (DHT) to store [ENR](#enr) records, providing censorship resistance, load distribution, and enhanced network resilience.
 
-### [DNS Discovery](/learn/concepts/dns-discovery)
+### [DNS discovery](/learn/concepts/dns-discovery)
 
 DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the retrieval of an [ENR](#enr) tree from the TXT field of a domain name, enabling the storage of [node](#node) connection details and promoting decentralisation.
 
@@ -43,15 +43,15 @@ GossipSub is a [protocol](#protocol) for efficient and scalable information diss
 
 Libp2p is a modular network stack and protocol suite that allows developers to build decentralised, peer-to-peer applications across various network protocols.
 
-### Light Node
+### Light node
 
 A light node is a [resource-limited](#resource-limited) device or client that leverages service nodes to access the [Relay](#relay) network.
 
-### [Light Push](/learn/concepts/protocols#light-push)
+### [Light push](/learn/concepts/protocols#light-push)
 
 Light push is a protocol enabling [light nodes](#light-node) to send [messages](#waku-message) to the [Relay](#relay) network and receive acknowledgements confirming that a [peer](#peer) has received them.
 
-### Mostly Offline
+### Mostly offline
 
 Mostly offline devices are clients who spend most of their time offline or disconnected from the internet and only occasionally to the internet and [Waku Network](#waku-network). Examples include browsers and mobile phones.
 
@@ -59,7 +59,7 @@ Mostly offline devices are clients who spend most of their time offline or disco
 
 A node is a device or client that implements Waku [protocols](#protocol) and leverages the [Waku Network](#waku-network) to enable secure and private peer-to-peer web3 communication.
 
-### Node Key
+### Node key
 
 A node key is a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (64-char hex string) private key for generating the [PeerID](#peer-id), [listening](#transport) addresses, and [discovery](#peer-discovery) addresses of a Waku node.
 
@@ -71,11 +71,11 @@ The payload field in a [Waku Message](#waku-message) contains the application da
 
 A peer refers to other [nodes](#node) and participants of the [Waku Network](#waku-network) with whom communication and interaction are possible.
 
-### [Peer Discovery](/learn/concepts/peer-discovery)
+### [Peer discovery](/learn/concepts/peer-discovery)
 
 Peer discovery is when a [node](#node) locates and gets information about other [peers](#peer) in the [Waku Network](#waku-network).
 
-### [Peer Exchange](/learn/concepts/peer-exchange)
+### [Peer exchange](/learn/concepts/peer-exchange)
 
 Peer exchange is a [peer discovery](#peer-discovery) mechanism that enables [light nodes](#light-node) to request and receive peers from other nodes in the network, allowing them to bootstrap and expand their connections without depending on [Discv5](#discv5).
 
@@ -91,11 +91,11 @@ A protocol is a set of rules that enables [nodes](#node) within the [Waku Networ
 
 Publish/Subscribe (Pub/Sub) is an asynchronous messaging pattern where publishers send messages to topics, and subscribers receive messages from topics of interest, allowing efficient one-to-many communication.
 
-### Pub/Sub Topic
+### Pub/Sub topic
 
 A Pub/Sub topic is a string that serves as an identifier for the topic of interest among [GossipSub](#gossipsub) peers. Peers interested in the same topic are likely to maintain a connection and forward messages received on that topic.
 
-### [Rate Limit Nullifiers](https://rfc.vac.dev/spec/64/#rln-rate-limiting)
+### [Rate limit nullifiers](https://rfc.vac.dev/spec/64/#rln-rate-limiting)
 
 Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that enables rate limiting functionality while preserving the users's anonymity.
 
@@ -103,11 +103,11 @@ Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that 
 
 Relay is a [protocol](#protocol) that extends the [GossipSub protocol](#gossipsub) to enable secure and censorship resistant [message](#waku-message) sending and receiving among [peers](#peer) while preserving privacy. It also scales the [Waku Network](#waku-network) to accommodate many nodes efficiently.
 
-### Resource-Limited
+### Resource-limited
 
 Resource-limited refers to environments or devices restricting available resources, including bandwidth, CPU, memory, disk, and battery power.
 
-### [RLN Relay](/learn/concepts/protocols#rln-relay)
+### [RLN relay](/learn/concepts/protocols#rln-relay)
 
 RLN Relay is an extension of the [Relay protocol](#relay) that uses [Rate Limit Nullifiers (RLN)](#rate-limit-nullifiers) to prevent spam economically by enforcing a rate limit on messages over time, imposing penalties, and facilitating network removal for spammers.
 
@@ -127,18 +127,18 @@ A transport is a network mechanism that establishes connections between [peers](
 
 Waku is a family of private, secure, decentralised, and peer-to-peer web3 communication [protocols](#protocol) designed to operate in [resource-limited](#resource-limited) environments and suitable for [node](#node) or desktop application use. Additionally, these protocols collectively form the [Waku Network](#waku-network).
 
-### [Waku Message](/learn/concepts/protocols#waku-message)
+### [Waku message](/learn/concepts/protocols#waku-message)
 
 Waku Message defines the structure of messages in the [Waku Network](#waku-network), including the [content topic](#content-topic), [payload](#payload), and metadata for application-specific processing.
 
-### [Waku Message Payload Encryption](https://rfc.vac.dev/spec/26/)
+### [Waku message payload encryption](https://rfc.vac.dev/spec/26/)
 
 Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku Network](#waku-network). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
 
-### [Waku Network](/learn/waku-network)
+### [Waku network](/learn/waku-network)
 
 The Waku Network is an open-access, scalable peer-to-peer messaging network emphasizing privacy protection and accessibility to [resource limited](#resource-limited) devices.
 
-### [Waku Noise](https://rfc.vac.dev/spec/35/)
+### [Waku noise](https://rfc.vac.dev/spec/35/)
 
 Waku Noise is a specified way to use the [Noise Protocol Framework](http://noiseprotocol.org/) to build protocols that enable secure key-exchange mechanisms for encrypted communication with confidentiality, authenticity, integrity, strong forward secrecy, and identity-hiding properties.

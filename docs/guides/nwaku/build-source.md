@@ -57,7 +57,7 @@ sudo ln -s /opt/homebrew/opt/postgresql@15/lib/libpq.5.dylib /usr/local/lib/libp
 </TabItem>
 </Tabs>
 
-## Clone the Repository
+## Clone the repository
 
 Get the source code from the GitHub repository. The default branch is `master`, the release candidate for major updates.
 
@@ -70,7 +70,7 @@ cd nwaku
 You can use `git tag -l` to check specific version tags.
 :::
 
-## Build the Binary
+## Build the binary
 
 Build the `nwaku` binary:
 
@@ -84,7 +84,7 @@ The first `make` invocation updates to all Git submodules. After each `git pull`
 make update
 ```
 
-## Run the Binary
+## Run the binary
 
 Nwaku will create the `wakunode2` binary in the `./build/` directory.
 
@@ -103,7 +103,7 @@ To learn more about running nwaku, have a look at these guides:
 - [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose)
 - [Node Configuration Methods](/guides/nwaku/config-methods)
 
-## Run Test Suite
+## Run test suite
 
 Run the tests for Waku:
 

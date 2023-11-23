@@ -20,7 +20,7 @@ def parse_table_heading(line: str) -> Tuple[str, bool]:
         r'(Discovery V5)', r'(Websocket)'
     ]))
     word_replace_dict = {
-        'Configuration': 'Config', 'And': 'and', 'Lightpush': 'Light Push',
+        'Configuration': 'config', 'And': 'and', 'Lightpush': 'Light push',
         'Json-Rpc': 'JSON-RPC', 'Rest Http': 'REST HTTP', 'Dns': 'DNS',
         'Discovery V5': 'Discv5', 'Websocket': 'WebSocket'
     }

@@ -5,11 +5,11 @@ hide_table_of_contents: true
 
 This guide provides detailed steps to enable and use debug logs to troubleshoot your Waku DApp, whether in a NodeJS or browser environment and check your WebSocket connections in [nwaku](/guides/nwaku/run-node).
 
-## Enabling Debug Logs
+## Enabling debug logs
 
 When resolving issues in your Waku DApp, debug logs can be helpful. The `@waku/sdk` and `libp2p` packages use the debug tool to handle and show logs that help you debug effectively.
 
-### NodeJS Environments
+### NodeJS environments
 
 To enable debug logs for `@waku/sdk` on NodeJS, you must set the `DEBUG` environment variable. To only enable debug logs for `@waku/sdk`:
 
@@ -29,7 +29,7 @@ To enable debug logs for all components:
 export DEBUG=*
 ```
 
-### Browser Environments
+### Browser environments
 
 To view debug logs in your browser's console, modify the local storage and add the `debug` key. Here are guides for various modern browsers:
 
@@ -43,7 +43,7 @@ To view debug logs in your browser's console, modify the local storage and add t
 | `debug` | `waku*,libp2p*` | Enables `@waku/sdk` and `libp2p` debug logs |
 | `debug` | `*` | Enables all debug logs |
 
-## Checking WebSocket Setup
+## Checking WebSocket setup
 
 [Nwaku](/guides/nwaku/run-node) provides native support for WebSocket (`ws`) and WebSocket Secure (`wss`) protocols. These are the only [transports](/learn/concepts/transports) supported for connecting to the Waku Network via browsers.
 
@@ -55,7 +55,7 @@ It's important to note that browsers impose certain limitations on WebSocket usa
 
 If you encounter difficulties when connecting to a remote node using `wss`, follow these steps:
 
-### Try Websocat for Connection
+### Try Websocat for connection
 
 Attempt to connect using [websocat](https://github.com/vi/websocat), a tool for WebSocket interactions. Test the WebSocket port using the command:
 
@@ -73,7 +73,7 @@ $ websocat -v wss://nwakunode.com:1234
 
 The connection works if the `[INFO  websocat::ws_client_peer] Connected to ws` log entry appears. If not, [check that the certificate is valid](#check-certificate-validity)
 
-### Check Certificate Validity
+### Check certificate validity
 
 Verify the certificate's validity by passing the `-k` or `--insecure` flag to handle invalid certificates in `websocat`:
 
@@ -83,7 +83,7 @@ websocat -v -k wss://nwakunode.com:1234
 
 If this works, the certificate's invalidity is the problem, and you should investigate the cause of the error if not, [check if the WebSocket port is accessible](#check-websocket-port-accessibility).
 
-### Check WebSocket Port Accessibility
+### Check WebSocket port accessibility
 
 Use `telnet` or another networking tool to verify if the WebSocket port is open and accessible. For example, if the multiaddr is `/dns4/nwakunode.com/tcp/1234/wss/p2p/16...`, use the command:
 

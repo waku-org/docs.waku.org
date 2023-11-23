@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 This guide provides detailed steps to configure a `nwaku` node for different use cases.
 
-## Connect to Other Peers
+## Connect to other peers
 
 To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/learn/concepts/peer-discovery) mechanisms:
 
@@ -14,7 +14,7 @@ To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) 
 - [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5)
 - [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange)
 
-## Configure a Domain Name
+## Configure a domain name
 
 You can set up an IPv4 DNS domain name that resolves to the public IPv4 address of a node using the `dns4-domain-name` option. This allows the node's publicly announced multiaddrs to use the `/dns4` scheme.
 
@@ -34,7 +34,7 @@ Browser nodes can only connect to nodes with a domain name and secure WebSocket 
 This example describes configuring a domain name that resolves to your node's IP address and is unrelated to [DNS Discovery](/learn/concepts/dns-discovery).
 :::
 
-## Configure Store Protocol and Message Store
+## Configure store protocol and message store
 
 To enable message caching and serve them to network peers, enable the [Store protocol](/learn/concepts/protocols#store) using the following configuration options:
 
@@ -74,7 +74,7 @@ For example, consider a `nwaku` node that does not persist messages but can quer
 ./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```
 
-## Generate and Configure a Node Key
+## Generate and configure a node key
 
 Nodes generate [new random key pairs](/learn/glossary#node-key) at each boot, leading to different `multiaddrs`. To maintain consistency, you can use a pre-generated private key with the `nodekey` option:
 
@@ -110,7 +110,7 @@ You can use the output `286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456f
 ./build/wakunode2 --nodekey=286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456fb67680e8
 ```
 
-## Configure WebSocket Transport
+## Configure WebSocket transport
 
 WebSocket is the only [transport method](/learn/concepts/transports) browser nodes support using [@waku/sdk](/guides/js-waku/). To enable WebSocket in `nwaku` to serve browser peers, use the following configuration options:
 
@@ -155,7 +155,7 @@ sudo letsencrypt -d <your.domain.name>
 ```
 :::
 
-## Configure REST API Server
+## Configure REST API server
 
 Nwaku provides a REST API to interact with the node and Waku Network. To enable the REST API, use the following configuration options:
 
@@ -195,7 +195,7 @@ Consider a `nwaku` node that enabled the REST `admin` and `private` API with a m
   --rest-relay-cache-capacity=100
 ```
 
-## Configure Filter Protocol
+## Configure filter protocol
 
 To enable `nwaku` to serve light clients, enable the [Filter protocol](/learn/concepts/protocols#filter) using `filter` option:
 
@@ -223,7 +223,7 @@ For example, consider a `nwaku` node that requests content filtering of messages
 If you omit the `filter-timeout` option, it will default to `14400` seconds (4 hours).
 :::
 
-## Configure Light Push Protocol
+## Configure light push protocol
 
 To enable `nwaku` to serve light clients, enable the [Light Push protocol](/learn/concepts/protocols#light-push) using the `lightpush` option:
 
@@ -243,7 +243,7 @@ For example, consider a `nwaku` node that requests lightpush of published messag
 ./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
 ```
 
-## Run Nwaku Behind a Reverse Proxy
+## Run nwaku behind a reverse proxy
 
 When using a reverse proxy server for SSL/TLS encryption, you only want to announce the proxy server's IP or domain. Nwaku provides the `ext-multiaddr-only` and `ext-multiaddr` options for specifying published multiaddr:
 

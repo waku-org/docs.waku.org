@@ -80,4 +80,3 @@ These Website Terms of Use cover the entire agreement between you and us regardi
 The captions and headings identifying sections and subsections of these Website Terms of Use are for reference only and do not define, modify, expand, limit, or affect the interpretation of any provisions of these Website Terms of Use.
 
 If any part of these Website Terms of Use is held invalid or unenforceable, that part will be severable from these Website Terms of Use, and the remaining portions will remain in full force and effect. If we fail to enforce any of these Website Terms of Use, that does not mean that we have waived our right to enforce them.
-

@@ -37,7 +37,7 @@ You can also use the `@waku/sdk` package via a CDN without installing it on your
 import * as waku from "https://unpkg.com/@waku/sdk@latest/bundle/index.js";
 ```
 
-## Message Structure
+## Message structure
 
 We recommend creating a message structure for your application using [Protocol Buffers](https://protobuf.dev/) for the following reasons:
 
@@ -77,7 +77,7 @@ import "https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js";
 <script src="https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js"></script>
 ```
 
-## Getting Started
+## Getting started
 
 Have a look at the quick start guide and comprehensive tutorials to learn how to build applications using `@waku/sdk`:
 
@@ -96,7 +96,7 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
-## Get Help and Report Issues
+## Get help and report issues
 
 To engage in general discussions, seek assistance, or stay updated with the latest news, visit the `#support` and `#js-waku-contribute` channels on the [Waku Discord](https://discord.waku.org).
 

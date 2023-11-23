@@ -14,7 +14,7 @@ Waku nodes can be configured using a combination of the following methods:
 Take note of the precedence order: Each configuration method overrides the one below it (e.g., command line options override environment variables and configuration files).
 :::
 
-## Command Line Options
+## Command line options
 
 Node configuration is primarily done using command line options, which override other methods. Specify [configuration options](/guides/nwaku/config-options) by providing them in this format after the binary name:
 
@@ -28,7 +28,7 @@ When running your node with Docker, provide the command line options after the i
 docker run statusteam/nim-waku --tcp-port=65000
 ```
 
-## Environment Variables
+## Environment variables
 
 Nodes can be configured using environment variables by prefixing the variable name with `WAKUNODE2_` and using the configuration option in [SCREAMING_SNAKE_CASE](https://en.wiktionary.org/wiki/screaming_snake_case) format.
 
@@ -48,7 +48,7 @@ docker run -e "WAKUNODE2_TCP_PORT=65000" statusteam/nim-waku
 This is the second configuration method in order of precedence. [Command Line Options](#command-line-options) override environment variables.
 :::
 
-## Configuration Files
+## Configuration files
 
 Nodes can be configured using a configuration file following the [TOML](https://toml.io/en/) format:
 
@@ -79,7 +79,7 @@ docker run -e "WAKUNODE2_CONFIG_FILE=[TOML CONFIGURATION FILE]" statusteam/nim-w
 This is the third configuration method in order of precedence. [Command Line Options](#command-line-options) and [Environment Variables](#environment-variables) override configuration files.
 :::
 
-## Default Configuration Values
+## Default configuration values
 
 The default configuration is used when no other options are specified. By default, a `nwaku` node does the following:
 

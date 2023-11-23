@@ -39,7 +39,7 @@ Next, select a template to initialise your app from:
 If you have previously installed `@waku/create-app` globally, we recommend uninstalling the package to ensure that `npx` always uses the latest version.
 :::
 
-## Contributing New Templates
+## Contributing new templates
 
 We welcome and appreciate the contributions of templates for the `@waku/create-app` package. To contribute a template, please follow these steps:
 

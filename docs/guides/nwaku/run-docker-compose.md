@@ -19,14 +19,14 @@ This guide provides detailed steps to configure, run, monitor, and interact with
 - [Wallet with Sepolia Ethereum](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#2-obtain-sepolia-eth-from-faucet) (less than 0.1 Sepolia ETH)
 - A password to protect your RLN membership
 
-## Clone the Repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/waku-org/nwaku-compose
 cd nwaku-compose
 ```
 
-## Configure the Setup
+## Configure the setup
 
 Modify the `run_node.sh` file to customise your [node's configuration](/guides/nwaku/config-options) and `docker-compose.yml` to specify particular [Docker image](https://hub.docker.com/r/statusteam/nim-waku/tags) tag. Next, export your Ethereum Sepolia configuration and membership password:
 
@@ -36,7 +36,7 @@ export ETH_TESTNET_KEY=[INFURA API KEY]
 export KEYSTORE_PASSWORD=[RLN MEMBERSHIP PASSWORD]
 ```
 
-## Register RLN Membership
+## Register RLN membership
 
 The RLN membership is your access key to The Waku Network. Its registration is done on-chain and allows your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages exceeding the rate limit:
 
@@ -48,7 +48,7 @@ The RLN membership is your access key to The Waku Network. Its registration is d
 If you only want to relay traffic without sending messages to the network, you don't need to register for RLN membership.
 :::
 
-## Run Docker Compose
+## Run the node
 
 Start all processes: `nwaku` node, database and Grafana for metrics. Your RLN membership is loaded into nwaku under the hood:
 
@@ -56,7 +56,7 @@ Start all processes: `nwaku` node, database and Grafana for metrics. Your RLN me
 docker-compose up -d
 ```
 
-## Interact with the Node
+## Interact with the node
 
 Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real-time.
 
