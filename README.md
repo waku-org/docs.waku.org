@@ -13,13 +13,13 @@ The Waku Documentation Portal can be accessed at <https://docs.waku.org/> and wa
 
 Clone this repository:
 
-```bash
+```shell
 git clone https://github.com/waku-org/docs.waku.org
 ```
 
 Install the dependencies:
 
-```bash
+```shell
 yarn
 
 # or
@@ -29,19 +29,19 @@ yarn install
 
 ## Running Locally
 
-```bash
+```shell
 yarn start
 ```
 
 Check for spelling errors before deploying:
 
-```bash
+```shell
 yarn check:spell
 ```
 
 Create a production build locally to check for errors:
 
-```bash
+```shell
 yarn build
 
 # test the build
@@ -82,6 +82,6 @@ You can find the instructions on adding more documentation sections, localisatio
 
 Docusaurus depends heavily on caching to enhance site performance. If you make changes that do not appear in the portal, try clearing the cache by running:
 
-```bash
+```shell
 yarn clear
 ```

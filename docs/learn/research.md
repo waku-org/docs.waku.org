@@ -1,16 +1,17 @@
 ---
-title: Research in Progress
+title: Research
+hide_table_of_contents: true
 ---
 
 The following features are currently experimental and under research and initial implementation:
 
-## Economic Spam Resistance
+## Economic spam resistance
 
 We aim to enable an incentivised spam protection technique to enhance `Relay` by using [Rate Limit Nullifiers (RLN)](https://rfc.vac.dev/spec/32/). In this advanced method, peers are limited to a certain messaging rate per epoch, and an immediate financial penalty is enforced for spammers who break this rate. You can find more details in the [RLN Relay blog post](https://vac.dev/rln-relay).
 
 We have prepared a PoC implementation of this method in JS: <https://examples.waku.org/rln-js/>
 
-## Prevention of Denial of Service (DoS) and Node Incentivisation
+## Prevention of denial of service (DoS) and node incentivisation
 
 Denial of service signifies the case where an adversarial peer exhausts another node's service capacity (e.g., by making a large number of requests) and makes it unavailable to the rest of the system. RnD on DoS attack mitigation can tracked from here: <https://github.com/vacp2p/research/issues/148>.
 

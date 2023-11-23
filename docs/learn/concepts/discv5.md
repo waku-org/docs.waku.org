@@ -1,5 +1,6 @@
 ---
 title: Discv5
+hide_table_of_contents: true
 ---
 
 `Discv5` is a decentralised and efficient peer discovery mechanism for the Waku Network. It uses a [Distributed Hash Table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table) for storing `ENR` records, providing resistance to censorship. `Discv5` offers a global view of participating nodes, enabling random sampling for load distribution. It uses bootstrap nodes as an entry point to the network, providing randomised sets of nodes for mesh expansion. Have a look at the [Discv5](https://rfc.vac.dev/spec/33/) specification to learn more.

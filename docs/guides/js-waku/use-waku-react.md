@@ -1,10 +1,11 @@
 ---
 title: "Build React DApps Using @waku/react"
+hide_table_of_contents: true
 ---
 
 The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `@waku/sdk` into React applications effortlessly. This guide provides detailed steps for using `@waku/react` in your project.
 
-## Install the Dependencies
+## Install the dependencies
 
 First, set up a project using any [production-grade React framework](https://react.dev/learn/start-a-new-react-project) or an existing React application. For this guide, we will create a boilerplate using [ViteJS](https://vitejs.dev/guide/):
 
@@ -49,7 +50,7 @@ yarn add @waku/react @waku/sdk protobufjs
 </TabItem>
 </Tabs>
 
-## Initialise the Waku Provider
+## Initialise the Waku provider
 
 In the `main.jsx` file, which serves as the entry point for a React app, we will set up the `LightNodeProvider` [context provider](https://react.dev/reference/react/createContext#provider) to wrap the entire application within the Waku provider. Import the following on top of your file:
 
@@ -69,7 +70,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ```
 
-Next, create and start a [Light Node](/overview/reference/glossary#light-node) using the `useWaku()` function within the `App.jsx` file:
+Next, create and start a [Light Node](/learn/glossary#light-node) using the `useWaku()` function within the `App.jsx` file:
 
 ```js title="src/App.jsx"
 import { useWaku } from "@waku/react";
@@ -84,7 +85,7 @@ function App() {
 }
 ```
 
-## Build the Application Interface
+## Build the application interface
 
 Let's build a user interface for sending messages and viewing past messages, modify the `App.jsx` file with the following code block:
 
@@ -201,7 +202,7 @@ Next, modify the `App.css` file with the following code block:
 }
 ```
 
-## Send Messages Using Light Push
+## Send messages using light push
 
 To send messages in our application, we need to modify the `sendMessage()` function to serialize user input into our Protobuf structure and [push it to the network](/guides/js-waku/light-send-receive#send-messages-using-light-push) using the `useLightPush()` function:
 
@@ -238,7 +239,7 @@ function App() {
 }
 ```
 
-## Receive Messages Using Filter
+## Receive messages using filter
 
 To display messages in our application, we need to use the `useFilterMessages()` function to create a [Filter subscription](/guides/js-waku/light-send-receive/#receive-messages-using-filter), receive incoming messages, and render them in our interface:
 
@@ -259,7 +260,7 @@ function App() {
 }
 ```
 
-## Retrieve Messages Using Store
+## Retrieve messages using store
 
 To display messages from the past, we need to retrieve them from the [Store protocol](/guides/js-waku/store-retrieve-messages) using the `useStoreMessages()` function when our application initialises and then render them alongside newly received messages:
 

@@ -1,5 +1,6 @@
 ---
 title: Build Nwaku from Source
+hide_table_of_contents: true
 ---
 
 This guide provides detailed steps to build a `nwaku` node from the source code to access the latest development version or a specific commit or release of `nwaku`. For your convenience, you may want to [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.
@@ -21,7 +22,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="debian" label="Debian and Ubuntu">
 
-```bash
+```shell
 sudo apt-get install build-essential git libpq5
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -29,7 +30,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </TabItem>
 <TabItem value="fedora" label="Fedora">
 
-```bash
+```shell
 sudo dnf install @development-tools git libpq-devel
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -37,7 +38,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </TabItem>
 <TabItem value="arch" label="Arch Linux">
 
-```bash
+```shell
 # Using your favoured AUR helper
 sudo [AUR HELPER] -S base-devel git postgresql-libs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -46,7 +47,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </TabItem>
 <TabItem value="mac" label="MacOS (Homebrew)">
 
-```bash
+```shell
 brew install cmake git postgresql@15 rustup-init
 # Create a symbolic link to libpq.5.dylib in /usr/local/lib/
 sudo mkdir -p /usr/local/lib/
@@ -56,11 +57,11 @@ sudo ln -s /opt/homebrew/opt/postgresql@15/lib/libpq.5.dylib /usr/local/lib/libp
 </TabItem>
 </Tabs>
 
-## Clone the Repository
+## Clone the repository
 
 Get the source code from the GitHub repository. The default branch is `master`, the release candidate for major updates.
 
-```bash
+```shell
 git clone https://github.com/waku-org/nwaku
 cd nwaku
 ```
@@ -69,25 +70,25 @@ cd nwaku
 You can use `git tag -l` to check specific version tags.
 :::
 
-## Build the Binary
+## Build the binary
 
 Build the `nwaku` binary:
 
-```bash
+```shell
 make wakunode2
 ```
 
 The first `make` invocation updates to all Git submodules. After each `git pull`, run `make update` to keep the submodules updated in the future.
 
-```bash
+```shell
 make update
 ```
 
-## Run the Binary
+## Run the binary
 
 Nwaku will create the `wakunode2` binary in the `./build/` directory.
 
-```bash
+```shell
 # Run with default configuration
 ./build/wakunode2
 
@@ -97,19 +98,19 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 
 To learn more about running nwaku, have a look at these guides:
 
-- [Run a Nwaku Node](/guides/run-nwaku-node#run-the-node)
+- [Run a Nwaku Node](/guides/nwaku/run-node#run-the-node)
 - [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)
 - [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose)
-- [Node Configuration Methods](/guides/reference/node-config-methods)
+- [Node Configuration Methods](/guides/nwaku/config-methods)
 
-## Run Test Suite
+## Run test suite
 
 Run the tests for Waku:
 
-```bash
+```shell
 make test
 ```
 
 :::tip Congratulations!
-You have successfully built the `nwaku` binary from the source code. Have a look at the [Nwaku Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+You have successfully built the `nwaku` binary from the source code. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::

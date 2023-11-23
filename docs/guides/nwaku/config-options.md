@@ -1,24 +1,25 @@
 ---
 title: Node Configuration Options
+hide_table_of_contents: true
 ---
 
 Here are the available node configuration options, along with their default values and descriptions:
 
-## Application-Level Config
+## Application-level config
 
 | Name | Default Value | Description |
 | - | - | - |
 | `config-file` |  | Loads configuration from a TOML file (cmd-line parameters take precedence) |
 | `protected-topic` | `newSeq[ProtectedTopic](0)` | Topics and its public key to be used for message validation, topic:pubkey. Argument may be repeated |
 
-## Log Config
+## Log config
 
 | Name | Default Value | Description |
 | - | - | - |
 | `log-level` | `logging.LogLevel.INFO` | Sets the log level for process. Supported levels: TRACE, DEBUG, INFO, NOTICE, WARN, ERROR or FATAL |
 | `log-format` | `logging.LogFormat.TEXT` | Specifies what kind of logs should be written to stdout. Supported formats: TEXT, JSON |
 
-## General Node Config
+## General node config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -36,7 +37,7 @@ Here are the available node configuration options, along with their default valu
 | `peer-store-capacity` |  | Maximum stored peers in the peerstore |
 | `peer-persistence` | `false` | Enable peer persistence |
 
-## DNS Addrs Config
+## DNS addrs config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -44,7 +45,7 @@ Here are the available node configuration options, along with their default valu
 | `dns-addrs-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query for DNS multiaddrs resolution. Argument may be repeated |
 | `dns4-domain-name` |  | The domain name resolving to the node's public IPv4 address |
 
-## Relay Config
+## Relay config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -69,7 +70,7 @@ Here are the available node configuration options, along with their default valu
 | `pubsub-topic` |  | Default pubsub topic to subscribe to. Argument may be repeated |
 | `content-topic` |  | Default content topic to subscribe to. Argument may be repeated |
 
-## Store and Message Store Config
+## Store and message store config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -80,7 +81,7 @@ Here are the available node configuration options, along with their default valu
 | `store-message-db-vacuum` | `false` | Enable database vacuuming at start. Only supported by SQLite database engine |
 | `store-message-db-migration` | `true` | Enable database migration at start |
 
-## Filter Config
+## Filter config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -88,14 +89,14 @@ Here are the available node configuration options, along with their default valu
 | `filternode` |  | Peer multiaddr to request content filtering of messages |
 | `filter-timeout` | `14400 # 4 hours` | Timeout for filter node in seconds |
 
-## Light Push Config
+## Light push config
 
 | Name | Default Value | Description |
 | - | - | - |
 | `lightpush` | `false` | Enable lightpush protocol: true\|false |
 | `lightpushnode` |  | Peer multiaddr to request lightpush of published messages |
 
-## JSON-RPC Config
+## JSON-RPC config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -105,7 +106,7 @@ Here are the available node configuration options, along with their default valu
 | `rpc-admin` | `false` | Enable access to JSON-RPC Admin API: true\|false |
 | `rpc-private` | `false` | Enable access to JSON-RPC Private API: true\|false |
 
-## REST HTTP Config
+## REST HTTP config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -116,7 +117,7 @@ Here are the available node configuration options, along with their default valu
 | `rest-admin` | `false` | Enable access to REST HTTP Admin API: true\|false |
 | `rest-private` | `false` | Enable access to REST HTTP Private API: true\|false |
 
-## Metrics Config
+## Metrics config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -125,7 +126,7 @@ Here are the available node configuration options, along with their default valu
 | `metrics-server-port` | `8008` | Listening HTTP port of the metrics server |
 | `metrics-logging` | `true` | Enable metrics logging: true\|false |
 
-## DNS Discovery Config
+## DNS discovery config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -133,7 +134,7 @@ Here are the available node configuration options, along with their default valu
 | `dns-discovery-url` |  | URL for DNS node list in format 'enrtree://<key\>@<fqdn\>' |
 | `dns-discovery-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query. Argument may be repeated |
 
-## Discv5 Config
+## Discv5 config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -145,14 +146,14 @@ Here are the available node configuration options, along with their default valu
 | `discv5-bucket-ip-limit` | `2` | Maximum amount of nodes with the same IP in discv5 routing table buckets |
 | `discv5-bits-per-hop` | `1` | Kademlia's b variable, increase for less hops per lookup |
 
-## Waku Peer Exchange Config
+## Waku peer exchange config
 
 | Name | Default Value | Description |
 | - | - | - |
 | `peer-exchange` | `false` | Enable waku peer exchange protocol (responder side): true\|false |
 | `peer-exchange-node` |  | Peer multiaddr to send peer exchange requests to. (enables peer exchange protocol requester side) |
 
-## WebSocket Config
+## WebSocket config
 
 | Name | Default Value | Description |
 | - | - | - |
@@ -163,5 +164,5 @@ Here are the available node configuration options, along with their default valu
 | `websocket-secure-cert-path` |  | Secure websocket Certificate path:   '/path/to/cert.txt' |
 
 :::tip
-To configure your node using the provided configuration options, have a look at the [Node Configuration Methods](/guides/reference/node-config-methods) guide.
+To configure your node using the provided configuration options, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) guide.
 :::

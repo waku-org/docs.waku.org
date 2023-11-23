@@ -1,10 +1,11 @@
 ---
 title: Retrieve Messages Using Store Protocol
+hide_table_of_contents: true
 ---
 
-This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/overview/concepts/protocols#store).
+This guide provides detailed steps to create a Light Node for retrieving and filtering historical messages using the [Store protocol](/learn/concepts/protocols#store).
 
-## Create a Light Node
+## Create a light node
 
 Use the `createLightNode()` function to create a Light Node and interact with the Waku Network:
 
@@ -16,7 +17,7 @@ const node = await createLightNode({ defaultBootstrap: true });
 await node.start();
 ```
 
-## Connect to Store Peers
+## Connect to store peers
 
 Use the `waitForRemotePeer()` function to wait for the node to connect with Store peers:
 
@@ -27,9 +28,9 @@ import { waitForRemotePeer, Protocols } from "@waku/sdk";
 await waitForRemotePeer(node, [Protocols.Store]);
 ```
 
-## Choose a Content Topic
+## Choose a content topic
 
-[Choose a content topic](/overview/concepts/content-topics) for filtering the messages to retrieve and create a message `decoder`:
+[Choose a content topic](/learn/concepts/content-topics) for filtering the messages to retrieve and create a message `decoder`:
 
 ```js
 import { createDecoder } from "@waku/sdk";
@@ -41,7 +42,7 @@ const contentTopic = "/store-guide/1/message/proto";
 const decoder = createDecoder(contentTopic);
 ```
 
-## Retrieve Messages
+## Retrieve messages
 
 `@waku/sdk` provides the `queryWithOrderedCallback()` and `queryGenerator()` functions for querying `Store` nodes and retrieving historical or missed messages. The responses from `Store` nodes are paginated and require you to process each page sequentially.
 
@@ -99,7 +100,7 @@ for await (const messagesPromises of storeQuery) {
 The `queryGenerator()` function always returns the oldest messages in a page first.
 :::
 
-## Store Query Options
+## Store query options
 
 ### `pageDirection`
 

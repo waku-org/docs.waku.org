@@ -1,8 +1,9 @@
 ---
 title: Manage Your Filter Subscriptions
+hide_table_of_contents: true
 ---
 
-This guide provides detailed steps to manage [Filter](/overview/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Filter guide](/guides/js-waku/light-send-receive) for receiving messages with the `Light Push` and `Filter` protocol.
+This guide provides detailed steps to manage [Filter](/learn/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Filter guide](/guides/js-waku/light-send-receive) for receiving messages with the `Light Push` and `Filter` protocol.
 
 ## Overview
 
@@ -14,7 +15,7 @@ import FilterPingFlow from "@site/diagrams/_filter-ping-flow.md";
 <FilterPingFlow />
 ```
 
-## Pinging Filter Subscriptions
+## Pinging filter subscriptions
 
 The `@waku/sdk` package provides a `Filter.ping()` function to ping subscriptions and check for an active connection. To begin, create a `Filter` subscription:
 
@@ -50,6 +51,10 @@ const pingAndReinitiateSubscription = async () => {
 // Periodically ping the subscription
 await pingAndReinitiateSubscription();
 ```
+
+:::info
+Pings will fail when there are temporary network degradations or reachability issues. This does not mean that the underlying connection has been closed.
+:::
 
 :::success Congratulations!
 You have successfully managed your `Filter` subscriptions to handle node disconnections in your application.

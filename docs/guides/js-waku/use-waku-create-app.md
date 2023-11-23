@@ -1,5 +1,6 @@
 ---
 title: "Scaffold DApps Using @waku/create-app"
+hide_table_of_contents: true
 ---
 
 This guide provides detailed steps to bootstrap your next `@waku/sdk` project from [various example templates](https://github.com/waku-org/js-waku-examples/tree/master/examples) using the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package.
@@ -38,7 +39,7 @@ Next, select a template to initialise your app from:
 If you have previously installed `@waku/create-app` globally, we recommend uninstalling the package to ensure that `npx` always uses the latest version.
 :::
 
-## Contributing New Templates
+## Contributing new templates
 
 We welcome and appreciate the contributions of templates for the `@waku/create-app` package. To contribute a template, please follow these steps:
 

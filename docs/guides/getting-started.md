@@ -1,23 +1,25 @@
 ---
-title: Nodes and SDKs
+title: Getting Started
+hide_table_of_contents: true
+slug: /
 ---
 
 :::caution
-Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by [powering various applications](/powered-by-waku). [Join our community](/community) to stay updated on our progress.
+Waku has risks and limitations as it is still developing and preparing for extensive adoption. However, it is already demonstrating its capabilities by powering various applications. [Join our community](https://waku.org/community/) to stay updated on our progress.
 :::
 
 Ready to integrate Waku into your application for private, secure, censorship-free communication? Explore the available SDKs and contribute by running a node.
 
-## Run a Waku Node
+## Run a Waku node
 
 The Waku Network is a decentralised, permissionless system where anyone can run nodes, use the network, and contribute to its support.
 
 | | Description | Documentation |
 | - | - | - |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/run-nwaku-node) |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/nwaku/run-node) |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | COMING SOON |
 
-## Integrate Using SDKs
+## Integrate using SDKs
 
 Waku is implemented in multiple SDKs, allowing it to integrate with different languages and address various use cases efficiently.
 
@@ -28,17 +30,16 @@ Waku is implemented in multiple SDKs, allowing it to integrate with different la
 | [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | COMING SOON |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | COMING SOON |
 
-## Run on Mobile Devices
+## Run on mobile devices
 
 Waku provides integrations tailored for mobile applications, enabling Waku to run efficiently on mobile devices.
 
 | | Description | Documentation |
 | - | - | - |
-| [React Native](https://github.com/waku-org/waku-react-native) | React Native wrapper using `go-waku` bindings designed for native mobile integration | COMING SOON |
 | Swift (iOS) | `go-waku` bindings for Swift applications to seamlessly integrate Waku | COMING SOON |
 | Kotlin (Android) | `go-waku` bindings for Kotlin applications to seamlessly integrate Waku | COMING SOON |
 
-## More Integrations
+## More integrations
 
 | | Description | Documentation |
 | - | - | - |
