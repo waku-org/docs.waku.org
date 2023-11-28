@@ -151,7 +151,7 @@ Consider a `nwaku` node that enabled Secure WebSocket (encrypted) using its key 
 You can use [Let's Encrypt](https://letsencrypt.org/) or [Certbot](https://certbot.eff.org/) to generate a valid certificate for your `nwaku` node:
 
 ```shell
-sudo letsencrypt -d <your.domain.name>
+sudo certbot certonly -d <your.domain.name>
 ```
 :::
 
