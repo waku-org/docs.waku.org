@@ -3,10 +3,6 @@ title: The Waku Network
 hide_table_of_contents: true
 ---
 
-:::info
-The public Waku Network replaces the previous experimental shared routing layer based on a default pubsub topic (`/waku/2/default-waku/proto`). If your project currently uses this or any other shared pubsub topics, we encourage you to migrate to the public Waku Network with built-in DoS protection, with built-in DoS protection, scalability and reasonable bandwidth usage.
-:::
-
 The Waku Network is a shared p2p messaging network that is open-access, useful for generalized messaging, privacy-preserving, scalable and accessible even to resource-restricted devices. Some of the most prominent features include:
 
 1. DoS/spam protection with privacy-preserving [Rate-Limiting Nullifiers](https://rfc.vac.dev/spec/64/#rln-rate-limiting).
@@ -15,6 +11,10 @@ The Waku Network is a shared p2p messaging network that is open-access, useful f
 4. [Services](https://rfc.vac.dev/spec/64/#default-services) for resource-restricted nodes, including historical message storage and retrieval, filtering, etc.
 
 If you want to learn more about the Waku Network, the [WAKU2-NETWORK RFC](https://rfc.vac.dev/spec/64/) provides an in-depth look under the hood.
+
+:::info
+The public Waku Network replaces the previous experimental shared routing layer based on a default pubsub topic (`/waku/2/default-waku/proto`). If your project currently uses this or any other shared pubsub topics, we encourage you to migrate to the public Waku Network with built-in DoS protection, with built-in DoS protection, scalability, and reasonable bandwidth usage.
+:::
 
 ## Why join the Waku network?
 
