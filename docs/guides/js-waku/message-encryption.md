@@ -149,6 +149,44 @@ const ECIESEncoder = createECIESEncoder({
     publicKey: publicKey, // ECIES public key for encrypting messages
 	sigPrivKey: sigPrivKey, // private key for signing messages before encryption
 });
+
+// Send and receive your messages as usual with Light Push and Filter
+await node.lightPush.send(symmetricEncoder, { payload });
+await subscription.subscribe([symmetricEncoder], callback);
+
+await node.lightPush.send(ECIESEncoder, { payload });
+await subscription.subscribe([ECIESEncoder], callback);
+```
+
+You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message:
+
+```js
+// Generate a random private key for signing messages
+const sigPrivKey = generatePrivateKey();
+
+// Generate a public key from the private key for verifying signatures
+const sigPubKey = getPublicKey(sigPrivKey);
+
+// Create an encoder that signs messages
+const encoder = createEncoder({
+    contentTopic: contentTopic,
+    symKey: symKey,
+	sigPrivKey: sigPrivKey,
+});
+
+// Modify the callback function to verify message signature
+const callback = (wakuMessage) => {
+	// Extract the message signature and public key of the signature
+	const signature = wakuMessage.signature;
+	const signaturePublicKey = wakuMessage.signaturePublicKey;
+
+	// Compare the public key of the message signature with the sender's own
+	if (JSON.stringify(signaturePublicKey) === JSON.stringify(sigPubKey)) {
+		console.log("This message was correctly signed");
+	} else {
+		console.log("This message has an incorrect signature");
+	}
+};
 ```
 
 :::tip Congratulations!
