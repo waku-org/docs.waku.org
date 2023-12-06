@@ -22,14 +22,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="npm" label="NPM">
 
 ```shell
-npm install @waku/message-encryption
+npm install @waku/message-encryption @waku/utils
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @waku/message-encryption
+yarn add @waku/message-encryption @waku/utils
 ```
 
 </TabItem>
@@ -138,24 +138,24 @@ const sigPrivKey = generatePrivateKey();
 
 // Create a symmetric encoder that signs messages
 const symmetricEncoder = createSymmetricEncoder({
-    contentTopic: contentTopic, // message content topic
-    symKey: symKey, // symmetric key for encrypting messages
+	contentTopic: contentTopic, // message content topic
+	symKey: symKey, // symmetric key for encrypting messages
 	sigPrivKey: sigPrivKey, // private key for signing messages before encryption
 });
 
 // Create an ECIES encoder that signs messages
 const ECIESEncoder = createECIESEncoder({
-    contentTopic: contentTopic, // message content topic
-    publicKey: publicKey, // ECIES public key for encrypting messages
+	contentTopic: contentTopic, // message content topic
+	publicKey: publicKey, // ECIES public key for encrypting messages
 	sigPrivKey: sigPrivKey, // private key for signing messages before encryption
 });
 
 // Send and receive your messages as usual with Light Push and Filter
-await node.lightPush.send(symmetricEncoder, { payload });
 await subscription.subscribe([symmetricEncoder], callback);
+await node.lightPush.send(symmetricEncoder, { payload });
 
-await node.lightPush.send(ECIESEncoder, { payload });
 await subscription.subscribe([ECIESEncoder], callback);
+await node.lightPush.send(ECIESEncoder, { payload });
 ```
 
 You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message:
@@ -169,8 +169,8 @@ const sigPubKey = getPublicKey(sigPrivKey);
 
 // Create an encoder that signs messages
 const encoder = createEncoder({
-    contentTopic: contentTopic,
-    symKey: symKey,
+	contentTopic: contentTopic,
+	symKey: symKey,
 	sigPrivKey: sigPrivKey,
 });
 
@@ -187,6 +187,30 @@ const callback = (wakuMessage) => {
 		console.log("This message has an incorrect signature");
 	}
 };
+```
+
+## Restoring encryption keys
+
+We used randomly generated keys for encryption and message signing in the provided examples, but real-world applications require consistent keys among clients. You can use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package to convert keys into a hexadecimal format for uniformity:
+
+```js
+import { bytesToHex, hexToBytes } from "@waku/utils/bytes";
+import { generateSymmetricKey, generatePrivateKey } from "@waku/message-encryption";
+
+// Generate random symmetric and private keys
+const symKey = generateSymmetricKey();
+const privateKey = generatePrivateKey();
+console.log(symKey, privateKey);
+
+// Convert the keys to hexadecimal format
+const symKeyHex = bytesToHex(symKey);
+const privateKeyHex = bytesToHex(privateKey);
+console.log(symKeyHex, privateKeyHex);
+
+// Restore the keys from hexadecimal format
+const restoredSymKey = hexToBytes(symKeyHex);
+const restoredPrivateKey = hexToBytes(privateKeyHex);
+console.log(restoredSymKey, restoredPrivateKey);
 ```
 
 :::tip Congratulations!
