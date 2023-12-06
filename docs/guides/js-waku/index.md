@@ -85,7 +85,7 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 | - | - |
 | [Send and Receive Messages Using Light Push and Filter](/guides/js-waku/light-send-receive) | Learn how to send and receive messages on light nodes using the [Light Push](/learn/concepts/protocols#light-push) and [Filter](/learn/concepts/protocols#filter) protocols |
 | [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store protocol](/learn/concepts/protocols#store) |
-| [Encrypt and Decrypt Your Waku Messages](/guides/js-waku/message-encryption) | Learn how to use the [@waku/message-encryption](https://www.npmjs.com/package/@waku/message-encryption) package to encrypt and decrypt your messages |
+| [Encrypt, Decrypt, and Sign Your Messages](/guides/js-waku/message-encryption) | Learn how to use the [@waku/message-encryption](https://www.npmjs.com/package/@waku/message-encryption) package to encrypt, decrypt, and sign your messages |
 | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `@waku/sdk` into a React application |
 | [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `@waku/sdk` project from various example templates |
 | [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) | Learn how to bootstrap your node using [Static Peers](/learn/concepts/static-peers) and discover peers using [DNS Discovery](/learn/concepts/dns-discovery) |
