@@ -6,7 +6,7 @@ hide_table_of_contents: true
 This guide provides detailed steps to use the [@waku/message-encryption](https://www.npmjs.com/package/@waku/message-encryption) package to encrypt, decrypt, and sign your messages using [Waku message payload encryption](/learn/glossary#waku-message-payload-encryption) methods.
 
 :::info
-Waku lacks protocol-level message encryption because it does not know the communication parties. This design choice enhances Waku's encryption flexibility, encouraging developers to freely use custom protocols or [Waku message payload encryption](/learn/glossary#waku-message-payload-encryption) methods.
+Waku uses libp2p noise encryption for node-to-node connections. However, no default encryption method is applied to the data sent over the network. This design choice enhances Waku's encryption flexibility, encouraging developers to freely use custom protocols or [Waku message payload encryption](/learn/glossary#waku-message-payload-encryption) methods.
 :::
 
 ## Installation
@@ -77,14 +77,18 @@ await subscription.subscribe([decoder], callback);
 await node.store.queryWithOrderedCallback([decoder], callback);
 ```
 
+:::tip
+The symmetric key exchange between users can happen through an [out-of-band method](/learn/glossary#out-of-band). For example, where the key is embedded within the URL shared by a user to access a specific resource.
+:::
+
 ## ECIES encryption
 
-`ECIES` encryption uses a public key for encryption and a private key for decryption. Use the `generatePrivateKey()` function to generate a random private key:
+`ECIES` encryption uses a public key for encryption and a private key for decryption. Use the `generatePrivateKey()` function to generate a random `ECDSA` private key:
 
 ```js
 import { generatePrivateKey, getPublicKey } from "@waku/message-encryption";
 
-// Generate a random private key, keep secure
+// Generate a random ECDSA private key, keep secure
 const privateKey = generatePrivateKey();
 
 // Generate a public key from the private key, provide to the sender
@@ -122,9 +126,17 @@ await subscription.subscribe([decoder], callback);
 await node.store.queryWithOrderedCallback([decoder], callback);
 ```
 
+:::tip
+Users can share their public key through broadcasting or [out-of-band methods](/learn/glossary#out-of-band), such as embedding it in a URL or sending an unencrypted message on another content topic for others to retrieve.
+:::
+
 ## Signing encrypted messages
 
 Message signing helps in proving the authenticity of received messages. By attaching a signature to a message, you can verify its origin and integrity with absolute certainty.
+
+:::info
+Signing messages is only possible when encrypted, but if your app does not require encryption, you can generate a symmetric key through hardcoded or deterministic methods using information available to all users.
+:::
 
 The `sigPrivKey` option allows the `Symmetric` and `ECIES` message `encoders` to sign the message before encryption using an `ECDSA` private key:
 
@@ -133,7 +145,8 @@ import { generatePrivateKey } from "@waku/message-encryption";
 import { createEncoder as createSymmetricEncoder } from "@waku/message-encryption/symmetric";
 import { createEncoder as createECIESEncoder } from "@waku/message-encryption/ecies";
 
-// Generate a random private key for signing messages
+// Generate a random ECDSA private key for signing messages
+// ECIES encryption and message signing both use ECDSA keys
 const sigPrivKey = generatePrivateKey();
 
 // Create a symmetric encoder that signs messages
@@ -158,7 +171,7 @@ await subscription.subscribe([ECIESEncoder], callback);
 await node.lightPush.send(ECIESEncoder, { payload });
 ```
 
-You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message:
+You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message origin:
 
 ```js
 // Generate a random private key for signing messages
