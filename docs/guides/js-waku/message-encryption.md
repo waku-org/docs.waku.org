@@ -11,7 +11,7 @@ Waku uses libp2p noise encryption for node-to-node connections. However, no defa
 
 ## Installation
 
-Install the `@waku/message-encryption` package using your preferred package manager:
+Install the required packages for integrating `@waku/message-encryption` using your preferred package manager:
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
@@ -22,14 +22,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="npm" label="NPM">
 
 ```shell
-npm install @waku/message-encryption @waku/utils
+npm install @waku/message-encryption @waku/utils uint8arrays
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @waku/message-encryption @waku/utils
+yarn add @waku/message-encryption @waku/utils uint8arrays
 ```
 
 </TabItem>
@@ -174,6 +174,8 @@ await node.lightPush.send(ECIESEncoder, { payload });
 You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message origin:
 
 ```js
+import { equals } from "uint8arrays/equals";
+
 // Generate a random private key for signing messages
 const sigPrivKey = generatePrivateKey();
 
@@ -194,7 +196,7 @@ const callback = (wakuMessage) => {
 	const signaturePublicKey = wakuMessage.signaturePublicKey;
 
 	// Compare the public key of the message signature with the sender's own
-	if (JSON.stringify(signaturePublicKey) === JSON.stringify(sigPubKey)) {
+	if (equals(signaturePublicKey, sigPubKey)) {
 		console.log("This message was correctly signed");
 	} else {
 		console.log("This message has an incorrect signature");
