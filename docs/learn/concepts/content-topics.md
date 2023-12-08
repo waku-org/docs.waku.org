@@ -27,12 +27,20 @@ While you can choose any encoding format for your `Content Topic`, we highly rec
 
 ## Naming considerations
 
-When choosing a content topic, it is crucial to consider privacy implications. The `Filter`, `Store`, and `Light Push` protocols disclose content topics to peers, enabling said peer to link IP and content topic interests. `Relay` provides recipient anonymity thanks to `GossipSub`, but this may be lost if the content topic reveals information about the user.
+When choosing a content topic, it is essential to consider the privacy implications. Here are several factors to keep in mind:
+
+### Protocols disclose content topics to peers
+
+The `Filter`, `Store`, and `Light Push` protocols share content topics with peers, allowing them to link IP and content topic interests. The `Relay` protocol, using `GossipSub`, provides recipient anonymity, which can be compromised if the content topic exposes user information.
+
+For example, instead of using Personally Identifiable Information (PII) in the content topic (e.g., a public key), you can create buckets (e.g., based on the first 4 bytes of the public key hash).
 
 :::info
-Waku is developing privacy preserving features like [Anonymous Filter Subscription](https://rfc.vac.dev/spec/12/#future-work) for the `Filter` protocol and [Anonymous Query](https://rfc.vac.dev/spec/13/#future-work) for the `Store` protocol to hide content topics from potential adversaries.
+Waku is developing privacy-preserving features like [Anonymous Filter Subscription](https://rfc.vac.dev/spec/12/#future-work) for the `Filter` protocol and [Anonymous Query](https://rfc.vac.dev/spec/13/#future-work) for the `Store` protocol to hide content topics from potential adversaries.
 :::
 
-You can preserve the anonymity of individual identities by increasing [k-anonymity](https://www.privitar.com/blog/k-anonymity-an-introduction/), where k is proportional to the network size (number of subscribers). This involves using a single content topic across the entire application or specific features such as notifications or private messages, allowing multiple users to share it.
+### Increasing k-anonymity preserves user anonymity
 
-However, maintaining functionality with a single content topic can introduce complexity. We recommend switching functionality using the Protocol Buffer message format. By doing so, applications can retain a high granularity and functionality while using a single content topic, preserving user privacy.
+You can increase [k-anonymity](https://www.privitar.com/blog/k-anonymity-an-introduction/) within the network by using a unified content topic across the entire application or targeting specific features like notifications or private messages, allowing multiple users to share it.
+
+However, maintaining functionality with a single content topic can introduce complexity. We recommend switching functionality using the Protocol Buffer (`proto`) message format. By doing so, applications can retain a high granularity and functionality while using a single content topic, preserving user privacy.
