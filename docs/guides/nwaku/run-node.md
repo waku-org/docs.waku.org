@@ -50,7 +50,7 @@ Once you have gotten the `nwaku` binary, run it using the [default configuration
 ```
 
 :::tip
-To learn how to customise the configuration of a `nwaku` node, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) and [Node Configuration Options](/guides/nwaku/config-options) guides.
+To learn how to customise the configuration of a `nwaku` node, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) and [Node Configuration Examples](/guides/nwaku/configure-nwaku) guides.
 :::
 
 ## Bootstrap the node
@@ -102,6 +102,10 @@ curl --location 'http://127.0.0.1:8645/debug/v1/info' \
 
 :::info
 The `listenAddresses` field stores the node's listening addresses, while the `enrUri` field stores the discoverable `ENR` URI for peer discovery.
+:::
+
+:::tip
+We suggest [configuring WebSocket transport](/guides/nwaku/configure-nwaku#configure-websocket-transport) for your node to enable support and serving of browser peers using [@waku/sdk](/guides/js-waku/).
 :::
 
 ## Find the node addresses

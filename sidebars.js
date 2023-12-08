@@ -19,6 +19,10 @@ const sidebars = {
 				"guides/nwaku/configure-nwaku",
 				"guides/nwaku/config-methods",
 				"guides/nwaku/config-options",
+				{
+					type: 'html',
+					value: '<a href="https://waku-org.github.io/waku-rest-api/" target="_blank" rel="noopener noreferrer" class="menu__link external-link">REST API Reference<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
+				},
 			]
 		},
 		{

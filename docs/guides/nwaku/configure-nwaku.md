@@ -34,6 +34,10 @@ Browser nodes can only connect to nodes with a domain name and secure WebSocket 
 This example describes configuring a domain name that resolves to your node's IP address and is unrelated to [DNS Discovery](/learn/concepts/dns-discovery).
 :::
 
+:::tip
+You can use the domain name provided by your cloud provider to configure the domain name for your node.
+:::
+
 ## Configure store protocol and message store
 
 To enable message caching and serve them to network peers, enable the [Store protocol](/learn/concepts/protocols#store) using the following configuration options:

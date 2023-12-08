@@ -5,6 +5,10 @@ hide_table_of_contents: true
 
 This guide provides detailed steps to bootstrap your your node using [Static Peers](/learn/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/learn/concepts/dns-discovery).
 
+:::info
+If you do not set up a bootstrap node or discovery mechanism, your node will not connect to any remote peer.
+:::
+
 :::tip
 Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
@@ -189,6 +193,16 @@ const node = await createLightNode({
 });
 ```
 
-:::info
-If you do not set up a bootstrap node or discovery mechanism, your node will not connect to any remote peer.
-:::
+## Retrieving connected peers
+
+You can retrieve the array of peers connected to a node using the `libp2p.getPeers()` function within the `@waku/sdk` package:
+
+```js
+import { createLightNode, waitForRemotePeer } from "@waku/sdk";
+
+const node = await createLightNode({ defaultBootstrap: true });
+await waitForRemotePeer(node);
+
+// Retrieve array of peers connected to the node
+console.log(node.libp2p.getPeers());
+```

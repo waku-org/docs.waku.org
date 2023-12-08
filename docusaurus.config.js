@@ -51,6 +51,10 @@ const config = {
     ],
   ],
   themeConfig: {
+    colorMode: {
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     docs: {
       sidebar: {
         hideable: false,
@@ -158,11 +162,6 @@ const config = {
           ],
         },
       ],
-    },
-    colorMode: {
-      defaultMode: "dark",
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
     },
   },
   markdown: {
