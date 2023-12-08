@@ -135,32 +135,34 @@ Users can share their public key through broadcasting or [out-of-band methods](/
 Message signing helps in proving the authenticity of received messages. By attaching a signature to a message, you can verify its origin and integrity with absolute certainty.
 
 :::info
-Signing messages is only possible when encrypted, but if your app does not require encryption, you can generate a symmetric key through hardcoded or deterministic methods using information available to all users.
+Signing messages is only possible when encrypted, but if your application does not require encryption, you can generate a symmetric key through hardcoded or deterministic methods using information available to all users.
 :::
 
 The `sigPrivKey` option allows the `Symmetric` and `ECIES` message `encoders` to sign the message before encryption using an `ECDSA` private key:
 
-```js
-import { generatePrivateKey } from "@waku/message-encryption";
+```js title="Alice (Sender) Client"
+import { generatePrivateKey, getPublicKey } from "@waku/message-encryption";
 import { createEncoder as createSymmetricEncoder } from "@waku/message-encryption/symmetric";
 import { createEncoder as createECIESEncoder } from "@waku/message-encryption/ecies";
 
 // Generate a random ECDSA private key for signing messages
 // ECIES encryption and message signing both use ECDSA keys
-const sigPrivKey = generatePrivateKey();
+// For this example, we'll call the sender of the message Alice
+const aliceSigPrivKey = generatePrivateKey();
+const aliceSigPubKey = getPublicKey(aliceSigPrivKey);
 
 // Create a symmetric encoder that signs messages
 const symmetricEncoder = createSymmetricEncoder({
 	contentTopic: contentTopic, // message content topic
 	symKey: symKey, // symmetric key for encrypting messages
-	sigPrivKey: sigPrivKey, // private key for signing messages before encryption
+	sigPrivKey: aliceSigPrivKey, // private key for signing messages before encryption
 });
 
 // Create an ECIES encoder that signs messages
 const ECIESEncoder = createECIESEncoder({
 	contentTopic: contentTopic, // message content topic
 	publicKey: publicKey, // ECIES public key for encrypting messages
-	sigPrivKey: sigPrivKey, // private key for signing messages before encryption
+	sigPrivKey: aliceSigPrivKey, // private key for signing messages before encryption
 });
 
 // Send and receive your messages as usual with Light Push and Filter
@@ -173,20 +175,20 @@ await node.lightPush.send(ECIESEncoder, { payload });
 
 You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message origin:
 
-```js
+```js title="Bob (Receiver) Client"
+import { generatePrivateKey } from "@waku/message-encryption";
+import { createEncoder } from "@waku/message-encryption/symmetric";
 import { equals } from "uint8arrays/equals";
 
 // Generate a random private key for signing messages
-const sigPrivKey = generatePrivateKey();
-
-// Generate a public key from the private key for verifying signatures
-const sigPubKey = getPublicKey(sigPrivKey);
+// For this example, we'll call the receiver of the message Bob
+const bobSigPrivKey = generatePrivateKey();
 
 // Create an encoder that signs messages
 const encoder = createEncoder({
 	contentTopic: contentTopic,
 	symKey: symKey,
-	sigPrivKey: sigPrivKey,
+	sigPrivKey: bobSigPrivKey,
 });
 
 // Modify the callback function to verify message signature
@@ -195,13 +197,16 @@ const callback = (wakuMessage) => {
 	const signature = wakuMessage.signature;
 	const signaturePublicKey = wakuMessage.signaturePublicKey;
 
-	// Compare the public key of the message signature with the sender's own
-	if (equals(signaturePublicKey, sigPubKey)) {
-		console.log("This message was correctly signed");
+	// Compare the public key of the message signature with Alice's own
+	// Alice's public key can be gotten from broadcasting or out-of-band methods
+	if (equals(signaturePublicKey, aliceSigPubKey)) {
+		console.log("This message was signed by Alice");
 	} else {
-		console.log("This message has an incorrect signature");
+		console.log("This message was NOT signed by Alice");
 	}
 };
+
+await subscription.subscribe([encoder], callback);
 ```
 
 ## Restoring encryption keys
