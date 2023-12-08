@@ -4,7 +4,7 @@ hide_table_of_contents: true
 ---
 
 :::caution
-Currently, the JavaScript Waku SDK is NOT compatible with React Native. We plan to add support for React Native in the future.
+Currently, the JavaScript Waku SDK (`@waku/sdk`) is **NOT compatible** with React Native. We plan to add support for React Native in the future.
 :::
 
 The [JavaScript Waku SDK](https://github.com/waku-org/js-waku) (`@waku/sdk`) provides a TypeScript implementation of the [Waku protocol](/) designed for web browser environments. Developers can seamlessly integrate Waku functionalities into web applications, enabling efficient communication and collaboration among users using the `@waku/sdk` package.

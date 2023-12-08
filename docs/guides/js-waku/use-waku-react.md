@@ -4,7 +4,7 @@ hide_table_of_contents: true
 ---
 
 :::caution
-Currently, the JavaScript Waku SDK is NOT compatible with React Native. We plan to add support for React Native in the future.
+Currently, the JavaScript Waku SDK (`@waku/sdk`) is **NOT compatible** with React Native. We plan to add support for React Native in the future.
 :::
 
 The [@waku/react](https://www.npmjs.com/package/@waku/react) package provides components and UI adapters to integrate `@waku/sdk` into React applications effortlessly. This guide provides detailed steps for using `@waku/react` in your project.
