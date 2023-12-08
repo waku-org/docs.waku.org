@@ -75,6 +75,7 @@
     "sepolia",
     "faucet",
     "concat",
+    "certonly",
   ],
   "flagWords": [],
   "ignorePaths": [
