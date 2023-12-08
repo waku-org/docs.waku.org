@@ -48,7 +48,7 @@ const symKey = generateSymmetricKey();
 
 To send encrypted messages, create a `Symmetric` message `encoder` and send the message as usual:
 
-```js
+```js title="Sender client"
 import { createEncoder } from "@waku/message-encryption/symmetric";
 
 // Create a symmetric message encoder
@@ -63,7 +63,7 @@ await node.lightPush.send(encoder, { payload });
 
 To decrypt the messages you receive, create a symmetric message `decoder` and process the messages as usual:
 
-```js
+```js title="Receiver client"
 import { createDecoder } from "@waku/message-encryption/symmetric";
 
 // Create a symmetric message decoder
@@ -97,7 +97,7 @@ const publicKey = getPublicKey(privateKey);
 
 To send encrypted messages, create an `ECIES` message `encoder` with the public key and send the message as usual:
 
-```js
+```js title="Sender client"
 import { createEncoder } from "@waku/message-encryption/ecies";
 
 // Create an ECIES message encoder
@@ -112,7 +112,7 @@ await node.lightPush.send(encoder, { payload });
 
 To decrypt the messages you receive, create an `ECIES` message `decoder` with the private key and process the messages as usual:
 
-```js
+```js title="Receiver client"
 import { createDecoder } from "@waku/message-encryption/ecies";
 
 // Create an ECIES message decoder
@@ -140,7 +140,7 @@ Signing messages is only possible when encrypted, but if your application does n
 
 The `sigPrivKey` option allows the `Symmetric` and `ECIES` message `encoders` to sign the message before encryption using an `ECDSA` private key:
 
-```js title="Alice (Sender) Client"
+```js title="Alice (sender) client"
 import { generatePrivateKey, getPublicKey } from "@waku/message-encryption";
 import { createEncoder as createSymmetricEncoder } from "@waku/message-encryption/symmetric";
 import { createEncoder as createECIESEncoder } from "@waku/message-encryption/ecies";
@@ -175,7 +175,7 @@ await node.lightPush.send(ECIESEncoder, { payload });
 
 You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message origin:
 
-```js title="Bob (Receiver) Client"
+```js title="Bob (receiver) client"
 import { generatePrivateKey } from "@waku/message-encryption";
 import { createEncoder } from "@waku/message-encryption/symmetric";
 import { equals } from "uint8arrays/equals";
@@ -209,11 +209,11 @@ const callback = (wakuMessage) => {
 await subscription.subscribe([encoder], callback);
 ```
 
-## Restoring encryption keys
+## Storing encryption keys
 
 We used randomly generated keys for encryption and message signing in the provided examples, but real-world applications require consistent keys among clients. Have a look at the [Key Pair Handling](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm/src/key_pair_handling) example, which demonstrates the secure storage and retrieval of key information from local storage using [Subtle Crypto](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto).
 
-You can also use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package to convert keys into hexadecimal format:
+You can also use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package to store keys in hexadecimal format:
 
 ```js
 import { bytesToHex, hexToBytes } from "@waku/utils/bytes";
@@ -222,7 +222,7 @@ import { bytesToHex, hexToBytes } from "@waku/utils/bytes";
 const symKey = generateSymmetricKey();
 const privateKey = generatePrivateKey();
 
-// Convert the keys to hexadecimal format
+// Store the keys in hexadecimal format
 const symKeyHex = bytesToHex(symKey);
 const privateKeyHex = bytesToHex(privateKey);
 
