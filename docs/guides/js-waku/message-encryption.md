@@ -211,28 +211,26 @@ await subscription.subscribe([encoder], callback);
 
 ## Restoring encryption keys
 
-We used randomly generated keys for encryption and message signing in the provided examples, but real-world applications require consistent keys among clients. You can use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package to convert keys into a hexadecimal format for uniformity:
+We used randomly generated keys for encryption and message signing in the provided examples, but real-world applications require consistent keys among clients. Have a look at the [Key Pair Handling](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm/src/key_pair_handling) example, which demonstrates the secure storage and retrieval of key information from local storage using [Subtle Crypto](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto).
+
+You can also use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package to convert keys into hexadecimal format:
 
 ```js
 import { bytesToHex, hexToBytes } from "@waku/utils/bytes";
-import { generateSymmetricKey, generatePrivateKey } from "@waku/message-encryption";
 
 // Generate random symmetric and private keys
 const symKey = generateSymmetricKey();
 const privateKey = generatePrivateKey();
-console.log(symKey, privateKey);
 
 // Convert the keys to hexadecimal format
 const symKeyHex = bytesToHex(symKey);
 const privateKeyHex = bytesToHex(privateKey);
-console.log(symKeyHex, privateKeyHex);
 
 // Restore the keys from hexadecimal format
 const restoredSymKey = hexToBytes(symKeyHex);
 const restoredPrivateKey = hexToBytes(privateKeyHex);
-console.log(restoredSymKey, restoredPrivateKey);
 ```
 
 :::tip Congratulations!
-You have successfully encrypted, decrypted, and signed your messages using `symmetric` and `ECIES` encryption methods. Have a look at the [flush-notes](https://github.com/waku-org/js-waku-examples/tree/master/examples/flush-notes) example for a working demo.
+You have successfully encrypted, decrypted, and signed your messages using `Symmetric` and `ECIES` encryption methods. Have a look at the [flush-notes](https://github.com/waku-org/js-waku-examples/tree/master/examples/flush-notes) and [eth-pm](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm) examples for working demos.
 :::
