@@ -22,14 +22,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="npm" label="NPM">
 
 ```shell
-npm install @waku/message-encryption @waku/utils uint8arrays
+npm install @waku/message-encryption @waku/utils
 ```
 
 </TabItem>
 <TabItem value="yarn" label="Yarn">
 
 ```shell
-yarn add @waku/message-encryption @waku/utils uint8arrays
+yarn add @waku/message-encryption @waku/utils
 ```
 
 </TabItem>
@@ -43,7 +43,7 @@ yarn add @waku/message-encryption @waku/utils uint8arrays
 import { generateSymmetricKey } from "@waku/message-encryption";
 
 // Generate a random symmetric key
-const symKey = generateSymmetricKey();
+const symmetricKey = generateSymmetricKey();
 ```
 
 To send encrypted messages, create a `Symmetric` message `encoder` and send the message as usual:
@@ -54,7 +54,7 @@ import { createEncoder } from "@waku/message-encryption/symmetric";
 // Create a symmetric message encoder
 const encoder = createEncoder({
 	contentTopic: contentTopic, // message content topic
-	symKey: symKey, // symmetric key for encrypting messages
+	symKey: symmetricKey, // symmetric key for encrypting messages
 });
 
 // Send the message using Light Push
@@ -67,10 +67,9 @@ To decrypt the messages you receive, create a symmetric message `decoder` and pr
 import { createDecoder } from "@waku/message-encryption/symmetric";
 
 // Create a symmetric message decoder
-const decoder = createDecoder(contentTopic, symKey);
+const decoder = createDecoder(contentTopic, symmetricKey);
 
 // Receive messages from a Filter subscription
-const subscription = await node.filter.createSubscription();
 await subscription.subscribe([decoder], callback);
 
 // Retrieve messages from Store peers
@@ -119,7 +118,6 @@ import { createDecoder } from "@waku/message-encryption/ecies";
 const decoder = createDecoder(contentTopic, privateKey);
 
 // Receive messages from a Filter subscription
-const subscription = await node.filter.createSubscription();
 await subscription.subscribe([decoder], callback);
 
 // Retrieve messages from Store peers
@@ -148,21 +146,21 @@ import { createEncoder as createECIESEncoder } from "@waku/message-encryption/ec
 // Generate a random ECDSA private key for signing messages
 // ECIES encryption and message signing both use ECDSA keys
 // For this example, we'll call the sender of the message Alice
-const aliceSigPrivKey = generatePrivateKey();
-const aliceSigPubKey = getPublicKey(aliceSigPrivKey);
+const alicePrivateKey = generatePrivateKey();
+const alicePublicKey = getPublicKey(alicePrivateKey);
 
 // Create a symmetric encoder that signs messages
 const symmetricEncoder = createSymmetricEncoder({
 	contentTopic: contentTopic, // message content topic
-	symKey: symKey, // symmetric key for encrypting messages
-	sigPrivKey: aliceSigPrivKey, // private key for signing messages before encryption
+	symKey: symmetricKey, // symmetric key for encrypting messages
+	sigPrivKey: alicePrivateKey, // private key for signing messages before encryption
 });
 
 // Create an ECIES encoder that signs messages
 const ECIESEncoder = createECIESEncoder({
 	contentTopic: contentTopic, // message content topic
 	publicKey: publicKey, // ECIES public key for encrypting messages
-	sigPrivKey: aliceSigPrivKey, // private key for signing messages before encryption
+	sigPrivKey: alicePrivateKey, // private key for signing messages before encryption
 });
 
 // Send and receive your messages as usual with Light Push and Filter
@@ -173,33 +171,33 @@ await subscription.subscribe([ECIESEncoder], callback);
 await node.lightPush.send(ECIESEncoder, { payload });
 ```
 
-You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message origin:
+You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key or use the `verifySignature()` function to verify the message origin:
 
 ```js title="Bob (receiver) client"
 import { generatePrivateKey } from "@waku/message-encryption";
 import { createEncoder } from "@waku/message-encryption/symmetric";
-import { equals } from "uint8arrays/equals";
 
 // Generate a random private key for signing messages
 // For this example, we'll call the receiver of the message Bob
-const bobSigPrivKey = generatePrivateKey();
+const bobPrivateKey = generatePrivateKey();
 
 // Create an encoder that signs messages
 const encoder = createEncoder({
 	contentTopic: contentTopic,
-	symKey: symKey,
-	sigPrivKey: bobSigPrivKey,
+	symKey: symmetricKey,
+	sigPrivKey: bobPrivateKey,
 });
 
 // Modify the callback function to verify message signature
 const callback = (wakuMessage) => {
 	// Extract the message signature and public key of the signature
+	// You can compare the signaturePublicKey with Alice public key
 	const signature = wakuMessage.signature;
 	const signaturePublicKey = wakuMessage.signaturePublicKey;
 
-	// Compare the public key of the message signature with Alice's own
+	// Verify the message was actually signed and sent by Alice
 	// Alice's public key can be gotten from broadcasting or out-of-band methods
-	if (equals(signaturePublicKey, aliceSigPubKey)) {
+	if (wakuMessage.verifySignature(alicePublicKey)) {
 		console.log("This message was signed by Alice");
 	} else {
 		console.log("This message was NOT signed by Alice");
@@ -219,15 +217,15 @@ You can also use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) pa
 import { bytesToHex, hexToBytes } from "@waku/utils/bytes";
 
 // Generate random symmetric and private keys
-const symKey = generateSymmetricKey();
+const symmetricKey = generateSymmetricKey();
 const privateKey = generatePrivateKey();
 
 // Store the keys in hexadecimal format
-const symKeyHex = bytesToHex(symKey);
+const symmetricKeyHex = bytesToHex(symmetricKey);
 const privateKeyHex = bytesToHex(privateKey);
 
 // Restore the keys from hexadecimal format
-const restoredSymKey = hexToBytes(symKeyHex);
+const restoredSymmetricKey = hexToBytes(symmetricKeyHex);
 const restoredPrivateKey = hexToBytes(privateKeyHex);
 ```
 
