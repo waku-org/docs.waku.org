@@ -209,9 +209,9 @@ await subscription.subscribe([encoder], callback);
 
 ## Storing encryption keys
 
-We used randomly generated keys for encryption and message signing in the provided examples, but real-world applications require consistent keys among clients. Have a look at the [Key Pair Handling](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm/src/key_pair_handling) example, which demonstrates the secure storage and retrieval of key information from local storage using [Subtle Crypto](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto).
+We used randomly generated keys for encryption and message signing in the provided examples, but real-world applications require consistent keys among client restarts. Have a look at the [Key Pair Handling](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm/src/key_pair_handling) example, which demonstrates the secure storage and retrieval of key information from local storage using [Subtle Crypto](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto).
 
-You can also use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package to store keys in hexadecimal format:
+If you need a simple way to store your keys in hexadecimal format across your application, you can use the [@waku/utils](https://www.npmjs.com/package/@waku/utils) package:
 
 ```js
 import { bytesToHex, hexToBytes } from "@waku/utils/bytes";
