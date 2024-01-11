@@ -79,6 +79,12 @@ const config = {
           label: "Learn",
         },
         {
+          type: "docSidebar",
+          position: "left",
+          sidebarId: "research",
+          label: "Research",
+        },
+        {
           href: "https://discord.waku.org",
           position: "left",
           label: "Discord",

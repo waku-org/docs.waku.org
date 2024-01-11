@@ -85,6 +85,21 @@ const sidebars = {
 		"learn/waku-vs-libp2p",
 		"learn/glossary",
 	],
+  research: [
+    {
+      type: "category",
+      label: "Research and Studies",
+      collapsed: false,
+      items: ["research/research-and-studies/incentivization"],
+    },
+    {
+      type: "category",
+      label: "nwaku Benchmarks",
+      collapsed: false,
+      items: ["research/benchmarks/postgres-adoption"],
+    },
+  ],
+
 };
 
 module.exports = sidebars;
