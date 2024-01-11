@@ -171,11 +171,15 @@ await subscription.subscribe([ECIESEncoder], callback);
 await node.lightPush.send(ECIESEncoder, { payload });
 ```
 
-You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key or use the `verifySignature()` function to verify the message origin:
+You can extract the `signature` and its public key (`signaturePublicKey`) from the [DecodedMessage](https://js.waku.org/classes/_waku_message_encryption.DecodedMessage.html) and compare it with the expected public key to verify the message origin:
+
+<!-- or use the `verifySignature()` function -->
+<!-- if (wakuMessage.verifySignature(alicePublicKey)) { -->
 
 ```js title="Bob (receiver) client"
 import { generatePrivateKey } from "@waku/message-encryption";
 import { createEncoder } from "@waku/message-encryption/symmetric";
+import { equals } from "uint8arrays/equals";
 
 // Generate a random private key for signing messages
 // For this example, we'll call the receiver of the message Bob
@@ -197,7 +201,7 @@ const callback = (wakuMessage) => {
 
 	// Verify the message was actually signed and sent by Alice
 	// Alice's public key can be gotten from broadcasting or out-of-band methods
-	if (wakuMessage.verifySignature(alicePublicKey)) {
+	if (equals(signaturePublicKey, alicePublicKey)) {
 		console.log("This message was signed by Alice");
 	} else {
 		console.log("This message was NOT signed by Alice");
@@ -230,5 +234,7 @@ const restoredPrivateKey = hexToBytes(privateKeyHex);
 ```
 
 :::tip Congratulations!
-You have successfully encrypted, decrypted, and signed your messages using `Symmetric` and `ECIES` encryption methods. Have a look at the [flush-notes](https://github.com/waku-org/js-waku-examples/tree/master/examples/flush-notes) and [eth-pm](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm) examples for working demos.
+You have successfully encrypted, decrypted, and signed your messages using `Symmetric` and `ECIES` encryption methods. Have a look at the [eth-pm](https://github.com/waku-org/js-waku-examples/tree/master/examples/eth-pm) example for a working demo.
 :::
+
+<!-- [flush-notes](https://github.com/waku-org/js-waku-examples/tree/master/examples/flush-notes) and -->
