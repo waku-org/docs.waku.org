@@ -1,8 +1,3 @@
----
-title: Incentivization in Decentralized Networks
-description: The goal of this document is to outline and contextualize our approach to TWN i13n.
----
-
 Waku is a family of decentralized communication protocols.
 The Waku Network (TWN) consists of independent nodes running Waku protocols.
 TWN needs incentivization (shortened to i13n) to ensure proper node behavior.
@@ -13,6 +8,7 @@ we focus on Waku Store - a client-server protocol for querying historical messag
 We introduce a minimal viable addition to Store to enable i13n,
 and list research directions for future work.
 
+# Incentivization in decentralized networks
 ## Incentivization tools
 
 We can think of incentivization tools as a two-by-two matrix:
