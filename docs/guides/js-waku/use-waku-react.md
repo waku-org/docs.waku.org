@@ -35,7 +35,7 @@ yarn create vite [PROJECT DIRECTORY] --template react
 </TabItem>
 </Tabs>
 
-Next, install the required libraries for integrating `@waku/sdk` using your preferred package manager:
+Next, install the required packages for integrating `@waku/sdk` using your preferred package manager:
 
 <Tabs groupId="package-manager">
 <TabItem value="npm" label="NPM">

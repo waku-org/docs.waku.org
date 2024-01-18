@@ -150,6 +150,10 @@ const config = {
               href: "https://rfc.vac.dev/",
               label: "Vac RFCs",
             },
+            {
+              href: "https://github.com/waku-org/awesome-waku/",
+              label: "Awesome Waku",
+            },
           ],
         },
         {

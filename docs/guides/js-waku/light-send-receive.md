@@ -128,7 +128,7 @@ const callback = (wakuMessage) => {
     console.log(messageObj);
 };
 
-// Create a filter subscription
+// Create a Filter subscription
 const subscription = await node.filter.createSubscription();
 
 // Subscribe to content topics and process new messages
