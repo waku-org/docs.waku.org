@@ -43,7 +43,23 @@ Waku is developing privacy-preserving features like [Anonymous Filter Subscripti
 
 You can increase [k-anonymity](https://www.privitar.com/blog/k-anonymity-an-introduction/) within the network by using a unified content topic across the entire application or targeting specific features like notifications or private messages, allowing multiple users to share it.
 
-However, maintaining functionality with a single content topic can introduce complexity. We recommend switching functionality using the Protocol Buffer (`proto`) message format. By doing so, applications can retain a high granularity and functionality while using a single content topic, preserving user privacy.
+We recommend switching functionality using the Protocol Buffer (`proto`) message format. By doing so, applications can retain a high granularity and functionality while using a single content topic, preserving user privacy. For example:
+
+```js
+message NotificationPayload {
+...
+}
+
+message FeatureAbcPayload {
+...
+}
+
+// By default, all fields in protobuf are optional so only field may be encoded at a time
+message Payload {
+	NotificationPayload notification = 1;
+	FeatureAbcPayload feature_abc = 2;
+}
+```
 
 ### Creating buckets help in distributing traffic
 
