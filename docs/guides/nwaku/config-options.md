@@ -88,9 +88,9 @@ Here are the available node configuration options, along with their default valu
 | `filter` | `false` | Enable filter protocol: true\|false |
 | `filternode` |  | Peer multiaddr to request content filtering of messages |
 | `filter-timeout` | `14400 # 4 hours` | Timeout for filter node in seconds |
-| `filter-subscription-timeout` | `300 # 5 minutes` | Timeout for filter subscription without ping or refresh it, in seconds.<br>_Only for v2 filter protocol_ |
-| `filter-max-peers-to-serve` | `1000` | Maximum number of peers to serve at a time.<br>_Only for v2 filter protocol_ |
-| `filter-max-criteria` | `1000` | Maximum number of pubsub- and content topic combination per peers at a time.<br>_Only for v2 filter protocol_ |
+| `filter-subscription-timeout` | `300 # 5 minutes` | Timeout for filter subscription without ping or refresh it, in seconds. Only for v2 filter protocol |
+| `filter-max-peers-to-serve` | `1000` | Maximum number of peers to serve at a time. Only for v2 filter protocol |
+| `filter-max-criteria` | `1000` | Maximum number of pubsub and content topic combinations per peer at a time. Only for v2 filter protocol |
 
 ## Light push config
 
