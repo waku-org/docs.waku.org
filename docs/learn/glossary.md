@@ -63,6 +63,10 @@ A node is a device or client that implements Waku [protocols](#protocol) and lev
 
 A node key is a [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (64-char hex string) private key for generating the [PeerID](#peer-id), [listening](#transport) addresses, and [discovery](#peer-discovery) addresses of a Waku node.
 
+### Out-of-band
+
+Out-of-band refers to exchanging information through a separate, secure channel distinct from the main communication method to enhance security.
+
 ### Payload
 
 The payload field in a [Waku Message](#waku-message) contains the application data, serving as the business logic message transmitted between clients over Waku. Applications can encrypt the payload or employ encryption methods specified in [Waku Message Payload Encryption](#waku-message-payload-encryption).
