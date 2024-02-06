@@ -76,7 +76,12 @@
     "faucet",
     "concat",
     "certonly",
+<<<<<<< HEAD
     "txid",
+=======
+    "baarerstrasse",
+    "FDPIC",
+>>>>>>> 412a1c8 (fix cspell words (#160))
   ],
   "flagWords": [],
   "ignorePaths": [
