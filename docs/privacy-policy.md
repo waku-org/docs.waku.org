@@ -41,7 +41,7 @@ In addition to our limited and collection of personal data, third parties may co
 
 We would however like to draw your attention to the following: 
 
-* **Youtube**: The Website may embed videos from Youtube, a service provided by Google LLC, using Youtube’s privacy-enhanced mode. When you interact with such videos, Youtube may place cookies on your personal device. The cookies do not directly identify individual users and YouTube will not store information to personalise your experience unless you are logged in to a Google account. We do not have any control over these cookies set by Youtube and it is recommended that you review YouTube’s embedding videos information page.
+* **YouTube**: The Website may embed videos from YouTube, a service provided by Google LLC, using YouTube’s privacy-enhanced mode. When you interact with such videos, YouTube may place cookies on your personal device. The cookies do not directly identify individual users and YouTube will not store information to personalise your experience unless you are logged in to a Google account. We do not have any control over these cookies set by YouTube and it is recommended that you review YouTube’s embedding videos information page.
 
 ### 4) Security measures we take in respect of the Website 
 
