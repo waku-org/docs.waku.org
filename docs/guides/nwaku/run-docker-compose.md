@@ -28,7 +28,7 @@ cd nwaku-compose
 
 ## Configure the setup
 
-Docker Compose [reads the ./.env file](https://docs.docker.com/compose/environment-variables/set-environment-variables/#additional-information-3) from the filesystem. You can use `.env.example` as a template to provide the values mentioned above. The recommended process for working with `.env` files is to duplicate `.env.example`, rename it as `.env`, and then make the necessary value edits.
+Docker Compose [reads the ./.env file](https://docs.docker.com/compose/environment-variables/set-environment-variables/#additional-information-3) from the filesystem. You can use `.env.example` as a template to provide the above values. The recommended process for working with `.env` files is to duplicate `.env.example`, rename it as `.env`, and then make the necessary value edits.
 
 ```shell
 cp .env.example .env
@@ -36,12 +36,12 @@ ${EDITOR} .env
 ```
 
 :::caution
-Ensure that you do **NOT** include any secrets in the `.env.example` file, as it could accidentally end up being shared in the Git repository.
+Ensure that you do **NOT** include any secrets in the `.env.example` file, as it could accidentally be shared in the Git repository.
 :::
 
-## Register RLN membership
+## Register for RLN membership
 
-The RLN membership is your access key to The Waku Network. Its registration is done on-chain and allows your `nwaku` node to send messages decentralised and privately, respecting some [rate limits](https://rfc.vac.dev/spec/64/#rate-limit-exceeded). Messages that exceed the rate limit won't be relayed by other peers.
+The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some [rate limits](https://rfc.vac.dev/spec/64/#rate-limit-exceeded). Other peers won't relay messages that exceed the rate limit.
 
 This command registers your membership and saves it in the `keystore/keystore.json` file:
 
@@ -63,7 +63,7 @@ docker-compose up -d
 
 ## Interact with the node
 
-Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real-time.
+Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real time.
 
 ![nwaku compose dashboard](/img/nwaku-compose-dashboard.png)
 
