@@ -6,8 +6,8 @@ hide_table_of_contents: true
 `nwaku-compose` is a ready-to-use Docker Compose setup that runs the following:
 
 - `nwaku` node running [Relay](/learn/concepts/protocols#relay) and [Store](/learn/concepts/protocols#store) protocols with [RLN](/learn/concepts/protocols#rln-relay) enabled.
-- Simple frontend to interact with your node and the network to send and receive messages.
-- [Grafana](https://grafana.com/) metrics dashboard for advanced users or node operators.
+- Simple frontend to interact with the node and Waku network to send and receive messages.
+- [Grafana](https://grafana.com/) metrics dashboard for advanced users and node operators to monitor the node.
 
 This guide provides detailed steps to configure, run, monitor, and interact with a `nwaku` node with [nwaku-compose](https://github.com/waku-org/nwaku-compose).
 
@@ -28,17 +28,22 @@ cd nwaku-compose
 
 ## Configure the setup
 
-Modify the `run_node.sh` file to customise your [node's configuration](/guides/nwaku/config-options) and `docker-compose.yml` to specify particular [Docker image](https://hub.docker.com/r/statusteam/nim-waku/tags) tag. Next, export your Ethereum Sepolia configuration and membership password:
+Docker Compose [reads the ./.env file](https://docs.docker.com/compose/environment-variables/set-environment-variables/#additional-information-3) from the filesystem. You can use `.env.example` as a template to provide the above values. The recommended process for working with `.env` files is to duplicate `.env.example`, rename it as `.env`, and then make the necessary value edits.
 
 ```shell
-export ETH_CLIENT_ADDRESS=wss://sepolia.infura.io/ws/v3/[INFURA API KEY]
-export ETH_TESTNET_KEY=[TESTNET PRIVATE KEY]
-export KEYSTORE_PASSWORD=[RLN MEMBERSHIP PASSWORD]
+cp .env.example .env
+${EDITOR} .env
 ```
 
-## Register RLN membership
+:::caution
+Ensure that you do **NOT** include any secrets in the `.env.example` file, as it could accidentally be shared in the Git repository.
+:::
 
-The RLN membership is your access key to The Waku Network. Its registration is done on-chain and allows your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages exceeding the rate limit:
+## Register for RLN membership
+
+The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some [rate limits](https://rfc.vac.dev/spec/64/#rate-limit-exceeded). Other peers won't relay messages that exceed the rate limit.
+
+This command registers your membership and saves it in the `keystore/keystore.json` file:
 
 ```shell
 ./register_rln.sh
@@ -50,7 +55,7 @@ If you only want to relay traffic without sending messages to the network, you d
 
 ## Run the node
 
-Start all processes: `nwaku` node, database and Grafana for metrics. Your RLN membership is loaded into nwaku under the hood:
+Start all processes: `nwaku` node, database for storing messages, and Grafana for metrics. Your RLN membership is loaded into nwaku under the hood:
 
 ```shell
 docker-compose up -d
@@ -58,7 +63,7 @@ docker-compose up -d
 
 ## Interact with the node
 
-Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real-time.
+Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real time.
 
 ![nwaku compose dashboard](/img/nwaku-compose-dashboard.png)
 
@@ -78,7 +83,7 @@ curl --location 'http://127.0.0.1:8645/debug/v1/version'
 curl --location 'http://127.0.0.1:8645/debug/v1/info'
 ```
 
-Send a message to a `contentTopic`, which all subscribers will receive. Please note that the payload is encoded in `base64`.
+Send a message to a `contentTopic`, which all subscribers will receive. Please note that the `payload` is encoded in `base64`.
 
 ```shell
 curl --location 'http://127.0.0.1:8645/relay/v1/auto/messages' \
