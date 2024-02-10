@@ -23,8 +23,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="debian" label="Debian and Ubuntu">
 
 ```shell
-sudo apt-get install build-essential git libpq5
-sudo apt-get install jq
+sudo apt-get install build-essential git libpq5 jq
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 ```
