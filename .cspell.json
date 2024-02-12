@@ -76,6 +76,8 @@
     "faucet",
     "concat",
     "certonly",
+    "baarerstrasse",
+    "FDPIC",
   ],
   "flagWords": [],
   "ignorePaths": [

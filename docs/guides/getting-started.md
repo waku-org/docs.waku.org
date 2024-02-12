@@ -17,6 +17,7 @@ The Waku Network is a decentralised, permissionless system where anyone can run 
 | | Description | Documentation |
 | - | - | - |
 | [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/nwaku/run-node) |
+| [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running a RLN-enabled `nwaku` node with Grafana metrics dashboard | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | COMING SOON |
 
 ## Integrate using SDKs
@@ -26,6 +27,7 @@ Waku is implemented in multiple SDKs, allowing it to integrate with different la
 | | Description | Documentation |
 | - | - | - |
 | [@waku/sdk](https://github.com/waku-org/js-waku) | JavaScript/TypeScript SDK designed for browser environments | [JavaScript Waku SDK](/guides/js-waku/) |
+| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `@waku/sdk` | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) |
 | [nwaku](https://github.com/waku-org/nwaku) | Nim SDK designed for integration with native Nim applications | COMING SOON |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang SDK designed for integration with Golang applications, includes C bindings for usage in C/C++, C#/Unity, Swift, and Kotlin | COMING SOON |
 | [waku-rust-bindings](https://github.com/waku-org/waku-rust-bindings) | Rust wrapper using `go-waku` bindings designed for integration in Rust applications | COMING SOON |
@@ -44,6 +46,4 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | | Description | Documentation |
 | - | - | - |
 | [REST API](https://waku-org.github.io/waku-rest-api/) | REST API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | [Waku Node REST API Reference](https://waku-org.github.io/waku-rest-api/) |
-| [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `@waku/sdk` | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `@waku/sdk` project from various example templates | [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) |
-| [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running and monitoring a `nwaku` node using Prometheus and Grafana | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |

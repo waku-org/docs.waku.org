@@ -163,6 +163,10 @@ const config = {
               href: "/terms",
               label: "Terms of Use",
             },
+            {
+              href: '/privacy-policy',
+              label: 'Privacy Policy',
+            },
           ],
         },
       ],

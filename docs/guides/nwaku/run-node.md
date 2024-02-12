@@ -13,7 +13,18 @@ We recommend running a `nwaku` node with at least 2GB of RAM, especially if you 
 
 ## Get the node binary
 
-To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for acquiring the node binary:
+To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for running a node:
+
+#### Run nwaku in Docker (recommended)
+
+| | Description | Documentation |
+| - | - | - |
+| Docker Compose | Run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+| Docker Container | Run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker) |
+
+:::tip
+We recommend [using Docker Compose](/guides/nwaku/run-docker-compose) to run a node because it's the simplest and fastest way to configure and run one.
+:::
 
 #### Download the binary
 
@@ -24,14 +35,9 @@ To run a node, you must have the `nwaku` binary. Nwaku provides multiple options
 
 #### Build the binary
 
-You can build the node binary directly from the [nwaku source code](https://github.com/waku-org/nwaku). Have a look at the [Build Nwaku from Source](/guides/nwaku/build-source) guide to learn more.
-
-#### Run nwaku in Docker
-
 | | Description | Documentation |
 | - | - | - |
-| Docker Container | Run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker) |
-| Docker Compose | Run a `nwaku` node with Docker Compose | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+| Build from Source | Build the node from the [nwaku source code](https://github.com/waku-org/nwaku) | [Build Nwaku from Source](/guides/nwaku/build-source) |
 
 :::tip
 You can run the `nwaku` binaries and Docker images on cloud service providers like [Google Cloud](https://cloud.google.com/), [Microsoft Azure](https://azure.microsoft.com/), [Amazon Web Services](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
