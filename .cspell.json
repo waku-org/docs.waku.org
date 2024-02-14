@@ -76,6 +76,7 @@
     "faucet",
     "concat",
     "certonly",
+    "txid",
   ],
   "flagWords": [],
   "ignorePaths": [

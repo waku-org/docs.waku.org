@@ -42,7 +42,7 @@ yarn check:spell
 Create a production build locally to check for errors:
 
 ```shell
-yarn build # Run 'node fetch-content.js' and then 'docusaurus build'
+yarn build # Runs 'node fetch-content.js' and then 'docusaurus build'
 # The 'fetch-content.js' script fetches documents from the nwaku and research repositories.
 
 # test the build

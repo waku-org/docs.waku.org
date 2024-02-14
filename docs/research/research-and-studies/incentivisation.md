@@ -1,6 +1,10 @@
-Waku is a family of decentralized communication protocols.
+---
+title: Incentivisation
+---
+
+Waku is a family of decentralised communication protocols.
 The Waku Network (TWN) consists of independent nodes running Waku protocols.
-TWN needs incentivization (shortened to i13n) to ensure proper node behavior.
+TWN needs incentivisation (shortened to i13n) to ensure proper node behaviour.
 
 The goal of this document is to outline and contextualize our approach to TWN i13n.
 After providing an overview of Waku and relevant prior work,
@@ -8,10 +12,10 @@ we focus on Waku Store - a client-server protocol for querying historical messag
 We introduce a minimal viable addition to Store to enable i13n,
 and list research directions for future work.
 
-# Incentivization in decentralized networks
-## Incentivization tools
+# Incentivisation in decentralised networks
+## Incentivisation tools
 
-We can think of incentivization tools as a two-by-two matrix:
+We can think of incentivisation tools as a two-by-two matrix:
 - rewards vs punishment;
 - monetary vs reputation.
 
@@ -25,11 +29,11 @@ Reputation only works if high reputation brings tangible benefits.
 For example, if nodes chose neighbors based on reputation, low-reputation nodes miss out on potential revenue.
 Reputation scores may be local (a node assigns scores to its neighbors) or global (each node gets a uniform score).
 Global reputation in its simplest form involves a trusted third party,
-although decentralized approaches are also possible.
+although decentralised approaches are also possible.
 
 ## Prior work
 
-We may split incentivized decentralized networks into early file-sharing, blockchains, and decentralized storage.
+We may split incentivized decentralised networks into early file-sharing, blockchains, and decentralised storage.
 
 ### Early P2P file-sharing
 
@@ -46,16 +50,16 @@ PoW miners are automatically assigned newly mined coins for generating blocks.
 Miners must expend physical resources to generate a block.
 If the block is invalid, these expenses are not compensated (implicit monetary punishment).
 Proof-of-stake (PoS), used in Ethereum and many other cryptocurrencies, introduces explicit monetary punishments.
-PoS validators lock up (stake) native tokens and get rewarded for validating blocks or slashed for misbehavior.
+PoS validators lock up (stake) native tokens and get rewarded for validating blocks or slashed for misbehaviour.
 
-### Decentralized storage
+### Decentralised storage
 
-Post-Bitcoin decentralized storage networks include Codex, Storj, Sia, Filecoin, IPFS.
+Post-Bitcoin decentralised storage networks include Codex, Storj, Sia, Filecoin, IPFS.
 Their i13n methods combine techniques from early P2P file-sharing with blockchain-inspired reward mechanisms.
 
 # Waku background
 
-Waku is a [family of protocols](https://waku.org/about/architect) for a modular privacy-preserving censorship-resistant decentralized communication network.
+Waku is a [family of protocols](https://waku.org/about/architect) for a modular privacy-preserving censorship-resistant decentralised communication network.
 The backbone of Waku is the Relay protocol (and its spam-protected version [RLN-Relay](https://rfc.vac.dev/spec/17/)).
 Additionally, there are light protocols: Store, Filter, and Lightpush.
 Light protocols are also referred to as client-server protocols and request-response protocols.
@@ -72,12 +76,12 @@ In light protocols, a client sends a request to a server, and a server performs 
 
 ## Waku i13n challenges
 
-Waku has no consensus and no native token, which brings it closer to reputation-incentivized file-sharing networks.
+Waku has no consensus and no native token, which brings it closer to reputation-incentivised file-sharing networks.
 As of late 2023, Waku only operates under reputation-based rewards and punishments.
 While [RLN-Relay](https://rfc.vac.dev/spec/17/) adds monetary punishments for spammers, slashing is yet to be activated.
 
-Monetary rewards and punishments should ideally be atomically linked with the node's behavior.
-A benefit of blockchains in this respect is that the desired behavior of miners or validators can be verified automatically.
+Monetary rewards and punishments should ideally be atomically linked with the node's behaviour.
+A benefit of blockchains in this respect is that the desired behaviour of miners or validators can be verified automatically.
 Enforcing atomicity in a communication network is more challenging:
 it is non-trivial to prove that a given piece of data has been relayed.
 
@@ -96,9 +100,9 @@ The response may be split into multiple parts, as specified by pagination parame
 We define a _relevant_ message as a message that matches client-defined criteria (e.g., relayed within a given time frame).
 Upon receiving a request, a server should quickly send back a response containing all and only relevant messages.
 
-# Waku Store incentivization
+# Waku Store incentivisation
 
-An incentivized Store protocol has the following extra steps:
+An incentivised Store protocol has the following extra steps:
 1. pricing:
 	1. cost calculation
 	2. price advertisement
@@ -155,7 +159,7 @@ The client gives proof of payment before it receives the response.
 Other options could be:
 1. the client pays after the fact;
 2. the client pays partly upfront and partly after the fact;
-3. a centralized third party (either trusted or semi-trusted, like a smart contract) ensures atomicity;
+3. a centralised third party (either trusted or semi-trusted, like a smart contract) ensures atomicity;
 4. cryptographically ensured atomicity (similar to atomic swaps, Lightning, or Hopr).
 
 Our design considerations are:
@@ -165,7 +169,7 @@ Our design considerations are:
 
 In light of these criteria, we suggest that the client pays first.
 This is simpler than splitting the payment, or involving an extra atomicity-enforcing mechanism.
-Moreover, pre-payment is arguably more privacy-preserving than post-payment, which encourages servers to deanonymize clients to prevent fraud.
+Moreover, pre-payment is arguably more privacy-preserving than post-payment, which encourages servers to deanonymise clients to prevent fraud.
 
 ### Future work
 
@@ -179,7 +183,7 @@ Moreover, pre-payment is arguably more privacy-preserving than post-payment, whi
 We use reputation to discourage the server from taking the payment and not responding.
 The client keeps track of the server's reputation:
 - all servers start with zero reputation points;
-- if the server honors the request, it gets `+n` points;
+- if the server honours the request, it gets `+n` points;
 - if the server does not respond before a timeout, it gets `-m` points.
 - if the server's reputation drops below `k` points, the client will never query it again.
 
@@ -189,7 +193,7 @@ Optionally, a client may treat a given server as trusted, assigning it a constan
 
 Potential issues:
 - An attacker can establish new server identities and continue running away with clients' money. Countermeasures:
-	- a client only queries trusted servers (which however leads to centralization);
+	- a client only queries trusted servers (which however leads to centralisation);
 	- when querying a new server, a client first sends a small (i.e. cheap) request as a test;
 	- more generally, the client selects a server on a case-by-case basis, weighing the payment amount against the server's reputation.
 - The ban mechanism can theoretically be abused. For instance, a competitor may attack the victim server and cause the clients who were awaiting the response to ban that server. Countermeasure: prevent DoS-attacks.
@@ -213,11 +217,11 @@ Cross-checking is absent in PoC but may be considered later.
 
 # Evaluation
 
-We should think about what the success metrics for an incentivized protocol are, and how to measure them both in simulated settings, as well as in a live network.
+We should think about what the success metrics for an incentivised protocol are, and how to measure them both in simulated settings, as well as in a live network.
 
 # Longer-term future work
 
 - Analyze privacy issues - see https://github.com/waku-org/research/issues/61
-- Analyze decentralized storage protocols and their relevance e.g. as back-end storage for Store servers - see https://github.com/waku-org/research/issues/34
+- Analyze decentralised storage protocols and their relevance e.g. as back-end storage for Store servers - see https://github.com/waku-org/research/issues/34
 - Analyze the role of message senders, in particular, whether they should pay for sending non-ephemeral messages - see https://github.com/waku-org/research/issues/32
-- Generalize incentivization protocol to other Waku light protocols (Lightpush and Filter) - see https://github.com/waku-org/research/issues/67.
+- Generalise incentivisation protocol to other Waku light protocols (Lightpush and Filter) - see https://github.com/waku-org/research/issues/67.

@@ -72,6 +72,8 @@ const repositories = [
     }
 ];
 
+fs.rmSync('docs/research/', { recursive: true, force: true });
+
 repositories.forEach(repo => {
     fetchDirectoryContents(repo.baseUrl, repo.baseSavePath, repo.prefixToRemove);
 });
