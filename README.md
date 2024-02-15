@@ -30,7 +30,7 @@ yarn install
 ## Running Locally
 
 ```shell
-yarn start
+yarn start # Run 'node fetch-content.js' in the root directory to fetch remote files
 ```
 
 Check for spelling errors before deploying:
@@ -42,10 +42,10 @@ yarn check:spell
 Create a production build locally to check for errors:
 
 ```shell
-yarn build
+yarn build # Runs 'node fetch-content.js' and then 'docusaurus build'
+# The 'fetch-content.js' script fetches documents from the nwaku and research repositories.
 
 # test the build
-
 yarn serve
 ```
 
