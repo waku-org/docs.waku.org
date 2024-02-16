@@ -90,7 +90,13 @@ const sidebars = {
 			type: "category",
 			label: "Research and Studies",
 			collapsed: false,
-			items: ["research/research-and-studies/incentivisation"],
+			items: [
+				"research/research-and-studies/incentivisation",
+				"research/research-and-studies/capped-bandwidth",
+				"research/research-and-studies/maximum-bandwidth",
+				"research/research-and-studies/message-propagation",
+				"research/research-and-studies/rln-key-benchmarks",
+			],
 		},
 		{
 			type: "category",
