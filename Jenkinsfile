@@ -16,45 +16,30 @@ pipeline {
   environment {
     GIT_COMMITTER_NAME = 'status-im-auto'
     GIT_COMMITTER_EMAIL = 'auto@status.im'
-    PROD_SITE = 'docs.waku.org'
-    DEV_SITE  = 'dev-docs.waku.org'
-    DEV_HOST  = 'jenkins@node-01.do-ams3.sites.misc.statusim.net'
-    SCP_OPTS  = 'StrictHostKeyChecking=no'
   }
 
   stages {
     stage('Install') {
       steps {
-        sh "yarn install"
+        sh 'yarn install'
       }
     }
 
     stage('Build') {
       steps { script {
         sh 'yarn build'
-        dir('build') {
-          sh "echo ${env.PROD_SITE} > CNAME"
-          jenkins.genBuildMetaJSON()
-        } }
-      }
+        jenkins.genBuildMetaJSON('build/build.json')
+      } }
     }
 
-    stage('Publish Prod') {
-      when { expression { env.GIT_BRANCH ==~ /.*master/ } }
+    stage('Publish') {
       steps {
         sshagent(credentials: ['status-im-auto-ssh']) {
-          sh "ghp-import -p build"
-        }
-      }
-    }
-
-    stage('Publish Devel') {
-      when { expression { env.GIT_BRANCH !=~ /.*master/ } }
-      steps {
-        sshagent(credentials: ['jenkins-ssh']) {
           sh """
-            rsync -e 'ssh -o ${SCP_OPTS}' -r --delete build/. \
-              ${env.DEV_HOST}:/var/www/${env.DEV_SITE}/
+            ghp-import \
+              -b ${deployBranch()} \
+              -c ${deployDomain()} \
+              -p build
           """
         }
       }
@@ -65,3 +50,7 @@ pipeline {
     cleanup { cleanWs() }
   }
 }
+
+def isMasterBranch() { GIT_BRANCH ==~ /.*master/ }
+def deployBranch() { isMasterBranch() ? 'deploy-master' : 'deploy-develop' }
+def deployDomain() { isMasterBranch() ? 'docs.waku.org' : 'dev-docs.waku.org' }

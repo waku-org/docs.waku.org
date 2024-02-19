@@ -85,3 +85,12 @@ Docusaurus depends heavily on caching to enhance site performance. If you make c
 ```shell
 yarn clear
 ```
+
+## CI/CD
+
+- [CI builds](https://ci.infra.status.im/job/website/job/docs.waku.org/) `master` and pushes to `deploy-master` branch, which is hosted at <https://docs.waku.org/>.
+- [CI builds](https://ci.infra.status.im/job/website/job/dev-docs.waku.org/) `develop` and pushes to `deploy-develop` branch, which is hosted at <https://dev-docs.waku.org/>.
+
+The hosting is done using [Caddy server with Git plugin for handling GitHub webhooks](https://github.com/status-im/infra-misc/blob/master/ansible/roles/caddy-git).
+
+Information about deployed build can be also found in `/build.json` available on the website.
