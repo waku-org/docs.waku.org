@@ -2,17 +2,12 @@
 title: Incentivisation
 ---
 
-Waku is a family of decentralised communication protocols.
-The Waku Network (TWN) consists of independent nodes running Waku protocols.
-TWN needs incentivisation (shortened to i13n) to ensure proper node behaviour.
+Waku is a family of decentralised communication protocols. The Waku Network (TWN) consists of independent nodes running Waku protocols. TWN needs incentivisation (shortened to i13n) to ensure proper node behaviour.
 
-The goal of this document is to outline and contextualize our approach to TWN i13n.
-After providing an overview of Waku and relevant prior work,
-we focus on Waku Store - a client-server protocol for querying historical messages.
-We introduce a minimal viable addition to Store to enable i13n,
-and list research directions for future work.
+The goal of this document is to outline and contextualize our approach to TWN i13n. After providing an overview of Waku and relevant prior work, we focus on Waku Store - a client-server protocol for querying historical messages. We introduce a minimal viable addition to Store to enable i13n, and list research directions for future work.
 
 # Incentivisation in decentralised networks
+
 ## Incentivisation tools
 
 We can think of incentivisation tools as a two-by-two matrix:
@@ -25,11 +20,7 @@ In other words, there are four quadrants:
 - reputation reward: the node's reputation increases if it behaves well;
 - reputation punishment: the node's reputation decreases if it behaves badly.
 
-Reputation only works if high reputation brings tangible benefits.
-For example, if nodes chose neighbors based on reputation, low-reputation nodes miss out on potential revenue.
-Reputation scores may be local (a node assigns scores to its neighbors) or global (each node gets a uniform score).
-Global reputation in its simplest form involves a trusted third party,
-although decentralised approaches are also possible.
+Reputation only works if high reputation brings tangible benefits. For example, if nodes chose neighbors based on reputation, low-reputation nodes miss out on potential revenue. Reputation scores may be local (a node assigns scores to its neighbors) or global (each node gets a uniform score). Global reputation in its simplest form involves a trusted third party, although decentralised approaches are also possible.
 
 ## Prior work
 
@@ -37,37 +28,21 @@ We may split incentivized decentralised networks into early file-sharing, blockc
 
 ### Early P2P file-sharing
 
-Early P2P file-sharing networks employ reputation-based approaches and sticky defaults.
-For instance, the BitTorrent protocol rewards uploading peers with faster downloads.
-The download bandwidth available to a peer depends on how much it has uploaded.
-Moreover, peers share pieces of a file before having received it in whole.
-This non-monetary i13n policy has been proved to work in practice.
+Early P2P file-sharing networks employ reputation-based approaches and sticky defaults. For instance, the BitTorrent protocol rewards uploading peers with faster downloads. The download bandwidth available to a peer depends on how much it has uploaded. Moreover, peers share pieces of a file before having received it in whole. This non-monetary i13n policy has been proved to work in practice.
 
 ### Blockchains
 
-Bitcoin has introduced proof-of-work (PoW) for native monetary rewards in a P2P network.
-PoW miners are automatically assigned newly mined coins for generating blocks.
-Miners must expend physical resources to generate a block.
-If the block is invalid, these expenses are not compensated (implicit monetary punishment).
-Proof-of-stake (PoS), used in Ethereum and many other cryptocurrencies, introduces explicit monetary punishments.
-PoS validators lock up (stake) native tokens and get rewarded for validating blocks or slashed for misbehaviour.
+Bitcoin has introduced proof-of-work (PoW) for native monetary rewards in a P2P network. PoW miners are automatically assigned newly mined coins for generating blocks. Miners must expend physical resources to generate a block. If the block is invalid, these expenses are not compensated (implicit monetary punishment). Proof-of-stake (PoS), used in Ethereum and many other cryptocurrencies, introduces explicit monetary punishments. PoS validators lock up (stake) native tokens and get rewarded for validating blocks or slashed for misbehaviour.
 
 ### Decentralised storage
 
-Post-Bitcoin decentralised storage networks include Codex, Storj, Sia, Filecoin, IPFS.
-Their i13n methods combine techniques from early P2P file-sharing with blockchain-inspired reward mechanisms.
+Post-Bitcoin decentralised storage networks include Codex, Storj, Sia, Filecoin, IPFS. Their i13n methods combine techniques from early P2P file-sharing with blockchain-inspired reward mechanisms.
 
 # Waku background
 
-Waku is a [family of protocols](https://waku.org/about/architect) for a modular privacy-preserving censorship-resistant decentralised communication network.
-The backbone of Waku is the Relay protocol (and its spam-protected version [RLN-Relay](https://rfc.vac.dev/spec/17/)).
-Additionally, there are light protocols: Store, Filter, and Lightpush.
-Light protocols are also referred to as client-server protocols and request-response protocols.
+Waku is a [family of protocols](https://waku.org/about/architect) for a modular privacy-preserving censorship-resistant decentralised communication network. The backbone of Waku is the Relay protocol (and its spam-protected version [RLN-Relay](https://rfc.vac.dev/spec/17/)). Additionally, there are light protocols: Store, Filter, and Lightpush. Light protocols are also referred to as client-server protocols and request-response protocols.
 
-A server is a node running Relay and a server-side of at least one light protocol.
-A client is a node running a client-side of any of the light protocols.
-A server may sometimes be referred to as a full node, and a client as a light node.
-There is no strict definition of a full node vs a light node in Waku (see [discussion](https://github.com/waku-org/research/issues/28)).
+A server is a node running Relay and a server-side of at least one light protocol. A client is a node running a client-side of any of the light protocols. A server may sometimes be referred to as a full node, and a client as a light node. There is no strict definition of a full node vs a light node in Waku (see [discussion](https://github.com/waku-org/research/issues/28)).
 
 In light protocols, a client sends a request to a server, and a server performs some actions and returns a response:
 - [Store](https://rfc.vac.dev/spec/13/): the server responds with messages relayed that match a set of criteria;
@@ -76,18 +51,11 @@ In light protocols, a client sends a request to a server, and a server performs 
 
 ## Waku i13n challenges
 
-Waku has no consensus and no native token, which brings it closer to reputation-incentivised file-sharing networks.
-As of late 2023, Waku only operates under reputation-based rewards and punishments.
-While [RLN-Relay](https://rfc.vac.dev/spec/17/) adds monetary punishments for spammers, slashing is yet to be activated.
+Waku has no consensus and no native token, which brings it closer to reputation-incentivised file-sharing networks. As of late 2023, Waku only operates under reputation-based rewards and punishments. While [RLN-Relay](https://rfc.vac.dev/spec/17/) adds monetary punishments for spammers, slashing is yet to be activated.
 
-Monetary rewards and punishments should ideally be atomically linked with the node's behaviour.
-A benefit of blockchains in this respect is that the desired behaviour of miners or validators can be verified automatically.
-Enforcing atomicity in a communication network is more challenging:
-it is non-trivial to prove that a given piece of data has been relayed.
+Monetary rewards and punishments should ideally be atomically linked with the node's behaviour. A benefit of blockchains in this respect is that the desired behaviour of miners or validators can be verified automatically. Enforcing atomicity in a communication network is more challenging: it is non-trivial to prove that a given piece of data has been relayed.
 
-Our goal is to combine monetary and reputation-based incentives for Waku.
-Monetary incentives have demonstrated their robustness in blockchains.
-We think they are necessary to scale the network beyond the initial phase when it's maintained altruistically.
+Our goal is to combine monetary and reputation-based incentives for Waku. Monetary incentives have demonstrated their robustness in blockchains. We think they are necessary to scale the network beyond the initial phase when it's maintained altruistically.
 
 ## Waku Store
 
@@ -97,8 +65,7 @@ Waku Store is a light protocol for querying historic messages that works as foll
 
 The response may be split into multiple parts, as specified by pagination parameters in `PagingInfo`.
 
-We define a _relevant_ message as a message that matches client-defined criteria (e.g., relayed within a given time frame).
-Upon receiving a request, a server should quickly send back a response containing all and only relevant messages.
+We define a _relevant_ message as a message that matches client-defined criteria (e.g., relayed within a given time frame). Upon receiving a request, a server should quickly send back a response containing all and only relevant messages.
 
 # Waku Store incentivisation
 
@@ -113,8 +80,7 @@ An incentivised Store protocol has the following extra steps:
 3. reputation
 4. results cross-checking
 
-In this document, we focus on the simplest proof-of-concept (PoC) i13n for Store.
-Compared to the fully-fledged protocol, the PoC version is simplified in the following ways:
+In this document, we focus on the simplest proof-of-concept (PoC) i13n for Store. Compared to the fully-fledged protocol, the PoC version is simplified in the following ways:
 - cost calculation is based on a common-knowledge price;
 - there is no price advertisement and no price negotiation;
 - each query is paid for in a separate transaction, `txid` acts a proof of payment;
@@ -132,12 +98,9 @@ In further subsections, we list the potential direction for future work towards 
 
 ## Pricing
 
-For PoC, we assume a constant price per hour of history.
-This price and the blockchain address of the server are assumed to be common knowledge.
-This simplifies the client-server interaction, avoiding the price negotiation step.
+For PoC, we assume a constant price per hour of history. This price and the blockchain address of the server are assumed to be common knowledge. This simplifies the client-server interaction, avoiding the price negotiation step.
 
-In the future versions of the protocol, the price will be negotiated and will depend on multiple parameters,
-such as the total size of the relevant messages in the response.
+In the future versions of the protocol, the price will be negotiated and will depend on multiple parameters, such as the total size of the relevant messages in the response.
 
 ### Future work
 
@@ -148,15 +111,12 @@ such as the total size of the relevant messages in the response.
 
 ## Payment
 
-For the PoC, each request is paid for with a separate transaction.
-The transaction hash (`txid`) acts as a proof of payment.
-The server verifies the payment by ensuring that:
+For the PoC, each request is paid for with a separate transaction. The transaction hash (`txid`) acts as a proof of payment. The server verifies the payment by ensuring that:
 1. the transaction has been confirmed;
 2. the transaction is paying the proper amount to the server's account;
 3. the `txid` does not correspond to any prior response.
 
-The client gives proof of payment before it receives the response.
-Other options could be:
+The client gives proof of payment before it receives the response. Other options could be:
 1. the client pays after the fact;
 2. the client pays partly upfront and partly after the fact;
 3. a centralised third party (either trusted or semi-trusted, like a smart contract) ensures atomicity;
@@ -167,9 +127,7 @@ Our design considerations are:
 - servers are more "permanent" entities and are more likely to have long-lived identities;
 - it is more important to protect the clients's privacy than the server's privacy.
 
-In light of these criteria, we suggest that the client pays first.
-This is simpler than splitting the payment, or involving an extra atomicity-enforcing mechanism.
-Moreover, pre-payment is arguably more privacy-preserving than post-payment, which encourages servers to deanonymise clients to prevent fraud.
+In light of these criteria, we suggest that the client pays first. This is simpler than splitting the payment, or involving an extra atomicity-enforcing mechanism. Moreover, pre-payment is arguably more privacy-preserving than post-payment, which encourages servers to deanonymise clients to prevent fraud.
 
 ### Future work
 
@@ -180,8 +138,7 @@ Moreover, pre-payment is arguably more privacy-preserving than post-payment, whi
 
 ## Reputation
 
-We use reputation to discourage the server from taking the payment and not responding.
-The client keeps track of the server's reputation:
+We use reputation to discourage the server from taking the payment and not responding. The client keeps track of the server's reputation:
 - all servers start with zero reputation points;
 - if the server honours the request, it gets `+n` points;
 - if the server does not respond before a timeout, it gets `-m` points.
@@ -206,9 +163,7 @@ Design a more comprehensive reputation system:
 
 ## Results cross-checking
 
-As there is no consensus over past messages, a client may want to query multiple servers and merge their responses.
-Cross-checking helps ensure that servers are a) not censoring real messages; b) not injecting fake messages into history.
-Cross-checking is absent in PoC but may be considered later.
+As there is no consensus over past messages, a client may want to query multiple servers and merge their responses. Cross-checking helps ensure that servers are a) not censoring real messages; b) not injecting fake messages into history. Cross-checking is absent in PoC but may be considered later.
 
 ### Future work
 
