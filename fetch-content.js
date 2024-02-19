@@ -63,17 +63,25 @@ const repositories = [
     {
         baseUrl: 'https://api.github.com/repos/waku-org/nwaku/contents/docs/benchmarks',
         baseSavePath: '/docs/research/benchmarks/',
-        prefixToRemove: 'docs/benchmarks/'
+        prefixToRemove: "docs/benchmarks/",
+        categoryFileContent: "{ \"label\": \"Benchmarks\", \"collapsed\": false }"
     },
     {
         baseUrl: 'https://api.github.com/repos/waku-org/research/contents/docs',
         baseSavePath: '/docs/research/research-and-studies/',
-        prefixToRemove: 'docs/'
+        prefixToRemove: "docs/",
+        categoryFileContent: "{ \"label\": \"Research and Studies\", \"collapsed\": false }"
     }
 ];
 
-fs.rmSync('docs/research/', { recursive: true, force: true });
+repositories.forEach(repo => {
+    fs.rmSync(path.join(__dirname, repo.baseSavePath), { recursive: true, force: true });
+});
 
 repositories.forEach(repo => {
-    fetchDirectoryContents(repo.baseUrl, repo.baseSavePath, repo.prefixToRemove);
+    fetchDirectoryContents(repo.baseUrl, repo.baseSavePath, repo.prefixToRemove, repo.categoryFileContent).then(() => {
+        const dir = path.join(__dirname, repo.baseSavePath);
+        fs.mkdirSync(dir, { recursive: true });
+        fs.writeFileSync(path.join(dir, "_category_.json"), repo.categoryFileContent);
+    });
 });
