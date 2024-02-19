@@ -49,7 +49,7 @@ pipeline {
     }
 
     stage('Publish Devel') {
-      when { expression { env.GIT_BRANCH ==~ /.*develop/ } }
+      when { expression { env.GIT_BRANCH !=~ /.*master/ } }
       steps {
         sshagent(credentials: ['jenkins-ssh']) {
           sh """
