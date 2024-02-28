@@ -47,3 +47,7 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | - | - | - |
 | [REST API](https://waku-org.github.io/waku-rest-api/) | REST API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | [Waku Node REST API Reference](https://waku-org.github.io/waku-rest-api/) |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `@waku/sdk` project from various example templates | [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) |
+
+:::tip
+Check out the [Waku Idea Board](https://ideas.waku.org/) for creative project ideas and explore the limitless possibilities of the Waku protocol.
+:::
