@@ -16,8 +16,8 @@ The Waku Network is a decentralised, permissionless system where anyone can run 
 
 | | Description | Documentation |
 | - | - | - |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/nwaku/run-node) |
-| [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running a RLN-enabled `nwaku` node with Grafana metrics dashboard | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network | [Run a Nwaku Node](/guides/nwaku/run-node) |
+| [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running a RLN-enabled `nwaku` node with Grafana metrics dashboard (recommended) | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | COMING SOON |
 
 ## Integrate using SDKs

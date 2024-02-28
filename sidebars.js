@@ -12,9 +12,9 @@ const sidebars = {
 				id: "guides/nwaku/run-node",
 			},
 			items: [
-				"guides/nwaku/build-source",
-				"guides/nwaku/run-docker",
 				"guides/nwaku/run-docker-compose",
+				"guides/nwaku/run-docker",
+				"guides/nwaku/build-source",
 				"guides/nwaku/configure-discovery",
 				"guides/nwaku/configure-nwaku",
 				"guides/nwaku/config-methods",
