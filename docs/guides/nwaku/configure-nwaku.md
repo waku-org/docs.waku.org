@@ -161,7 +161,7 @@ sudo certbot certonly -d <your.domain.name>
 
 ## Configure REST API server
 
-Nwaku provides a REST API to interact with the node and Waku Network. To enable the REST API, use the following configuration options:
+Nwaku provides a [REST API](https://waku-org.github.io/waku-rest-api/) to interact with the node and Waku Network. To enable the REST API, use the following configuration options:
 
 - `rest`: Enables the REST API server on the node (disabled by default).
 - `rest-address` (optional): Listening address of the REST API server. If you omit this option, it will default to `127.0.0.1`.
