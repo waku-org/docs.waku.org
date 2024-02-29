@@ -119,6 +119,7 @@ Here are the available node configuration options, along with their default valu
 | `rest-relay-cache-capacity` | `30` | Capacity of the Relay REST API message cache |
 | `rest-admin` | `false` | Enable access to REST HTTP Admin API: true\|false |
 | `rest-private` | `false` | Enable access to REST HTTP Private API: true\|false |
+| `rest-allow-origin` |  | Allow cross-origin requests from the specified origin.<br>In case REST Api will be used from a browser you need to specify the origin host in order to get proper answer from this node REST HTTP server.<br>This option maybe repeated and can contain wildcards (?,\*) in defining url and port<br>Ex.: \"localhost:*\" or \"127.0.0.1:8080\" or allow any sites with \"\*\" |
 
 ## Metrics config
 
