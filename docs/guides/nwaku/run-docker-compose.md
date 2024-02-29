@@ -61,6 +61,12 @@ Start all processes: `nwaku` node, database for storing messages, and Grafana fo
 docker-compose up -d
 ```
 
+View the logs of the node to confirm that it is running correctly:
+
+```shell
+docker-compose logs -f nwaku
+```
+
 ## Interact with the node
 
 Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real time.
