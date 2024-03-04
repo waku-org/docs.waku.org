@@ -62,12 +62,12 @@ const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
 
-The `ephemeral` option allows you to specify whether messages should not be stored by [Store peers](/guides/js-waku/store-retrieve-messages):
+The `ephemeral` option allows you to specify whether messages should **NOT** be stored by [Store peers](/guides/js-waku/store-retrieve-messages):
 
 ```js
 const encoder = createEncoder({
 	contentTopic: contentTopic, // message content topic
-	ephemeral: true, // allows messages not be stored on the network
+	ephemeral: true, // allows messages NOT be stored on the network
 });
 ```
 
