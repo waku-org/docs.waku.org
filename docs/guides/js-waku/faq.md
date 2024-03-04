@@ -35,7 +35,7 @@ import { AccordionItem } from '@site/src/components/mdx'
 </AccordionItem>
 
 <AccordionItem title="How can I integrate Waku into a NodeJS application?">
-	Though the JavaScript SDK isn't directly usable in NodeJS due to <a href="/guides/js-waku/run-waku-nodejs">certain limitations</a>, we suggest running <a href="/guides/nwaku/run-docker-compose">nwaku in a Docker container</a> and consuming its <a href="https://waku-org.github.io/waku-rest-api/">REST API</a> in a NodeJS application.
+	Though the JavaScript SDK isn't directly usable in NodeJS due to <a href="/guides/js-waku/run-waku-nodejs">certain limitations</a>, we recommend running <a href="/guides/nwaku/run-docker-compose">nwaku in a Docker container</a> and consuming its <a href="https://waku-org.github.io/waku-rest-api/">REST API</a> in a NodeJS application.
 </AccordionItem>
 
 <AccordionItem title="How can I debug my Waku DApp and check WebSocket connections?">
@@ -44,4 +44,8 @@ import { AccordionItem } from '@site/src/components/mdx'
 
 <AccordionItem title="How can I manage unexpected disconnections of my Filter subscription from Waku?">
 	We recommend regularly pinging peers to check for an active connection and reinitiating the subscription when it disconnects. Check out the <a href="/guides/js-waku/manage-filter">Manage Your Filter Subscriptions</a> guide for a detailed explanation and step-by-step instructions.
+</AccordionItem>
+
+<AccordionItem title="How can I send images and videos on the Waku Network?">
+	While it's possible to transmit media such as images as bytes on Waku, we recommend uploading your media to a CDN or a file system like <a href="https://ipfs.tech/">IPFS</a> and then sharing the corresponding URL via Waku.
 </AccordionItem>
