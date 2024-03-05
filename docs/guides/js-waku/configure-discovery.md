@@ -26,43 +26,16 @@ const node = await createLightNode({ defaultBootstrap: true });
 
 ## Configure static peers
 
-To bootstrap a node using [static peers](/learn/concepts/static-peers), first install the `@libp2p/bootstrap` package:
+To set [static peers](/learn/concepts/static-peers) `bootstrapPeers` parameter should be passed to `createLightNode`.
 
-```mdx-code-block
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-```
-
-<Tabs groupId="package-manager">
-<TabItem value="npm" label="NPM">
-
-```shell
-npm install @libp2p/bootstrap
-```
-
-</TabItem>
-<TabItem value="yarn" label="Yarn">
-
-```shell
-yarn add @libp2p/bootstrap
-```
-
-</TabItem>
-</Tabs>
-
-Then, use the `bootstrap()` function to provide a list of `multiaddr` to bootstrap the node:
+`bootstrapPeers` accepts a list of `multiaddr` to bootstrap the node:
 
 ```js
 import { createLightNode } from "@waku/sdk";
-import { bootstrap } from "@libp2p/bootstrap";
 
 // Bootstrap node using static peers
 const node = await createLightNode({
-	libp2p: {
-		peerDiscovery: [
-			bootstrap({ list: ["[PEER MULTIADDR]"] }),
-		],
-	},
+	bootstrapPeers: ["[PEER MULTIADDR]"],
 });
 ```
 
@@ -77,11 +50,7 @@ const peers = [
 
 // Bootstrap node using the static peers
 const node = await createLightNode({
-	libp2p: {
-		peerDiscovery: [
-			bootstrap({ list: peers }),
-		],
-	},
+	bootstrapPeers: peers,
 });
 ```
 
