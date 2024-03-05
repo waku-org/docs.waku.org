@@ -26,9 +26,7 @@ const node = await createLightNode({ defaultBootstrap: true });
 
 ## Configure static peers
 
-To set [static peers](/learn/concepts/static-peers) `bootstrapPeers` parameter should be passed to `createLightNode`.
-
-`bootstrapPeers` accepts a list of `multiaddr` to bootstrap the node:
+To set [static peers](/learn/concepts/static-peers), a list of `multiaddr` to bootstrap the node should be passed to the `bootstrapPeers` parameter of the `createLightNode()` function:
 
 ```js
 import { createLightNode } from "@waku/sdk";
@@ -148,11 +146,11 @@ const NODE_REQUIREMENTS = {
 	filter: 3,
 };
 
-// Bootstrap node using DNS Discovery
+// Bootstrap node using DNS Discovery and static peers
 const node = await createLightNode({
 	libp2p: {
+		bootstrapPeers: peers,
 		peerDiscovery: [
-			bootstrap({ list: peers }),
 			wakuDnsDiscovery(
 				[enrTree["PROD"]],
 				NODE_REQUIREMENTS,

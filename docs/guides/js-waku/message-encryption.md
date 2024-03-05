@@ -136,7 +136,7 @@ Message signing helps in proving the authenticity of received messages. By attac
 Signing messages is only possible when encrypted, but if your application does not require encryption, you can generate a symmetric key through hardcoded or deterministic methods using information available to all users.
 :::
 
-The `sigPrivKey` option allows the `Symmetric` and `ECIES` message `encoders` to sign the message before encryption using an `ECDSA` private key:
+The `sigPrivKey` parameter allows the `Symmetric` and `ECIES` message `encoders` to sign the message before encryption using an `ECDSA` private key:
 
 ```js title="Alice (sender) client"
 import { generatePrivateKey, getPublicKey } from "@waku/message-encryption";
