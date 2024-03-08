@@ -60,7 +60,6 @@ Project delivers their MVP.
 The Waku team is keen to help any usage of Waku library. Please note that code snippets are necessary for preliminary investigations of issues.
 
 Sometimes, a code snippet is not enough; in this case, a [minimal reproduction repo](https://minimum-reproduction.wtf/) is necessary to allow us to do further investigation.
-
 If the project is open-source, then the Waku team might try to further investigate using it, as long as the reproduction steps are easy.
 
 If no code is provided to help with the investigation, then there is nothing the Waku team can do.
