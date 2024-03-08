@@ -43,7 +43,6 @@ The Waku team can provide feedback, highlight potential caveats, and communicate
 
 :::note
 While the Waku team can provide feedback or even design potential solution on how Waku could be integrated in an application.
-
 It is the responsibility of the project team to understand the potential caveats and limitations that may incur with such a design.
 
 The Waku team can provide options, but it is up to the project team to decide on the final solution.
