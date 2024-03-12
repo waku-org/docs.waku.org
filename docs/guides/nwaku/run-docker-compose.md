@@ -90,8 +90,7 @@ curl --location 'http://127.0.0.1:8645/relay/v1/auto/messages' \
 --header 'Content-Type: application/json' \
 --data '{
     "payload": "'$(echo -n "Hello Waku Network - from Anonymous User" | base64)'",
-    "contentTopic": "/my-app/2/chatroom-1/proto",
-    "timestamp":'$(date +%s)'
+    "contentTopic": "/my-app/2/chatroom-1/proto"
 }'
 ```
 
