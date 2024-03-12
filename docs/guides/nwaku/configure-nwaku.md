@@ -75,7 +75,7 @@ You can configure `nwaku` as a `Store client` using the `storenode` option. This
 For example, consider a `nwaku` node that does not persist messages but can query peers for historical messages:
 
 ```shell
-./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
+./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.waku.sandbox.status.im/tcp/30303/p2p/16Uiu2HAmSJvSJphxRdbnigUV5bjRRZFBhTtWFTSyiKaQByCjwmpV
 ```
 
 ## Generate and configure a node key
@@ -219,7 +219,7 @@ For example, consider a `nwaku` node that requests content filtering of messages
 
 ```shell
 ./build/wakunode2 \
-  --filternode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD \
+  --filternode=/dns4/node-01.ac-cn-hongkong-c.waku.sandbox.status.im/tcp/30303/p2p/16Uiu2HAmSJvSJphxRdbnigUV5bjRRZFBhTtWFTSyiKaQByCjwmpV \
   --filter-timeout=21600
 ```
 
@@ -244,7 +244,7 @@ You can configure `nwaku` as a `Light Push client` using the `lightpushnode` opt
 For example, consider a `nwaku` node that requests lightpush of published messages from peers:
 
 ```shell
-./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.wakuv2.prod.statusim.net/tcp/30303/p2p/16Uiu2HAm4v86W3bmT1BiH6oSPzcsSr24iDQpSN5Qa992BCjjwgrD
+./build/wakunode2 --lightpushnode=/dns4/node-01.ac-cn-hongkong-c.waku.sandbox.status.im/tcp/30303/p2p/16Uiu2HAmSJvSJphxRdbnigUV5bjRRZFBhTtWFTSyiKaQByCjwmpV
 ```
 
 ## Run nwaku behind a reverse proxy
