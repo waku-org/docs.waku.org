@@ -27,7 +27,7 @@ Certain features in `@waku/sdk` are tailored for browsers and might not translat
 
 ## Recommendations
 
-Before using `@waku/sdk` in a NodeJS environment, take into account these limitations. For a more optimised solution, we recommend [running nwaku in a Docker container](/guides/nwaku/run-docker) and consuming its [REST API](https://waku-org.github.io/waku-rest-api/).
+Before using `@waku/sdk` in a NodeJS environment, take into account these limitations. For a more optimised solution, we recommend [running nwaku in a Docker container](/guides/nwaku/run-docker-compose) and consuming its [REST API](https://waku-org.github.io/waku-rest-api/).
 
 ## Future developments
 

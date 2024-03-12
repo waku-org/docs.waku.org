@@ -21,7 +21,7 @@ await node.start();
 ```
 
 :::info
-When the `defaultBootstrap` option is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
+When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
 ## Connect to remote peers
@@ -35,7 +35,7 @@ import { waitForRemotePeer } from "@waku/sdk";
 await waitForRemotePeer(node);
 ```
 
-The `protocols` option allows you to specify the [protocols](/learn/concepts/protocols) that the remote peers should have enabled:
+The `protocols` parameter allows you to specify the [protocols](/learn/concepts/protocols) that the remote peers should have enabled:
 
 ```js
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
@@ -62,12 +62,12 @@ const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
 
-The `ephemeral` option allows you to specify whether messages should not be stored by [Store peers](/guides/js-waku/store-retrieve-messages):
+The `ephemeral` parameter allows you to specify whether messages should **NOT** be stored by [Store peers](/guides/js-waku/store-retrieve-messages):
 
 ```js
 const encoder = createEncoder({
 	contentTopic: contentTopic, // message content topic
-	ephemeral: true, // allows messages not be stored on the network
+	ephemeral: true, // allows messages NOT be stored on the network
 });
 ```
 

@@ -173,6 +173,10 @@ const config = {
               href: '/privacy-policy',
               label: 'Privacy Policy',
             },
+            {
+              href: '/rules-of-engagement',
+              label: 'Rules of Engagement',
+            },
           ],
         },
       ],

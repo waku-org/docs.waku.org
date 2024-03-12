@@ -16,8 +16,8 @@ The Waku Network is a decentralised, permissionless system where anyone can run 
 
 | | Description | Documentation |
 | - | - | - |
-| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network (recommended) | [Run a Nwaku Node](/guides/nwaku/run-node) |
-| [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running a RLN-enabled `nwaku` node with Grafana metrics dashboard | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
+| [nwaku](https://github.com/waku-org/nwaku) | Nim-based Waku implementation to run a standalone node and access the network | [Run a Nwaku Node](/guides/nwaku/run-node) |
+| [nwaku-compose](https://github.com/waku-org/nwaku-compose) | Pre-configured Docker Compose setup for running a RLN-enabled `nwaku` node with Grafana metrics dashboard (recommended) | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
 | [go-waku](https://github.com/waku-org/go-waku) | Golang-based Waku implementation to run a standalone node and access the network | COMING SOON |
 
 ## Integrate using SDKs
@@ -47,3 +47,7 @@ Waku provides integrations tailored for mobile applications, enabling Waku to ru
 | - | - | - |
 | [REST API](https://waku-org.github.io/waku-rest-api/) | REST API interface provided by `nwaku` and `go-waku` to interact with the Waku Network | [Waku Node REST API Reference](https://waku-org.github.io/waku-rest-api/) |
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `@waku/sdk` project from various example templates | [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) |
+
+:::tip
+Check out the [Waku Idea Board](https://ideas.waku.org/) for creative project ideas and explore the limitless possibilities of the Waku protocol.
+:::
