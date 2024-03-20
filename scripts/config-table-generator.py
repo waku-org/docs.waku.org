@@ -25,7 +25,7 @@ def parse_table_heading(line: str) -> Tuple[str, bool]:
         'Discovery V5': 'Discv5', 'Websocket': 'WebSocket'
     }
     table_heading = word_replace_re.sub(lambda match: word_replace_dict[match.group(0)], table_heading)
-    return '## ' + table_heading, Trues
+    return '## ' + table_heading, True
 
 def fetch_config_file(config_path: str) -> str:
     config_file = requests.get(config_path)
@@ -56,7 +56,7 @@ def extract_config(config_path: str) -> str:
             table_heading, is_valid_heading = parse_table_heading(line)
             if is_valid_heading:
                 config_table += f"\n{table_heading}\n\n| Name | Default Value | Description |\n| - | - | - |\n"
-        
+
         if line.startswith("name:"):
             row["name"] = extract_config_param(line, "name")
 

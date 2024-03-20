@@ -67,7 +67,7 @@ If no code is provided to help with the investigation, then there is nothing the
 For any unresolved issue, the project must open an issue on the related GitHub repository under the [waku-org](https://github.com/waku-org) organisation.
 :::
 
-# 5. Ongoing relation
+## 5. Ongoing relation
 
 Once the project application is live, the Waku team is keen to maintain regular contact. This can include discussion around performance, bugs found by users, etc.
 

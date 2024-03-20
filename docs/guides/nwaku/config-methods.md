@@ -86,7 +86,6 @@ The default configuration is used when no other options are specified. By defaul
 - Generate a new `Node Key` and `PeerID`.
 - Listen for incoming libp2p connections on the default TCP port (`60000`).
 - Subscribe to the default Pub/Sub topic (`/waku/2/default-waku/proto`).
-- Start the `JSON-RPC` server on the default port (`8545`).
 - Enable the `Relay` protocol for relaying messages.
 - Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
 
