@@ -97,6 +97,8 @@ const sidebars = {
 			dirName: 'research', // '.' means the current docs folder
 		},
 	],
+	cheatsheets: [
+	],
 };
 
 module.exports = sidebars;
