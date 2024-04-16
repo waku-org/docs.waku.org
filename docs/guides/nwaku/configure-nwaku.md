@@ -43,12 +43,12 @@ You can use the domain name provided by your cloud provider to configure the dom
 To enable message caching and serve them to network peers, enable the [Store protocol](/learn/concepts/protocols#store) using the following configuration options:
 
 - `store`: Enables storing messages to serve them to peers (disabled by default).
-- `store-message-retention-policy`: Retention policy of the store node (how long messages will be persisted). Three different retention policies are supported:
-	- Time retention policy: `time:<duration-in-seconds>` (e.g., `time:14400`)
-	- Capacity retention policy: `capacity:<messages-count>` (e.g, `capacity:25000`)
+- `store-message-retention-policy`: Retention policy of the store node (how long messages will be stored). Three different retention policies are supported:
+  - Time retention policy: `time:<duration-in-seconds>` (e.g., `time:14400`)
+  - Capacity retention policy: `capacity:<messages-count>` (e.g, `capacity:25000`)
   - Size retention policy: `size:<storage-in-MB/GB>` (e.g, `size:512MB` or `size:10GB`)
-	- Set this option to `none` to disable the retention policy. If you omit this option, it will default to `time:172800` (48 hours).
-- `store-message-db-url`: Database connection URL for persisting messages in the [SQLAlchemy database URL format](https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls). Setting this option to an empty string will instruct the node to use the fallback in-memory message store. If you omit this option, it will default to `sqlite://store.sqlite3`.
+  - Set this option to `none` to disable the retention policy. If you omit this option, it will default to `time:172800` (48 hours).
+- `store-message-db-url`: Database connection URL for storing messages in the [SQLAlchemy database URL format](https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls). Setting this option to an empty string will instruct the node to use the fallback in-memory message store. If you omit this option, it will default to `sqlite://store.sqlite3`.
 
 ```shell
 ./build/wakunode2 \
@@ -72,7 +72,7 @@ You can configure `nwaku` as a `Store client` using the `storenode` option. This
 ./build/wakunode2 --storenode=[STORE PEER MULTIADDR]
 ```
 
-For example, consider a `nwaku` node that does not persist messages but can query peers for historical messages:
+For example, consider a `nwaku` node that does not store messages but can query peers for historical messages:
 
 ```shell
 ./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.waku.sandbox.status.im/tcp/30303/p2p/16Uiu2HAmSJvSJphxRdbnigUV5bjRRZFBhTtWFTSyiKaQByCjwmpV
@@ -157,6 +157,7 @@ You can use [Let's Encrypt](https://letsencrypt.org/) or [Certbot](https://certb
 ```shell
 sudo certbot certonly -d <your.domain.name>
 ```
+
 :::
 
 ## Configure REST API server
@@ -166,7 +167,7 @@ Nwaku provides a [REST API](https://waku-org.github.io/waku-rest-api/) to intera
 - `rest`: Enables the REST API server on the node (disabled by default).
 - `rest-address` (optional): Listening address of the REST API server. If you omit this option, it will default to `127.0.0.1`.
 - `rest-port` (optional): Listening port of the REST API server. If you omit this option, it will default to `8645`.
-- `rest-relay-cache-capacity`	(optional): Capacity of the Relay REST API message cache.	If you omit this option, it will default to `30`.
+- `rest-relay-cache-capacity` (optional): Capacity of the Relay REST API message cache. If you omit this option, it will default to `30`.
 - `rest-admin` (optional): Enables access to REST admin API (disabled by default).
 - `rest-private` (optional): Enables access to REST private API (disabled by default).
 
