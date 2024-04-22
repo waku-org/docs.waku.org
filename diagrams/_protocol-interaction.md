@@ -20,7 +20,7 @@ sequenceDiagram
 	D ->> E: HistoryResponse(msg1, ...) (6)
 ```
 
-The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default Pub/Sub topic) and indicates that it is subscribed to messages on that topic for a relay. Node D serves as a `Store` and is responsible for persisting messages.
+The Pub/Sub topic `pubtopic1` serves as a means of routing messages (the network employs a default Pub/Sub topic) and indicates that it is subscribed to messages on that topic for a relay. Node D serves as a `Store` and is responsible for storing messages.
 
 1. Node A creates a WakuMessage `msg1` with [Content Topic](/learn/concepts/content-topics) `contentTopic1`.
 2. Node F requests to get messages filtered by Pub/Sub topic `pubtopic1` and Content Topic `contentTopic1`. Node D subscribes F to this filter and will forward messages that match that filter in the future.

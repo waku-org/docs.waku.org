@@ -18,7 +18,7 @@ import { AccordionItem } from '@site/src/components/mdx'
 	Check out the <a href="/guides/js-waku/store-retrieve-messages">Retrieve Messages Using Store Protocol</a> guide to learn how to retrieve and filter historical messages using the <a href="/learn/concepts/protocols#store">Store protocol</a>.
 </AccordionItem>
 
-<AccordionItem title="How can I prevent Store peers from persisting my messages?">
+<AccordionItem title="How can I prevent Store peers from storing my messages?">
 	When <a href="/guides/js-waku/light-send-receive#choose-a-content-topic">creating your message encoder</a>, you can configure the <strong>ephemeral</strong> option to prevent Store peers from keeping your messages on the Waku Network.
 </AccordionItem>
 
