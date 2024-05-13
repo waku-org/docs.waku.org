@@ -27,7 +27,7 @@ Discv5 is a [peer discovery](#peer-discovery) mechanism using a Distributed Hash
 
 DNS discovery is a [peer discovery](#peer-discovery) mechanism that allows the retrieval of an [ENR](#enr) tree from the TXT field of a domain name, enabling the storage of [node](#node) connection details and promoting decentralisation.
 
-### [ENR](https://rfc.vac.dev/spec/31/)
+### [ENR](https://eips.ethereum.org/EIPS/eip-778)
 
 Ethereum Node Record (ENR) is a specification used to represent and identify [nodes](#node), facilitating [discovery](#peer-discovery) and communication within the network. Besides connection details, `ENR` also includes node configuration information like enabled protocol and shards.
 
@@ -99,7 +99,7 @@ Publish/Subscribe (Pub/Sub) is an asynchronous messaging pattern where publisher
 
 A Pub/Sub topic is a string that serves as an identifier for the topic of interest among [GossipSub](#gossipsub) peers. Peers interested in the same topic are likely to maintain a connection and forward messages received on that topic.
 
-### [Rate limit nullifiers](https://rfc.vac.dev/spec/64/#rln-rate-limiting)
+### Rate limit nullifiers
 
 Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that enables rate limiting functionality while preserving the users's anonymity.
 
@@ -135,7 +135,7 @@ Waku is a family of private, secure, decentralised, and peer-to-peer web3 commun
 
 Waku Message defines the structure of messages in the [Waku Network](#waku-network), including the [content topic](#content-topic), [payload](#payload), and metadata for application-specific processing.
 
-### [Waku message payload encryption](https://rfc.vac.dev/spec/26/)
+### [Waku message payload encryption](https://rfc.vac.dev/waku/standards/application/26/payload)
 
 Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku Network](#waku-network). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
 
@@ -143,6 +143,6 @@ Waku Message Payload Encryption provides guidelines for implementing secure and 
 
 The Waku Network is an open-access, scalable peer-to-peer messaging network emphasizing privacy protection and accessibility to [resource limited](#resource-limited) devices.
 
-### [Waku noise](https://rfc.vac.dev/spec/35/)
+### Waku noise
 
 Waku Noise is a specified way to use the [Noise Protocol Framework](http://noiseprotocol.org/) to build protocols that enable secure key-exchange mechanisms for encrypted communication with confidentiality, authenticity, integrity, strong forward secrecy, and identity-hiding properties.

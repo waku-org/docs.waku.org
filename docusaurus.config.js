@@ -107,7 +107,7 @@ const config = {
               label: "Getting Started",
             },
             {
-              to: "/guides/nwaku/run-docker",
+              to: "/guides/nwaku/run-docker-compose",
               label: "Run a Nwaku Node",
             },
             {

@@ -41,7 +41,7 @@ Ensure that you do **NOT** include any secrets in the `.env.example` file, as it
 
 ## Register for RLN membership
 
-The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some [rate limits](https://rfc.vac.dev/spec/64/#rate-limit-exceeded). Other peers won't relay messages that exceed the rate limit.
+The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages that exceed the rate limit.
 
 This command registers your membership and saves it in the `keystore/keystore.json` file:
 

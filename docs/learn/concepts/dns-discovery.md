@@ -3,7 +3,7 @@ title: DNS Discovery
 hide_table_of_contents: true
 ---
 
-Built upon the foundation of [EIP-1459: Node Discovery via DNS](https://eips.ethereum.org/EIPS/eip-1459), DNS Discovery allows the retrieval of an `ENR` tree from the `TXT` field of a domain name. This innovative approach enables the storage of essential node connection details, including IP, port, and multiaddr, using the standardised [ENR format](https://rfc.vac.dev/spec/31/).
+Built upon the foundation of [EIP-1459: Node Discovery via DNS](https://eips.ethereum.org/EIPS/eip-1459), DNS Discovery allows the retrieval of an `ENR` tree from the `TXT` field of a domain name. This innovative approach enables the storage of essential node connection details, including IP, port, and multiaddr.
 
 This bootstrapping method allows anyone to register and publish a domain name for the network, promoting increased decentralisation.
 
