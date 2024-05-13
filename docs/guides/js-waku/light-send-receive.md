@@ -24,7 +24,18 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
-Your node will route messages to the default pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different shared pubsub topic, you can change this using the `ShardInfo` parameter:
+By default, your node will route messages to the standard pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different shared pubsub topic, you can configure this using the `ShardInfo` parameter:
+
+```js
+// Create the shard info
+const shardInfo = { clusterId: 3, shards: [1, 2] };
+
+// Create node with custom shard info
+const node = await createLightNode({
+  defaultBootstrap: true,
+  shardInfo: shardInfo,
+});
+```
 
 ## Connect to remote peers
 
@@ -68,6 +79,20 @@ const encoder = createEncoder({
   contentTopic: contentTopic, // message content topic
   ephemeral: true, // allows messages NOT be stored on the network
 });
+```
+
+The `pubsubTopicShardInfo` parameter allows you to configure a different shared pubsub topic for your `encoder` and `decoder`:
+
+```js
+// Create the shard info
+const shardInfo = { clusterId: 3, shard: 1 };
+
+// Create encoder and decoder with custom shard info
+const encoder = createEncoder({
+  contentTopic: contentTopic,
+  pubsubTopicShardInfo: shardInfo,
+});
+const decoder = createDecoder(contentTopic, shardInfo);
 ```
 
 :::info
@@ -132,6 +157,16 @@ const subscription = await node.filter.createSubscription();
 
 // Subscribe to content topics and process new messages
 await subscription.subscribe([decoder], callback);
+```
+
+The `pubsubTopicShardInfo` parameter allows you to configure a different shared pubsub topic for your `Filter` subscription:
+
+```js
+// Create the shard info
+const shardInfo = { clusterId: 3, shard: 1 };
+
+// Create Filter subscription with custom shard info
+const subscription = await node.filter.createSubscription(shardInfo);
 ```
 
 You can use the `subscription.unsubscribe()` function to stop receiving messages from a content topic:
