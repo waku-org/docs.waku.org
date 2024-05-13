@@ -99,7 +99,7 @@ Publish/Subscribe (Pub/Sub) is an asynchronous messaging pattern where publisher
 
 A Pub/Sub topic is a string that serves as an identifier for the topic of interest among [GossipSub](#gossipsub) peers. Peers interested in the same topic are likely to maintain a connection and forward messages received on that topic.
 
-### Rate limit nullifiers
+### [Rate limit nullifiers](https://rate-limiting-nullifier.github.io/rln-docs/)
 
 Rate Limit Nullifiers (RLN) are a construct based on zero-knowledge proofs that enables rate limiting functionality while preserving the users's anonymity.
 
