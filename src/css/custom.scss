@@ -19,10 +19,16 @@ html[data-theme="dark"] .header-github-link:before {
     no-repeat;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .yt-video {
   max-width: 100%;
-  width: 640px;
-  height: 360px;
+  width: 768px;
+  height: 432px;
 }
 
 .external-link {
