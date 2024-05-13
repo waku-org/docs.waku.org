@@ -24,6 +24,8 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
+Your node will route messages to the default pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different shared pubsub topic, you can change this using the `ShardInfo` parameter:
+
 ## Connect to remote peers
 
 Use the `waitForRemotePeer()` function to wait for the node to connect with peers on the Waku Network:
@@ -41,10 +43,7 @@ The `protocols` parameter allows you to specify the [protocols](/learn/concepts/
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
 
 // Wait for peer connections with specific protocols
-await waitForRemotePeer(node, [
-	Protocols.LightPush,
-	Protocols.Filter,
-]);
+await waitForRemotePeer(node, [Protocols.LightPush, Protocols.Filter]);
 ```
 
 ## Choose a content topic
@@ -66,8 +65,8 @@ The `ephemeral` parameter allows you to specify whether messages should **NOT** 
 
 ```js
 const encoder = createEncoder({
-	contentTopic: contentTopic, // message content topic
-	ephemeral: true, // allows messages NOT be stored on the network
+  contentTopic: contentTopic, // message content topic
+  ephemeral: true, // allows messages NOT be stored on the network
 });
 ```
 
@@ -84,9 +83,9 @@ import protobuf from "protobufjs";
 
 // Create a message structure using Protobuf
 const ChatMessage = new protobuf.Type("ChatMessage")
-    .add(new protobuf.Field("timestamp", 1, "uint64"))
-    .add(new protobuf.Field("sender", 2, "string"))
-    .add(new protobuf.Field("message", 3, "string"));
+  .add(new protobuf.Field("timestamp", 1, "uint64"))
+  .add(new protobuf.Field("sender", 2, "string"))
+  .add(new protobuf.Field("message", 3, "string"));
 ```
 
 :::info
@@ -100,9 +99,9 @@ To send messages over the Waku Network using the `Light Push` protocol, create a
 ```js
 // Create a new message object
 const protoMessage = ChatMessage.create({
-    timestamp: Date.now(),
-    sender: "Alice",
-    message: "Hello, World!",
+  timestamp: Date.now(),
+  sender: "Alice",
+  message: "Hello, World!",
 });
 
 // Serialise the message using Protobuf
@@ -110,7 +109,7 @@ const serialisedMessage = ChatMessage.encode(protoMessage).finish();
 
 // Send the message using Light Push
 await node.lightPush.send(encoder, {
-    payload: serialisedMessage,
+  payload: serialisedMessage,
 });
 ```
 
@@ -121,11 +120,11 @@ To receive messages using the `Filter` protocol, create a callback function for 
 ```js
 // Create the callback function
 const callback = (wakuMessage) => {
-    // Check if there is a payload on the message
-    if (!wakuMessage.payload) return;
-    // Render the messageObj as desired in your application
-    const messageObj = ChatMessage.decode(wakuMessage.payload);
-    console.log(messageObj);
+  // Check if there is a payload on the message
+  if (!wakuMessage.payload) return;
+  // Render the messageObj as desired in your application
+  const messageObj = ChatMessage.decode(wakuMessage.payload);
+  console.log(messageObj);
 };
 
 // Create a Filter subscription
