@@ -43,6 +43,30 @@ html[data-theme="dark"] .header-github-link:before {
   }
 }
 
+.case-study-container a {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.case-study-container a img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .case-study-container a {
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 20px;
+        margin-right: 2%;
+    }
+
+    .case-study-container a:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
 .external-link {
   margin-top: 0.25rem;
 }

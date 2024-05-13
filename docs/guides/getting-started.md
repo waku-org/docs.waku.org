@@ -45,7 +45,12 @@ Check out our [Learn section](/learn/waku-network), [YouTube channel](https://ww
 Looking for what to build with Waku? Discover a collection of sample ideas and use cases for inspiration, curated by our community at: https://ideas.waku.org/ and [Awesome Waku](https://github.com/waku-org/awesome-waku/).
 :::
 
-## Use cases
+## Case studies
+
+<div class="case-study-container">
+  <a href="https://blog.waku.org/thegraph-waku-case-study/" target="_blank" rel="noopener noreferrer"><img src="/img/graph-use-case.jpeg" /></a>
+  <a href="https://blog.waku.org/railgun-waku-case-study/" target="_blank" rel="noopener noreferrer"><img src="/img/railgun-use-case.jpeg" /></a>
+</div>
 
 ## Getting started
 
