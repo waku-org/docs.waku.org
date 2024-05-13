@@ -3,11 +3,11 @@ title: Find Your Node Address
 hide_table_of_contents: true
 ---
 
-You can find the addresses of a running node through its logs or by calling the [Get node info](https://waku-org.github.io/waku-rest-api/#get-/debug/v1/info) endpoint of the [REST API](https://waku-org.github.io/waku-rest-api/).
-
 :::info
 When starting the node, `nwaku` will display all the public listening and discovery addresses at the `INFO` log level.
 :::
+
+You can find the addresses of a running node through its logs or by calling the [Get node info](https://waku-org.github.io/waku-rest-api/#get-/debug/v1/info) endpoint of the [REST API](https://waku-org.github.io/waku-rest-api/).
 
 ## Listening addresses
 
