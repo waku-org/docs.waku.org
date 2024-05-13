@@ -17,6 +17,7 @@ const sidebars = {
         "guides/nwaku/run-docker",
         "guides/nwaku/build-source",
         "guides/nwaku/configure-discovery",
+        "guides/nwaku/find-node-address",
         "guides/nwaku/config-methods",
         "guides/nwaku/config-options",
         "guides/nwaku/configure-nwaku",
