@@ -56,8 +56,12 @@ To find your public IP, use:
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 ```
 
-:::tip
+:::info
 We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (listening and discovery ports, API servers).
+:::
+
+:::tip
+If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
 :::
 
 :::tip Congratulations!

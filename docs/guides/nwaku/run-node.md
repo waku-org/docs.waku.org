@@ -132,6 +132,10 @@ Node is healthy
 </TabItem>
 </Tabs>
 
+:::tip
+If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
+:::
+
 :::tip Congratulations!
 You have successfully started, configured, and connected a `nwaku` node to the Waku Network. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::

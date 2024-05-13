@@ -10,10 +10,8 @@ The Waku Network is a shared p2p messaging network that is open-access, useful f
 3. Automatic shard selection based on content topic.
 4. Services for resource-restricted nodes, including historical message storage and retrieval, filtering, etc.
 
-If you want to learn more about the Waku Network, the [WAKU2-NETWORK RFC](https://rfc.vac.dev/waku/standards/core/10/waku2) provides an in-depth look under the hood.
-
-:::info
-The public Waku Network replaces the previous experimental shared routing layer based on a default pubsub topic (`/waku/2/default-waku/proto`). If your project currently uses this or any other shared pubsub topics, we encourage you to migrate to the public Waku Network with built-in DoS protection, scalability, and reasonable bandwidth usage.
+:::tip
+If you want to learn more about the Waku Network, the [The Waku Network: Technical Overview](https://blog.waku.org/2024-waku-network-tech-overview) article provides an in-depth look under the hood.
 :::
 
 ## Why join the Waku network?
@@ -30,3 +28,7 @@ The public Waku Network replaces the previous experimental shared routing layer 
 ## Running a Waku network node
 
 Have a look at the [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) guide for instructions on running a [nwaku](https://github.com/waku-org/nwaku) node in the Waku Network. Use the Sepolia node and wallet you obtained above.
+
+:::info
+The public Waku Network replaces the previous experimental shared routing layer based on a default pubsub topic (`/waku/2/default-waku/proto`). If your project currently uses this or any other shared pubsub topics, we encourage you to migrate to the public Waku Network with built-in DoS protection, scalability, and reasonable bandwidth usage.
+:::

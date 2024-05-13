@@ -16,7 +16,7 @@ graph LR
     W -->|Message 3| R2(Message Receiver 2)
 ```
 
-<iframe class="yt-video" src="https://www.youtube.com/embed/PYQaXCxUCwA" title="Waku Tutorial 001: Introduction to Waku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="yt-video" src="https://www.youtube.com/embed/nIWx5Vp_Qxk" title="Waku Tutorial 001: Introduction to Waku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 :::tip
 Check out our [Learn section](/learn/waku-network), [YouTube channel](https://www.youtube.com/@wakuorg), and [Blog](https://blog.waku.org/) to dive into how Waku works behind the scenes!
@@ -43,7 +43,11 @@ Check out our [Learn section](/learn/waku-network), [YouTube channel](https://ww
 Looking for what to build with Waku? Discover a collection of sample ideas and use cases for inspiration, curated by our community at: https://ideas.waku.org/ and [Awesome Waku](https://github.com/waku-org/awesome-waku/).
 :::
 
-## Run a Waku node
+## Use cases
+
+## Get started
+
+### Run a Waku node
 
 Waku is a decentralised, permissionless system where anyone can run a node, use the network, and contribute to its support. We recommend following the [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) guide and [Waku Node Operator Cheatsheet](/Waku-NodeOperator.pdf) to easily run a node.
 
@@ -53,7 +57,7 @@ Waku is a decentralised, permissionless system where anyone can run a node, use 
 If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
 :::
 
-## Integrate using SDKs
+### Integrate using SDKs
 
 Waku is implemented in multiple SDKs, allowing it to integrate with different languages and address various use cases efficiently.
 
@@ -62,7 +66,7 @@ Waku is implemented in multiple SDKs, allowing it to integrate with different la
 | [@waku/sdk](https://github.com/waku-org/js-waku)         | JavaScript/TypeScript SDK designed for browser environments                         | [JavaScript Waku SDK](/guides/js-waku/)                               |
 | [@waku/react](https://www.npmjs.com/package/@waku/react) | React components and UI adapters designed for seamless integration with `@waku/sdk` | [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) |
 
-## Other integrations
+### Other integrations
 
 |                                                                    | Description                                                                            | Documentation                                                                |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
