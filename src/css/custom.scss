@@ -21,14 +21,26 @@ html[data-theme="dark"] .header-github-link:before {
 
 .video-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .yt-video {
+  flex: 1 1 auto;
   max-width: 100%;
-  width: 768px;
   height: 432px;
+}
+
+.two-items {
+  width: 100%;
+}
+
+/* Media query for tablets and desktops */
+@media (min-width: 768px) {
+  .two-items {
+    width: 48%;
+  }
 }
 
 .external-link {

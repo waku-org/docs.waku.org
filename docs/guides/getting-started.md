@@ -47,7 +47,13 @@ Looking for what to build with Waku? Discover a collection of sample ideas and u
 
 ## Use cases
 
-## Get started
+## Getting started
+
+<div class="video-container">
+  <iframe class="yt-video two-items" src="https://www.youtube.com/embed/PYQaXCxUCwA" title="Waku Tutorial 001: Introduction to Waku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <iframe class="yt-video two-items" src="https://www.youtube.com/embed/sfmMcrbiX0c" title="Build a game using Waku Protocol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### Run a Waku node
 
