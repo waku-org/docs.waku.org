@@ -98,6 +98,7 @@ const config = {
       ],
     },
     footer: {
+      copyright: "Waku",
       links: [
         {
           title: "Guides",
@@ -170,12 +171,16 @@ const config = {
               label: "Terms of Use",
             },
             {
-              href: '/privacy-policy',
-              label: 'Privacy Policy',
+              href: "/privacy-policy",
+              label: "Privacy Policy",
             },
             {
-              href: '/rules-of-engagement',
-              label: 'Rules of Engagement',
+              href: "/rules-of-engagement",
+              label: "Rules of Engagement",
+            },
+            {
+              href: "/security",
+              label: "Security",
             },
           ],
         },
