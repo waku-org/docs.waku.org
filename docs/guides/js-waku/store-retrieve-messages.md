@@ -50,22 +50,19 @@ const decoder = createDecoder(contentTopic);
 
 The `store.queryWithOrderedCallback()` function provides a straightforward method for querying `Store` nodes and processing messages in chronological order through a callback function. It accepts these parameters:
 
-- `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/spec/26/) methods.
+- `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/waku/standards/application/26/payload) methods.
 - `callback`: The callback function for processing the retrieved messages.
 - `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
 
 ```js
 // Create the callback function
 const callback = (wakuMessage) => {
-	// Render the message/payload in your application
-	console.log(wakuMessage);
+  // Render the message/payload in your application
+  console.log(wakuMessage);
 };
 
 // Query the Store peer
-await node.store.queryWithOrderedCallback(
-	[decoder],
-	callback,
-);
+await node.store.queryWithOrderedCallback([decoder], callback);
 ```
 
 :::info
@@ -76,7 +73,7 @@ The `queryWithOrderedCallback()` function always returns the most recent message
 
 The `store.queryGenerator()` function provides more control and flexibility over processing messages retrieved from `Store` nodes through [Async Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator). It accepts these parameters:
 
-- `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/spec/26/) methods.
+- `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/waku/standards/application/26/payload) methods.
 - `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
 
 ```js
@@ -85,14 +82,14 @@ const storeQuery = node.store.queryGenerator([decoder]);
 
 // Process the messages
 for await (const messagesPromises of storeQuery) {
-	// Fulfil the messages promises
-	const messages = await Promise.all(messagesPromises
-		.map(async (p) => {
-			const msg = await p;
-			// Render the message/payload in your application
-			console.log(msg);
-		})
-	);
+  // Fulfil the messages promises
+  const messages = await Promise.all(
+    messagesPromises.map(async (p) => {
+      const msg = await p;
+      // Render the message/payload in your application
+      console.log(msg);
+    })
+  );
 }
 ```
 
@@ -114,12 +111,12 @@ import { PageDirection } from "@waku/sdk";
 
 // Retrieve recent messages first
 const queryOptions = {
-	pageDirection: PageDirection.BACKWARD,
+  pageDirection: PageDirection.BACKWARD,
 };
 
 // Retrieve oldest messages first
 const queryOptions = {
-	pageDirection: PageDirection.FORWARD,
+  pageDirection: PageDirection.FORWARD,
 };
 
 // Query the Store peer with options
@@ -137,18 +134,15 @@ import { waku } from "@waku/sdk";
 // Create the callback function
 const messages = [];
 const callback = (wakuMessage) => {
-	messages.push(wakuMessage);
-	// Return "true" to stop retrieving pages
-	// Here, it retrieves only the first page
-	return true;
+  messages.push(wakuMessage);
+  // Return "true" to stop retrieving pages
+  // Here, it retrieves only the first page
+  return true;
 };
 
 // Retrieve the first page of messages
 // This retrieves all the messages if "return true" is not present
-await node.store.queryWithOrderedCallback(
-	[decoder],
-	callback,
-);
+await node.store.queryWithOrderedCallback([decoder], callback);
 
 // Create the cursor
 const lastMessage = messages[messages.length - 1];
@@ -156,13 +150,9 @@ const cursor = await waku.createCursor(lastMessage);
 
 // Retrieve the next page of messages
 // The message at the cursor index is excluded from the result
-await node.store.queryWithOrderedCallback(
-	[decoder],
-	callback,
-	{
-		cursor: cursor,
-	},
-);
+await node.store.queryWithOrderedCallback([decoder], callback, {
+  cursor: cursor,
+});
 console.log(messages);
 ```
 
@@ -182,10 +172,10 @@ startTime.setDate(endTime.getDate() - 7);
 
 // Retrieve a week of messages
 const queryOptions = {
-	timeFilter: {
-		startTime,
-		endTime,
-	},
+  timeFilter: {
+    startTime,
+    endTime,
+  },
 };
 
 // Query the Store peer with options

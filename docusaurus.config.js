@@ -107,7 +107,7 @@ const config = {
               label: "Getting Started",
             },
             {
-              to: "/guides/nwaku/run-node",
+              to: "/guides/nwaku/run-docker-compose",
               label: "Run a Nwaku Node",
             },
             {
@@ -153,8 +153,8 @@ const config = {
               label: "Blog",
             },
             {
-              href: "https://rfc.vac.dev/",
-              label: "Vac RFCs",
+              href: "https://rfc.vac.dev/waku",
+              label: "Waku RFCs",
             },
             {
               href: "https://github.com/waku-org/awesome-waku/",
@@ -170,12 +170,12 @@ const config = {
               label: "Terms of Use",
             },
             {
-              href: '/privacy-policy',
-              label: 'Privacy Policy',
+              href: "/privacy-policy",
+              label: "Privacy Policy",
             },
             {
-              href: '/rules-of-engagement',
-              label: 'Rules of Engagement',
+              href: "/rules-of-engagement",
+              label: "Rules of Engagement",
             },
           ],
         },
