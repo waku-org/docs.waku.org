@@ -3,13 +3,21 @@ title: Run Nwaku with Docker Compose
 hide_table_of_contents: true
 ---
 
-`nwaku-compose` is a ready-to-use Docker Compose setup that runs the following:
+[nwaku-compose](https://github.com/waku-org/nwaku-compose) is a ready-to-use Docker Compose setup that configures the following automatically:
 
 - `nwaku` node running [Relay](/learn/concepts/protocols#relay) and [Store](/learn/concepts/protocols#store) protocols with [RLN](/learn/concepts/protocols#rln-relay) enabled.
 - Simple frontend to interact with the node and Waku network to send and receive messages.
 - [Grafana](https://grafana.com/) metrics dashboard for advanced users and node operators to monitor the node.
 
-This guide provides detailed steps to configure, run, monitor, and interact with a `nwaku` node with [nwaku-compose](https://github.com/waku-org/nwaku-compose).
+## Video tutorial
+
+<div class="video-container">
+  <iframe class="yt-video" src="https://www.youtube.com/embed/fs0ynLk4z0I" title="How to run a Waku node using Nwaku Compose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+:::tip
+Check out the [Waku Node Operator Cheatsheet](/Waku-NodeOperator.pdf) to learn how to easily run, monitor, and interact with a node.
+:::
 
 ## Prerequisites
 
@@ -18,6 +26,10 @@ This guide provides detailed steps to configure, run, monitor, and interact with
 - [Ethereum Sepolia WebSocket Endpoint](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#3-access-a-node-on-the-sepolia-testnet-using-infura)
 - [Wallet with Sepolia Ethereum](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#2-obtain-sepolia-eth-from-faucet) (less than 0.01 Sepolia ETH)
 - A password to protect your RLN membership
+
+:::info
+We recommend running a `nwaku` node with at least 2GB of RAM, especially if `WSS` is enabled. If running just a `Relay` node, 0.5GB of RAM is sufficient.
+:::
 
 ## Clone the repository
 
@@ -41,7 +53,7 @@ Ensure that you do **NOT** include any secrets in the `.env.example` file, as it
 
 ## Register for RLN membership
 
-The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some [rate limits](https://rfc.vac.dev/spec/64/#rate-limit-exceeded). Other peers won't relay messages that exceed the rate limit.
+The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages that exceed the rate limit.
 
 This command registers your membership and saves it in the `keystore/keystore.json` file:
 
@@ -55,7 +67,7 @@ If you only want to relay traffic without sending messages to the network, you d
 
 ## Run the node
 
-Start all processes: `nwaku` node, database for storing messages, and Grafana for metrics. Your RLN membership is loaded into nwaku under the hood:
+Launch all the processes: `nwaku` node, database for storing messages, and Grafana for metrics with the following command. Your RLN membership is loaded into `nwaku` under the hood:
 
 ```shell
 docker-compose up -d
@@ -67,7 +79,7 @@ View the logs of the node to confirm that it is running correctly:
 docker-compose logs -f nwaku
 ```
 
-## Interact with the node
+## Monitor the node
 
 Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node metrics in real time.
 
@@ -77,7 +89,7 @@ Visit <http://localhost:3000/d/yns_4vFVk/nwaku-monitoring> to view your node met
 To access Grafana from outside your machine, remove `127.0.0.1` and open the port. Consider setting up a password for Grafana to ensure security.
 :::
 
-## Use the REST API
+## Interact with the node
 
 Your `nwaku` node provides a [REST API](https://waku-org.github.io/waku-rest-api/) on port `8645` for interacting with it:
 
@@ -106,6 +118,10 @@ Retrieve messages sent to a `contentTopic`. Please note that this query can be m
 curl --location 'http://127.0.0.1:8645/store/v1/messages?contentTopics=%2Fmy-app%2F2%2Fchatroom-1%2Fproto&pageSize=50&ascending=true' \
 --header 'Accept: application/json'
 ```
+
+:::tip
+If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
+:::
 
 :::tip Congratulations!
 You have successfully started a `nwaku` node with `RLN` enabled using Docker Compose. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) and [Advanced Configuration](https://github.com/waku-org/nwaku-compose/blob/master/ADVANCED.md) guides to learn how to configure `nwaku` for different use cases.
