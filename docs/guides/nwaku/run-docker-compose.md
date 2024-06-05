@@ -24,7 +24,7 @@ Check out the [Waku Node Operator Cheatsheet](/Waku-NodeOperator.pdf) to learn h
 - [Git](https://git-scm.com/) or [GitHub Desktop](https://desktop.github.com/)
 - [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 - [Ethereum Sepolia WebSocket Endpoint](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#3-access-a-node-on-the-sepolia-testnet-using-infura)
-- [Wallet with Sepolia Ethereum](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#2-obtain-sepolia-eth-from-faucet) (less than 0.01 Sepolia ETH)
+- [Wallet with Sepolia Ethereum](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#2-obtain-sepolia-eth-from-faucet) (~0.6 Sepolia ETH)
 - A password to protect your RLN membership
 
 :::info
@@ -40,7 +40,7 @@ cd nwaku-compose
 
 ## Configure the setup
 
-Docker Compose [reads the ./.env file](https://docs.docker.com/compose/environment-variables/set-environment-variables/#additional-information-3) from the filesystem. You can use `.env.example` as a template to provide the above values. The recommended process for working with `.env` files is to duplicate `.env.example`, rename it as `.env`, and then make the necessary value edits.
+Docker Compose [reads the .env file](https://docs.docker.com/compose/environment-variables/set-environment-variables/#additional-information-3) from the filesystem. You can use `.env.example` as a template to provide the configuration values. The recommended process for working with `.env` files is to duplicate `.env.example`, rename it as `.env`, and then make the necessary value edits.
 
 ```shell
 cp .env.example .env
@@ -48,20 +48,20 @@ ${EDITOR} .env
 ```
 
 :::caution
-Ensure that you do **NOT** include any secrets in the `.env.example` file, as it could accidentally be shared in the Git repository.
+Ensure that you do **NOT** include any secrets in the `.env.example` file, as it could accidentally be shared in your Git repository.
 :::
 
 ## Register for RLN membership
 
 The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages that exceed the rate limit.
 
-This command registers your membership and saves it in the `keystore/keystore.json` file:
+This command registers your membership and saves it in the `keystore/keystore.json` file. You should have Docker running at this step:
 
 ```shell
 ./register_rln.sh
 ```
 
-:::info
+:::tip
 If you only want to relay traffic without sending messages to the network, you don't need to register for RLN membership.
 :::
 
