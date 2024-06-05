@@ -24,7 +24,7 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
-By default, your node will route messages to the standard pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different shared pubsub topic, you can configure this using the `ShardInfo` parameter:
+A node needs to know how to route messages. In order to do that you can use standard pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different shared pubsub topic, you can configure this using the `ShardInfo` parameter or by using a set of `contentTopics` that your node will be using:
 
 ```js
 // Create the shard info
