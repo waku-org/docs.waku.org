@@ -3,7 +3,7 @@ title: Content Topics
 hide_table_of_contents: true
 ---
 
-`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/learn/concepts/protocols#relay) or [Filter](/learn/concepts/protocols#filter)) and retrieving historical messages ([Store](/learn/concepts/protocols#store)) that meet specific filtering criteria. Have a look at the [WAKU2-TOPICS](https://rfc.vac.dev/spec/23/#content-topics) specification to learn more.
+`Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/learn/concepts/protocols#relay) or [Filter](/learn/concepts/protocols#filter)) and retrieving historical messages ([Store](/learn/concepts/protocols#store)) that meet specific filtering criteria. Have a look at the [WAKU2-TOPICS](https://rfc.vac.dev/waku/informational/23/topics#content-topics) specification to learn more.
 
 ## Naming format
 
@@ -36,7 +36,7 @@ The `Filter`, `Store`, and `Light Push` protocols share content topics with peer
 For example, instead of using Personally Identifiable Information (PII) in the content topic (e.g., a public key), you can create buckets (e.g., based on the first 4 bytes of the public key hash).
 
 :::info
-Waku is developing privacy-preserving features like [Anonymous Filter Subscription](https://rfc.vac.dev/spec/12/#future-work) for the `Filter` protocol and [Anonymous Query](https://rfc.vac.dev/spec/13/#future-work) for the `Store` protocol to hide content topics from potential adversaries.
+Waku is developing privacy-preserving features like [Anonymous Filter Subscription](https://rfc.vac.dev/waku/standards/core/12/filter/#future-work) for the `Filter` protocol and [Anonymous Query](https://rfc.vac.dev/waku/standards/core/13/store#future-work) for the `Store` protocol to hide content topics from potential adversaries.
 :::
 
 ### Increasing k-anonymity preserves user anonymity

@@ -7,7 +7,7 @@ const sidebars = {
     {
       type: "category",
       label: "Run a Nwaku Node",
-      collapsed: false,
+      collapsed: true,
       link: {
         type: "doc",
         id: "guides/nwaku/run-node",
@@ -17,6 +17,7 @@ const sidebars = {
         "guides/nwaku/run-docker",
         "guides/nwaku/build-source",
         "guides/nwaku/configure-discovery",
+        "guides/nwaku/find-node-address",
         "guides/nwaku/config-methods",
         "guides/nwaku/config-options",
         "guides/nwaku/configure-nwaku",
@@ -31,7 +32,7 @@ const sidebars = {
     {
       type: "category",
       label: "JavaScript Waku SDK",
-      collapsed: false,
+      collapsed: true,
       link: {
         type: "doc",
         id: "guides/js-waku/index",
@@ -58,6 +59,36 @@ const sidebars = {
             '<a href="https://js.waku.org" target="_blank" rel="noopener noreferrer" class="menu__link external-link">API Reference<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
         },
       ],
+    },
+    {
+      type: "link",
+      label: "Learn About Waku",
+      href: "/learn/waku-network",
+    },
+    {
+      type: "link",
+      label: "Waku Research",
+      href: "/research",
+    },
+    {
+      type: "html",
+      value:
+        '<a href="https://discord.waku.org" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Discord<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
+    },
+    {
+      type: "html",
+      value:
+        '<a href="https://github.com/waku-org/awesome-waku/" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Awesome Waku<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
+    },
+    {
+      type: "html",
+      value:
+        '<a href="https://ideas.waku.org" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Waku Idea Board<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
+    },
+    {
+      type: "html",
+      value:
+        '<a href="https://github.com/waku-org/bounties/" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Post-Hackathon Bounties<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
     },
   ],
   learn: [
@@ -92,11 +123,6 @@ const sidebars = {
     "learn/waku-vs-libp2p",
     "learn/glossary",
     "learn/faq",
-    {
-      type: "html",
-      value:
-        '<a href="https://ideas.waku.org" target="_blank" rel="noopener noreferrer" class="menu__link external-link">Waku Idea Board<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1918 4H3.42848V2.85715H13.1428V12.5714H11.9999V4.80813L3.83254 12.9755L3.02441 12.1674L11.1918 4Z" fill="white"/></svg>',
-    },
   ],
   research: [
     {
