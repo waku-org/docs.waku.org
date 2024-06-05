@@ -21,7 +21,12 @@ The `@waku/sdk` package provides a `Filter.ping()` function to ping subscription
 
 ```js
 // Create a Filter subscription
-const subscription = await node.filter.createSubscription();
+const { error, subscription } = await node.filter.createSubscription({ contentTopics: [contentTopic] });
+
+if (error) {
+    // handle errors if happens
+    throw Error(error);
+}
 
 // Subscribe to content topics and process new messages
 await subscription.subscribe([decoder], callback);
