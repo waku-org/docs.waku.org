@@ -107,7 +107,7 @@ Create your application's message structure using [Protobuf's valid message](htt
 import protobuf from "protobufjs";
 
 // Create a message structure using Protobuf
-const ChatMessage = new protobuf.Type("ChatMessage")
+const DataPacket = new protobuf.Type("DataPacket")
   .add(new protobuf.Field("timestamp", 1, "uint64"))
   .add(new protobuf.Field("sender", 2, "string"))
   .add(new protobuf.Field("message", 3, "string"));
@@ -123,14 +123,14 @@ To send messages over the Waku Network using the `Light Push` protocol, create a
 
 ```js
 // Create a new message object
-const protoMessage = ChatMessage.create({
+const protoMessage = DataPacket.create({
   timestamp: Date.now(),
   sender: "Alice",
   message: "Hello, World!",
 });
 
 // Serialise the message using Protobuf
-const serialisedMessage = ChatMessage.encode(protoMessage).finish();
+const serialisedMessage = DataPacket.encode(protoMessage).finish();
 
 // Send the message using Light Push
 await node.lightPush.send(encoder, {
@@ -148,7 +148,7 @@ const callback = (wakuMessage) => {
   // Check if there is a payload on the message
   if (!wakuMessage.payload) return;
   // Render the messageObj as desired in your application
-  const messageObj = ChatMessage.decode(wakuMessage.payload);
+  const messageObj = DataPacket.decode(wakuMessage.payload);
   console.log(messageObj);
 };
 
