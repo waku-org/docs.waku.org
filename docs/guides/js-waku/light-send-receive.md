@@ -24,13 +24,17 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
-A node needs to know how to route messages. In order to do that you can use standard pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different shared pubsub topic, you can configure this using the `ShardInfo` parameter or by using a set of `contentTopics` that your node will be using:
+A node needs to know how to route messages. In order to do that you can use standard pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different pubsub topic, you can configure this by providing a set of [content topics](/learn/concepts/content-topics) for the node to use with the `contentTopics` parameter or by using the `ShardInfo` parameter:
 
 ```js
-// Create the shard info
-const shardInfo = { clusterId: 3, shards: [1, 2] };
+// Create node with content topics
+const node = await createLightNode({
+  defaultBootstrap: true,
+  contentTopics: [/*set of content topics*/],
+});
 
 // Create node with custom shard info
+const shardInfo = { clusterId: 3, shards: [1, 2] };
 const node = await createLightNode({
   defaultBootstrap: true,
   shardInfo: shardInfo,
@@ -59,7 +63,7 @@ await waitForRemotePeer(node, [Protocols.LightPush, Protocols.Filter]);
 
 ## Choose a content topic
 
-[Choose a content topic](/learn/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
+Choose a [content topic](/learn/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
 
 ```js
 import { createEncoder, createDecoder } from "@waku/sdk";
