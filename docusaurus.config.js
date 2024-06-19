@@ -104,10 +104,6 @@ const config = {
           title: "Guides",
           items: [
             {
-              to: "/",
-              label: "Getting Started",
-            },
-            {
               to: "/guides/nwaku/run-docker-compose",
               label: "Run a Nwaku Node",
             },
@@ -121,24 +117,32 @@ const config = {
           title: "Community",
           items: [
             {
-              href: "https://discord.waku.org/",
-              label: "Discord",
-            },
-            {
               href: "https://twitter.com/waku_org/",
               label: "X",
             },
             {
+              href: "https://discord.waku.org/",
+              label: "Discord",
+            },
+            {
+              href: "https://github.com/waku-org/",
+              label: "GitHub",
+            },
+            {
+              href: "https://www.youtube.com/@wakuorg",
+              label: "YouTube",
+            },
+            {
+              href: "https://www.linkedin.com/company/waku-org",
+              label: "LinkedIn",
+            },
+            {
+              href: "https://warpcast.com/waku",
+              label: "Farcaster",
+            },
+            {
               href: "https://t.me/waku_org/",
               label: "Telegram",
-            },
-            {
-              href: "https://forum.vac.dev/",
-              label: "Vac Forum",
-            },
-            {
-              href: "https://github.com/waku-org/bounties/",
-              label: "Bounties",
             },
           ],
         },
@@ -146,16 +150,16 @@ const config = {
           title: "Resources",
           items: [
             {
-              href: "https://github.com/waku-org/",
-              label: "GitHub",
-            },
-            {
               href: "https://blog.waku.org/",
               label: "Blog",
             },
             {
               href: "https://rfc.vac.dev/waku",
               label: "Waku RFCs",
+            },
+            {
+              href: "https://github.com/waku-org/bounties/",
+              label: "Bounties",
             },
             {
               href: "https://github.com/waku-org/awesome-waku/",
