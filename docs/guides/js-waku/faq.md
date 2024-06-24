@@ -49,3 +49,7 @@ import { AccordionItem } from '@site/src/components/mdx'
 <AccordionItem title="How can I send images and videos on the Waku Network?">
 	While it's possible to transmit media such as images as bytes on Waku, we recommend uploading your media to a CDN or a file system like <a href="https://ipfs.tech/">IPFS</a> and then sharing the corresponding URL via Waku.
 </AccordionItem>
+
+<AccordionItem title="How can I connect to my own node?">
+	To manually set your own node as a starting point use <a href="/guides/js-waku/configure-discovery#configure-static-peers">Configure static peers</a>.
+</AccordionItem>
