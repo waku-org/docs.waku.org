@@ -52,7 +52,7 @@ const node = await createLightNode({
 });
 ```
 
-Alternatively a particular node can be dialed: 
+Alternatively, you can dial a particular node like this: 
 
 ```js
 // Define the list of static peers to bootstrap
