@@ -82,7 +82,7 @@ await Promise.all(promises);
 ```
 
 :::tip
-For local development using a `nwaku` node, use a `ws` address instead of `wss`. Remember that this setup is functional only when your web server is running locally. You can check how to get multi address of your locally run node in [Find node address](https://docs.waku.org/guides/nwaku/find-node-address).
+For local development using a `nwaku` node, use a `ws` address instead of `wss`. Remember that this setup is functional only when your web server is running locally. You can check how to get multi address of your locally run node in [Find node address](/guides/nwaku/find-node-address).
 :::
 
 ## Configure DNS discovery
