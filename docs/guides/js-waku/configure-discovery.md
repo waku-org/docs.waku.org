@@ -52,8 +52,37 @@ const node = await createLightNode({
 });
 ```
 
+Alternatively, you can dial a particular node like this: 
+
+```js
+// Define the list of static peers to bootstrap
+const peers = [
+	"/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
+	"/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
+];
+
+
+const node = await createLightNode();
+
+// In case nodes are using `ws` protocol - additional configuration is needed:
+/*
+import { webSockets } from "@libp2p/websockets";
+import { all as filterAll } from "@libp2p/websockets/filters";
+
+const node = await createLightNode({
+	libp2p: {
+		transports: [webSockets({ filter: filterAll })],
+	},
+});
+*/
+
+const promises = peers.map(multiaddr => node.dial(multiaddr));
+
+await Promise.all(promises);
+```
+
 :::tip
-For local development using a `nwaku` node, use a `ws` address instead of `wss`. Remember that this setup is functional only when your web server is running locally.
+For local development using a `nwaku` node, use a `ws` address instead of `wss`. Remember that this setup is functional only when your web server is running locally. You can check how to get multi address of your locally run node in [Find node address](/guides/nwaku/find-node-address).
 :::
 
 ## Configure DNS discovery
