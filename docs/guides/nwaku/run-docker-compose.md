@@ -23,7 +23,7 @@ Check out the [Waku Node Operator Cheatsheet](/Waku-NodeOperator.pdf) to learn h
 
 - [Git](https://git-scm.com/) or [GitHub Desktop](https://desktop.github.com/)
 - [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
-- [Ethereum Sepolia WebSocket Endpoint](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#3-access-a-node-on-the-sepolia-testnet-using-infura)
+- [Ethereum Sepolia HTTPS Endpoint](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#3-access-a-node-on-the-sepolia-testnet-using-infura)
 - [Wallet with Sepolia Ethereum](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#2-obtain-sepolia-eth-from-faucet) (~0.6 Sepolia ETH)
 - A password to protect your RLN membership
 
