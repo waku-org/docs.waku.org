@@ -17,6 +17,8 @@ We recommend running a `nwaku` node with at least 2GB of RAM, especially if `WSS
 
 The Nwaku Docker images are available on the Docker Hub public registry under the [statusteam/nim-waku](https://hub.docker.com/r/statusteam/nim-waku) repository. Please visit [statusteam/nim-waku/tags](https://hub.docker.com/r/statusteam/nim-waku/tags) for images of specific releases.
 
+## Build Docker image
+
 You can also build the Docker image locally:
 
 ```shell
