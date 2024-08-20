@@ -27,7 +27,7 @@ import { AccordionItem } from '@site/src/components/mdx'
 </AccordionItem>
 
 <AccordionItem title="How does Waku differ from IPFS?">
-  Waku focuses on short, ephemeral, real-time time messages, while IPFS focuses on large, long-term data storage. Although there's an overlap between the two technologies, Waku does not currently support large data for privacy reasons.
+  Waku focuses on short, ephemeral, real-time messages, while IPFS focuses on large, long-term data storage. Although there's an overlap between the two technologies, Waku does not currently support large data for privacy reasons.
 </AccordionItem>
 
 <AccordionItem title="What are Rate Limiting Nullifiers (RLN)?">

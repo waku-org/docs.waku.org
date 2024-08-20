@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 Waku's protocol layers offer different services and security considerations, shaping the overall security of Waku. We document the security models in the [RFCs of the protocols](https://rfc.vac.dev/), aiming to provide transparent and open-source references. This empowers Waku users to understand each protocol's security guarantees and limitations.
 
-Some of the Waku's security features include the following:
+Some of Waku's security features include the following:
 
 ## [Pseudonymity](https://rfc.vac.dev/waku/standards/core/10/waku2/#pseudonymity)
 
