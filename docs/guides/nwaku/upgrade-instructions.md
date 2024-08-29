@@ -10,9 +10,7 @@ import { AccordionItem } from '@site/src/components/mdx'
 
 <AccordionItem title="v0.31.0">
 	Named sharding was deprecated in this version. This means that pubsub topics will only be supported if they comply with the static sharding format:
-
-    `/waku/2/rs/<CLUSTER_ID>/<SHARD_ID>`
-
+    /waku/2/rs/<CLUSTER_ID>/<SHARD_ID>
     In order to migrate your existing application, you need to:
     1. Make sure that your clients are sending messages to pubsub topics in the required format
     2. When running a node with the `--pubsub-topic` CLI flag, the values provided should compy with the static sharding format
