@@ -22,6 +22,7 @@ const sidebars = {
         "guides/nwaku/config-options",
         "guides/nwaku/configure-nwaku",
         "guides/nwaku/faq",
+        "guides/nwaku/migrate-version",
         {
           type: "html",
           value:
