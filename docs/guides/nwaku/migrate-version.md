@@ -4,7 +4,7 @@ hide_table_of_contents: true
 sidebar_label: Upgrade Instructions
 ---
 
-If you are currently using Waku and
+If you are currently using Nwaku and are running on an old version and want to upgrade your node, please follow the below migration instructions for each release newer than your current running version
 
 import { AccordionItem } from '@site/src/components/mdx'
 
