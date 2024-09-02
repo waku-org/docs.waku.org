@@ -35,7 +35,7 @@ import { AccordionItem } from '@site/src/components/mdx'
 </AccordionItem>
 
 <AccordionItem title="How to start a Waku node?">
-  Follow the README instructions at <a href="https://github.com/waku-org/nwaku-compose">nwaku-compose</a>.
+  Follow the README instructions at <a href="https://docs.waku.org/guides/nwaku/run-node">nwaku-compose</a>.
 </AccordionItem>
 
 
