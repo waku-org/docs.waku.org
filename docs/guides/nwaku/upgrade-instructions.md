@@ -13,7 +13,7 @@ Named sharding was deprecated in this version. This means that pubsub topics wil
 
 In order to migrate your existing application, you need to:
 
-1. Make sure that your clients are sending messages to pubsub topics in the required format.
+1. Make sure that your clients are sending messages to pubsub topics in the required format. Check that in your interactions with Nwaku's REST API or when using `js-waku`, the configured pubsub topics follow the static sharding format defined above.
 2. When running a node with the `--pubsub-topic` CLI flag, the values provided should comply with the static sharding format.
 3. If your application relies on nodes or clients that may not be updated immediately, keep your node on an older version while subscribing to both the current pubsub topic and the new pubsub topic that will comply with the static sharding format. In that case, you can keep backward compatibility for a migration period.
 
