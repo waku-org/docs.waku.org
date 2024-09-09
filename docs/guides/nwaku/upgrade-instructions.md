@@ -6,7 +6,7 @@ sidebar_label: Upgrade Instructions
 
 import { AccordionItem } from '@site/src/components/mdx'
 
-If you are currently using Nwaku, are running an old version and want to upgrade your node, please follow the below migration instructions for each release newer than your current running version
+If you are currently using Nwaku, running an old version and want to upgrade your node, please follow the below migration instructions for each release newer than your current running version
 
 <AccordionItem title="v0.31.0">
 Named sharding was deprecated in this version. This means that pubsub topics will only be supported if they comply with the static sharding format: <code>/waku/2/rs/&lt;CLUSTER_ID&gt;/&lt;SHARD_ID&gt;</code><br /><br />
