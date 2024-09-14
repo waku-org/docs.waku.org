@@ -14,7 +14,7 @@ For example, if you are interested in the version v0.32.0 and are currently runn
 
 <AccordionItem title="v0.32.0">
 
-The `--protected-topic` CLI config was deprecated and is replaced by the new `--protected-shard` configuration. Instead of configuring `topic:pubkey` you will now need to configure `shard:pubkey`
+The `--protected-topic` CLI config was deprecated and is replaced by the new `--protected-shard` configuration. Instead of configuring `topic:public_key` you will now need to configure `shard:public_key`
 
 For example, if you used to run your node with `--protected-topic="waku/2/rs/1/2:your_public_key"` you will need to replace this configuration for `--protected-shard="2:your_public_key"`
 
