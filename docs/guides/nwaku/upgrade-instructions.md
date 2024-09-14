@@ -6,7 +6,19 @@ sidebar_label: Upgrade Instructions
 
 import { AccordionItem } from '@site/src/components/mdx'
 
-If you are currently using Nwaku, running an old version and want to upgrade your node, please follow the below migration instructions for each release newer than your current running version
+If you are currently using Nwaku, running an old version and want to upgrade your node, please follow the below migration instructions for each target release newer than your current running version in ascending order.
+
+For example, if you are interested in the version v0.32.0 and are currently running v0.30.0, follow the instructions for v0.31.0 and then the ones for v0.32.0
+
+## Target Releases
+
+<AccordionItem title="v0.32.0">
+
+The `--protected-topic` CLI config was deprecated and is replaced by the new `--protected-shard` configuration. Instead of configuring `topic:pubkey` you will now need to configure `shard:pubkey`
+
+For example, if you used to run your node with `--protected-topic="waku/2/rs/1/2:your_public_key"` you will need to replace this configuration for `--protected-shard="2:your_public_key"`
+
+</AccordionItem>
 
 <AccordionItem title="v0.31.0">
 Named sharding was deprecated in this version. This means that pubsub topics will only be supported if they comply with the static sharding format: <code>/waku/2/rs/&lt;CLUSTER_ID&gt;/&lt;SHARD_ID&gt;</code><br /><br />
