@@ -58,6 +58,16 @@ To find your public IP, use:
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 ```
 
+For more detailed information about all possible configurations, please run
+
+```shell
+docker run -t wakuorg/nwaku:v0.32.0 --help
+```
+
+:::info
+Note that running a node in The Waku Network (--cluster-id=1) requires a special set of configurations and therefore, it is recommended to run in this case with docker compose
+:::
+
 :::info
 We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (listening and discovery ports, API servers).
 :::
