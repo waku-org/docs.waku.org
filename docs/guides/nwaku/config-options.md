@@ -66,9 +66,11 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-bandwidth-threshold`  | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen                                                    |
 | `staticnode`                     |                                           | Peer multiaddr to directly connect with. Argument may be repeated                                                             |
 | `keep-alive`                     | `false`                                   | Enable keep-alive for idle connections: true\|false                                                                           |
-| `topic`                          | `["/waku/2/default-waku/proto"]`          | Default topic to subscribe to. Argument may be repeated. Deprecated! Please use `pubsub-topic` and/or `content-topic` instead |
-| `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated                                                                |
+| `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated. **Deprecated!** Please use `shard` and/or `content-topic` instead        |
+| `shard`                          |                                           | Shard to subscribe to. Argument may be repeated                                                               |
 | `content-topic`                  |                                           | Default content topic to subscribe to. Argument may be repeated                                                               |
+| `reliability`                    | `false`                                   | Enable experimental reliability protocol true\|false                                                                 |
+
 
 ## Store and message store config
 
@@ -107,7 +109,6 @@ Here are the available node configuration options, along with their default valu
 | `rest-port`                 | `8645`        | Listening port of the REST HTTP server                                                                                                                                                                                                                                                                                                       |
 | `rest-relay-cache-capacity` | `30`          | Capacity of the Relay REST API message cache                                                                                                                                                                                                                                                                                                 |
 | `rest-admin`                | `false`       | Enable access to REST HTTP Admin API: true\|false                                                                                                                                                                                                                                                                                            |
-| `rest-private`              | `false`       | Enable access to REST HTTP Private API: true\|false                                                                                                                                                                                                                                                                                          |
 | `rest-allow-origin`         |               | Allow cross-origin requests from the specified origin. When using the REST API in a browser, specify the origin host to get a valid response from the node REST HTTP server. This option may be repeated and can contain wildcards (?,\*) for defining URLs and ports such as `localhost:*`, `127.0.0.1:8080`, or allow any website with `*` |
 
 ## Metrics config
