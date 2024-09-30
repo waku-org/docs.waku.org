@@ -24,20 +24,25 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
-A node needs to know how to route messages. In order to do that you can use standard pubsub topic (`/waku/2/default-waku/proto`). If your project uses a different pubsub topic, you can configure this by providing a set of [content topics](/learn/concepts/content-topics) for the node to use with the `contentTopics` parameter or by using the `ShardInfo` parameter:
+A node needs to know how to route messages. By default, it will use The Waku Network configuration (`{ clusterId: 1, shards: [0,1,2,3,4,5,6,7] }`). If your project uses a different network configuration, you can configure this using the `networkConfig` parameter:
 
 ```js
-// Create node with content topics
+// Create node with static sharding
 const node = await createLightNode({
   defaultBootstrap: true,
-  contentTopics: [/*set of content topics*/],
+  networkConfig: {
+    clusterId: 1,
+    shards: [0, 1, 2, 3],
+  },
 });
 
-// Create node with custom shard info
-const shardInfo = { clusterId: 3, shards: [1, 2] };
+// Create node with auto sharding
 const node = await createLightNode({
   defaultBootstrap: true,
-  shardInfo: shardInfo,
+  networkConfig: {
+    clusterId: 1,
+    contentTopics: ["/my-app/1/notifications/proto"],
+  },
 });
 ```
 
@@ -85,18 +90,18 @@ const encoder = createEncoder({
 });
 ```
 
-The `pubsubTopicShardInfo` parameter allows you to configure a different shared pubsub topic for your `encoder` and `decoder`:
+The `pubsubTopicShardInfo` parameter allows you to configure a different network configuration for your `encoder` and `decoder`:
 
 ```js
-// Create the shard info
-const shardInfo = { clusterId: 3, shard: 1 };
+// Create the network config
+const networkConfig = { clusterId: 3, shards: [1, 2] };
 
-// Create encoder and decoder with custom shard info
+// Create encoder and decoder with custom network config
 const encoder = createEncoder({
   contentTopic: contentTopic,
-  pubsubTopicShardInfo: shardInfo,
+  pubsubTopicShardInfo: networkConfig,
 });
-const decoder = createDecoder(contentTopic, shardInfo);
+const decoder = createDecoder(contentTopic, networkConfig);
 ```
 
 :::info
@@ -168,14 +173,14 @@ if (error) {
 await subscription.subscribe([decoder], callback);
 ```
 
-The `pubsubTopicShardInfo` parameter allows you to configure a different shared pubsub topic for your `Filter` subscription:
+The `pubsubTopicShardInfo` parameter allows you to configure a different network configuration for your `Filter` subscription:
 
 ```js
-// Create the shard info
-const shardInfo = { clusterId: 3, shard: 1 };
+// Create the network config
+const networkConfig = { clusterId: 3, shards: [1, 2] };
 
-// Create Filter subscription with custom shard info
-const subscription = await node.filter.createSubscription(shardInfo);
+// Create Filter subscription with custom network config
+const subscription = await node.filter.createSubscription(networkConfig);
 ```
 
 You can use the `subscription.unsubscribe()` function to stop receiving messages from a content topic:
