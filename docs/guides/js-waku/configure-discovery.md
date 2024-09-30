@@ -64,14 +64,11 @@ const peers = [
 
 const node = await createLightNode();
 
-// In case nodes are using `ws` protocol - additional configuration is needed:
+// In case nodes are using IP address and / or `ws` protocol - additional configuration is needed:
 /*
-import { webSockets } from "@libp2p/websockets";
-import { all as filterAll } from "@libp2p/websockets/filters";
-
 const node = await createLightNode({
 	libp2p: {
-		transports: [webSockets({ filter: filterAll })],
+		filterMultiaddrs: false,
 	},
 });
 */
