@@ -17,6 +17,7 @@
     "enrtree",
     "Discv5",
     "gossipsub",
+    "autosharding",
     "lightpush",
     "pubtopic1",
     "proto",

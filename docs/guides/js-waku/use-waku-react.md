@@ -118,7 +118,7 @@ function App() {
 	const decoder = createDecoder(contentTopic);
 
 	// Create a message structure using Protobuf
-	const ChatMessage = new protobuf.Type("ChatMessage")
+	const DataPacket = new protobuf.Type("DataPacket")
 		.add(new protobuf.Field("timestamp", 1, "uint64"))
 		.add(new protobuf.Field("message", 2, "string"));
 
@@ -223,13 +223,13 @@ function App() {
 
 		// Create a new message object
 		const timestamp = Date.now();
-		const protoMessage = ChatMessage.create({
+		const protoMessage = DataPacket.create({
 			timestamp: timestamp,
 			message: inputMessage
 		});
 
 		// Serialise the message and push to the network
-		const payload = ChatMessage.encode(protoMessage).finish();
+		const payload = DataPacket.encode(protoMessage).finish();
 		const { recipients, errors } = await push({ payload, timestamp });
 
 		// Check for errors
@@ -258,7 +258,7 @@ function App() {
 	useEffect(() => {
 		setMessages(filterMessages.map((wakuMessage) => {
 			if (!wakuMessage.payload) return;
-			return ChatMessage.decode(wakuMessage.payload);
+			return DataPacket.decode(wakuMessage.payload);
 		}));
 	}, [filterMessages]);
 }
@@ -283,7 +283,7 @@ function App() {
 		const allMessages = storeMessages.concat(filterMessages);
 		setMessages(allMessages.map((wakuMessage) => {
 			if (!wakuMessage.payload) return;
-			return ChatMessage.decode(wakuMessage.payload);
+			return DataPacket.decode(wakuMessage.payload);
 		}));
 	}, [filterMessages, storeMessages]);
 }

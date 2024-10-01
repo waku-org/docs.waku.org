@@ -24,6 +24,34 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
+A node needs to know how to route messages. By default, it will use The Waku Network configuration (`{ clusterId: 1, shards: [0,1,2,3,4,5,6,7] }`). For most applications, it's recommended to use autosharding:
+
+```js
+// Create node with auto sharding (recommended)
+const node = await createLightNode({
+  defaultBootstrap: true,
+  networkConfig: {
+    clusterId: 1,
+    contentTopics: ["/my-app/1/notifications/proto"],
+  },
+});
+```
+
+### Alternative network configuration
+
+If your project requires a specific network configuration, you can use static sharding:
+
+```js
+// Create node with static sharding
+const node = await createLightNode({
+  defaultBootstrap: true,
+  networkConfig: {
+    clusterId: 1,
+    shards: [0, 1, 2, 3],
+  },
+});
+```
+
 ## Connect to remote peers
 
 Use the `waitForRemotePeer()` function to wait for the node to connect with peers on the Waku Network:
@@ -41,15 +69,12 @@ The `protocols` parameter allows you to specify the [protocols](/learn/concepts/
 import { waitForRemotePeer, Protocols } from "@waku/sdk";
 
 // Wait for peer connections with specific protocols
-await waitForRemotePeer(node, [
-	Protocols.LightPush,
-	Protocols.Filter,
-]);
+await waitForRemotePeer(node, [Protocols.LightPush, Protocols.Filter]);
 ```
 
 ## Choose a content topic
 
-[Choose a content topic](/learn/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
+Choose a [content topic](/learn/concepts/content-topics) for your application and create a message `encoder` and `decoder`:
 
 ```js
 import { createEncoder, createDecoder } from "@waku/sdk";
@@ -66,9 +91,23 @@ The `ephemeral` parameter allows you to specify whether messages should **NOT** 
 
 ```js
 const encoder = createEncoder({
-	contentTopic: contentTopic, // message content topic
-	ephemeral: true, // allows messages NOT be stored on the network
+  contentTopic: contentTopic, // message content topic
+  ephemeral: true, // allows messages NOT be stored on the network
 });
+```
+
+The `pubsubTopicShardInfo` parameter allows you to configure a different network configuration for your `encoder` and `decoder`:
+
+```js
+// Create the network config
+const networkConfig = { clusterId: 3, shards: [1, 2] };
+
+// Create encoder and decoder with custom network config
+const encoder = createEncoder({
+  contentTopic: contentTopic,
+  pubsubTopicShardInfo: networkConfig,
+});
+const decoder = createDecoder(contentTopic, networkConfig);
 ```
 
 :::info
@@ -83,10 +122,10 @@ Create your application's message structure using [Protobuf's valid message](htt
 import protobuf from "protobufjs";
 
 // Create a message structure using Protobuf
-const ChatMessage = new protobuf.Type("ChatMessage")
-    .add(new protobuf.Field("timestamp", 1, "uint64"))
-    .add(new protobuf.Field("sender", 2, "string"))
-    .add(new protobuf.Field("message", 3, "string"));
+const DataPacket = new protobuf.Type("DataPacket")
+  .add(new protobuf.Field("timestamp", 1, "uint64"))
+  .add(new protobuf.Field("sender", 2, "string"))
+  .add(new protobuf.Field("message", 3, "string"));
 ```
 
 :::info
@@ -99,18 +138,18 @@ To send messages over the Waku Network using the `Light Push` protocol, create a
 
 ```js
 // Create a new message object
-const protoMessage = ChatMessage.create({
-    timestamp: Date.now(),
-    sender: "Alice",
-    message: "Hello, World!",
+const protoMessage = DataPacket.create({
+  timestamp: Date.now(),
+  sender: "Alice",
+  message: "Hello, World!",
 });
 
 // Serialise the message using Protobuf
-const serialisedMessage = ChatMessage.encode(protoMessage).finish();
+const serialisedMessage = DataPacket.encode(protoMessage).finish();
 
 // Send the message using Light Push
 await node.lightPush.send(encoder, {
-    payload: serialisedMessage,
+  payload: serialisedMessage,
 });
 ```
 
@@ -121,11 +160,11 @@ To receive messages using the `Filter` protocol, create a callback function for 
 ```js
 // Create the callback function
 const callback = (wakuMessage) => {
-    // Check if there is a payload on the message
-    if (!wakuMessage.payload) return;
-    // Render the messageObj as desired in your application
-    const messageObj = ChatMessage.decode(wakuMessage.payload);
-    console.log(messageObj);
+  // Check if there is a payload on the message
+  if (!wakuMessage.payload) return;
+  // Render the messageObj as desired in your application
+  const messageObj = DataPacket.decode(wakuMessage.payload);
+  console.log(messageObj);
 };
 
 // Create a Filter subscription
@@ -138,6 +177,16 @@ if (error) {
 
 // Subscribe to content topics and process new messages
 await subscription.subscribe([decoder], callback);
+```
+
+The `pubsubTopicShardInfo` parameter allows you to configure a different network configuration for your `Filter` subscription:
+
+```js
+// Create the network config
+const networkConfig = { clusterId: 3, shards: [1, 2] };
+
+// Create Filter subscription with custom network config
+const subscription = await node.filter.createSubscription(networkConfig);
 ```
 
 You can use the `subscription.unsubscribe()` function to stop receiving messages from a content topic:
