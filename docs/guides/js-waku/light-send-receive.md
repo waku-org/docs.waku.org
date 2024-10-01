@@ -24,7 +24,22 @@ await node.start();
 When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
-A node needs to know how to route messages. By default, it will use The Waku Network configuration (`{ clusterId: 1, shards: [0,1,2,3,4,5,6,7] }`). If your project uses a different network configuration, you can configure this using the `networkConfig` parameter:
+A node needs to know how to route messages. By default, it will use The Waku Network configuration (`{ clusterId: 1, shards: [0,1,2,3,4,5,6,7] }`). For most applications, it's recommended to use autosharding:
+
+```js
+// Create node with auto sharding (recommended)
+const node = await createLightNode({
+  defaultBootstrap: true,
+  networkConfig: {
+    clusterId: 1,
+    contentTopics: ["/my-app/1/notifications/proto"],
+  },
+});
+```
+
+### Alternative network configuration
+
+If your project requires a specific network configuration, you can use static sharding:
 
 ```js
 // Create node with static sharding
@@ -33,15 +48,6 @@ const node = await createLightNode({
   networkConfig: {
     clusterId: 1,
     shards: [0, 1, 2, 3],
-  },
-});
-
-// Create node with auto sharding
-const node = await createLightNode({
-  defaultBootstrap: true,
-  networkConfig: {
-    clusterId: 1,
-    contentTopics: ["/my-app/1/notifications/proto"],
   },
 });
 ```
