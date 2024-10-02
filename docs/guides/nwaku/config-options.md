@@ -68,6 +68,7 @@ Here are the available node configuration options, along with their default valu
 | `keep-alive`                     | `false`                                   | Enable keep-alive for idle connections: true\|false                                                                           |
 | `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated. **Deprecated!** Please use `shard` and/or `content-topic` instead        |
 | `shard`                          |                                           | Shard to subscribe to. Argument may be repeated                                                               |
+| `num-shards-in-network`          |                                           | Number of shards in the network. Used to map content topics to shards when using autosharding                               |
 | `content-topic`                  |                                           | Default content topic to subscribe to. Argument may be repeated                                                               |
 | `reliability`                    | `false`                                   | Enable experimental reliability protocol true\|false                                                                 |
 
