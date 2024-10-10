@@ -19,13 +19,13 @@ await node.start();
 
 ## Connect to store peers
 
-Use the `waitForRemotePeer()` function to wait for the node to connect with Store peers:
+Use the `node.waitForPeers()` method to wait for the node to connect with Store peers:
 
 ```js
-import { waitForRemotePeer, Protocols } from "@waku/sdk";
+import { Protocols } from "@waku/sdk";
 
 // Wait for a successful peer connection
-await waitForRemotePeer(node, [Protocols.Store]);
+await node.waitForPeers([Protocols.Store]);
 ```
 
 ## Choose a content topic

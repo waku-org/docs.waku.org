@@ -191,10 +191,10 @@ const node = await createLightNode({
 You can retrieve the array of peers connected to a node using the `libp2p.getPeers()` function within the `@waku/sdk` package:
 
 ```js
-import { createLightNode, waitForRemotePeer } from "@waku/sdk";
+import { createLightNode } from "@waku/sdk";
 
 const node = await createLightNode({ defaultBootstrap: true });
-await waitForRemotePeer(node);
+await node.waitForPeers();
 
 // Retrieve array of peers connected to the node
 console.log(node.libp2p.getPeers());
