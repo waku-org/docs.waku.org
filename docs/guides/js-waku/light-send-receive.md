@@ -54,22 +54,20 @@ const node = await createLightNode({
 
 ## Connect to remote peers
 
-Use the `waitForRemotePeer()` function to wait for the node to connect with peers on the Waku Network:
+Use the `node.waitForPeers()` function to wait for the node to connect with peers on the Waku Network:
 
 ```js
-import { waitForRemotePeer } from "@waku/sdk";
-
 // Wait for a successful peer connection
-await waitForRemotePeer(node);
+await node.waitForPeers();
 ```
 
 The `protocols` parameter allows you to specify the [protocols](/learn/concepts/protocols) that the remote peers should have enabled:
 
 ```js
-import { waitForRemotePeer, Protocols } from "@waku/sdk";
+import { Protocols } from "@waku/sdk";
 
 // Wait for peer connections with specific protocols
-await waitForRemotePeer(node, [Protocols.LightPush, Protocols.Filter]);
+await node.waitForPeers([Protocols.LightPush, Protocols.Filter]);
 ```
 
 ## Choose a content topic
