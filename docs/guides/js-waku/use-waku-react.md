@@ -294,5 +294,5 @@ To explore the available Store query options, have a look at the [Retrieve Messa
 :::
 
 :::tip
-You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Have a look at the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo and the [Building a Tic-Tac-Toe Game with Waku](https://blog.waku.org/tictactoe-tutorial) tutorial to learn more.
+You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Have a look at the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo and the [Building a Tic-Tac-Toe Game with Waku](https://blog.waku.org/2024-01-22-tictactoe-tutorial/) tutorial to learn more.
 :::
