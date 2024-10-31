@@ -10,7 +10,7 @@ Here are the available node configuration options, along with their default valu
 | Name              | Default Value               | Description                                                                                         |
 | ----------------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
 | `config-file`     |                             | Loads configuration from a TOML file (cmd-line parameters take precedence)                          |
-| `protected-topic` | `newSeq[ProtectedTopic](0)` | Topics and its public key to be used for message validation, topic:pubkey. Argument may be repeated |
+| `protected-shard` | `newSeq[ProtectedShard](0)` | Shards and its public keys to be used for message validation, shard:pubkey. Argument may be repeated |
 
 ## Log config
 
