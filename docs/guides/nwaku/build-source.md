@@ -32,7 +32,7 @@ source "$HOME/.cargo/env"
 <TabItem value="fedora" label="Fedora">
 
 ```shell
-sudo dnf install @development-tools git libpq-devel
+sudo dnf install @development-tools git libpq-devel which
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
