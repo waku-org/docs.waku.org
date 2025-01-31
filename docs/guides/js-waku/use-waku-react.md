@@ -289,6 +289,19 @@ function App() {
 }
 ```
 
+You can also configure a specific Store peer when creating the node, which is useful when running your own Store node or using a specific node in the network:
+
+```js
+const node = await createLightNode({ 
+  defaultBootstrap: true,
+  store: {
+    peer: "/ip4/1.2.3.4/tcp/1234/p2p/16Uiu2HAm..." // multiaddr or PeerId of your Store node
+  }
+});
+```
+
+If the specified Store peer is not available, the node will fall back to using random Store peers in the network.
+
 :::info
 To explore the available Store query options, have a look at the [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
 :::

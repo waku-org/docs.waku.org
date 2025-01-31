@@ -28,6 +28,19 @@ import { Protocols } from "@waku/sdk";
 await node.waitForPeers([Protocols.Store]);
 ```
 
+You can also specify a dedicated Store peer to use for queries when creating the node. This is particularly useful when running your own Store node or when you want to use a specific Store node in the network:
+
+```js
+const node = await createLightNode({ 
+  defaultBootstrap: true,
+  store: {
+    peer: "/ip4/1.2.3.4/tcp/1234/p2p/16Uiu2HAm..." // multiaddr or PeerId of your Store node
+  }
+});
+```
+
+If the specified Store peer is not available, the node will fall back to using random Store peers in the network.
+
 ## Choose a content topic
 
 [Choose a content topic](/learn/concepts/content-topics) for filtering the messages to retrieve and create a message `decoder`:
