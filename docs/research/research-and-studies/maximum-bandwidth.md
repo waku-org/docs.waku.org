@@ -61,13 +61,13 @@ Points to take into account:
 - **Relay contributes to bandwidth the most**: Relay is the protocol that mostly contributes to bandwidth usage, and it can't choose to allocate fewer bandwidth resources like other protocols (eg `store` can choose to provide less resources and it will work). In other words, the network sets the relay bandwidth requirements, and if the node can't meet them, it just wont work.
 - **Upload and download bandwidth are the same**: Due to how gossipsub works, and hence `relay`, the bandwidth consumption is symmetric, meaning that upload and download bandwidth is the same. This is because of `D` and the reciprocity of the connections, meaning that one node upload is another download.
 - **Nodes not meeting requirements can use light clients**. Note that nodes not meeting the bandwidth requirements can still use waku, but they will have to use light protocols, which are a great alternative, especially on mobile, but with some drawbacks (trust assumptions, less reliability, etc)
-- **Waku can't take all the bandwidth:** Waku is meant to be used in conjunction with other services, so it shouldn't consume all the existing bandwidth. If Waku consumes `x Mbps` and someone bandwidth is `x Mpbs`, the UX won't be good.
+- **Waku can't take all the bandwidth:** Waku is meant to be used in conjunction with other services, so it shouldn't consume all the existing bandwidth. If Waku consumes `x Mbps` and someone bandwidth is `x Mbps`, the UX won't be good.
 - **Compare with existing well-known services:** As shown in *Table [3]*, Netflix 4K video streaming takes 15Mbps, so that is an order of magnitude to take into account.
 
 Coming up with a number:
 - Lowest average download speed across continents is Africa (26 Mbps)
 - Lowest average upload speed across continents is Africa (17 Mbps)
-- Since in waku the bandwidth consumption is symmetric, we are limited by the lowest (17 Mpbs)
+- Since in waku the bandwidth consumption is symmetric, we are limited by the lowest (17 Mbps)
 - However waku should not consume all bandwidth, leaving some room for other applications.
 - We could set 10 Mbps, which is between Full HD video and 4K.
 - With 10Mbps the % of average bandwidth waku will consume is:
