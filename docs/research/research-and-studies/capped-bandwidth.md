@@ -24,7 +24,7 @@ Quick summary of the evolution to solve this problem:
 ## Current Solution (RLN v2)
 
 The current solution to this problem is the usage of RLN v2, which allows to rate-limit `x` messages every `y` seconds. On top of this, the introduction of [WAKU2-RLN-CONTRACT](https://github.com/waku-org/specs/blob/master/standards/core/rln-contract.md) enforces a maximum amount of messages that can be sent to the network per `epoch`. This is achieved by limiting the amount of memberships that can be registered. The current values are:
-* `R_{max}`: 160000 mgs/epoch
+* `R_{max}`: 160000 msgs/epoch
 * `r_{max}`: 600 msgs/epoch
 * `r_{min}`: 20 msgs/epoch
 
