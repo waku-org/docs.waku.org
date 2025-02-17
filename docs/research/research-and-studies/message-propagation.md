@@ -54,7 +54,7 @@ The following figure shows the **message propagation time with real simulations*
 
 **Important note**. The first messages sent in the simulations are omitted, since they show an abnormal propagation delay that doesn't reflect reality. This is due to how flow control works in TCP, where right after connection, the sender node has no idea of the "bandwidth" of the receiver node, so it will start sending packages at a lower rate. This translates into high transmission times, and it's more pronounced when dealing with big message sizes.
 
-In other words, in a 100Mpbs link, 100Mbits won't be sent in 1 second, or at least not a the beginning, when the node is slowly increasing the rate until based on ACK/NACK ratio. For more information about this, this is explained in [here](https://www.youtube.com/watch?v=vb_wjh_nAmo).
+In other words, in a 100Mbps link, 100Mbits won't be sent in 1 second, or at least not a the beginning, when the node is slowly increasing the rate until based on ACK/NACK ratio. For more information about this, this is explained in [here](https://www.youtube.com/watch?v=vb_wjh_nAmo).
 
 **Conclusions:**
 - Using small messages `10kB` the **average propagation delay is `508 ms`**, quite reasonable for applications using waku. The variance is acceptable, with 95% of the messages arriving in `<627 ms`.
