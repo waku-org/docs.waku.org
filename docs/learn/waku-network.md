@@ -11,7 +11,7 @@ The Waku Network is a shared p2p messaging network that is open-access, useful f
 4. Services for resource-restricted nodes, including historical message storage and retrieval, filtering, etc.
 
 :::tip
-If you want to learn more about the Waku Network, the [The Waku Network: Technical Overview](https://blog.waku.org/2024-waku-network-tech-overview) article provides an in-depth look under the hood.
+If you want to learn more about the Waku Network, [The Waku Network: Technical Overview](https://blog.waku.org/2024-03-26-waku-network-tech-overview/) article provides an in-depth look under the hood.
 :::
 
 ## Why join the Waku network?

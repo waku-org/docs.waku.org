@@ -64,14 +64,11 @@ const peers = [
 
 const node = await createLightNode();
 
-// In case nodes are using `ws` protocol - additional configuration is needed:
+// In case nodes are using IP address and / or `ws` protocol - additional configuration is needed:
 /*
-import { webSockets } from "@libp2p/websockets";
-import { all as filterAll } from "@libp2p/websockets/filters";
-
 const node = await createLightNode({
 	libp2p: {
-		transports: [webSockets({ filter: filterAll })],
+		filterMultiaddrs: false,
 	},
 });
 */
@@ -194,10 +191,10 @@ const node = await createLightNode({
 You can retrieve the array of peers connected to a node using the `libp2p.getPeers()` function within the `@waku/sdk` package:
 
 ```js
-import { createLightNode, waitForRemotePeer } from "@waku/sdk";
+import { createLightNode } from "@waku/sdk";
 
 const node = await createLightNode({ defaultBootstrap: true });
-await waitForRemotePeer(node);
+await node.waitForPeers();
 
 // Retrieve array of peers connected to the node
 console.log(node.libp2p.getPeers());

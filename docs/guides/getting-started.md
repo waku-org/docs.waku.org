@@ -48,8 +48,8 @@ Looking for what to build with Waku? Discover a collection of sample ideas and u
 ## Case studies
 
 <div class="case-study-container">
-  <a href="https://blog.waku.org/thegraph-waku-case-study/" target="_blank" rel="noopener noreferrer"><img src="/img/graph-use-case.jpeg" /></a>
-  <a href="https://blog.waku.org/railgun-waku-case-study/" target="_blank" rel="noopener noreferrer"><img src="/img/railgun-use-case.jpeg" /></a>
+  <a href="https://blog.waku.org/2024-05-13-the-graph-case-study/" target="_blank" rel="noopener noreferrer"><img src="/img/graph-use-case.jpeg" /></a>
+  <a href="https://blog.waku.org/2024-04-26-railgun-case-study/" target="_blank" rel="noopener noreferrer"><img src="/img/railgun-use-case.jpeg" /></a>
 </div>
 
 ## Getting started

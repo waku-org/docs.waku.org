@@ -56,5 +56,5 @@ enr:-IO4QDxToTg86pPCK2KvMeVCXC2ADVZWrxXSvNZeaoa0JhShbM5qed69RQz1s1mWEEqJ3aoklo_7
 ```
 
 :::tip Congratulations!
-You have successfully found the listening and discoverable addresses for your `nwaku` node. Have a look at the Configure Peer Discovery](/guides/nwaku/configure-discovery) guide to learn how to discover and connect with peers in the network.
+You have successfully found the listening and discoverable addresses for your `nwaku` node. Have a look at the [Configure Peer Discovery](/guides/nwaku/configure-discovery) guide to learn how to discover and connect with peers in the network.
 :::
