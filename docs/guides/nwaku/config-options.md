@@ -33,7 +33,7 @@ Here are the available node configuration options, along with their default valu
 | `ext-multiaddr`       |                          | External multiaddresses to advertise to the network. Argument may be repeated                           |
 | `ext-multiaddr-only`  | `false`                  | Only announce external multiaddresses                                                                   |
 | `max-connections`     | `50`                     | Maximum allowed number of libp2p connections                                                            |
-| `max-relay-peers`     |                          | Maximum allowed number of relay peers                                                                   |
+| `relay-service-ratio` | `"60:40"`                | This percentage ratio represents the relay peers to service peers. For example, 60:40, tells that 60% of the max-connections will be used for relay protocol and the other 40% of max-connections will be reserved for other service protocols (e.g., filter, lightpush, store, metadata, etc.) |
 | `peer-store-capacity` |                          | Maximum stored peers in the peerstore                                                                   |
 | `peer-persistence`    | `false`                  | Enable peer persistence                                                                                 |
 
@@ -128,6 +128,7 @@ Here are the available node configuration options, along with their default valu
 | `dns-discovery`             | `false`                  | Enable discovering nodes via DNS                           |
 | `dns-discovery-url`         |                          | URL for DNS node list in format 'enrtree://<key\>@<fqdn\>' |
 | `dns-discovery-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query. Argument may be repeated     |
+| `rendezvous`                | `true`                   | Enable waku rendezvous discovery server                    |
 
 ## Discv5 config
 
