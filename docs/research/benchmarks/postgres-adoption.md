@@ -78,7 +78,7 @@ In this case, we are comparing *Store* performance by means of Rest service.
 - node_c: one _nwaku_ node with *REST* enabled and acting as a *Store client* for node_a.
 - node_d: one _nwaku_ node with *REST* enabled and acting as a *Store client* for node_b.
 - With _jmeter_, 10 users make *REST* *Store* requests concurrently to each of the “rest” nodes (node_c and node_d.)
-- All _nwaku_ nodes running statusteam/nim-waku:v0.19.0
+- All _nwaku_ nodes running wakuorg/nwaku:v0.32.0
 
 [This](https://github.com/waku-org/test-waku-query/blob/master/docker/jmeter/http_store_requests.jmx) is the _jmeter_ project used.
 

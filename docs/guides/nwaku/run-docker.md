@@ -15,7 +15,7 @@ We recommend running a `nwaku` node with at least 2GB of RAM, especially if `WSS
 
 ## Get Docker image
 
-The Nwaku Docker images are available on the Docker Hub public registry under the [statusteam/nim-waku](https://hub.docker.com/r/statusteam/nim-waku) repository. Please visit [statusteam/nim-waku/tags](https://hub.docker.com/r/statusteam/nim-waku/tags) for images of specific releases.
+The Nwaku Docker images are available on the Docker Hub public registry under the [wakuorg/nwaku](https://hub.docker.com/r/wakuorg/nwaku) repository. Please visit [wakuorg/nwaku/tags](https://hub.docker.com/r/wakuorg/nwaku/tags) for images of specific releases.
 
 ## Build Docker image
 
@@ -45,7 +45,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 Run `nwaku` using the most typical configuration:
 
 ```shell
-docker run -i -t -p 60000:60000 -p 9000:9000/udp statusteam/nim-waku:v0.20.0 \
+docker run -i -t -p 60000:60000 -p 9000:9000/udp wakuorg/nwaku:v0.32.0 \
   --dns-discovery=true \
   --dns-discovery-url=enrtree://AIRVQ5DDA4FFWLRBCHJWUWOO6X6S4ZTZ5B667LQ6AJU6PEYDLRD5O@sandbox.waku.nodes.status.im \
   --discv5-discovery=true \
@@ -57,6 +57,16 @@ To find your public IP, use:
 ```shell
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 ```
+
+For more detailed information about all possible configurations, please run
+
+```shell
+docker run -t wakuorg/nwaku:v0.32.0 --help
+```
+
+:::info
+Note that running a node in The Waku Network (--cluster-id=1) requires a special set of configurations and therefore, it is recommended to run in this case with docker compose
+:::
 
 :::info
 We recommend using explicit port mappings (`-p`) when exposing ports accessible from outside the host (listening and discovery ports, API servers).
