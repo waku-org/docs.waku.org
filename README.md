@@ -94,3 +94,11 @@ yarn clear
 The hosting is done using [Caddy server with Git plugin for handling GitHub webhooks](https://github.com/status-im/infra-misc/blob/master/ansible/roles/caddy-git).
 
 Information about deployed build can be also found in `/build.json` available on the website.
+
+## Change Process
+
+1. Create a new working branch from develop: git checkout develop; git checkout -b my-changes.
+2. Make your changes, push them to the origin, and open a Pull Request against the develop branch.
+3. After approval, merge the pull request, and verify the changes on the staging server (e.g., https://dev.vac.dev).
+4. When ready to promote changes to the live website, rebase the master branch on the staging changes: git checkout master; git pull origin master; git rebase origin/develop; git push.
+
