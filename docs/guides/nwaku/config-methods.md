@@ -25,7 +25,7 @@ Node configuration is primarily done using command line options, which override 
 When running your node with Docker, provide the command line options after the image name in this format:
 
 ```shell
-docker run statusteam/nim-waku --tcp-port=65000
+docker run wakuorg/nwaku --tcp-port=65000
 ```
 
 ## Environment variables
@@ -41,7 +41,7 @@ WAKUNODE2_TCP_PORT=65000 ./build/wakunode2
 When running your node with Docker, start the node using the `-e` command option:
 
 ```shell
-docker run -e "WAKUNODE2_TCP_PORT=65000" statusteam/nim-waku
+docker run -e "WAKUNODE2_TCP_PORT=65000" wakuorg/nwaku
 ```
 
 :::info
@@ -72,7 +72,7 @@ You can also specify the configuration file via environment variables:
 WAKUNODE2_CONFIG_FILE=[TOML CONFIGURATION FILE] ./build/wakunode2
 
 # Using environment variables with Docker
-docker run -e "WAKUNODE2_CONFIG_FILE=[TOML CONFIGURATION FILE]" statusteam/nim-waku
+docker run -e "WAKUNODE2_CONFIG_FILE=[TOML CONFIGURATION FILE]" wakuorg/nwaku
 ```
 
 :::info

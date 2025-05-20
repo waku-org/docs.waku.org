@@ -10,7 +10,7 @@ Here are the available node configuration options, along with their default valu
 | Name              | Default Value               | Description                                                                                         |
 | ----------------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
 | `config-file`     |                             | Loads configuration from a TOML file (cmd-line parameters take precedence)                          |
-| `protected-topic` | `newSeq[ProtectedTopic](0)` | Topics and its public key to be used for message validation, topic:pubkey. Argument may be repeated |
+| `protected-shard` | `newSeq[ProtectedShard](0)` | Shards and its public keys to be used for message validation, shard:pubkey. Argument may be repeated |
 
 ## Log config
 
@@ -66,9 +66,12 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-bandwidth-threshold`  | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen                                                    |
 | `staticnode`                     |                                           | Peer multiaddr to directly connect with. Argument may be repeated                                                             |
 | `keep-alive`                     | `false`                                   | Enable keep-alive for idle connections: true\|false                                                                           |
-| `topic`                          | `["/waku/2/default-waku/proto"]`          | Default topic to subscribe to. Argument may be repeated. Deprecated! Please use `pubsub-topic` and/or `content-topic` instead |
-| `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated                                                                |
+| `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated. **Deprecated!** Please use `shard` and/or `content-topic` instead        |
+| `shard`                          |                                           | Shard to subscribe to. Argument may be repeated                                                               |
+| `num-shards-in-network`          |                                           | Number of shards in the network. Used to map content topics to shards when using autosharding                               |
 | `content-topic`                  |                                           | Default content topic to subscribe to. Argument may be repeated                                                               |
+| `reliability`                    | `false`                                   | Enable experimental reliability protocol true\|false                                                                 |
+
 
 ## Store and message store config
 
@@ -107,7 +110,6 @@ Here are the available node configuration options, along with their default valu
 | `rest-port`                 | `8645`        | Listening port of the REST HTTP server                                                                                                                                                                                                                                                                                                       |
 | `rest-relay-cache-capacity` | `30`          | Capacity of the Relay REST API message cache                                                                                                                                                                                                                                                                                                 |
 | `rest-admin`                | `false`       | Enable access to REST HTTP Admin API: true\|false                                                                                                                                                                                                                                                                                            |
-| `rest-private`              | `false`       | Enable access to REST HTTP Private API: true\|false                                                                                                                                                                                                                                                                                          |
 | `rest-allow-origin`         |               | Allow cross-origin requests from the specified origin. When using the REST API in a browser, specify the origin host to get a valid response from the node REST HTTP server. This option may be repeated and can contain wildcards (?,\*) for defining URLs and ports such as `localhost:*`, `127.0.0.1:8080`, or allow any website with `*` |
 
 ## Metrics config
@@ -156,6 +158,12 @@ Here are the available node configuration options, along with their default valu
 | `websocket-secure-support`   | `false`       | Enable secure websocket: true\|false                   |
 | `websocket-secure-key-path`  |               | Secure websocket key path: '/path/to/key.txt'          |
 | `websocket-secure-cert-path` |               | Secure websocket Certificate path: '/path/to/cert.txt' |
+
+## Non-relay, request-response protocol DOS protection configuration
+
+| Name                         | Default Value | Description                                            |
+| ---------------------------- | ------------- | ------------------------------------------------------ |
+| `rate-limit`           |        | This is a repeatable option. Each can describe a specific rate limit configuration for a particular protocol.<br />Formatted as:`<protocol>:volume/period<time-unit>`<br />- if protocol is not given, settings will be taken as default for un-set protocols. Ex: `80/2s`<br />-Supported protocols are: `lightpush`\|`filter`\|`px`\|`store`\|`storev2`\|`storev3`<br />-volume must be an integer value, representing number of requests over the period of time allowed.<br />-period\<time-unit\> must be an integer with defined unit as one of `h`\|`m`\|`s`\|`ms`<br />- `storev2` and `storev3` takes precedence over `store` which can easy set both store protocols at once.<br />- In case of multiple set of the same protocol limit, last one will take place.<br />- if config is not set, - which is the default - means unlimited requests are allowed.<br />-filter has a bit different approach. It has a default setting applied if not overridden. Rate limit setting for filter will be applied per subscriber-peers, not globally - it must be considered when changing the setting.<br /><br />Examples:<br />`--rate-limit="100/1s"` - default for all protocols if not set otherwise.<br />`--rate-limit="lightpush:0/0s"` - lightpush protocol will not be rate-limited.<br />`--rate-limit="store:130/1500ms"` - both store-v3 and store-v2 will apply 130 request per each 1500ms separately.<br />`--rate-limit="px:10/1h"` PeerExchange will serve only 10 requests every hour.<br />`--rate-limit="filter:8/5m"` - will allow 8 subs/unsubs/ping requests for each subscriber within every 5 min.                        |
 
 :::tip
 To configure your node using the provided configuration options, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) guide.

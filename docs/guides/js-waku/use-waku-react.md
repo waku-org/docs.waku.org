@@ -118,7 +118,7 @@ function App() {
 	const decoder = createDecoder(contentTopic);
 
 	// Create a message structure using Protobuf
-	const ChatMessage = new protobuf.Type("ChatMessage")
+	const DataPacket = new protobuf.Type("DataPacket")
 		.add(new protobuf.Field("timestamp", 1, "uint64"))
 		.add(new protobuf.Field("message", 2, "string"));
 
@@ -223,13 +223,13 @@ function App() {
 
 		// Create a new message object
 		const timestamp = Date.now();
-		const protoMessage = ChatMessage.create({
+		const protoMessage = DataPacket.create({
 			timestamp: timestamp,
 			message: inputMessage
 		});
 
 		// Serialise the message and push to the network
-		const payload = ChatMessage.encode(protoMessage).finish();
+		const payload = DataPacket.encode(protoMessage).finish();
 		const { recipients, errors } = await push({ payload, timestamp });
 
 		// Check for errors
@@ -258,7 +258,7 @@ function App() {
 	useEffect(() => {
 		setMessages(filterMessages.map((wakuMessage) => {
 			if (!wakuMessage.payload) return;
-			return ChatMessage.decode(wakuMessage.payload);
+			return DataPacket.decode(wakuMessage.payload);
 		}));
 	}, [filterMessages]);
 }
@@ -283,16 +283,29 @@ function App() {
 		const allMessages = storeMessages.concat(filterMessages);
 		setMessages(allMessages.map((wakuMessage) => {
 			if (!wakuMessage.payload) return;
-			return ChatMessage.decode(wakuMessage.payload);
+			return DataPacket.decode(wakuMessage.payload);
 		}));
 	}, [filterMessages, storeMessages]);
 }
 ```
+
+You can also configure a specific Store peer when creating the node, which is useful when running your own Store node or using a specific node in the network:
+
+```js
+const node = await createLightNode({ 
+  defaultBootstrap: true,
+  store: {
+    peer: "/ip4/1.2.3.4/tcp/1234/p2p/16Uiu2HAm..." // multiaddr or PeerId of your Store node
+  }
+});
+```
+
+If the specified Store peer is not available, the node will fall back to using random Store peers in the network.
 
 :::info
 To explore the available Store query options, have a look at the [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
 :::
 
 :::tip
-You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Have a look at the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo and the [Building a Tic-Tac-Toe Game with Waku](https://blog.waku.org/tictactoe-tutorial) tutorial to learn more.
+You have successfully integrated `@waku/sdk` into a React application using the `@waku/react` package. Have a look at the [web-chat](https://github.com/waku-org/js-waku-examples/tree/master/examples/web-chat) example for a working demo and the [Building a Tic-Tac-Toe Game with Waku](https://blog.waku.org/2024-01-22-tictactoe-tutorial/) tutorial to learn more.
 :::

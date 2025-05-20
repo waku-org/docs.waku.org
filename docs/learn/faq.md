@@ -27,9 +27,15 @@ import { AccordionItem } from '@site/src/components/mdx'
 </AccordionItem>
 
 <AccordionItem title="How does Waku differ from IPFS?">
-  Waku focuses on short, ephemeral, real-time time messages, while IPFS focuses on large, long-term data storage. Although there's an overlap between the two technologies, Waku does not currently support large data for privacy reasons.
+  Waku focuses on short, ephemeral, real-time messages, while IPFS focuses on large, long-term data storage. Although there's an overlap between the two technologies, Waku does not currently support large data for privacy reasons.
 </AccordionItem>
 
 <AccordionItem title="What are Rate Limiting Nullifiers (RLN)?">
   <a href="/learn/concepts/protocols#rln-relay">Rate Limiting Nullifier</a> is a zero-knowledge (ZK) protocol enabling spam protection in a decentralized network while preserving privacy. Each message must be accompanied by a ZK proof, which <a href="/learn/concepts/protocols#relay">Relay</a> nodes verify to ensure the publishers do not send more messages than they are allowed. The ZK proof does not leak any private information about message publishers - it only proves they are members of a set of users allowed to publish a certain number of messages per given time frame.
 </AccordionItem>
+
+<AccordionItem title="How to start a Waku node?">
+  Follow the README instructions at <a href="https://docs.waku.org/guides/nwaku/run-node">nwaku-compose</a>.
+</AccordionItem>
+
+
