@@ -37,6 +37,7 @@ const config = {
             customCss: [require.resolve("./src/css/custom.scss")],
           },
         },
+        og: {},
       },
     ],
   ],

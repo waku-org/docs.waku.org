@@ -78,7 +78,7 @@ In this case, we are comparing *Store* performance by means of Rest service.
 - node_c: one _nwaku_ node with *REST* enabled and acting as a *Store client* for node_a.
 - node_d: one _nwaku_ node with *REST* enabled and acting as a *Store client* for node_b.
 - With _jmeter_, 10 users make *REST* *Store* requests concurrently to each of the “rest” nodes (node_c and node_d.)
-- All _nwaku_ nodes running wakuorg/nwaku:v0.32.0
+- All _nwaku_ nodes running statusteam/nim-waku:v0.19.0
 
 [This](https://github.com/waku-org/test-waku-query/blob/master/docker/jmeter/http_store_requests.jmx) is the _jmeter_ project used.
 
@@ -100,7 +100,7 @@ The following diagram shows the topology used:
 
 For that, the next apps were used:
 
-1. [Waku-publisher.](https://github.com/alrevuelta/waku-publisher/tree/9fb206c14a17dd37d20a9120022e86475ce0503f) This app can publish Relay messages with different numbers of clients 
+1. [Waku-publisher.](https://github.com/alrevuelta/waku-publisher/tree/9fb206c14a17dd37d20a9120022e86475ce0503f) This app can publish Relay messages with different numbers of clients
 2. [Waku-store-query-generator](https://github.com/Ivansete-status/waku-store-query-generator/tree/19e6455537b6d44199cf0c8558480af5c6788b0d). This app is based on the Waku-publisher but in this case, it can spawn concurrent go-waku Store clients.
 
 That topology is defined in [this](https://github.com/waku-org/test-waku-query/blob/7090cd125e739306357575730d0e54665c279670/docker/docker-compose-manual-binaries.yml) docker-compose file.
@@ -181,7 +181,7 @@ It cannot be appreciated but the average *****Store***** time was 11ms.
 
 **Scenario 3**
 
-**Store rate:** 25 users generating 1 store-req/sec. Notice that the current Store query used generates pagination which provokes more subsequent queries than the 25 req/sec that would be expected without pagination. 
+**Store rate:** 25 users generating 1 store-req/sec. Notice that the current Store query used generates pagination which provokes more subsequent queries than the 25 req/sec that would be expected without pagination.
 
 **Relay rate:** 1 user generating 10msg/sec, 10KB each.
 
