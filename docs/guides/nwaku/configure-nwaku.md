@@ -78,6 +78,24 @@ For example, consider a `nwaku` node that does not store messages but can query 
 ./build/wakunode2 --storenode=/dns4/node-01.ac-cn-hongkong-c.waku.sandbox.status.im/tcp/30303/p2p/16Uiu2HAmSJvSJphxRdbnigUV5bjRRZFBhTtWFTSyiKaQByCjwmpV
 ```
 
+## Configure store sync
+
+To enable syncronization between stores, enable the protocol via the configuration options below;
+
+- `store-sync`: Enable store sync protocol (disable by default).
+- `store-sync-interval`: Interval between store syncronization attempts, in seconds (300s default).
+- `store-sync-range`: Amount of time to sync, in seconds (3600s default).
+- `store-sync-relay-jitter`: Sync range offset to account for relay's message propagation jitter, in seconds (20s default).
+
+Configuration example.
+```
+./build/wakunode2 \
+  --store-sync=true \
+  --store-sync-interval=300 \
+  --store-sync-range=3600 \
+  --store-sync-relay-jitter=20
+```
+
 ## Generate and configure a node key
 
 Nodes generate [new random key pairs](/learn/glossary#node-key) at each boot, leading to different `multiaddrs`. To maintain consistency, you can use a pre-generated private key with the `nodekey` option:

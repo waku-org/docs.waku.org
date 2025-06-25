@@ -84,6 +84,15 @@ Here are the available node configuration options, along with their default valu
 | `store-message-db-vacuum`        | `false`                  | Enable database vacuuming at start. Only supported by SQLite database engine                                                                                                              |
 | `store-message-db-migration`     | `true`                   | Enable database migration at start                                                                                                                                                        |
 
+## Store Sync
+
+| Name                             | Default Value            | Description                                                                                                                                                                               |
+| -------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `store-sync` | `false` | Enable/disable waku store sync protocol |
+| `store-sync-interval` | `300` 5 minutes | Interval between store syncronization attempts |
+| `store-sync-range` | `3600` 1 hour | Amount of time to sync |
+| `store-sync-relay-jitter` | `20` seconds | Sync range offset to account for relay's message propagation jitter |
+
 ## Filter config
 
 | Name                          | Default Value     | Description                                                                                             |
