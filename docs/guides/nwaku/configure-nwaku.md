@@ -80,7 +80,7 @@ For example, consider a `nwaku` node that does not store messages but can query 
 
 ## Configure store sync
 
-To enable syncronization between stores, enable the protocol via the configuration options below;
+To enable synchronization between stores, enable the protocol via the configuration options below;
 
 - `store-sync`: Enable store sync protocol (disable by default).
 - `store-sync-interval`: Interval between store syncronization attempts, in seconds (300s default).
