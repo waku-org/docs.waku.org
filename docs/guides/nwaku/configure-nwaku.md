@@ -83,7 +83,7 @@ For example, consider a `nwaku` node that does not store messages but can query 
 To enable synchronization between stores, enable the protocol via the configuration options below;
 
 - `store-sync`: Enable store sync protocol (disable by default).
-- `store-sync-interval`: Interval between store syncronization attempts, in seconds (300s default).
+- `store-sync-interval`: Interval between store synchronization attempts, in seconds (300s default).
 - `store-sync-range`: Amount of time to sync, in seconds (3600s default).
 - `store-sync-relay-jitter`: Sync range offset to account for relay's message propagation jitter, in seconds (20s default).
 
