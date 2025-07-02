@@ -89,7 +89,7 @@ Here are the available node configuration options, along with their default valu
 | Name                             | Default Value            | Description                                                                                                                                                                               |
 | -------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `store-sync` | `false` | Enable/disable waku store sync protocol |
-| `store-sync-interval` | `300` 5 minutes | Interval between store syncronization attempts |
+| `store-sync-interval` | `300` 5 minutes | Interval between store synchronization attempts |
 | `store-sync-range` | `3600` 1 hour | Amount of time to sync |
 | `store-sync-relay-jitter` | `20` seconds | Sync range offset to account for relay's message propagation jitter |
 
