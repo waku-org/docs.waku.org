@@ -21,7 +21,9 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        nix.develop('yarn install')
+        script {
+          nix.develop('yarn install')
+        }
       }
     }
 
