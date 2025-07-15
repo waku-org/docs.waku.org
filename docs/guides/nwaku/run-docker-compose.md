@@ -53,13 +53,13 @@ Ensure that you do **NOT** include any secrets in the `.env.example` file, as it
 
 ## Register for RLN membership
 
-The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages that exceed the rate limit.
+The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages in a decentralized and private way, respecting some rate limits. Other peers won't relay messages that exceed the rate limit.
 
-This command registers your membership and saves it in the `keystore/keystore.json` file. You should have Docker running at this step:
+To register for RLN membership and generate your keystore:
 
-```shell
-./register_rln.sh
-```
+1. Visit [https://rln.waku.org](https://rln.waku.org).
+2. Follow the instructions to register your membership and generate a `keystore.json` file.
+3. Download the generated `keystore.json` and place it in the `keystore/` directory of your `nwaku-compose` setup (i.e., at `keystore/keystore.json`).
 
 :::tip
 If you only want to relay traffic without sending messages to the network, you don't need to register for RLN membership.
