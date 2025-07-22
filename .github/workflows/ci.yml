@@ -9,7 +9,7 @@ on:
   pull_request:
 
 env:
-  NODE_JS: "18"
+  NODE_JS: "22"
 
 jobs:
   check:
