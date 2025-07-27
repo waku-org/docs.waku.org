@@ -2,7 +2,7 @@
 
 [![Waku Documentation Portal](https://img.shields.io/badge/docs.waku.org-black)](https://docs.waku.org/)
 
-The Waku Documentation Portal can be accessed at <https://docs.waku.org/> and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+The Waku Documentation Portal can be accessed at [https://docs.waku.org/](https://docs.waku.org/) and was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Prerequisites
 
@@ -88,8 +88,8 @@ yarn clear
 
 ## CI/CD
 
-- [CI builds](https://ci.infra.status.im/job/website/job/docs.waku.org/) `master` and pushes to `deploy-master` branch, which is hosted at <https://docs.waku.org/>.
-- [CI builds](https://ci.infra.status.im/job/website/job/dev-docs.waku.org/) `develop` and pushes to `deploy-develop` branch, which is hosted at <https://dev-docs.waku.org/>.
+- [CI builds](https://ci.infra.status.im/job/website/job/docs.waku.org/) `master` and pushes to `deploy-master` branch, which is hosted at [https://docs.waku.org/](https://docs.waku.org/).
+- [CI builds](https://ci.infra.status.im/job/website/job/dev-docs.waku.org/) `develop` and pushes to `deploy-develop` branch, which is hosted at [https://dev-docs.waku.org/](https://dev-docs.waku.org/).
 
 The hosting is done using [Caddy server with Git plugin for handling GitHub webhooks](https://github.com/status-im/infra-misc/blob/master/ansible/roles/caddy-git).
 
@@ -101,4 +101,3 @@ Information about deployed build can be also found in `/build.json` available on
 2. Make your changes, push them to the origin, and open a Pull Request against the develop branch.
 3. After approval, merge the pull request, and verify the changes on the staging server (e.g., https://dev.vac.dev).
 4. When ready to promote changes to the live website, rebase the master branch on the staging changes: git checkout master; git pull origin master; git rebase origin/develop; git push.
-

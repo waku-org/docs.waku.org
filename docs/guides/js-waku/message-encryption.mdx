@@ -53,8 +53,8 @@ import { createEncoder } from "@waku/message-encryption/symmetric";
 
 // Create a symmetric message encoder
 const encoder = createEncoder({
-	contentTopic: contentTopic, // message content topic
-	symKey: symmetricKey, // symmetric key for encrypting messages
+  contentTopic: contentTopic, // message content topic
+  symKey: symmetricKey, // symmetric key for encrypting messages
 });
 
 // Send the message using Light Push
@@ -101,8 +101,8 @@ import { createEncoder } from "@waku/message-encryption/ecies";
 
 // Create an ECIES message encoder
 const encoder = createEncoder({
-	contentTopic: contentTopic, // message content topic
-	publicKey: publicKey, // ECIES public key for encrypting messages
+  contentTopic: contentTopic, // message content topic
+  publicKey: publicKey, // ECIES public key for encrypting messages
 });
 
 // Send the message using Light Push
@@ -151,16 +151,16 @@ const alicePublicKey = getPublicKey(alicePrivateKey);
 
 // Create a symmetric encoder that signs messages
 const symmetricEncoder = createSymmetricEncoder({
-	contentTopic: contentTopic, // message content topic
-	symKey: symmetricKey, // symmetric key for encrypting messages
-	sigPrivKey: alicePrivateKey, // private key for signing messages before encryption
+  contentTopic: contentTopic, // message content topic
+  symKey: symmetricKey, // symmetric key for encrypting messages
+  sigPrivKey: alicePrivateKey, // private key for signing messages before encryption
 });
 
 // Create an ECIES encoder that signs messages
 const ECIESEncoder = createECIESEncoder({
-	contentTopic: contentTopic, // message content topic
-	publicKey: publicKey, // ECIES public key for encrypting messages
-	sigPrivKey: alicePrivateKey, // private key for signing messages before encryption
+  contentTopic: contentTopic, // message content topic
+  publicKey: publicKey, // ECIES public key for encrypting messages
+  sigPrivKey: alicePrivateKey, // private key for signing messages before encryption
 });
 
 // Send and receive your messages as usual with Light Push and Filter
@@ -183,25 +183,25 @@ const bobPrivateKey = generatePrivateKey();
 
 // Create an encoder that signs messages
 const encoder = createEncoder({
-	contentTopic: contentTopic,
-	symKey: symmetricKey,
-	sigPrivKey: bobPrivateKey,
+  contentTopic: contentTopic,
+  symKey: symmetricKey,
+  sigPrivKey: bobPrivateKey,
 });
 
 // Modify the callback function to verify message signature
 const callback = (wakuMessage) => {
-	// Extract the message signature and public key of the signature
-	// You can compare the signaturePublicKey with Alice public key
-	const signature = wakuMessage.signature;
-	const signaturePublicKey = wakuMessage.signaturePublicKey;
+  // Extract the message signature and public key of the signature
+  // You can compare the signaturePublicKey with Alice public key
+  const signature = wakuMessage.signature;
+  const signaturePublicKey = wakuMessage.signaturePublicKey;
 
-	// Verify the message was actually signed and sent by Alice
-	// Alice's public key can be gotten from broadcasting or out-of-band methods
-	if (wakuMessage.verifySignature(alicePublicKey)) {
-		console.log("This message was signed by Alice");
-	} else {
-		console.log("This message was NOT signed by Alice");
-	}
+  // Verify the message was actually signed and sent by Alice
+  // Alice's public key can be gotten from broadcasting or out-of-band methods
+  if (wakuMessage.verifySignature(alicePublicKey)) {
+    console.log("This message was signed by Alice");
+  } else {
+    console.log("This message was NOT signed by Alice");
+  }
 };
 
 await subscription.subscribe([encoder], callback);

@@ -31,4 +31,4 @@ Before using `@waku/sdk` in a NodeJS environment, take into account these limita
 
 ## Future developments
 
-There are plans to release a NodeJS package based on [nwaku](/guides/nwaku/run-node) to streamline the process of using Waku Network features in NodeJS applications. You can track the progress and updates here: <https://github.com/waku-org/nwaku/issues/1332>.
+There are plans to release a NodeJS package based on [nwaku](/guides/nwaku/run-node) to streamline the process of using Waku Network features in NodeJS applications. You can track the progress and updates here: [https://github.com/waku-org/nwaku/issues/1332](https://github.com/waku-org/nwaku/issues/1332).
