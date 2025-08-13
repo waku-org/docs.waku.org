@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwaku_guide=self.webpackChunkwaku_guide||[]).push([[2068],{32068:(e,u,a)=>{a.d(u,{createInfoServices:()=>k.v});var k=a(41366);a(58198)}}]);
