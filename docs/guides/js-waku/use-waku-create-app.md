@@ -49,4 +49,4 @@ We welcome and appreciate the contributions of templates for the `@waku/create-a
 4. Finally, submit a pull request to the [js-waku-examples](https://github.com/waku-org/js-waku-examples) repository.
 5. Our team will carefully review and merge your submission upon approval.
 
-Waku also provides bounties to encourage community members to contribute to the network and earn rewards. To participate in the bounty program, head to <https://github.com/waku-org/bounties>.
+Waku also provides bounties to encourage community members to contribute to the network and earn rewards. To participate in the bounty program, head to [https://github.com/waku-org/bounties](https://github.com/waku-org/bounties).

@@ -68,22 +68,22 @@ const config = {
           type: "search",
         },
         {
-          type: "docSidebar",
           position: "left",
-          sidebarId: "guides",
           label: "Guides",
+          to: "/",
+          activeBaseRegex: "^/$|^/guides/",
         },
         {
-          type: "docSidebar",
           position: "left",
-          sidebarId: "learn",
           label: "Learn",
+          to: "/learn/waku-network",
+          activeBaseRegex: "^/learn/",
         },
         {
-          type: "docSidebar",
           position: "left",
-          sidebarId: "research",
           label: "Research",
+          to: "/research",
+          activeBaseRegex: "^/research/",
         },
         {
           href: "https://discord.waku.org",

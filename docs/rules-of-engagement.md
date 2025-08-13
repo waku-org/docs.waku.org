@@ -1,5 +1,4 @@
 ---
-displayed_sidebar: null
 sidebar_class_name: hidden
 pagination_prev: null
 pagination_next: null

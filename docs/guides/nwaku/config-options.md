@@ -7,9 +7,9 @@ Here are the available node configuration options, along with their default valu
 
 ## Application-level config
 
-| Name              | Default Value               | Description                                                                                         |
-| ----------------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
-| `config-file`     |                             | Loads configuration from a TOML file (cmd-line parameters take precedence)                          |
+| Name              | Default Value               | Description                                                                                          |
+| ----------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `config-file`     |                             | Loads configuration from a TOML file (cmd-line parameters take precedence)                           |
 | `protected-shard` | `newSeq[ProtectedShard](0)` | Shards and its public keys to be used for message validation, shard:pubkey. Argument may be repeated |
 
 ## Log config
@@ -21,21 +21,21 @@ Here are the available node configuration options, along with their default valu
 
 ## General node config
 
-| Name                  | Default Value            | Description                                                                                             |
-| --------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `cluster-id`          | `0`                      | Cluster id that the node is running in. Node in a different cluster id is disconnected                  |
-| `agent-string`        | `nwaku`                  | Node agent string which is used as identifier in network                                                |
-| `nodekey`             |                          | P2P node private key as 64-char hex string                                                              |
-| `listen-address`      | `defaultListenAddress()` | Listening address for LibP2P (and Discovery v5, if enabled) traffic                                     |
-| `tcp-port`            | `60000`                  | TCP listening port                                                                                      |
-| `ports-shift`         | `0`                      | Add a shift to all port numbers                                                                         |
-| `nat`                 | any                      | Specify method to use for determining public address. Must be one of: any, none, upnp, pmp, extip:<IP\> |
-| `ext-multiaddr`       |                          | External multiaddresses to advertise to the network. Argument may be repeated                           |
-| `ext-multiaddr-only`  | `false`                  | Only announce external multiaddresses                                                                   |
-| `max-connections`     | `50`                     | Maximum allowed number of libp2p connections                                                            |
+| Name                  | Default Value            | Description                                                                                                                                                                                                                                                                                     |
+| --------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cluster-id`          | `0`                      | Cluster id that the node is running in. Node in a different cluster id is disconnected                                                                                                                                                                                                          |
+| `agent-string`        | `nwaku`                  | Node agent string which is used as identifier in network                                                                                                                                                                                                                                        |
+| `nodekey`             |                          | P2P node private key as 64-char hex string                                                                                                                                                                                                                                                      |
+| `listen-address`      | `defaultListenAddress()` | Listening address for LibP2P (and Discovery v5, if enabled) traffic                                                                                                                                                                                                                             |
+| `tcp-port`            | `60000`                  | TCP listening port                                                                                                                                                                                                                                                                              |
+| `ports-shift`         | `0`                      | Add a shift to all port numbers                                                                                                                                                                                                                                                                 |
+| `nat`                 | any                      | Specify method to use for determining public address. Must be one of: any, none, upnp, pmp, extip:IP                                                                                                                                                                                            |
+| `ext-multiaddr`       |                          | External multiaddresses to advertise to the network. Argument may be repeated                                                                                                                                                                                                                   |
+| `ext-multiaddr-only`  | `false`                  | Only announce external multiaddresses                                                                                                                                                                                                                                                           |
+| `max-connections`     | `50`                     | Maximum allowed number of libp2p connections                                                                                                                                                                                                                                                    |
 | `relay-service-ratio` | `"60:40"`                | This percentage ratio represents the relay peers to service peers. For example, 60:40, tells that 60% of the max-connections will be used for relay protocol and the other 40% of max-connections will be reserved for other service protocols (e.g., filter, lightpush, store, metadata, etc.) |
-| `peer-store-capacity` |                          | Maximum stored peers in the peerstore                                                                   |
-| `peer-persistence`    | `false`                  | Enable peer persistence                                                                                 |
+| `peer-store-capacity` |                          | Maximum stored peers in the peerstore                                                                                                                                                                                                                                                           |
+| `peer-persistence`    | `false`                  | Enable peer persistence                                                                                                                                                                                                                                                                         |
 
 ## DNS addrs config
 
@@ -47,31 +47,30 @@ Here are the available node configuration options, along with their default valu
 
 ## Relay config
 
-| Name                             | Default Value                             | Description                                                                                                                   |
-| -------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `relay`                          | `true`                                    | Enable relay protocol: true\|false                                                                                            |
-| `relay-peer-exchange`            | `false`                                   | Enable gossipsub peer exchange in relay protocol: true\|false                                                                 |
-| `rln-relay`                      | `false`                                   | Enable spam protection through rln-relay: true\|false                                                                         |
-| `rln-relay-cred-path`            |                                           | The path for persisting rln-relay credential                                                                                  |
-| `rln-relay-membership-index`     |                                           | The index of the onchain commitment to use                                                                                    |
-| `rln-relay-dynamic`              | `false`                                   | Enable waku-rln-relay with on-chain dynamic group management: true\|false                                                     |
-| `rln-relay-id-key`               |                                           | Rln relay identity secret key as a Hex string                                                                                 |
-| `rln-relay-id-commitment-key`    |                                           | Rln relay identity commitment key as a Hex string                                                                             |
-| `rln-relay-eth-client-address`   | `ws://localhost:8540/`                    | WebSocket address of an Ethereum testnet client e.g., `ws://localhost:8540/`                                                  |
-| `rln-relay-eth-contract-address` |                                           | Address of membership contract on an Ethereum testnet                                                                         |
-| `rln-relay-eth-private-key`      |                                           | Private key for broadcasting transactions                                                                                     |
-| `execute`                        | `false`                                   | Runs the registration function on-chain. By default, a dry-run will occur                                                     |
-| `rln-relay-cred-password`        |                                           | Password for encrypting RLN credentials                                                                                       |
-| `rln-relay-tree-path`            |                                           | Path to the RLN merkle tree sled db (https://github.com/spacejam/sled)                                                        |
-| `rln-relay-bandwidth-threshold`  | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen                                                    |
-| `staticnode`                     |                                           | Peer multiaddr to directly connect with. Argument may be repeated                                                             |
-| `keep-alive`                     | `false`                                   | Enable keep-alive for idle connections: true\|false                                                                           |
-| `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated. **Deprecated!** Please use `shard` and/or `content-topic` instead        |
-| `shard`                          |                                           | Shard to subscribe to. Argument may be repeated                                                               |
-| `num-shards-in-network`          |                                           | Number of shards in the network. Used to map content topics to shards when using autosharding                               |
-| `content-topic`                  |                                           | Default content topic to subscribe to. Argument may be repeated                                                               |
-| `reliability`                    | `false`                                   | Enable experimental reliability protocol true\|false                                                                 |
-
+| Name                             | Default Value                             | Description                                                                                                                       |
+| -------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `relay`                          | `true`                                    | Enable relay protocol: true\|false                                                                                                |
+| `relay-peer-exchange`            | `false`                                   | Enable gossipsub peer exchange in relay protocol: true\|false                                                                     |
+| `rln-relay`                      | `false`                                   | Enable spam protection through rln-relay: true\|false                                                                             |
+| `rln-relay-cred-path`            |                                           | The path for persisting rln-relay credential                                                                                      |
+| `rln-relay-membership-index`     |                                           | The index of the onchain commitment to use                                                                                        |
+| `rln-relay-dynamic`              | `false`                                   | Enable waku-rln-relay with on-chain dynamic group management: true\|false                                                         |
+| `rln-relay-id-key`               |                                           | Rln relay identity secret key as a Hex string                                                                                     |
+| `rln-relay-id-commitment-key`    |                                           | Rln relay identity commitment key as a Hex string                                                                                 |
+| `rln-relay-eth-client-address`   | `ws://localhost:8540/`                    | WebSocket address of an Ethereum testnet client e.g., `ws://localhost:8540/`                                                      |
+| `rln-relay-eth-contract-address` |                                           | Address of membership contract on an Ethereum testnet                                                                             |
+| `rln-relay-eth-private-key`      |                                           | Private key for broadcasting transactions                                                                                         |
+| `execute`                        | `false`                                   | Runs the registration function on-chain. By default, a dry-run will occur                                                         |
+| `rln-relay-cred-password`        |                                           | Password for encrypting RLN credentials                                                                                           |
+| `rln-relay-tree-path`            |                                           | Path to the RLN merkle tree sled db (https://github.com/spacejam/sled)                                                            |
+| `rln-relay-bandwidth-threshold`  | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen                                                        |
+| `staticnode`                     |                                           | Peer multiaddr to directly connect with. Argument may be repeated                                                                 |
+| `keep-alive`                     | `false`                                   | Enable keep-alive for idle connections: true\|false                                                                               |
+| `pubsub-topic`                   |                                           | Default pubsub topic to subscribe to. Argument may be repeated. **Deprecated!** Please use `shard` and/or `content-topic` instead |
+| `shard`                          |                                           | Shard to subscribe to. Argument may be repeated                                                                                   |
+| `num-shards-in-network`          |                                           | Number of shards in the network. Used to map content topics to shards when using autosharding                                     |
+| `content-topic`                  |                                           | Default content topic to subscribe to. Argument may be repeated                                                                   |
+| `reliability`                    | `false`                                   | Enable experimental reliability protocol true\|false                                                                              |
 
 ## Store and message store config
 
@@ -86,12 +85,12 @@ Here are the available node configuration options, along with their default valu
 
 ## Store Sync
 
-| Name                             | Default Value            | Description                                                                                                                                                                               |
-| -------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `store-sync` | `false` | Enable/disable waku store sync protocol |
-| `store-sync-interval` | `300` 5 minutes | Interval between store synchronization attempts |
-| `store-sync-range` | `3600` 1 hour | Amount of time to sync |
-| `store-sync-relay-jitter` | `20` seconds | Sync range offset to account for relay's message propagation jitter |
+| Name                      | Default Value   | Description                                                         |
+| ------------------------- | --------------- | ------------------------------------------------------------------- |
+| `store-sync`              | `false`         | Enable/disable waku store sync protocol                             |
+| `store-sync-interval`     | `300` 5 minutes | Interval between store synchronization attempts                     |
+| `store-sync-range`        | `3600` 1 hour   | Amount of time to sync                                              |
+| `store-sync-relay-jitter` | `20` seconds    | Sync range offset to account for relay's message propagation jitter |
 
 ## Filter config
 
@@ -106,8 +105,8 @@ Here are the available node configuration options, along with their default valu
 ## Light push config
 
 | Name            | Default Value | Description                                               |
-| --------------- | ------------- | --------------------------------------------------------- |
-| `lightpush`     | `false`       | Enable lightpush protocol: true\|false                    |
+| --------------- | ------------- | --------------------------------------------------------- | ----- |
+| `lightpush`     | `false`       | Enable lightpush protocol: true                           | false |
 | `lightpushnode` |               | Peer multiaddr to request lightpush of published messages |
 
 ## REST HTTP config
@@ -132,12 +131,12 @@ Here are the available node configuration options, along with their default valu
 
 ## DNS discovery config
 
-| Name                        | Default Value            | Description                                                |
-| --------------------------- | ------------------------ | ---------------------------------------------------------- |
-| `dns-discovery`             | `false`                  | Enable discovering nodes via DNS                           |
-| `dns-discovery-url`         |                          | URL for DNS node list in format 'enrtree://<key\>@<fqdn\>' |
-| `dns-discovery-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query. Argument may be repeated     |
-| `rendezvous`                | `true`                   | Enable waku rendezvous discovery server                    |
+| Name                        | Default Value            | Description                                                  |
+| --------------------------- | ------------------------ | ------------------------------------------------------------ |
+| `dns-discovery`             | `false`                  | Enable discovering nodes via DNS                             |
+| `dns-discovery-url`         |                          | URL for DNS node list in format `'enrtree://<key\>@<fqdn\>'` |
+| `dns-discovery-name-server` | `["1.1.1.1", "1.0.0.1"]` | DNS name server IPs to query. Argument may be repeated       |
+| `rendezvous`                | `true`                   | Enable waku rendezvous discovery server                      |
 
 ## Discv5 config
 
@@ -170,9 +169,9 @@ Here are the available node configuration options, along with their default valu
 
 ## Non-relay, request-response protocol DOS protection configuration
 
-| Name                         | Default Value | Description                                            |
-| ---------------------------- | ------------- | ------------------------------------------------------ |
-| `rate-limit`           |        | This is a repeatable option. Each can describe a specific rate limit configuration for a particular protocol.<br />Formatted as:`<protocol>:volume/period<time-unit>`<br />- if protocol is not given, settings will be taken as default for un-set protocols. Ex: `80/2s`<br />-Supported protocols are: `lightpush`\|`filter`\|`px`\|`store`\|`storev2`\|`storev3`<br />-volume must be an integer value, representing number of requests over the period of time allowed.<br />-period\<time-unit\> must be an integer with defined unit as one of `h`\|`m`\|`s`\|`ms`<br />- `storev2` and `storev3` takes precedence over `store` which can easy set both store protocols at once.<br />- In case of multiple set of the same protocol limit, last one will take place.<br />- if config is not set, - which is the default - means unlimited requests are allowed.<br />-filter has a bit different approach. It has a default setting applied if not overridden. Rate limit setting for filter will be applied per subscriber-peers, not globally - it must be considered when changing the setting.<br /><br />Examples:<br />`--rate-limit="100/1s"` - default for all protocols if not set otherwise.<br />`--rate-limit="lightpush:0/0s"` - lightpush protocol will not be rate-limited.<br />`--rate-limit="store:130/1500ms"` - both store-v3 and store-v2 will apply 130 request per each 1500ms separately.<br />`--rate-limit="px:10/1h"` PeerExchange will serve only 10 requests every hour.<br />`--rate-limit="filter:8/5m"` - will allow 8 subs/unsubs/ping requests for each subscriber within every 5 min.                        |
+| Name         | Default Value | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rate-limit` |               | This is a repeatable option. Each can describe a specific rate limit configuration for a particular protocol.<br />Formatted as:`<protocol>:volume/period<time-unit>`<br />- if protocol is not given, settings will be taken as default for un-set protocols. Ex: `80/2s`<br />-Supported protocols are: `lightpush`\|`filter`\|`px`\|`store`\|`storev2`\|`storev3`<br />-volume must be an integer value, representing number of requests over the period of time allowed.<br />-period\<time-unit\> must be an integer with defined unit as one of `h`\|`m`\|`s`\|`ms`<br />- `storev2` and `storev3` takes precedence over `store` which can easy set both store protocols at once.<br />- In case of multiple set of the same protocol limit, last one will take place.<br />- if config is not set, - which is the default - means unlimited requests are allowed.<br />-filter has a bit different approach. It has a default setting applied if not overridden. Rate limit setting for filter will be applied per subscriber-peers, not globally - it must be considered when changing the setting.<br /><br />Examples:<br />`--rate-limit="100/1s"` - default for all protocols if not set otherwise.<br />`--rate-limit="lightpush:0/0s"` - lightpush protocol will not be rate-limited.<br />`--rate-limit="store:130/1500ms"` - both store-v3 and store-v2 will apply 130 request per each 1500ms separately.<br />`--rate-limit="px:10/1h"` PeerExchange will serve only 10 requests every hour.<br />`--rate-limit="filter:8/5m"` - will allow 8 subs/unsubs/ping requests for each subscriber within every 5 min. |
 
 :::tip
 To configure your node using the provided configuration options, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) guide.

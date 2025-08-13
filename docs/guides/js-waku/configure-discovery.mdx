@@ -3,6 +3,9 @@ title: Bootstrap Nodes and Discover Peers
 hide_table_of_contents: true
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 This guide provides detailed steps to bootstrap your your node using [Static Peers](/learn/concepts/static-peers) and discover peers in the Waku Network using [DNS Discovery](/learn/concepts/dns-discovery).
 
 :::info
@@ -33,7 +36,7 @@ import { createLightNode } from "@waku/sdk";
 
 // Bootstrap node using static peers
 const node = await createLightNode({
-	bootstrapPeers: ["[PEER MULTIADDR]"],
+  bootstrapPeers: ["[PEER MULTIADDR]"],
 });
 ```
 
@@ -42,25 +45,24 @@ For example, consider a node that connects to two static peers on the same local
 ```js
 // Define the list of static peers to bootstrap
 const peers = [
-	"/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
-	"/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
+  "/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
+  "/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
 ];
 
 // Bootstrap node using the static peers
 const node = await createLightNode({
-	bootstrapPeers: peers,
+  bootstrapPeers: peers,
 });
 ```
 
-Alternatively, you can dial a particular node like this: 
+Alternatively, you can dial a particular node like this:
 
 ```js
 // Define the list of static peers to bootstrap
 const peers = [
-	"/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
-	"/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
+  "/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
+  "/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
 ];
-
 
 const node = await createLightNode();
 
@@ -73,7 +75,7 @@ const node = await createLightNode({
 });
 */
 
-const promises = peers.map(multiaddr => node.dial(multiaddr));
+const promises = peers.map((multiaddr) => node.dial(multiaddr));
 
 await Promise.all(promises);
 ```
@@ -114,21 +116,16 @@ const enrTree = "enrtree://[PUBLIC KEY]@[DOMAIN NAME]";
 
 // Define node requirements
 const NODE_REQUIREMENTS = {
-	store: 3,
-	lightPush: 3,
-	filter: 3,
+  store: 3,
+  lightPush: 3,
+  filter: 3,
 };
 
 // Bootstrap node using DNS Discovery
 const node = await createLightNode({
-	libp2p: {
-		peerDiscovery: [
-			wakuDnsDiscovery(
-				[enrTree],
-				NODE_REQUIREMENTS,
-			),
-		],
-	},
+  libp2p: {
+    peerDiscovery: [wakuDnsDiscovery([enrTree], NODE_REQUIREMENTS)],
+  },
 });
 ```
 
@@ -139,14 +136,11 @@ import { enrTree } from "@waku/dns-discovery";
 
 // Bootstrap node using DNS Discovery
 const node = await createLightNode({
-	libp2p: {
-		peerDiscovery: [
-			wakuDnsDiscovery(
-				[enrTree["PROD"], enrTree["TEST"]],
-				NODE_REQUIREMENTS,
-			),
-		],
-	},
+  libp2p: {
+    peerDiscovery: [
+      wakuDnsDiscovery([enrTree["PROD"], enrTree["TEST"]], NODE_REQUIREMENTS),
+    ],
+  },
 });
 ```
 
@@ -161,28 +155,23 @@ import { enrTree, wakuDnsDiscovery } from "@waku/dns-discovery";
 
 // Define the list of static peers to bootstrap
 const peers = [
-	"/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
-	"/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
+  "/ip4/0.0.0.0/tcp/60002/ws/p2p/16Uiu2HAkzjwwgEAXfeGNMKFPSpc6vGBRqCdTLG5q3Gmk2v4pQw7H",
+  "/ip4/0.0.0.0/tcp/60003/ws/p2p/16Uiu2HAmFBA7LGtwY5WVVikdmXVo3cKLqkmvVtuDu63fe8safeQJ",
 ];
 
 // Define node requirements
 const NODE_REQUIREMENTS = {
-	store: 3,
-	lightPush: 3,
-	filter: 3,
+  store: 3,
+  lightPush: 3,
+  filter: 3,
 };
 
 // Bootstrap node using DNS Discovery and static peers
 const node = await createLightNode({
-	libp2p: {
-		bootstrapPeers: peers,
-		peerDiscovery: [
-			wakuDnsDiscovery(
-				[enrTree["PROD"]],
-				NODE_REQUIREMENTS,
-			),
-		],
-	},
+  libp2p: {
+    bootstrapPeers: peers,
+    peerDiscovery: [wakuDnsDiscovery([enrTree["PROD"]], NODE_REQUIREMENTS)],
+  },
 });
 ```
 

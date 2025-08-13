@@ -42,7 +42,7 @@ Check out our [Learn section](/learn/waku-network), [YouTube channel](https://ww
 8. **Social Media Platforms**: Beyond chat messengers, use Waku for decentralised, censorship-resistant social media platforms like news feeds and multimedia sharing.
 
 :::tip
-Looking for what to build with Waku? Discover a collection of sample ideas and use cases for inspiration, curated by our community at: https://ideas.waku.org/ and [Awesome Waku](https://github.com/waku-org/awesome-waku/).
+Looking for what to build with Waku? Discover a collection of sample ideas and use cases for inspiration, curated by our community at: [https://ideas.waku.org/](https://ideas.waku.org/) and [Awesome Waku](https://github.com/waku-org/awesome-waku/).
 :::
 
 ## Case studies
@@ -89,5 +89,5 @@ Waku is implemented in multiple SDKs, allowing it to integrate with different la
 | [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) | Starter kit to bootstrap your next `@waku/sdk` project from various example templates  | [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) |
 
 :::tip
-Explore some example apps built using Waku at https://examples.waku.org/ and view a list of projects and workshops from previous hackathons at [Awesome Waku](https://github.com/waku-org/awesome-waku/).
+Explore some example apps built using Waku at [https://examples.waku.org/](https://examples.waku.org/) and view a list of projects and workshops from previous hackathons at [Awesome Waku](https://github.com/waku-org/awesome-waku/).
 :::
