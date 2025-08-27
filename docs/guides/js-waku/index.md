@@ -85,17 +85,18 @@ import "https://cdn.jsdelivr.net/npm/protobufjs@latest/dist/protobuf.min.js";
 
 Have a look at the quick start guide and comprehensive tutorials to learn how to build applications using `@waku/sdk`:
 
-| Guide | Description |
-| - | - |
+| Guide                                                                                       | Description                                                                                                                                                                 |
+|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Send and Receive Messages in a Reliable Channel](/guides/js-waku/reliable-channels)        | Learn how to send and receive messages with a convenient SDK that provide various reliable functionalities out-of-the-box.                                                  |
 | [Send and Receive Messages Using Light Push and Filter](/guides/js-waku/light-send-receive) | Learn how to send and receive messages on light nodes using the [Light Push](/learn/concepts/protocols#light-push) and [Filter](/learn/concepts/protocols#filter) protocols |
-| [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages) | Learn how to retrieve and filter historical messages on light nodes using the [Store protocol](/learn/concepts/protocols#store) |
-| [Encrypt, Decrypt, and Sign Your Messages](/guides/js-waku/message-encryption) | Learn how to use the [@waku/message-encryption](https://www.npmjs.com/package/@waku/message-encryption) package to encrypt, decrypt, and sign your messages |
-| [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react) | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `@waku/sdk` into a React application |
-| [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app) | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `@waku/sdk` project from various example templates |
-| [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) | Learn how to bootstrap your node using [Static Peers](/learn/concepts/static-peers) and discover peers using [DNS Discovery](/learn/concepts/dns-discovery) |
-| [Run @waku/sdk in a NodeJS Application](/guides/js-waku/run-waku-nodejs) | Learn our suggested approach for using the `@waku/sdk` package within a NodeJS application |
-| [Debug Your Waku DApp and WebSocket](/guides/js-waku/debug-waku-dapp) | Learn how to troubleshoot your Waku DApp using debug logs and check [WebSocket](/learn/concepts/transports) connections in [nwaku](/guides/nwaku/run-node) |
-| [Manage Your Filter Subscriptions](/guides/js-waku/manage-filter) | Learn how to manage [filter subscriptions](/learn/concepts/protocols#filter) and handle node disconnections in your application |
+| [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages)           | Learn how to retrieve and filter historical messages on light nodes using the [Store protocol](/learn/concepts/protocols#store)                                             |
+| [Encrypt, Decrypt, and Sign Your Messages](/guides/js-waku/message-encryption)              | Learn how to use the [@waku/message-encryption](https://www.npmjs.com/package/@waku/message-encryption) package to encrypt, decrypt, and sign your messages                 |
+| [Build React DApps Using @waku/react](/guides/js-waku/use-waku-react)                       | Learn how to use the [@waku/react](https://www.npmjs.com/package/@waku/react) package seamlessly integrate `@waku/sdk` into a React application                             |
+| [Scaffold DApps Using @waku/create-app](/guides/js-waku/use-waku-create-app)                | Learn how to use the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package to bootstrap your next `@waku/sdk` project from various example templates   |
+| [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery)                   | Learn how to bootstrap your node using [Static Peers](/learn/concepts/static-peers) and discover peers using [DNS Discovery](/learn/concepts/dns-discovery)                 |
+| [Run @waku/sdk in a NodeJS Application](/guides/js-waku/run-waku-nodejs)                    | Learn our suggested approach for using the `@waku/sdk` package within a NodeJS application                                                                                  |
+| [Debug Your Waku DApp and WebSocket](/guides/js-waku/debug-waku-dapp)                       | Learn how to troubleshoot your Waku DApp using debug logs and check [WebSocket](/learn/concepts/transports) connections in [nwaku](/guides/nwaku/run-node)                  |
+| [Manage Your Filter Subscriptions](/guides/js-waku/manage-filter)                           | Learn how to manage [filter subscriptions](/learn/concepts/protocols#filter) and handle node disconnections in your application                                             |
 
 :::tip
 Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/guides/js-waku/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
