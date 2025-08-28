@@ -12,7 +12,7 @@ This is an experimental feature and has a number of [limitations](https://github
 ## Import Waku SDK
 
 ```shell
-npm install @waku/sdk@0.0.35-921b65f.0
+npm install @waku/sdk@0.0.35-67a7287.0
 ```
 
 Or using a CDN, note this is an ESM package so `type="module"` is needed.
@@ -23,7 +23,7 @@ Or using a CDN, note this is an ESM package so `type="module"` is needed.
     createLightNode,
     ReliableChannelEvent,
     ReliableChannel
-  } from 'https://unpkg.com/@waku/sdk@0.0.35-921b65f.0/bundle/index.js';
+  } from 'https://unpkg.com/@waku/sdk@0.0.35-67a7287.0/bundle/index.js';
 
   // Your code here
   
@@ -72,9 +72,9 @@ The Waku node will emit `health` events to help you know whether the node is con
 This can be useful to give feedback to the user, or stop some action (e.g. sending messages) when offline:
 
 ```js
-import { HealthStatus } from "@waku/sdk";
+import { HealthStatus, WakuEvent } from "@waku/sdk";
 
-node.events.addEventListener('waku:health', (event) => {
+node.events.addEventListener(WakuEvent.Health, (event) => {
     const health = event.detail;
     
     if (health === HealthStatus.SufficientlyHealthy) {
