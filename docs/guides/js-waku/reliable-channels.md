@@ -56,8 +56,8 @@ import { createEncoder, createDecoder } from "@waku/sdk";
 const contentTopic = "/my-app/1/messages/proto";
 
 // Create a message encoder and decoder
-const encoder = this.node.createEncoder({ contentTopic: this.contentTopic });
-const decoder = this.node.createDecoder({ contentTopic: this.contentTopic });
+const encoder = node.createEncoder({ contentTopic: this.contentTopic });
+const decoder = node.createDecoder({ contentTopic: this.contentTopic });
 ```
 
 You can also use [`@waku/message-encryption`](/guides/js-waku/message-encryption) to encrypt and decrypt messages using Waku libraries.
