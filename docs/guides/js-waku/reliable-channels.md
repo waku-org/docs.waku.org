@@ -12,7 +12,7 @@ This is an experimental feature and has a number of [limitations](https://github
 ## Import Waku SDK
 
 ```shell
-npm install @waku/sdk@0.0.35-67a7287.0
+npm install @waku/sdk@0.0.35-3e66a33.0
 ```
 
 Or using a CDN, note this is an ESM package so `type="module"` is needed.
@@ -21,9 +21,8 @@ Or using a CDN, note this is an ESM package so `type="module"` is needed.
 <script type="module">
   import {
     createLightNode,
-    ReliableChannelEvent,
     ReliableChannel
-  } from 'https://unpkg.com/@waku/sdk@0.0.35-67a7287.0/bundle/index.js';
+  } from 'https://unpkg.com/@waku/sdk@0.0.35-3e66a33.0/bundle/index.js';
 
   // Your code here
   
@@ -74,7 +73,7 @@ This can be useful to give feedback to the user, or stop some action (e.g. sendi
 ```js
 import { HealthStatus, WakuEvent } from "@waku/sdk";
 
-node.events.addEventListener(WakuEvent.Health, (event) => {
+node.events.addEventListener("waku:health", (event) => {
     const health = event.detail;
     
     if (health === HealthStatus.SufficientlyHealthy) {
@@ -138,9 +137,7 @@ Have a look at the [Protobuf installation](/guides/js-waku/#message-structure) g
 The reliable channel will emit incoming messages. To process them, simply add a listener:
 
 ```js
-import { ReliableChannelEvent } from "@waku/sdk";
-
-this.reliableChannel.addEventListener(ReliableChannelEvent.InMessageReceived, (event) => {
+this.reliableChannel.addEventListener("message-received", (event) => {
   const wakuMessage = event.detail;
   
   // decode your payload using the protobuf object previously created
@@ -172,25 +169,25 @@ Then, setup listeners so you can know when the message:
 - has encountered an error
 
 ```js
-import { ReliableChannel, ReliableChannelEvent } from "@waku/sdk";
+import { ReliableChannel } from "@waku/sdk";
 
 // First, get the id to track the message
 const messageId = ReliableChannel.getMessageId(serialisedMessage)
         
-reliableChannel.addEventListener(ReliableChannelEvent.OutMessageIrrecoverableError, (event) => {
+reliableChannel.addEventListener("sending-message-irrecoverable-error", (event) => {
     if (messageId === event.detail.messageId) {
       console.error('Failed to send message:', event.detail.error);
       // Show an error to the user
     }
 })
 
-reliableChannel.addEventListener(ReliableChannelEvent.OutMessageSent, (event) => {
+reliableChannel.addEventListener("message-sent", (event) => {
     if (messageId === event.detail) {
         // Message sent, show '✔' to the user, etc
     }
 })
 
-reliableChannel.addEventListener(ReliableChannelEvent.OutMessageAcknowledged, (event) => {
+reliableChannel.addEventListener("message-acknowledged", (event) => {
   if (messageId === event.detail) {
     // Message acknowledged by other participants, show '✔✔' to the user, etc
   }
