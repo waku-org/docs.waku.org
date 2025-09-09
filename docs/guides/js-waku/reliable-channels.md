@@ -71,7 +71,7 @@ The Waku node will emit `health` events to help you know whether the node is con
 This can be useful to give feedback to the user, or stop some action (e.g. sending messages) when offline:
 
 ```js
-import { HealthStatus, WakuEvent } from "@waku/sdk";
+import { HealthStatus } from "@waku/sdk";
 
 node.events.addEventListener("waku:health", (event) => {
     const health = event.detail;
