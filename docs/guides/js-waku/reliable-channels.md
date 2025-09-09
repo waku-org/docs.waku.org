@@ -12,7 +12,7 @@ This is an experimental feature and has a number of [limitations](https://github
 ## Import Waku SDK
 
 ```shell
-npm install @waku/sdk@0.0.35-3e66a33.0
+npm install @waku/sdk@0.0.35-4d5c152.0
 ```
 
 Or using a CDN, note this is an ESM package so `type="module"` is needed.
@@ -22,7 +22,7 @@ Or using a CDN, note this is an ESM package so `type="module"` is needed.
   import {
     createLightNode,
     ReliableChannel
-  } from 'https://unpkg.com/@waku/sdk@0.0.35-3e66a33.0/bundle/index.js';
+  } from 'https://unpkg.com/@waku/sdk@0.0.35-4d5c152.0/bundle/index.js';
 
   // Your code here
   
@@ -163,16 +163,14 @@ const protoMessage = DataPacket.create({
 const serialisedMessage = DataPacket.encode(protoMessage).finish();
 ```
 
-Then, setup listeners so you can know when the message:
+Then, send the message and setup listeners so you can know when the message:
 - has been sent
 - has been acknowledged by other participants in the channel
 - has encountered an error
 
 ```js
-import { ReliableChannel } from "@waku/sdk";
-
-// First, get the id to track the message
-const messageId = ReliableChannel.getMessageId(serialisedMessage)
+// Send the message, and get the id to track events
+const messageId = reliableChannel.send(payload);
         
 reliableChannel.addEventListener("sending-message-irrecoverable-error", (event) => {
     if (messageId === event.detail.messageId) {
@@ -192,12 +190,6 @@ reliableChannel.addEventListener("message-acknowledged", (event) => {
     // Message acknowledged by other participants, show '✔✔' to the user, etc
   }
 })
-```
-
-You are now ready to send the message:
-
-```js
-reliableChannel.send(payload);
 ```
 
 :::tip Congratulations!
