@@ -52,11 +52,11 @@ Choose a [content topic](/learn/concepts/content-topics) for your application an
 import { createEncoder, createDecoder } from "@waku/sdk";
 
 // Choose a content topic
-const contentTopic = "/my-app/1/messages/proto";
+const ct = "/my-app/1/messages/proto";
 
 // Create a message encoder and decoder
-const encoder = node.createEncoder({ contentTopic: this.contentTopic });
-const decoder = node.createDecoder({ contentTopic: this.contentTopic });
+const encoder = node.createEncoder({ contentTopic: ct });
+const decoder = node.createDecoder({ contentTopic: ct });
 ```
 
 You can also use [`@waku/message-encryption`](/guides/js-waku/message-encryption) to encrypt and decrypt messages using Waku libraries.
@@ -137,7 +137,7 @@ Have a look at the [Protobuf installation](/guides/js-waku/#message-structure) g
 The reliable channel will emit incoming messages. To process them, simply add a listener:
 
 ```js
-this.reliableChannel.addEventListener("message-received", (event) => {
+reliableChannel.addEventListener("message-received", (event) => {
   const wakuMessage = event.detail;
   
   // decode your payload using the protobuf object previously created
