@@ -62,7 +62,6 @@ Here are the available node configuration options, along with their default valu
 | `rln-relay-eth-private-key`      |                                           | Private key for broadcasting transactions                                                                                         |
 | `execute`                        | `false`                                   | Runs the registration function on-chain. By default, a dry-run will occur                                                         |
 | `rln-relay-cred-password`        |                                           | Password for encrypting RLN credentials                                                                                           |
-| `rln-relay-tree-path`            |                                           | Path to the RLN merkle tree sled db (https://github.com/spacejam/sled)                                                            |
 | `rln-relay-bandwidth-threshold`  | `0 # to maintain backwards compatibility` | Message rate in bytes/sec after which verification of proofs should happen                                                        |
 | `staticnode`                     |                                           | Peer multiaddr to directly connect with. Argument may be repeated                                                                 |
 | `keep-alive`                     | `false`                                   | Enable keep-alive for idle connections: true\|false                                                                               |
