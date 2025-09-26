@@ -39,6 +39,7 @@ const sidebars = {
         id: "guides/js-waku/index",
       },
       items: [
+        "guides/js-waku/reliable-channels",
         "guides/js-waku/light-send-receive",
         "guides/js-waku/store-retrieve-messages",
         "guides/js-waku/message-encryption",
