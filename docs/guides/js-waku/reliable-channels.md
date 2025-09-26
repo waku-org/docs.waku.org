@@ -12,7 +12,7 @@ This is an experimental feature and has a number of [limitations](https://github
 ## Import Waku SDK
 
 ```shell
-npm install @waku/sdk@0.0.35-4d5c152.0
+npm install @waku/sdk@latest
 ```
 
 Or using a CDN, note this is an ESM package so `type="module"` is needed.
@@ -22,7 +22,7 @@ Or using a CDN, note this is an ESM package so `type="module"` is needed.
   import {
     createLightNode,
     ReliableChannel
-  } from 'https://unpkg.com/@waku/sdk@0.0.35-4d5c152.0/bundle/index.js';
+  } from 'https://unpkg.com/@waku/sdk@latest/bundle/index.js';
 
   // Your code here
   
