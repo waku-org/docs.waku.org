@@ -10,6 +10,14 @@ Currently, the JavaScript Waku SDK (`@waku/sdk`) is **NOT compatible** with Reac
 
 The [JavaScript Waku SDK](https://github.com/waku-org/js-waku) (`@waku/sdk`) provides a TypeScript implementation of the [Waku protocol](/) designed for web browser environments. Developers can seamlessly integrate Waku functionalities into web applications, enabling efficient communication and collaboration among users using the `@waku/sdk` package.
 
+## Video Tutorials
+
+<div class="video-container">
+  <iframe class="yt-video two-items" src="https://www.youtube.com/embed/PYQaXCxUCwA" title="Waku Tutorial 001: Introduction to Waku" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe class="yt-video two-items" src="https://www.youtube.com/embed/sfmMcrbiX0c" title="Build a game using Waku Protocol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 ## Installation
 
 Install the `@waku/sdk` package using your preferred package manager:
