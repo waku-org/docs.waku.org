@@ -24,9 +24,7 @@ Check out the [Waku Node Operator Cheatsheet](/Waku-NodeOperator.pdf) to learn h
 
 - [Git](https://git-scm.com/) or [GitHub Desktop](https://desktop.github.com/)
 - [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
-- [Ethereum Sepolia HTTPS Endpoint](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#3-access-a-node-on-the-sepolia-testnet-using-infura)
-- [Wallet with Sepolia Ethereum](https://github.com/waku-org/nwaku/blob/master/docs/tutorial/pre-requisites-of-running-on-chain-spam-protected-chat2.md#2-obtain-sepolia-eth-from-faucet) (~0.6 Sepolia ETH)
-- A password to protect your RLN membership
+- **Linea Sepolia RPC endpoint**: You can get a free endpoint from [Infura](https://www.infura.io/) or any other Linea Sepolia RPC provider.
 
 :::info
 We recommend running a `nwaku` node with at least 2GB of RAM, especially if `WSS` is enabled. If running just a `Relay` node, 0.5GB of RAM is sufficient.
@@ -50,20 +48,6 @@ ${EDITOR} .env
 
 :::caution
 Ensure that you do **NOT** include any secrets in the `.env.example` file, as it could accidentally be shared in your Git repository.
-:::
-
-## Register for RLN membership
-
-The RLN membership is your access key to The Waku Network. Its registration is done on-chain, allowing your `nwaku` node to send messages decentralised and privately, respecting some rate limits. Other peers won't relay messages that exceed the rate limit.
-
-This command registers your membership and saves it in the `keystore/keystore.json` file. You should have Docker running at this step:
-
-```shell
-./register_rln.sh
-```
-
-:::tip
-If you only want to relay traffic without sending messages to the network, you don't need to register for RLN membership.
 :::
 
 ## Run the node
@@ -102,17 +86,6 @@ curl --location 'http://127.0.0.1:8645/debug/v1/version'
 curl --location 'http://127.0.0.1:8645/debug/v1/info'
 ```
 
-Send a message to a `contentTopic`, which all subscribers will receive. Please note that the `payload` is encoded in `base64`.
-
-```shell
-curl --location 'http://127.0.0.1:8645/relay/v1/auto/messages' \
---header 'Content-Type: application/json' \
---data '{
-    "payload": "'$(echo -n "Hello Waku Network - from Anonymous User" | base64)'",
-    "contentTopic": "/my-app/2/chatroom-1/proto"
-}'
-```
-
 Retrieve messages sent to a `contentTopic`. Please note that this query can be made to any `Store` node within the network:
 
 ```shell
@@ -121,7 +94,7 @@ curl --location 'http://127.0.0.1:8645/store/v1/messages?contentTopics=%2Fmy-app
 ```
 
 :::tip
-If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
+If you encounter issues running your node or require assistance with anything, please visit the - Visit the #help-desk channel on [Discord](https://discord.waku.org/).
 :::
 
 :::tip Congratulations!
