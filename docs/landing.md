@@ -10,8 +10,8 @@ Waku is a family of robust, censorship-resistant, peer-to-peer communication pro
 <div class="cta-buttons">
   <a href="/build/javascript/" class="button button--primary">Start Building</a>
   <a href="/run-node/" class="button button--primary">Run a Node</a>
-  <a href="/learn/waku-network" class="button button--primary">Learn More</a>
-  <a href="/research" class="button button--primary">Explore Research</a>
+  <a href="/learn/" class="button button--primary">Learn More</a>
+  <a href="/research/" class="button button--primary">Explore Research</a>
 </div>
 
 

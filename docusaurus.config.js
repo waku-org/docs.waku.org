@@ -82,13 +82,13 @@ const config = {
         {
           position: "left",
           label: "Learn",
-          to: "/learn/waku-network",
+          to: "/learn/",
           activeBaseRegex: "^/learn/",
         },
         {
           position: "left",
           label: "Research",
-          to: "/research",
+          to: "/research/",
           activeBaseRegex: "^/research/",
         },
         {

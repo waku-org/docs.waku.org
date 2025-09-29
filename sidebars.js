@@ -80,7 +80,7 @@ const sidebars = {
       label: "Home",
       href: "/",
     },
-    "learn/waku-network",
+    "learn/index",
     {
       type: "category",
       label: "Concepts",
