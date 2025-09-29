@@ -42,7 +42,7 @@ const node = await createLightNode({ defaultBootstrap: true });
 ```
 
 :::info
-When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
+When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/build/javascript/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/build/javascript/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
 ## Create encoders and decoders
@@ -60,7 +60,7 @@ const encoder = node.createEncoder({ contentTopic: ct });
 const decoder = node.createDecoder({ contentTopic: ct });
 ```
 
-You can also use [`@waku/message-encryption`](/guides/js-waku/message-encryption) to encrypt and decrypt messages using Waku libraries.
+You can also use [`@waku/message-encryption`](/build/javascript/message-encryption) to encrypt and decrypt messages using Waku libraries.
 
 :::info
 In this example, users send and receive messages on a shared content topic. However, real applications may have users broadcasting messages while others listen or only have 1:1 exchanges. Waku supports all these use cases.
@@ -130,7 +130,7 @@ const DataPacket = new protobuf.Type("DataPacket")
 ```
 
 :::info
-Have a look at the [Protobuf installation](/guides/js-waku/#message-structure) guide for adding the `protobufjs` package to your project.
+Have a look at the [Protobuf installation](/build/javascript/#message-structure) guide for adding the `protobufjs` package to your project.
 :::
 
 ## Listen to incoming messages

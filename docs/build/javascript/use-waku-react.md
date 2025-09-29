@@ -157,7 +157,7 @@ export default App
 ```
 
 :::info
-In the code above, we also created a message `encoder` and `decoder` using the `createEncoder()` and `createDecoder()` functions, along with the application [message structure](/guides/js-waku/#message-structure) with Protobuf.
+In the code above, we also created a message `encoder` and `decoder` using the `createEncoder()` and `createDecoder()` functions, along with the application [message structure](/build/javascript/#message-structure) with Protobuf.
 :::
 
 Next, modify the `App.css` file with the following code block:
@@ -209,7 +209,7 @@ Next, modify the `App.css` file with the following code block:
 
 ## Send messages using light push
 
-To send messages in our application, we need to modify the `sendMessage()` function to serialize user input into our Protobuf structure and [push it to the network](/guides/js-waku/light-send-receive#send-messages-using-light-push) using the `useLightPush()` function:
+To send messages in our application, we need to modify the `sendMessage()` function to serialize user input into our Protobuf structure and [push it to the network](/build/javascript/light-send-receive#send-messages-using-light-push) using the `useLightPush()` function:
 
 ```js title="src/App.jsx"
 import { useLightPush } from "@waku/react";
@@ -246,7 +246,7 @@ function App() {
 
 ## Receive messages using filter
 
-To display messages in our application, we need to use the `useFilterMessages()` function to create a [Filter subscription](/guides/js-waku/light-send-receive/#receive-messages-using-filter), receive incoming messages, and render them in our interface:
+To display messages in our application, we need to use the `useFilterMessages()` function to create a [Filter subscription](/build/javascript/light-send-receive/#receive-messages-using-filter), receive incoming messages, and render them in our interface:
 
 ```js title="src/App.jsx"
 import { useFilterMessages } from "@waku/react";
@@ -267,7 +267,7 @@ function App() {
 
 ## Retrieve messages using store
 
-To display messages from the past, we need to retrieve them from the [Store protocol](/guides/js-waku/store-retrieve-messages) using the `useStoreMessages()` function when our application initialises and then render them alongside newly received messages:
+To display messages from the past, we need to retrieve them from the [Store protocol](/build/javascript/store-retrieve-messages) using the `useStoreMessages()` function when our application initialises and then render them alongside newly received messages:
 
 ```js title="src/App.jsx"
 import { useFilterMessages, useStoreMessages } from "@waku/react";
@@ -304,7 +304,7 @@ const node = await createLightNode({
 If the specified Store peer is not available, the node will fall back to using random Store peers in the network.
 
 :::info
-To explore the available Store query options, have a look at the [Retrieve Messages Using Store Protocol](/guides/js-waku/store-retrieve-messages#store-query-options) guide.
+To explore the available Store query options, have a look at the [Retrieve Messages Using Store Protocol](/build/javascript/store-retrieve-messages#store-query-options) guide.
 :::
 
 :::tip

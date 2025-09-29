@@ -28,7 +28,7 @@ If you want to learn more about the Waku Network, [The Waku Network: Technical O
 
 ## Running a Waku network node
 
-Have a look at the [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) guide for instructions on running a [nwaku](https://github.com/waku-org/nwaku) node in the Waku Network. Use the Sepolia node and wallet you obtained above.
+Have a look at the [Run Nwaku with Docker Compose](/run-node/run-docker-compose) guide for instructions on running a [nwaku](https://github.com/waku-org/nwaku) node in the Waku Network. Use the Sepolia node and wallet you obtained above.
 
 :::info
 The public Waku Network replaces the previous experimental shared routing layer based on a default pubsub topic (`/waku/2/default-waku/proto`). If your project currently uses this or any other shared pubsub topics, we encourage you to migrate to the public Waku Network with built-in DoS protection, scalability, and reasonable bandwidth usage.

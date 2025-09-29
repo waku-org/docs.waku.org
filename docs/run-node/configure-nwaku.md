@@ -10,10 +10,10 @@ This guide provides detailed steps to configure a `nwaku` node for different use
 
 To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/learn/concepts/peer-discovery) mechanisms:
 
-- [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers)
-- [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery)
-- [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5)
-- [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange)
+- [Configure Static Peers](/run-node/configure-discovery#configure-static-peers)
+- [Configure DNS Discovery](/run-node/configure-discovery#configure-dns-discovery)
+- [Configure Discv5](/run-node/configure-discovery#configure-discv5)
+- [Configure Peer Exchange](/run-node/configure-discovery#configure-peer-exchange)
 
 ## Configure a domain name
 
@@ -135,7 +135,7 @@ You can use the output `286cae9f2990bfc49dafdd3a9e737f56ddba3656e5e427108cef456f
 
 ## Configure WebSocket transport
 
-WebSocket is the only [transport method](/learn/concepts/transports) browser nodes support using [@waku/sdk](/guides/js-waku/). To enable WebSocket in `nwaku` to serve browser peers, use the following configuration options:
+WebSocket is the only [transport method](/learn/concepts/transports) browser nodes support using [@waku/sdk](/build/javascript/). To enable WebSocket in `nwaku` to serve browser peers, use the following configuration options:
 
 - `websocket-support`: Enables WebSocket (`ws`) on the node (disabled by default).
 - `websocket-port` (optional): WebSocket listening port. If you omit this option, it will default to `8000`.

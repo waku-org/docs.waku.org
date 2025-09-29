@@ -17,7 +17,7 @@ Take note of the precedence order: Each configuration method overrides the one b
 
 ## Command line options
 
-Node configuration is primarily done using command line options, which override other methods. Specify [configuration options](/guides/nwaku/config-options) by providing them in this format after the binary name:
+Node configuration is primarily done using command line options, which override other methods. Specify [configuration options](/run-node/config-options) by providing them in this format after the binary name:
 
 ```shell
 ./build/wakunode2 --tcp-port=65000
@@ -60,7 +60,7 @@ topic = ["/waku/2/default-waku/proto"]
 metrics-logging = false
 ```
 
-The `config-file` [configuration option](/guides/nwaku/config-options) lets you specify the configuration file path:
+The `config-file` [configuration option](/run-node/config-options) lets you specify the configuration file path:
 
 ```shell
 ./build/wakunode2 --config-file=[TOML CONFIGURATION FILE]
@@ -90,12 +90,12 @@ The default configuration is used when no other options are specified. By defaul
 - Enable the `Relay` protocol for relaying messages.
 - Enable the `Store` protocol as a client, allowing it to query peers for historical messages but not store any message itself.
 
-To see the default values of all [configuration options](/guides/nwaku/config-options), run `wakunode2 --help`:
+To see the default values of all [configuration options](/run-node/config-options), run `wakunode2 --help`:
 
 ```shell
 ./build/wakunode2 --help
 ```
 
 :::tip
-To explore the available node configuration options, have a look at the [Node Configuration Options](/guides/nwaku/config-options) guide.
+To explore the available node configuration options, have a look at the [Node Configuration Options](/run-node/config-options) guide.
 :::

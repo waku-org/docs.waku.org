@@ -110,5 +110,5 @@ For example, consider two `nwaku` nodes configured as a `server` (peer exchange 
 ```
 
 :::info
-`nwaku` provides a [`relay-peer-exchange`](/guides/nwaku/config-options#relay-config) option via `libp2p` for peer exchange, allowing network growth through neighbouring nodes. However, this feature can compromise security and network robustness, so we recommend only using it in high-trust environments.
+`nwaku` provides a [`relay-peer-exchange`](/run-node/config-options#relay-config) option via `libp2p` for peer exchange, allowing network growth through neighbouring nodes. However, this feature can compromise security and network robustness, so we recommend only using it in high-trust environments.
 :::
