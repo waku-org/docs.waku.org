@@ -69,9 +69,15 @@ const config = {
         },
         {
           position: "left",
-          label: "Guides",
-          to: "/",
-          activeBaseRegex: "^/$|^/guides/",
+          label: "Build",
+          to: "/build/javascript/",
+          activeBaseRegex: "^/build/",
+        },
+        {
+          position: "left",
+          label: "Run Node",
+          to: "/run-node/",
+          activeBaseRegex: "^/run-node/",
         },
         {
           position: "left",
@@ -101,19 +107,6 @@ const config = {
     footer: {
       copyright: "Waku",
       links: [
-        {
-          title: "Guides",
-          items: [
-            {
-              to: "/guides/nwaku/run-docker-compose",
-              label: "Run a Nwaku Node",
-            },
-            {
-              to: "/guides/js-waku/",
-              label: "JavaScript Waku SDK",
-            },
-          ],
-        },
         {
           title: "Community",
           items: [
@@ -157,10 +150,6 @@ const config = {
             {
               href: "https://rfc.vac.dev/waku",
               label: "Waku RFCs",
-            },
-            {
-              href: "https://github.com/waku-org/bounties/",
-              label: "Bounties",
             },
             {
               href: "https://github.com/waku-org/awesome-waku/",

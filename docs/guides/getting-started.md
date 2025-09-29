@@ -1,7 +1,6 @@
 ---
 title: Introduction to Waku
 hide_table_of_contents: true
-slug: /
 ---
 
 Waku is a family of robust, censorship-resistant, peer-to-peer communication protocols that enable privacy-focused messaging for Web3 applications, allowing you to integrate decentralised communication features into your dApp without compromising security or privacy.
