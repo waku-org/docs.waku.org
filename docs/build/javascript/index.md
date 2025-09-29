@@ -1,5 +1,5 @@
 ---
-title: JavaScript Waku SDK
+title: JavaScript
 hide_table_of_contents: true
 displayed_sidebar: build
 ---
