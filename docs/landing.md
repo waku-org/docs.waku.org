@@ -21,7 +21,7 @@ Waku is a family of robust, censorship-resistant, peer-to-peer communication pro
 </div>
 
 :::tip
-Check out our [Learn section](/learn/waku-network), [YouTube channel](https://www.youtube.com/@wakuorg), and [Blog](https://blog.waku.org/) to dive into how Waku works behind the scenes!
+Check out our [Learn section](/learn/), [YouTube channel](https://www.youtube.com/@wakuorg), and [Blog](https://blog.waku.org/) to dive into how Waku works behind the scenes!
 :::
 
 ## What isn’t Waku?

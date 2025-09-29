@@ -4,7 +4,7 @@ hide_table_of_contents: true
 displayed_sidebar: build
 ---
 
-This guide provides detailed steps to start using the `@waku/sdk` package by setting up a [Light Node](/learn/glossary#light-node) to send messages using the [Light Push protocol](/learn/concepts/protocols#light-push), and receive messages using the [Filter protocol](/learn/concepts/protocols#filter). Have a look at the [installation guide](/guides/js-waku/#installation) for steps on adding `@waku/sdk` to your project.
+This guide provides detailed steps to start using the `@waku/sdk` package by setting up a [Light Node](/learn/glossary#light-node) to send messages using the [Light Push protocol](/learn/concepts/protocols#light-push), and receive messages using the [Filter protocol](/learn/concepts/protocols#filter). Have a look at the [installation guide](/build/javascript/#installation) for steps on adding `@waku/sdk` to your project.
 
 ## Create a light node
 
@@ -22,7 +22,7 @@ await node.start();
 ```
 
 :::info
-When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/guides/js-waku/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/guides/js-waku/configure-discovery) guide to learn more methods to bootstrap nodes.
+When the `defaultBootstrap` parameter is set to `true`, your node will be bootstrapped using the [default bootstrap method](/build/javascript/configure-discovery#default-bootstrap-method). Have a look at the [Bootstrap Nodes and Discover Peers](/build/javascript/configure-discovery) guide to learn more methods to bootstrap nodes.
 :::
 
 A node needs to know how to route messages. By default, it will use The Waku Network configuration (`{ clusterId: 1, shards: [0,1,2,3,4,5,6,7] }`). For most applications, it's recommended to use autosharding:
@@ -86,7 +86,7 @@ const encoder = createEncoder({ contentTopic });
 const decoder = createDecoder(contentTopic);
 ```
 
-The `ephemeral` parameter allows you to specify whether messages should **NOT** be stored by [Store peers](/guides/js-waku/store-retrieve-messages):
+The `ephemeral` parameter allows you to specify whether messages should **NOT** be stored by [Store peers](/build/javascript/store-retrieve-messages):
 
 ```js
 const encoder = createEncoder({
@@ -128,7 +128,7 @@ const DataPacket = new protobuf.Type("DataPacket")
 ```
 
 :::info
-Have a look at the [Protobuf installation](/guides/js-waku/#message-structure) guide for adding the `protobufjs` package to your project.
+Have a look at the [Protobuf installation](/build/javascript/#message-structure) guide for adding the `protobufjs` package to your project.
 :::
 
 ## Send messages using light push

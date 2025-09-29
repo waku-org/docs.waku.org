@@ -14,7 +14,7 @@ While the `@waku/sdk` package is primarily designed for browser environments, yo
 
 ### Protocol implementation
 
-`@waku/sdk` focuses on the client side of the [Request/Response protocol](/learn/concepts/network-domains#requestresponse-domain). We'll have to replicate all the functionalities added to [nwaku](/guides/nwaku/run-node) to implement extra features.
+`@waku/sdk` focuses on the client side of the [Request/Response protocol](/learn/concepts/network-domains#requestresponse-domain). We'll have to replicate all the functionalities added to [nwaku](/run-node/) to implement extra features.
 
 ### Codebase complexity
 
@@ -28,8 +28,8 @@ Certain features in `@waku/sdk` are tailored for browsers and might not translat
 
 ## Recommendations
 
-Before using `@waku/sdk` in a NodeJS environment, take into account these limitations. For a more optimised solution, we recommend [running nwaku in a Docker container](/guides/nwaku/run-docker-compose) and consuming its [REST API](https://waku-org.github.io/waku-rest-api/).
+Before using `@waku/sdk` in a NodeJS environment, take into account these limitations. For a more optimised solution, we recommend [running nwaku in a Docker container](/run-node/run-docker-compose) and consuming its [REST API](https://waku-org.github.io/waku-rest-api/).
 
 ## Future developments
 
-There are plans to release a NodeJS package based on [nwaku](/guides/nwaku/run-node) to streamline the process of using Waku Network features in NodeJS applications. You can track the progress and updates here: [https://github.com/waku-org/nwaku/issues/1332](https://github.com/waku-org/nwaku/issues/1332).
+There are plans to release a NodeJS package based on [nwaku](/run-node/) to streamline the process of using Waku Network features in NodeJS applications. You can track the progress and updates here: [https://github.com/waku-org/nwaku/issues/1332](https://github.com/waku-org/nwaku/issues/1332).

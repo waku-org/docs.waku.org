@@ -4,7 +4,7 @@ hide_table_of_contents: true
 displayed_sidebar: runNode
 ---
 
-This guide provides detailed steps to build and run a `nwaku` node in a Docker container. If you prefer a pre-configured setup with a monitoring dashboard, see the [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) guide.
+This guide provides detailed steps to build and run a `nwaku` node in a Docker container. If you prefer a pre-configured setup with a monitoring dashboard, see the [Run Nwaku with Docker Compose](/run-node/run-docker-compose) guide.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ docker run [OPTIONS] [IMAGE] [ARG...]
 
 - `OPTIONS` are your selected [Docker options](https://docs.docker.com/engine/reference/commandline/run/#options)
 - `IMAGE` is the image and tag you pulled from the registry or built locally
-- `ARG...` is the list of arguments for your [node configuration options](/guides/nwaku/config-options)
+- `ARG...` is the list of arguments for your [node configuration options](/run-node/config-options)
 
 Run `nwaku` using the most typical configuration:
 
@@ -78,5 +78,5 @@ If you encounter issues running your node or require assistance with anything, p
 :::
 
 :::tip Congratulations!
-You have successfully built and started a `nwaku` node in a Docker container. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+You have successfully built and started a `nwaku` node in a Docker container. Have a look at the [Node Configuration Examples](/run-node/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::

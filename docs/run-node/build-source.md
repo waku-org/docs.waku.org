@@ -100,10 +100,10 @@ Nwaku will create the `wakunode2` binary in the `./build/` directory.
 
 To learn more about running nwaku, have a look at these guides:
 
-- [Run a Nwaku Node](/guides/nwaku/run-node#run-the-node)
-- [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)
-- [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose)
-- [Node Configuration Methods](/guides/nwaku/config-methods)
+- [Run a Nwaku Node](/run-node/)
+- [Run Nwaku in a Docker Container](/run-node/run-docker)
+- [Run Nwaku with Docker Compose](/run-node/run-docker-compose)
+- [Node Configuration Methods](/run-node/config-methods)
 
 ## Run test suite
 
@@ -114,5 +114,5 @@ make test
 ```
 
 :::tip Congratulations!
-You have successfully built the `nwaku` binary from the source code. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
+You have successfully built the `nwaku` binary from the source code. Have a look at the [Node Configuration Examples](/run-node/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
 :::

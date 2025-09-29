@@ -66,7 +66,7 @@ The `store.queryWithOrderedCallback()` function provides a straightforward metho
 
 - `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/waku/standards/application/26/payload) methods.
 - `callback`: The callback function for processing the retrieved messages.
-- `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
+- `options` (optional): [Query options](/build/javascript/store-retrieve-messages#store-query-options) to filter the retrieved messages.
 
 ```js
 // Create the callback function
@@ -88,7 +88,7 @@ The `queryWithOrderedCallback()` function always returns the most recent message
 The `store.queryGenerator()` function provides more control and flexibility over processing messages retrieved from `Store` nodes through [Async Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator). It accepts these parameters:
 
 - `decoders`: List of `decoders` that specify the `content topic` to query for and their [message decryption](https://rfc.vac.dev/waku/standards/application/26/payload) methods.
-- `options` (optional): [Query options](/guides/js-waku/store-retrieve-messages#store-query-options) to filter the retrieved messages.
+- `options` (optional): [Query options](/build/javascript/store-retrieve-messages#store-query-options) to filter the retrieved messages.
 
 ```js
 // Create the store query

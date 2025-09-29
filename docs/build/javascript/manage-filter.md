@@ -4,7 +4,7 @@ hide_table_of_contents: true
 displayed_sidebar: build
 ---
 
-This guide provides detailed steps to manage [Filter](/learn/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Send and Receive Messages Using Light Push and Filter](/guides/js-waku/light-send-receive) guide for using the `Light Push` and `Filter` protocols.
+This guide provides detailed steps to manage [Filter](/learn/concepts/protocols#filter) subscriptions and handle node disconnections in your application. Have a look at the [Send and Receive Messages Using Light Push and Filter](/build/javascript/light-send-receive) guide for using the `Light Push` and `Filter` protocols.
 
 ## Overview
 
