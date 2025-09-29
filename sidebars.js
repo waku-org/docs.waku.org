@@ -123,14 +123,6 @@ const sidebars = {
       dirName: "research",
     },
   ],
-  guides: [
-    {
-      type: "link",
-      label: "Home",
-      href: "/",
-    },
-    "guides/getting-started",
-  ],
 };
 
 module.exports = sidebars;
