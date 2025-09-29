@@ -83,7 +83,20 @@
     "IPFS",
     "cheatsheet",
     "hacken",
-    "statusteam"
+    "statusteam",
+    "pubkey",
+    "multiaddresses",
+    "peerstore",
+    "addrs",
+    "cred",
+    "Kadmelia",
+    "storev",
+    "unsubs",
+    "Linea",
+    "upnp",
+    "dnsaddr",
+    "multiaddress",
+    "Kademlia's"
   ],
   "flagWords": [],
   "ignorePaths": [
