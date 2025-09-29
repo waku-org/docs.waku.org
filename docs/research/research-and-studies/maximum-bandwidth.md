@@ -1,6 +1,5 @@
 ---
 title: Maximum Bandwidth for Global Adoption
-displayed_sidebar: research
 ---
 
 **TLDR**: This issue aims to **set the maximum bandwidth** in `x Mbps` that each waku shard should consume so that the **maximum amount of people can run a full waku node**. It is up to https://github.com/waku-org/research/issues/22 to specify how this maximum will be enforced.
