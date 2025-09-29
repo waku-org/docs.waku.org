@@ -1,6 +1,7 @@
 ---
 title: Node Configuration Methods
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 Waku nodes can be configured using a combination of the following methods:

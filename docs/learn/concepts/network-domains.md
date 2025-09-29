@@ -1,6 +1,7 @@
 ---
 title: Network Domains
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 Waku is a unified and cohesive entity that offers a rich ecosystem with three distinct network interaction domains. These domains serve specialised purposes and contribute to the robust functionality of Waku, forming its foundation.

@@ -1,6 +1,7 @@
 ---
 title: Research
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 The following features are currently experimental and under research and initial implementation:

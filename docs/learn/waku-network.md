@@ -1,6 +1,7 @@
 ---
 title: The Waku Network
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 The Waku Network is a shared p2p messaging network that is open-access, useful for generalized messaging, privacy-preserving, scalable and accessible even to resource-restricted devices. Some of the most prominent features include:

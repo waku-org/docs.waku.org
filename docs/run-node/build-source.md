@@ -1,6 +1,7 @@
 ---
 title: Build Nwaku from Source
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 This guide provides detailed steps to build a `nwaku` node from the source code to access the latest development version or a specific commit or release of `nwaku`. For your convenience, you may want to [download a pre-compiled binary](https://github.com/waku-org/nwaku/tags) instead.

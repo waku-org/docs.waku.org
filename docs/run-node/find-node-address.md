@@ -1,6 +1,7 @@
 ---
 title: Find Your Node Address
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 :::info

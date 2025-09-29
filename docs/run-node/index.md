@@ -1,6 +1,7 @@
 ---
 title: Run a Nwaku Node
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/learn/concepts/protocols) they want to support based on their needs, motivations, and available resources.

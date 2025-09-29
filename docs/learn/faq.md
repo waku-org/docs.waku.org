@@ -2,6 +2,7 @@
 title: Waku FAQ
 hide_table_of_contents: true
 sidebar_label: Frequently Asked Questions
+displayed_sidebar: learn
 ---
 
 import { AccordionItem } from '@site/src/components/mdx'

@@ -1,6 +1,7 @@
 ---
 title: Peer Discovery
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 When initialising a Waku node, it must connect with other peers to enable message sending, receiving, and retrieval. To achieve this, a discovery mechanism is employed to locate other peers in the network. This process is known as bootstrapping.

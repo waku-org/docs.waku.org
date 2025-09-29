@@ -1,6 +1,7 @@
 ---
 title: Send and Receive Messages in a Reliable Channel
 hide_table_of_contents: true
+displayed_sidebar: build
 ---
 
 Learn how to send and receive messages with a convenient SDK that provide various reliable functionalities out-of-the-box.

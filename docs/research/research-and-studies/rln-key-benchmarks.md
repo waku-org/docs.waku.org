@@ -1,5 +1,6 @@
 ---
 title: RLN Key Benchmarks
+displayed_sidebar: research
 ---
 
 ## Introduction

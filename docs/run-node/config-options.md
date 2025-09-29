@@ -1,6 +1,7 @@
 ---
 title: Node Configuration Options
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 Here are the available node configuration options, along with their default values and descriptions:

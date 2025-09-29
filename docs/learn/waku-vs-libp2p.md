@@ -1,6 +1,7 @@
 ---
 title: Comparing Waku and libp2p
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 Since Waku is built on top of libp2p, they share a lot of concepts and terminologies between them. However, there are key differences between them that are worth noting.

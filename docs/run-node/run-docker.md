@@ -1,6 +1,7 @@
 ---
 title: Run Nwaku in a Docker Container
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 This guide provides detailed steps to build and run a `nwaku` node in a Docker container. If you prefer a pre-configured setup with a monitoring dashboard, see the [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) guide.

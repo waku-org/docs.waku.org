@@ -1,5 +1,6 @@
 ---
 title: Incentivisation
+displayed_sidebar: research
 ---
 
 Waku is a family of decentralised communication protocols. The Waku Network (TWN) consists of independent nodes running Waku protocols. TWN needs incentivisation (shortened to i13n) to ensure proper node behaviour.

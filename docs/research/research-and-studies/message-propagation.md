@@ -1,5 +1,6 @@
 ---
 title: Message Propagation Times With Waku-RLN
+displayed_sidebar: research
 ---
 
 **TLDR**: We present the results of 1000 `nwaku` nodes running `rln` using different message sizes, in a real network with bandwidth limitations and network delays. The goal is to study the message propagation delay distribution, and how it's affected by i) rln and ii) message size in a real environment. We observe that for messages of `10kB` the average end-to-end propagation delay is `508 ms`. We can also observe that the message propagation delays are severely affected when increasing the message size, which indicates that it is not a good idea to use waku for messages of eg. `500kB`. See simulation parameters.

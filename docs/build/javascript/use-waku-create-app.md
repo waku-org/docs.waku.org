@@ -1,6 +1,7 @@
 ---
 title: "Scaffold DApps Using @waku/create-app"
 hide_table_of_contents: true
+displayed_sidebar: build
 ---
 
 This guide provides detailed steps to bootstrap your next `@waku/sdk` project from [various example templates](https://github.com/waku-org/js-waku-examples/tree/master/examples) using the [@waku/create-app](https://www.npmjs.com/package/@waku/create-app) package.
