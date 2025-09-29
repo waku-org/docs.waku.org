@@ -49,7 +49,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Run a Nwaku Node",
+      label: "Run a Waku Node",
       collapsed: false,
       link: {
         type: "doc",
