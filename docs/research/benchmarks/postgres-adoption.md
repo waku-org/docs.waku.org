@@ -1,6 +1,7 @@
 ---
 title: PostgreSQL
 description: Document that describes why Nim-Waku started to use Postgres and shows some benchmark and comparison results.
+displayed_sidebar: research
 ---
 
 ## Introduction

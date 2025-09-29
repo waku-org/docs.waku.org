@@ -1,5 +1,6 @@
 ---
 title: Capped Bandwidth in Waku
+displayed_sidebar: research
 ---
 
 This post explains i) why The Waku Network requires a capped bandwidth per shard and ii) how to achieve it by rate limiting with RLN v2.

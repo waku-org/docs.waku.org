@@ -1,5 +1,6 @@
 ---
 title: Performance Benchmarks and Test Reports
+displayed_sidebar: research
 ---
 
 

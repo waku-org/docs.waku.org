@@ -1,6 +1,7 @@
 ---
 title: Glossary
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 # Waku Docs Glossary

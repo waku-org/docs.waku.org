@@ -1,6 +1,7 @@
 ---
 title: "Run @waku/sdk in a NodeJS Application"
 hide_table_of_contents: true
+displayed_sidebar: build
 ---
 
 While the `@waku/sdk` package is primarily designed for browser environments, you can use it in a NodeJS application. However, there are certain limitations and considerations to keep in mind. This guide provides a comprehensive overview of using `@waku/sdk` in NodeJS.

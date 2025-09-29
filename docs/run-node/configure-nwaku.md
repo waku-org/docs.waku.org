@@ -1,6 +1,7 @@
 ---
 title: Node Configuration Examples
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 This guide provides detailed steps to configure a `nwaku` node for different use cases.

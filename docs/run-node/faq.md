@@ -2,6 +2,7 @@
 title: Nwaku FAQ
 hide_table_of_contents: true
 sidebar_label: Frequently Asked Questions
+displayed_sidebar: runNode
 ---
 
 import { AccordionItem } from '@site/src/components/mdx'

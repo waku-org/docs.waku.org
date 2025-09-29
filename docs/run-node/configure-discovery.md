@@ -1,6 +1,7 @@
 ---
 title: Configure Peer Discovery
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 This guide provides detailed steps to configure a `nwaku` node to discover and connect with peers in the Waku Network.

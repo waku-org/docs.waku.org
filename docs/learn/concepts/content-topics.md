@@ -1,6 +1,7 @@
 ---
 title: Content Topics
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 `Content Topics` are metadata strings set by developers on outgoing messages to facilitate protocol-level features like selectively processing incoming messages ([Relay](/learn/concepts/protocols#relay) or [Filter](/learn/concepts/protocols#filter)) and retrieving historical messages ([Store](/learn/concepts/protocols#store)) that meet specific filtering criteria. Have a look at the [WAKU2-TOPICS](https://rfc.vac.dev/waku/informational/23/topics#content-topics) specification to learn more.

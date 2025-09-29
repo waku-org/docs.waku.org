@@ -1,6 +1,7 @@
 ---
 title: Run Nwaku with Docker Compose
 hide_table_of_contents: true
+displayed_sidebar: runNode
 ---
 
 [nwaku-compose](https://github.com/waku-org/nwaku-compose) is a ready-to-use Docker Compose setup that configures the following automatically:

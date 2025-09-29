@@ -2,6 +2,7 @@
 title: JavaScript SDK FAQ
 hide_table_of_contents: true
 sidebar_label: Frequently Asked Questions
+displayed_sidebar: build
 ---
 
 import { AccordionItem } from '@site/src/components/mdx'
