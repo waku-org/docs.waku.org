@@ -6,141 +6,77 @@ displayed_sidebar: runNode
 
 Nwaku is a lightweight and robust Nim client for running a Waku node, equipped with tools to monitor and maintain a running node. Nwaku is highly configurable, enabling operators to select the [protocols](/learn/concepts/protocols) they want to support based on their needs, motivations, and available resources.
 
-## Video Tutorials
+## Video Tutorial
 
 <div class="video-container">
   <iframe class="yt-video" src="https://www.youtube.com/embed/fs0ynLk4z0I" title="How to run a Waku node using Nwaku Compose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-This guide provides detailed steps to download, build, configure, and connect a `nwaku` node to the Waku Network. It also includes interacting with the node and finding its addresses.
+## Quick Start with Docker Compose (Recommended)
 
-:::info
-We recommend running a `nwaku` node with at least 2GB of RAM, especially if `WSS` is enabled. If running just a `Relay` node, 0.5GB of RAM is sufficient.
+The easiest way to run a Waku node is using [Docker Compose](/run-node/run-docker-compose). This setup automatically configures:
+
+- A `nwaku` node with [Relay](/learn/concepts/protocols#relay), [Store](/learn/concepts/protocols#store), and [RLN](/learn/concepts/protocols#rln-relay) protocols
+- A simple web interface to send and receive messages
+- Grafana dashboard for monitoring your node
+
+### Prerequisites
+
+- **Git**
+- [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
+- **Linea Sepolia RPC endpoint**: You can get a free endpoint from [Infura](https://www.infura.io/) or any other Linea Sepolia RPC provider.
+
+:::info System Requirements
+We recommend at least 2GB of RAM, especially if WSS is enabled. For a Relay-only node, 0.5GB of RAM is sufficient.
 :::
 
-## Get the node binary
-
-To run a node, you must have the `nwaku` binary. Nwaku provides multiple options for running a node:
-
-#### Run nwaku in Docker (recommended)
-
-We recommend [using Docker Compose](/guides/nwaku/run-docker-compose) to run a node because it's the simplest and fastest way to configure and run one:
-
-|                  | Description                              | Documentation                                                     |
-| ---------------- | ---------------------------------------- | ----------------------------------------------------------------- |
-| Docker Compose   | Run a `nwaku` node with Docker Compose   | [Run Nwaku with Docker Compose](/guides/nwaku/run-docker-compose) |
-| Docker Container | Run a `nwaku` node in a Docker Container | [Run Nwaku in a Docker Container](/guides/nwaku/run-docker)       |
-
-#### Download the binary
-
-|                    | Description                                                   | Documentation                                                                      |
-| ------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Precompiled Binary | Download a precompiled binary of the `nwaku` node             | [Download Nwaku Binary](https://github.com/waku-org/nwaku/tags)                    |
-| Nightly Release    | Try the latest `nwaku` updates without compiling the binaries | [Download Nightly Release](https://github.com/waku-org/nwaku/releases/tag/nightly) |
-
-#### Build the binary
-
-|                   | Description                                                                    | Documentation                                         |
-| ----------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------- |
-| Build from Source | Build the node from the [nwaku source code](https://github.com/waku-org/nwaku) | [Build Nwaku from Source](/guides/nwaku/build-source) |
-
-:::tip
-You can run the `nwaku` binaries and Docker images on cloud service providers like [Google Cloud](https://cloud.google.com/), [Microsoft Azure](https://azure.microsoft.com/), [Amazon Web Services](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
-:::
-
-## Run the node
-
-Once you have gotten the `nwaku` binary, run it using the [default configuration](/guides/nwaku/config-methods#default-configuration-values):
+### Get Started
 
 ```shell
-# Run the Docker Compose
+# Clone the repository
+git clone https://github.com/waku-org/nwaku-compose
+cd nwaku-compose
+
+# Configure your node
+cp .env.example .env
+# Edit .env with your settings
+
+# Start your node
 docker-compose up -d
-
-# Run the standalone binary
-./build/wakunode2
 ```
+
+For detailed setup instructions, see [Run Nwaku with Docker Compose](/run-node/run-docker-compose).
+
+## Alternative Installation Methods
+
+While Docker Compose is recommended, you can also:
+
+- **[Run in Docker Container](/run-node/run-docker)** - For custom Docker deployments
+- **[Build from Source](/run-node/build-source)** - Compile the latest nwaku code
+- **[Download Binary](https://github.com/waku-org/nwaku/tags)** - Use precompiled releases
+
+## Node Configuration
+
+Once your node is running, you can:
+
+- **[Configure Discovery](/run-node/configure-discovery)** - Set up peer discovery mechanisms
+- **[Configure Your Node](/run-node/configure-nwaku)** - Customize protocols and settings
+- **[Find Node Addresses](/run-node/find-node-address)** - Locate your node's network addresses
+
+## Monitoring and Maintenance
+
+- Access the Grafana dashboard at `http://localhost:3000` (if using Docker Compose)
+- Use the [REST API](https://waku-org.github.io/waku-rest-api/) to interact with your node
+- Check node health at `http://localhost:8645/health`
 
 :::tip
-To learn how to customise the configuration of a `nwaku` node, have a look at the [Node Configuration Methods](/guides/nwaku/config-methods) and [Node Configuration Examples](/guides/nwaku/configure-nwaku) guides.
+Download the [Waku Node Operator Cheatsheet](/Waku-NodeOperator.pdf) for quick reference on operating your node.
 :::
 
-## Bootstrap the node
+## Get Help
 
-To join the Waku Network, nodes must [bootstrap](/learn/glossary#bootstrapping) for an entry point before discovering more peers. Nwaku provides multiple [peer discovery](/learn/concepts/peer-discovery) mechanisms:
+If you encounter issues or need assistance:
 
-|               | Description                                                                                                            | Documentation                                                                        |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Static Peers  | Configure the bootstrap nodes that `nwaku` should establish connections upon startup                                   | [Configure Static Peers](/guides/nwaku/configure-discovery#configure-static-peers)   |
-| DNS Discovery | Enable `nwaku` to bootstrap nodes using the [DNS Discovery](/learn/concepts/dns-discovery) mechanism                   | [Configure DNS Discovery](/guides/nwaku/configure-discovery#configure-dns-discovery) |
-| Discv5        | Enable `nwaku` to discover peers using the [Discv5](/learn/concepts/discv5) mechanism                                  | [Configure Discv5](/guides/nwaku/configure-discovery#configure-discv5)               |
-| Peer Exchange | Enable [Peer Exchange](/learn/concepts/peer-exchange) protocol for light nodes to request peers from your `nwaku` node | [Configure Peer Exchange](/guides/nwaku/configure-discovery#configure-peer-exchange) |
-
-:::tip
-We suggest [configuring WebSocket transport](/guides/nwaku/configure-nwaku#configure-websocket-transport) for your node to enable support and serving of browser peers using [@waku/sdk](/guides/js-waku/).
-:::
-
-## Interact with the node
-
-You can interact with a running `nwaku` node through the [REST API](https://waku-org.github.io/waku-rest-api/), such as querying the node information using the [Get node info](https://waku-org.github.io/waku-rest-api/#get-/debug/v1/info) endpoint:
-
-```mdx-code-block
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-```
-
-<Tabs>
-<TabItem value="request" label="Request">
-
-```shell
-curl --location 'http://127.0.0.1:8645/debug/v1/info' \
---header 'Accept: application/json'
-```
-
-</TabItem>
-<TabItem value="response" label="Response">
-
-```json
-{
-  "listenAddresses": [
-    "/ip4/0.0.0.0/tcp/60000/p2p/16Uiu2HAmUbPquFQqje3jiqoB5YoiUbBya59NB4qqEzeiTNGHeA6w"
-  ],
-  "enrUri": "enr:-Iu4QCQZXZDb_JsYmLoYor0F5E_95HbIywgO_wgx2rIdDbmCJZkTzmlCr0wmMzV47lgik_tVwww5mIng90Ris83TisMBgmlkgnY0gmlwhAAAAACJc2VjcDI1NmsxoQPszztG-Ev52ZB7tk0jF8s6Md4KvyY_rhzNZokaaB_ABIN0Y3CC6mCFd2FrdTIB"
-}
-```
-
-</TabItem>
-</Tabs>
-
-:::info
-The `listenAddresses` field stores the node's listening addresses, while the `enrUri` field stores the discoverable `ENR` URI for peer discovery.
-:::
-
-## Check the node health status
-
-You can check the health status of the node by calling the [Get node health status](https://waku-org.github.io/waku-rest-api/#get-/health) endpoint of the [REST API](https://waku-org.github.io/waku-rest-api/):
-
-<Tabs>
-<TabItem value="request" label="Request">
-
-```shell
-curl --location 'http://127.0.0.1:8645/health' \
---header 'Accept: text/plain'
-```
-
-</TabItem>
-<TabItem value="response" label="Response">
-
-```txt
-Node is healthy
-```
-
-</TabItem>
-</Tabs>
-
-:::tip
-If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
-:::
-
-:::tip Congratulations!
-You have successfully started, configured, and connected a `nwaku` node to the Waku Network. Have a look at the [Node Configuration Examples](/guides/nwaku/configure-nwaku) guide to learn how to configure `nwaku` for different use cases.
-:::
+- Visit the #help-desk channel on [Discord](https://discord.waku.org/)
+- Check the [FAQ](/run-node/faq) for common questions
+- Review the [upgrade instructions](/run-node/upgrade-instructions) when updating your node

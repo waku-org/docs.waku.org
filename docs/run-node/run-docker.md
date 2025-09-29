@@ -74,7 +74,7 @@ We recommend using explicit port mappings (`-p`) when exposing ports accessible 
 :::
 
 :::tip
-If you encounter issues running your node or require assistance with anything, please visit the [#node-help channel](https://discord.com/channels/1110799176264056863/1216748184592711691) on our Discord.
+If you encounter issues running your node or require assistance with anything, please visit the - Visit the #help-desk channel on [Discord](https://discord.waku.org/).
 :::
 
 :::tip Congratulations!
