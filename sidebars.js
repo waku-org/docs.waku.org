@@ -40,6 +40,11 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: "doc",
+      id: "build/rust/index",
+      label: "Rust",
+    },
   ],
   runNode: [
     {
