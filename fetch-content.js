@@ -62,13 +62,13 @@ async function downloadAndSaveFile(url, filePath) {
 const repositories = [
     {
         baseUrl: 'https://api.github.com/repos/waku-org/nwaku/contents/docs/benchmarks',
-        baseSavePath: '/docs/research/benchmarks/',
+        baseSavePath: '/docs/learn/research/benchmarks/',
         prefixToRemove: "docs/benchmarks/",
         categoryFileContent: "{ \"label\": \"Benchmarks\", \"collapsed\": false }"
     },
     {
         baseUrl: 'https://api.github.com/repos/waku-org/research/contents/docs',
-        baseSavePath: '/docs/research/research-and-studies/',
+        baseSavePath: '/docs/learn/research/research-and-studies/',
         prefixToRemove: "docs/",
         categoryFileContent: "{ \"label\": \"Research and Studies\", \"collapsed\": false }"
     }

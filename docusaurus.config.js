@@ -86,12 +86,6 @@ const config = {
           activeBaseRegex: "^/learn/",
         },
         {
-          position: "left",
-          label: "Research",
-          to: "/research/",
-          activeBaseRegex: "^/research/",
-        },
-        {
           href: "https://discord.waku.org",
           position: "left",
           label: "Discord",

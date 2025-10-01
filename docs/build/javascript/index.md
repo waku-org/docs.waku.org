@@ -108,7 +108,7 @@ Have a look at the quick start guide and comprehensive tutorials to learn how to
 | [Manage Your Filter Subscriptions](/build/javascript/manage-filter)                           | Learn how to manage [filter subscriptions](/learn/concepts/protocols#filter) and handle node disconnections in your application                                             |
 
 :::tip
-Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/#run-a-waku-node) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/build/javascript/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
+Until [node incentivisation](/learn/research#prevention-of-denial-of-service-dos-and-node-incentivisation) is in place, you should [operate extra nodes](/run-node/) alongside the ones provided by the Waku Network. When running a node, we recommend using the [DNS Discovery and Static Peers](/build/javascript/configure-discovery#configure-dns-discovery-and-static-peers) configuration to connect to both the Waku Network and your node.
 :::
 
 ## Get help and report issues
