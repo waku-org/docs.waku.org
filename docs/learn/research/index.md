@@ -26,9 +26,9 @@ You can also read more about the ongoing challenges the Waku team is working on 
 
 ## Research resources
 
-[**Research and Studies**](/learn/research/research-and-studies/incentivisation): Protocol simulations and theoretical analysis to support the design of Waku protocols. The protocol definitions are on the [Waku RFCs](https://rfc.vac.dev/waku) website.
+**Research and Studies**: Protocol simulations and theoretical analysis to support the design of Waku protocols. The protocol definitions are on the [Waku RFCs](https://rfc.vac.dev/waku) website.
 
-[**Benchmarks**](/learn/research/benchmarks/test-results-summary): Results of implementations and engineering-related benchmarks for Waku clients.
+**Benchmarks**: Results of implementations and engineering-related benchmarks for Waku clients.
 
 ## Research papers
 
