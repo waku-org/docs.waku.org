@@ -1,6 +1,7 @@
 ---
 title: Glossary
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 # Waku Docs Glossary
@@ -139,7 +140,7 @@ Waku Message defines the structure of messages in the [Waku Network](#waku-netwo
 
 Waku Message Payload Encryption provides guidelines for implementing secure and private communication in the [Waku Network](#waku-network). It covers encryption, decryption, and signing methods for message [payloads](#payload), focusing on confidentiality, authenticity, integrity, and unlinkability.
 
-### [Waku network](/learn/waku-network)
+### [Waku network](/learn/)
 
 The Waku Network is an open-access, scalable peer-to-peer messaging network emphasizing privacy protection and accessibility to [resource limited](#resource-limited) devices.
 

@@ -1,6 +1,7 @@
 ---
 title: Protocols
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 Waku takes a modular approach, providing a range of protocols that enable applications to control the trade-offs involved in the [Anonymity Trilemma](https://eprint.iacr.org/2017/954.pdf). This flexibility empowers applications to make informed choices regarding the desired balance between anonymity, scalability, and latency. Here are the main protocols provided by Waku:

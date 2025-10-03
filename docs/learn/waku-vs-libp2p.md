@@ -1,13 +1,14 @@
 ---
 title: Comparing Waku and libp2p
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 Since Waku is built on top of libp2p, they share a lot of concepts and terminologies between them. However, there are key differences between them that are worth noting.
 
 ## Waku as a service network
 
-Waku intends to incentivise mechanisms to run nodes, but it is not part of libp2p's scope. Additionally, users or developers do not have to deploy their infrastructure as a prerequisite to use Waku. It is a service network. However, you are encouraged to [run a node](/#run-a-waku-node) to support and decentralise the network.
+Waku intends to incentivise mechanisms to run nodes, but it is not part of libp2p's scope. Additionally, users or developers do not have to deploy their infrastructure as a prerequisite to use Waku. It is a service network. However, you are encouraged to [run a node](/run-node) to support and decentralise the network.
 
 ## Waku as a turnkey solution
 

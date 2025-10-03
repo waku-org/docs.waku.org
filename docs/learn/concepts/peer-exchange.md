@@ -1,6 +1,7 @@
 ---
 title: Peer Exchange
 hide_table_of_contents: true
+displayed_sidebar: learn
 ---
 
 The primary objective of this protocol is to facilitate peer connectivity for resource-limited devices without relying on `Discv5`. The peer exchange protocol enables light nodes to request peers from other nodes within the network.
